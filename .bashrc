@@ -190,22 +190,3 @@ export PYTHONPATH="${PYTHONPATH}:/home/rvbust/Rvbust/Install/Sophus/py:/home/rvb
 # export PATH=$PATH:/home/hui/Downloads/clion-2017.2.2/bin
 # export TEXMACS_PATH=/home/hui/Downloads/TeXmacs-1.99.5-10549M-i386-pc-linux-gnu
 # export PATH=$TEXMACS_PATH/bin:$PATH
-
-# added by Miniconda3 installer
-export PATH="/home/rvbust/Rvbust/Install/Miniconda3/bin:$PATH"
-alias snake="python3 /home/rvbust/Rvbust/Sources/Snake/Snake.py"
-
-alias show="ristretto"
-export COLLADA_DIR="/home/rvbust/Rvbust/Install/ColladaDom"
-
-# copy content of a file from terminal: copytext foo.txt
-alias copytext="xclip -selection clipboard < " 
-
-# added by Miniconda3 installer
-export PATH="/home/rvbust/Rvbust/Install/Miniconda3/bin:$PATH"
-
-function runrealsense() {
-    sudo docker run -it --volume=/tmp/.X11-unix:/tmp/.X11-unix --device=/dev/dri:/dev/dri --net=host --privileged -v /dev/video/ --env="DISPLAY" $1
-}
-
-alias FUCKGFW="ALL_PROXY=socks5://127.0.0.1:1080"
