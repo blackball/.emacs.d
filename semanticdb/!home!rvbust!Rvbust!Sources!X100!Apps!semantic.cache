@@ -1,0 +1,187 @@
+;; Object Apps/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Apps/"
+  :tables
+  (list
+    (semanticdb-table "GenerateRawImages.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [96 114])
+            ("cv2" include nil nil [116 126])
+            ("os" include nil nil [128 137])
+            ("shutil" include nil nil [138 151])
+            ("TryCreateDir" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [171 172])
+                ("verbose" variable nil (reparse-symbol function_parameters) [174 181]))              ) nil [154 413])
+            ("TryDeleteDir" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [435 436])
+                ("verbose" variable nil (reparse-symbol function_parameters) [438 445]))              ) nil [418 659])
+            ("Rotate" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [671 676])
+                ("angle" variable nil (reparse-symbol function_parameters) [678 683])
+                ("color" variable nil (reparse-symbol function_parameters) [685 690]))              ) nil [660 1492])
+            ("GenerateImagesOpenCV" function (:arguments 
+              ( ("size" variable nil (reparse-symbol function_parameters) [1518 1522])
+                ("n" variable nil (reparse-symbol function_parameters) [1538 1539])
+                ("folder" variable nil (reparse-symbol function_parameters) [1546 1552])
+                ("show" variable nil (reparse-symbol function_parameters) [1565 1569]))              ) nil [1493 2487])
+            ("GenerateImagesOpenCV2" function
+               (:documentation " As Zhu described: The first 3 bytes of the raw image will be used to provide information of the number and channel 
+    
+    For a RGB pixel:
+    The first byte: 
+    R: 00 000000
+    G: 01 000000
+    B: 10 000000
+    "
+                :arguments 
+                  ( ("size" variable nil (reparse-symbol function_parameters) [2514 2518])
+                    ("n" variable nil (reparse-symbol function_parameters) [2534 2535])
+                    ("folder" variable nil (reparse-symbol function_parameters) [2542 2548])
+                    ("show" variable nil (reparse-symbol function_parameters) [2561 2565]))                  )
+                nil [2488 4172])
+            ("GenerateGreenImagesOpenCV" function (:arguments 
+              ( ("size" variable nil (reparse-symbol function_parameters) [4203 4207])
+                ("n" variable nil (reparse-symbol function_parameters) [4223 4224])
+                ("folder" variable nil (reparse-symbol function_parameters) [4231 4237])
+                ("show" variable nil (reparse-symbol function_parameters) [4250 4254]))              ) nil [4173 5526])
+            ("GenerateGreenImagesAnnotated" function (:arguments 
+              ( ("size" variable nil (reparse-symbol function_parameters) [5565 5569])
+                ("n" variable nil (reparse-symbol function_parameters) [5585 5586])
+                ("folder" variable nil (reparse-symbol function_parameters) [5593 5599])
+                ("show" variable nil (reparse-symbol function_parameters) [5620 5624]))              ) nil [5532 5744])
+            ("GenerateGradientImages" function (:arguments 
+              ( ("size" variable nil (reparse-symbol function_parameters) [6068 6072])
+                ("n" variable nil (reparse-symbol function_parameters) [6088 6089])
+                ("folder" variable nil (reparse-symbol function_parameters) [6096 6102])
+                ("show" variable nil (reparse-symbol function_parameters) [6123 6127]))              ) nil [6041 6463])
+            ("ConvertToBinaryFiles" function
+               (:documentation " Convert all images from srcfolder into binary format. 
+
+    swapendianess: swap the byte endian 
+
+    1. convert bgr to rgb 
+    2. re-arrange pixels to make the first of to be pixels: 0 2 4, ..., the second half to be: 1 3 5, ...,       
+    "
+                :arguments 
+                  ( ("srcfolder" variable nil (reparse-symbol function_parameters) [6498 6507])
+                    ("dstfolder" variable nil (reparse-symbol function_parameters) [6520 6529])
+                    ("swapendianess" variable nil (reparse-symbol function_parameters) [6545 6558])
+                    ("show" variable nil (reparse-symbol function_parameters) [6568 6572]))                  )
+                nil [6473 8322])
+            ("GenerateDebug" function nil nil [8324 8576])
+            ("ConvertToBinary" function (:arguments 
+              ( ("srcfolder" variable nil (reparse-symbol function_parameters) [8602 8611])
+                ("dstfolder" variable nil (reparse-symbol function_parameters) [8624 8633])
+                ("swapendianess" variable nil (reparse-symbol function_parameters) [8649 8662])
+                ("show" variable nil (reparse-symbol function_parameters) [8672 8676]))              ) nil [8582 9254])
+            ("Main" function (:documentation "
+    1. generate image with opencv 
+    2. re-arrange the bytes and save into binary 
+    ") nil [9255 9741])
+            ("if" code nil nil [10175 10213]))          
+      :file "GenerateRawImages.py"
+      :pointmax 10213
+      :fsize 10212
+      :lastmodtime '(23807 20484 390448 91000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyConvert.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Convert.h" include nil nil [1 21])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [22 52])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("PyConvert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70 80])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81 83]))                  
+                :type "int")
+                nil [54 150]))          
+      :file "PyConvert.cpp"
+      :pointmax 152
+      :fsize 151
+      :lastmodtime '(23761 7556 606841 750000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Convert.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Convert.h" include nil nil [1 21])
+            ("iostream" include (:system-flag t) nil [22 41])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [42 71])
+            ("Convert" function
+               (:arguments 
+                  ( ("srcname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [86 106])
+                    ("dstname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [107 127])
+                    ("show" variable (:type "bool") (reparse-symbol arg-sub-list) [128 138]))                  
+                :type "void")
+                nil [73 1550]))          
+      :file "Convert.cpp"
+      :pointmax 1639
+      :fsize 1638
+      :lastmodtime '(23761 8267 650786 92000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Convert.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Convert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("srcname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28 48])
+                    ("dstname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49 69])
+                    ("show" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [70 87]))                  
+                :type "void")
+                nil [15 89]))          
+      :file "Convert.h"
+      :pointmax 90
+      :fsize 89
+      :lastmodtime '(23761 7561 154834 353000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "Save64bit.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Save2Files4096" function
+               (:documentation "    
+    "
+                :arguments 
+                  ( ("fname" variable nil (reparse-symbol function_parameters) [65 70]))                  )
+                nil [46 103]))          
+      :file "Save64bit.py"
+      :pointmax 103
+      :fsize 102
+      :lastmodtime '(23768 22796 670980 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "MakeLongImage.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [1 11])
+            ("numpy" include nil nil [12 30])
+            ("os" include nil nil [31 40])
+            ("Make" function (:arguments 
+              ( ("N" variable nil (reparse-symbol function_parameters) [52 53]))              ) nil [43 483])
+            ("if" code nil nil [488 532]))          
+      :file "MakeLongImage.py"
+      :pointmax 532
+      :fsize 531
+      :lastmodtime '(23820 34669 944067 561000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X100!Apps!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

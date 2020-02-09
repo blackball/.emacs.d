@@ -1,0 +1,42 @@
+;; Object lock_guard_deltype/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lock_guard_deltype/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("mutex" include (:system-flag t) nil [1 17])
+            ("Obj" type
+               (:members 
+                  ( ("lock" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [36 52]))                  
+                :type "struct")
+                nil [19 56])
+            ("COMBINE1" variable (:constant-flag t) nil [66 74])
+            ("COMBINE" variable (:constant-flag t) nil [110 117])
+            ("SCOPED_LOCK" variable (:constant-flag t) nil [145 156])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [242 251])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [252 265]))                  
+                :type "int")
+                nil [233 370]))          
+      :file "main.cpp"
+      :pointmax 371
+      :fsize 370
+      :lastmodtime '(23741 24039 597324 875000)
+      :unmatched-syntax '((punctuation 223 . 224) (punctuation 196 . 197) (semantic-list 186 . 196) (symbol 178 . 186) (punctuation 190 . 191) (punctuation 177 . 178) (symbol 167 . 177) (punctuation 166 . 167) (punctuation 165 . 166) (symbol 162 . 165) (semantic-list 156 . 161) (punctuation 213 . 214) (punctuation 186 . 187) (symbol 182 . 186) (punctuation 181 . 182) (symbol 178 . 181) (punctuation 177 . 178) (symbol 167 . 177) (punctuation 166 . 167) (punctuation 165 . 166) (symbol 162 . 165) (semantic-list 156 . 161))
+      :lexical-table 
+        '(("COMBINE1" (spp-arg-list ("X" "Y") 74 . 79) . ((spp-symbol-merge ((symbol "X" 80 . 81) (symbol "Y" 83 . 84)) 80 . 84)))
+          ("COMBINE" (spp-arg-list ("X" "Y") 117 . 122) . ((symbol "COMBINE1" 123 . 131) (semantic-list "(X,Y)" 131 . 136)))
+          ("SCOPED_LOCK" (spp-arg-list ("obj") 156 . 161) . 
+              ((symbol "std" 162 . 165) (punctuation ":" 165 . 166) (punctuation ":" 166 . 167) (symbol "lock_guard" 167 . 177) (punctuation "<" 177 . 178) (symbol "decltype" 178 . 186) (semantic-list "(obj.lock)" 186 . 196) (punctuation ">" 196 . 197) (symbol "COMBINE" 198 . 205) (semantic-list "(lg, __LINE__)" 205 . 219) (semantic-list "(obj.lock)" 219 . 229) (punctuation ";" 229 . 230)))
+          )
+))
+  :file "!home!rvbust!WS!Sandbox!lock_guard_deltype!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,64 @@
+;; Object EnumScope/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "EnumScope/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("Geometry" type
+               (:members 
+                  ( ("Type" type (:type "class") (reparse-symbol classsubparts) [71 112])
+                    ("type" variable (:type ("Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [117 127])
+                    ("Geometry" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("t" variable
+                               (:constant-flag t
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [143 156]))                          
+                        :type ("Geometry" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [134 169]))                  
+                :type "struct")
+                nil [44 307])
+            ("Sphere" type
+               (:superclasses 
+                  ( ("Geometry" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("Sphere" function
+                       (:constructor-flag t
+                        :type ("Sphere" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [347 384])
+                    ("Clear" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [389 426])
+                    ("radius" variable (:type "double") (reparse-symbol classsubparts) [431 450]))                  
+                :type "struct")
+                nil [309 454])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [465 474])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [475 488]))                  
+                :type "int")
+                nil [456 511]))          
+      :file "main.cpp"
+      :pointmax 512
+      :fsize 511
+      :lastmodtime '(23559 14417 444892 320000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!EnumScope!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,215 @@
+;; Object Driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Driver/"
+  :tables
+  (list
+    (semanticdb-table "ur_driver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/RobotControllers/UR/Driver/ur_driver.h" include (:system-flag t) nil [626 688])
+            ("UrDriver" function
+               (:constructor-flag t
+                :parent "UrDriver"
+                :arguments 
+                  ( ("rt_msg_cond" variable
+                       (:reference 1
+                        :type ("std::condition_variable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [709 746])
+                    ("msg_cond" variable
+                       (:reference 1
+                        :type ("std::condition_variable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [755 789])
+                    ("host" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [790 807])
+                    ("reverse_port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [816 842])
+                    ("servoj_time" variable (:type "double") (reparse-symbol arg-sub-list) [843 862])
+                    ("safety_count_max" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [871 901])
+                    ("max_time_step" variable (:type "double") (reparse-symbol arg-sub-list) [902 923])
+                    ("min_payload" variable (:type "double") (reparse-symbol arg-sub-list) [924 943])
+                    ("max_payload" variable (:type "double") (reparse-symbol arg-sub-list) [952 971]))                  
+                :type ("UrDriver" type (:type "class") nil nil))
+                nil [690 2265])
+            ("interp_cubic" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [2310 2319])
+                    ("T" variable (:type "double") (reparse-symbol arg-sub-list) [2320 2329])
+                    ("p0_pos" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2338 2365])
+                    ("p1_pos" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2366 2393])
+                    ("p0_vel" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2402 2429])
+                    ("p1_vel" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2430 2457]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2267 2993])
+            ("doTraj" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("inp_timestamps" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3017 3052])
+                    ("inp_positions" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3061 3109])
+                    ("inp_velocities" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3118 3167]))                  
+                :type "bool")
+                nil [2995 4680])
+            ("servoj" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("positions" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4704 4734])
+                    ("keepalive" variable (:type "int") (reparse-symbol arg-sub-list) [4735 4749]))                  
+                :type "void")
+                nil [4682 5548])
+            ("stopTraj" function
+               (:parent "UrDriver"
+                :type "void")
+                nil [5550 5661])
+            ("uploadProg" function
+               (:parent "UrDriver"
+                :type "bool")
+                nil [5740 8606])
+            ("openServo" function
+               (:parent "UrDriver"
+                :type "bool")
+                nil [8608 8988])
+            ("closeServo" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("positions" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [9016 9046]))                  
+                :type "void")
+                nil [8990 9259])
+            ("start" function
+               (:parent "UrDriver"
+                :type "bool")
+                nil [9261 9715])
+            ("halt" function
+               (:parent "UrDriver"
+                :type "void")
+                nil [9717 9889])
+            ("setSpeed" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("q0" variable (:type "double") (reparse-symbol arg-sub-list) [9915 9925])
+                    ("q1" variable (:type "double") (reparse-symbol arg-sub-list) [9926 9936])
+                    ("q2" variable (:type "double") (reparse-symbol arg-sub-list) [9937 9947])
+                    ("q3" variable (:type "double") (reparse-symbol arg-sub-list) [9948 9958])
+                    ("q4" variable (:type "double") (reparse-symbol arg-sub-list) [9959 9969])
+                    ("q5" variable (:type "double") (reparse-symbol arg-sub-list) [9978 9988])
+                    ("acc" variable (:type "double") (reparse-symbol arg-sub-list) [9989 10000]))                  
+                :type "void")
+                nil [9891 10079])
+            ("getJointNames" function
+               (:parent "UrDriver"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [10081 10160])
+            ("setJointNames" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("jn" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [10191 10219]))                  
+                :type "void")
+                nil [10162 10246])
+            ("setToolVoltage" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10278 10293]))                  
+                :type "void")
+                nil [10248 10450])
+            ("setFlag" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10475 10490])
+                    ("b" variable (:type "bool") (reparse-symbol arg-sub-list) [10491 10498]))                  
+                :type "void")
+                nil [10452 10685])
+            ("setDigitalOut" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10716 10731])
+                    ("b" variable (:type "bool") (reparse-symbol arg-sub-list) [10732 10739]))                  
+                :type "void")
+                nil [10687 11439])
+            ("setAnalogOut" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11468 11483])
+                    ("f" variable (:type "double") (reparse-symbol arg-sub-list) [11484 11493]))                  
+                :type "void")
+                nil [11440 11805])
+            ("setPayload" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("m" variable (:type "double") (reparse-symbol arg-sub-list) [11833 11842]))                  
+                :type "bool")
+                nil [11807 12127])
+            ("setMinPayload" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("m" variable (:type "double") (reparse-symbol arg-sub-list) [12158 12167]))                  
+                :type "void")
+                nil [12129 12268])
+            ("setMaxPayload" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("m" variable (:type "double") (reparse-symbol arg-sub-list) [12298 12307]))                  
+                :type "void")
+                nil [12269 12337])
+            ("setServojTime" function
+               (:parent "UrDriver"
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [12367 12376]))                  
+                :type "void")
+                nil [12338 12476])
+            ("getServojTime" function
+               (:parent "UrDriver"
+                :type "double")
+                nil [12478 12537]))          
+      :file "ur_driver.cpp"
+      :pointmax 12538
+      :fsize 12537
+      :lastmodtime '(23516 30778 551119 89000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!RobotControllers!UR!Driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

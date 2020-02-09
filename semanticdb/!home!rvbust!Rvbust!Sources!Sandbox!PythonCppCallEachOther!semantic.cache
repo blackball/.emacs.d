@@ -1,0 +1,81 @@
+;; Object PythonCppCallEachOther/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "PythonCppCallEachOther/"
+  :tables
+  (list
+    (semanticdb-table "InnerClass.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("fmt/format.h" include (:system-flag t) nil [199 222])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [223 253])
+            ("string" include (:system-flag t) nil [254 271])
+            ("stdint.h" include (:system-flag t) nil [272 291])
+            ("Geom" type
+               (:members 
+                  ( ("Point" type
+                       (:members 
+                          ( ("x" variable (:type "float") (reparse-symbol classsubparts) [340 351])
+                            ("y" variable (:type "float") (reparse-symbol classsubparts) [340 351]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [317 358])
+                    ("Line" type
+                       (:members 
+                          ( ("a" variable (:type "float") (reparse-symbol classsubparts) [386 397])
+                            ("b" variable (:type "float") (reparse-symbol classsubparts) [386 397]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [364 404])
+                    ("version" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [410 430]))                  
+                :type "struct")
+                nil [294 434])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [436 460])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("PyGeom" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [478 485])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [486 488]))                  
+                :type "int")
+                nil [462 1376]))          
+      :file "InnerClass.cpp"
+      :pointmax 1378
+      :fsize 1377
+      :lastmodtime '(23390 60489 51967 836000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11/pybind11.h" include (:system-flag t) nil [54 84])
+            ("pybind11/pytypes.h" include (:system-flag t) nil [85 114])
+            ("pybind11/embed.h" include (:system-flag t) nil [115 142])
+            ("vector" include (:system-flag t) nil [143 160])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [162 186])
+            ("pybind11::literals" using (:type ("pybind11::literals" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [187 222])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [261 270])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [271 284]))                  
+                :type "int")
+                nil [252 945]))          
+      :file "Test.cpp"
+      :pointmax 947
+      :fsize 946
+      :lastmodtime '(23390 60489 51967 836000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!PythonCppCallEachOther!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

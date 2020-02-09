@@ -1,0 +1,702 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "rvx_mat.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_common.h" include nil nil [128 151])
+            ("stdint.h" include (:system-flag t) nil [152 171])
+            ("rvx_mat_elem_type" type
+               (:members 
+                  ( ("RVX_MAT_ELEM_INVALID" variable
+                       (:constant-flag t
+                        :default-value (244 245)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [221 245])
+                    ("RVX_MAT_ELEM_U8" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [283 299])
+                    ("RVX_MAT_ELEM_U10" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [305 322])
+                    ("RVX_MAT_ELEM_U12" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [328 345])
+                    ("RVX_MAT_ELEM_U16" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [351 368])
+                    ("RVX_MAT_ELEM_U32" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [374 391])
+                    ("RVX_MAT_ELEM_F32" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [397 414])
+                    ("RVX_MAT_ELEM_F64" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [420 437]))                  
+                :type "enum")
+                nil [192 441])
+            ("rvx_mat" type
+               (:members 
+                  ( ("elem_type" variable (:type ("rvx_mat_elem_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [464 497])
+                    ("dim" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [503 523])
+                    ("extra" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [503 523])
+                    ("shape" variable
+                       (:dereference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [587 605])
+                    ("ptr" variable (:type ("" type
+                         (:members 
+                            ( ("u8" variable
+                                 (:pointer 1
+                                  :constant-flag t
+                                  :type ("uint8_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [734 753])
+                              ("u16" variable
+                                 (:pointer 1
+                                  :constant-flag t
+                                  :type ("uint16_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [762 782])
+                              ("u32" variable
+                                 (:pointer 1
+                                  :constant-flag t
+                                  :type ("uint32_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [791 811])
+                              ("f32" variable
+                                 (:pointer 1
+                                  :constant-flag t
+                                  :type "float")
+                                  (reparse-symbol classsubparts) [821 838])
+                              ("f64" variable
+                                 (:pointer 1
+                                  :constant-flag t
+                                  :type "double")
+                                  (reparse-symbol classsubparts) [847 865]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [634 877]))                  
+                :type "struct")
+                nil [443 880])
+            ("rvx_mat_init" function
+               (:arguments 
+                  ( ("elem_type" variable (:type ("rvx_mat_elem_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [928 961])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [962 982])
+                    ("dim" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [983 996])
+                    ("shape" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [997 1019]))                  
+                :type ("rvx_mat" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [900 1846])
+            ("rvx_mat_isvalid" variable (:constant-flag t) nil [1856 1871]))          
+      :file "rvx_mat.h"
+      :pointmax 1933
+      :fsize 1932
+      :lastmodtime '(23650 56604 88651 872000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("rvx_mat_isvalid" (spp-arg-list ("m") 1874 . 1877) . ((semantic-list "((m).elem_type != RVX_MAT_ELEM_INVALID)" 1878 . 1917)))
+          )
+)
+    (semanticdb-table "rvx_common.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [68 87])
+            ("RVX_EXTERNC" variable (:constant-flag t) nil [118 129])
+            ("RVX_EXTERNC_BEGIN" variable (:constant-flag t) nil [150 167])
+            ("RVX_EXTERNC_END" variable (:constant-flag t) nil [190 205])
+            ("RVX_INLINE" variable (:constant-flag t) nil [271 281])
+            ("RVX_INLINE" variable (:constant-flag t) nil [399 409])
+            ("RVX_EXPORTS" variable (:constant-flag t) nil [561 572])
+            ("RVX_CDECL" variable (:constant-flag t) nil [698 707])
+            ("RVX_STDCALL" variable (:constant-flag t) nil [720 731])
+            ("RVX_API" variable (:constant-flag t) nil [768 775])
+            ("RVX_UNUSED" variable (:constant-flag t) nil [862 872]))          
+      :file "rvx_common.h"
+      :pointmax 894
+      :fsize 893
+      :lastmodtime '(23650 56967 841611 604000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 809 . 816) (semantic-list 775 . 784) (symbol 876 . 878) (punctuation 875 . 876) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (close-paren 206 . 207))
+      :lexical-table 
+        '(("RVX_EXTERNC_END" . ((close-paren "}" 206 . 207)))
+          ("RVX_EXTERNC_BEGIN" . 
+              ((EXTERN "extern" 168 . 174) (string "\"C\"" 175 . 178) (open-paren "{" 179 . 180)))
+          ("RVX_STDCALL")
+          ("RVX_EXTERNC" . ((EXTERN "extern" 130 . 136) (string "\"C\"" 137 . 140)))
+          ("RVX_UNUSED" (spp-arg-list ("v") 872 . 875) . ((semantic-list "((void)v)" 876 . 885)))
+          ("RVX_API" (spp-arg-list ("rettype") 775 . 784) . 
+              ((symbol "RVX_EXTERNC" 785 . 796) (symbol "RVX_EXPORTS" 797 . 808) (symbol "rettype" 809 . 816) (symbol "RVX_CDECL" 817 . 826)))
+          ("RVX_INLINE" . ((STATIC "static" 410 . 416)))
+          ("RVX_EXPORTS")
+          ("RVX_CDECL")
+          )
+)
+    (semanticdb-table "rvx_patterndetector.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_common.h" include nil nil [67 90])
+            ("rvx_pattern_type" type
+               (:members 
+                  ( ("RVX_PATTERN_CHESSBOARD" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [140 163])
+                    ("RVX_PATTERN_RING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [169 186]))                  
+                :type "enum")
+                nil [112 189])
+            ("rvx_patternpoint" type
+               (:members 
+                  ( ("flag" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [221 234])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [239 250])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [239 250])
+                    ("score" variable (:type "double") (reparse-symbol classsubparts) [255 268]))                  
+                :type "struct")
+                nil [191 272])
+            ("rvx_mat" type
+               (:prototype t
+                :type "struct")
+                nil [275 290])
+            ("rvx_patterndetector" type
+               (:prototype t
+                :type "struct")
+                nil [292 319])
+            ("rvx_patterndetector_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("t" variable (:type ("rvx_pattern_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [375 399]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [320 400])
+            ("rvx_patterndetector_config" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [436 466])
+                    ("jsoncfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [467 487]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [401 488])
+            ("rvx_patterndetector_isvalid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [525 561]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [489 562])
+            ("rvx_patterndetector_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [596 628]))                  
+                :type "void")
+                nil [563 629])
+            ("rvx_patterndetector_get_patterintpointcount" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [682 718]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [630 719])
+            ("rvx_patterndetector_get_templpatterintpoint" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [772 808])
+                    ("pts" variable
+                       (:pointer 1
+                        :type ("rvx_patternpoint" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [809 838]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [720 839])
+            ("rvx_patterndetector_detect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [875 905])
+                    ("image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_mat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [906 934])
+                    ("pts" variable
+                       (:pointer 1
+                        :type ("rvx_patternpoint" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [935 964]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [840 965]))          
+      :file "rvx_patterndetector.h"
+      :pointmax 983
+      :fsize 982
+      :lastmodtime '(23650 62216 174104 931000)
+      :unmatched-syntax '((symbol 967 . 982) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 960 . 975) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 948 . 963) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 880 . 895) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 879 . 894) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 849 . 864) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 849 . 864) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 720 . 721) (semantic-list 683 . 720) (punctuation 630 . 631) (semantic-list 593 . 630) (symbol 759 . 774) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 769 . 784) (symbol 92 . 109) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 92 . 109)))
+    (semanticdb-table "rvx_patterndetector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_mat.h" include nil nil [54 74])
+            ("rvx_patterndetector.h" include nil nil [75 107])
+            ("stdlib.h" include (:system-flag t) nil [108 127])
+            ("rvx_patterndetector" type (:type "struct") nil [148 184])
+            ("rvx_patterndetector_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("t" variable (:type ("rvx_pattern_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [273 297]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [218 318])
+            ("rvx_patterndetector_isvalid" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [368 404]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [332 413])
+            ("rvx_patterndetector_destroy" function
+               (:arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [460 492]))                  
+                :type "void")
+                nil [427 501])
+            ("rvx_patterndetector_get_patterintpointcount" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [567 603]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [515 631])
+            ("rvx_patterndetector_get_templpatterintpoint" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [698 734])
+                    ("pts" variable
+                       (:pointer 1
+                        :type ("rvx_patternpoint" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [735 764]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [646 775])
+            ("rvx_patterndetector_detect" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rvx_patterndetector" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [824 854])
+                    ("image" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvx_mat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [855 883])
+                    ("pts" variable
+                       (:pointer 1
+                        :type ("rvx_patternpoint" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [884 913]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [789 936]))          
+      :file "rvx_patterndetector.cpp"
+      :pointmax 937
+      :fsize 936
+      :lastmodtime '(23650 58549 474235 785000)
+      :unmatched-syntax nil)
+    (semanticdb-table "rvx_patterndetector_i.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_common.h" include nil nil [68 91])
+            ("rvx_patternpoint" type
+               (:prototype t
+                :type "struct")
+                nil [112 136])
+            ("rvx_mat" type
+               (:prototype t
+                :type "struct")
+                nil [137 152])
+            ("rvx_patterndetector_i" type
+               (:members 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [190 200])
+                    ("destroy" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [244 255]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [228 256])
+                    ("config" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [280 290])
+                            ("jsoncfg" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [291 311]))                          
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [261 312])
+                    ("get_templpatternpoint" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [350 366])
+                            ("pts" variable
+                               (:pointer 1
+                                :type ("rvx_patternpoint" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [367 396]))                          
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [317 397])
+                    ("detect" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [420 430])
+                            ("img" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rvx_mat" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [431 457])
+                            ("pts" variable
+                               (:pointer 1
+                                :type ("rvx_patternpoint" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [458 487]))                          
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [402 488]))                  
+                :type "struct")
+                nil [154 491]))          
+      :file "rvx_patterndetector_i.h"
+      :pointmax 509
+      :fsize 508
+      :lastmodtime '(23650 62284 685925 181000)
+      :unmatched-syntax '((symbol 493 . 508) (symbol 93 . 110) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (punctuation 307 . 308) (symbol 450 . 465) (punctuation 353 . 354) (punctuation 283 . 284) (symbol 93 . 110) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 261 . 268)))
+    (semanticdb-table "rvx_patterndetector_chessboard.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_common.h" include nil nil [54 77])
+            ("rvx_patterndetector.h" include nil nil [78 110])
+            ("rvx_patterndetector" type
+               (:prototype t
+                :type "struct")
+                nil [131 158])
+            ("make_rvx_patterndetector_chessboard" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [223 239]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [159 240]))          
+      :file "rvx_patterndetector_chessboard.h"
+      :pointmax 258
+      :fsize 257
+      :lastmodtime '(23650 62343 661770 447000)
+      :unmatched-syntax '((symbol 242 . 257) (symbol 112 . 129) (symbol 75 . 94) (STRUCT 68 . 74) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 75 . 82) (STRUCT 68 . 74) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "rvx_patterndetector_chessboard.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_patterndetector_ring.h" include nil nil [54 91])
+            ("rvx_patterndetector_i.h" include nil nil [92 126])
+            ("make_rvx_patterndetector_chessboard" function
+               (:pointer 1
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [256 272]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [192 344]))          
+      :file "rvx_patterndetector_chessboard.cpp"
+      :pointmax 347
+      :fsize 346
+      :lastmodtime '(23650 62458 385469 443000)
+      :unmatched-syntax '((symbol 180 . 191) (symbol 180 . 191) (symbol 180 . 191)))
+    (semanticdb-table "rvx_patterndetector_ring.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_common.h" include nil nil [54 77])
+            ("rvx_patterndetector.h" include nil nil [78 110])
+            ("rvx_patterndetector" type
+               (:prototype t
+                :type "struct")
+                nil [131 158])
+            ("make_rvx_patterndetector_ring" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [217 233]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [159 234]))          
+      :file "rvx_patterndetector_ring.h"
+      :pointmax 253
+      :fsize 252
+      :lastmodtime '(23650 62319 141834 775000)
+      :unmatched-syntax '((symbol 236 . 251) (symbol 112 . 129) (symbol 227 . 242) (CONST 217 . 222) (symbol 112 . 129) (CONST 217 . 222) (symbol 221 . 236) (symbol 112 . 129)))
+    (semanticdb-table "rvx_patterndetector_ring.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_patterndetector_ring.h" include nil nil [54 91])
+            ("rvx_patterndetector_i.h" include nil nil [92 126])
+            ("make_rvx_patterndetector_ring" function
+               (:pointer 1
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [245 261]))                  
+                :type ("rvx_patterndetector" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [187 329]))          
+      :file "rvx_patterndetector_ring.cpp"
+      :pointmax 331
+      :fsize 330
+      :lastmodtime '(23650 62403 961612 238000)
+      :unmatched-syntax '((symbol 175 . 186) (symbol 175 . 186) (semantic-list 244 . 246) (symbol 215 . 244) (punctuation 213 . 214) (symbol 194 . 213) (STRUCT 187 . 193) (symbol 175 . 186)))
+    (semanticdb-table "rvx_logger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Logger.h" include (:system-flag t) nil [67 86])
+            ("sg_cameracalib_logger" variable
+               (:typemodifiers ("static")
+                :default-value "rvx::Logger::GetConsoleLogger(\"CC\")"
+                :type ("rvx::Logger::Ptr" type (:type "class") nil nil))
+                nil [144 228])
+            ("CC_INFO" variable (:constant-flag t) nil [237 244])
+            ("CC_DEBUG" variable (:constant-flag t) nil [253 261])
+            ("CC_WARN" variable (:constant-flag t) nil [270 277])
+            ("CC_ERROR" variable (:constant-flag t) nil [286 294])
+            ("sg_dic_logger" variable
+               (:typemodifiers ("static")
+                :default-value "rvx::Logger::GetConsoleLogger(\"DIC\")"
+                :type ("rvx::Logger::Ptr" type (:type "class") nil nil))
+                nil [296 373])
+            ("DIC_INFO" variable (:constant-flag t) nil [382 390])
+            ("DIC_DEBUG" variable (:constant-flag t) nil [399 408])
+            ("DIC_WARN" variable (:constant-flag t) nil [417 425])
+            ("DIC_ERROR" variable (:constant-flag t) nil [434 443])
+            ("sg_fpp_logger" variable
+               (:typemodifiers ("static")
+                :default-value "rvx::Logger::GetConsoleLogger(\"FPP\")"
+                :type ("rvx::Logger::Ptr" type (:type "class") nil nil))
+                nil [445 522])
+            ("FPP_INFO" variable (:constant-flag t) nil [531 539])
+            ("FPP_DEBUG" variable (:constant-flag t) nil [548 557])
+            ("FPP_WARN" variable (:constant-flag t) nil [566 574])
+            ("FPP_ERROR" variable (:constant-flag t) nil [583 592]))          
+      :file "rvx_logger.h"
+      :pointmax 593
+      :fsize 592
+      :lastmodtime '(23650 63149 709160 902000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CC_WARN")
+          ("CC_DEBUG")
+          ("DIC_WARN")
+          ("FPP_WARN")
+          ("CC_INFO")
+          ("DIC_ERROR")
+          ("FPP_ERROR")
+          ("DIC_INFO")
+          ("FPP_INFO")
+          ("DIC_DEBUG")
+          ("FPP_DEBUG")
+          ("CC_ERROR")
+          )
+)
+    (semanticdb-table "rvx.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_version.h" include nil nil [170 194])
+            ("rvx_patterndetector.h" include nil nil [195 227])
+            ("rvx_cameracalib.h" include nil nil [228 256])
+            ("rvx_dic.h" include nil nil [257 277])
+            ("rvx_fpp.h" include nil nil [278 298]))          
+      :file "rvx.h"
+      :pointmax 4596
+      :fsize 4595
+      :lastmodtime '(23650 63404 466471 803000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+
+    (semanticdb-table "rvx_version.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "rvx_version.cpp"
+      :pointmax 80
+      :fsize 79
+      :lastmodtime '(23650 63304 429957 45000)
+      :unmatched-syntax '((string 63 . 78) (symbol 55 . 62) (punctuation 54 . 55) (string 63 . 73) (symbol 55 . 62) (punctuation 54 . 55)))
+    (semanticdb-table "rvx_version.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "rvx_version.h"
+      :pointmax 68
+      :fsize 67
+      :lastmodtime '(23650 63292 73893 465000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "rvx_dic.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "rvx_dic.h"
+      :pointmax 107
+      :fsize 106
+      :lastmodtime '(23650 63429 222599 190000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "rvx_fpp.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "rvx_fpp.h"
+      :pointmax 93
+      :fsize 92
+      :lastmodtime '(23650 63450 78706 511000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "rvx_cameracalib.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "rvx_cameracalib.h"
+      :pointmax 109
+      :fsize 108
+      :lastmodtime '(23650 63472 562908 304000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55))))
+  :file "!home!rvbust!Rvbust!Sources!RVX!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,240 @@
+;; Object FPPWindowsTools/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FPPWindowsTools/"
+  :tables
+  (list
+    (semanticdb-table "Utils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [15 32])
+            ("vector" include (:system-flag t) nil [33 50])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [51 80])
+            ("__FUNC_NAME__" variable (:constant-flag t) nil [198 211])
+            ("TTT" variable (:constant-flag t) nil [247 250])
+            ("Utils" type
+               (:members 
+                  ( ("EndsWith" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [323 341])
+                            ("ext" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [342 358]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [309 359])
+                    ("ListDir" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("folder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [393 419])
+                            ("ext" variable
+                               (:constant-flag t
+                                :default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [420 446])
+                            ("joinpath" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [448 469]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [360 471])
+                    ("MakeName" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("folder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [493 519])
+                            ("index" variable (:type "int") (reparse-symbol arg-sub-list) [520 530]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [472 531])
+                    ("SaveImage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dstfolder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [547 576])
+                            ("index" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [577 593])
+                            ("img" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [594 613]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [532 614])
+                    ("SaveImage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dstfolder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [630 659])
+                            ("index" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [660 676])
+                            ("index2" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [676 693])
+                            ("img" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [695 714]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [615 715]))                  
+                :type "namespace")
+                nil [290 717]))          
+      :file "Utils.h"
+      :pointmax 718
+      :fsize 717
+      :lastmodtime '(23671 32338 444823 121000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("TTT" (spp-arg-list nil 250 . 252) . ((symbol "printf" 253 . 259) (semantic-list "(\"****: %s\\n\", __FUNC_NAME__)" 259 . 288)))
+          ("__FUNC_NAME__" . ((symbol "__func__" 214 . 222)))
+          )
+)
+    (semanticdb-table "Utils.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Utils.h" include nil nil [1 19])
+            ("tinydir.h" include nil nil [20 40])
+            ("algorithm" include (:system-flag t) nil [41 61])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [62 91])
+            ("Utils" type
+               (:members 
+                  ( ("EndsWith" function
+                       (:arguments 
+                          ( ("fname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [127 145])
+                            ("ext" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [146 162]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [113 525])
+                    ("ListDir" function
+                       (:arguments 
+                          ( ("folder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [561 587])
+                            ("ext" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [588 610])
+                            ("joinpath" variable (:type "bool") (reparse-symbol arg-sub-list) [611 625]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [528 1408])
+                    ("MakeName" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("folder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1432 1458])
+                            ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1459 1469]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1411 1584])
+                    ("MakeName" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("folder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1608 1634])
+                            ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1635 1645])
+                            ("index2" variable (:type "int") (reparse-symbol arg-sub-list) [1646 1657]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1587 1785])
+                    ("SaveImage" function
+                       (:arguments 
+                          ( ("dstfolder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1803 1832])
+                            ("index" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1833 1849])
+                            ("img" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1850 1869]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1788 1963])
+                    ("SaveImage" function
+                       (:arguments 
+                          ( ("dstfolder" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1981 2010])
+                            ("index" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2011 2027])
+                            ("index2" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2028 2045])
+                            ("img" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2046 2065]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1966 2167]))                  
+                :type "namespace")
+                nil [93 2171]))          
+      :file "Utils.cpp"
+      :pointmax 2171
+      :fsize 2170
+      :lastmodtime '(23671 32163 272117 848000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tinydir.h"
+      :file "tinydir.h"
+      :fsize 18583
+      :lastmodtime '(23669 27939 594086 662000)))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!FPPWindowsTools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

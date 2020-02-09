@@ -1,0 +1,132 @@
+;; Object SingleCameraCalibration/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SingleCameraCalibration/"
+  :tables
+  (list
+
+    (semanticdb-table "SingleCameraCalibration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [68 85])
+            ("CPoint3D" type
+               (:members 
+                  ( ("disabled" variable (:type "bool") (reparse-symbol classsubparts) [109 123])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [129 144])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [129 144])
+                    ("z" variable (:type "double") (reparse-symbol classsubparts) [129 144]))                  
+                :type "struct")
+                nil [87 148])
+            ("CPoint2D" type
+               (:members 
+                  ( ("disabled" variable (:type "bool") (reparse-symbol classsubparts) [172 186])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [191 203])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [191 203]))                  
+                :type "struct")
+                nil [150 206])
+            ("IntrinsicMatrix" type
+               (:members 
+                  ( ("m" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [237 249]))                  
+                :type "struct")
+                nil [208 252])
+            ("Mat4d" type
+               (:members 
+                  ( ("m" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [273 286]))                  
+                :type "struct")
+                nil [254 290])
+            ("DistortionCoeffs" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [322 331])
+                    ("coeffs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [336 363]))                  
+                :type "struct")
+                nil [292 366])
+            ("CalibConfig" type
+               (:members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [437 445]))                  
+                :type "struct")
+                nil [368 448])
+            ("Calibrate" function
+               (:arguments 
+                  ( ("templ_pts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CPoint3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [932 971])
+                    ("img_pts_vec" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [986 1042])
+                    ("rms" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1057 1070])
+                    ("reproj_errors" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1085 1120])
+                    ("kk" variable
+                       (:reference 1
+                        :type ("IntrinsicMatrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1135 1155])
+                    ("kc" variable
+                       (:reference 1
+                        :type ("DistortionCoeffs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1170 1191])
+                    ("pattern_poses" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Mat4d" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1206 1240])
+                    ("cfg" variable
+                       (:reference 1
+                        :type ("CalibConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1241 1258]))                  
+                :type "int")
+                nil [918 1296])
+            ("Test" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1299 1367])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1380 1389])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1390 1403]))                  
+                :type "int")
+                nil [1371 1433]))          
+      :file "SingleCameraCalibration.cpp"
+      :pointmax 1434
+      :fsize 1433
+      :lastmodtime '(23493 24737 176296 639000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!XCalib!XCalib!Apps!SingleCameraCalibration!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

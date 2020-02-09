@@ -1,0 +1,664 @@
+;; Object Kinematics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Kinematics/"
+  :tables
+  (list
+    (semanticdb-table "UR5Kinematics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Kinematics/UR5Kinematics.h" include (:system-flag t) nil [54 104])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("UR5Kinematics" function
+                               (:constructor-flag t
+                                :parent "UR5Kinematics"
+                                :type ("UR5Kinematics" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [357 1021])
+                            ("GetPositionFK" function
+                               (:parent "UR5Kinematics"
+                                :arguments 
+                                  ( ("joint_angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1057 1084])
+                                    ("T" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1085 1094]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1023 2365])
+                            ("GetPositionIK" function
+                               (:parent "UR5Kinematics"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2401 2419])
+                                    ("ik_result" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2420 2440]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2367 2486])
+                            ("GetPositionIK" function
+                               (:parent "UR5Kinematics"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2522 2540])
+                                    ("ik_result" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2541 2561])
+                                    ("q6_des" variable (:type "double") (reparse-symbol arg-sub-list) [2562 2576]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2488 10017]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [122 10042]))                  
+                :type "namespace")
+                nil [106 10066]))          
+      :file "UR5Kinematics.cpp"
+      :pointmax 10084
+      :fsize 10535
+      :lastmodtime '(23837 22668 944181 349000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CeresIKinematics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Kinematics/CeresIKinematics.h" include (:system-flag t) nil [54 107])
+            ("ceres/ceres.h" include (:system-flag t) nil [108 132])
+            ("ceres/rotation.h" include (:system-flag t) nil [133 160])
+            ("thread" include (:system-flag t) nil [162 179])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("CostFunctorNumDiff" type
+                               (:members 
+                                  ( ("CostFunctorNumDiff" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("M" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [293 308])
+                                            ("Slist" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("MatXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [309 328])
+                                            ("Target" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [329 349]))                                          
+                                        :type ("CostFunctorNumDiff" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [274 395])
+                                    ("()" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [417 439])
+                                            ("residuals" variable
+                                               (:pointer 1
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [440 458]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [401 1036])
+                                    ("private" label nil (reparse-symbol classsubparts) [1038 1046])
+                                    ("m_M" variable (:type ("Mat4d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1051 1061])
+                                    ("m_Slist" variable (:type ("MatXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1066 1080])
+                                    ("m_Target" variable (:type ("Mat4d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1085 1100]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [242 1103])
+                            ("CostFunctorJacobian" type
+                               (:superclasses 
+                                  ( ("ceres::SizedCostFunction" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1173 1180])
+                                    ("CostFunctorJacobian" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("M" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1205 1220])
+                                            ("Slist" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("MatXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1221 1240])
+                                            ("Target" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1241 1261]))                                          
+                                        :type ("CostFunctorJacobian" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1185 1307])
+                                    ("CostFunctorJacobian" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1313 1346])
+                                    ("Evaluate" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("parameters" variable
+                                               (:pointer 2
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1374 1406])
+                                            ("residuals" variable
+                                               (:pointer 1
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1407 1425])
+                                            ("jacobians" variable
+                                               (:pointer 2
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1426 1445]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1352 2390])
+                                    ("private" label nil (reparse-symbol classsubparts) [2392 2400])
+                                    ("m_M" variable (:type ("Eigen::Matrix" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil)
+                                              ("4")
+                                              ("4"))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2405 2437])
+                                    ("m_Slist" variable (:type ("Eigen::MatrixXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2442 2466])
+                                    ("m_Target" variable (:type ("Eigen::Matrix" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil)
+                                              ("4")
+                                              ("4"))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2471 2508]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1105 2572])
+                            ("CeresIKinematics" function
+                               (:constructor-flag t
+                                :parent "CeresIKinematics"
+                                :type ("CeresIKinematics" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2601 2679])
+                            ("CeresIKinematics" function
+                               (:constructor-flag t
+                                :parent "CeresIKinematics"
+                                :arguments 
+                                  ( ("urdf_path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2716 2745])
+                                    ("base_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2746 2775])
+                                    ("ee_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2776 2803]))                                  
+                                :type ("CeresIKinematics" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2681 3050])
+                            ("CeresIKinematics" function
+                               (:destructor-flag t
+                                :parent "CeresIKinematics"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3052 3132])
+                            ("ComputeInitPara" function
+                               (:parent "CeresIKinematics"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3135 3430])
+                            ("SearchPositionIK" function
+                               (:parent "CeresIKinematics"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3472 3490])
+                                    ("joint_angles_seed" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3491 3523])
+                                    ("ik_result" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3524 3544])
+                                    ("maxtime" variable (:type "double") (reparse-symbol arg-sub-list) [3545 3560])
+                                    ("eps" variable (:type "double") (reparse-symbol arg-sub-list) [3561 3572]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3432 4090])
+                            ("CeresIKSolver" function
+                               (:parent "CeresIKinematics"
+                                :arguments 
+                                  ( ("M" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4129 4144])
+                                    ("Slist" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MatXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4145 4164])
+                                    ("T" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4165 4180])
+                                    ("thetalist0" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4181 4206])
+                                    ("thetalist" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4207 4225])
+                                    ("limits" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointLimit" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4263 4301])
+                                    ("diff_type" variable
+                                       (:constant-flag t
+                                        :type ("CeresDiffType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4302 4332])
+                                    ("max_iterations" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4333 4358]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4092 6049]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [197 6052]))                  
+                :type "namespace")
+                nil [181 6076]))          
+      :file "CeresIKinematics.cpp"
+      :pointmax 6094
+      :fsize 6093
+      :lastmodtime '(23837 61481 451049 245000)
+      :unmatched-syntax nil)
+    (semanticdb-table "KinematicsBase.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Kinematics/KinematicsBase.h" include (:system-flag t) nil [54 105])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("KinematicsBase" function
+                               (:constructor-flag t
+                                :parent "KinematicsBase"
+                                :type ("KinematicsBase" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [145 691])
+                            ("KinematicsBase" function
+                               (:constructor-flag t
+                                :parent "KinematicsBase"
+                                :arguments 
+                                  ( ("urdf_path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [724 753])
+                                    ("base_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [754 783])
+                                    ("ee_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [784 811]))                                  
+                                :type ("KinematicsBase" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [693 1615])
+                            ("KinematicsBase" function
+                               (:destructor-flag t
+                                :parent "KinematicsBase"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2052 2088])
+                            ("IsInitialized" function
+                               (:parent "KinematicsBase"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3229 3300])
+                            ("HasRobotModel" function
+                               (:parent "KinematicsBase"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3302 3368])
+                            ("HasAnalyticalSolution" function
+                               (:parent "KinematicsBase"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3370 3458])
+                            ("GetJointLimits" function
+                               (:parent "KinematicsBase"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("JointLimit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [3460 3543])
+                            ("SetJointLimits" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("joint_limits" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("JointLimit" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3581 3618]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3545 3753])
+                            ("GetRandomState" function
+                               (:parent "KinematicsBase"
+                                :type ("CVecXd" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3755 4369])
+                            ("GetPositionFK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("joint_angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4406 4433])
+                                    ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4434 4446]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4371 4626])
+                            ("GetLinkFK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4659 4688])
+                                    ("joint_angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4689 4716])
+                                    ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4717 4729]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4628 5113])
+                            ("GetPositionIK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5150 5168])
+                                    ("ik_result" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5169 5189]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [5115 5449])
+                            ("GetNearestIK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5485 5503])
+                                    ("joint_angles_seed" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5504 5530])
+                                    ("nearest_ik" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5531 5552])
+                                    ("min_dist" variable
+                                       (:reference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5553 5570]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [5451 6393])
+                            ("SearchPositionIK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6520 6538])
+                                    ("joint_angles_seed" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6539 6571])
+                                    ("ik_result" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6572 6592]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6482 6993])
+                            ("SearchAllPosiionIK" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7035 7053])
+                                    ("new_ik" variable
+                                       (:reference 1
+                                        :type ("IKResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7054 7071]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6995 8226])
+                            ("GetBaseJacobian" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("joint_angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8266 8293]))                                  
+                                :type ("MatXd" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [8228 8455])
+                            ("GetBaseJacobian" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("joint_angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8495 8522])
+                                    ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8523 8552]))                                  
+                                :type ("MatXd" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [8457 8920])
+                            ("ComputeCartesianPath" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("last_joint" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9299 9318])
+                                    ("end_pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9319 9341])
+                                    ("joint_trajectory" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("CVecXd" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9342 9380])
+                                    ("eef_step" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9381 9403])
+                                    ("joint_threshold" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9448 9477]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [9255 10880])
+                            ("ComputeCartesianPath" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("start_joint" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10926 10946])
+                                    ("waypoints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10947 10983])
+                                    ("joint_trajectory" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("CVecXd" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10984 11022])
+                                    ("eef_step" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [11067 11089])
+                                    ("joint_threshold" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [11090 11119]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [10882 11588])
+                            ("SetAsBaseFrame" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("base_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11626 11648]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11590 11678])
+                            ("SetAsTipFrame" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("tip_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11715 11736]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11680 11764])
+                            ("SetJointDistanceWeights" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("weights" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11811 11833]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [11766 12039])
+                            ("SetJointDistanceWeights" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("weights" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12086 12115]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [12041 12355])
+                            ("GetDoF" function
+                               (:parent "KinematicsBase"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12357 12409])
+                            ("GetRobotModel" function
+                               (:parent "KinematicsBase"
+                                :arguments 
+                                  ( ("robot_model" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12446 12471]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [12411 12605])
+                            ("GetJointLimits" function
+                               (:parent "KinematicsBase"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("JointLimit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [12607 12696])
+                            ("GetBaseFrame" function
+                               (:parent "KinematicsBase"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [12699 12772])
+                            ("GetTipFrame" function
+                               (:parent "KinematicsBase"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [12774 12845])
+                            ("GetJointNames" function
+                               (:parent "KinematicsBase"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [12847 12935])
+                            ("GetLinkNames" function
+                               (:parent "KinematicsBase"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [12937 13023])
+                            ("GetJointDistanceWeights" function
+                               (:parent "KinematicsBase"
+                                :type ("CVecXd" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [13025 13116])
+                            ("_ParseInformationFromRobotModel" function
+                               (:parent "KinematicsBase"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [13132 14076]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [123 14079]))                  
+                :type "namespace")
+                nil [107 14103]))          
+      :file "KinematicsBase.cpp"
+      :pointmax 14121
+      :fsize 14120
+      :lastmodtime '(23837 36856 544197 691000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Kinematics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

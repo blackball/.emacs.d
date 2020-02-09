@@ -1,0 +1,179 @@
+;; Object Vis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Vis/"
+  :tables
+  (list
+    (semanticdb-table "Concepts.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("unordered_map" include (:system-flag t) nil [67 91])
+            ("memory" include (:system-flag t) nil [92 109])
+            ("mutex" include (:system-flag t) nil [110 126])
+            ("iostream" include (:system-flag t) nil [127 146])
+            ("vector" include (:system-flag t) nil [147 164])
+            ("condition_variable" include (:system-flag t) nil [165 194])
+            ("Vis" type
+               (:members 
+                  ( ("VisNodeHandle" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [242 249])
+                            ("VisNodeHandle" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("valid" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("bool" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [272 300]))                                  
+                                :type ("VisNodeHandle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [258 318])
+                            ("GetNodePtr" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [328 366])
+                            ("VisNodeHandle" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [376 402])
+                            ("protected" label nil (reparse-symbol classsubparts) [408 418])
+                            ("m_valid" variable (:type ("std::weak_ptr" type
+                                 (:template-specifier 
+                                    ( ("bool" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [427 465]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [216 472])
+                    ("VisValidFlag" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [502 512])
+                            ("m_valid" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("bool" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [521 577])
+                            ("m_destruction_condition" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [586 642]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [478 649])
+                    ("NODE_MASK" type
+                       (:members 
+                          ( ("NONE" variable
+                               (:constant-flag t
+                                :default-value (690 696)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [679 696])
+                            ("AUTOZOOM" variable
+                               (:constant-flag t
+                                :default-value (717 723)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [706 723])
+                            ("PAT_EDIT" variable
+                               (:constant-flag t
+                                :default-value (744 750)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [733 750])
+                            ("AID_EDIT" variable
+                               (:constant-flag t
+                                :default-value (772 778)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [761 778]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [655 785]))                  
+                :type "namespace")
+                nil [196 787]))          
+      :file "Concepts.h"
+      :pointmax 787
+      :fsize 700
+      :lastmodtime '(23707 32784 130703 61000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "Viewer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("thread" include (:system-flag t) nil [67 84])
+            ("Vis/Concepts.h" include (:system-flag t) nil [85 110])
+            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [111 147])
+            ("Vis/Manipulator/NodeIO.h" include (:system-flag t) nil [148 183])
+            ("Vis" type
+               (:members 
+                  ( ("Viewer" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [201 214]))                  
+                :type "namespace")
+                nil [185 216])
+            ("Viewer" type
+               (:parent "Vis"
+                :superclasses 
+                  ( ("Vis::OsgPlotterManipulator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("Vis::NodeIOManipulator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [305 312])
+                    ("Viewer" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [334 351])
+                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [352 358])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [359 365])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [366 376])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [377 388])
+                            ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [389 412]))                          
+                        :type ("Viewer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [327 413])
+                    ("Viewer" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [419 429])
+                    ("Home" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [435 455])
+                    ("Move" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [461 483])
+                    ("Resize" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [489 513])
+                    ("Close" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [519 540])
+                    ("Detach" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [546 568])
+                    ("Data" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol classsubparts) [574 586])
+                    ("private" label nil (reparse-symbol classsubparts) [588 596])
+                    ("m_dPtr" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("Viewer::Data" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [601 638]))                  
+                :type "class")
+                nil [218 641]))          
+      :file "Viewer.h"
+      :pointmax 642
+      :fsize 641
+      :lastmodtime '(23707 33124 421414 230000)
+      :unmatched-syntax '((EXPLICIT 318 . 326) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 557 . 558) (punctuation 556 . 557) (punctuation 555 . 556) (punctuation 554 . 555) (punctuation 553 . 554) (punctuation 552 . 553) (punctuation 551 . 552) (EXPLICIT 455 . 463) (punctuation 448 . 449) (punctuation 447 . 448) (punctuation 446 . 447) (punctuation 445 . 446) (punctuation 444 . 445) (punctuation 443 . 444) (punctuation 442 . 443) (EXPLICIT 330 . 338) (symbol 321 . 325) (punctuation 319 . 320) (punctuation 318 . 319) (punctuation 317 . 318) (punctuation 316 . 317) (punctuation 315 . 316) (punctuation 314 . 315) (punctuation 313 . 314) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+  :file "!home!rvbust!Rvbust!Sources!Vis!Include!Vis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,195 @@
+;; Object Python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Python/"
+  :tables
+  (list
+    (semanticdb-table "DetectRects.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Vision" include nil nil [45 72])
+            ("cv2" include nil nil [73 83])
+            ("random" include nil nil [84 97])
+            ("RandColor" function nil nil [99 203])
+            ("App" function nil nil [204 661])
+            ("if" code nil nil [662 699]))          
+      :file "DetectRects.py"
+      :pointmax 708
+      :fsize 707
+      :lastmodtime '(23825 49226 623259 196000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Voter2d.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sklearn.cluster" include nil nil [96 133])
+            ("collections" include nil nil [134 165])
+            ("RVS.Common" include nil nil [166 195])
+            ("cv2" include nil nil [197 207])
+            ("numpy" include nil nil [208 226])
+            ("matplotlib.pyplot" include nil nil [227 258])
+            ("RVS.Vision" include nil nil [259 283])
+            ("glog" variable nil nil [285 325])
+            ("glog" code nil nil [326 363])
+            ("Voter2d" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [421 439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [449 472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [481 503])
+                            ("self" variable nil (reparse-symbol indented_block_body) [512 528])
+                            ("self" variable nil (reparse-symbol indented_block_body) [537 562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [572 652])
+                            ("self" variable nil (reparse-symbol indented_block_body) [709 752])
+                            ("self" variable nil (reparse-symbol indented_block_body) [762 793])
+                            ("self" variable nil (reparse-symbol indented_block_body) [803 827])
+                            ("self" variable nil (reparse-symbol indented_block_body) [836 861])
+                            ("self" variable nil (reparse-symbol indented_block_body) [871 913])
+                            ("self" variable nil (reparse-symbol indented_block_body) [922 960])
+                            ("self" variable nil (reparse-symbol indented_block_body) [969 1007]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [398 402])
+                            ("config" variable nil (reparse-symbol function_parameters) [404 410]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [385 1008])
+                    ("SetScale" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1026 1030])
+                            ("scale" variable nil (reparse-symbol function_parameters) [1032 1037]))                          
+                        :documentation " if it sets scale successfully, return 0. 
+            Otherwise, return -1.
+        ")
+                        (reparse-symbol indented_block_body) [1013 1257])
+                    ("SetDMatchFilterRatio" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1287 1291])
+                            ("ratio" variable nil (reparse-symbol function_parameters) [1293 1298]))                          
+                        :documentation " if it sets DMatch Filter Ratio successfully, return 0. 
+            Otherwise, return -1.
+        ")
+                        (reparse-symbol indented_block_body) [1262 1551])
+                    ("SetVotingSegmentRange" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1582 1586])
+                            ("min_len" variable nil (reparse-symbol function_parameters) [1588 1595])
+                            ("max_len" variable nil (reparse-symbol function_parameters) [1597 1604]))                          
+                        :documentation " if it sets voting segment range successfully, return 0. 
+            Otherwise, return -1.
+        ")
+                        (reparse-symbol indented_block_body) [1556 1912])
+                    ("SetTemplate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1933 1937])
+                            ("bigTempl" variable nil (reparse-symbol function_parameters) [1939 1947]))                          
+                        :documentation " if it sets template successfully, return 0. 
+            Otherwise, return -1.
+        ")
+                        (reparse-symbol indented_block_body) [1917 2722])
+                    ("Vote" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2741 2745])
+                            ("bigImage" variable nil (reparse-symbol function_parameters) [2747 2755])
+                            ("obj_cnt" variable nil (reparse-symbol function_parameters) [2757 2764])
+                            ("min_vote" variable nil (reparse-symbol function_parameters) [2770 2778]))                          
+                        :documentation " return list of centers
+            [[center, angle, scale], [center, angle, scale], ...]
+        ")
+                        (reparse-symbol indented_block_body) [2732 4429])
+                    ("_GetCentersAndVotes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4458 4462])
+                            ("candidates" variable nil (reparse-symbol function_parameters) [4464 4474])
+                            ("maxSegLen" variable nil (reparse-symbol function_parameters) [4476 4485])
+                            ("minVote" variable nil (reparse-symbol function_parameters) [4487 4494])
+                            ("object_count" variable nil (reparse-symbol function_parameters) [4496 4508])
+                            ("bigImage" variable nil (reparse-symbol function_parameters) [4510 4518]))                          
+                        :documentation " return list of centers and votes
+            return [[center, votes_cnt, angle, scale], [center, votes_cnt, angle, scale], ...]
+        ")
+                        (reparse-symbol indented_block_body) [4434 5549])
+                    ("_FilterCenters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5573 5577])
+                            ("centers" variable nil (reparse-symbol function_parameters) [5579 5586])
+                            ("img_row" variable nil (reparse-symbol function_parameters) [5588 5595])
+                            ("img_col" variable nil (reparse-symbol function_parameters) [5597 5604])
+                            ("object_count" variable nil (reparse-symbol function_parameters) [5606 5618]))                          )
+                        (reparse-symbol indented_block_body) [5554 6017])
+                    ("_Convert2PyVis_keypoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6051 6055])
+                            ("opencv_keypts" variable nil (reparse-symbol function_parameters) [6057 6070]))                          
+                        :documentation " Convert cv.KeyPoint to PyVision.KeyPoint
+        ")
+                        (reparse-symbol indented_block_body) [6022 6477])
+                    ("_Convert2PyVis_DMatches" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6510 6514])
+                            ("opencv_matches" variable nil (reparse-symbol function_parameters) [6515 6529]))                          
+                        :documentation " Convert cv.DMatch to PyVision.DMatch 
+        ")
+                        (reparse-symbol indented_block_body) [6482 6999])
+                    ("_RootSIFT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7018 7022])
+                            ("descs" variable nil (reparse-symbol function_parameters) [7024 7029]))                          
+                        :documentation " root normalization before sift matching
+
+        Step 1: L1-normalize each SIFT vector.
+        Step 2: Take the square-root of each element in the SIFT vector.
+        
+        Note: This could improve the matching quality, but minor. 
+        ")
+                        (reparse-symbol indented_block_body) [7004 7386])
+                    ("_GroupAndCount" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7410 7414])
+                            ("L" variable nil (reparse-symbol function_parameters) [7416 7417]))                          
+                        :documentation " group values in L and get it's count. 
+        
+        L = [1,2,3,2,3] => [(1,1), (2,2), (3,2)]
+        
+        @Note the returned list is not sorted.
+        ")
+                        (reparse-symbol indented_block_body) [7391 7666])
+                    ("_GetCircularMedian" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7694 7698])
+                            ("angles_all" variable nil (reparse-symbol function_parameters) [7700 7710])
+                            ("labels" variable nil (reparse-symbol function_parameters) [7712 7718])
+                            ("currentLabel" variable nil (reparse-symbol function_parameters) [7720 7732]))                          
+                        :documentation " angles in range[0, 360]
+            Note: np.mod(-1, 360) = 359, not -1
+            Property: Median minimizes sum of absolute distance to all other elements -- O(n^2)
+        ")
+                        (reparse-symbol indented_block_body) [7671 8104])
+                    ("_GetScale" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8123 8127])
+                            ("scales_all" variable nil (reparse-symbol function_parameters) [8129 8139])
+                            ("labels" variable nil (reparse-symbol function_parameters) [8141 8147])
+                            ("currentLabel" variable nil (reparse-symbol function_parameters) [8149 8161]))                          )
+                        (reparse-symbol indented_block_body) [8109 9015]))                  
+                :type "class")
+                nil [366 9015]))          
+      :file "Voter2d.py"
+      :pointmax 9018
+      :fsize 9017
+      :lastmodtime '(23833 63809 912885 68000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Detectors!Python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

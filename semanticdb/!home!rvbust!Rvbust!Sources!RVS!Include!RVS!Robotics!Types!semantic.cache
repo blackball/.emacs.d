@@ -1,0 +1,714 @@
+;; Object Types/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Types/"
+  :tables
+  (list
+    (semanticdb-table "JointTrajectory.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [68 85])
+            ("deque" include (:system-flag t) nil [86 102])
+            ("string" include (:system-flag t) nil [103 120])
+            ("iterator" include (:system-flag t) nil [121 140])
+            ("RVS/Common/TimeStamp.h" include nil nil [141 174])
+            ("RVS/Common/Types.h" include nil nil [175 204])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("JointTrajectoryPoint" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [415 422])
+                                    ("JointTrajectoryPoint" function
+                                       (:constructor-flag t
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [427 452])
+                                    ("JointTrajectoryPoint" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("joint_dof" variable (:type "int") (reparse-symbol arg-sub-list) [478 492]))                                          
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [457 515])
+                                    ("JointTrajectoryPoint" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [541 575]))                                          
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [520 594])
+                                    ("JointTrajectoryPoint" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [599 625])
+                                    ("Ptr" type
+                                       (:typedef ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("JointTrajectoryPoint" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [631 681])
+                                    ("ConstPtr" type
+                                       (:typedef ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("JointTrajectoryPoint" type (:constant-flag t) nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [686 747])
+                                    ("SetDof" function
+                                       (:arguments 
+                                          ( ("joint_dof" variable (:type "int") (reparse-symbol arg-sub-list) [765 779]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [753 882])
+                                    ("SetPositions" function
+                                       (:arguments 
+                                          ( ("positions" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [906 930]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [888 998])
+                                    ("SetPositions" function
+                                       (:arguments 
+                                          ( ("positions" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1021 1058]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1003 1091])
+                                    ("SetPosition" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1113 1123])
+                                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [1124 1137]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1096 1169])
+                                    ("SetVelocities" function
+                                       (:arguments 
+                                          ( ("velocities" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1194 1219]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1175 1428])
+                                    ("SetVelocities" function
+                                       (:arguments 
+                                          ( ("velocities" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1452 1490]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1433 1525])
+                                    ("SetVelocity" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1547 1557])
+                                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [1558 1571]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1530 1742])
+                                    ("SetAccelerations" function
+                                       (:arguments 
+                                          ( ("accelerations" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1770 1798]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1748 2061])
+                                    ("SetAccelerations" function
+                                       (:arguments 
+                                          ( ("accelerations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2088 2129]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2066 2170])
+                                    ("SetAcceleration" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [2196 2206])
+                                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [2207 2220]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2175 2439])
+                                    ("SetEffort" function
+                                       (:arguments 
+                                          ( ("effort" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2460 2481]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2445 2710])
+                                    ("SetEffort" function
+                                       (:arguments 
+                                          ( ("effort" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2730 2764]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2715 2791])
+                                    ("SetEffort" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [2811 2821])
+                                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [2822 2835]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2796 3034])
+                                    ("GetDof" function (:type "int") (reparse-symbol classsubparts) [3040 3082])
+                                    ("HasVelocities" function (:type "bool") (reparse-symbol classsubparts) [3087 3140])
+                                    ("HasAccelerations" function (:type "bool") (reparse-symbol classsubparts) [3145 3205])
+                                    ("HasEffort" function (:type "bool") (reparse-symbol classsubparts) [3210 3257])
+                                    ("GetPositions" function (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3263 3327])
+                                    ("GetPositions" function
+                                       (:arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3352 3369]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3332 3406])
+                                    ("GetPositionsPtr" function
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3411 3464])
+                                    ("GetVelocities" function (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3470 3536])
+                                    ("GetVelocities" function
+                                       (:arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3562 3579]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3541 3617])
+                                    ("GetVelocitiesPtr" function
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3622 3677])
+                                    ("GetAccelerations" function (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3683 3755])
+                                    ("GetAccelerations" function
+                                       (:arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3784 3801]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3760 3842])
+                                    ("GetAccelerationsPtr" function
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3847 3908])
+                                    ("GetEffort" function (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3914 3972])
+                                    ("GetEffort" function
+                                       (:arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3994 4011]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3977 4045])
+                                    ("GetEffortPtr" function
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [4050 4097])
+                                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [4103 4355])
+                                    ("=" function
+                                       (:operator-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4383 4417]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4361 4793])
+                                    ("private" label nil (reparse-symbol classsubparts) [4796 4804])
+                                    ("m_positions" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4809 4841])
+                                    ("m_velocities" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4846 4879])
+                                    ("m_accelerations" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4884 4920])
+                                    ("m_effort" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4925 4954])
+                                    ("m_joint_dof" variable (:type "int") (reparse-symbol classsubparts) [4959 4975])
+                                    ("m_has_velocity" variable (:type "bool") (reparse-symbol classsubparts) [4981 5001])
+                                    ("m_has_acceleration" variable (:type "bool") (reparse-symbol classsubparts) [5006 5030])
+                                    ("m_has_effort" variable (:type "bool") (reparse-symbol classsubparts) [5035 5053]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [386 5056])
+                            ("JointTrajectoryPointPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("JointTrajectoryPoint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [5058 5128])
+                            ("JointTrajectoryPointConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("JointTrajectoryPoint" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [5129 5210])
+                            ("JointTrajectory" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [5377 5384])
+                                    ("GetWayPointCount" function (:type "int") (reparse-symbol classsubparts) [5389 5455])
+                                    ("GetJointNames" function (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [5461 5533])
+                                    ("GetWayPoint" function
+                                       (:constant-flag t
+                                        :arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [5579 5589]))                                          
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5539 5627])
+                                    ("GetLastWayPoint" function
+                                       (:constant-flag t
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5633 5716])
+                                    ("GetFirstWayPoint" function
+                                       (:constant-flag t
+                                        :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5722 5807])
+                                    ("GetWayPointPtr" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [5853 5863]))                                          
+                                        :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5813 5894])
+                                    ("GetLastWayPointPtr" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [5944 5954]))                                          
+                                        :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5900 5985])
+                                    ("GetFirstWayPointPtr" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [6036 6046]))                                          
+                                        :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5991 6078])
+                                    ("GetWayPointDurationFromPrevious" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [6123 6133]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [6084 6324])
+                                    ("SetWayPointDurationFromPrevious" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [6367 6377])
+                                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [6378 6391]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6330 6586])
+                                    ("Empty" function (:type "bool") (reparse-symbol classsubparts) [6592 6642])
+                                    ("AddSuffixWayPoint" function
+                                       (:arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6815 6849])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [6850 6860]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6792 6945])
+                                    ("AddSuffixWayPoint" function
+                                       (:arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6974 7011])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7012 7022]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6951 7120])
+                                    ("AddPrefixWayPoint" function
+                                       (:arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7149 7183])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7184 7194]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7126 7279])
+                                    ("AddPrefixWayPoint" function
+                                       (:arguments 
+                                          ( ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7308 7345])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7346 7356]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7285 7456])
+                                    ("InsertWayPoint" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [7482 7492])
+                                            ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7493 7527])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7528 7538]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7462 7643])
+                                    ("InsertWayPoint" function
+                                       (:arguments 
+                                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [7669 7679])
+                                            ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectoryPointPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7680 7717])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7718 7728]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7649 7891])
+                                    ("Append" function
+                                       (:arguments 
+                                          ( ("source" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointTrajectory" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8177 8207])
+                                            ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [8208 8218]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8165 8660])
+                                    ("Swap" function
+                                       (:arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :type ("JointTrajectory" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8676 8699]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8666 8827])
+                                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [8833 8928])
+                                    ("private" label nil (reparse-symbol classsubparts) [8930 8938])
+                                    ("m_joint_names" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8943 8982])
+                                    ("m_waypoints" variable (:type ("std::deque" type
+                                         (:template-specifier 
+                                            ( ("JointTrajectoryPointPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8987 9035])
+                                    ("m_duration_from_previous" variable (:type ("std::deque" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [9040 9084]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [5353 9087]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [222 9090]))                  
+                :type "namespace")
+                nil [206 9114]))          
+      :file "JointTrajectory.h"
+      :pointmax 9132
+      :fsize 9131
+      :lastmodtime '(23615 42337 728033 830000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "IKResult.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Types.h" include nil nil [67 96])
+            ("RVS/Robotics/Common/Utils.h" include nil nil [97 135])
+            ("vector" include (:system-flag t) nil [136 153])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::CVecXd" using (:type ("RVS::Common::CVecXd" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [193 219])
+                            ("IKResult" type
+                               (:members 
+                                  ( ("success" variable (:type "bool") (reparse-symbol classsubparts) [290 303])
+                                    ("ik_number" variable (:type "int") (reparse-symbol classsubparts) [385 399])
+                                    ("joint_dof" variable (:type "int") (reparse-symbol classsubparts) [423 437])
+                                    ("thetalistlist" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("CVecXd" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [480 514])
+                                    ("IKResult" function
+                                       (:constructor-flag t
+                                        :type ("IKResult" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [605 729])
+                                    ("IKResult" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("r2" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IKResult" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [768 787]))                                          
+                                        :type ("IKResult" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [759 803])
+                                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [845 971])
+                                    ("PushBack" function
+                                       (:arguments 
+                                          ( ("thetalist" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1016 1040]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1002 1430])
+                                    ("PushBack" function
+                                       (:arguments 
+                                          ( ("thetalist" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1474 1505]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1460 1973])
+                                    ("Erase" function
+                                       (:arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [2014 2031]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2003 2399])
+                                    ("WrapToPi" function (:type "void") (reparse-symbol classsubparts) [2446 2646])
+                                    ("WrapToPositive" function (:type "void") (reparse-symbol classsubparts) [2693 2904])
+                                    ("WrapToNegative" function (:type "void") (reparse-symbol classsubparts) [2953 3175])
+                                    ("WrapTo2Pi" function (:type "void") (reparse-symbol classsubparts) [3226 3997])
+                                    ("WrapInLimits" function
+                                       (:arguments 
+                                          ( ("limits" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("JointLimits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4065 4104]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4047 4683])
+                                    ("RemoveDuplicateSolutions" function (:type "int") (reparse-symbol classsubparts) [4733 5309])
+                                    ("[]" function
+                                       (:operator-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("i" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [5340 5353]))                                          
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5315 5388])
+                                    ("=" function
+                                       (:operator-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("r2" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IKResult" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5415 5434]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5393 5586])
+                                    ("<<" function
+                                       (:operator-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("out" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5624 5642])
+                                            ("result" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IKResult" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5643 5666]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5592 6020]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [268 6023]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [171 6026]))                  
+                :type "namespace")
+                nil [155 6050]))          
+      :file "IKResult.h"
+      :pointmax 6068
+      :fsize 6069
+      :lastmodtime '(23615 42562 704218 430000)
+      :unmatched-syntax nil)
+    (semanticdb-table "JointLimits.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [68 85])
+            ("limits" include (:system-flag t) nil [86 103])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("JointLimits" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [162 169])
+                                    ("HasPositionLimits" function (:type "bool") (reparse-symbol classsubparts) [174 238])
+                                    ("HasVelocityLimits" function (:type "bool") (reparse-symbol classsubparts) [243 307])
+                                    ("HasAccelerationLimits" function (:type "bool") (reparse-symbol classsubparts) [312 384])
+                                    ("HasJerkLimits" function (:type "bool") (reparse-symbol classsubparts) [389 445])
+                                    ("HasEffortLimits" function (:type "bool") (reparse-symbol classsubparts) [450 510])
+                                    ("IsWrapAroundJoint" function (:type "bool") (reparse-symbol classsubparts) [515 576])
+                                    ("GetMaxPosition" function (:type "double") (reparse-symbol classsubparts) [582 638])
+                                    ("GetMinPosition" function (:type "double") (reparse-symbol classsubparts) [643 699])
+                                    ("GetMaxVelocity" function (:type "double") (reparse-symbol classsubparts) [704 760])
+                                    ("GetMaxAcceleration" function (:type "double") (reparse-symbol classsubparts) [765 829])
+                                    ("GetMaxJerk" function (:type "double") (reparse-symbol classsubparts) [834 882])
+                                    ("GetMaxEffort" function (:type "double") (reparse-symbol classsubparts) [887 939])
+                                    ("SetPositionLimits" function
+                                       (:arguments 
+                                          ( ("min_position" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [968 995])
+                                            ("max_position" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [996 1023]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [945 1299])
+                                    ("SetVelocityLimit" function
+                                       (:arguments 
+                                          ( ("max_velocity" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1327 1354]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1305 1521])
+                                    ("SetAccelerationLimit" function
+                                       (:arguments 
+                                          ( ("max_acceleration" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1553 1584]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1527 1771])
+                                    ("SetJerkLimit" function
+                                       (:arguments 
+                                          ( ("max_jerk" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1795 1818]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1777 1965])
+                                    ("SetEffortLimit" function
+                                       (:arguments 
+                                          ( ("max_effort" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1991 2016]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1971 2173])
+                                    ("SetWrapAroundJoint" function (:type "void") (reparse-symbol classsubparts) [2179 2290])
+                                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [2296 2728])
+                                    ("private" label nil (reparse-symbol classsubparts) [2730 2738])
+                                    ("m_min_position" variable (:type "double") (reparse-symbol classsubparts) [2743 2765])
+                                    ("m_max_position" variable (:type "double") (reparse-symbol classsubparts) [2770 2792])
+                                    ("m_max_velocity" variable (:type "double") (reparse-symbol classsubparts) [2797 2819])
+                                    ("m_max_acceleration" variable (:type "double") (reparse-symbol classsubparts) [2824 2850])
+                                    ("m_max_jerk" variable (:type "double") (reparse-symbol classsubparts) [2855 2873])
+                                    ("m_max_effort" variable (:type "double") (reparse-symbol classsubparts) [2878 2898])
+                                    ("m_has_position_limits" variable (:type "bool") (reparse-symbol classsubparts) [2904 2931])
+                                    ("m_has_velocity_limits" variable (:type "bool") (reparse-symbol classsubparts) [2936 2963])
+                                    ("m_has_acceleration_limits" variable (:type "bool") (reparse-symbol classsubparts) [2968 2999])
+                                    ("m_has_jerk_limits" variable (:type "bool") (reparse-symbol classsubparts) [3004 3027])
+                                    ("m_has_effort_limits" variable (:type "bool") (reparse-symbol classsubparts) [3032 3057])
+                                    ("m_angle_wraparound" variable (:type "bool") (reparse-symbol classsubparts) [3062 3086])
+                                    ("_NearZero" function
+                                       (:arguments 
+                                          ( ("value" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [3107 3127]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3092 3192]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [142 3195]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [121 3197]))                  
+                :type "namespace")
+                nil [105 3221]))          
+      :file "JointLimits.h"
+      :pointmax 3239
+      :fsize 3238
+      :lastmodtime '(23615 42382 596070 646000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 63 . 67) (symbol 56 . 62) (punctuation 55 . 56))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Types!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

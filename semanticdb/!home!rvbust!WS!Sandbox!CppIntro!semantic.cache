@@ -1,0 +1,114 @@
+;; Object CppIntro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CppIntro/"
+  :tables
+  (list
+    (semanticdb-table "tmp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("memory" include (:system-flag t) nil [39 56])
+            ("Line" type
+               (:members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [76 84]))                  
+                :type "struct")
+                nil [58 87])
+            ("Object" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [107 114])
+                    ("Object" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Object" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [119 128])
+                    ("Object" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [133 151])
+                    ("Detect" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [157 170])
+                    ("Get" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lines" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Line" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [183 208]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [175 209])
+                    ("private" label nil (reparse-symbol classsubparts) [215 223])
+                    ("Impl" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol classsubparts) [228 240])
+                    ("m_impl" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("Impl" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [245 274]))                  
+                :type "class")
+                nil [91 281])
+            ("Impl" type
+               (:parent "Object"
+                :members 
+                  ( ("m_lines" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Line" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [310 336]))                  
+                :type "struct")
+                nil [284 342])
+            ("Object" function
+               (:constructor-flag t
+                :parent "Object"
+                :type ("Object" type (:type "class") nil nil))
+                nil [344 403])
+            ("Object" function
+               (:destructor-flag t
+                :parent "Object"
+                :type "void")
+                nil [405 431])
+            ("Detect" function
+               (:parent "Object"
+                :type "int")
+                nil [433 560])
+            ("Get" function
+               (:parent "Object"
+                :arguments 
+                  ( ("lines" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Line" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [578 603]))                  
+                :type "int")
+                nil [562 661])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [672 681])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [682 695]))                  
+                :type "int")
+                nil [663 840]))          
+      :file "tmp.cpp"
+      :pointmax 841
+      :fsize 840
+      :lastmodtime '(23814 4020 879047 641000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!CppIntro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

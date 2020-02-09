@@ -1,0 +1,78 @@
+;; Object Viewer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Viewer/"
+  :tables
+  (list
+    (semanticdb-table "Environment.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Viewer/Environment.h" include (:system-flag t) nil [2 37])
+            ("RVS/Viewer/Manipulator/Plotter.h" include (:system-flag t) nil [38 81])
+            ("RVS/Viewer/Manipulator/Viewer.h" include (:system-flag t) nil [82 124])
+            ("osg/Group" include (:system-flag t) nil [125 145])
+            ("RVS::Viewer" using (:type ("RVS::Viewer" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [147 175])
+            ("Environment" function
+               (:constructor-flag t
+                :parent "Environment"
+                :type ("Environment" type (:type "class") nil nil))
+                nil [177 271])
+            ("GetViewer" function
+               (:parent "Environment"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [335 353]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("ViewerManipulatorPlug" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [273 557])
+            ("CreateViewer" function
+               (:parent "Environment"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [624 642])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [643 649])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [650 656])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [657 667])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [668 679])
+                    ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [680 703]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("ViewerManipulatorPlug" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [559 804])
+            ("GetPlotter" function
+               (:parent "Environment"
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("PlotterManipulator" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [806 960])
+            ("GetScenes" function
+               (:parent "Environment"
+                :constant-flag t
+                :type ("std::unordered_map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("osg::Group" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [962 1070]))          
+      :file "Environment.cpp"
+      :pointmax 1071
+      :fsize 1069
+      :lastmodtime '(23613 23452 521124 830000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Viewer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

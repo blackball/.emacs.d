@@ -1,0 +1,73 @@
+;; Object example/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "example/"
+  :tables
+  (list
+    (semanticdb-table "example_gl3.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [920 938])
+            ("GLFW_INCLUDE_GLEXT" variable (:constant-flag t) nil [1051 1069])
+            ("GLFW/glfw3.h" include (:system-flag t) nil [1070 1093])
+            ("nanovg.h" include nil nil [1094 1113])
+            ("NANOVG_GL3_IMPLEMENTATION" variable (:constant-flag t) nil [1122 1147])
+            ("nanovg_gl.h" include nil nil [1148 1170])
+            ("demo.h" include nil nil [1171 1188])
+            ("perf.h" include nil nil [1189 1206])
+            ("errorcb" function
+               (:arguments 
+                  ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [1222 1232])
+                    ("desc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1233 1250]))                  
+                :type "void")
+                nil [1209 1299])
+            ("blowup" variable
+               (:default-value "0"
+                :type "int")
+                nil [1301 1316])
+            ("screenshot" variable
+               (:default-value "0"
+                :type "int")
+                nil [1317 1336])
+            ("premult" variable
+               (:default-value "0"
+                :type "int")
+                nil [1337 1353])
+            ("key" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("window" variable
+                       (:pointer 1
+                        :type ("GLFWwindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1371 1390])
+                    ("key" variable (:type "int") (reparse-symbol arg-sub-list) [1391 1399])
+                    ("scancode" variable (:type "int") (reparse-symbol arg-sub-list) [1400 1413])
+                    ("action" variable (:type "int") (reparse-symbol arg-sub-list) [1414 1425])
+                    ("mods" variable (:type "int") (reparse-symbol arg-sub-list) [1426 1435]))                  
+                :type "void")
+                nil [1355 1789])
+            ("main" function (:type "int") nil [1791 5283]))          
+      :file "example_gl3.c"
+      :pointmax 5284
+      :fsize 5283
+      :lastmodtime '(23513 6670 561982 501000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GLFW_INCLUDE_GLEXT")
+          ("NANOVG_GL3_IMPLEMENTATION")
+          )
+)
+    (semanticdb-table "demo.h"
+      :file "demo.h"
+      :fsize 546
+      :lastmodtime '(23513 6670 561982 501000))
+    (semanticdb-table "perf.h"
+      :file "perf.h"
+      :fsize 910
+      :lastmodtime '(23513 6670 565982 552000)))
+  :file "!home!rvbust!WS!Sandbox!nanovg!example!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

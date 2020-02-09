@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: opencv_image
+# key: opencv_image
+# --
+#include <opencv2/opencv.hpp>
+#include <stdio.h>
+
+int
+main(int argc, char *argv[]) {
+    const std::string imgname = "$0";
+    cv::Mat img = cv::imread(imgname);
+    if (img.empty()) {
+        printf("can not opencv image");
+    }
+
+    // $1
+    
+    cv::imshow("image", image);
+    int key = cv::waitKey(33);
+    if (key == 27) {
+        break;
+    }
+
+    return 0;
+}

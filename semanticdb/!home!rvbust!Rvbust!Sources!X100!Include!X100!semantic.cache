@@ -1,0 +1,253 @@
+;; Object X100/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "X100/"
+  :tables
+  (list
+    (semanticdb-table "Motor.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Common.h" include nil nil [67 86])
+            ("MOTOR_STATUS_INVALID_PARAM" variable (:constant-flag t) nil [115 141])
+            ("MOTOR_STATUS_OK" variable (:constant-flag t) nil [161 176])
+            ("MOTOR_STATUS_OVERPOS_STOP" variable (:constant-flag t) nil [207 232])
+            ("MOTOR_STATUS_OVERNEG_STOP" variable (:constant-flag t) nil [272 297])
+            ("MOTOR_STATUS_BREAKAGE" variable (:constant-flag t) nil [337 358])
+            ("MOTOR_STATUS_UNKNOWN" variable (:constant-flag t) nil [413 433])
+            ("MOTOR_DIRECTION_POSITIVE" variable (:constant-flag t) nil [477 501])
+            ("MOTOR_DIRECTION_NEGATIVE" variable (:constant-flag t) nil [518 542])
+            ("MOTOR_DIRECTION_NONE" variable (:constant-flag t) nil [559 579])
+            ("MotorRet" type
+               (:members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [627 638])
+                    ("rotation_direction" variable (:type "int") (reparse-symbol classsubparts) [694 717])
+                    ("current_ma" variable (:type "int") (reparse-symbol classsubparts) [739 754]))                  
+                :type "struct")
+                nil [605 783])
+            ("MotorConfig" type
+               (:members 
+                  ( ("positive_current_limit" variable (:type "float") (reparse-symbol classsubparts) [824 853])
+                    ("negative_current_limit" variable (:type "float") (reparse-symbol classsubparts) [889 918]))                  
+                :type "struct")
+                nil [799 952])
+            ("MotorDC_Rotate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cfg" variable
+                       (:constant-flag t
+                        :type ("MotorConfig" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1288 1317])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [1318 1330])
+                    ("rotate_direciton" variable (:type "int") (reparse-symbol arg-sub-list) [1331 1352])
+                    ("pwm" variable (:type "int") (reparse-symbol arg-sub-list) [1353 1361])
+                    ("duration_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1362 1378]))                  
+                :type ("MotorRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1257 1379])
+            ("MotorStepper_Rotate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cfg" variable
+                       (:constant-flag t
+                        :type ("MotorConfig" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1715 1744])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [1745 1757])
+                    ("rotate_direciton" variable (:type "int") (reparse-symbol arg-sub-list) [1758 1779])
+                    ("freq" variable (:type "int") (reparse-symbol arg-sub-list) [1780 1789])
+                    ("pulse_num" variable (:type "int") (reparse-symbol arg-sub-list) [1790 1804]))                  
+                :type ("MotorRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1679 1805]))          
+      :file "Motor.h"
+      :pointmax 1824
+      :fsize 2695
+      :lastmodtime '(23681 58577 918491 536000)
+      :unmatched-syntax '((symbol 1808 . 1823) (symbol 88 . 105) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("MOTOR_STATUS_INVALID_PARAM" . ((punctuation "-" 142 . 143) (number "1" 143 . 144)))
+          ("MOTOR_DIRECTION_NEGATIVE" . ((number "1" 543 . 544)))
+          ("MOTOR_STATUS_OVERPOS_STOP" . ((punctuation "-" 233 . 234) (number "2" 234 . 235)))
+          ("MOTOR_DIRECTION_POSITIVE" . ((number "0" 502 . 503)))
+          ("MOTOR_STATUS_BREAKAGE" . ((punctuation "-" 359 . 360) (number "4" 360 . 361)))
+          ("MOTOR_DIRECTION_NONE" . ((punctuation "-" 580 . 581) (number "1" 581 . 582)))
+          ("MOTOR_STATUS_OK" . ((number "0" 177 . 178)))
+          ("MOTOR_STATUS_OVERNEG_STOP" . ((punctuation "-" 298 . 299) (number "3" 299 . 300)))
+          ("MOTOR_STATUS_UNKNOWN" . ((punctuation "-" 434 . 435) (number "5" 435 . 436)))
+          )
+)
+    (semanticdb-table "Common.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FPP_CEXTERN" variable (:constant-flag t) nil [100 111])
+            ("FPP_CEXTERN_BEGIN" variable (:constant-flag t) nil [131 148])
+            ("FPP_CEXTERN_END" variable (:constant-flag t) nil [170 185])
+            ("FPP_API" variable (:constant-flag t) nil [356 363])
+            ("NULL" variable (:constant-flag t) nil [393 397]))          
+      :file "Common.h"
+      :pointmax 417
+      :fsize 416
+      :lastmodtime '(23681 56862 552713 13000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 100 . 111) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("FPP_CEXTERN" . ((EXTERN "extern" 112 . 118) (string "\"C\"" 119 . 122)))
+          ("NULL" . ((semantic-list "((void *)0)" 398 . 409)))
+          ("FPP_CEXTERN_END" . ((close-paren "}" 186 . 187)))
+          ("FPP_API")
+          ("FPP_CEXTERN_BEGIN" . 
+              ((EXTERN "extern" 149 . 155) (string "\"C\"" 156 . 159) (open-paren "{" 160 . 161)))
+          )
+)
+    (semanticdb-table "OpticsEngine.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Common.h" include nil nil [67 86])
+            ("OPTICSENGINE_STATUS_OPENED" variable (:constant-flag t) nil [127 153])
+            ("OPTICSENGINE_STATUS_CLOSED" variable (:constant-flag t) nil [183 209])
+            ("OPTICSENGINE_STATUS_CLOSED" variable (:constant-flag t) nil [183 209])
+            ("OPTICSENGINE_STATUS_PLAY_OK" variable (:constant-flag t) nil [239 266])
+            ("OPTICSENGINE_STATUS_PLAY_OK" variable (:constant-flag t) nil [239 266])
+            ("OPTICSENGINE_STATUS_OPEN_FAILED" variable (:constant-flag t) nil [293 324])
+            ("OPTICSENGINE_STATUS_OPEN_FAILED" variable (:constant-flag t) nil [293 324])
+            ("OPTICSENGINE_STATUS_CLOSE_FAILED" variable (:constant-flag t) nil [347 379])
+            ("OPTICSENGINE_STATUS_CLOSE_FAILED" variable (:constant-flag t) nil [347 379])
+            ("OPTICSENGINE_STATUS_PLAY_FAILED" variable (:constant-flag t) nil [401 432])
+            ("OPTICSENGINE_STATUS_PLAY_FAILED" variable (:constant-flag t) nil [401 432])
+            ("OPTICSENGINE_STATUS_INVALID_ID" variable (:constant-flag t) nil [455 485])
+            ("OPTICSENGINE_STATUS_INVALID_ID" variable (:constant-flag t) nil [455 485])
+            ("OPTICSENGINE_STATUS_INVALID_PARAMS" variable (:constant-flag t) nil [509 543])
+            ("OPTICSENGINE_STATUS_INVALID_PARAMS" variable (:constant-flag t) nil [509 543])
+            ("OpticsEngineRet" type
+               (:members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [603 614]))                  
+                :type "struct")
+                nil [574 617])
+            ("OpticsEngine_Open" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1007 1014]))                  
+                :type ("OpticsEngineRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [966 1015])
+            ("OpticsEngine_Close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1223 1230]))                  
+                :type ("OpticsEngineRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1181 1231])
+            ("OpticsEngine_Play" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1602 1609])
+                    ("image_ids_array" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1610 1631])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1632 1638])
+                    ("step_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1639 1651]))                  
+                :type ("OpticsEngineRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1561 1652]))          
+      :file "OpticsEngine.h"
+      :pointmax 1670
+      :fsize 2147
+      :lastmodtime '(23687 9706 34822 409000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPTICSENGINE_STATUS_INVALID_ID" . ((punctuation "-" 486 . 487) (number "4" 487 . 488)))
+          ("OPTICSENGINE_STATUS_OPEN_FAILED" . ((punctuation "-" 325 . 326) (number "1" 326 . 327)))
+          ("OPTICSENGINE_STATUS_OPENED" . ((number "1" 154 . 155)))
+          ("OPTICSENGINE_STATUS_CLOSED" . ((number "2" 210 . 211)))
+          ("OPTICSENGINE_STATUS_CLOSE_FAILED" . ((punctuation "-" 380 . 381) (number "2" 381 . 382)))
+          ("OPTICSENGINE_STATUS_PLAY_OK" . ((number "3" 267 . 268)))
+          ("OPTICSENGINE_STATUS_INVALID_PARAMS" . ((punctuation "-" 544 . 545) (number "5" 545 . 546)))
+          ("OPTICSENGINE_STATUS_PLAY_FAILED" . ((punctuation "-" 433 . 434) (number "3" 434 . 435)))
+          )
+)
+    (semanticdb-table "FPGACapture.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Common.h" include nil nil [67 86])
+            ("FPGACAPTURE_OK" variable (:constant-flag t) nil [115 129])
+            ("FPGACAPTURE_FAILED" variable (:constant-flag t) nil [140 158])
+            ("FPGASTOP_OK" variable (:constant-flag t) nil [170 181])
+            ("FPGASTOP_FAILED" variable (:constant-flag t) nil [192 207])
+            ("FPGACaptureRet" type
+               (:members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [240 251]))                  
+                :type "struct")
+                nil [212 254])
+            ("FPGAStopRet" type
+               (:members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [281 292]))                  
+                :type "struct")
+                nil [256 295])
+            ("FPGACapture_Execute" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("opticengineid" variable (:type "int") (reparse-symbol arg-sub-list) [705 723])
+                    ("cameraid" variable (:type "int") (reparse-symbol arg-sub-list) [724 737])
+                    ("image_ids_array" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [738 760])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [761 767])
+                    ("num_times" variable (:type "int") (reparse-symbol arg-sub-list) [768 782])
+                    ("proj_step_ms_hint" variable (:type "int") (reparse-symbol arg-sub-list) [783 805])
+                    ("trig_step_ms_hint" variable (:type "int") (reparse-symbol arg-sub-list) [848 870]))                  
+                :type ("FPGACaptureRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [663 871])
+            ("FPGACapture_Stop" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("opticengineid" variable (:type "int") (reparse-symbol arg-sub-list) [909 927])
+                    ("cameraid" variable (:type "int") (reparse-symbol arg-sub-list) [928 941]))                  
+                :type ("FPGAStopRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [873 942]))          
+      :file "FPGACapture.h"
+      :pointmax 960
+      :fsize 1259
+      :lastmodtime '(23681 56886 876389 739000)
+      :unmatched-syntax '((symbol 944 . 959) (symbol 88 . 105) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("FPGASTOP_OK" . ((number "0" 182 . 183)))
+          ("FPGASTOP_FAILED" . ((punctuation "-" 208 . 209) (number "1" 209 . 210)))
+          ("FPGACAPTURE_OK" . ((number "0" 130 . 131)))
+          ("FPGACAPTURE_FAILED" . ((punctuation "-" 159 . 160) (number "1" 160 . 161)))
+          )
+)
+    (semanticdb-table "X100.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Motor.h" include nil nil [67 85])
+            ("OpticsEngine.h" include nil nil [86 111])
+            ("FPGACapture.h" include nil nil [112 136]))          
+      :file "X100.h"
+      :pointmax 137
+      :fsize 136
+      :lastmodtime '(23681 56642 848531 700000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X100!Include!X100!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

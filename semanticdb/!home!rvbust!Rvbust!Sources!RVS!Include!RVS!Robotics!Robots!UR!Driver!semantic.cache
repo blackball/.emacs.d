@@ -1,0 +1,1019 @@
+;; Object Driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Driver/"
+  :tables
+  (list
+    (semanticdb-table "UR5.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [66 83])
+            ("vector" include (:system-flag t) nil [84 101])
+            ("condition_variable" include (:system-flag t) nil [102 131])
+            ("utility" include (:system-flag t) nil [132 150])
+            ("list" include (:system-flag t) nil [151 166])
+            ("RVS/Common/Eigen.h" include (:system-flag t) nil [168 197])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::Vec3d" using (:type ("RVS::Common::Vec3d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [455 480])
+                            ("RVS::Common::Vec6d" using (:type ("RVS::Common::Vec6d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [481 506])
+                            ("RVS::Common::Mat4d" using (:type ("RVS::Common::Mat4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [507 532])
+                            ("UR5" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [546 553])
+                                    ("UR5" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("UR5" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [558 564])
+                                    ("UR5" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [569 576])
+                                    ("SetAccRatio" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ratio" variable (:type "double") (reparse-symbol arg-sub-list) [598 611]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [582 612])
+                                    ("SetSpeedRatio" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ratio" variable (:type "double") (reparse-symbol arg-sub-list) [651 664]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [633 665])
+                                    ("Connect" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ipstr" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [917 942])
+                                            ("port" variable
+                                               (:default-value "50001"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [943 959]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [905 961])
+                                    ("Disconnect" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [967 984])
+                                    ("GetVersion" function
+                                       (:prototype-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [990 1010])
+                                    ("IsReachable" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pose" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1033 1051]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1016 1052])
+                                    ("MoveTo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pose" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1069 1087]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1058 1088])
+                                    ("GetJointState" function
+                                       (:prototype-flag t
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("Vec6d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1094 1132])
+                                    ("GetPose" function
+                                       (:prototype-flag t
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1137 1169])
+                                    ("GetControllerPose" function
+                                       (:prototype-flag t
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1174 1216])
+                                    ("ForwardKinemtaics" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joints" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1280 1308]))                                          
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1240 1309])
+                                    ("InverseKinematics" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pose" variable
+                                               (:reference 1
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1381 1393]))                                          
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("std::vector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1314 1394])
+                                    ("NearestInverseKinematics" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pose" variable
+                                               (:reference 1
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1461 1473]))                                          
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("bool" type nil nil nil)
+                                                  ("std::vector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1399 1474])
+                                    ("MoveJoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("q" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1495 1524]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1480 1525])
+                                    ("MoveJoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_valus" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec6d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1545 1570]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1530 1571])
+                                    ("SpeedJoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("qd" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1592 1622]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1576 1623])
+                                    ("SpeedEndEffector" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("dx" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1649 1679]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1628 1680])
+                                    ("MoveX" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1718 1727]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1708 1728])
+                                    ("MoveY" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1743 1752]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1733 1753])
+                                    ("MoveZ" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1768 1777]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1758 1778])
+                                    ("RotateX" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1795 1804]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1783 1805])
+                                    ("RotateY" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1822 1831]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1810 1832])
+                                    ("RotateZ" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1849 1858]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1837 1859])
+                                    ("RotateXB" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1877 1886]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1864 1887])
+                                    ("RotateYB" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1905 1914]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1892 1915])
+                                    ("RotateZB" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1933 1942]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1920 1943])
+                                    ("RunTraj" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("points" variable
+                                               (:constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("std::vector" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1960 2006]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1948 2007])
+                                    ("RunTrajRML" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("points" variable
+                                               (:constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2027 2060]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2012 2061])
+                                    ("URScript" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("command" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2080 2100]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2067 2101])
+                                    ("private" label nil (reparse-symbol classsubparts) [2103 2111])
+                                    ("Impl" type
+                                       (:prototype t
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [2116 2128])
+                                    ("m_impl" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("Impl" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2133 2162])
+                                    ("EigenToVector" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_valus" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec6d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2252 2277])
+                                            ("positions" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2278 2309]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2233 2310])
+                                    ("VectorToEigen" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("q" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2334 2363])
+                                            ("joint_valus" variable
+                                               (:reference 1
+                                                :type ("Vec6d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2364 2383]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2315 2384])
+                                    ("ArrToEigen" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("arr" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2405 2423])
+                                            ("pose" variable
+                                               (:reference 1
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2424 2436]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2389 2437])
+                                    ("ArrToVector" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("arr" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2459 2477])
+                                            ("arr_size" variable (:type "int") (reparse-symbol arg-sub-list) [2478 2491])
+                                            ("positions" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2492 2523]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2442 2524])
+                                    ("EigenToArr" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pose" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2545 2563])
+                                            ("arr" variable
+                                               (:pointer 1
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2564 2576]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2529 2577]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [534 2580]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [433 2583]))                  
+                :type "namespace")
+                nil [416 2608]))          
+      :file "UR5.h"
+      :pointmax 2626
+      :fsize 3053
+      :lastmodtime '(23746 29031 812697 917000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "UR5Controller.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [68 85])
+            ("vector" include (:system-flag t) nil [86 103])
+            ("mutex" include (:system-flag t) nil [104 120])
+            ("atomic" include (:system-flag t) nil [121 138])
+            ("thread" include (:system-flag t) nil [139 156])
+            ("iostream" include (:system-flag t) nil [157 176])
+            ("condition_variable" include (:system-flag t) nil [177 206])
+            ("RVS/Common/Eigen.h" include (:system-flag t) nil [208 237])
+            ("RVS/Common/LoggerMacros.h" include (:system-flag t) nil [238 274])
+            ("RVS/Robotics/Common/Types.h" include (:system-flag t) nil [275 313])
+            ("RVS/Robotics/Robots/UR/Kinematics/URKinematics.h" include (:system-flag t) nil [314 373])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::Mat4d" using (:type ("RVS::Common::Mat4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [414 439])
+                            ("RVS::Common::Quatd" using (:type ("RVS::Common::Quatd" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [440 465])
+                            ("RVS::Common::Vec3d" using (:type ("RVS::Common::Vec3d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [466 491])
+                            ("RVS::Common::Vec6d" using (:type ("RVS::Common::Vec6d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [492 517]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [392 9592]))                  
+                :type "namespace")
+                nil [375 9617]))          
+      :file "UR5Controller.h"
+      :pointmax 9635
+      :fsize 9634
+      :lastmodtime '(23746 30448 291664 928000)
+      :unmatched-syntax nil)
+    (semanticdb-table "RobotState.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("inttypes.h" include (:system-flag t) nil [640 661])
+            ("vector" include (:system-flag t) nil [662 679])
+            ("stdlib.h" include (:system-flag t) nil [680 699])
+            ("string.h" include (:system-flag t) nil [700 719])
+            ("mutex" include (:system-flag t) nil [720 736])
+            ("condition_variable" include (:system-flag t) nil [737 766])
+            ("netinet/in.h" include (:system-flag t) nil [767 790])
+            ("MessageType" type
+               (:members 
+                  ( ("MessageType_RobotState" variable
+                       (:constant-flag t
+                        :default-value (840 842)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [815 842])
+                    ("MessageType_RobotMessage" variable
+                       (:constant-flag t
+                        :default-value (875 877)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [848 877])
+                    ("MessageType_ProgramStateMessage" variable
+                       (:constant-flag t
+                        :default-value (917 919)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [883 919]))                  
+                :type "enum")
+                nil [792 923])
+            ("PackageType" type
+               (:members 
+                  ( ("PackageType_RobotModeData" variable
+                       (:constant-flag t
+                        :default-value (976 977)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [948 977])
+                    ("PackageType_JointData" variable
+                       (:constant-flag t
+                        :default-value (1007 1008)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [983 1008])
+                    ("PackageType_ToolData" variable
+                       (:constant-flag t
+                        :default-value (1037 1038)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1014 1038])
+                    ("PackageType_MasterboardData" variable
+                       (:constant-flag t
+                        :default-value (1074 1075)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1044 1075])
+                    ("PackageType_CartesianInfo" variable
+                       (:constant-flag t
+                        :default-value (1109 1110)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1081 1110])
+                    ("PackageType_KinematicsInfo" variable
+                       (:constant-flag t
+                        :default-value (1145 1146)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1116 1146])
+                    ("PackageType_ConfigurationData" variable
+                       (:constant-flag t
+                        :default-value (1184 1185)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1152 1185])
+                    ("PackageType_ForceModeData" variable
+                       (:constant-flag t
+                        :default-value (1219 1220)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1191 1220])
+                    ("PackageType_AdditionalInfo" variable
+                       (:constant-flag t
+                        :default-value (1255 1256)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1226 1256])
+                    ("PackageType_CalibrationData" variable
+                       (:constant-flag t
+                        :default-value (1292 1293)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1262 1293]))                  
+                :type "enum")
+                nil [925 1297])
+            ("RobotMessageType" type
+               (:members 
+                  ( ("RobotMessageType_RobotMessageText" variable
+                       (:constant-flag t
+                        :default-value (1363 1364)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1327 1364])
+                    ("RobotMessageType_RobotMessageProgramLabel" variable
+                       (:constant-flag t
+                        :default-value (1414 1415)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1370 1415])
+                    ("RobotMessageType_programStateMessageVariableUpdate" variable
+                       (:constant-flag t
+                        :default-value (1474 1475)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1421 1475])
+                    ("RobotMessageType_RobotMessageVersion" variable
+                       (:constant-flag t
+                        :default-value (1520 1521)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1481 1521])
+                    ("RobotMessageType_RobotMessageSafetyMode" variable
+                       (:constant-flag t
+                        :default-value (1569 1570)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1527 1570])
+                    ("RobotMessageType_RobotMessageErrorCode" variable
+                       (:constant-flag t
+                        :default-value (1617 1618)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1576 1618])
+                    ("RobotMessageType_RobotMessageKey" variable
+                       (:constant-flag t
+                        :default-value (1659 1660)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1624 1660])
+                    ("RobotMessageType_RobotMessageRequestValue" variable
+                       (:constant-flag t
+                        :default-value (1710 1711)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1666 1711])
+                    ("RobotMessageType_RobotMessageRuntimeException" variable
+                       (:constant-flag t
+                        :default-value (1765 1767)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1717 1767]))                  
+                :type "enum")
+                nil [1299 1771])
+            ("RobotStateTypeV18" type
+               (:members 
+                  ( ("RobotStateTypeV18_RunningMode" variable
+                       (:constant-flag t
+                        :default-value (1834 1835)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1802 1835])
+                    ("RobotStateTypeV18_FreeDriveMode" variable
+                       (:constant-flag t
+                        :default-value (1875 1876)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1841 1876])
+                    ("RobotStateTypeV18_ReadyMode" variable
+                       (:constant-flag t
+                        :default-value (1912 1913)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1882 1913])
+                    ("RobotStateTypeV18_InitializingMode" variable
+                       (:constant-flag t
+                        :default-value (1956 1957)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1919 1957])
+                    ("RobotStateTypeV18_SecurityStoppedMode" variable
+                       (:constant-flag t
+                        :default-value (2003 2004)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1963 2004])
+                    ("RobotStateTypeV18_EmergencyStoppedMode" variable
+                       (:constant-flag t
+                        :default-value (2051 2052)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2010 2052])
+                    ("RobotStateTypeV18_FatalErrorMode" variable
+                       (:constant-flag t
+                        :default-value (2093 2094)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2058 2094])
+                    ("RobotStateTypeV18_NoPowerMode" variable
+                       (:constant-flag t
+                        :default-value (2132 2133)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2100 2133])
+                    ("RobotStateTypeV18_NotConnectedMode" variable
+                       (:constant-flag t
+                        :default-value (2176 2177)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2139 2177])
+                    ("RobotStateTypeV18_ShutdownMode" variable
+                       (:constant-flag t
+                        :default-value (2216 2217)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2183 2217])
+                    ("RobotStateTypeV18_SafeguardStopMode" variable
+                       (:constant-flag t
+                        :default-value (2261 2263)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2223 2263]))                  
+                :type "enum")
+                nil [1773 2267])
+            ("RobotStateTypeV30" type
+               (:members 
+                  ( ("RobotStateTypeV30_Disconnected" variable
+                       (:constant-flag t
+                        :default-value (2331 2332)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2298 2332])
+                    ("RobotStateTypeV30_ConfirmSafety" variable
+                       (:constant-flag t
+                        :default-value (2372 2373)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2338 2373])
+                    ("RobotStateTypeV30_Booting" variable
+                       (:constant-flag t
+                        :default-value (2407 2408)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2379 2408])
+                    ("RobotStateTypeV30_PowerOff" variable
+                       (:constant-flag t
+                        :default-value (2443 2444)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2414 2444])
+                    ("RobotStateTypeV30_PowerOn" variable
+                       (:constant-flag t
+                        :default-value (2478 2479)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2450 2479])
+                    ("RobotStateTypeV30_Idle" variable
+                       (:constant-flag t
+                        :default-value (2510 2511)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2485 2511])
+                    ("RobotStateTypeV30_BackDrive" variable
+                       (:constant-flag t
+                        :default-value (2547 2548)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2517 2548])
+                    ("RobotStateTypeV30_Running" variable
+                       (:constant-flag t
+                        :default-value (2582 2583)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2554 2583])
+                    ("RobotStateTypeV30_UpdatingFirmware" variable
+                       (:constant-flag t
+                        :default-value (2626 2627)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2589 2627]))                  
+                :type "enum")
+                nil [2269 2631])
+            ("VersionMessage" type
+               (:members 
+                  ( ("timestamp" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2662 2681])
+                    ("source" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2686 2700])
+                    ("robot_message_type" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2705 2731])
+                    ("project_name_size" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2736 2761])
+                    ("project_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2766 2788])
+                    ("major_version" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2793 2815])
+                    ("minor_version" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2820 2842])
+                    ("svn_revision" variable (:type "int") (reparse-symbol classsubparts) [2847 2864])
+                    ("build_date" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2869 2889]))                  
+                :type "struct")
+                nil [2634 2892])
+            ("MasterboardData" type
+               (:members 
+                  ( ("digital_input_bits" variable (:type "int") (reparse-symbol classsubparts) [2923 2946])
+                    ("digital_output_bits" variable (:type "int") (reparse-symbol classsubparts) [2951 2975])
+                    ("analog_input_range0" variable (:type "char") (reparse-symbol classsubparts) [2980 3005])
+                    ("analog_input_range1" variable (:type "char") (reparse-symbol classsubparts) [3010 3035])
+                    ("analog_input0" variable (:type "double") (reparse-symbol classsubparts) [3040 3061])
+                    ("analog_input1" variable (:type "double") (reparse-symbol classsubparts) [3066 3087])
+                    ("analog_output_domain0" variable (:type "char") (reparse-symbol classsubparts) [3092 3119])
+                    ("analog_output_domain1" variable (:type "char") (reparse-symbol classsubparts) [3124 3151])
+                    ("analog_output0" variable (:type "double") (reparse-symbol classsubparts) [3156 3178])
+                    ("analog_output1" variable (:type "double") (reparse-symbol classsubparts) [3183 3205])
+                    ("masterBoard_Temperature" variable (:type "float") (reparse-symbol classsubparts) [3210 3240])
+                    ("robot_voltage48V" variable (:type "float") (reparse-symbol classsubparts) [3245 3268])
+                    ("robot_current" variable (:type "float") (reparse-symbol classsubparts) [3273 3293])
+                    ("master_io_current" variable (:type "float") (reparse-symbol classsubparts) [3298 3322])
+                    ("safety_mode" variable (:type "unsigned char") (reparse-symbol classsubparts) [3327 3353])
+                    ("master_onoff_state" variable (:type "unsigned char") (reparse-symbol classsubparts) [3358 3391])
+                    ("euromap67_interface_installed" variable (:type "char") (reparse-symbol classsubparts) [3396 3431])
+                    ("euromap_input_bits" variable (:type "int") (reparse-symbol classsubparts) [3436 3459])
+                    ("euromap_output_bits" variable (:type "int") (reparse-symbol classsubparts) [3464 3488])
+                    ("euromap_voltage" variable (:type "float") (reparse-symbol classsubparts) [3493 3515])
+                    ("euromap_current" variable (:type "float") (reparse-symbol classsubparts) [3520 3542]))                  
+                :type "struct")
+                nil [2894 3545])
+            ("RobotModeData" type
+               (:members 
+                  ( ("timestamp" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3574 3593])
+                    ("is_robot_connected" variable (:type "bool") (reparse-symbol classsubparts) [3598 3622])
+                    ("is_real_robot_enabled" variable (:type "bool") (reparse-symbol classsubparts) [3627 3654])
+                    ("is_poweron_robot" variable (:type "bool") (reparse-symbol classsubparts) [3659 3681])
+                    ("is_emergency_stopped" variable (:type "bool") (reparse-symbol classsubparts) [3686 3712])
+                    ("is_protective_stopped" variable (:type "bool") (reparse-symbol classsubparts) [3717 3744])
+                    ("is_program_running" variable (:type "bool") (reparse-symbol classsubparts) [3749 3773])
+                    ("is_program_paused" variable (:type "bool") (reparse-symbol classsubparts) [3778 3801])
+                    ("robot_mode" variable (:type "unsigned char") (reparse-symbol classsubparts) [3806 3831])
+                    ("control_mode" variable (:type "unsigned char") (reparse-symbol classsubparts) [3836 3863])
+                    ("target_speed_fraction" variable (:type "double") (reparse-symbol classsubparts) [3868 3897])
+                    ("speed_scaling" variable (:type "double") (reparse-symbol classsubparts) [3902 3923]))                  
+                :type "struct")
+                nil [3547 3926])
+            ("RobotState" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [3947 3955])
+                    ("m_version_msg" variable (:type ("VersionMessage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3960 3989])
+                    ("m_mb_data" variable (:type ("MasterboardData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3994 4020])
+                    ("m_robot_mode" variable (:type ("RobotModeData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4025 4052])
+                    ("m_val_lock" variable (:type ("std::recursive_mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4058 4090])
+                    ("m_pMsg_cond" variable
+                       (:pointer 1
+                        :type ("std::condition_variable" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4145 4182])
+                    ("m_new_data_available" variable (:type "bool") (reparse-symbol classsubparts) [4226 4252])
+                    ("m_robot_moderunning" variable (:type "unsigned char") (reparse-symbol classsubparts) [4284 4318])
+                    ("_Ntohd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("nf" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4338 4350]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [4324 4351])
+                    ("public" label nil (reparse-symbol classsubparts) [4353 4360])
+                    ("RobotState" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("msg_cond" variable
+                               (:reference 1
+                                :type ("std::condition_variable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4376 4410]))                          
+                        :type ("RobotState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4365 4411])
+                    ("RobotState" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4416 4430])
+                    ("GetVersion" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4435 4455])
+                    ("GetTime" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4460 4477])
+                    ("GetQTarget" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4482 4515])
+                    ("GetDigitalInputBits" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [4520 4546])
+                    ("GetDigitalOutputBits" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [4551 4578])
+                    ("GetAnalogInputRange0" function
+                       (:prototype-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [4583 4611])
+                    ("GetAnalogInputRange1" function
+                       (:prototype-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [4616 4644])
+                    ("GetAnalogInput0" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4649 4674])
+                    ("GetAnalogInput1" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4679 4704])
+                    ("GetAnalogOutputDomain0" function
+                       (:prototype-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [4709 4739])
+                    ("GetAnalogOutputDomain1" function
+                       (:prototype-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [4744 4774])
+                    ("GetAnalogOutput0" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4779 4805])
+                    ("GetAnalogOutput1" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4810 4836])
+                    ("GetVActual" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4841 4874])
+                    ("GetMasterBoardTemperature" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4879 4913])
+                    ("GetRobotVoltage48V" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4918 4945])
+                    ("GetRobotCurrent" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4950 4974])
+                    ("GetMasterIOCurrent" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4979 5006])
+                    ("GetSafetyMode" function
+                       (:prototype-flag t
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5011 5041])
+                    ("GetInReducedMode" function
+                       (:prototype-flag t
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5046 5079])
+                    ("GetEuromap67InterfaceInstalled" function
+                       (:prototype-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [5084 5122])
+                    ("GetEuromapInputBits" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [5127 5153])
+                    ("GetEuromapOutputBits" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [5158 5185])
+                    ("GetEuromapVoltage" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [5190 5216])
+                    ("GetEuromapCurrent" function
+                       (:prototype-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [5221 5247])
+                    ("IsRobotConnected" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5253 5277])
+                    ("IsRealRobotEnabled" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5282 5308])
+                    ("IsPowerOnRobot" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5313 5335])
+                    ("IsEmergencyStopped" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5340 5366])
+                    ("IsProtectiveStopped" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5371 5398])
+                    ("IsProgramRunning" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5403 5427])
+                    ("IsProgramPaused" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5432 5455])
+                    ("GetRobotMode" function
+                       (:prototype-flag t
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5460 5489])
+                    ("IsReady" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5494 5509])
+                    ("SetDisconnected" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5515 5538])
+                    ("GetNewDataAvailable" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5544 5571])
+                    ("FinishedReading" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5576 5599])
+                    ("Unpack" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5617 5630])
+                            ("buf_length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5631 5655]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5605 5656])
+                    ("UnpackRobotMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5685 5698])
+                            ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5699 5719])
+                            ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5720 5733]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5661 5734])
+                    ("UnpackRobotMessageVersion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5770 5783])
+                            ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5784 5804])
+                            ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5805 5818]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5739 5819])
+                    ("UnpackRobotState" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5846 5859])
+                            ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5860 5880])
+                            ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5881 5894]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5824 5895])
+                    ("UnpackRobotStateMasterboard" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5933 5946])
+                            ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5947 5967]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5900 5968])
+                    ("UnpackRobotMode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5994 6007])
+                            ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6008 6028]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5973 6029]))                  
+                :type "class")
+                nil [3928 6032]))          
+      :file "RobotState.h"
+      :pointmax 6033
+      :fsize 6032
+      :lastmodtime '(23746 29031 812697 917000)
+      :unmatched-syntax '((symbol 634 . 638) (symbol 627 . 633) (punctuation 626 . 627))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Robots!UR!Driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,127 @@
+;; Object Calib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Calib/"
+  :tables
+  (list
+    (semanticdb-table "PatternDetector.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X/Common/Image.h" include (:system-flag t) nil [146 173])
+            ("vector" include (:system-flag t) nil [174 191])
+            ("X" type
+               (:members 
+                  ( ("Calib" type
+                       (:members 
+                          ( ("X::Common::Image" using (:type ("X::Common::Image" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [227 250])
+                            ("PATTERNDETECTOR_RVDOT" variable (:constant-flag t) (reparse-symbol namespacesubparts) [260 281])
+                            ("PATTERNDETECTOR_RVRING" variable (:constant-flag t) (reparse-symbol namespacesubparts) [292 314])
+                            ("PATTERNDETECTOR_RVCODED" variable (:constant-flag t) (reparse-symbol namespacesubparts) [325 348])
+                            ("PATTERNDETECTOR_CHESSBOARD" variable (:constant-flag t) (reparse-symbol namespacesubparts) [359 385])
+                            ("PatternPoint" type
+                               (:members 
+                                  ( ("flag" variable (:type "int") (reparse-symbol classsubparts) [415 424])
+                                    ("score" variable (:type "double") (reparse-symbol classsubparts) [429 448])
+                                    ("x" variable (:type "double") (reparse-symbol classsubparts) [429 448])
+                                    ("y" variable (:type "double") (reparse-symbol classsubparts) [429 448]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [389 451])
+                            ("PatternResult" type
+                               (:members 
+                                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [480 489])
+                                    ("points" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("PatternPoint" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [494 527]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [453 530])
+                            ("PatternDetector" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [533 556])
+                            ("PatternDetector_New" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [913 922])
+                                    ("rows" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [923 935])
+                                    ("cols" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [937 949]))                                  
+                                :type ("PatternDetector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [876 951])
+                            ("PatternDetector_Delete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pp" variable
+                                       (:pointer 2
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1141 1162]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1113 1163])
+                            ("PatternDetector_Detect" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pd" variable
+                                       (:pointer 1
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1474 1494])
+                                    ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1495 1514])
+                                    ("pr" variable
+                                       (:reference 1
+                                        :type ("PatternResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1515 1533]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1447 1534])
+                            ("PatternDetector_DetectM" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pd" variable
+                                       (:pointer 1
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1855 1875])
+                                    ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1876 1895])
+                                    ("prs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("PatternResult" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1896 1928]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1827 1929]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [208 1933]))                  
+                :type "namespace")
+                nil [193 1955]))          
+      :file "PatternDetector.h"
+      :pointmax 1971
+      :fsize 1970
+      :lastmodtime '(23596 60960 533147 70000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PATTERNDETECTOR_RVRING" . ((number "1" 315 . 316)))
+          ("PATTERNDETECTOR_CHESSBOARD" . ((number "3" 386 . 387)))
+          ("PATTERNDETECTOR_RVDOT" . ((number "0" 282 . 283)))
+          ("PATTERNDETECTOR_RVCODED" . ((number "2" 349 . 350)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!X!Include!X!Calib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

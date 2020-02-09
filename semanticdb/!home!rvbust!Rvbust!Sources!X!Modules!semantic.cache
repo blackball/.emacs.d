@@ -1,0 +1,779 @@
+;; Object Modules/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Modules/"
+  :tables
+  (list
+    (semanticdb-table "ELSD.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X/X.h" include (:system-flag t) nil [53 69])
+            ("RVX" type
+               (:members 
+                  ( ("ELSD" type
+                       (:members 
+                          ( ("cfg" variable (:type ("" type
+                                 (:members 
+                                    ( ("ang_th" variable (:type "double") (reparse-symbol classsubparts) [196 216])
+                                      ("rho" variable (:type "double") (reparse-symbol classsubparts) [225 241])
+                                      ("density_th" variable (:type "double") (reparse-symbol classsubparts) [250 273])
+                                      ("max_grad" variable (:type "double") (reparse-symbol classsubparts) [282 305])
+                                      ("mlog10eps" variable (:type "double") (reparse-symbol classsubparts) [314 336])
+                                      ("num_bins" variable (:type "int") (reparse-symbol classsubparts) [345 364]))                                    
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol classsubparts) [175 383]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [157 391])
+                    ("ELSD_New" function
+                       (:pointer 1
+                        :type ("ELSD" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [393 418])
+                    ("ELSD_Delete" function
+                       (:arguments 
+                          ( ("pp" variable
+                               (:pointer 2
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [436 446]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [420 455])
+                    ("ELSD_Detect" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [473 481])
+                            ("img" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [482 499]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [457 508])
+                    ("ELSD_Get_EllipsesCount" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [537 551]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [510 560])
+                    ("ELSD_Get_LinesCount" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [586 600]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [562 609])
+                    ("ELSD_Get_Ellipses" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [633 647])
+                            ("ells" variable
+                               (:pointer 1
+                                :type ("Ellipse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [648 662])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [663 676]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [611 685])
+                    ("ELSD_Get_Lines" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ELSD" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [706 720])
+                            ("lines" variable
+                               (:pointer 1
+                                :type ("Line" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [721 733])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [734 747]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [687 756]))                  
+                :type "namespace")
+                nil [140 759]))          
+      :file "ELSD.cpp"
+      :pointmax 779
+      :fsize 778
+      :lastmodtime '(23617 38928 153081 495000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Image.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X/X.h" include (:system-flag t) nil [54 70])
+            ("cassert" include (:system-flag t) nil [71 89])
+            ("RVX" type
+               (:members 
+                  ( ("_Image_Is_SupportedType" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [151 160]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [108 325])
+                    ("_Image_Is_ValidSize" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [366 372])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [373 379]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [327 440])
+                    ("_Image_Get_PixelSize" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [481 490]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [442 733])
+                    ("Image" type
+                       (:members 
+                          ( ("own_data" variable (:type "bool") (reparse-symbol classsubparts) [754 768])
+                            ("w" variable (:type "int") (reparse-symbol classsubparts) [774 789])
+                            ("h" variable (:type "int") (reparse-symbol classsubparts) [774 789])
+                            ("type" variable (:type "int") (reparse-symbol classsubparts) [774 789])
+                            ("data" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol classsubparts) [794 814]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [735 818])
+                    ("Image_New" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [837 843])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [844 850])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [851 860]))                          
+                        :type ("Image" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [820 1317])
+                    ("Image_Delete" function
+                       (:arguments 
+                          ( ("pp" variable
+                               (:pointer 2
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1336 1347]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1319 1452])
+                    ("Image_From" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("pdata" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [1472 1493])
+                            ("w" variable (:type "int") (reparse-symbol arg-sub-list) [1494 1500])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [1501 1507])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [1508 1517]))                          
+                        :type ("Image" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1454 1904])
+                    ("Image_Get_Width" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1926 1941]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1906 1979])
+                    ("Image_Get_Height" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2002 2017]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1981 2059])
+                    ("Image_Get_Type" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2080 2095]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2061 2136])
+                    ("_Image_CropROI_8UC1" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2169 2184])
+                            ("r" variable
+                               (:constant-flag t
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2185 2198])
+                            ("buff" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [2199 2219]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2138 2354])
+                    ("Image_CropROI" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2374 2389])
+                            ("r" variable
+                               (:constant-flag t
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2390 2403])
+                            ("buff" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [2404 2424]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2356 2852]))                  
+                :type "namespace")
+                nil [91 2855]))          
+      :file "Image.cpp"
+      :pointmax 2876
+      :fsize 2875
+      :lastmodtime '(23617 40407 579987 955000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Memory.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVX" type
+               (:members 
+                  ( ("Malloc" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("size_in_bytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [98 125]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [85 126])
+                    ("Free" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [137 145]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [127 146])
+                    ("Realloc" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [161 169])
+                            ("new_size_in_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [170 192]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [147 193]))                  
+                :type "namespace")
+                nil [68 196]))          
+      :file "Memory.h"
+      :pointmax 215
+      :fsize 214
+      :lastmodtime '(23617 26448 140563 467000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "Memory.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [54 73])
+            ("RVX" type
+               (:members 
+                  ( ("Malloc" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("size_in_bytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [106 133]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [93 171])
+                    ("Free" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [183 191]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [173 208])
+                    ("Realloc" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [224 232])
+                            ("new_size_in_bytes" variable (:type "int") (reparse-symbol arg-sub-list) [233 255]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [210 301]))                  
+                :type "namespace")
+                nil [75 305]))          
+      :file "Memory.cpp"
+      :pointmax 324
+      :fsize 323
+      :lastmodtime '(23617 26522 376709 313000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CornerPoint_Detector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X/X.h" include (:system-flag t) nil [53 69])
+            ("vector" include (:system-flag t) nil [70 87])
+            ("RVX" type
+               (:members 
+                  ( ("CornerPoint_Detector" type
+                       (:members 
+                          ( ("cfg" variable (:type ("" type
+                                 (:members 
+                                    ( ("harris_threshold" variable (:type "int") (reparse-symbol classsubparts) [163 184])
+                                      ("max_points_per_cell" variable (:type "int") (reparse-symbol classsubparts) [193 217])
+                                      ("max_points" variable (:type "int") (reparse-symbol classsubparts) [226 241])
+                                      ("num_levels" variable (:type "int") (reparse-symbol classsubparts) [251 266])
+                                      ("fast_thresholds" variable (:type ("std::vector" type
+                                           (:template-specifier 
+                                              ( ("int" type nil nil nil))                                              
+                                            :type "class")
+                                            nil nil)) (reparse-symbol classsubparts) [275 308])
+                                      ("dynamic" variable (:type ("" type
+                                           (:members 
+                                              ( ("enabled" variable (:type "bool") (reparse-symbol classsubparts) [347 360])
+                                                ("analyze_at_halfres" variable (:type "bool") (reparse-symbol classsubparts) [373 397])
+                                                ("boost_sparse_cells" variable (:type "bool") (reparse-symbol classsubparts) [410 434])
+                                                ("low_sigama" variable (:type "int") (reparse-symbol classsubparts) [448 476])
+                                                ("low_barrier" variable (:type "int") (reparse-symbol classsubparts) [448 476])
+                                                ("mid_sigama" variable (:type "int") (reparse-symbol classsubparts) [490 518])
+                                                ("mid_barrier" variable (:type "int") (reparse-symbol classsubparts) [490 518])
+                                                ("high_sigama" variable (:type "int") (reparse-symbol classsubparts) [532 562])
+                                                ("high_barrier" variable (:type "int") (reparse-symbol classsubparts) [532 562]))                                              
+                                            :type "struct")
+                                            nil nil)) (reparse-symbol classsubparts) [318 593]))                                    
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol classsubparts) [142 605])
+                            ("" type
+                               (:members 
+                                  ( ("MAX_ROW_CORNERS" variable
+                                       (:constant-flag t
+                                        :default-value (648 653)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [630 653])
+                                    ("NUM_CELLS_X" variable
+                                       (:constant-flag t
+                                        :default-value (677 678)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [663 678])
+                                    ("NUM_CELLS_Y" variable
+                                       (:constant-flag t
+                                        :default-value (702 703)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [688 703]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [611 712]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [108 721])
+                    ("CornerPoint_Detector_New" function
+                       (:pointer 1
+                        :type ("CornerPoint_Detector" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [723 780])
+                    ("CornerPoint_Detector_Delete" function
+                       (:arguments 
+                          ( ("pp" variable
+                               (:pointer 2
+                                :type ("CornerPoint_Detector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [814 840]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [782 849])
+                    ("CornerPoint_Detector_Detect" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("CornerPoint_Detector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [883 907])
+                            ("img" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [908 925]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [851 934])
+                    ("CornerPoint_Detector_Get_CornerPointsCount" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CornerPoint_Detector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [983 1013]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [936 1022])
+                    ("CornerPoint_Detector_Get_CornerPoints" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CornerPoint_Detector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1066 1096])
+                            ("pts" variable
+                               (:pointer 1
+                                :type ("CornerPoint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1097 1114])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [1115 1128]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1024 1137]))                  
+                :type "namespace")
+                nil [89 1141]))          
+      :file "CornerPoint_Detector.cpp"
+      :pointmax 1160
+      :fsize 1159
+      :lastmodtime '(23617 38945 541115 655000)
+      :unmatched-syntax nil)
+    (semanticdb-table "InterestPointFilter.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "InterestPointFilter.h"
+      :pointmax 67
+      :fsize 66
+      :lastmodtime '(23617 37485 306246 902000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "TinyHarris.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Types.h" include nil nil [67 85])
+            ("X/X.h" include (:system-flag t) nil [86 102])
+            ("RVX" type
+               (:members 
+                  ( ("TinyHarris" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [121 139])
+                    ("TinyHarris_New" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("TinyHarris" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [140 169])
+                    ("TinyHarris_Delete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pp" variable
+                               (:pointer 2
+                                :type ("TinyHarris" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [192 208]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [170 209])
+                    ("TinyHarris_GetMax" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("TinyHarris" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [232 246])
+                            ("img" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [247 264])
+                            ("max_coord" variable
+                               (:pointer 1
+                                :type ("PixelPos" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [265 285])
+                            ("max_response" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [286 304]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [210 305])
+                    ("TinyHarris" type
+                       (:superclasses 
+                          ( ("NonCopyable" type
+                               (:protection "private"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [350 357])
+                            ("" type
+                               (:members 
+                                  ( ("PATCH_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (386 388)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [377 392])
+                                    ("GRADIENT_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (414 415)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [402 419])
+                                    ("CORNER_AREA_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (444 445)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [429 449]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [362 456])
+                            ("getMax" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("img" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image8" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [474 492])
+                                    ("patchLT" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [493 524])
+                                    ("doShiTomasi" variable (:type "bool") (reparse-symbol arg-sub-list) [525 542])
+                                    ("maxCoord" variable
+                                       (:reference 1
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [543 569])
+                                    ("maxResponse" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [570 587]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [462 588])
+                            ("protected" label nil (reparse-symbol classsubparts) [590 600])
+                            ("extractPatch" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("img" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image8" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [623 641])
+                                    ("patchLT" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [642 673]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [605 674])
+                            ("calcGradients" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [679 700])
+                            ("weightGradients" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [705 728])
+                            ("findMax" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("doShiTomasi" variable (:type "bool") (reparse-symbol arg-sub-list) [746 763])
+                                    ("maxCoord" variable
+                                       (:reference 1
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [764 790])
+                                    ("maxResponce" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [791 808]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [733 809])
+                            ("patch" variable
+                               (:dereference 1
+                                :type "unsigned char")
+                                (reparse-symbol classsubparts) [815 858])
+                            ("dxx" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [863 984])
+                            ("dxy" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [863 984])
+                            ("dyy" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [863 984])
+                            ("dxxV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [989 1122])
+                            ("dyyV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [989 1122])
+                            ("dxyV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [989 1122])
+                            ("dxxH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1127 1260])
+                            ("dyyH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1127 1260])
+                            ("dxyH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1127 1260])
+                            ("dxxG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1265 1407])
+                            ("dyyG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1265 1407])
+                            ("dxyG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1265 1407]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [309 1410]))                  
+                :type "namespace")
+                nil [104 1414]))          
+      :file "TinyHarris.h"
+      :pointmax 1433
+      :fsize 1432
+      :lastmodtime '(23617 38779 708789 867000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVX" type
+               (:members 
+                  ( ("Image" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [84 97])
+                    ("ImageROI" type
+                       (:members 
+                          ( ("pimg" variable
+                               (:pointer 1
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [164 176])
+                            ("rect" variable (:type ("Rect" type (:type "class") nil nil)) (reparse-symbol classsubparts) [219 229]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [142 233]))                  
+                :type "namespace")
+                nil [67 237]))          
+      :file "Types.h"
+      :pointmax 256
+      :fsize 255
+      :lastmodtime '(23617 38791 380812 793000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "TinyHarris.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TinyHarris.h" include nil nil [54 77])
+            ("RVX" type
+               (:members 
+                  ( ("TinyHarris" type
+                       (:members 
+                          ( ("" type
+                               (:members 
+                                  ( ("PATCH_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (152 154)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [139 154])
+                                    ("GRADIENT_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (180 181)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [164 181])
+                                    ("CORNER_AREA_SIZE" variable
+                                       (:constant-flag t
+                                        :default-value (210 211)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [191 211]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [120 218])
+                            ("patch" variable
+                               (:dereference 1
+                                :type "unsigned char")
+                                (reparse-symbol classsubparts) [224 267])
+                            ("dxx" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [272 393])
+                            ("dxy" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [272 393])
+                            ("dyy" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [272 393])
+                            ("dxxV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [398 531])
+                            ("dyyV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [398 531])
+                            ("dxyV" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [398 531])
+                            ("dxxH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [536 669])
+                            ("dyyH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [536 669])
+                            ("dxyH" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [536 669])
+                            ("dxxG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [674 816])
+                            ("dyyG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [674 816])
+                            ("dxyG" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [674 816]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [96 820])
+                    ("TinyHarris_New" function
+                       (:pointer 1
+                        :type ("TinyHarris" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [822 943])
+                    ("TinyHarris_Delete" function
+                       (:arguments 
+                          ( ("pp" variable
+                               (:pointer 2
+                                :type ("TinyHarris" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [967 983]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [945 1087])
+                    ("TinyHarris_GetMax" function
+                       (:arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("TinyHarris" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1111 1125])
+                            ("img" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1126 1143])
+                            ("max_coord" variable
+                               (:pointer 1
+                                :type ("PixelPos" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1166 1186])
+                            ("max_response" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1187 1205]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1089 1532]))                  
+                :type "namespace")
+                nil [79 1536]))          
+      :file "TinyHarris.cpp"
+      :pointmax 1555
+      :fsize 1554
+      :lastmodtime '(23617 40419 620011 608000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X!Modules!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

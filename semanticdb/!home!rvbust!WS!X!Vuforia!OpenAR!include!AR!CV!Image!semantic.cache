@@ -1,0 +1,177 @@
+;; Object Image/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Image/"
+  :tables
+  (list
+    (semanticdb-table "ImagePyramid.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__AR_CV_IMAGEPYRAMID_HEADERFILE__" variable (:constant-flag t) nil [535 568])
+            ("AR/Common/SmallVector.h" include (:system-flag t) nil [571 605])
+            ("AR/Common/NonCopyable.h" include (:system-flag t) nil [606 640])
+            ("AR/Common/TimeStamp.h" include (:system-flag t) nil [641 673])
+            ("AR/Common/Trace.h" include (:system-flag t) nil [674 702])
+            ("AR/CV/Image/Image.h" include (:system-flag t) nil [703 733])
+            ("AR/CV/Image/ImageOps.h" include (:system-flag t) nil [734 767])
+            ("AR/CV/Image/Blur.h" include (:system-flag t) nil [768 797])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("ImagePyramid" type
+                               (:superclasses 
+                                  ( ("Common::NonCopyable" type
+                                       (:protection "private"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [956 963])
+                                    ("" type
+                                       (:members 
+                                          ( ("MAX_LEVELS" variable
+                                               (:constant-flag t
+                                                :default-value (996 1007)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [983 1007]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [968 1014])
+                                    ("Levels" type
+                                       (:typedef ("Common::SmallVector" type
+                                             (:template-specifier 
+                                                ( ("Image" type nil nil nil)
+                                                  ("MAX_LEVELS" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1020 1084])
+                                    ("ImagePyramid" function
+                                       (:constructor-flag t
+                                        :type ("ImagePyramid" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1090 1181])
+                                    ("setup" function
+                                       (:arguments 
+                                          ( ("nNumLevels" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1477 1495])
+                                            ("nScaleFactor" variable
+                                               (:default-value "0.5"
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1496 1518])
+                                            ("nCopyTopLevel" variable
+                                               (:default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1520 1544]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1466 1760])
+                                    ("clone" function
+                                       (:arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1777 1803]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1766 2189])
+                                    ("setImage" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("nImage" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image" type
+                                                     (:template-specifier 
+                                                        ( ("PIX_TYPE" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2209 2239])
+                                            ("nBlurImages" variable (:type "bool") (reparse-symbol arg-sub-list) [2240 2257])
+                                            ("nAlignment" variable
+                                               (:default-value "Common"
+                                                :type ("Common::MEMORY_ALIGNMENT" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2258 2300])
+                                            ("" variable (:type ("ALIGN_16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2302 2311]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2195 2312])
+                                    ("numLevels" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2318 2371])
+                                    ("level" function
+                                       (:constant-flag t
+                                        :arguments 
+                                          ( ("nLevel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2406 2420]))                                          
+                                        :type ("Image" type
+                                             (:template-specifier 
+                                                ( ("PIX_TYPE" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2377 2456])
+                                    ("level" function
+                                       (:arguments 
+                                          ( ("nLevel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2485 2499]))                                          
+                                        :type ("Image" type
+                                             (:template-specifier 
+                                                ( ("PIX_TYPE" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2462 2529])
+                                    ("lastLevel" function
+                                       (:constant-flag t
+                                        :type ("Image" type
+                                             (:template-specifier 
+                                                ( ("PIX_TYPE" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2535 2605])
+                                    ("getDataTimestamp" function (:type ("AR::Common::TimeStamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2611 2683])
+                                    ("getDataTimestampPtr" function
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("AR::Common::TimeStamp" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2688 2765])
+                                    ("setDataTimestamp" function
+                                       (:arguments 
+                                          ( ("newDataTimestamp" variable
+                                               (:constant-flag t
+                                                :type ("AR::Common::TimeStamp" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2792 2837]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2770 2876])
+                                    ("protected" label nil (reparse-symbol classsubparts) [2878 2888])
+                                    ("levels" variable (:type ("Levels" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2893 2980])
+                                    ("tmpLevels" variable (:type ("Levels" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2893 2980])
+                                    ("scaleFactor" variable (:type "float") (reparse-symbol classsubparts) [3052 3072])
+                                    ("copyTopLevel" variable (:type "bool") (reparse-symbol classsubparts) [3129 3150])
+                                    ("dataTimestamp" variable (:type ("AR::Common::TimeStamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3216 3252]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [905 3373])
+                            ("setImage" function
+                               (:template 
+                                  ( ("PIX_TYPE" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("nImage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image" type
+                                             (:template-specifier 
+                                                ( ("PIX_TYPE" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3472 3502])
+                                    ("nBlurImages" variable (:type "bool") (reparse-symbol arg-sub-list) [3503 3520])
+                                    ("nAlignment" variable (:type ("Common::MEMORY_ALIGNMENT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3521 3557]))                                  
+                                :parent "ImagePyramid")
+                                (reparse-symbol namespacesubparts) [3376 5350]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [816 5354]))                  
+                :type "namespace")
+                nil [801 5375]))          
+      :file "ImagePyramid.h"
+      :pointmax 5440
+      :fsize 5604
+      :lastmodtime '(22112 24680 913623 0)
+      :unmatched-syntax '((punctuation 2301 . 2302) (punctuation 2300 . 2301) (punctuation 903 . 904) (number 902 . 903) (punctuation 901 . 902) (symbol 890 . 901) (INT 886 . 889) (punctuation 884 . 885) (symbol 876 . 884) (TYPENAME 867 . 875) (punctuation 866 . 867) (TEMPLATE 857 . 865))
+      :lexical-table 
+        '(("__AR_CV_IMAGEPYRAMID_HEADERFILE__")
+          )
+))
+  :file "!home!rvbust!WS!X!Vuforia!OpenAR!include!AR!CV!Image!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

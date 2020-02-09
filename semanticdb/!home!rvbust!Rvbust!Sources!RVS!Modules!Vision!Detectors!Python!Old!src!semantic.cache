@@ -1,0 +1,190 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "voter2d.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [26 36])
+            ("time" include nil nil [38 49])
+            ("sklearn.cluster" include nil nil [50 87])
+            ("numpy" include nil nil [88 106])
+            ("collections" include nil nil [108 139])
+            ("matplotlib" include nil nil [140 176])
+            ("cProfile" include nil nil [178 193])
+            ("DoCProfile" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [210 214]))              ) nil [195 509])
+            ("GroupAndCount" function
+               (:documentation " group values in L and get it's count. 
+    
+    L = [1,2,3,2,3] => [(1,1), (2,2), (3,2)]
+    
+    @Note the returned list is not sorted.
+    "
+                :arguments 
+                  ( ("L" variable nil (reparse-symbol function_parameters) [529 530]))                  )
+                nil [511 747])
+            ("GetMedianAngle" function (:arguments 
+              ( ("angles" variable nil (reparse-symbol function_parameters) [767 773])
+                ("labels" variable nil (reparse-symbol function_parameters) [775 781])
+                ("currentLabel" variable nil (reparse-symbol function_parameters) [783 795]))              ) nil [748 889])
+            ("RotateVector" function (:arguments 
+              ( ("v" variable nil (reparse-symbol function_parameters) [916 917])
+                ("angle" variable nil (reparse-symbol function_parameters) [919 924]))              ) nil [899 1068])
+            ("LineIntersect" function
+               (:documentation " Find out the intersection point of two segments (p1, p2), (p3, p4)"
+                :arguments 
+                  ( ("p1" variable nil (reparse-symbol function_parameters) [1087 1089])
+                    ("p2" variable nil (reparse-symbol function_parameters) [1091 1093])
+                    ("p3" variable nil (reparse-symbol function_parameters) [1095 1097])
+                    ("p4" variable nil (reparse-symbol function_parameters) [1099 1101]))                  )
+                nil [1069 1798])
+            ("RootSIFT" function
+               (:documentation " root normalization before sift matching
+
+    Step 1: L1-normalize each SIFT vector.
+    Step 2: Take the square-root of each element in the SIFT vector.
+    
+    Note: This could improve the matching quality, but minor. 
+    "
+                :arguments 
+                  ( ("descs" variable nil (reparse-symbol function_parameters) [1813 1818]))                  )
+                nil [1800 2143])
+            ("Voter2D" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2214 2234]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2185 2189])
+                            ("image" variable nil (reparse-symbol function_parameters) [2191 2196]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2172 2235])
+                    ("VoteBy2NN" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2275 2279])
+                            ("templateCenter" variable nil (reparse-symbol function_parameters) [2281 2295])
+                            ("templateKpts" variable nil (reparse-symbol function_parameters) [2297 2309])
+                            ("imageKpts" variable nil (reparse-symbol function_parameters) [2311 2320])
+                            ("matches" variable nil (reparse-symbol function_parameters) [2322 2329])
+                            ("scale" variable nil (reparse-symbol function_parameters) [2331 2336])
+                            ("minVote" variable nil (reparse-symbol function_parameters) [2344 2351])
+                            ("debug" variable nil (reparse-symbol function_parameters) [2357 2362]))                          
+                        :documentation " Voting for template centers from matches 
+        trainImg: template image
+        trainKpts: kpts from template image 
+        queryKpts: kpts from current frame 
+        scale: template-size / template-in-image-size scale 
+        minVote: minimum number of votes for a center 
+        ")
+                        (reparse-symbol indented_block_body) [2261 5571])
+                    ("VoteByKNN" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5592 5596]))                          
+                        :documentation " TODO
+        ")
+                        (reparse-symbol indented_block_body) [5578 5642])
+                    ("_Filter2NNMatches" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5669 5673])
+                            ("raw_matches" variable nil (reparse-symbol function_parameters) [5675 5686])
+                            ("ratio" variable nil (reparse-symbol function_parameters) [5688 5693]))                          )
+                        (reparse-symbol indented_block_body) [5647 5858]))                  
+                :type "class")
+                nil [2145 5858])
+            ("GetDirectionPoints" function (:arguments 
+              ( ("center" variable nil (reparse-symbol function_parameters) [5886 5892])
+                ("angle" variable nil (reparse-symbol function_parameters) [5894 5899])
+                ("size" variable nil (reparse-symbol function_parameters) [5901 5905]))              ) nil [5863 6254])
+            ("RotateImage" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [6271 6276])
+                ("angle" variable nil (reparse-symbol function_parameters) [6278 6283]))              ) nil [6255 7066])
+            ("Blend" function (:arguments 
+              ( ("smallImg" variable nil (reparse-symbol function_parameters) [7078 7086])
+                ("center" variable nil (reparse-symbol function_parameters) [7088 7094])
+                ("bigImg" variable nil (reparse-symbol function_parameters) [7096 7102]))              ) nil [7068 7864])
+            ("VoteOne" function (:arguments 
+              ( ("bigTempl" variable nil (reparse-symbol function_parameters) [7891 7899])
+                ("bigImage" variable nil (reparse-symbol function_parameters) [7901 7909])
+                ("N" variable nil (reparse-symbol function_parameters) [7911 7912]))              ) nil [7879 9487])
+            ("SaveTemplate" function nil nil [9489 9807])
+            ("Streamming" function nil nil [9813 10143])
+            ("Main" function (:arguments 
+              ( ("templName" variable nil (reparse-symbol function_parameters) [10153 10162]))              ) nil [10144 10488])
+            ("MainFromVideo" function (:arguments 
+              ( ("templName" variable nil (reparse-symbol function_parameters) [10507 10516])
+                ("videoName" variable nil (reparse-symbol function_parameters) [10518 10527]))              ) nil [10489 10884])
+            ("if" code nil nil [10885 11062]))          
+      :file "voter2d.py"
+      :pointmax 13018
+      :fsize 13017
+      :lastmodtime '(23816 60315 968967 29000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LogitechCamera.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [26 36])
+            ("LogitechCamera" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\" Config the capture. 
+        
+        focusVal: should be in range [0, 1.0] 
+        exposureVal: can not set exposure for C92 
+        \"\"\"" code nil (reparse-symbol indented_block_body) [280 423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [441 466])
+                            ("self" variable nil (reparse-symbol indented_block_body) [476 505])
+                            ("self" variable nil (reparse-symbol indented_block_body) [514 544])
+                            ("self" variable nil (reparse-symbol indented_block_body) [553 582])
+                            ("self" variable nil (reparse-symbol indented_block_body) [591 624])
+                            ("self" variable nil (reparse-symbol indented_block_body) [633 665]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90 94])
+                            ("deviceID" variable nil (reparse-symbol function_parameters) [96 104])
+                            ("autoFocus" variable nil (reparse-symbol function_parameters) [128 137])
+                            ("autoExposure" variable nil (reparse-symbol function_parameters) [169 181])
+                            ("focusVal" variable nil (reparse-symbol function_parameters) [210 218])
+                            ("exposureVal" variable nil (reparse-symbol function_parameters) [249 260]))                          
+                        :documentation " Config the capture. 
+        
+        focusVal: should be in range [0, 1.0] 
+        exposureVal: can not set exposure for C92 
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [77 666])
+                    ("Open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [688 692]))                          )
+                        (reparse-symbol indented_block_body) [679 1724])
+                    ("Close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1743 1747]))                          )
+                        (reparse-symbol indented_block_body) [1733 1778])
+                    ("Read" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1800 1804]))                          )
+                        (reparse-symbol indented_block_body) [1791 1891]))                  
+                :type "class")
+                nil [39 1891])
+            ("FindFocus" function nil nil [1893 2250])
+            ("if" code nil nil [2251 2559]))          
+      :file "LogitechCamera.py"
+      :pointmax 2581
+      :fsize 2580
+      :lastmodtime '(23816 59558 179623 419000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Detectors!Python!Old!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

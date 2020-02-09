@@ -1,0 +1,268 @@
+;; Object Robots/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Robots/"
+  :tables
+  (list
+    (semanticdb-table "RobotControllerBase.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Robots/RobotControllerBase.h" include (:system-flag t) nil [53 105])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RobotControllerBase" function
+                               (:constructor-flag t
+                                :parent "RobotControllerBase"
+                                :type ("RobotControllerBase" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [145 459])
+                            ("RobotControllerBase" function
+                               (:destructor-flag t
+                                :parent "RobotControllerBase"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [461 550])
+                            ("SetRobotModel" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("robot_model" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("RobotModel" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [591 637]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [552 836])
+                            ("GetRobotModel" function
+                               (:parent "RobotControllerBase"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("RobotModel" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [838 928])
+                            ("SetKinSovler" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("kin_solver" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("KinematicsBase" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [968 1017]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [930 1219])
+                            ("GetKinSolver" function
+                               (:parent "RobotControllerBase"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinematicsBase" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1221 1313])
+                            ("GetPose" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1348 1360]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1315 1638])
+                            ("Reachability" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1678 1696])
+                                    ("check_linear_motion" variable (:type "bool") (reparse-symbol arg-sub-list) [1697 1722]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1640 2207])
+                            ("SetAccRatio" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("ratio" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2246 2265]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2209 2395])
+                            ("SetVelRatio" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("ratio" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2434 2453]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2397 2583])
+                            ("GetAccRatio" function
+                               (:parent "RobotControllerBase"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2585 2656])
+                            ("GetVelRatio" function
+                               (:parent "RobotControllerBase"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2658 2729])
+                            ("IsEnabled" function
+                               (:parent "RobotControllerBase"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2731 2799])
+                            ("MoveJoints" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("joint_positions" variable
+                                       (:reference 1
+                                        :type ("JointVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2837 2866])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [2867 2877]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2801 3825])
+                            ("MoveLinear" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3863 3881])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [3882 3892]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [3827 4545])
+                            ("MoveBX" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4579 4594])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [4595 4605]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [4547 4887])
+                            ("MoveBY" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4921 4936])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [4937 4947]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [4889 5229])
+                            ("MoveBZ" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5263 5278])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [5279 5289]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [5231 5571])
+                            ("RotateBX" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5607 5622])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [5623 5633]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [5573 6080])
+                            ("RotateBY" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [6116 6131])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [6132 6142]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [6082 6589])
+                            ("RotateBZ" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [6625 6640])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [6641 6651]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [6591 7098])
+                            ("MoveTX" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [7132 7147])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [7148 7158]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [7100 7495])
+                            ("MoveTY" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [7529 7544])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [7545 7555]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [7497 7891])
+                            ("MoveTZ" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [7925 7940])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [7941 7951]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [7893 8287])
+                            ("RotateTX" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [8323 8338])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [8339 8349]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [8289 8743])
+                            ("RotateTY" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [8779 8794])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [8795 8805]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [8745 9198])
+                            ("RotateTZ" function
+                               (:parent "RobotControllerBase"
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9234 9249])
+                                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [9250 9260]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [9200 9653]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [123 9656]))                  
+                :type "namespace")
+                nil [107 9680]))          
+      :file "RobotControllerBase.cpp"
+      :pointmax 9697
+      :fsize 9696
+      :lastmodtime '(23837 22668 944181 349000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Robots!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,178 @@
+;; Object GenericDataObject/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "GenericDataObject/"
+  :tables
+  (list
+    (semanticdb-table "Data.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Data" type
+               (:members 
+                  ( ("Data" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [33 51])
+                    ("Type" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [56 85]))                  
+                :type "struct")
+                nil [15 88]))          
+      :file "Data.h"
+      :pointmax 90
+      :fsize 89
+      :lastmodtime '(23865 27092 406887 492000)
+      :unmatched-syntax nil)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Process.h" include nil nil [1 21])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [33 42])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [43 56]))                  
+                :type "int")
+                nil [24 141]))          
+      :file "main.cpp"
+      :pointmax 142
+      :fsize 141
+      :lastmodtime '(23865 26886 322398 324000)
+      :unmatched-syntax nil)
+    (semanticdb-table "MyData.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Data.h" include nil nil [15 32])
+            ("DataTypes.h" include nil nil [33 55])
+            ("MyData" type
+               (:superclasses 
+                  ( ("Data" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("SetName" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [232 238]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [212 264])
+                    ("Name" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol classsubparts) [274 327])
+                    ("private" label nil (reparse-symbol classsubparts) [333 341])
+                    ("name" variable (:type "int") (reparse-symbol classsubparts) [346 355]))                  
+                :type "struct")
+                nil [57 358]))          
+      :file "MyData.h"
+      :pointmax 359
+      :fsize 358
+      :lastmodtime '(23865 27174 71081 333000)
+      :unmatched-syntax nil)
+    (semanticdb-table "DataTypes.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DataType" type
+               (:members 
+                  ( ("DataType_MyData" variable
+                       (:constant-flag t
+                        :default-value (54 55)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [36 55])
+                    ("DataType_YourData" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [61 79])
+                    ("DataType_CalibrationData" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [85 110]))                  
+                :type "enum")
+                nil [16 114]))          
+      :file "DataTypes.h"
+      :pointmax 115
+      :fsize 114
+      :lastmodtime '(23865 27170 287072 351000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "Process.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Data.h" include nil nil [15 32])
+            ("DataManager_GetData" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :type ("Data" type (:type "class") nil nil))
+                nil [33 67])
+            ("Process" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pdata" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81 99]))                  
+                :type "void")
+                nil [68 100]))          
+      :file "Process.h"
+      :pointmax 101
+      :fsize 100
+      :lastmodtime '(23865 27019 662714 824000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Process.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MyData.h" include nil nil [2 21])
+            ("Process.h" include nil nil [22 42])
+            ("iostream" include (:system-flag t) nil [43 62])
+            ("DataManager_GetData" function
+               (:pointer 1
+                :constant-flag t
+                :type ("Data" type (:type "class") nil nil))
+                nil [64 191])
+            ("Process" function
+               (:arguments 
+                  ( ("pdata" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [207 225]))                  
+                :type "void")
+                nil [194 422]))          
+      :file "Process.cpp"
+      :pointmax 423
+      :fsize 422
+      :lastmodtime '(23865 26824 950252 650000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CalibrationData.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CalibrationData" type
+               (:superclasses 
+                  ( ("DataObject" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("assas" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [71 97]))                  
+                :type "struct")
+                nil [17 101]))          
+      :file "CalibrationData.h"
+      :pointmax 102
+      :fsize 101
+      :lastmodtime '(23865 27157 139041 143000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!home!rvbust!WS!Sandbox!GenericDataObject!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

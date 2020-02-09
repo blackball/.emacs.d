@@ -1,0 +1,325 @@
+;; Object Detectors/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Detectors/"
+  :tables
+  (list
+
+
+
+
+
+    (semanticdb-table "Voter2dPre.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Vision/Common/LoggerUtils.h" include (:system-flag t) nil [54 96])
+            ("RVS/Vision/Detectors/Voter2dPre.h" include (:system-flag t) nil [97 141])
+            ("RVS" type
+               (:members 
+                  ( ("Vision" type
+                       (:members 
+                          ( ("Print" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [219 242])
+                                    ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [243 267]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol namespacesubparts) [180 390])
+                            ("Subtract" function
+                               (:template 
+                                  ( ("PT" type (:type "class") nil nil))                                  
+                                :type ("PT" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [441 453])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [454 466]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [392 530])
+                            ("Divide" function
+                               (:template 
+                                  ( ("PT" type (:type "class") nil nil))                                  
+                                :type ("PT" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [579 591])
+                                    ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [592 605]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [532 722])
+                            ("RotateVector" function
+                               (:template 
+                                  ( ("PT" type (:type "class") nil nil))                                  
+                                :type ("PT" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [777 789])
+                                    ("angle" variable (:type "double") (reparse-symbol arg-sub-list) [790 803]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [724 998])
+                            ("GetMagnitude" function
+                               (:template 
+                                  ( ("PT" type (:type "class") nil nil))                                  
+                                :type "double"
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1057 1069]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1000 1117])
+                            ("QuantizeToHist" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1146 1179])
+                                    ("binwidth" variable (:type "int") (reparse-symbol arg-sub-list) [1180 1193])
+                                    ("hist" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1194 1217]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1119 1392])
+                            ("GetTop2Peaks" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("hist" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1419 1448])
+                                    ("winsize" variable (:type "int") (reparse-symbol arg-sub-list) [1449 1461])
+                                    ("bandwidth" variable (:type "int") (reparse-symbol arg-sub-list) [1462 1476])
+                                    ("av" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AngleVotes" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1477 1505]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1394 6147])
+                            ("Impl" type
+                               (:parent "Voter2dPre"
+                                :members 
+                                  ( ("scale" variable (:type "double") (reparse-symbol classsubparts) [6179 6197])
+                                    ("DMatch_filter_ratio" variable (:type "double") (reparse-symbol classsubparts) [6202 6234])
+                                    ("min_seg_len" variable (:type "double") (reparse-symbol classsubparts) [6239 6263])
+                                    ("max_seg_len" variable (:type "double") (reparse-symbol classsubparts) [6268 6293])
+                                    ("templ_center" variable (:type ("Point2d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6299 6320])
+                                    ("templ_kps" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("KeyPoint" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6325 6357]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [6149 6360])
+                            ("GetTop2AngleCandidates" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("angles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6421 6454]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("AngleVotes" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [6362 6855])
+                            ("Voter2dPre" function
+                               (:constructor-flag t
+                                :parent "Voter2dPre"
+                                :type ("Voter2dPre" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [6857 6968])
+                            ("Voter2dPre" function
+                               (:destructor-flag t
+                                :parent "Voter2dPre"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6974 7049])
+                            ("_Filter2NNMatches" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("matches" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::vector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7397 7439])
+                                    ("filtered_matches" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DMatch" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7440 7478]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [7363 7901])
+                            ("_GetLineIntersect" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("seg1" variable
+                                       (:reference 1
+                                        :type ("Voter2dSegment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8257 8278])
+                                    ("seg2" variable
+                                       (:reference 1
+                                        :type ("Voter2dSegment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8279 8300])
+                                    ("intersect" variable
+                                       (:reference 1
+                                        :type ("Point2d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8301 8320]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [8223 9272])
+                            ("_GetScale" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("image_kpts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("KeyPoint" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9893 9933])
+                                    ("train_index1" variable (:type "int") (reparse-symbol arg-sub-list) [9934 9951])
+                                    ("train_index2" variable (:type "int") (reparse-symbol arg-sub-list) [9952 9969])
+                                    ("query_index1" variable (:type "int") (reparse-symbol arg-sub-list) [9970 9987])
+                                    ("query_index2" variable (:type "int") (reparse-symbol arg-sub-list) [9988 10005])
+                                    ("scale" variable
+                                       (:reference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [10006 10020]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [9867 10577])
+                            ("SetTemplate" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("templcenter" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Point2d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10914 10941])
+                                    ("kpts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("KeyPoint" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10942 10976]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [10886 11178])
+                            ("SetDMatchFilterRatio" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("ratio" variable (:type "double") (reparse-symbol arg-sub-list) [11431 11444]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [11394 11602])
+                            ("SetVotingSegmentRange" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("minlength" variable (:type "double") (reparse-symbol arg-sub-list) [11923 11940])
+                                    ("maxlength" variable (:type "double") (reparse-symbol arg-sub-list) [11941 11958]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [11885 12189])
+                            ("SetScale" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("scale" variable (:type "double") (reparse-symbol arg-sub-list) [12407 12420]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12382 12565])
+                            ("GetCandidates" function
+                               (:parent "Voter2dPre"
+                                :arguments 
+                                  ( ("image_kpts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("KeyPoint" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12988 13028])
+                                    ("matches" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::vector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13029 13071])
+                                    ("candidates" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Voter2dCandidate" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13072 13114]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12958 15897]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [160 15900]))                  
+                :type "namespace")
+                nil [143 15924]))          
+      :file "Voter2dPre.cpp"
+      :pointmax 15943
+      :fsize 15942
+      :lastmodtime '(23833 63824 556946 342000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Detectors!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

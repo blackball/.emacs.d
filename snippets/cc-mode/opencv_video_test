@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: opencv_video
+# key: opencv_video
+# --
+#include <opencv2/opencv.hpp>
+
+int
+main(int argc, char *argv[]) {
+    cv::VideoCapture cap(0);
+    cv::Mat frame;
+    
+    while (1) {
+        cap >> frame;
+        if (frame.empty()) break;
+        // $0
+        cv::imshow("frame", frame);
+        int key = cv::waitKey(33);
+        if (key == 27) {
+            break;
+        }
+    }    
+    return 0;
+}

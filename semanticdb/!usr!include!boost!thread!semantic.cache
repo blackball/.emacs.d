@@ -1,0 +1,673 @@
+;; Object thread/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "thread/"
+  :tables
+  (list
+    (semanticdb-table "condition.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_THREAD_CONDITION_HPP" variable (:constant-flag t) nil [44 70])
+            ("boost/thread/detail/config.hpp" include (:system-flag t) nil [274 315]))          
+      :file "condition.hpp"
+      :pointmax 491
+      :fsize 490
+      :lastmodtime '(22567 25498 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_THREAD_CONDITION_HPP")
+          )
+)
+    (semanticdb-table "mutex.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_THREAD_MUTEX_HPP" variable (:constant-flag t) nil [40 62])
+            ("boost/thread/detail/platform.hpp" include (:system-flag t) nil [284 327])
+            ("boost/thread/lockable_traits.hpp" include (:system-flag t) nil [562 605])
+            ("boost" type
+               (:members 
+                  ( ("sync" type (:type "namespace") (reparse-symbol namespacesubparts) [628 1156]))                  
+                :type "namespace")
+                nil [608 1158]))          
+      :file "mutex.hpp"
+      :pointmax 1167
+      :fsize 1166
+      :lastmodtime '(22567 25498 0 0)
+      :unmatched-syntax '((string 509 . 553) (symbol 503 . 508) (punctuation 502 . 503))
+      :lexical-table 
+        '(("BOOST_THREAD_MUTEX_HPP")
+          )
+)
+    (semanticdb-table "lockable_traits.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_THREAD_LOCKABLE_TRAITS_HPP" variable (:constant-flag t) nil [298 330])
+            ("boost/thread/detail/config.hpp" include (:system-flag t) nil [332 373])
+            ("boost/assert.hpp" include (:system-flag t) nil [375 402])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [403 441])
+            ("boost/type_traits/is_class.hpp" include (:system-flag t) nil [442 483])
+            ("boost/config/abi_prefix.hpp" include (:system-flag t) nil [485 523])
+            ("boost" type
+               (:members 
+                  ( ("sync" type
+                       (:members 
+                          ( ("detail" type
+                               (:members 
+                                  ( ("BOOST_THREAD_DEFINE_HAS_MEMBER_CALLED" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1008 1045])
+                                    ("has_member_called_lock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3400 3443])
+                                    ("has_member_called_lock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("fallback" type
+                                               (:members 
+                                                  ( ("lock" variable (:type "int") (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("derived" type
+                                               (:superclasses 
+                                                  ( ("T" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil)
+                                                    ("fallback" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil))                                                  
+                                                :members 
+                                                  ( ("derived" function
+                                                       (:prototype-flag t
+                                                        :constructor-flag t
+                                                        :type ("derived" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("tester" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:pointer 1
+                                                        :type ("tester" type
+                                                             (:template-specifier (("U::lock"))
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3400 3445])
+                                    ("has_member_called_unlock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3451 3496])
+                                    ("has_member_called_unlock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("fallback" type
+                                               (:members 
+                                                  ( ("unlock" variable (:type "int") (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("derived" type
+                                               (:superclasses 
+                                                  ( ("T" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil)
+                                                    ("fallback" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil))                                                  
+                                                :members 
+                                                  ( ("derived" function
+                                                       (:prototype-flag t
+                                                        :constructor-flag t
+                                                        :type ("derived" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("tester" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:pointer 1
+                                                        :type ("tester" type
+                                                             (:template-specifier (("U::unlock"))
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3451 3497])
+                                    ("has_member_called_try_lock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3504 3551])
+                                    ("has_member_called_try_lock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("fallback" type
+                                               (:members 
+                                                  ( ("try_lock" variable (:type "int") (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("derived" type
+                                               (:superclasses 
+                                                  ( ("T" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil)
+                                                    ("fallback" type
+                                                       (:protection "unspecified"
+                                                        :type "class")
+                                                        nil nil))                                                  
+                                                :members 
+                                                  ( ("derived" function
+                                                       (:prototype-flag t
+                                                        :constructor-flag t
+                                                        :type ("derived" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) nil))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("tester" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:pointer 1
+                                                        :type ("tester" type
+                                                             (:template-specifier (("U::try_lock"))
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) nil))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) nil)
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) nil)
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) nil))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3504 3552])
+                                    ("has_member_lock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [3687 3692])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3693 3704]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [3665 3706]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3626 3715])
+                                    ("has_member_lock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3797 3820])
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3867 3886]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3829 3897])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil)
+                                                    ("V" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments ((nil variable (:type ("V" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3975 3986]))
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [3907 3987])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable (:type ("U" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4054 4056]))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [3996 4057])
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [4102 4107])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4107 4113]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [4067 4182]))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3723 4191])
+                                    ("has_member_unlock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [4330 4335])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4336 4347]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [4308 4349]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [4267 4358])
+                                    ("has_member_unlock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4442 4465])
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [4512 4531]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [4474 4542])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil)
+                                                    ("V" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments ((nil variable (:type ("V" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4620 4631]))
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [4552 4632])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable (:type ("U" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4699 4701]))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [4641 4702])
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [4747 4752])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4752 4758]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [4712 4831]))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [4366 4840])
+                                    ("has_member_try_lock" type
+                                       (:members 
+                                          ( ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [4983 4988])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4989 5000]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [4961 5002]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [4918 5011])
+                                    ("has_member_try_lock" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("true_type" type
+                                               (:typedef ("char")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5097 5120])
+                                            ("false_type" type
+                                               (:members 
+                                                  ( ("dummy" variable
+                                                       (:dereference 1
+                                                        :type ("true_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [5167 5186]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [5129 5197])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("true_type" type (:type "class") nil nil)
+                                                :arguments ((nil variable (:type "bool") (reparse-symbol arg-sub-list) [5264 5278]))
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [5207 5279])
+                                            ("has_member" function
+                                               (:template 
+                                                  ( ("U" type (:type "class") nil nil))                                                  
+                                                :type ("false_type" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("" variable (:type ("U" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5346 5348]))                                                  
+                                                :typemodifiers ("static")
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [5288 5349])
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [5394 5399])
+                                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5399 5405]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [5359 5482]))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("true" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [5019 5491]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [977 5498])
+                            ("is_basic_lockable" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [5588 5593])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5594 5608])
+                                            ("" variable (:type ("has_member_lock" type
+                                                 (:template-specifier 
+                                                    ( ("T" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5610 5629])
+                                            ("" variable
+                                               (:reference 1
+                                                :type ("value" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5630 5638])
+                                            ("" variable (:type ("detail::has_member_unlock::value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5649 5685]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5566 5686]))                                  )
+                                (reparse-symbol namespacesubparts) [5504 5693])
+                            ("is_lockable" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [5776 5781])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5782 5817])
+                                            ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5818 5820])
+                                            ("" variable
+                                               (:reference 1
+                                                :type ("value" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5822 5830])
+                                            ("" variable (:type ("detail::has_member_try_lock::value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5841 5879]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5754 5880]))                                  )
+                                (reparse-symbol namespacesubparts) [5698 5887])
+                            ("is_recursive_mutex_sur_parole" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [6231 6236])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6237 6250]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6209 6252]))                                  )
+                                (reparse-symbol namespacesubparts) [6135 6259])
+                            ("is_recursive_mutex_sur_parolle" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("is_recursive_mutex_sur_parole" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [6264 6374])
+                            ("is_recursive_basic_lockable" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [6474 6479])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6480 6505])
+                                            ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6506 6508])
+                                            ("" variable
+                                               (:reference 1
+                                                :type ("value" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6510 6518])
+                                            ("" variable (:type ("is_recursive_mutex_sur_parolle" type
+                                                 (:template-specifier 
+                                                    ( ("T" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [6529 6563])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6564 6570]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6452 6571]))                                  )
+                                (reparse-symbol namespacesubparts) [6380 6578])
+                            ("is_recursive_lockable" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [6671 6676])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6677 6696])
+                                            ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6697 6699])
+                                            ("" variable
+                                               (:reference 1
+                                                :type ("value" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6701 6709])
+                                            ("" variable (:type ("is_recursive_mutex_sur_parolle" type
+                                                 (:template-specifier 
+                                                    ( ("T" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [6720 6754])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6755 6761]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6649 6762]))                                  )
+                                (reparse-symbol namespacesubparts) [6583 6769]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [610 6773])
+                    ("is_mutex_type" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("BOOST_STATIC_CONSTANT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [6850 6855])
+                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6856 6868])
+                                    ("" variable (:type ("is_lockable" type
+                                         (:template-specifier 
+                                            ( ("T" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [6870 6885])
+                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6886 6892]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [6828 6893]))                          )
+                        (reparse-symbol namespacesubparts) [6776 6898]))                  
+                :type "namespace")
+                nil [590 6901])
+            ("boost/config/abi_suffix.hpp" include (:system-flag t) nil [6902 6940]))          
+      :file "lockable_traits.hpp"
+      :pointmax 6949
+      :fsize 6948
+      :lastmodtime '(22567 25498 0 0)
+      :unmatched-syntax '((punctuation 6885 . 6886) (punctuation 6884 . 6885) (punctuation 6869 . 6870) (punctuation 6868 . 6869) (punctuation 6754 . 6755) (punctuation 6753 . 6754) (punctuation 6708 . 6709) (punctuation 6700 . 6701) (punctuation 6699 . 6700) (punctuation 6698 . 6699) (punctuation 6696 . 6697) (punctuation 6563 . 6564) (punctuation 6562 . 6563) (punctuation 6517 . 6518) (punctuation 6509 . 6510) (punctuation 6508 . 6509) (punctuation 6507 . 6508) (punctuation 6505 . 6506) (punctuation 5829 . 5830) (punctuation 5821 . 5822) (punctuation 5820 . 5821) (punctuation 5819 . 5820) (punctuation 5817 . 5818) (punctuation 5637 . 5638) (punctuation 5629 . 5630) (punctuation 5628 . 5629) (punctuation 5609 . 5610) (punctuation 5608 . 5609) (semantic-list 5469 . 5480) (SIZEOF 5463 . 5469) (punctuation 5462 . 5463) (punctuation 5461 . 5462) (semantic-list 5411 . 5461) (SIZEOF 5405 . 5411) (punctuation 5404 . 5405) (punctuation 4910 . 4911) (symbol 4904 . 4909) (punctuation 4903 . 4904) (punctuation 4902 . 4903) (punctuation 4901 . 4902) (symbol 4900 . 4901) (punctuation 4899 . 4900) (symbol 4873 . 4899) (punctuation 4872 . 4873) (BOOL 4868 . 4872) (punctuation 4867 . 4868) (symbol 4866 . 4867) (TYPENAME 4857 . 4865) (punctuation 4856 . 4857) (TEMPLATE 4848 . 4856) (semantic-list 4818 . 4829) (SIZEOF 4812 . 4818) (punctuation 4811 . 4812) (punctuation 4810 . 4811) (semantic-list 4764 . 4810) (SIZEOF 4758 . 4764) (punctuation 4757 . 4758) (punctuation 4259 . 4260) (symbol 4253 . 4258) (punctuation 4252 . 4253) (punctuation 4251 . 4252) (punctuation 4250 . 4251) (symbol 4249 . 4250) (punctuation 4248 . 4249) (symbol 4224 . 4248) (punctuation 4223 . 4224) (BOOL 4219 . 4223) (punctuation 4218 . 4219) (symbol 4217 . 4218) (TYPENAME 4208 . 4216) (punctuation 4207 . 4208) (TEMPLATE 4199 . 4207) (semantic-list 4169 . 4180) (SIZEOF 4163 . 4169) (punctuation 4162 . 4163) (punctuation 4161 . 4162) (semantic-list 4119 . 4161) (SIZEOF 4113 . 4119) (punctuation 4112 . 4113) (punctuation 3618 . 3619) (symbol 3612 . 3617) (punctuation 3611 . 3612) (punctuation 3610 . 3611) (punctuation 3609 . 3610) (symbol 3608 . 3609) (punctuation 3607 . 3608) (symbol 3585 . 3607) (punctuation 3584 . 3585) (BOOL 3580 . 3584) (punctuation 3579 . 3580) (symbol 3578 . 3579) (TYPENAME 3569 . 3577) (punctuation 3568 . 3569) (TEMPLATE 3560 . 3568) (punctuation ">" 3504 . 3551) (symbol "value" 3504 . 3551) (punctuation ":" 3504 . 3551) (punctuation ":" 3504 . 3551) (punctuation ">" 3504 . 3551) (symbol "T" 3504 . 3551) (punctuation "<" 3504 . 3551) (symbol "is_class" 3504 . 3551) (punctuation ":" 3504 . 3551) (punctuation ":" 3504 . 3551) (symbol "boost" 3504 . 3551) (punctuation "=" 3504 . 3551) (BOOL "bool" 3504 . 3551) (punctuation "," 3504 . 3551) (symbol "T" 3504 . 3551) (TYPENAME "typename" 3504 . 3551) (punctuation "<" 3504 . 3551) (TEMPLATE "template" 3504 . 3551) (punctuation ">" 3451 . 3496) (symbol "value" 3451 . 3496) (punctuation ":" 3451 . 3496) (punctuation ":" 3451 . 3496) (punctuation ">" 3451 . 3496) (symbol "T" 3451 . 3496) (punctuation "<" 3451 . 3496) (symbol "is_class" 3451 . 3496) (punctuation ":" 3451 . 3496) (punctuation ":" 3451 . 3496) (symbol "boost" 3451 . 3496) (punctuation "=" 3451 . 3496) (BOOL "bool" 3451 . 3496) (punctuation "," 3451 . 3496) (symbol "T" 3451 . 3496) (TYPENAME "typename" 3451 . 3496) (punctuation "<" 3451 . 3496) (TEMPLATE "template" 3451 . 3496) (punctuation ">" 3400 . 3443) (symbol "value" 3400 . 3443) (punctuation ":" 3400 . 3443) (punctuation ":" 3400 . 3443) (punctuation ">" 3400 . 3443) (symbol "T" 3400 . 3443) (punctuation "<" 3400 . 3443) (symbol "is_class" 3400 . 3443) (punctuation ":" 3400 . 3443) (punctuation ":" 3400 . 3443) (symbol "boost" 3400 . 3443) (punctuation "=" 3400 . 3443) (BOOL "bool" 3400 . 3443) (punctuation "," 3400 . 3443) (symbol "T" 3400 . 3443) (TYPENAME "typename" 3400 . 3443) (punctuation "<" 3400 . 3443) (TEMPLATE "template" 3400 . 3443))
+      :lexical-table 
+        '(("BOOST_THREAD_LOCKABLE_TRAITS_HPP")
+          ("BOOST_THREAD_DEFINE_HAS_MEMBER_CALLED" (spp-arg-list ("member_name") 1045 . 1058) . 
+              ((TEMPLATE "template" 1089 . 1097) (punctuation "<" 1097 . 1098) (TYPENAME "typename" 1098 . 1106) (symbol "T" 1107 . 1108) (punctuation "," 1108 . 1109) (BOOL "bool" 1110 . 1114) (punctuation "=" 1114 . 1115) (symbol "boost" 1115 . 1120) (punctuation ":" 1120 . 1121) (punctuation ":" 1121 . 1122) (symbol "is_class" 1122 . 1130) (punctuation "<" 1130 . 1131) (symbol "T" 1131 . 1132) (punctuation ">" 1132 . 1133) (punctuation ":" 1133 . 1134) (punctuation ":" 1134 . 1135) (symbol "value" 1135 . 1140) (punctuation ">" 1140 . 1141) (STRUCT "struct" 1163 . 1169) (spp-symbol-merge ((symbol "has_member_called_" 1170 . 1188) (symbol "member_name" 1190 . 1201)) 1170 . 1201) (semantic-list "{                                                               \\
+            BOOST_STATIC_CONSTANT(bool, value=false);                   \\
+        }" 1237 . 1386) (punctuation ";" 1386 . 1387) (TEMPLATE "template" 1533 . 1541) (punctuation "<" 1541 . 1542) (TYPENAME "typename" 1542 . 1550) (symbol "T" 1551 . 1552) (punctuation ">" 1552 . 1553) (STRUCT "struct" 1607 . 1613) (spp-symbol-merge ((symbol "has_member_called_" 1614 . 1632) (symbol "member_name" 1634 . 1645)) 1614 . 1645) (punctuation "<" 1645 . 1646) (symbol "T" 1646 . 1647) (punctuation "," 1647 . 1648) (symbol "true" 1648 . 1652) (punctuation ">" 1652 . 1653) (semantic-list "{                                                               \\
+            typedef char true_type;                                     \\
+            struct false_type                                           \\
+            {                                                           \\
+                true_type dummy[2];                                     \\
+            };                                                          \\
+                                                                        \\
+            struct fallback { int member_name; };                       \\
+            struct derived:                                             \\
+                T, fallback                                             \\
+            {                                                           \\
+                derived();                                              \\
+            };                                                          \\
+                                                                        \\
+            template<int fallback::*> struct tester;                    \\
+                                                                        \\
+            template<typename U>                                        \\
+                static false_type has_member(tester<&U::member_name>*); \\
+            template<typename U>                                        \\
+                static true_type has_member(...);                       \\
+                                                                        \\
+            BOOST_STATIC_CONSTANT(                                      \\
+                bool, value=sizeof(has_member<derived>(0))==sizeof(true_type)); \\
+        }" 1681 . 3392)))
+          )
+))
+  :file "!usr!include!boost!thread!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

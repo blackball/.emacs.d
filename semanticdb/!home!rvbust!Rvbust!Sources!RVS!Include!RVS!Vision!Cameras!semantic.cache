@@ -1,0 +1,266 @@
+;; Object Cameras/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Cameras/"
+  :tables
+  (list
+    (semanticdb-table "ICamera.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [67 96])
+            ("vector" include (:system-flag t) nil [97 114])
+            ("RVS" type
+               (:members 
+                  ( ("Vision" type
+                       (:members 
+                          ( ("ICamera" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [233 240])
+                                    ("ICamera" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [245 265])
+                                    ("Open" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [271 303])
+                                    ("Open" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("device" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CameraDevice" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [392 419]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [366 424])
+                                    ("Close" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [429 462])
+                                    ("Capture" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("frame" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [496 511]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [467 516])
+                                    ("Capture" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("frames" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("cv::Mat" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [550 579])
+                                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [580 588]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [521 593])
+                                    ("Config" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("jsonstr" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [626 653]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [598 658]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [217 661]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [132 664]))                  
+                :type "namespace")
+                nil [116 686]))          
+      :file "ICamera.h"
+      :pointmax 704
+      :fsize 644
+      :lastmodtime '(23782 1935 985210 620000)
+      :unmatched-syntax '((punctuation 265 . 266) (punctuation 214 . 215) (semantic-list 182 . 214) (INT 178 . 181) (punctuation 176 . 177) (symbol 163 . 175) (CLASS 157 . 162) (ENUM 152 . 156) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "Ensenso.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("nxLib.h" include (:system-flag t) nil [68 86])
+            ("stdio.h" include (:system-flag t) nil [87 105])
+            ("iostream" include (:system-flag t) nil [106 125])
+            ("istream" include (:system-flag t) nil [126 144])
+            ("fstream" include (:system-flag t) nil [145 163])
+            ("sstream" include (:system-flag t) nil [164 182])
+            ("RVS" type
+               (:members 
+                  ( ("Vision" type
+                       (:members 
+                          ( ("Ensenso" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [238 245])
+                                    ("Ensenso" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Ensenso" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [250 260])
+                                    ("Ensenso" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [265 284])
+                                    ("Initialize" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [294 319])
+                                    ("Shutdown" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [324 347])
+                                    ("Open" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("id" variable
+                                               (:default-value "0"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [362 372]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [352 374])
+                                    ("GetInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("info" variable
+                                               (:reference 1
+                                                :type ("EnsensoInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [392 410]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [379 417])
+                                    ("SetFromJsonFile" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("jsfile" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [443 469]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [422 470])
+                                    ("IsProjectorEnabled" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [475 501])
+                                    ("SetProjector" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [524 537]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [506 538])
+                                    ("IsFrontLightEnabled" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [543 570])
+                                    ("SetFrontLight" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [594 607]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [575 608])
+                                    ("SetFlexViewNum" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [633 639]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [613 640])
+                                    ("GetFlexViewNum" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [645 666])
+                                    ("CaptureImages" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("left_rect_img" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [726 749])
+                                            ("right_rect_img" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [750 774])
+                                            ("rectified" variable
+                                               (:default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [775 796]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [707 798])
+                                    ("Capture" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("left_rect_img" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [816 839])
+                                            ("right_rect_img" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [840 864])
+                                            ("pointmap" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [865 883]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [803 884])
+                                    ("Close" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [889 902])
+                                    ("private" label nil (reparse-symbol classsubparts) [904 912])
+                                    ("_GetNx" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type ("T" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("item" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NxLibItem" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1080 1102])
+                                            ("what" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :default-value "\"\""
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1103 1131]))                                          )
+                                        (reparse-symbol classsubparts) [1045 1260])
+                                    ("private" label nil (reparse-symbol classsubparts) [1262 1270])
+                                    ("m_serial" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1275 1296])
+                                    ("m_cam" variable (:type ("NxLibItem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1301 1317])
+                                    ("m_width" variable (:type "int") (reparse-symbol classsubparts) [1322 1334])
+                                    ("m_height" variable (:type "int") (reparse-symbol classsubparts) [1339 1352]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [222 1356]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [201 1359]))                  
+                :type "namespace")
+                nil [184 1382]))          
+      :file "Ensenso.h"
+      :pointmax 1400
+      :fsize 1436
+      :lastmodtime '(23891 49733 13747 638000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Vision!Cameras!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

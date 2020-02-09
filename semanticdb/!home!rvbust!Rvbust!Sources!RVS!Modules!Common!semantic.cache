@@ -1,0 +1,184 @@
+;; Object Common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Common/"
+  :tables
+  (list
+    (semanticdb-table "Logger.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Logger.h" include (:system-flag t) nil [54 84])
+            ("RVS::Common" using (:type ("RVS::Common" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [86 114])
+            ("Impl" type
+               (:parent "Logger"
+                :members 
+                  ( ("Registry" type
+                       (:members 
+                          ( ("Get" function
+                               (:arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [180 204]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [172 422])
+                            ("Put" function
+                               (:arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [441 465])
+                                    ("ptr" variable (:type ("Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [466 474]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [432 723])
+                            ("Drop" function
+                               (:arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [743 767]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [733 1023])
+                            ("GetInstance" function
+                               (:typemodifiers ("static")
+                                :type ("Registry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1033 1136])
+                            ("private" label nil (reparse-symbol classsubparts) [1142 1150])
+                            ("_Has" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1176 1200]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1159 1244])
+                            ("m_mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1253 1270])
+                            ("m_map" variable (:type ("std::unordered_map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("Ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1279 1322]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [142 1329])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1335 1352])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [1357 1366])
+                    ("level" variable (:type "int") (reparse-symbol classsubparts) [1371 1381]))                  
+                :type "struct")
+                nil [116 1384])
+            ("SetAllLevel" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [1411 1421]))                  
+                :type "void")
+                nil [1386 1491])
+            ("Get" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1543 1567]))                  
+                :type ("Logger::Ptr" type (:type "class") nil nil))
+                nil [1519 1627])
+            ("GetConsoleLogger" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1666 1690])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [1691 1701]))                  
+                :type ("Logger::Ptr" type (:type "class") nil nil))
+                nil [1629 2702])
+            ("GetFileLogger" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2738 2762])
+                    ("filename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2763 2791])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [2792 2802]))                  
+                :type ("Logger::Ptr" type (:type "class") nil nil))
+                nil [2704 3753])
+            ("Logger" function
+               (:constructor-flag t
+                :parent "Logger"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3770 3794])
+                    ("loggertype" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3795 3816])
+                    ("log" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("spdlog::logger" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3817 3853]))                  
+                :type ("Logger" type (:type "class") nil nil))
+                nil [3755 4018])
+            ("GetName" function
+               (:parent "Logger"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [4020 4186])
+            ("GetType" function
+               (:parent "Logger"
+                :type "int")
+                nil [4188 4240])
+            ("GetLevel" function
+               (:parent "Logger"
+                :type "int")
+                nil [4242 4296])
+            ("SetLevel" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [4320 4330]))                  
+                :type "void")
+                nil [4298 4467])
+            ("ShouldLog" function
+               (:parent "Logger"
+                :arguments 
+                  ( ("level" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4492 4508]))                  
+                :type "bool")
+                nil [4469 4624]))          
+      :file "Logger.cpp"
+      :pointmax 4625
+      :fsize 4624
+      :lastmodtime '(23785 11546 534897 331000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Allocator.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Memory.h" include (:system-flag t) nil [54 84])
+            ("RVS/Common/Allocator.h" include (:system-flag t) nil [85 118])
+            ("RVS/Common/LoggerUtils.h" include (:system-flag t) nil [119 154]))          
+      :file "Allocator.cpp"
+      :pointmax 1036
+      :unmatched-syntax '((semantic-list 178 . 1009) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1850) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1894) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1869) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1897) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1891) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1881) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1881) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1842) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1833) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1827) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1912) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1906) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1898) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 2000) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 2002) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1992) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1988) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165)))
+)
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

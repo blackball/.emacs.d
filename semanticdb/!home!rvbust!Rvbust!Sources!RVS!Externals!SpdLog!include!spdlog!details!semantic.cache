@@ -1,0 +1,436 @@
+;; Object details/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "details/"
+  :tables
+  (list
+    (semanticdb-table "logger_impl.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spdlog/details/fmt_helper.h" include nil nil [130 168])
+            ("memory" include (:system-flag t) nil [170 187])
+            ("string" include (:system-flag t) nil [188 205])
+            ("logger" function
+               (:template 
+                  ( ("It" type (:type "class") nil nil))                  
+                :type ("logger" type (:type "class") nil nil)
+                :arguments 
+                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [371 395])
+                    ("begin" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("It" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [396 412])
+                    ("end" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("It" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [413 427]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger"
+                :constructor-flag t)
+                nil [319 798])
+            ("logger" function
+               (:constructor-flag t
+                :parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [862 886])
+                    ("sinks_list" variable (:type ("sinks_init_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [887 914]))                  
+                :type ("logger" type (:type "class") nil nil))
+                nil [832 993])
+            ("logger" function
+               (:constructor-flag t
+                :parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1050 1074])
+                    ("single_sink" variable (:type ("spdlog::sink_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1075 1104]))                  
+                :type ("logger" type (:type "class") nil nil))
+                nil [1020 1171])
+            ("set_formatter" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("f" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("spdlog::formatter" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1260 1297]))                  
+                :type "void")
+                nil [1218 1384])
+            ("set_pattern" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("pattern" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1426 1446])
+                    ("time_type" variable (:type ("pattern_time_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1447 1475]))                  
+                :type "void")
+                nil [1386 1629])
+            ("log" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1690 1712])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1713 1729])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1730 1743])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1746 1751]))                  
+                :type "void")
+                nil [1658 1983])
+            ("log" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2044 2066])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2067 2083]))                  
+                :type "void")
+                nil [2012 2324])
+            ("log" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2379 2401])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2402 2415]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [2326 2643])
+            ("trace" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2706 2722])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2723 2736])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2739 2744]))                  
+                :type "void")
+                nil [2672 2785])
+            ("debug" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2848 2864])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2865 2878])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2881 2886]))                  
+                :type "void")
+                nil [2814 2927])
+            ("info" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2989 3005])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3006 3019])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3022 3027]))                  
+                :type "void")
+                nil [2956 3067])
+            ("warn" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3129 3145])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3146 3159])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3162 3167]))                  
+                :type "void")
+                nil [3096 3207])
+            ("error" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3270 3286])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3287 3300])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3303 3308]))                  
+                :type "void")
+                nil [3236 3347])
+            ("critical" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3413 3429])
+                    ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3430 3443])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3446 3451]))                  
+                :type "void")
+                nil [3376 3495])
+            ("trace" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3552 3565]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [3497 3597])
+            ("debug" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3654 3667]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [3599 3699])
+            ("info" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3755 3768]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [3701 3799])
+            ("warn" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3855 3868]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [3801 3899])
+            ("error" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3956 3969]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [3901 3999])
+            ("critical" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4059 4072]))                  
+                :typemodifiers ("inline")
+                :parent "spdlog::logger")
+                nil [4001 4107])
+            ("name" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [5571 5647])
+            ("set_level" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("log_level" variable (:type ("spdlog::level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5687 5723]))                  
+                :type "void")
+                nil [5649 5756])
+            ("set_error_handler" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("err_handler" variable (:type ("spdlog::log_err_handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5804 5840]))                  
+                :type "void")
+                nil [5758 5887])
+            ("error_handler" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type ("spdlog::log_err_handler" type (:type "class") nil nil))
+                nil [5889 5980])
+            ("flush" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [5982 6087])
+            ("flush_on" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("log_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6126 6154]))                  
+                :type "void")
+                nil [6089 6193])
+            ("flush_level" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type ("spdlog::level::level_enum" type (:type "class") nil nil))
+                nil [6195 6364])
+            ("should_flush_" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("details::log_msg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6408 6436]))                  
+                :type "bool")
+                nil [6366 6577])
+            ("level" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type ("spdlog::level::level_enum" type (:type "class") nil nil))
+                nil [6579 6736])
+            ("should_log" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("msg_level" variable (:type ("spdlog::level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6777 6813]))                  
+                :type "bool")
+                nil [6738 6887])
+            ("sink_it_" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("details::log_msg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7024 7052]))                  
+                :type "void")
+                nil [6987 7323])
+            ("flush_" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [7325 7430])
+            ("default_err_handler_" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7481 7504]))                  
+                :type "void")
+                nil [7432 7862])
+            ("incr_msg_counter_" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :type ("details::log_msg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7910 7932]))                  
+                :type "void")
+                nil [7864 8007])
+            ("sinks" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("spdlog::sink_ptr" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [8009 8105])
+            ("sinks" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("spdlog::sink_ptr" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [8107 8191])
+            ("clone" function
+               (:parent "spdlog::logger"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8254 8278]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [8193 8542]))          
+      :file "logger_impl.h"
+      :pointmax 8543
+      :fsize 8542
+      :lastmodtime '(23471 23253 225905 571000)
+      :unmatched-syntax '((punctuation 3444 . 3445) (punctuation 3443 . 3444) (punctuation 3442 . 3443) (punctuation 3374 . 3375) (symbol 3370 . 3374) (punctuation 3368 . 3369) (punctuation 3367 . 3368) (punctuation 3366 . 3367) (TYPENAME 3358 . 3366) (punctuation 3357 . 3358) (TEMPLATE 3349 . 3357) (punctuation 3301 . 3302) (punctuation 3300 . 3301) (punctuation 3299 . 3300) (punctuation 3234 . 3235) (symbol 3230 . 3234) (punctuation 3228 . 3229) (punctuation 3227 . 3228) (punctuation 3226 . 3227) (TYPENAME 3218 . 3226) (punctuation 3217 . 3218) (TEMPLATE 3209 . 3217) (punctuation 3160 . 3161) (punctuation 3159 . 3160) (punctuation 3158 . 3159) (punctuation 3094 . 3095) (symbol 3090 . 3094) (punctuation 3088 . 3089) (punctuation 3087 . 3088) (punctuation 3086 . 3087) (TYPENAME 3078 . 3086) (punctuation 3077 . 3078) (TEMPLATE 3069 . 3077) (punctuation 3020 . 3021) (punctuation 3019 . 3020) (punctuation 3018 . 3019) (punctuation 2954 . 2955) (symbol 2950 . 2954) (punctuation 2948 . 2949) (punctuation 2947 . 2948) (punctuation 2946 . 2947) (TYPENAME 2938 . 2946) (punctuation 2937 . 2938) (TEMPLATE 2929 . 2937) (punctuation 2879 . 2880) (punctuation 2878 . 2879) (punctuation 2877 . 2878) (punctuation 2812 . 2813) (symbol 2808 . 2812) (punctuation 2806 . 2807) (punctuation 2805 . 2806) (punctuation 2804 . 2805) (TYPENAME 2796 . 2804) (punctuation 2795 . 2796) (TEMPLATE 2787 . 2795) (punctuation 2737 . 2738) (punctuation 2736 . 2737) (punctuation 2735 . 2736) (punctuation 2670 . 2671) (symbol 2666 . 2670) (punctuation 2664 . 2665) (punctuation 2663 . 2664) (punctuation 2662 . 2663) (TYPENAME 2654 . 2662) (punctuation 2653 . 2654) (TEMPLATE 2645 . 2653) (punctuation 2010 . 2011) (symbol 2006 . 2010) (punctuation 2004 . 2005) (punctuation 2003 . 2004) (punctuation 2002 . 2003) (TYPENAME 1994 . 2002) (punctuation 1993 . 1994) (TEMPLATE 1985 . 1993) (punctuation 1744 . 1745) (punctuation 1743 . 1744) (punctuation 1742 . 1743) (punctuation 1656 . 1657) (symbol 1652 . 1656) (punctuation 1650 . 1651) (punctuation 1649 . 1650) (punctuation 1648 . 1649) (TYPENAME 1640 . 1648) (punctuation 1639 . 1640) (TEMPLATE 1631 . 1639) (punctuation 1215 . 1216) (DEFAULT 1208 . 1215) (punctuation 1206 . 1207) (semantic-list 1203 . 1205) (symbol 1197 . 1203) (punctuation 1196 . 1197) (punctuation 1195 . 1196) (punctuation 1194 . 1195) (symbol 1188 . 1194) (punctuation 1187 . 1188) (punctuation 1186 . 1187) (symbol 1180 . 1186) (INLINE 1173 . 1179) (symbol 124 . 128) (symbol 117 . 123) (punctuation 116 . 117)))
+    (semanticdb-table "fmt_helper.h"
+      :file "fmt_helper.h"
+      :fsize 3307
+      :lastmodtime '(23471 23253 225905 571000)))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Externals!SpdLog!include!spdlog!details!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

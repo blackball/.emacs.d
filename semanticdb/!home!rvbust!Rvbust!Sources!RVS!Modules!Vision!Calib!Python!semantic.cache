@@ -1,0 +1,720 @@
+;; Object Python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Python/"
+  :tables
+  (list
+    (semanticdb-table "Test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Vision" include nil nil [53 102])
+            ("RVS.Vision" include nil nil [104 142])
+            ("RVS.Common" include nil nil [143 207])
+            ("os" include nil nil [208 217])
+            ("cv2" include nil nil [219 229])
+            ("numpy" include nil nil [230 248])
+            ("splitfn" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [262 264]))              ) nil [250 364])
+            ("Setup" function nil nil [365 599])
+            ("SaveFrame" function (:arguments 
+              ( ("i" variable nil (reparse-symbol function_parameters) [614 615])
+                ("frame" variable nil (reparse-symbol function_parameters) [617 622]))              ) nil [600 748])
+            ("Main" function nil nil [753 1573])
+            ("Calibrate" function nil nil [1574 5180])
+            ("if" code nil nil [5185 5255]))          
+      :file "Test.py"
+      :pointmax 5255
+      :fsize 5203
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SingleCalibrationApp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [53 64])
+            ("os" include nil nil [66 75])
+            ("cv2" include nil nil [77 87])
+            ("numpy" include nil nil [88 106])
+            ("RVS.Common" include nil nil [108 136])
+            ("RVS.Vision" include nil nil [141 176])
+            ("g_cfg" variable nil nil [183 229])
+            ("g_framecnt" variable nil nil [231 245])
+            ("SaveFrame" function (:arguments 
+              ( ("frame" variable nil (reparse-symbol function_parameters) [261 266]))              ) nil [247 498])
+            ("Scale" function (:arguments 
+              ( ("I" variable nil (reparse-symbol function_parameters) [509 510])
+                ("scale" variable nil (reparse-symbol function_parameters) [512 517]))              ) nil [499 597])
+            ("Collect" function (:documentation " Interactively collect frames 
+    
+    1. Open camera select the 
+    ") nil [602 970])
+            ("Calibrate" function nil nil [976 2928])
+            ("Test" function (:documentation "
+    Detect the same calibration board, calculate the transfrom of the board inside camera space 
+    ") nil [2933 4857])
+            ("SingleCalibrationApp" function
+               (:documentation "
+    what: 
+    - \"collect\" collect images 
+    - \"calibrate\" calibrate cameras 
+    - \"test\" solvepnp 
+    "
+                :arguments 
+                  ( ("what" variable nil (reparse-symbol function_parameters) [4887 4891]))                  )
+                nil [4862 5171])
+            ("if" code nil nil [5180 5243]))          
+      :file "SingleCalibrationApp.py"
+      :pointmax 5250
+      :fsize 5249
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "GetCalibrationTargetPose.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [97 108])
+            ("os" include nil nil [110 119])
+            ("cv2" include nil nil [121 131])
+            ("numpy" include nil nil [132 150])
+            ("RVS.Common" include nil nil [152 180])
+            ("RVS.Vision" include nil nil [185 220])
+            ("g_KK" variable nil nil [223 438])
+            ("g_KC" variable nil nil [440 577])
+            ("GetCalibrationTargetPose" function
+               (:documentation "
+    Detect the same calibration board, calculate the transfrom of the board inside camera space 
+    "
+                :arguments 
+                  ( ("show" variable nil (reparse-symbol function_parameters) [608 612]))                  )
+                nil [579 1636]))          
+      :file "GetCalibrationTargetPose.py"
+      :pointmax 1807
+      :fsize 1806
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyCameraCalibration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11/pybind11.h" include (:system-flag t) nil [54 84])
+            ("pybind11/stl.h" include (:system-flag t) nil [85 110])
+            ("pybind11/complex.h" include (:system-flag t) nil [111 140])
+            ("pybind11/functional.h" include (:system-flag t) nil [141 173])
+            ("tuple" include (:system-flag t) nil [174 190])
+            ("RVS/Vision/Calib/CameraCalibration.h" include (:system-flag t) nil [192 239])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("PyCameraCalibration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [257 277])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [278 280]))                  
+                :type "int")
+                nil [241 1035]))          
+      :file "PyCameraCalibration.cpp"
+      :pointmax 1036
+      :fsize 1035
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "RvbustLogo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [96 105])
+            ("uuid" include nil nil [106 117])
+            ("SVGLogo" type
+               (:documentation " Create SVG format RVBUST Logo file with specific size and color. 
+
+    Example: 
+    logo = SVGLogo(keep = True) # keep is True: keep the generated SVG file, 
+                                # else delete it when this class is collected.
+    fname = logo.GetSVGFile(scaletomm = 10) # Get the generated file name, and the SVG will be scaled to scaletomm.
+    
+    # Do whatever you want with the svg file.    
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("m_svg_width" variable nil (reparse-symbol indented_block_body) [576 595])
+                    ("m_svg_height" variable nil (reparse-symbol indented_block_body) [611 630])
+                    ("m_svg_size" variable nil (reparse-symbol indented_block_body) [635 680])
+                    ("m_svg_color" variable nil (reparse-symbol indented_block_body) [685 709])
+                    ("m_svgcontent" variable nil (reparse-symbol indented_block_body) [714 1758])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        @param keep keep the randomly generated svg file or not
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1806 1885])
+                            ("self" code nil (reparse-symbol indented_block_body) [1894 1934])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1943 1961]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1777 1781])
+                            ("keep" variable nil (reparse-symbol function_parameters) [1783 1787]))                          
+                        :documentation "
+        @param keep keep the randomly generated svg file or not
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1764 1962])
+                    ("GetSVGFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1990 1994])
+                            ("scaletomm" variable nil (reparse-symbol function_parameters) [1996 2005])
+                            ("color" variable nil (reparse-symbol function_parameters) [2014 2019]))                          )
+                        (reparse-symbol indented_block_body) [1975 2270])
+                    ("_WriteToFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2304 2308])
+                            ("content" variable nil (reparse-symbol function_parameters) [2310 2317]))                          )
+                        (reparse-symbol indented_block_body) [2287 2391])
+                    ("_ScaleContent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2414 2418])
+                            ("scale" variable nil (reparse-symbol function_parameters) [2420 2425]))                          )
+                        (reparse-symbol indented_block_body) [2396 2535])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2556 2560]))                          )
+                        (reparse-symbol indented_block_body) [2544 2728]))                  
+                :type "class")
+                nil [119 2728])
+            ("_Main" function nil nil [2733 2826])
+            ("if" code nil nil [2831 2870]))          
+      :file "RvbustLogo.py"
+      :pointmax 2872
+      :fsize 2871
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PatternDetectorOpenCV.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [96 106])
+            ("PatternDetectorOpenCV" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [177 258]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [162 166]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [149 259])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [283 287])
+                            ("gray" variable nil (reparse-symbol function_parameters) [289 293])
+                            ("options" variable nil (reparse-symbol function_parameters) [295 302]))                          )
+                        (reparse-symbol indented_block_body) [272 1158]))                  
+                :type "class")
+                nil [108 1158]))          
+      :file "PatternDetectorOpenCV.py"
+      :pointmax 1167
+      :fsize 1166
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PatternDetector.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Common" include nil nil [96 125])
+            ("PatternDetectorRVDot" include nil nil [154 181])
+            ("PatternDetectorOpenCV" include nil nil [210 238])
+            ("cv2" include nil nil [239 249])
+            ("g_log" variable nil nil [251 301])
+            ("PatternDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [382 398])
+                            ("if" code nil (reparse-symbol indented_block_body) [408 663]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [351 355])
+                            ("name" variable nil (reparse-symbol function_parameters) [357 361]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [338 663])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [687 691])
+                            ("img" variable nil (reparse-symbol function_parameters) [693 696])
+                            ("options" variable nil (reparse-symbol function_parameters) [698 705]))                          )
+                        (reparse-symbol indented_block_body) [676 759]))                  
+                :type "class")
+                nil [303 759])
+            ("TestPatternDetectorRVDotFromCamera" function nil nil [764 1189])
+            ("TestPatternDetectorRVDotFromBasler" function nil nil [1190 1645])
+            ("if" code nil nil [1658 1732]))          
+      :file "PatternDetector.py"
+      :pointmax 1732
+      :fsize 1731
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax '((FROM 182 . 186) (PERIOD 187 . 188) (FROM 127 . 131) (PERIOD 132 . 133)))
+    (semanticdb-table "PatternDetectorRVDot.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Vision" include nil nil [96 148])
+            ("RVS.Common" include nil nil [149 178])
+            ("cv2" include nil nil [180 190])
+            ("numpy" include nil nil [191 209])
+            ("time" include nil nil [211 222])
+            ("copy" include nil nil [224 235])
+            ("random" include nil nil [236 249])
+            ("sys" include nil nil [250 260])
+            ("log" variable nil nil [263 311])
+            ("RVDotPatternTemplate" type
+               (:documentation " Calibration pattern template with some helper functions 
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [718 733])
+                            ("self" variable nil (reparse-symbol indented_block_body) [742 757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [766 785])
+                            ("self" variable nil (reparse-symbol indented_block_body) [794 813])
+                            ("self" variable nil (reparse-symbol indented_block_body) [822 855]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [689 693])
+                            ("x_num" variable nil (reparse-symbol function_parameters) [695 700])
+                            ("y_num" variable nil (reparse-symbol function_parameters) [702 707]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [676 856])
+                    ("GetPatternTemplateSize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [888 892]))                          )
+                        (reparse-symbol indented_block_body) [861 971])
+                    ("GetPatternRows" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [999 1003]))                          )
+                        (reparse-symbol indented_block_body) [980 1029])
+                    ("GetPatternCols" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1053 1057]))                          )
+                        (reparse-symbol indented_block_body) [1034 1083])
+                    ("GetNumOfDots" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1105 1109]))                          )
+                        (reparse-symbol indented_block_body) [1088 1145])
+                    ("GetNumOfSmallDots" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1172 1176]))                          )
+                        (reparse-symbol indented_block_body) [1150 1216])
+                    ("GetBigDotsABC" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1247 1251]))                          )
+                        (reparse-symbol indented_block_body) [1229 1486])
+                    ("GetAllDotsGrid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1510 1514]))                          )
+                        (reparse-symbol indented_block_body) [1491 1558])
+                    ("GetAllDotsFlatten" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1589 1593]))                          )
+                        (reparse-symbol indented_block_body) [1567 1684])
+                    ("_GenerateDots" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1707 1711]))                          )
+                        (reparse-symbol indented_block_body) [1689 1937])
+                    ("Visualize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1960 1964]))                          )
+                        (reparse-symbol indented_block_body) [1946 2971]))                  
+                :type "class")
+                nil [558 2971])
+            ("EllipseCluster" type
+               (:documentation " A cluster which container ellipses.
+
+    This class represents a ellipse cluster which is being used in ellipse clustering algorithms.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3202 3238])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3247 3265])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3274 3309]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3187 3191]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3174 3345])
+                    ("Append" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3369 3373])
+                            ("ell" variable nil (reparse-symbol function_parameters) [3375 3378]))                          )
+                        (reparse-symbol indented_block_body) [3358 3588])
+                    ("GetEllipeses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3610 3614]))                          )
+                        (reparse-symbol indented_block_body) [3593 3646])
+                    ("Center" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3662 3666]))                          
+                        :documentation " Get the mean point of all ellipse centers 
+        ")
+                        (reparse-symbol indented_block_body) [3651 3994])
+                    ("Size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4012 4016]))                          )
+                        (reparse-symbol indented_block_body) [4003 4053])
+                    ("NearestNeighbor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4082 4086])
+                            ("E" variable nil (reparse-symbol function_parameters) [4088 4089]))                          
+                        :documentation "Find the closest ellipse among (self._ellipses and E)
+        TODO: improve the speed 
+        ")
+                        (reparse-symbol indented_block_body) [4062 4820])
+                    ("Distance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4843 4847])
+                            ("a" variable nil (reparse-symbol function_parameters) [4849 4850])
+                            ("b" variable nil (reparse-symbol function_parameters) [4852 4853]))                          )
+                        (reparse-symbol indented_block_body) [4830 4946])
+                    ("MeanAx" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4966 4970]))                          
+                        :documentation " mean value of all ellipses' Ax values 
+        ")
+                        (reparse-symbol indented_block_body) [4955 5169])
+                    ("MeanBx" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5189 5193]))                          
+                        :documentation "mean value of all ellipses' Bx values 
+        ")
+                        (reparse-symbol indented_block_body) [5178 5391])
+                    ("GetMinInternalDistance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5427 5431]))                          )
+                        (reparse-symbol indented_block_body) [5400 5485]))                  
+                :type "class")
+                nil [2984 5485])
+            ("Split" function
+               (:documentation " split L into N chunks 
+    "
+                :arguments 
+                  ( ("l" variable nil (reparse-symbol function_parameters) [5496 5497])
+                    ("n" variable nil (reparse-symbol function_parameters) [5499 5500]))                  )
+                nil [5486 5611])
+            ("GetROI" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [5624 5629])
+                ("rect" variable nil (reparse-symbol function_parameters) [5631 5635]))              ) nil [5613 5710])
+            ("_ExtractEdgePoints" function (:arguments 
+              ( ("edgeImg" variable nil (reparse-symbol function_parameters) [5735 5742]))              ) nil [5712 5932])
+            ("_ExtractEdgePointsSub" function
+               (:documentation " try to extract the subpixel edges from binary image
+
+    TODO: optimize 
+    "
+                :arguments 
+                  ( ("bimg" variable nil (reparse-symbol function_parameters) [5959 5963]))                  )
+                nil [5933 6593])
+            ("FitSingleEllipseFlood" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [6620 6623])
+                ("mask" variable nil (reparse-symbol function_parameters) [6625 6629]))              ) nil [6594 7707])
+            ("FitSingleEllipseSym" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [7733 7736])
+                ("mask" variable nil (reparse-symbol function_parameters) [7738 7742]))              ) nil [7709 9568])
+            ("FitEllipseByMoment" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [9597 9600])
+                ("mask" variable nil (reparse-symbol function_parameters) [9602 9606]))              ) nil [9574 10444])
+            ("FitSingleEllipse" function
+               (:documentation " given a sub image which containers at more 1 ellipse, try to fit the ellipse.
+    [cx, cy, ax, bx, theta, startangle, endangle]
+    "
+                :arguments 
+                  ( ("img" variable nil (reparse-symbol function_parameters) [10467 10470])
+                    ("mask" variable nil (reparse-symbol function_parameters) [10472 10476]))                  )
+                nil [10446 12026])
+            ("ExtractCircleEdgePointsSub" function
+               (:documentation "
+    sampling rays from center
+    edgepts = []
+    for ray in rays:
+      ppts = sampling pixel points along the ray (range)
+      ept = search along ppts to find the gradient changing points, interpolate the coordinates 
+      edgepts.append(ept)
+    "
+                :arguments 
+                  ( ("img" variable nil (reparse-symbol function_parameters) [12059 12062])
+                    ("center" variable nil (reparse-symbol function_parameters) [12064 12070])
+                    ("R" variable nil (reparse-symbol function_parameters) [12072 12073]))                  )
+                nil [12028 14790])
+            ("PatternDetectorOpenCV" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [14870 14893]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14846 14850])
+                            ("pattern" variable nil (reparse-symbol function_parameters) [14852 14859]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14833 14894])
+                    ("GetAllDotsFlatten" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14921 14925]))                          )
+                        (reparse-symbol indented_block_body) [14899 14977])
+                    ("SearchForDuplicateCircles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15016 15020])
+                            ("circles" variable nil (reparse-symbol function_parameters) [15022 15029]))                          )
+                        (reparse-symbol indented_block_body) [14986 15300])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15317 15321])
+                            ("image" variable nil (reparse-symbol function_parameters) [15323 15328])
+                            ("old" variable nil (reparse-symbol function_parameters) [15330 15333]))                          )
+                        (reparse-symbol indented_block_body) [15306 15507])
+                    ("_DetectOpenCV" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15534 15538])
+                            ("image" variable nil (reparse-symbol function_parameters) [15540 15545])
+                            ("bigblob" variable nil (reparse-symbol function_parameters) [15547 15554]))                          
+                        :documentation "detects all the corners of the pattern and returns a 2D array of the found corners
+        ")
+                        (reparse-symbol indented_block_body) [15516 17504])
+                    ("_ScaleAndShift" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17528 17532])
+                            ("template_dots" variable nil (reparse-symbol function_parameters) [17534 17547])
+                            ("scale" variable nil (reparse-symbol function_parameters) [17549 17554])
+                            ("sx" variable nil (reparse-symbol function_parameters) [17556 17558])
+                            ("sy" variable nil (reparse-symbol function_parameters) [17560 17562]))                          )
+                        (reparse-symbol indented_block_body) [17509 17782])
+                    ("_DecideRectSize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17807 17811])
+                            ("circles" variable nil (reparse-symbol function_parameters) [17813 17820])
+                            ("r" variable nil (reparse-symbol function_parameters) [17822 17823])
+                            ("c" variable nil (reparse-symbol function_parameters) [17825 17826]))                          )
+                        (reparse-symbol indented_block_body) [17787 18680])
+                    ("_RefineCircles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18713 18717])
+                            ("img" variable nil (reparse-symbol function_parameters) [18719 18722])
+                            ("circles" variable nil (reparse-symbol function_parameters) [18724 18731])
+                            ("old" variable nil (reparse-symbol function_parameters) [18733 18736]))                          )
+                        (reparse-symbol indented_block_body) [18694 27884])
+                    ("_FindNN" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27901 27905])
+                            ("pt" variable nil (reparse-symbol function_parameters) [27907 27909])
+                            ("points" variable nil (reparse-symbol function_parameters) [27911 27917]))                          )
+                        (reparse-symbol indented_block_body) [27889 28240])
+                    ("_Rotate90" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28263 28267])
+                            ("circles" variable nil (reparse-symbol function_parameters) [28269 28276]))                          )
+                        (reparse-symbol indented_block_body) [28249 28320])
+                    ("_RotateCircle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28347 28351])
+                            ("circles" variable nil (reparse-symbol function_parameters) [28353 28360])
+                            ("t" variable nil (reparse-symbol function_parameters) [28362 28363]))                          
+                        :documentation " Rotate circles to make it
+        t = 1: rotate clockwise 90 degrees
+        t = 2: rotate clockwise 180 degrees
+        t = 3: rotate clockwise 270 degrees 
+        ")
+                        (reparse-symbol indented_block_body) [28329 28976]))                  
+                :type "class")
+                nil [14792 28976])
+            ("PatternDetectorRVDot" type
+               (:documentation "
+    Detect circular calibration board
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [29122 29172])
+                            ("self" variable nil (reparse-symbol indented_block_body) [29181 29200])
+                            ("self" variable nil (reparse-symbol indented_block_body) [29209 29245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [29254 29313])
+                            ("log" code nil (reparse-symbol indented_block_body) [29331 29373]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29089 29093])
+                            ("x_num" variable nil (reparse-symbol function_parameters) [29095 29100])
+                            ("y_num" variable nil (reparse-symbol function_parameters) [29104 29109]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [29076 29374])
+                    ("GetAllDotsFlatten" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29401 29405]))                          )
+                        (reparse-symbol indented_block_body) [29379 29457])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29485 29489])
+                            ("image" variable nil (reparse-symbol function_parameters) [29491 29496])
+                            ("options" variable nil (reparse-symbol function_parameters) [29498 29505]))                          
+                        :documentation " Detect calibration board in image.
+        :image a numpy array
+        :scale used to rescale the image, currently, for ensenso scale is 1.0, for gige color, it's 0.5
+        :visualize enable to visualize the process, you need Rui for this 
+        :dynamicscale enable, it will ignore scale, will dynamically calculate a scale
+        :mode combined: combined detector, opencv: original opencv detector, elsd:only ELSD based detector 
+        ")
+                        (reparse-symbol indented_block_body) [29474 52888])
+                    ("_ScaleAndShift" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [52913 52917])
+                            ("template_dots" variable nil (reparse-symbol function_parameters) [52919 52932])
+                            ("scale" variable nil (reparse-symbol function_parameters) [52934 52939])
+                            ("sx" variable nil (reparse-symbol function_parameters) [52941 52943])
+                            ("sy" variable nil (reparse-symbol function_parameters) [52945 52947]))                          )
+                        (reparse-symbol indented_block_body) [52894 53167])
+                    ("_RefineCirclesOrdered" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [53198 53202])
+                            ("img" variable nil (reparse-symbol function_parameters) [53204 53207])
+                            ("circles" variable nil (reparse-symbol function_parameters) [53209 53216]))                          
+                        :documentation " The circle is already ordered, but there're some 'None' inside (need to be well handled)
+        ")
+                        (reparse-symbol indented_block_body) [53172 58144])
+                    ("_RemoveOutsideEllipses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [58181 58185])
+                            ("E" variable nil (reparse-symbol function_parameters) [58187 58188])
+                            ("imgsize" variable nil (reparse-symbol function_parameters) [58190 58197])
+                            ("homo" variable nil (reparse-symbol function_parameters) [58199 58203])
+                            ("eps" variable nil (reparse-symbol function_parameters) [58212 58215]))                          
+                        :documentation " Remove ellipses outside of the image area
+
+        :E all ellipses
+        :imgsize size of the image that should be used for checking, if homo is not None, imgsize should be the original size 
+        :homo if homo is not None, first transform the ellipse then do the check
+
+        return a subset of E
+
+        @Note only use ellipse center to check, better way is to transform full ellipse to do the check. 
+        ")
+                        (reparse-symbol indented_block_body) [58154 59228])
+                    ("_BackProjectToOriginalImage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [59534 59538])
+                            ("mapped_dots" variable nil (reparse-symbol function_parameters) [59540 59551])
+                            ("homo" variable nil (reparse-symbol function_parameters) [59553 59557])
+                            ("scale_for_board" variable nil (reparse-symbol function_parameters) [59559 59574])
+                            ("board_rect" variable nil (reparse-symbol function_parameters) [59576 59586]))                          
+                        :documentation " backproject the final points to the original image 
+        ")
+                        (reparse-symbol indented_block_body) [59502 60115])
+                    ("_GetCenterDotsABC" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60146 60150])
+                            ("centers" variable nil (reparse-symbol function_parameters) [60152 60159]))                          )
+                        (reparse-symbol indented_block_body) [60124 61566])
+                    ("_CenterDotsAngle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61601 61605])
+                            ("pc" variable nil (reparse-symbol function_parameters) [61607 61609])
+                            ("px" variable nil (reparse-symbol function_parameters) [61611 61613])
+                            ("py" variable nil (reparse-symbol function_parameters) [61615 61617]))                          )
+                        (reparse-symbol indented_block_body) [61580 61949])
+                    ("_FindRealDot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61976 61980])
+                            ("board_dots" variable nil (reparse-symbol function_parameters) [61982 61992])
+                            ("dot" variable nil (reparse-symbol function_parameters) [61994 61997])
+                            ("eps" variable nil (reparse-symbol function_parameters) [61999 62002]))                          )
+                        (reparse-symbol indented_block_body) [61959 62344])
+                    ("_EstimateAffine" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62369 62373])
+                            ("tabc" variable nil (reparse-symbol function_parameters) [62375 62379])
+                            ("iabc" variable nil (reparse-symbol function_parameters) [62381 62385]))                          
+                        :documentation "
+        tabc: template points, a center, b is the x point, c is y point
+        iabs: image points 
+        ")
+                        (reparse-symbol indented_block_body) [62349 63355])
+                    ("_DecideBoardArea" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63398 63402])
+                            ("cluster" variable nil (reparse-symbol function_parameters) [63404 63411]))                          )
+                        (reparse-symbol indented_block_body) [63377 63966])
+                    ("_Distance2d" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64004 64008])
+                            ("ax" variable nil (reparse-symbol function_parameters) [64010 64012])
+                            ("ay" variable nil (reparse-symbol function_parameters) [64014 64016])
+                            ("bx" variable nil (reparse-symbol function_parameters) [64018 64020])
+                            ("by" variable nil (reparse-symbol function_parameters) [64022 64024]))                          )
+                        (reparse-symbol indented_block_body) [63988 64097])
+                    ("_RemoveDuplicates" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64132 64136])
+                            ("ellipses" variable nil (reparse-symbol function_parameters) [64138 64146])
+                            ("center_distance_threshold" variable nil (reparse-symbol function_parameters) [64148 64173]))                          )
+                        (reparse-symbol indented_block_body) [64110 65576])
+                    ("_IsClockWise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65598 65602])
+                            ("p1" variable nil (reparse-symbol function_parameters) [65604 65606])
+                            ("p2" variable nil (reparse-symbol function_parameters) [65608 65610])
+                            ("p3" variable nil (reparse-symbol function_parameters) [65612 65614]))                          )
+                        (reparse-symbol indented_block_body) [65581 65882])
+                    ("_Clustering" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65907 65911])
+                            ("ellipses" variable nil (reparse-symbol function_parameters) [65913 65921])
+                            ("axis_diff_thresh" variable nil (reparse-symbol function_parameters) [65923 65939])
+                            ("axis_scale" variable nil (reparse-symbol function_parameters) [65945 65955])
+                            ("internal_distance_scale" variable nil (reparse-symbol function_parameters) [65961 65984]))                          )
+                        (reparse-symbol indented_block_body) [65891 67997]))                  
+                :type "class")
+                nil [28977 67997]))          
+      :file "PatternDetectorRVDot.py"
+      :pointmax 72159
+      :fsize 72158
+      :lastmodtime '(23782 1936 41210 981000)
+      :unmatched-syntax '((RETURN 65797 . 65803) (IF 65806 . 65808) (ELSE 65817 . 65821))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Calib!Python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

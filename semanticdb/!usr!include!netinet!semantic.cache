@@ -1,0 +1,1348 @@
+;; Object netinet/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "netinet/"
+  :tables
+  (list
+    (semanticdb-table "in.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_NETINET_IN_H" variable (:constant-flag t) nil [820 833])
+            ("features.h" include (:system-flag t) nil [837 858])
+            ("bits/stdint-uintn.h" include (:system-flag t) nil [859 889])
+            ("sys/socket.h" include (:system-flag t) nil [890 913])
+            ("bits/types.h" include (:system-flag t) nil [914 937])
+            ("setsourcefilter" function
+               (:type "int"
+                :arguments 
+                  ( ("__s" variable (:type "int") (reparse-symbol arg-sub-list) [21361 21369])
+                    ("__interface_addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21370 21396])
+                    ("__group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21404 21435])
+                    ("__grouplen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21443 21464])
+                    ("__fmode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21465 21482])
+                    ("__numsrc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21490 21508])
+                    ("__slist" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr_storage" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21516 21555]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21333 21564])
+            ("getsourcefilter" function
+               (:type "int"
+                :arguments 
+                  ( ("__s" variable (:type "int") (reparse-symbol arg-sub-list) [21106 21114])
+                    ("__interface_addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21115 21141])
+                    ("__group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21149 21180])
+                    ("__grouplen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21188 21209])
+                    ("__fmode" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21210 21228])
+                    ("__numsrc" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21236 21255])
+                    ("__slist" variable
+                       (:pointer 1
+                        :type ("sockaddr_storage" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21263 21296]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21078 21305])
+            ("setipv4sourcefilter" function
+               (:type "int"
+                :arguments 
+                  ( ("__s" variable (:type "int") (reparse-symbol arg-sub-list) [20890 20898])
+                    ("__interface_addr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [20899 20931])
+                    ("__group" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [20936 20959])
+                    ("__fmode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20960 20977])
+                    ("__numsrc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20982 21000])
+                    ("__slist" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("in_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21005 21035]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20858 21049])
+            ("getipv4sourcefilter" function
+               (:type "int"
+                :arguments 
+                  ( ("__s" variable (:type "int") (reparse-symbol arg-sub-list) [20674 20682])
+                    ("__interface_addr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [20683 20715])
+                    ("__group" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [20720 20743])
+                    ("__fmode" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20744 20762])
+                    ("__numsrc" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20767 20786])
+                    ("__slist" variable
+                       (:pointer 1
+                        :type ("in_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20787 20811]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20642 20825])
+            ("inet6_rth_getaddr" function
+               (:type ("in6_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("__bp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20523 20540])
+                    ("__index" variable (:type "int") (reparse-symbol arg-sub-list) [20541 20553]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20480 20567])
+            ("inet6_rth_segments" function
+               (:type "int"
+                :arguments 
+                  ( ("__bp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20453 20470]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20422 20479])
+            ("inet6_rth_reverse" function
+               (:type "int"
+                :arguments 
+                  ( ("__in" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20382 20399])
+                    ("__out" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20400 20412]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20352 20421])
+            ("inet6_rth_add" function
+               (:type "int"
+                :arguments 
+                  ( ("__bp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20300 20311])
+                    ("__addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("in6_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20312 20342]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20274 20351])
+            ("inet6_rth_init" function
+               (:type "void"
+                :arguments 
+                  ( ("__bp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20197 20208])
+                    ("__bp_len" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20209 20228])
+                    ("__type" variable (:type "int") (reparse-symbol arg-sub-list) [20229 20240])
+                    ("__segments" variable (:type "int") (reparse-symbol arg-sub-list) [20249 20264]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20168 20273])
+            ("inet6_rth_space" function
+               (:type ("socklen_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__type" variable (:type "int") (reparse-symbol arg-sub-list) [20131 20142])
+                    ("__segments" variable (:type "int") (reparse-symbol arg-sub-list) [20143 20158]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20097 20167])
+            ("inet6_opt_get_val" function
+               (:type "int"
+                :arguments 
+                  ( ("__databuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19972 19988])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19989 20002])
+                    ("__val" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20003 20015])
+                    ("__vallen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20025 20044]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19942 20053])
+            ("inet6_opt_find" function
+               (:type "int"
+                :arguments 
+                  ( ("__extbuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19817 19832])
+                    ("__extlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19833 19852])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19853 19866])
+                    ("__type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19873 19888])
+                    ("__lenp" variable
+                       (:pointer 1
+                        :type ("socklen_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19889 19907])
+                    ("__databufp" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19914 19932]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19790 19941])
+            ("inet6_opt_next" function
+               (:type "int"
+                :arguments 
+                  ( ("__extbuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19663 19678])
+                    ("__extlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19679 19698])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19699 19712])
+                    ("__typep" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19719 19736])
+                    ("__lenp" variable
+                       (:pointer 1
+                        :type ("socklen_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19737 19755])
+                    ("__databufp" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19762 19780]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19636 19789])
+            ("inet6_opt_set_val" function
+               (:type "int"
+                :arguments 
+                  ( ("__databuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19554 19570])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19571 19584])
+                    ("__val" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19585 19597])
+                    ("__vallen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19607 19626]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19524 19635])
+            ("inet6_opt_finish" function
+               (:type "int"
+                :arguments 
+                  ( ("__extbuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19460 19475])
+                    ("__extlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19476 19495])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19496 19509]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19431 19523])
+            ("inet6_opt_append" function
+               (:type "int"
+                :arguments 
+                  ( ("__extbuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19287 19302])
+                    ("__extlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19303 19322])
+                    ("__offset" variable (:type "int") (reparse-symbol arg-sub-list) [19323 19336])
+                    ("__type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19345 19360])
+                    ("__len" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19361 19377])
+                    ("__align" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19378 19394])
+                    ("__databufp" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19403 19421]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19258 19430])
+            ("inet6_opt_init" function
+               (:type "int"
+                :arguments 
+                  ( ("__extbuf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19213 19228])
+                    ("__extlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19229 19248]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19186 19257])
+            ("inet6_option_find" function
+               (:type "int"
+                :arguments 
+                  ( ("__cmsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cmsghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19010 19039])
+                    ("__tptrp" variable
+                       (:pointer 2
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19049 19067])
+                    ("__type" variable (:type "int") (reparse-symbol arg-sub-list) [19068 19079]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18980 19118])
+            ("inet6_option_next" function
+               (:type "int"
+                :arguments 
+                  ( ("__cmsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cmsghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18883 18912])
+                    ("__tptrp" variable
+                       (:pointer 2
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18922 18940]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18853 18979])
+            ("inet6_option_alloc" function
+               (:type ("uint8_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__cmsg" variable
+                       (:pointer 1
+                        :type ("cmsghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18741 18764])
+                    ("__datalen" variable (:type "int") (reparse-symbol arg-sub-list) [18765 18779])
+                    ("__multx" variable (:type "int") (reparse-symbol arg-sub-list) [18788 18800])
+                    ("__plusy" variable (:type "int") (reparse-symbol arg-sub-list) [18801 18813]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18705 18852])
+            ("inet6_option_append" function
+               (:type "int"
+                :arguments 
+                  ( ("__cmsg" variable
+                       (:pointer 1
+                        :type ("cmsghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18589 18612])
+                    ("__typep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18617 18640])
+                    ("__multx" variable (:type "int") (reparse-symbol arg-sub-list) [18641 18653])
+                    ("__plusy" variable (:type "int") (reparse-symbol arg-sub-list) [18658 18670]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18557 18704])
+            ("inet6_option_init" function
+               (:type "int"
+                :arguments 
+                  ( ("__bp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18464 18475])
+                    ("__cmsgp" variable
+                       (:pointer 2
+                        :type ("cmsghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18476 18501])
+                    ("__type" variable (:type "int") (reparse-symbol arg-sub-list) [18511 18522]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18434 18556])
+            ("inet6_option_space" function
+               (:type "int"
+                :arguments 
+                  ( ("__nbytes" variable (:type "int") (reparse-symbol arg-sub-list) [18381 18394]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18350 18433])
+            ("ip6_mtuinfo" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ip6m_addr" variable (:type ("sockaddr_in6" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [18105 18135])
+                    ("ip6m_mtu" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18176 18194]))                  )
+                (reparse-symbol extern-c-contents) [18078 18237])
+            ("in6_pktinfo" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ipi6_addr" variable (:type ("in6_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [17926 17952])
+                    ("ipi6_ifindex" variable (:type "unsigned int") (reparse-symbol classsubparts) [17984 18010]))                  )
+                (reparse-symbol extern-c-contents) [17899 18047])
+            ("cmsghdr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [17792 17807])
+            ("IN6_IS_ADDR_MC_GLOBAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17657 17678])
+            ("IN6_IS_ADDR_MC_ORGLOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17530 17553])
+            ("IN6_IS_ADDR_MC_SITELOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17402 17426])
+            ("IN6_IS_ADDR_MC_LINKLOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17274 17298])
+            ("IN6_IS_ADDR_MC_NODELOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [17146 17170])
+            ("bindresvport6" function
+               (:type "int"
+                :arguments 
+                  ( ("__sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [17069 17082])
+                    ("__sock_in" variable
+                       (:pointer 1
+                        :type ("sockaddr_in6" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17083 17114]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17043 17128])
+            ("bindresvport" function
+               (:type "int"
+                :arguments 
+                  ( ("__sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [16946 16959])
+                    ("__sock_in" variable
+                       (:pointer 1
+                        :type ("sockaddr_in" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16960 16990]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16921 16999])
+            ("IN6_IS_ADDR_MULTICAST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [16796 16817])
+            ("IN6_ARE_ADDR_EQUAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [14832 14850])
+            ("IN6_IS_ADDR_V4COMPAT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [14480 14500])
+            ("IN6_IS_ADDR_V4MAPPED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [14175 14195])
+            ("IN6_IS_ADDR_SITELOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13949 13970])
+            ("IN6_IS_ADDR_LINKLOCAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13723 13744])
+            ("IN6_IS_ADDR_LOOPBACK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13370 13390])
+            ("IN6_IS_ADDR_UNSPECIFIED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [13022 13045])
+            ("bits/uintn-identity.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [12256 12288])
+            ("bits/byteswap.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [12229 12255])
+            ("endian.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [12132 12151])
+            ("htons" function
+               (:type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__hostshort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12067 12088]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12044 12130])
+            ("htonl" function
+               (:type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__hostlong" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11981 12001]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11958 12043])
+            ("ntohs" function
+               (:type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__netshort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11895 11915]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11872 11957])
+            ("ntohl" function
+               (:type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__netlong" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11815 11834]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11792 11871])
+            ("GROUP_FILTER_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11240 11257])
+            ("group_filter" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("gf_interface" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10958 10980])
+                    ("gf_group" variable (:type ("sockaddr_storage" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [11012 11045])
+                    ("gf_fmode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11075 11093])
+                    ("gf_numsrc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11138 11157])
+                    ("gf_slist" variable
+                       (:dereference 1
+                        :type ("sockaddr_storage" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [11191 11227]))                  )
+                (reparse-symbol extern-c-contents) [10902 11230])
+            ("IP_MSFILTER_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [10760 10776])
+            ("ip_msfilter" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("imsf_multiaddr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [10458 10488])
+                    ("imsf_interface" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [10536 10566])
+                    ("imsf_fmode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10596 10616])
+                    ("imsf_numsrc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10661 10682])
+                    ("imsf_slist" variable
+                       (:dereference 1
+                        :type ("in_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [10716 10745]))                  )
+                (reparse-symbol extern-c-contents) [10389 10750])
+            ("group_source_req" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("gsr_interface" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10187 10210])
+                    ("gsr_group" variable (:type ("sockaddr_storage" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [10242 10276])
+                    ("gsr_source" variable (:type ("sockaddr_storage" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [10309 10344]))                  )
+                (reparse-symbol extern-c-contents) [10127 10349])
+            ("group_req" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("gr_interface" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10033 10055])
+                    ("gr_group" variable (:type ("sockaddr_storage" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [10087 10120]))                  )
+                (reparse-symbol extern-c-contents) [9980 10125])
+            ("ipv6_mreq" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ipv6mr_multiaddr" variable (:type ("in6_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9791 9824])
+                    ("ipv6mr_interface" variable (:type "unsigned int") (reparse-symbol classsubparts) [9856 9886]))                  )
+                (reparse-symbol extern-c-contents) [9724 9891])
+            ("ip_mreq_source" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("imr_multiaddr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9486 9515])
+                    ("imr_interface" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9557 9586])
+                    ("imr_sourceaddr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9625 9655]))                  )
+                (reparse-symbol extern-c-contents) [9414 9660])
+            ("ip_mreq" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("imr_multiaddr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9301 9330])
+                    ("imr_interface" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9378 9407]))                  )
+                (reparse-symbol extern-c-contents) [9236 9412])
+            ("sockaddr_in6" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("__SOCKADDR_COMMON" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("sin6_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8928 8934]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8909 8935])
+                    ("sin6_port" variable (:type ("in_port_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8940 8960])
+                    ("sin6_flowinfo" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8994 9017])
+                    ("sin6_addr" variable (:type ("in6_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9050 9076])
+                    ("sin6_scope_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9100 9123]))                  )
+                (reparse-symbol extern-c-contents) [8881 9148])
+            ("sockaddr_in" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("__SOCKADDR_COMMON" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("sin_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8525 8530]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8506 8531])
+                    ("sin_port" variable (:type ("in_port_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8536 8555])
+                    ("sin_addr" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8582 8606])
+                    ("sin_zero" variable (:type "unsigned char") (reparse-symbol classsubparts) [8683 8822]))                  )
+                (reparse-symbol extern-c-contents) [8479 8827])
+            ("INET6_ADDRSTRLEN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8401 8417])
+            ("INET_ADDRSTRLEN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8374 8389])
+            ("IN6ADDR_LOOPBACK_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8299 8320])
+            ("IN6ADDR_ANY_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8230 8246])
+            ("in6addr_loopback" variable
+               (:type ("in6_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [8163 8209])
+            ("in6addr_any" variable
+               (:type ("in6_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [8105 8146])
+            ("in6_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("__in6_u" variable (:type ("" type
+                         (:members 
+                            ( ("__u6_addr8" variable
+                                 (:dereference 1
+                                  :type ("uint8_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [7827 7850])
+                              ("__u6_addr16" variable
+                                 (:dereference 1
+                                  :type ("uint16_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [7852 7876])
+                              ("__u6_addr32" variable
+                                 (:dereference 1
+                                  :type ("uint32_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [7878 7902]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [7812 7919])
+                    ("s6_addr" variable (:constant-flag t) (reparse-symbol classsubparts) [7928 7935])
+                    ("s6_addr16" variable (:constant-flag t) (reparse-symbol classsubparts) [7984 7993])
+                    ("s6_addr32" variable (:constant-flag t) (reparse-symbol classsubparts) [8024 8033]))                  )
+                (reparse-symbol extern-c-contents) [7788 8066])
+            ("INADDR_MAX_LOCAL_GROUP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7673 7695])
+            ("INADDR_ALLRTRS_GROUP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7600 7620])
+            ("INADDR_ALLHOSTS_GROUP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7529 7550])
+            ("INADDR_UNSPEC_GROUP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7460 7479])
+            ("INADDR_LOOPBACK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7343 7358])
+            ("IN_LOOPBACKNET" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7236 7250])
+            ("INADDR_NONE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7142 7153])
+            ("INADDR_BROADCAST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7049 7065])
+            ("INADDR_ANY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6967 6977])
+            ("IN_BADCLASS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6846 6857])
+            ("IN_EXPERIMENTAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6771 6786])
+            ("IN_MULTICAST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6732 6744])
+            ("IN_CLASSD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6662 6671])
+            ("IN_CLASSC_HOST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6607 6621])
+            ("IN_CLASSC_NSHIFT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6580 6596])
+            ("IN_CLASSC_NET" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6546 6559])
+            ("IN_CLASSC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6476 6485])
+            ("IN_CLASSB_MAX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6446 6459])
+            ("IN_CLASSB_HOST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6392 6406])
+            ("IN_CLASSB_NSHIFT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6364 6380])
+            ("IN_CLASSB_NET" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6330 6343])
+            ("IN_CLASSB" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6260 6269])
+            ("IN_CLASSA_MAX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6232 6245])
+            ("IN_CLASSA_HOST" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6178 6192])
+            ("IN_CLASSA_NSHIFT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6150 6166])
+            ("IN_CLASSA_NET" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6116 6129])
+            ("IN_CLASSA" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6055 6064])
+            ("" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("IPPORT_ECHO" variable
+                       (:constant-flag t
+                        :default-value (4583 4584)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4569 4584])
+                    ("IPPORT_DISCARD" variable
+                       (:constant-flag t
+                        :default-value (4629 4630)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4612 4630])
+                    ("IPPORT_SYSTAT" variable
+                       (:constant-flag t
+                        :default-value (4691 4693)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4675 4693])
+                    ("IPPORT_DAYTIME" variable
+                       (:constant-flag t
+                        :default-value (4747 4749)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4730 4749])
+                    ("IPPORT_NETSTAT" variable
+                       (:constant-flag t
+                        :default-value (4800 4802)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4783 4802])
+                    ("IPPORT_FTP" variable
+                       (:constant-flag t
+                        :default-value (4852 4854)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4839 4854])
+                    ("IPPORT_TELNET" variable
+                       (:constant-flag t
+                        :default-value (4908 4910)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4892 4910])
+                    ("IPPORT_SMTP" variable
+                       (:constant-flag t
+                        :default-value (4955 4957)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4941 4957])
+                    ("IPPORT_TIMESERVER" variable
+                       (:constant-flag t
+                        :default-value (5022 5024)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5002 5024])
+                    ("IPPORT_NAMESERVER" variable
+                       (:constant-flag t
+                        :default-value (5077 5079)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5057 5079])
+                    ("IPPORT_WHOIS" variable
+                       (:constant-flag t
+                        :default-value (5128 5130)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5113 5130])
+                    ("IPPORT_MTP" variable
+                       (:constant-flag t
+                        :default-value (5181 5183)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5168 5183])
+                    ("IPPORT_TFTP" variable
+                       (:constant-flag t
+                        :default-value (5204 5206)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5190 5206])
+                    ("IPPORT_RJE" variable
+                       (:constant-flag t
+                        :default-value (5265 5267)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5252 5267])
+                    ("IPPORT_FINGER" variable
+                       (:constant-flag t
+                        :default-value (5289 5291)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5273 5291])
+                    ("IPPORT_TTYLINK" variable
+                       (:constant-flag t
+                        :default-value (5338 5340)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5321 5340])
+                    ("IPPORT_SUPDUP" variable
+                       (:constant-flag t
+                        :default-value (5362 5364)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5346 5364])
+                    ("IPPORT_EXECSERVER" variable
+                       (:constant-flag t
+                        :default-value (5417 5420)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5397 5420])
+                    ("IPPORT_LOGINSERVER" variable
+                       (:constant-flag t
+                        :default-value (5469 5472)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5448 5472])
+                    ("IPPORT_CMDSERVER" variable
+                       (:constant-flag t
+                        :default-value (5521 5524)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5502 5524])
+                    ("IPPORT_EFSSERVER" variable
+                       (:constant-flag t
+                        :default-value (5549 5552)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5530 5552])
+                    ("IPPORT_BIFFUDP" variable
+                       (:constant-flag t
+                        :default-value (5598 5601)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5581 5601])
+                    ("IPPORT_WHOSERVER" variable
+                       (:constant-flag t
+                        :default-value (5626 5629)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5607 5629])
+                    ("IPPORT_ROUTESERVER" variable
+                       (:constant-flag t
+                        :default-value (5656 5659)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5635 5659])
+                    ("IPPORT_RESERVED" variable
+                       (:constant-flag t
+                        :default-value (5761 5765)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5743 5765])
+                    ("IPPORT_USERRESERVED" variable
+                       (:constant-flag t
+                        :default-value (5873 5877)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5851 5877]))                  )
+                (reparse-symbol extern-c-contents) [4556 5882])
+            ("in_port_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("uint16_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [4493 4520])
+            ("" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("IPPROTO_HOPOPTS" variable
+                       (:constant-flag t
+                        :default-value (3781 3782)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3763 3782])
+                    ("IPPROTO_ROUTING" variable
+                       (:constant-flag t
+                        :default-value (3881 3883)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3863 3883])
+                    ("IPPROTO_FRAGMENT" variable
+                       (:constant-flag t
+                        :default-value (3978 3980)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3959 3980])
+                    ("IPPROTO_ICMPV6" variable
+                       (:constant-flag t
+                        :default-value (4079 4081)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4062 4081])
+                    ("IPPROTO_NONE" variable
+                       (:constant-flag t
+                        :default-value (4158 4160)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4143 4160])
+                    ("IPPROTO_DSTOPTS" variable
+                       (:constant-flag t
+                        :default-value (4251 4253)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4233 4253])
+                    ("IPPROTO_MH" variable
+                       (:constant-flag t
+                        :default-value (4347 4350)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4334 4350]))                  )
+                (reparse-symbol extern-c-contents) [3750 4421])
+            ("" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("IPPROTO_IP" variable
+                       (:constant-flag t
+                        :default-value (1186 1187)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1173 1187])
+                    ("IPPROTO_ICMP" variable
+                       (:constant-flag t
+                        :default-value (1273 1274)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1258 1274])
+                    ("IPPROTO_IGMP" variable
+                       (:constant-flag t
+                        :default-value (1375 1376)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1360 1376])
+                    ("IPPROTO_IPIP" variable
+                       (:constant-flag t
+                        :default-value (1477 1478)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1462 1478])
+                    ("IPPROTO_TCP" variable
+                       (:constant-flag t
+                        :default-value (1585 1586)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1571 1586])
+                    ("IPPROTO_EGP" variable
+                       (:constant-flag t
+                        :default-value (1680 1681)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1666 1681])
+                    ("IPPROTO_PUP" variable
+                       (:constant-flag t
+                        :default-value (1771 1773)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1757 1773])
+                    ("IPPROTO_UDP" variable
+                       (:constant-flag t
+                        :default-value (1850 1852)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1836 1852])
+                    ("IPPROTO_IDP" variable
+                       (:constant-flag t
+                        :default-value (1939 1941)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1925 1941])
+                    ("IPPROTO_TP" variable
+                       (:constant-flag t
+                        :default-value (2021 2023)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2008 2023])
+                    ("IPPROTO_DCCP" variable
+                       (:constant-flag t
+                        :default-value (2116 2118)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2101 2118])
+                    ("IPPROTO_IPV6" variable
+                       (:constant-flag t
+                        :default-value (2222 2224)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2207 2224])
+                    ("IPPROTO_RSVP" variable
+                       (:constant-flag t
+                        :default-value (2304 2306)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2289 2306])
+                    ("IPPROTO_GRE" variable
+                       (:constant-flag t
+                        :default-value (2393 2395)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2379 2395])
+                    ("IPPROTO_ESP" variable
+                       (:constant-flag t
+                        :default-value (2489 2491)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2475 2491])
+                    ("IPPROTO_AH" variable
+                       (:constant-flag t
+                        :default-value (2587 2589)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2574 2589])
+                    ("IPPROTO_MTP" variable
+                       (:constant-flag t
+                        :default-value (2676 2678)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2662 2678])
+                    ("IPPROTO_BEETPH" variable
+                       (:constant-flag t
+                        :default-value (2774 2776)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2757 2776])
+                    ("IPPROTO_ENCAP" variable
+                       (:constant-flag t
+                        :default-value (2880 2882)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2864 2882])
+                    ("IPPROTO_PIM" variable
+                       (:constant-flag t
+                        :default-value (2971 2974)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2957 2974])
+                    ("IPPROTO_COMP" variable
+                       (:constant-flag t
+                        :default-value (3070 3073)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3055 3073])
+                    ("IPPROTO_SCTP" variable
+                       (:constant-flag t
+                        :default-value (3168 3171)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3153 3171])
+                    ("IPPROTO_UDPLITE" variable
+                       (:constant-flag t
+                        :default-value (3278 3281)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3260 3281])
+                    ("IPPROTO_MPLS" variable
+                       (:constant-flag t
+                        :default-value (3369 3372)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3354 3372])
+                    ("IPPROTO_RAW" variable
+                       (:constant-flag t
+                        :default-value (3449 3452)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3435 3452])
+                    ("IPPROTO_MAX" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3517 3532]))                  )
+                (reparse-symbol extern-c-contents) [1160 3533])
+            ("bits/in.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1095 1115])
+            ("in_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("s_addr" variable (:type ("in_addr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1031 1048]))                  )
+                (reparse-symbol extern-c-contents) [1008 1053])
+            ("in_addr_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("uint32_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [980 1007]))          
+      :file "in.h"
+      :pointmax 21626
+      :fsize 21625
+      :lastmodtime '(23511 28465 0 0)
+      :unmatched-syntax '((spp-macro-def 4394 . 4404) (spp-macro-def 4297 . 4312) (spp-macro-def 4202 . 4214) (spp-macro-def 4108 . 4122) (spp-macro-def 4024 . 4040) (spp-macro-def 3922 . 3937) (spp-macro-def 3826 . 3841) (spp-macro-def 3488 . 3499) (spp-macro-def 3404 . 3416) (spp-macro-def 3317 . 3332) (spp-macro-def 3229 . 3241) (spp-macro-def 3122 . 3134) (spp-macro-def 3026 . 3037) (spp-macro-def 2924 . 2937) (spp-macro-def 2829 . 2843) (spp-macro-def 2728 . 2739) (spp-macro-def 2635 . 2645) (spp-macro-def 2545 . 2556) (spp-macro-def 2446 . 2457) (spp-macro-def 2348 . 2360) (spp-macro-def 2258 . 2270) (spp-macro-def 2176 . 2188) (spp-macro-def 2074 . 2084) (spp-macro-def 1979 . 1990) (spp-macro-def 1896 . 1907) (spp-macro-def 1807 . 1818) (spp-macro-def 1728 . 1739) (spp-macro-def 1637 . 1648) (spp-macro-def 1540 . 1552) (spp-macro-def 1431 . 1443) (spp-macro-def 1329 . 1341) (spp-macro-def 1231 . 1241))
+      :lexical-table 
+        '(("INADDR_ANY" . ((semantic-list "((in_addr_t) 0x00000000)" 6979 . 7003)))
+          ("INADDR_ALLRTRS_GROUP" . ((semantic-list "((in_addr_t) 0xe0000002)" 7624 . 7648)))
+          ("GROUP_FILTER_SIZE" (spp-arg-list ("numsrc") 11257 . 11265) . ((semantic-list "(sizeof (struct group_filter) \\
+				   - sizeof (struct sockaddr_storage)	      \\
+				   + ((numsrc)				      \\
+				      * sizeof (struct sockaddr_storage)))" 11266 . 11424)))
+          ("IN6_ARE_ADDR_EQUAL" (spp-arg-list ("a" "b") 14850 . 14855) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      const struct in6_addr *__b = (const struct in6_addr *) (b);	      \\
+      __a->__in6_u.__u6_addr32[0] == __b->__in6_u.__u6_addr32[0]	      \\
+      && __a->__in6_u.__u6_addr32[1] == __b->__in6_u.__u6_addr32[1]	      \\
+      && __a->__in6_u.__u6_addr32[2] == __b->__in6_u.__u6_addr32[2]	      \\
+      && __a->__in6_u.__u6_addr32[3] == __b->__in6_u.__u6_addr32[3]; }))" 14860 . 15334)))
+          ("IPPROTO_RSVP" . ((symbol "IPPROTO_RSVP" 2362 . 2374)))
+          ("IPPROTO_COMP" . ((symbol "IPPROTO_COMP" 3136 . 3148)))
+          ("IPPROTO_MH" . ((symbol "IPPROTO_MH" 4406 . 4416)))
+          ("IN_CLASSB_NET" . ((number "0xffff0000" 6345 . 6355)))
+          ("IN_LOOPBACKNET" . ((number "127" 7252 . 7255)))
+          ("INADDR_UNSPEC_GROUP" . ((semantic-list "((in_addr_t) 0xe0000000)" 7480 . 7504)))
+          ("IN6_IS_ADDR_SITELOCAL" (spp-arg-list ("a") 13970 . 13973) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      (__a->__in6_u.__u6_addr32[0] & htonl (0xffc00000)) == htonl (0xfec00000); }))" 13978 . 14164)))
+          ("IN6_IS_ADDR_MC_GLOBAL" (spp-arg-list ("a") 17678 . 17681) . ((semantic-list "(IN6_IS_ADDR_MULTICAST(a)					      \\
+	 && ((((const uint8_t *) (a))[1] & 0xf) == 0xe))" 17685 . 17772)))
+          ("IPPROTO_FRAGMENT" . ((symbol "IPPROTO_FRAGMENT" 4041 . 4057)))
+          ("IN_CLASSC_NSHIFT" . ((number "8" 6597 . 6598)))
+          ("IPPROTO_ICMP" . ((symbol "IPPROTO_ICMP" 1343 . 1355)))
+          ("IPPROTO_ESP" . ((symbol "IPPROTO_ESP" 2558 . 2569)))
+          ("IPPROTO_BEETPH" . ((symbol "IPPROTO_BEETPH" 2845 . 2859)))
+          ("IPPROTO_ENCAP" . ((symbol "IPPROTO_ENCAP" 2939 . 2952)))
+          ("IPPROTO_HOPOPTS" . ((symbol "IPPROTO_HOPOPTS" 3843 . 3858)))
+          ("IN_CLASSA_HOST" . ((semantic-list "(0xffffffff & ~IN_CLASSA_NET)" 6194 . 6223)))
+          ("IN6_IS_ADDR_MULTICAST" (spp-arg-list ("a") 16817 . 16820) . ((semantic-list "(((const uint8_t *) (a))[0] == 0xff)" 16821 . 16857)))
+          ("IN6_IS_ADDR_MC_NODELOCAL" (spp-arg-list ("a") 17170 . 17173) . ((semantic-list "(IN6_IS_ADDR_MULTICAST(a)					      \\
+	 && ((((const uint8_t *) (a))[1] & 0xf) == 0x1))" 17177 . 17264)))
+          ("IPPROTO_IPIP" . ((symbol "IPPROTO_IPIP" 1554 . 1566)))
+          ("IPPROTO_PUP" . ((symbol "IPPROTO_PUP" 1820 . 1831)))
+          ("IPPROTO_TP" . ((symbol "IPPROTO_TP" 2086 . 2096)))
+          ("IPPROTO_IPV6" . ((symbol "IPPROTO_IPV6" 2272 . 2284)))
+          ("IPPROTO_AH" . ((symbol "IPPROTO_AH" 2647 . 2657)))
+          ("IPPROTO_PIM" . ((symbol "IPPROTO_PIM" 3039 . 3050)))
+          ("IPPROTO_NONE" . ((symbol "IPPROTO_NONE" 4216 . 4228)))
+          ("IN_CLASSC_NET" . ((number "0xffffff00" 6561 . 6571)))
+          ("IN6ADDR_LOOPBACK_INIT" . ((semantic-list "{ { { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 } } }" 8321 . 8364)))
+          ("IPPROTO_ROUTING" . ((symbol "IPPROTO_ROUTING" 3939 . 3954)))
+          ("IN_CLASSA" (spp-arg-list ("a") 6064 . 6067) . ((semantic-list "((((in_addr_t)(a)) & 0x80000000) == 0)" 6069 . 6107)))
+          ("IN_MULTICAST" (spp-arg-list ("a") 6744 . 6747) . ((symbol "IN_CLASSD" 6749 . 6758) (semantic-list "(a)" 6758 . 6761)))
+          ("INADDR_ALLHOSTS_GROUP" . ((semantic-list "((in_addr_t) 0xe0000001)" 7551 . 7575)))
+          ("IN6_IS_ADDR_MC_LINKLOCAL" (spp-arg-list ("a") 17298 . 17301) . ((semantic-list "(IN6_IS_ADDR_MULTICAST(a)					      \\
+	 && ((((const uint8_t *) (a))[1] & 0xf) == 0x2))" 17305 . 17392)))
+          ("IPPROTO_EGP" . ((symbol "IPPROTO_EGP" 1741 . 1752)))
+          ("IPPROTO_UDPLITE" . ((symbol "IPPROTO_UDPLITE" 3334 . 3349)))
+          ("IPPROTO_ICMPV6" . ((symbol "IPPROTO_ICMPV6" 4124 . 4138)))
+          ("IN_CLASSB" (spp-arg-list ("a") 6269 . 6272) . ((semantic-list "((((in_addr_t)(a)) & 0xc0000000) == 0x80000000)" 6274 . 6321)))
+          ("INADDR_NONE" . ((semantic-list "((in_addr_t) 0xffffffff)" 7155 . 7179)))
+          ("INADDR_LOOPBACK" . ((semantic-list "((in_addr_t) 0x7f000001)" 7359 . 7383)))
+          ("INET6_ADDRSTRLEN" . ((number "46" 8418 . 8420)))
+          ("IP_MSFILTER_SIZE" (spp-arg-list ("numsrc") 10776 . 10784) . ((semantic-list "(sizeof (struct ip_msfilter) \\
+				  - sizeof (struct in_addr)		      \\
+				  + (numsrc) * sizeof (struct in_addr))" 10785 . 10900)))
+          ("IN6_IS_ADDR_V4MAPPED" (spp-arg-list ("a") 14195 . 14198) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      __a->__in6_u.__u6_addr32[0] == 0					      \\
+      && __a->__in6_u.__u6_addr32[1] == 0				      \\
+      && __a->__in6_u.__u6_addr32[2] == htonl (0xffff); }))" 14203 . 14469)))
+          ("IPPROTO_IDP" . ((symbol "IPPROTO_IDP" 1992 . 2003)))
+          ("IPPROTO_DCCP" . ((symbol "IPPROTO_DCCP" 2190 . 2202)))
+          ("IPPROTO_GRE" . ((symbol "IPPROTO_GRE" 2459 . 2470)))
+          ("IPPROTO_MPLS" . ((symbol "IPPROTO_MPLS" 3418 . 3430)))
+          ("IN_CLASSA_MAX" . ((number "128" 6247 . 6250)))
+          ("IN_CLASSC" (spp-arg-list ("a") 6485 . 6488) . ((semantic-list "((((in_addr_t)(a)) & 0xe0000000) == 0xc0000000)" 6490 . 6537)))
+          ("IN6_IS_ADDR_MC_SITELOCAL" (spp-arg-list ("a") 17426 . 17429) . ((semantic-list "(IN6_IS_ADDR_MULTICAST(a)					      \\
+	 && ((((const uint8_t *) (a))[1] & 0xf) == 0x5))" 17433 . 17520)))
+          ("IPPROTO_SCTP" . ((symbol "IPPROTO_SCTP" 3243 . 3255)))
+          ("IPPROTO_RAW" . ((symbol "IPPROTO_RAW" 3501 . 3512)))
+          ("IPPROTO_DSTOPTS" . ((symbol "IPPROTO_DSTOPTS" 4314 . 4329)))
+          ("IN_CLASSC_HOST" . ((semantic-list "(0xffffffff & ~IN_CLASSC_NET)" 6623 . 6652)))
+          ("IN_CLASSD" (spp-arg-list ("a") 6671 . 6674) . ((semantic-list "((((in_addr_t)(a)) & 0xf0000000) == 0xe0000000)" 6676 . 6723)))
+          ("IN_EXPERIMENTAL" (spp-arg-list ("a") 6786 . 6789) . ((semantic-list "((((in_addr_t)(a)) & 0xe0000000) == 0xe0000000)" 6790 . 6837)))
+          ("INADDR_MAX_LOCAL_GROUP" . ((semantic-list "((in_addr_t) 0xe00000ff)" 7697 . 7721)))
+          ("_NETINET_IN_H" . ((number "1" 834 . 835)))
+          ("IN_CLASSA_NSHIFT" . ((number "24" 6167 . 6169)))
+          ("INADDR_BROADCAST" . ((semantic-list "((in_addr_t) 0xffffffff)" 7066 . 7090)))
+          ("INET_ADDRSTRLEN" . ((number "16" 8390 . 8392)))
+          ("IN6_IS_ADDR_LOOPBACK" (spp-arg-list ("a") 13390 . 13393) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      __a->__in6_u.__u6_addr32[0] == 0					      \\
+      && __a->__in6_u.__u6_addr32[1] == 0				      \\
+      && __a->__in6_u.__u6_addr32[2] == 0				      \\
+      && __a->__in6_u.__u6_addr32[3] == htonl (1); }))" 13398 . 13712)))
+          ("IPPROTO_IP" . ((symbol "IPPROTO_IP" 1243 . 1253)))
+          ("s6_addr" . 
+              ((symbol "__in6_u" 7938 . 7945) (punctuation "." 7945 . 7946) (symbol "__u6_addr8" 7946 . 7956)))
+          ("s6_addr16" . 
+              ((symbol "__in6_u" 7995 . 8002) (punctuation "." 8002 . 8003) (symbol "__u6_addr16" 8003 . 8014)))
+          ("IN_CLASSB_MAX" . ((number "65536" 6461 . 6466)))
+          ("IN_BADCLASS" (spp-arg-list ("a") 6857 . 6860) . ((semantic-list "((((in_addr_t)(a)) & 0xf0000000) == 0xf0000000)" 6862 . 6909)))
+          ("IN6ADDR_ANY_INIT" . ((semantic-list "{ { { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 } } }" 8247 . 8290)))
+          ("IN6_IS_ADDR_UNSPECIFIED" (spp-arg-list ("a") 13045 . 13048) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      __a->__in6_u.__u6_addr32[0] == 0					      \\
+      && __a->__in6_u.__u6_addr32[1] == 0				      \\
+      && __a->__in6_u.__u6_addr32[2] == 0				      \\
+      && __a->__in6_u.__u6_addr32[3] == 0; }))" 13053 . 13359)))
+          ("IPPROTO_UDP" . ((symbol "IPPROTO_UDP" 1909 . 1920)))
+          ("IN_CLASSA_NET" . ((number "0xff000000" 6131 . 6141)))
+          ("IN6_IS_ADDR_V4COMPAT" (spp-arg-list ("a") 14500 . 14503) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      __a->__in6_u.__u6_addr32[0] == 0					      \\
+      && __a->__in6_u.__u6_addr32[1] == 0				      \\
+      && __a->__in6_u.__u6_addr32[2] == 0				      \\
+      && ntohl (__a->__in6_u.__u6_addr32[3]) > 1; }))" 14508 . 14821)))
+          ("IN6_IS_ADDR_MC_ORGLOCAL" (spp-arg-list ("a") 17553 . 17556) . ((semantic-list "(IN6_IS_ADDR_MULTICAST(a)					      \\
+	 && ((((const uint8_t *) (a))[1] & 0xf) == 0x8))" 17560 . 17647)))
+          ("IPPROTO_TCP" . ((symbol "IPPROTO_TCP" 1650 . 1661)))
+          ("s6_addr32" . 
+              ((symbol "__in6_u" 8035 . 8042) (punctuation "." 8042 . 8043) (symbol "__u6_addr32" 8043 . 8054)))
+          ("IN_CLASSB_NSHIFT" . ((number "16" 6381 . 6383)))
+          ("IN_CLASSB_HOST" . ((semantic-list "(0xffffffff & ~IN_CLASSB_NET)" 6408 . 6437)))
+          ("IN6_IS_ADDR_LINKLOCAL" (spp-arg-list ("a") 13744 . 13747) . ((semantic-list "(__extension__							      \\
+   ({ const struct in6_addr *__a = (const struct in6_addr *) (a);	      \\
+      (__a->__in6_u.__u6_addr32[0] & htonl (0xffc00000)) == htonl (0xfe800000); }))" 13752 . 13938)))
+          ("IPPROTO_IGMP" . ((symbol "IPPROTO_IGMP" 1445 . 1457)))
+          ("IPPROTO_MTP" . ((symbol "IPPROTO_MTP" 2741 . 2752)))
+          )
+))
+  :file "!usr!include!netinet!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

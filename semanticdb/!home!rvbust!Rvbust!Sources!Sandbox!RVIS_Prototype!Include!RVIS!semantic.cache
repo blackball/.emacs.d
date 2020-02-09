@@ -1,0 +1,763 @@
+;; Object RVIS/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RVIS/"
+  :tables
+  (list
+    (semanticdb-table "Object.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [15 32])
+            ("string" include (:system-flag t) nil [33 50])
+            ("RVIS/Core/RefPtr.h" include (:system-flag t) nil [52 81])
+            ("RVIS" type
+               (:members 
+                  ( ("Auxiliary" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [120 136])
+                    ("Allocator" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [137 153])
+                    ("Input" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [154 166])
+                    ("Output" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [167 180])
+                    ("Object" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [198 205])
+                            ("Object" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [210 219])
+                            ("Object" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("allocator" variable
+                                       (:pointer 1
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [241 262]))                                  
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [234 263])
+                            ("Read" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("input" variable
+                                       (:reference 1
+                                        :type ("Input" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [597 610]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [579 611])
+                            ("Write" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("output" variable
+                                       (:reference 1
+                                        :type ("Output" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [635 650]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [616 657])
+                            ("SetValue" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1205 1228])
+                                    ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1229 1244]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1166 1245])
+                            ("SetValue" function
+                               (:arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1269 1292])
+                                    ("value" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1293 1311]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1255 1374])
+                            ("GetValue" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1419 1442])
+                                    ("value" variable
+                                       (:reference 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1443 1452]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1380 1459])
+                            ("SetObject" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1480 1503])
+                                    ("object" variable
+                                       (:pointer 1
+                                        :type ("Object" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1504 1519]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1465 1520])
+                            ("GetObject" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1548 1571]))                                  
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1530 1572])
+                            ("GetObject" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1605 1628]))                                  
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1581 1635])
+                            ("GetOrCreateUniqueAuxiliary" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1754 1794])
+                            ("GetAuxiliary" function
+                               (:pointer 1
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1799 1848])
+                            ("GetAuxiliary" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1853 1914])
+                            ("GetAllocator" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("Allocator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2059 2091])
+                            ("protected" label nil (reparse-symbol classsubparts) [2094 2104])
+                            ("Object" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2109 2127])
+                            ("_Delete" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2133 2162])
+                            ("SetAuxiliary" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("auxiliary" variable
+                                       (:pointer 1
+                                        :type ("Auxiliary" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2185 2206]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2167 2207])
+                            ("private" label nil (reparse-symbol classsubparts) [2210 2218])
+                            ("Allocator" friend nil (reparse-symbol classsubparts) [2223 2245])
+                            ("Auxiliary" friend nil (reparse-symbol classsubparts) [2251 2273])
+                            ("m_reference_count" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::atomic_uint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2280 2323])
+                            ("m_auxiliary" variable
+                               (:pointer 1
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2329 2352]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [182 2355]))                  
+                :type "namespace")
+                nil [83 2358]))          
+      :file "Object.h"
+      :pointmax 2377
+      :fsize 2376
+      :lastmodtime '(23749 14463 375775 326000)
+      :unmatched-syntax nil)
+    (semanticdb-table "RefPtr.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS" type
+               (:members 
+                  ( ("RefPtr" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [66 73])
+                            ("m_ptr" function
+                               (:arguments 
+                                  ( ("" variable (:type ("nullptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [95 103]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [89 106])
+                            ("m_ptr" function
+                               (:arguments 
+                                  ( ("" variable (:type ("rhs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [146 150])
+                                    ("" variable (:type ("m_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150 156]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [140 201])
+                            ("m_ptr" function
+                               (:arguments 
+                                  ( ("" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [239 243]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [233 288])
+                            ("m_ptr" function
+                               (:arguments 
+                                  ( ("" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [348 352]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [342 397])
+                            ("m_ptr" function
+                               (:arguments 
+                                  ( ("" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [462 466])
+                                    ("" variable (:type ("m_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [466 472]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [456 517])
+                            ("RefPtr" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [523 579])
+                            ("protected" label nil (reparse-symbol classsubparts) [2528 2538])
+                            ("RefPtr" type
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [2543 2585])
+                            ("m_ptr" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2591 2600]))                          )
+                        (reparse-symbol namespacesubparts) [33 2603]))                  
+                :type "namespace")
+                nil [15 2606]))          
+      :file "RefPtr.h"
+      :pointmax 2607
+      :fsize 2606
+      :lastmodtime '(23749 13795 953749 936000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Auxiliary.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Allocator.h" include (:system-flag t) nil [15 47])
+            ("RVIS/Core/RefPtr.h" include (:system-flag t) nil [48 77])
+            ("map" include (:system-flag t) nil [79 93])
+            ("RVIS" type
+               (:members 
+                  ( ("Auxiliary" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [221 228])
+                            ("GetConnectedObject" function
+                               (:pointer 1
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [233 292])
+                            ("GetConnectedObject" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [297 368])
+                            ("SizeOf" function
+                               (:typemodifiers ("virtual")
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [374 438])
+                            ("Ref" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [444 461])
+                            ("Unref" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [466 485])
+                            ("Unref_NoDelete" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [490 518])
+                            ("ReferenceCount" function
+                               (:typemodifiers ("inline")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [523 602])
+                            ("SetObject" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [623 646])
+                                    ("object" variable
+                                       (:pointer 1
+                                        :type ("Object" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [647 662]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [608 663])
+                            ("GetObject" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [686 709]))                                  
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [668 710])
+                            ("GetObject" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [739 762]))                                  
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [715 769])
+                            ("std::map" variable (:type "int") (reparse-symbol classsubparts) [793 837])
+                            ("GetObjectMap" function (:type ("ObjectMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [842 891])
+                            ("GetObjectMap" function
+                               (:constant-flag t
+                                :type ("ObjectMap" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [896 957])
+                            ("SetAllocator" function
+                               (:arguments 
+                                  ( ("allocator" variable
+                                       (:pointer 1
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [981 1002]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [963 1031])
+                            ("GetAllocator" function
+                               (:pointer 1
+                                :type ("Allocator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1036 1085])
+                            ("protected" label nil (reparse-symbol classsubparts) [1088 1098])
+                            ("Auxiliary" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("allocator" variable
+                                       (:pointer 1
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1122 1143]))                                  
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1112 1144])
+                            ("Auxiliary" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("object" variable
+                                       (:pointer 1
+                                        :type ("Object" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1168 1183])
+                                    ("allocator" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1184 1214]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1158 1216])
+                            ("Auxiliary" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1221 1242])
+                            ("SignalConnectedObjectToBeDeleted" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1459 1499])
+                            ("ResetConnectedObject" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1505 1533])
+                            ("Object" friend nil (reparse-symbol classsubparts) [1539 1558])
+                            ("Allocator" friend nil (reparse-symbol classsubparts) [1564 1586])
+                            ("m_reference_count" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::atomic_uint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1593 1636])
+                            ("m_connected_object" variable (:type ("std::atomic" type
+                                 (:template-specifier 
+                                    ( ("Object" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1641 1681])
+                            ("m_allocator" variable (:type ("ref_ptr" type
+                                 (:template-specifier 
+                                    ( ("Allocator" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1686 1717])
+                            ("m_objectmap" variable (:type ("ObjectMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1722 1744]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [202 1747]))                  
+                :type "namespace")
+                nil [95 1750]))          
+      :file "Auxiliary.h"
+      :pointmax 1769
+      :fsize 1768
+      :lastmodtime '(23749 13710 149460 763000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Data.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Object.h" include (:system-flag t) nil [15 44])
+            ("RVIS" type
+               (:members 
+                  ( ("Data" type
+                       (:superclasses 
+                          ( ("Object" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [94 101])
+                            ("Data" function
+                               (:constructor-flag t
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [106 115])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [220 229])
+                            ("override" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [261 276])
+                            ("protected" label nil (reparse-symbol classsubparts) [283 293])
+                            ("Data" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [298 316]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [64 319]))                  
+                :type "namespace")
+                nil [46 322]))          
+      :file "Data.h"
+      :pointmax 341
+      :fsize 340
+      :lastmodtime '(23749 14242 187210 90000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ObsPtr.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Auxiliary.h" include (:system-flag t) nil [15 47])
+            ("RVIS" type
+               (:members 
+                  ( ("ObsPtr" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [161 168])
+                            ("ObsPtr" function
+                               (:constructor-flag t
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [173 184])
+                            ("ObsPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ObsPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [197 215]))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [190 258])
+                            ("ObsPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type ("R" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [302 309]))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [295 386])
+                            ("ObsPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ObsPtr" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [430 451]))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [423 494])
+                            ("ObsPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ref_ptr" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [538 560]))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [531 645])
+                            ("ObsPtr" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [651 672])
+                            ("=" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type ("R" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [718 725]))                                  
+                                :operator-flag t)
+                                (reparse-symbol classsubparts) [678 832])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ObsPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [856 874]))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [838 947])
+                            ("=" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ObsPtr" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [993 1014]))                                  
+                                :operator-flag t)
+                                (reparse-symbol classsubparts) [953 1087])
+                            ("=" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type ("ObsPtr" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ref_ptr" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1133 1155]))                                  
+                                :operator-flag t)
+                                (reparse-symbol classsubparts) [1093 1272])
+                            ("IsValid" function (:type "bool") (reparse-symbol classsubparts) [1278 1380])
+                            ("RefPtr" function
+                               (:template-specifier 
+                                  ( ("R" type nil nil nil))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1568 1731])
+                            ("protected" label nil (reparse-symbol classsubparts) [1733 1743])
+                            ("ObsPtr" type
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [1748 1790])
+                            ("m_auxiliary" variable (:type ("RefPtr" type
+                                 (:template-specifier 
+                                    ( ("Auxiliary" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1795 1825]))                          )
+                        (reparse-symbol namespacesubparts) [128 1828]))                  
+                :type "namespace")
+                nil [110 1831]))          
+      :file "ObsPtr.h"
+      :pointmax 1850
+      :fsize 1849
+      :lastmodtime '(23749 14439 475714 252000)
+      :unmatched-syntax '((OPERATOR 1559 . 1567) (punctuation 1553 . 1554) (symbol 1552 . 1553) (CLASS 1546 . 1551) (punctuation 1545 . 1546) (TEMPLATE 1537 . 1545) (semantic-list 1417 . 1438) (CONST 1411 . 1416) (semantic-list 1408 . 1410) (BOOL 1404 . 1408) (OPERATOR 1395 . 1403) (EXPLICIT 1386 . 1394) (EXPLICIT 522 . 530) (punctuation 516 . 517) (symbol 515 . 516) (CLASS 509 . 514) (punctuation 508 . 509) (TEMPLATE 500 . 508) (EXPLICIT 414 . 422) (punctuation 408 . 409) (symbol 407 . 408) (CLASS 401 . 406) (punctuation 400 . 401) (TEMPLATE 392 . 400) (EXPLICIT 286 . 294) (punctuation 280 . 281) (symbol 279 . 280) (CLASS 273 . 278) (punctuation 272 . 273) (TEMPLATE 264 . 272) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "Allocator.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Object.h" include (:system-flag t) nil [15 44])
+            ("RVIS/Core/RefPtr.h" include (:system-flag t) nil [45 74])
+            ("RVIS" type
+               (:members 
+                  ( ("Allocator" type
+                       (:superclasses 
+                          ( ("Object" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [128 135])
+                            ("Allocate" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("n" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [243 257])
+                                    ("hint" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [258 275]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [220 276])
+                            ("Allocate" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [304 321]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [281 322])
+                            ("Deallocate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [351 367])
+                                    ("size" variable
+                                       (:default-value "0"
+                                        :type ("std::size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [368 388]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [327 390])
+                            ("New" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("" variable (:type ("Args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [446 451])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [454 459]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [439 636])
+                            ("Delete" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [679 686]))                                  )
+                                (reparse-symbol classsubparts) [642 798])
+                            ("NewArray" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [841 853]))                                  
+                                :pointer 1)
+                                (reparse-symbol classsubparts) [804 1034])
+                            ("DeleteArray" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1082 1089])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1090 1102]))                                  )
+                                (reparse-symbol classsubparts) [1040 1303])
+                            ("GetOrCreateSharedAuxiliary" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1309 1349])
+                            ("DetachSharedAuxiliary" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("auxiliary" variable
+                                       (:pointer 1
+                                        :type ("Auxiliary" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1382 1403]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1355 1404])
+                            ("protected" label nil (reparse-symbol classsubparts) [1406 1416])
+                            ("Allocator" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1421 1442])
+                            ("m_shared_auxiliary" variable
+                               (:pointer 1
+                                :type ("Auxiliary" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1448 1487])
+                            ("m_bytes_allocated" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1492 1525])
+                            ("m_count_allocated" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1530 1563])
+                            ("m_bytes_deallocated" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1568 1603])
+                            ("m_count_deallocated" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1608 1643]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [94 1646]))                  
+                :type "namespace")
+                nil [76 1649]))          
+      :file "Allocator.h"
+      :pointmax 1668
+      :fsize 1667
+      :lastmodtime '(23749 14754 128518 330000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Logger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS_INFO" variable (:constant-flag t) nil [23 32])
+            ("RVIS_DEBUG" variable (:constant-flag t) nil [46 56])
+            ("RVIS_WARN" variable (:constant-flag t) nil [70 79])
+            ("RVIS_ERROR" variable (:constant-flag t) nil [93 103]))          
+      :file "Logger.h"
+      :pointmax 109
+      :fsize 108
+      :lastmodtime '(23749 14786 436600 891000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 65 . 70) (symbol 56 . 65) (semantic-list 50 . 55) (symbol 41 . 50) (semantic-list 35 . 40) (symbol 30 . 35) (semantic-list 24 . 29) (symbol 15 . 24) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("RVIS_WARN" (spp-arg-list ("...") 79 . 84))
+          ("RVIS_ERROR" (spp-arg-list ("...") 103 . 108))
+          ("RVIS_INFO" (spp-arg-list ("...") 32 . 37))
+          ("RVIS_DEBUG" (spp-arg-list ("...") 56 . 61))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!RVIS_Prototype!Include!RVIS!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

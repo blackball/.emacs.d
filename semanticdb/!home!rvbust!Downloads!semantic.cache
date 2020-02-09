@@ -1,0 +1,106 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables
+  (list
+    (semanticdb-table "ConnectedBlocks_v1.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [45 63])
+            ("matplotlib.pyplot" include nil nil [65 96])
+            ("time" include nil nil [97 108])
+            ("sys" include nil nil [109 119])
+            ("sys" code nil nil [120 147])
+            ("FindConnectedBlocks" function
+               (:documentation " 
+    m - the given map, which only contains 0s and 1s.  
+    TODO: Please implement an algorithm below to find the biggest connected block(s). 
+    Each block is a list of coordinates. You may return a list of biggest blocks. 
+    NOTE: Let's assume max_distance will always be 1 for now. 
+    "
+                :arguments 
+                  ( ("m" variable nil (reparse-symbol function_parameters) [173 174])
+                    ("max_distance" variable nil (reparse-symbol function_parameters) [176 188]))                  )
+                nil [149 1301])
+            ("BFSFind" function (:arguments 
+              ( ("map" variable nil (reparse-symbol function_parameters) [1314 1317])
+                ("curr" variable nil (reparse-symbol function_parameters) [1319 1323])
+                ("curc" variable nil (reparse-symbol function_parameters) [1325 1329])
+                ("block" variable nil (reparse-symbol function_parameters) [1331 1336]))              ) nil [1302 1821])
+            ("MakeMap" function
+               (:documentation " 
+    The helper function to help to generate the input 
+
+    rows - the rows of the map 
+    cols - the cols of the map 
+    ones - the number of 1s inside the map 
+
+    rows and cols will be in range  [1, 1000000]
+    "
+                :arguments 
+                  ( ("rows" variable nil (reparse-symbol function_parameters) [1839 1843])
+                    ("cols" variable nil (reparse-symbol function_parameters) [1845 1849])
+                    ("ones" variable nil (reparse-symbol function_parameters) [1851 1855]))                  )
+                nil [1827 2300])
+            ("MapPrintHelper" function (:arguments 
+              ( ("map" variable nil (reparse-symbol function_parameters) [2320 2323]))              ) nil [2301 2390])
+            ("BlocksPrintHelper" function (:arguments 
+              ( ("biggestBlocks" variable nil (reparse-symbol function_parameters) [2421 2434]))              ) nil [2399 2601])
+            ("Test" function (:documentation " 
+    TODO:  Please try to test all corner cases of your algorithm. Also please benchmark your algorithm for different sizes of input. 
+    ") nil [2610 4108])
+            ("Benchmark" function (:documentation "
+    TODO: Please benchmark your codes with input of different sizes and plot the benchamrk curve with matplotlib.pyplot. 
+    ") nil [4114 5410])
+            ("if" code nil nil [5411 5465]))          
+      :file "ConnectedBlocks_v1.py"
+      :pointmax 5476
+      :fsize 5661
+      :lastmodtime '(23732 24940 892897 236000)
+      :unmatched-syntax nil)
+    (semanticdb-table "append_extensions_osg.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+1. Find all C++ header files without extension. 
+2. Append extensions for above files.
+3. Find inside all source and header files change the included names 
+\"\"\"" code nil nil [71 235])
+            ("os" include nil nil [237 246])
+            ("sys" include nil nil [247 257])
+            ("FindFiles" function
+               (:documentation " Recursively find all C++ headers and sources. 
+    "
+                :arguments 
+                  ( ("folder" variable nil (reparse-symbol function_parameters) [1826 1832]))                  )
+                nil [1812 2070])
+            ("AppendExtension" function (:arguments 
+              ( ("filenames" variable nil (reparse-symbol function_parameters) [2743 2752])
+                ("ext" variable nil (reparse-symbol function_parameters) [2754 2757]))              ) nil [2723 2890])
+            ("AppendInsideFiles" function (:arguments 
+              ( ("srcFiles" variable nil (reparse-symbol function_parameters) [2921 2929])
+                ("baseNames" variable nil (reparse-symbol function_parameters) [2931 2940]))              ) nil [2899 4508])
+            ("Main" function nil nil [4509 5812])
+            ("if" code nil nil [5817 5855]))          
+      :file "append_extensions_osg.py"
+      :pointmax 5889
+      :fsize 5888
+      :lastmodtime '(23753 22096 183626 515000)
+      :unmatched-syntax nil)
+    (semanticdb-table "blob_detect.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [20 30])
+            ("numpy" include nil nil [31 49])
+            ("sys" include nil nil [51 61])
+            ("Hui" include nil nil [62 84])
+            ("Detect" function nil nil [87 720])
+            ("if" code nil nil [721 761]))          
+      :file "blob_detect.py"
+      :pointmax 761
+      :fsize 760
+      :lastmodtime '(23861 21041 665773 209000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

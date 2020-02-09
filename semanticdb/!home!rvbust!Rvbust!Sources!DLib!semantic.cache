@@ -1,0 +1,137 @@
+;; Object DLib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "DLib/"
+  :tables
+  (list
+    (semanticdb-table "setup.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"setup for the dlib project
+ Copyright (C) 2015  Ehsan Azar (dashesy@linux.com)
+ License: Boost Software License   See LICENSE.txt for the full license.
+
+This file basically just uses CMake to compile the dlib python bindings project
+located in the tools/python folder and then puts the outputs into standard
+python packages.
+
+To build the dlib:
+    python setup.py build
+To build and install:
+    python setup.py install
+To package the wheel (after pip installing twine and wheel):
+    python setup.py bdist_wheel
+To upload the binary wheel to PyPi
+    twine upload dist/*.whl
+To upload the source distribution to PyPi
+    python setup.py sdist 
+    twine upload dist/dlib-*.tar.gz
+To exclude/include certain options in the cmake config use --yes and --no:
+    for example:
+    --yes USE_AVX_INSTRUCTIONS: will set -DUSE_AVX_INSTRUCTIONS=yes
+    --no USE_AVX_INSTRUCTIONS: will set -DUSE_AVX_INSTRUCTIONS=no
+Additional options:
+    --compiler-flags: pass flags onto the compiler, e.g. --compiler-flags \"-Os -Wall\" passes -Os -Wall onto GCC.
+    -G: Set the CMake generator.  E.g. -G \"Visual Studio 14 2015\"
+    --clean: delete any previous build folders and rebuild.  You should do this if you change any build options
+             by setting --compiler-flags or --yes or --no since last time you ran a build to make sure the changes
+             take effect.
+    --set: set arbitrary options e.g. --set CUDA_HOST_COMPILER=/usr/bin/gcc-6.4.0
+\"\"\"" code nil nil [1 1449])
+            ("os" include nil nil [1450 1459])
+            ("re" include nil nil [1460 1469])
+            ("sys" include nil nil [1470 1480])
+            ("shutil" include nil nil [1481 1494])
+            ("platform" include nil nil [1495 1510])
+            ("subprocess" include nil nil [1511 1528])
+            ("multiprocessing" include nil nil [1529 1551])
+            ("distutils" include nil nil [1552 1577])
+            ("math" include nil nil [1578 1605])
+            ("setuptools" include nil nil [1607 1646])
+            ("setuptools.command.build_ext" include nil nil [1647 1697])
+            ("distutils.version" include nil nil [1698 1740])
+            ("get_extra_cmake_options" function (:documentation "read --clean, --yes, --no, --set, --compiler-flags, and -G options from the command line and add them as cmake switches.
+    ") nil [1743 3219])
+            ("cmake_extra_options, clean_build_folder" code nil nil [3220 3286])
+            ("CMakeExtension" type
+               (:superclasses ("Extension")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Extension" code nil (reparse-symbol indented_block_body) [3374 3416])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3425 3468]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3339 3343])
+                            ("name" variable nil (reparse-symbol function_parameters) [3345 3349])
+                            ("sourcedir" variable nil (reparse-symbol function_parameters) [3351 3360]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3326 3469]))                  
+                :type "class")
+                nil [3289 3469])
+            ("rmtree" function
+               (:documentation "remove a directory and its subdirectories.
+    "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [3481 3485]))                  )
+                nil [3470 3982])
+            ("CMakeBuild" type
+               (:superclasses ("build_ext")
+                :members 
+                  ( ("get_cmake_version" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4040 4044]))                          )
+                        (reparse-symbol indented_block_body) [4018 4610])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4623 4627]))                          )
+                        (reparse-symbol indented_block_body) [4615 4927])
+                    ("build_extension" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4952 4956])
+                            ("ext" variable nil (reparse-symbol function_parameters) [4958 4961]))                          )
+                        (reparse-symbol indented_block_body) [4932 6488]))                  
+                :type "class")
+                nil [3984 6488])
+            ("num_available_cpu_cores" function (:arguments 
+              ( ("ram_per_build_process_in_gb" variable nil (reparse-symbol function_parameters) [6517 6544]))              ) nil [6489 7361])
+            ("setuptools.command.test" include nil nil [7363 7418])
+            ("PyTest" type
+               (:superclasses ("TestCommand")
+                :members 
+                  ( ("user_options" variable nil (reparse-symbol indented_block_body) [7450 7519])
+                    ("initialize_options" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7548 7552]))                          )
+                        (reparse-symbol indented_block_body) [7525 7657])
+                    ("run_tests" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7676 7680]))                          )
+                        (reparse-symbol indented_block_body) [7662 7868]))                  
+                :type "class")
+                nil [7419 7868])
+            ("read_version_from_cmakelists" function
+               (:documentation "Read version information
+    "
+                :arguments 
+                  ( ("cmake_file" variable nil (reparse-symbol function_parameters) [7902 7912]))                  )
+                nil [7869 8291])
+            ("read_entire_file" function
+               (:documentation "Read text out of a file relative to setup.py.
+    "
+                :arguments 
+                  ( ("fname" variable nil (reparse-symbol function_parameters) [8313 8318]))                  )
+                nil [8292 8426])
+            ("setup" code nil nil [8427 10091]))          
+      :file "setup.py"
+      :pointmax 10092
+      :fsize 10091
+      :lastmodtime '(23307 54614 335239 359000)
+      :unmatched-syntax '((NAME 5232 . 5235) (IF 5246 . 5248) (ELSE 5260 . 5264))))
+  :file "!home!rvbust!Rvbust!Sources!DLib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

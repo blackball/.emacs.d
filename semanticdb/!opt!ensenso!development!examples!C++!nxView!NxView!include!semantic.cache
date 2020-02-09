@@ -1,0 +1,356 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "loadSettingsDialog.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("functional" include (:system-flag t) nil [15 36])
+            ("cameraInfo.h" include nil nil [38 61])
+            ("ui_loadSettingsDialog.h" include nil nil [63 97])
+            ("QDialog" include (:system-flag t) nil [99 117])
+            ("LoadSettingsDialog" type
+               (:superclasses 
+                  ( ("QDialog" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("protected" label nil (reparse-symbol classsubparts) [174 184])
+                    ("ui" variable (:type ("Ui::LoadSettingsDialog" type (:type "class") nil nil)) (reparse-symbol classsubparts) [186 212])
+                    ("lastDirectory" variable
+                       (:pointer 1
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [214 237])
+                    ("public" label nil (reparse-symbol classsubparts) [239 246])
+                    ("LoadSettingsDialog" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [267 292])
+                            ("lastDirectory" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("QString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [293 325])
+                            ("parent" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [327 352])
+                            ("f" variable
+                               (:default-value "0"
+                                :type ("Qt::WindowFlags" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [354 375]))                          
+                        :type ("LoadSettingsDialog" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [248 377])
+                    ("execWithFileDialog" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [380 405])
+                    ("filename" function
+                       (:prototype-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [408 433])
+                    ("loadLink" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [435 457])
+                    ("loadCalibration" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [459 488])
+                    ("loadParameters" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [490 518])
+                    ("private" label nil (reparse-symbol classsubparts) [520 534])
+                    ("searchFile" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [536 554])
+                    ("fileChanged" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [556 575]))                  
+                :type "class")
+                nil [119 578])
+            ("loadSettingsDialog" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [604 629])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 650])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [650 656])
+                    ("" variable (:type ("beforeCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [658 693])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [695 709])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [709 715])
+                    ("" variable (:type ("afterCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [717 751])
+                    ("lastDirectory" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [759 791])
+                    ("parent" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [793 818]))                  
+                :type "bool")
+                nil [580 820]))          
+      :file "loadSettingsDialog.h"
+      :pointmax 821
+      :fsize 820
+      :lastmodtime '(23615 832 0 0)
+      :unmatched-syntax '((punctuation 715 . 716) (semantic-list 713 . 715) (punctuation 708 . 709) (punctuation 656 . 657) (semantic-list 654 . 656) (punctuation 649 . 650) (symbol 164 . 172) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "cameraInfo.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("nxHelpers.h" include nil nil [15 37])
+            ("string" include (:system-flag t) nil [39 56])
+            ("vector" include (:system-flag t) nil [57 74])
+            ("CameraInfo" type
+               (:members 
+                  ( ("eepromId" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [97 114])
+                    ("serial" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [117 136])
+                    ("model" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [138 156])
+                    ("link" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [158 175])
+                    ("temperature" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [177 201])
+                    ("status" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [203 222])
+                    ("type" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [224 241])
+                    ("folder" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [243 262])
+                    ("port" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [264 281])
+                    ("leftPort" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [283 304])
+                    ("rightPort" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [306 328])
+                    ("leftSerial" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [330 353])
+                    ("rightSerial" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [355 379])
+                    ("dhcp" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [382 400])
+                    ("ip" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [402 417])
+                    ("leftDHCP" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [419 441])
+                    ("leftIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [443 462])
+                    ("rightDHCP" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [464 487])
+                    ("rightIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [489 509])
+                    ("isAvailable" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [512 537])
+                    ("isOpen" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [539 559])
+                    ("hasValidIpAddress" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [561 592])
+                    ("hasValidFirmware" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [594 624])
+                    ("isPaired" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [626 648])
+                    ("isCalibrated" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [650 676])
+                    ("hardwareFailure" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [678 707])
+                    ("hasOvertemperature" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [709 741])
+                    ("hasLocalEepromFile" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [743 775])
+                    ("CameraInfo" function
+                       (:constructor-flag t
+                        :type ("CameraInfo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [778 793])
+                    ("CameraInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("serial" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [815 841]))                          
+                        :type ("CameraInfo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [804 842])
+                    ("CameraInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NxLibItem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [864 888]))                          
+                        :type ("CameraInfo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [853 889])
+                    ("public" label nil (reparse-symbol classsubparts) [891 898])
+                    ("isMonoCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [900 926])
+                    ("isStereoCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [928 956])
+                    ("isProjector" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [958 983])
+                    ("isEthernetCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [985 1015])
+                    ("isFileCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1017 1043])
+                    ("isVirtualCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1045 1074])
+                    ("isFreeStereoCamera" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1076 1108])
+                    ("cameraNode" function
+                       (:prototype-flag t
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1111 1140])
+                    ("cameraAndSensorSerials" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1143 1199])
+                    ("icon" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cropped" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1215 1235]))                          
+                        :type ("QPixmap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1202 1243]))                  
+                :type "struct")
+                nil [76 1246])
+            ("getCameraList" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("monoOnly" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1286 1307]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("CameraInfo" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1248 1309]))          
+      :file "cameraInfo.h"
+      :pointmax 1310
+      :fsize 1309
+      :lastmodtime '(23615 832 0 0)
+      :unmatched-syntax '((EXPLICIT 844 . 852) (EXPLICIT 795 . 803) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "NxView.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__NXVIEW_H__" variable (:constant-flag t) nil [30 42])
+            ("qtMessageBoxes.h" include nil nil [44 71])
+            ("qtThreadControl.h" include nil nil [72 100])
+            ("constants.h" include nil nil [101 123])
+            ("helpers.h" include nil nil [124 144])
+            ("nxLib.h" include nil nil [201 220])
+            ("sstream" include (:system-flag t) nil [229 247])
+            ("HIDDEN_FUNCTION_MODIFIER" variable (:constant-flag t) nil [464 488])
+            ("HIDDEN_FUNCTION_MODIFIER_KEY" variable (:constant-flag t) nil [517 545])
+            ("storeCalibrationWithUpgradePrompt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("storeCalib" variable (:type "bool") (reparse-symbol arg-sub-list) [609 625])
+                    ("storeDynamicOffsets" variable (:type "bool") (reparse-symbol arg-sub-list) [626 651])
+                    ("storeLink" variable (:type "bool") (reparse-symbol arg-sub-list) [652 667])
+                    ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :default-value "std::string()"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [668 709]))                  
+                :type "void")
+                nil [570 711])
+            ("storeCalibrationWithUpgradePrompt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cameras" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [751 791])
+                    ("storeCalib" variable (:type "bool") (reparse-symbol arg-sub-list) [792 808])
+                    ("storeDynamicOffsets" variable (:type "bool") (reparse-symbol arg-sub-list) [809 834])
+                    ("storeLink" variable (:type "bool") (reparse-symbol arg-sub-list) [835 850]))                  
+                :type "void")
+                nil [712 851])
+            ("setIfExists" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("item" variable (:type ("NxLibItem" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [898 913])
+                    ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [914 922]))                  
+                :typemodifiers ("inline"))
+                nil [853 1011]))          
+      :file "NxView.h"
+      :pointmax 1039
+      :fsize 1038
+      :lastmodtime '(23615 832 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HIDDEN_FUNCTION_MODIFIER_KEY" . 
+              ((symbol "Qt" 546 . 548) (punctuation ":" 548 . 549) (punctuation ":" 549 . 550) (symbol "Key_Control" 550 . 561)))
+          ("__NXVIEW_H__")
+          ("HIDDEN_FUNCTION_MODIFIER" . 
+              ((symbol "Qt" 489 . 491) (punctuation ":" 491 . 492) (punctuation ":" 492 . 493) (symbol "ControlModifier" 493 . 508)))
+          )
+)
+    (semanticdb-table "constants.h"
+      :file "constants.h"
+      :fsize 484
+      :lastmodtime '(23615 832 0 0)))
+  :file "!opt!ensenso!development!examples!C++!nxView!NxView!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

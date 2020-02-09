@@ -1,0 +1,53 @@
+;; Object Tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tests/"
+  :tables
+  (list
+    (semanticdb-table "Lib.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Lib.h" include nil nil [1 17])
+            ("spdlog/spdlog.h" include nil nil [19 45])
+            ("spdlog/sinks/stdout_color_sinks.h" include nil nil [46 90])
+            ("Hello" function (:type "void") nil [92 283]))          
+      :file "Lib.cpp"
+      :pointmax 284
+      :fsize 283
+      :lastmodtime '(23773 57 570373 943000)
+      :unmatched-syntax '((string 272 . 356) (punctuation 266 . 267) (punctuation 265 . 266) (semantic-list 254 . 265) (symbol 251 . 254) (string 255 . 264) (punctuation 250 . 251) (punctuation 249 . 250) (symbol 243 . 249) (string 255 . 264)))
+    (semanticdb-table "Lib.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Hello" function
+               (:prototype-flag t
+                :type "void")
+                nil [15 28]))          
+      :file "Lib.h"
+      :pointmax 29
+      :fsize 28
+      :lastmodtime '(23772 64607 284472 629000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (close-paren 426 . 427) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (close-paren 426 . 427) (close-paren 424 . 425) (string 337 . 421) (punctuation 331 . 332) (punctuation 330 . 331) (semantic-list 319 . 330) (symbol 316 . 319) (string 320 . 329) (punctuation 315 . 316) (punctuation 314 . 315) (symbol 308 . 314) (string 320 . 329) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "UseLib.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Lib.h" include nil nil [1 17])
+            ("spdlog/spdlog.h" include (:system-flag t) nil [18 44])
+            ("spdlog/sinks/stdout_color_sinks.h" include nil nil [45 89])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [101 110])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [111 124]))                  
+                :type "int")
+                nil [92 299]))          
+      :file "UseLib.cpp"
+      :pointmax 300
+      :fsize 299
+      :lastmodtime '(23773 78 254414 20000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!UseSpdLogAsLib!Tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

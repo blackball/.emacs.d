@@ -1,0 +1,140 @@
+;; Object Manipulator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Manipulator/"
+  :tables
+  (list
+    (semanticdb-table "Viewer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [67 84])
+            ("unordered_map" include (:system-flag t) nil [85 109])
+            ("string" include (:system-flag t) nil [110 127])
+            ("osgViewer/Viewer" include (:system-flag t) nil [128 155])
+            ("bits/shared_ptr.h" include (:system-flag t) nil [156 184])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [185 225])
+            ("IManipulator.h" include nil nil [226 251])
+            ("RVS" type
+               (:members 
+                  ( ("Viewer" type
+                       (:members 
+                          ( ("ViewerManipulatorPlug" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [289 317])
+                            ("ViewerManipulatorSlot" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [318 346]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [270 348]))                  
+                :type "namespace")
+                nil [253 371])
+            ("ViewerManipulatorSlot" type
+               (:parent "RVS::Viewer"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [433 441])
+                    ("GetScenes" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("osg::Group" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [446 529])
+                    ("ViewerManipulatorPlug" friend nil (reparse-symbol classsubparts) [534 568]))                  
+                :type "class")
+                nil [390 572])
+            ("ViewerManipulatorPlug" type
+               (:parent "RVS::Viewer"
+                :superclasses 
+                  ( ("IManipulatorPlug" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [666 673])
+                    ("ViewerManipulatorPlug" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [678 703])
+                    ("Frame" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [709 722])
+                    ("Run" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [728 738])
+                    ("Home" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [744 756])
+                    ("OsgViewer" function
+                       (:prototype-flag t
+                        :type ("osg::ref_ptr" type
+                             (:template-specifier 
+                                ( ("osgViewer::Viewer" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [762 807])
+                    ("ViewerManipulatorPlug" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("Environment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [835 852])
+                            ("mutex" variable
+                               (:reference 1
+                                :type ("std::mutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [853 871])
+                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [872 878])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [879 885])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [886 896])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [897 908])
+                            ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [909 932]))                          
+                        :type ("ViewerManipulatorPlug" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [813 933])
+                    ("AddSubGroup" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [956 973]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [939 974])
+                    ("RemoveSubGroup" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1000 1017]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [980 1018])
+                    ("private" label nil (reparse-symbol classsubparts) [1020 1028])
+                    ("m_osgviewer" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osgViewer::Viewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1034 1078])
+                    ("m_sceneroot" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1083 1120]))                  
+                :type "class")
+                nil [574 1123]))          
+      :file "Viewer.h"
+      :pointmax 1124
+      :fsize 1123
+      :lastmodtime '(23613 23452 521124 830000)
+      :unmatched-syntax '((punctuation 568 . 569) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "IManipulator.h"
+      :file "IManipulator.h"
+      :fsize 1521
+      :lastmodtime '(23613 23452 521124 830000)))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Viewer!Manipulator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,72 @@
+;; Object envapi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "envapi/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("env" type
+               (:prototype t
+                :type "struct")
+                nil [1 12])
+            ("interface" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [37 46])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [52 69]))                  
+                :type "struct")
+                nil [14 73])
+            ("robot" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [94 103])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [108 125])
+                    ("val" variable (:type "int") (reparse-symbol classsubparts) [135 143]))                  
+                :type "struct")
+                nil [75 147])
+            ("env_get_robot" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [181 198]))                  
+                :type ("interface" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [149 199])
+            ("robot_set_jointvalues" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pr" variable
+                       (:pointer 1
+                        :type ("robot" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [226 243])
+                    ("jvals" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [244 257])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [258 264]))                  
+                :type "int")
+                nil [200 265]))          
+      :file "main.cpp"
+      :pointmax 267
+      :fsize 266
+      :lastmodtime '(23613 11863 441559 274000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!envapi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,436 @@
+;; Object Trajectory/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Trajectory/"
+  :tables
+  (list
+    (semanticdb-table "Trajectory.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Eigen/Core" include (:system-flag t) nil [1779 1800])
+            ("Path.h" include nil nil [1801 1818])
+            ("Trajectory" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1839 1846])
+                    ("Trajectory" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Path" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1905 1922])
+                            ("maxVelocity" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1923 1958])
+                            ("maxAcceleration" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1959 1998])
+                            ("timeStep" variable
+                               (:default-value "0.001"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1999 2022]))                          
+                        :type ("Trajectory" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1894 2024])
+                    ("Trajectory" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2042 2047]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2030 2048])
+                    ("isValid" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2253 2274])
+                    ("getDuration" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [2334 2361])
+                    ("getPosition" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("time" variable (:type "double") (reparse-symbol arg-sub-list) [2524 2536]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2496 2543])
+                    ("getVelocity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("time" variable (:type "double") (reparse-symbol arg-sub-list) [2576 2588]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2548 2595])
+                    ("outputPhasePlaneTrajectory" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2701 2741])
+                    ("private" label nil (reparse-symbol classsubparts) [2743 2751])
+                    ("TrajectoryStep" type
+                       (:members 
+                          ( ("TrajectoryStep" function
+                               (:constructor-flag t
+                                :type ("TrajectoryStep" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2792 2811])
+                            ("TrajectoryStep" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [2835 2850])
+                                    ("pathVel" variable (:type "double") (reparse-symbol arg-sub-list) [2851 2866]))                                  
+                                :type ("TrajectoryStep" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2820 2906])
+                            ("pathPos" variable (:type "double") (reparse-symbol classsubparts) [2915 2930])
+                            ("pathVel" variable (:type "double") (reparse-symbol classsubparts) [2939 2954])
+                            ("time" variable (:type "double") (reparse-symbol classsubparts) [2963 2975]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [2756 2982])
+                    ("getNextSwitchingPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3015 3030])
+                            ("nextSwitchingPoint" variable
+                               (:reference 1
+                                :type ("TrajectoryStep" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3031 3066])
+                            ("beforeAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3067 3094])
+                            ("afterAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3095 3121]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2988 3122])
+                    ("getNextAccelerationSwitchingPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3166 3181])
+                            ("nextSwitchingPoint" variable
+                               (:reference 1
+                                :type ("TrajectoryStep" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3182 3217])
+                            ("beforeAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3218 3245])
+                            ("afterAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3246 3272]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3127 3273])
+                    ("getNextVelocitySwitchingPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3313 3328])
+                            ("nextSwitchingPoint" variable
+                               (:reference 1
+                                :type ("TrajectoryStep" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3329 3364])
+                            ("beforeAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3365 3392])
+                            ("afterAcceleration" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3393 3419]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3278 3420])
+                    ("integrateForward" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("trajectory" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("TrajectoryStep" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3447 3485])
+                            ("acceleration" variable (:type "double") (reparse-symbol arg-sub-list) [3486 3506]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3425 3507])
+                    ("integrateBackward" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("startTrajectory" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("TrajectoryStep" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3535 3578])
+                            ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3579 3594])
+                            ("pathVel" variable (:type "double") (reparse-symbol arg-sub-list) [3595 3610])
+                            ("acceleration" variable (:type "double") (reparse-symbol arg-sub-list) [3611 3631]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3512 3632])
+                    ("getMinMaxPathAcceleration" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPosition" variable (:type "double") (reparse-symbol arg-sub-list) [3670 3690])
+                            ("pathVelocity" variable (:type "double") (reparse-symbol arg-sub-list) [3691 3711])
+                            ("max" variable (:type "bool") (reparse-symbol arg-sub-list) [3712 3721]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3637 3722])
+                    ("getMinMaxPhaseSlope" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPosition" variable (:type "double") (reparse-symbol arg-sub-list) [3754 3774])
+                            ("pathVelocity" variable (:type "double") (reparse-symbol arg-sub-list) [3775 3795])
+                            ("max" variable (:type "bool") (reparse-symbol arg-sub-list) [3796 3805]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3727 3806])
+                    ("getAccelerationMaxPathVelocity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3849 3864]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3811 3871])
+                    ("getVelocityMaxPathVelocity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3910 3925]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3876 3932])
+                    ("getAccelerationMaxPathVelocityDeriv" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [3980 3995]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3937 3996])
+                    ("getVelocityMaxPathVelocityDeriv" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pathPos" variable (:type "double") (reparse-symbol arg-sub-list) [4040 4055]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [4001 4056])
+                    ("getTrajectorySegment" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("time" variable (:type "double") (reparse-symbol arg-sub-list) [4125 4137]))                          
+                        :type ("std::list::const_iterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4062 4144])
+                    ("path" variable (:type ("Path" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4150 4160])
+                    ("maxVelocity" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4165 4193])
+                    ("maxAcceleration" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4198 4230])
+                    ("n" variable (:type "unsigned int") (reparse-symbol classsubparts) [4235 4250])
+                    ("valid" variable (:type "bool") (reparse-symbol classsubparts) [4255 4266])
+                    ("trajectory" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("TrajectoryStep" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4271 4308])
+                    ("endTrajectory" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("TrajectoryStep" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4313 4353])
+                    ("eps" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4414 4438])
+                    ("timeStep" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [4443 4465])
+                    ("cachedTime" variable
+                       (:typemodifiers ("mutable")
+                        :type "double")
+                        (reparse-symbol classsubparts) [4471 4497])
+                    ("cachedTrajectorySegment" variable
+                       (:typemodifiers ("mutable")
+                        :type ("std::list::const_iterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4502 4576]))                  
+                :type "class")
+                nil [1820 4579]))          
+      :file "Trajectory.h"
+      :pointmax 4579
+      :fsize 4685
+      :lastmodtime '(23747 46734 61333 609000)
+      :unmatched-syntax '((symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766) (symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766)))
+    (semanticdb-table "Path.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("list" include (:system-flag t) nil [1779 1794])
+            ("Eigen/Core" include (:system-flag t) nil [1795 1816])
+            ("PathSegment" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1838 1845])
+                    ("PathSegment" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("length" variable
+                               (:default-value "0.0"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1862 1881]))                          
+                        :type ("PathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1850 1902])
+                    ("PathSegment" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1908 1933])
+                    ("getLength" function (:type "double") (reparse-symbol classsubparts) [1939 1982])
+                    ("getConfig" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2021 2030]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1987 2041])
+                    ("getTangent" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2081 2090]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2046 2101])
+                    ("getCurvature" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2143 2152]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2106 2163])
+                    ("getSwitchingPoints" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2168 2225])
+                    ("clone" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("PathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2230 2269])
+                    ("position" variable (:type "double") (reparse-symbol classsubparts) [2275 2291])
+                    ("protected" label nil (reparse-symbol classsubparts) [2293 2303])
+                    ("length" variable (:type "double") (reparse-symbol classsubparts) [2308 2322]))                  
+                :type "class")
+                nil [1818 2325])
+            ("Path" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2340 2347])
+                    ("Path" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("Eigen::VectorXd" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2357 2396])
+                            ("maxDeviation" variable
+                               (:default-value "0.0"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2397 2422]))                          
+                        :type ("Path" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2352 2424])
+                    ("Path" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Path" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2434 2451]))                          
+                        :type ("Path" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2429 2452])
+                    ("Path" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2457 2465])
+                    ("getLength" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [2470 2495])
+                    ("getConfig" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2526 2535]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2500 2542])
+                    ("getTangent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2574 2583]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2547 2590])
+                    ("getCurvature" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2624 2633]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2595 2640])
+                    ("getNextSwitchingPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2674 2683])
+                            ("discontinuity" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2684 2704]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2645 2711])
+                    ("getSwitchingPoints" function
+                       (:prototype-flag t
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("std::pair" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2716 2778])
+                    ("private" label nil (reparse-symbol classsubparts) [2780 2788])
+                    ("getPathSegment" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2821 2831]))                          
+                        :type ("PathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2793 2838])
+                    ("length" variable (:type "double") (reparse-symbol classsubparts) [2843 2857])
+                    ("switchingPoints" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("std::pair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2862 2913])
+                    ("pathSegments" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("PathSegment" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2918 2956]))                  
+                :type "class")
+                nil [2327 2959]))          
+      :file "Path.h"
+      :pointmax 2959
+      :fsize 2958
+      :lastmodtime '(23747 46734 61333 609000)
+      :unmatched-syntax '((symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Trajectory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

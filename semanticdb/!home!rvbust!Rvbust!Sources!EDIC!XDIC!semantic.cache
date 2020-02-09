@@ -1,0 +1,335 @@
+;; Object XDIC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "XDIC/"
+  :tables
+  (list
+    (semanticdb-table "CameraStreammer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LoggerUtils.h" include nil nil [54 78])
+            ("Json11/json.hpp" include (:system-flag t) nil [80 106])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [144 173])
+            ("Json11::json" variable (:type "int") nil [189 202])
+            ("XDIC" type
+               (:members 
+                  ( ("" type
+                       (:members 
+                          ( ("Status_OK" variable
+                               (:constant-flag t
+                                :default-value (244 245)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [233 246])
+                            ("Status_TRUE" variable
+                               (:constant-flag t
+                                :default-value (265 266)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [252 267])
+                            ("Status_StreamingError" variable
+                               (:constant-flag t
+                                :default-value (296 297)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [273 298]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [222 302])
+                    ("" type
+                       (:members 
+                          ( ("QueryStrategy_Latest" variable
+                               (:constant-flag t
+                                :default-value (337 338)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [315 339])
+                            ("QueryStrategy_OneByOne" variable
+                               (:constant-flag t
+                                :default-value (374 375)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [350 376]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [304 385])
+                    ("" type
+                       (:members 
+                          ( ("TriggerMode_None" variable
+                               (:constant-flag t
+                                :default-value (416 417)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [398 418])
+                            ("TriggerMode_Software" variable
+                               (:constant-flag t
+                                :default-value (451 452)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [429 453])
+                            ("TriggerMode_Hardware" variable
+                               (:constant-flag t
+                                :default-value (486 487)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [464 488]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [387 497])
+                    ("StreamingDevice" type (:type "struct") (reparse-symbol namespacesubparts) [499 527])
+                    ("CameraStreammer" type
+                       (:members 
+                          ( ("CameraStreammer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("CameraStreammer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [558 576])
+                            ("CameraStreammer" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [581 608])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [614 625])
+                            ("Shutdown" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [630 645])
+                            ("ListStreamingDevices" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [697 713]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [651 715])
+                            ("Attach" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("dev" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [731 767]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [720 768])
+                            ("StartStreaming" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("trigger_mode" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [797 817])
+                                    ("query_strategy" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [818 840]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [778 841])
+                            ("IsStreaming" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [846 865])
+                            ("ExecuteTrigger" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [870 891])
+                            ("Query" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("frames" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("cv::Mat" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [906 935]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [896 936])
+                            ("WaitForNthFrameToBeReady" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [970 979]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [941 980])
+                            ("GetLastErrorMsg" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [985 1007])
+                            ("SetCameraQueueSize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1036 1045]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1013 1046])
+                            ("SetConfig" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Config" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1065 1083])
+                                    ("camera_string" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1084 1110]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1051 1111])
+                            ("private" label nil (reparse-symbol classsubparts) [1113 1121])
+                            ("Impl" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1126 1138])
+                            ("m_impl" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("Impl" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1143 1173]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [529 1176]))                  
+                :type "namespace")
+                nil [204 1180]))          
+      :file "CameraStreammer.h"
+      :pointmax 1201
+      :fsize 1220
+      :lastmodtime '(23870 24572 879225 5000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LoggerUtils.h"
+      :file "LoggerUtils.h"
+      :fsize 1256
+      :lastmodtime '(23870 22944 663106 409000))
+    (semanticdb-table "CameraStreammer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Utils.h" include nil nil [81 99])
+            ("CameraStreammer.h" include (:system-flag t) nil [100 128])
+            ("pylon/PylonIncludes.h" include (:system-flag t) nil [129 161])
+            ("XDIC" type
+               (:members 
+                  ( ("Impl" type
+                       (:parent "CameraStreammer"
+                        :members 
+                          ( ("list_devices" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Pylon::CDeviceInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [274 321])
+                            ("attached_devices" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Pylon::CDeviceInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [326 377])
+                            ("config" variable (:type ("Config" type (:type "class") nil nil)) (reparse-symbol classsubparts) [382 423])
+                            ("outputqueuesize" variable (:type "int") (reparse-symbol classsubparts) [428 483])
+                            ("cameraArr" variable (:type ("Pylon::CInstantCameraArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [488 532])
+                            ("nodemap" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("GenApi::INodeMap" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [537 577]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [239 580])
+                    ("CameraStreammer" function
+                       (:constructor-flag t
+                        :parent "CameraStreammer"
+                        :type ("CameraStreammer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [583 680])
+                    ("CameraStreammer" function
+                       (:destructor-flag t
+                        :parent "CameraStreammer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [682 741])
+                    ("Init" function
+                       (:parent "CameraStreammer"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [743 857])
+                    ("Shutdown" function
+                       (:parent "CameraStreammer"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [859 1282])
+                    ("ListStreamingDevices" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("flags" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1347 1360]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1284 2229])
+                    ("Attach" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2259 2295]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2231 2794])
+                    ("StartStreaming" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("trigger_mode" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2834 2854])
+                            ("query_strategy" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2855 2877]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2798 4589])
+                    ("IsStreaming" function
+                       (:parent "CameraStreammer"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4591 4712])
+                    ("SetConfig" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Config" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4745 4763])
+                            ("camera_string" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4764 4790]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4714 5881])
+                    ("ExecuteTrigger" function
+                       (:parent "CameraStreammer"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5883 6671])
+                    ("Query" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("frames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6700 6729]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6673 7909])
+                    ("WaitForNthFrameToBeReady" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7957 7966]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7911 9379])
+                    ("SetCameraQueueSize" function
+                       (:parent "CameraStreammer"
+                        :arguments 
+                          ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9421 9430]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [9381 9676])
+                    ("GetLastErrorMsg" function
+                       (:parent "CameraStreammer"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [9678 9793]))                  
+                :type "namespace")
+                nil [221 9862]))          
+      :file "CameraStreammer.cpp"
+      :pointmax 9883
+      :fsize 10027
+      :lastmodtime '(23870 23377 897151 455000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Utils.h"
+      :file "Utils.h"
+      :fsize 685
+      :lastmodtime '(23870 22944 663106 409000)))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!XDIC!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

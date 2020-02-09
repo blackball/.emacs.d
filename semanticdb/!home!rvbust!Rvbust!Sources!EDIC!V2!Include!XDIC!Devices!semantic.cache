@@ -1,0 +1,153 @@
+;; Object Devices/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Devices/"
+  :tables
+  (list
+    (semanticdb-table "Devices.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Camera/Camera.h" include nil nil [15 41])
+            ("Laser/Laser.h" include nil nil [42 66]))          
+      :file "Devices.h"
+      :pointmax 67
+      :fsize 66
+      :lastmodtime '(23892 2192 662592 628000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (string 24 . 26) (symbol 16 . 23) (punctuation 15 . 16) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "Streamer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [15 34])
+            ("XDIC/Common/Image.h" include (:system-flag t) nil [35 65])
+            ("XDIC/Devices/Camera.h" include (:system-flag t) nil [66 98])
+            ("XDIC" type
+               (:members 
+                  ( ("Streamer" type
+                       (:members 
+                          ( ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [140 153])
+                            ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [158 171]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [118 175])
+                    ("StreamerConfig" type
+                       (:members 
+                          ( ("grab_strategy" variable (:type ("CameraGrabStrategy" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [205 243])
+                            ("trigger_mode" variable (:type ("CameraTriggerMode" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [248 284]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [177 287])
+                    ("Streamer_Create" function
+                       (:prototype-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [289 316])
+                    ("Streamer_Destroy" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [338 355]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [317 356])
+                    ("Streamer_Attach" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [378 395])
+                            ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [396 413]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [358 414])
+                    ("Streamer_Detach" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [435 452])
+                            ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [453 470]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [415 471])
+                    ("Streamer_DetachAll" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [495 512]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [472 513])
+                    ("Streamer_Config" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [535 552])
+                            ("cfg" variable
+                               (:constant-flag t
+                                :type ("StreamerConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [553 578]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [515 579])
+                    ("Streamer_ConfigCamera" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [606 623])
+                            ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [624 641])
+                            ("cfg" variable (:type ("CameraConfig" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [642 659]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [580 660])
+                    ("Streamer_Start" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [681 698]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [662 699])
+                    ("Streamer_Stop" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [718 735]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [700 736])
+                    ("Streamer_Retreive" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:constant-flag t
+                                :type ("Streamer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1025 1042])
+                            ("pimgs" variable
+                               (:pointer 1
+                                :dereference 1
+                                :type ("Image8U" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1043 1060])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1061 1070]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1003 1071]))                  
+                :type "namespace")
+                nil [100 1074]))          
+      :file "Streamer.h"
+      :pointmax 1094
+      :fsize 1093
+      :lastmodtime '(23892 7920 226561 199000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!V2!Include!XDIC!Devices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

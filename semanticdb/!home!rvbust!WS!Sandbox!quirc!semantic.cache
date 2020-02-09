@@ -1,0 +1,31 @@
+;; Object quirc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "quirc/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("LIB_VERSION" variable (:default-value ("1.0")) nil [924 942])
+            ("QUIRC_CFLAGS" variable (:default-value ("-Ilib" "$(CFLAGS)" "$(SDL_CFLAGS)")) nil [969 1014])
+            ("LIB_OBJ" variable (:default-value ("lib/decode.o" "lib/identify.o" "lib/quirc.o" "lib/version_db.o")) nil [1014 1105])
+            ("DEMO_OBJ" variable (:default-value ("demo/camera.o" "demo/mjpeg.o" "demo/convert.o" "demo/dthash.o" "demo/demoutil.o")) nil [1105 1218])
+            ("all" function (:arguments ("libquirc.so" "qrtest" "quirc-demo" "quirc-scanner")) nil [1219 1278])
+            ("quirc-demo" function (:arguments ("$(DEMO_OBJ)" "demo/demo.o" "libquirc.a")) nil [1580 1719])
+            ("quirc-scanner" function (:arguments ("$(DEMO_OBJ)" "demo/scanner.o" "libquirc.a")) nil [1720 1846])
+            ("libquirc.a" function (:arguments ("$(LIB_OBJ)")) nil [1847 1913])
+            (".PHONY" function (:arguments ("libquirc.so")) nil [1914 1934])
+            ("libquirc.so" function (:arguments ("libquirc.so.$(LIB_VERSION)")) nil [1934 1974])
+            ("libquirc.so." function (:arguments ("$(LIB_OBJ)")) nil [1975 2061])
+            (".c.o" function nil nil [2062 2103])
+            ("install" function (:arguments ("libquirc.a" "libquirc.so.$(LIB_VERSION)" "quirc-demo" "quirc-scanner")) nil [2104 2544])
+            ("uninstall" function nil nil [2545 2786])
+            ("clean" function nil nil [2787 2941]))          
+      :file "Makefile"
+      :pointmax 2941
+      :fsize 2940
+      :lastmodtime '(23836 17082 104209 458000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!quirc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,2877 @@
+;; Object qtcoinrave/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "qtcoinrave/"
+  :tables
+  (list
+    (semanticdb-table "qtcoinviewer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("qtcoin.h" include nil nil [758 777])
+            ("Inventor/elements/SoGLCacheContextElement.h" include (:system-flag t) nil [779 833])
+            ("Inventor/actions/SoToVRML2Action.h" include (:system-flag t) nil [834 879])
+            ("Inventor/actions/SoWriteAction.h" include (:system-flag t) nil [880 923])
+            ("Inventor/nodes/SoComplexity.h" include (:system-flag t) nil [924 964])
+            ("Inventor/nodes/SoCoordinate3.h" include (:system-flag t) nil [965 1006])
+            ("Inventor/nodes/SoFaceSet.h" include (:system-flag t) nil [1007 1044])
+            ("Inventor/nodes/SoPointSet.h" include (:system-flag t) nil [1045 1083])
+            ("Inventor/nodes/SoLightModel.h" include (:system-flag t) nil [1084 1124])
+            ("Inventor/nodes/SoLineSet.h" include (:system-flag t) nil [1125 1162])
+            ("Inventor/nodes/SoMaterialBinding.h" include (:system-flag t) nil [1163 1208])
+            ("Inventor/nodes/SoTextureCombine.h" include (:system-flag t) nil [1209 1253])
+            ("Inventor/nodes/SoTextureCoordinate2.h" include (:system-flag t) nil [1254 1302])
+            ("Inventor/nodes/SoTextureScalePolicy.h" include (:system-flag t) nil [1303 1351])
+            ("Inventor/nodes/SoTransparencyType.h" include (:system-flag t) nil [1352 1398])
+            ("Inventor/misc/SoGLImage.h" include (:system-flag t) nil [1399 1435])
+            ("Inventor/events/SoLocation2Event.h" include (:system-flag t) nil [1436 1481])
+            ("Inventor/SoPickedPoint.h" include (:system-flag t) nil [1482 1517])
+            ("Inventor/VRMLnodes/SoVRMLGroup.h" include (:system-flag t) nil [1518 1561])
+            ("qgl.h" include (:system-flag t) nil [1643 1659])
+            ("locale" include (:system-flag t) nil [1668 1685])
+            ("TIMER_SENSOR_INTERVAL" variable
+               (:constant-flag t
+                :default-value "(1.0f/60.0f)"
+                :type "float")
+                nil [1687 1736])
+            ("VIDEO_WIDTH" variable (:constant-flag t) nil [1746 1757])
+            ("VIDEO_HEIGHT" variable (:constant-flag t) nil [1770 1782])
+            ("VIDEO_FRAMERATE" variable (:constant-flag t) nil [1795 1810])
+            ("DeleteItemCallbackSafe" function
+               (:arguments 
+                  ( ("wpt" variable (:type ("QtCoinViewerWeakPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1871 1895])
+                    ("pItem" variable
+                       (:pointer 1
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1896 1908]))                  
+                :type "void")
+                nil [1843 2027])
+            ("ITEM_DELETER" variable (:constant-flag t) nil [2037 2049])
+            ("ItemSelectionCallbackData" type
+               (:superclasses 
+                  ( ("UserData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2156 2163])
+                    ("ItemSelectionCallbackData" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("callback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ViewerBase::ItemSelectionCallbackFn" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2194 2246])
+                            ("pviewer" variable (:type ("boost::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("QtCoinViewer" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2247 2287]))                          
+                        :type ("ItemSelectionCallbackData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2168 2340])
+                    ("ItemSelectionCallbackData" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2345 2643])
+                    ("_iterator" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2672 2691])
+                    ("_callback" variable (:type ("ViewerBase::ItemSelectionCallbackFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2696 2742])
+                    ("protected" label nil (reparse-symbol classsubparts) [2743 2753])
+                    ("_pweakviewer" variable (:type ("boost::weak_ptr" type
+                         (:template-specifier 
+                            ( ("QtCoinViewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2758 2801]))                  
+                :type "class")
+                nil [2104 2804])
+            ("ItemSelectionCallbackDataPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("ItemSelectionCallbackData" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [2805 2887])
+            ("ViewerImageCallbackData" type
+               (:superclasses 
+                  ( ("UserData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2939 2946])
+                    ("ViewerImageCallbackData" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("callback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ViewerBase::ViewerImageCallbackFn" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2975 3025])
+                            ("pviewer" variable (:type ("boost::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("QtCoinViewer" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3026 3066]))                          
+                        :type ("ViewerImageCallbackData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2951 3119])
+                    ("ViewerImageCallbackData" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3124 3418])
+                    ("_iterator" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3447 3466])
+                    ("_callback" variable (:type ("ViewerBase::ViewerImageCallbackFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3471 3515])
+                    ("protected" label nil (reparse-symbol classsubparts) [3516 3526])
+                    ("_pweakviewer" variable (:type ("boost::weak_ptr" type
+                         (:template-specifier 
+                            ( ("QtCoinViewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3531 3574]))                  
+                :type "class")
+                nil [2889 3577])
+            ("ViewerImageCallbackDataPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("ViewerImageCallbackData" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3578 3656])
+            ("ViewerThreadCallbackData" type
+               (:superclasses 
+                  ( ("UserData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3709 3716])
+                    ("ViewerThreadCallbackData" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("callback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ViewerBase::ViewerThreadCallbackFn" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3746 3797])
+                            ("pviewer" variable (:type ("boost::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("QtCoinViewer" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3798 3838]))                          
+                        :type ("ViewerThreadCallbackData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3721 3891])
+                    ("ViewerThreadCallbackData" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3896 4192])
+                    ("_iterator" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4221 4240])
+                    ("_callback" variable (:type ("ViewerBase::ViewerThreadCallbackFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4245 4290])
+                    ("protected" label nil (reparse-symbol classsubparts) [4291 4301])
+                    ("_pweakviewer" variable (:type ("boost::weak_ptr" type
+                         (:template-specifier 
+                            ( ("QtCoinViewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4306 4349]))                  
+                :type "class")
+                nil [3658 4352])
+            ("ViewerThreadCallbackDataPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("ViewerThreadCallbackData" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4353 4433])
+            ("s_DefaultHandlerCB" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("SoErrorCB" type (:type "class") nil nil))
+                nil [4435 4477])
+            ("CustomCoinHandlerCB" function
+               (:arguments 
+                  ( ("error" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("SoError" type
+                             (:prototype t
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4503 4531])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4532 4544]))                  
+                :type "void")
+                nil [4478 5648])
+            ("s_pviewer" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("QtCoinViewer" type (:type "class") nil nil))
+                nil [5650 5688])
+            ("QtCoinViewer" function
+               (:constructor-flag t
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5716 5740])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5741 5762]))                  
+                :type ("QtCoinViewer" type (:type "class") nil nil))
+                nil [5689 5939])
+            ("_InitConstructor" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5977 5998]))                  
+                :type "void")
+                nil [5941 15530])
+            ("QtCoinViewer" function
+               (:destructor-flag t
+                :parent "QtCoinViewer"
+                :type "void")
+                nil [15532 16661])
+            ("resize" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [16691 16697])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [16698 16704]))                  
+                :type "void")
+                nil [16663 16738])
+            ("resize" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("qs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QSize" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16768 16785]))                  
+                :type "void")
+                nil [16740 16826])
+            ("mousemove_cb" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16860 16876])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("SoEventCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16877 16900]))                  
+                :type "void")
+                nil [16828 16956])
+            ("_mousemove_cb" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("SoEventCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16991 17014]))                  
+                :type "void")
+                nil [16958 20004])
+            ("ViewerSetSizeMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [20069 20076])
+                    ("ViewerSetSizeMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20102 20126])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [20127 20143])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [20144 20154])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [20155 20166]))                          
+                        :type ("ViewerSetSizeMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20081 20253])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [20259 20467])
+                    ("private" label nil (reparse-symbol classsubparts) [20469 20477])
+                    ("_width" variable (:type "int") (reparse-symbol classsubparts) [20482 20502])
+                    ("_height" variable (:type "int") (reparse-symbol classsubparts) [20482 20502]))                  
+                :type "class")
+                nil [20006 20505])
+            ("SetSize" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [20534 20540])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [20541 20547]))                  
+                :type "void")
+                nil [20507 20670])
+            ("_SetSize" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [20700 20706])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [20707 20713]))                  
+                :type "void")
+                nil [20672 20734])
+            ("ViewerMoveMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [20796 20803])
+                    ("ViewerMoveMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20826 20850])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [20851 20867])
+                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [20868 20874])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [20875 20881]))                          
+                        :type ("ViewerMoveMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20808 20950])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [20956 21152])
+                    ("private" label nil (reparse-symbol classsubparts) [21154 21162])
+                    ("_x" variable (:type "int") (reparse-symbol classsubparts) [21167 21178])
+                    ("_y" variable (:type "int") (reparse-symbol classsubparts) [21167 21178]))                  
+                :type "class")
+                nil [20736 21181])
+            ("Move" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [21207 21213])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [21214 21220]))                  
+                :type "void")
+                nil [21183 21340])
+            ("_Move" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [21367 21373])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [21374 21380]))                  
+                :type "void")
+                nil [21342 21399])
+            ("ViewerShowMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [21461 21468])
+                    ("ViewerShowMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21491 21515])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [21516 21532])
+                            ("showtype" variable (:type "int") (reparse-symbol arg-sub-list) [21533 21546]))                          
+                        :type ("ViewerShowMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21473 21622])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [21628 21827])
+                    ("private" label nil (reparse-symbol classsubparts) [21829 21837])
+                    ("_showtype" variable (:type "int") (reparse-symbol classsubparts) [21842 21856]))                  
+                :type "class")
+                nil [21401 21859])
+            ("Show" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("showtype" variable (:type "int") (reparse-symbol arg-sub-list) [21885 21898]))                  
+                :type "void")
+                nil [21861 22022])
+            ("_Show" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("showtype" variable (:type "int") (reparse-symbol arg-sub-list) [22049 22062]))                  
+                :type "void")
+                nil [22024 22162])
+            ("ViewerSetNameMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [22227 22234])
+                    ("ViewerSetNameMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22260 22284])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [22285 22301])
+                            ("ptitle" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22302 22323]))                          
+                        :type ("ViewerSetNameMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22239 22394])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [22400 22607])
+                    ("private" label nil (reparse-symbol classsubparts) [22609 22617])
+                    ("_title" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22622 22636]))                  
+                :type "class")
+                nil [22164 22639])
+            ("SetName" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ptitle" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22668 22689]))                  
+                :type "void")
+                nil [22641 22834])
+            ("_SetName" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ptitle" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22864 22885]))                  
+                :type "void")
+                nil [22836 22925])
+            ("LoadModel" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pfilename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22956 22980]))                  
+                :type "bool")
+                nil [22927 23173])
+            ("_StartPlaybackTimer" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [23175 23299])
+            ("_StopPlaybackTimer" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [23301 23517])
+            ("GetCameraImageMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [23583 23590])
+                    ("GetCameraImageMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23617 23641])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [23642 23658])
+                            ("memory" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23685 23714])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [23715 23725])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [23726 23737])
+                            ("extrinsic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveTransform" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23738 23776])
+                            ("KK" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [23777 23816]))                          
+                        :type ("GetCameraImageMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23595 23951])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [23957 24206])
+                    ("private" label nil (reparse-symbol classsubparts) [24208 24216])
+                    ("_memory" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24221 24246])
+                    ("_width" variable (:type "int") (reparse-symbol classsubparts) [24251 24271])
+                    ("_height" variable (:type "int") (reparse-symbol classsubparts) [24251 24271])
+                    ("_extrinsic" variable
+                       (:constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [24276 24315])
+                    ("_KK" variable
+                       (:constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24320 24360]))                  
+                :type "class")
+                nil [23519 24363])
+            ("GetCameraImage" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("memory" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24399 24428])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [24429 24439])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [24440 24451])
+                    ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24452 24482])
+                    ("KK" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24483 24522]))                  
+                :type "bool")
+                nil [24365 25040])
+            ("WriteCameraImageMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [25108 25115])
+                    ("WriteCameraImageMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25144 25168])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [25169 25185])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [25214 25224])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [25225 25236])
+                            ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveTransform" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [25237 25267])
+                            ("KK" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25268 25307])
+                            ("fileName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25308 25336])
+                            ("extension" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25337 25366]))                          
+                        :type ("WriteCameraImageMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25120 25520])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [25526 25783])
+                    ("private" label nil (reparse-symbol classsubparts) [25785 25793])
+                    ("_width" variable (:type "int") (reparse-symbol classsubparts) [25798 25818])
+                    ("_height" variable (:type "int") (reparse-symbol classsubparts) [25798 25818])
+                    ("_t" variable
+                       (:constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [25823 25854])
+                    ("_KK" variable
+                       (:constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25859 25899])
+                    ("_fileName" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25904 25941])
+                    ("_extension" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25904 25941]))                  
+                :type "class")
+                nil [25042 25944])
+            ("WriteCameraImage" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("width" variable (:type "int") (reparse-symbol arg-sub-list) [25982 25992])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [25993 26004])
+                    ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26005 26035])
+                    ("KK" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26036 26075])
+                    ("fileName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26076 26104])
+                    ("extension" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26105 26134]))                  
+                :type "bool")
+                nil [25946 26640])
+            ("SetCameraMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [26701 26708])
+                    ("SetCameraMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26730 26754])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [26755 26771])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveTransform" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26772 26806])
+                            ("focalDistance" variable (:type "float") (reparse-symbol arg-sub-list) [26807 26827]))                          
+                        :type ("SetCameraMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [26713 26927])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [26933 27076])
+                    ("private" label nil (reparse-symbol classsubparts) [27078 27086])
+                    ("_trans" variable
+                       (:constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [27091 27125])
+                    ("_focalDistance" variable (:type "float") (reparse-symbol classsubparts) [27130 27151]))                  
+                :type "class")
+                nil [26642 27154])
+            ("SetCamera" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("trans" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27185 27219])
+                    ("focalDistance" variable (:type "float") (reparse-symbol arg-sub-list) [27219 27239]))                  
+                :type "void")
+                nil [27156 27373])
+            ("DrawMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [27429 27436])
+                    ("DrawType" type
+                       (:members 
+                          ( ("DT_Point" variable
+                               (:constant-flag t
+                                :default-value (27480 27481)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [27469 27481])
+                            ("DT_Sphere" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [27491 27501])
+                            ("DT_LineStrip" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [27510 27523])
+                            ("DT_LineList" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [27532 27544]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [27441 27551])
+                    ("DrawMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27569 27593])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27594 27611])
+                            ("ppoints" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [27612 27633])
+                            ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [27634 27648])
+                            ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [27665 27676])
+                            ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [27677 27690])
+                            ("colors" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [27691 27711])
+                            ("type" variable (:type ("DrawType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27712 27726])
+                            ("bhasalpha" variable (:type "bool") (reparse-symbol arg-sub-list) [27727 27742]))                          
+                        :type ("DrawMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27557 28399])
+                    ("DrawMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28416 28440])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28441 28458])
+                            ("ppoints" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [28459 28480])
+                            ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [28481 28495])
+                            ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [28512 28523])
+                            ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [28524 28537])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [28538 28569])
+                            ("type" variable (:type ("DrawType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28570 28584]))                          
+                        :type ("DrawMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28404 29074])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [29080 30742])
+                    ("private" label nil (reparse-symbol classsubparts) [30744 30752])
+                    ("_vpoints" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [30757 30780])
+                    ("_numPoints" variable (:type "int") (reparse-symbol classsubparts) [30785 30809])
+                    ("_stride" variable (:type "int") (reparse-symbol classsubparts) [30785 30809])
+                    ("_fwidth" variable (:type "float") (reparse-symbol classsubparts) [30814 30828])
+                    ("_color" variable
+                       (:constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [30833 30864])
+                    ("_vcolors" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [30869 30892])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30897 30915])
+                    ("_bManyColors" variable (:type "bool") (reparse-symbol classsubparts) [30920 30938])
+                    ("_type" variable (:type ("DrawType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [30943 30958])
+                    ("_bhasalpha" variable (:type "bool") (reparse-symbol classsubparts) [30963 30979]))                  
+                :type "class")
+                nil [27375 30982])
+            ("_createhandle" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :type ("SoSwitch" type (:type "class") nil nil))
+                nil [30984 31125])
+            ("plot3" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [31162 31183])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [31184 31198])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [31199 31210])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [31211 31228])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31229 31260])
+                    ("drawstyle" variable (:type "int") (reparse-symbol arg-sub-list) [31261 31275]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [31127 31600])
+            ("plot3" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [31637 31658])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [31659 31673])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [31674 31685])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [31686 31703])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [31704 31724])
+                    ("drawstyle" variable (:type "int") (reparse-symbol arg-sub-list) [31725 31739])
+                    ("bhasalpha" variable (:type "bool") (reparse-symbol arg-sub-list) [31740 31755]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [31602 32092])
+            ("drawlinestrip" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [32137 32158])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [32159 32173])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [32174 32185])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [32186 32199])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32200 32231]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [32094 32518])
+            ("drawlinestrip" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [32563 32584])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [32585 32599])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [32600 32611])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [32612 32625])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [32626 32646]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [32520 32941])
+            ("drawlinelist" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [32985 33006])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [33007 33021])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [33022 33033])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [33034 33047])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33048 33079]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [32943 33366])
+            ("drawlinelist" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [33410 33431])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [33432 33446])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [33447 33458])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [33459 33472])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [33473 33493]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [33368 33787])
+            ("DrawArrowMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [33848 33855])
+                    ("DrawArrowMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33877 33901])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33902 33919])
+                            ("p1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33920 33948])
+                            ("p2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33970 33998])
+                            ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [33999 34012])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34013 34044]))                          
+                        :type ("DrawArrowMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33860 34162])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [34168 34464])
+                    ("private" label nil (reparse-symbol classsubparts) [34466 34474])
+                    ("_p1" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [34479 34514])
+                    ("_p2" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [34479 34514])
+                    ("_color" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [34479 34514])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34519 34537])
+                    ("_fwidth" variable (:type "float") (reparse-symbol classsubparts) [34542 34556]))                  
+                :type "class")
+                nil [33789 34559])
+            ("drawarrow" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("p1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34600 34628])
+                    ("p2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34629 34657])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [34658 34671])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34672 34703]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [34561 34949])
+            ("DrawBoxMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [35008 35015])
+                    ("DrawBoxMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35035 35059])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35060 35077])
+                            ("vpos" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35097 35127])
+                            ("vextents" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35128 35162]))                          
+                        :type ("DrawBoxMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [35020 35264])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [35270 35554])
+                    ("private" label nil (reparse-symbol classsubparts) [35556 35564])
+                    ("_vpos" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [35569 35604])
+                    ("_vextents" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [35569 35604])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [35609 35627]))                  
+                :type "class")
+                nil [34951 35630])
+            ("drawbox" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("vpos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35669 35699])
+                    ("vextents" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35700 35734]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [35632 35971])
+            ("DrawPlaneMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [36032 36039])
+                    ("DrawPlaneMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36061 36085])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36086 36103])
+                            ("tplane" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Transform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36125 36149])
+                            ("vextents" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36150 36184])
+                            ("vtexture" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::multi_array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36185 36229]))                          
+                        :type ("DrawPlaneMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [36044 36355])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [36361 36658])
+                    ("private" label nil (reparse-symbol classsubparts) [36660 36668])
+                    ("_tplane" variable (:type ("RaveTransform" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [36673 36702])
+                    ("_vextents" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [36707 36735])
+                    ("_vtexture" variable (:type ("boost::multi_array" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [36740 36778])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [36783 36801]))                  
+                :type "class")
+                nil [35973 36804])
+            ("drawplane" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("tplane" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36845 36880])
+                    ("vextents" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36881 36915])
+                    ("vtexture" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::multi_array" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("3"))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36916 36960]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [36806 37209])
+            ("DrawTriMeshMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [37272 37279])
+                    ("DrawTriMeshMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37303 37327])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37328 37345])
+                            ("ppoints" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [37346 37367])
+                            ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [37368 37379])
+                            ("pIndices" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [37380 37400])
+                            ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [37401 37418])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37419 37450]))                          
+                        :type ("DrawTriMeshMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37284 38180])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [38186 38519])
+                    ("private" label nil (reparse-symbol classsubparts) [38521 38529])
+                    ("_vpoints" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [38534 38557])
+                    ("_color" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [38562 38587])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [38592 38610]))                  
+                :type "class")
+                nil [37211 38613])
+            ("DrawTriMeshColorMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [38681 38688])
+                    ("DrawTriMeshColorMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38717 38741])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38742 38759])
+                            ("ppoints" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [38760 38781])
+                            ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [38782 38793])
+                            ("pIndices" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [38794 38814])
+                            ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [38815 38832])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::multi_array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38833 38875]))                          
+                        :type ("DrawTriMeshColorMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [38693 39607])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [39613 39947])
+                    ("private" label nil (reparse-symbol classsubparts) [39949 39957])
+                    ("_vpoints" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [39962 39985])
+                    ("_colors" variable (:type ("boost::multi_array" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil)
+                              ("2"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [39990 40026])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [40031 40049]))                  
+                :type "class")
+                nil [38615 40052])
+            ("drawtrimesh" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [40096 40117])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [40118 40129])
+                    ("pIndices" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [40130 40150])
+                    ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [40151 40168])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40169 40200]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [40055 40473])
+            ("drawtrimesh" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [40516 40537])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [40538 40549])
+                    ("pIndices" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [40550 40570])
+                    ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [40571 40588])
+                    ("colors" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::multi_array" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("2"))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40589 40631]))                  
+                :type ("GraphHandlePtr" type (:type "class") nil nil))
+                nil [40475 40910])
+            ("CloseGraphMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [40972 40979])
+                    ("CloseGraphMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41002 41026])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [41027 41043])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41044 41061]))                          
+                        :type ("CloseGraphMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [40984 41133])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [41139 41357])
+                    ("private" label nil (reparse-symbol classsubparts) [41359 41367])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [41372 41390]))                  
+                :type "class")
+                nil [40912 41393])
+            ("closegraph" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41425 41442]))                  
+                :type "void")
+                nil [41395 41564])
+            ("SetGraphTransformMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [41633 41640])
+                    ("SetGraphTransformMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41670 41694])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [41695 41711])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41712 41729])
+                            ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveTransform" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [41730 41760]))                          
+                        :type ("SetGraphTransformMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [41645 41839])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [41845 42073])
+                    ("private" label nil (reparse-symbol classsubparts) [42075 42083])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42088 42106])
+                    ("_t" variable (:type ("RaveTransform" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [42111 42135]))                  
+                :type "class")
+                nil [41566 42138])
+            ("SetGraphTransform" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42177 42194])
+                    ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42195 42225]))                  
+                :type "void")
+                nil [42140 42357])
+            ("SetGraphShowMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [42421 42428])
+                    ("SetGraphShowMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42453 42477])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [42478 42494])
+                            ("handle" variable
+                               (:pointer 1
+                                :type ("SoSwitch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42495 42512])
+                            ("bshow" variable (:type "bool") (reparse-symbol arg-sub-list) [42513 42524]))                          
+                        :type ("SetGraphShowMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42433 42611])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [42617 42844])
+                    ("private" label nil (reparse-symbol classsubparts) [42846 42854])
+                    ("_handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42859 42877])
+                    ("_bshow" variable (:type "bool") (reparse-symbol classsubparts) [42882 42894]))                  
+                :type "class")
+                nil [42359 42897])
+            ("SetGraphShow" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42931 42948])
+                    ("bshow" variable (:type "bool") (reparse-symbol arg-sub-list) [42949 42960]))                  
+                :type "void")
+                nil [42899 43091])
+            ("DeselectMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [43151 43158])
+                    ("DeselectMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43179 43203])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [43204 43220]))                          
+                        :type ("DeselectMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [43163 43275])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [43281 43490]))                  
+                :type "class")
+                nil [43093 43493])
+            ("deselect" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [43495 43636])
+            ("ResetMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [43693 43700])
+                    ("ResetMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43718 43742])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [43743 43759]))                          
+                        :type ("ResetMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [43705 43813])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [43819 44025]))                  
+                :type "class")
+                nil [43638 44028])
+            ("Reset" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [44030 44241])
+            ("LockGUI" function
+               (:parent "QtCoinViewer"
+                :type ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("void" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [44243 44514])
+            ("SetBkgndColorMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [44579 44586])
+                    ("SetBkgndColorMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44612 44636])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [44637 44653])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [44654 44685]))                          
+                        :type ("SetBkgndColorMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [44591 44755])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [44761 44981])
+                    ("private" label nil (reparse-symbol classsubparts) [44983 44991])
+                    ("_color" variable (:type ("RaveVector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [44996 45021]))                  
+                :type "class")
+                nil [44516 45024])
+            ("SetBkgndColor" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45059 45090]))                  
+                :type "void")
+                nil [45026 45290])
+            ("SetEnvironmentSync" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("bUpdate" variable (:type "bool") (reparse-symbol arg-sub-list) [45330 45343]))                  
+                :type "void")
+                nil [45292 45794])
+            ("EnvironmentSync" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [45796 46281])
+            ("_SetCamera" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("_t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46313 46344])
+                    ("focalDistance" variable (:type "float") (reparse-symbol arg-sub-list) [46345 46365]))                  
+                :type "void")
+                nil [46283 46796])
+            ("_SetBkgndColor" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46832 46863]))                  
+                :type "void")
+                nil [46798 47010])
+            ("_closegraph" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47043 47060]))                  
+                :type "void")
+                nil [47012 47140])
+            ("_SetGraphTransform" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47180 47197])
+                    ("t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47198 47228]))                  
+                :type "void")
+                nil [47142 47640])
+            ("_SetGraphShow" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47675 47692])
+                    ("bshow" variable (:type "bool") (reparse-symbol arg-sub-list) [47693 47704]))                  
+                :type "void")
+                nil [47642 47810])
+            ("PrintCamera" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [47812 48659])
+            ("GetCameraTransform" function
+               (:parent "QtCoinViewer"
+                :type ("RaveTransform" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [48661 48928])
+            ("GetCameraDistanceToFocus" function
+               (:parent "QtCoinViewer"
+                :type "float")
+                nil [48930 49065])
+            ("GetCameraIntrinsics" function
+               (:parent "QtCoinViewer"
+                :type ("geometry::RaveCameraIntrinsics" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [49067 49229])
+            ("GetCameraIntrinsics2" function
+               (:parent "QtCoinViewer"
+                :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                nil [49231 49865])
+            ("_plot3" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49894 49911])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [49912 49933])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [49934 49948])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [49949 49960])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [49961 49978])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49979 50010]))                  
+                :type "void")
+                nil [49867 51544])
+            ("_plot3" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51573 51590])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [51591 51612])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [51613 51627])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [51628 51639])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [51640 51657])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [51658 51678])
+                    ("bhasalpha" variable (:type "bool") (reparse-symbol arg-sub-list) [51679 51694]))                  
+                :type "void")
+                nil [51546 53892])
+            ("_drawspheres" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53927 53944])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [53945 53966])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [53967 53981])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [53982 53993])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [53994 54011])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54012 54043]))                  
+                :type "void")
+                nil [53894 54781])
+            ("_drawspheres" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54816 54833])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [54834 54855])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [54856 54870])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [54871 54882])
+                    ("fPointSize" variable (:type "float") (reparse-symbol arg-sub-list) [54883 54900])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [54901 54921])
+                    ("bhasalpha" variable (:type "bool") (reparse-symbol arg-sub-list) [54922 54937]))                  
+                :type "void")
+                nil [54783 56329])
+            ("_drawlinestrip" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56366 56383])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [56384 56405])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [56406 56420])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [56421 56432])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [56433 56446])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56447 56478]))                  
+                :type "void")
+                nil [56331 57662])
+            ("_drawlinestrip" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57699 57716])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [57717 57738])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [57739 57753])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [57754 57765])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [57766 57779])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [57780 57800]))                  
+                :type "void")
+                nil [57664 59531])
+            ("_drawlinelist" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59567 59584])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [59585 59606])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [59607 59621])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [59622 59633])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [59634 59647])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59648 59679]))                  
+                :type "void")
+                nil [59533 60706])
+            ("_drawlinelist" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60742 60759])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [60760 60781])
+                    ("numPoints" variable (:type "int") (reparse-symbol arg-sub-list) [60782 60796])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [60797 60808])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [60809 60822])
+                    ("colors" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [60823 60843]))                  
+                :type "void")
+                nil [60708 62124])
+            ("_drawarrow" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62157 62174])
+                    ("p1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62175 62203])
+                    ("p2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62204 62232])
+                    ("fwidth" variable (:type "float") (reparse-symbol arg-sub-list) [62233 62246])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62247 62278]))                  
+                :type "void")
+                nil [62126 64709])
+            ("_drawbox" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64740 64757])
+                    ("vpos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64758 64788])
+                    ("vextents" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64789 64823]))                  
+                :type "void")
+                nil [64711 65102])
+            ("_drawplane" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65135 65152])
+                    ("tplane" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65153 65188])
+                    ("vextents" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65189 65223])
+                    ("vtexture" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::multi_array" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("3"))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65224 65268]))                  
+                :type "void")
+                nil [65104 68380])
+            ("_SetMaterial" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pparent" variable
+                       (:pointer 1
+                        :type ("SoGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68414 68431])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [68432 68463]))                  
+                :type "void")
+                nil [68382 69063])
+            ("_SetMaterial" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pparent" variable
+                       (:pointer 1
+                        :type ("SoGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69097 69114])
+                    ("colors" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::multi_array" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("2"))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [69115 69157]))                  
+                :type "void")
+                nil [69065 70625])
+            ("_SetTriangleMesh" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pparent" variable
+                       (:pointer 1
+                        :type ("SoSeparator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70663 70684])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [70685 70706])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [70707 70718])
+                    ("pIndices" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [70719 70739])
+                    ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [70740 70757]))                  
+                :type "void")
+                nil [70627 72004])
+            ("_drawtrimesh" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72039 72056])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [72057 72078])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [72079 72090])
+                    ("pIndices" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [72091 72111])
+                    ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [72112 72129])
+                    ("color" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveVector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [72130 72161]))                  
+                :type "void")
+                nil [72006 72533])
+            ("_drawtrimesh" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :arguments 
+                  ( ("handle" variable
+                       (:pointer 1
+                        :type ("SoSwitch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72568 72585])
+                    ("ppoints" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [72586 72607])
+                    ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [72608 72619])
+                    ("pIndices" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [72620 72640])
+                    ("numTriangles" variable (:type "int") (reparse-symbol arg-sub-list) [72641 72658])
+                    ("colors" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::multi_array" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("2"))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [72659 72701]))                  
+                :type "void")
+                nil [72535 73075])
+            ("ADD_MENU" variable (:constant-flag t) nil [73085 73093])
+            ("SetupMenus" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [73641 81895])
+            ("customEvent" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("QEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81928 81939]))                  
+                :type "void")
+                nil [81897 82296])
+            ("_StartViewerLoopCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82341 82355])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82356 82372]))                  
+                :type "bool")
+                nil [82298 82609])
+            ("_ShowCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82643 82657])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82658 82674]))                  
+                :type "bool")
+                nil [82611 82954])
+            ("_TrackLinkCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82993 83007])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83008 83024]))                  
+                :type "bool")
+                nil [82956 84126])
+            ("_TrackManipulatorCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84172 84186])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84187 84203]))                  
+                :type "bool")
+                nil [84128 84946])
+            ("_SetTrackingAngleToUpCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84996 85010])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85011 85027]))                  
+                :type "bool")
+                nil [84948 85080])
+            ("main" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("bShow" variable (:type "bool") (reparse-symbol arg-sub-list) [85105 85116]))                  
+                :type "int")
+                nil [85082 85501])
+            ("quitmainloop" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [85503 85769])
+            ("InitOffscreenRenderer" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [85771 85908])
+            ("DumpIvRoot" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [85940 85961])
+                    ("bBinaryFile" variable (:type "bool") (reparse-symbol arg-sub-list) [85962 85980]))                  
+                :type "void")
+                nil [85910 86330])
+            ("_SelectHandler" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [86366 86382])
+                    ("path" variable
+                       (:pointer 1
+                        :type ("SoPath" type
+                             (:prototype t
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [86383 86403]))                  
+                :type "void")
+                nil [86332 86462])
+            ("_DeselectHandler" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [86500 86516])
+                    ("path" variable
+                       (:pointer 1
+                        :type ("SoPath" type
+                             (:prototype t
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [86517 86537]))                  
+                :type "void")
+                nil [86464 86609])
+            ("_HandleSelection" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type ("SoPath" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86647 86660]))                  
+                :type "bool")
+                nil [86611 93574])
+            ("_deselect" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [93576 93800])
+            ("LockEnvironment" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("timeout" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93885 93902])
+                    ("bUpdateEnvironment" variable (:type "bool") (reparse-symbol arg-sub-list) [93902 93926]))                  
+                :type ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("EnvironmentMutex::scoped_try_lock" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [93802 94609])
+            ("_HandleDeselection" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("SoNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94649 94662]))                  
+                :type "bool")
+                nil [94611 94841])
+            ("_KeyHandler" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [94903 94919])
+                    ("eventCB" variable
+                       (:pointer 1
+                        :type ("SoEventCallback" type
+                             (:prototype t
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [94920 94952]))                  
+                :type "void")
+                nil [94872 95798])
+            ("GlobAdvanceFrame" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [95836 95844])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SoSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95845 95855]))                  
+                :type "void")
+                nil [95800 95934])
+            ("AdvanceFrame" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("bForward" variable (:type "bool") (reparse-symbol arg-sub-list) [95968 95982]))                  
+                :type "void")
+                nil [95936 99326])
+            ("_UpdateEnvironment" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("fTimeElapsed" variable (:type "float") (reparse-symbol arg-sub-list) [99366 99385]))                  
+                :type "void")
+                nil [99328 100203])
+            ("ForceUpdatePublishedBodies" function
+               (:parent "QtCoinViewer"
+                :type "bool")
+                nil [100205 100779])
+            ("GlobVideoFrame" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [100815 100823])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SoSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100824 100834]))                  
+                :type "void")
+                nil [100781 100908])
+            ("_VideoFrame" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [100910 101878])
+            ("UpdateFromModel" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [101880 106883])
+            ("_Reset" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [106885 107535])
+            ("_UpdateCameraTransform" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("fTimeElapsed" variable (:type "float") (reparse-symbol arg-sub-list) [107579 107598]))                  
+                :type "void")
+                nil [107537 112318])
+            ("LoadEnvironment" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [112334 112898])
+            ("ImportEnvironment" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [112900 113196])
+            ("SaveEnvironment" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [113198 113476])
+            ("Quit" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [113478 113520])
+            ("ViewCameraParams" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [113522 113630])
+            ("ViewGeometryChanged" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113671 113685]))                  
+                :type "void")
+                nil [113632 114195])
+            ("ViewDebugLevelChanged" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114238 114252]))                  
+                :type "void")
+                nil [114197 114319])
+            ("VideoCodecChanged" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114358 114372]))                  
+                :type "void")
+                nil [114321 114416])
+            ("ViewToggleFPS" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [114451 114459]))                  
+                :type "void")
+                nil [114418 114638])
+            ("ViewToggleFeedBack" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [114678 114686]))                  
+                :type "void")
+                nil [114640 114939])
+            ("RecordSimtimeVideo" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [114979 114987]))                  
+                :type "void")
+                nil [114941 115019])
+            ("RecordRealtimeVideo" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [115060 115068]))                  
+                :type "void")
+                nil [115021 115099])
+            ("ToggleSimulation" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [115137 115145]))                  
+                :type "void")
+                nil [115101 115505])
+            ("_UpdateToggleSimulation" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [115507 115896])
+            ("_RecordSetup" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("bOn" variable (:type "bool") (reparse-symbol arg-sub-list) [115930 115939])
+                    ("bRealtimeVideo" variable (:type "bool") (reparse-symbol arg-sub-list) [115940 115960]))                  
+                :type "void")
+                nil [115898 117437])
+            ("_GetCameraImage" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("memory" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [117474 117503])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [117504 117514])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [117515 117526])
+                    ("_t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [117527 117558])
+                    ("intrinsics" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [117559 117606]))                  
+                :type "bool")
+                nil [117439 120226])
+            ("_WriteCameraImage" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("width" variable (:type "int") (reparse-symbol arg-sub-list) [120265 120275])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [120276 120287])
+                    ("_t" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RaveTransform" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [120288 120319])
+                    ("intrinsics" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorBase::CameraIntrinsics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [120320 120367])
+                    ("filename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [120368 120396])
+                    ("extension" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [120397 120426]))                  
+                :type "bool")
+                nil [120228 123383])
+            ("_GetVideoFrame" function
+               (:pointer 1
+                :parent "QtCoinViewer"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [123385 124185])
+            ("CollisionCheckerChanged" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124230 124244]))                  
+                :type "void")
+                nil [124187 124622])
+            ("_UpdateCollisionChecker" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [124624 125425])
+            ("PhysicsEngineChanged" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [125467 125481]))                  
+                :type "void")
+                nil [125427 125842])
+            ("_UpdatePhysicsEngine" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [125844 126630])
+            ("UpdateInterfaces" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [126632 127171])
+            ("InterfaceSendCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("pact" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [127213 127227]))                  
+                :type "void")
+                nil [127173 127231])
+            ("DynamicSelfCollision" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("on" variable (:type "bool") (reparse-symbol arg-sub-list) [127273 127281]))                  
+                :type "void")
+                nil [127233 127580])
+            ("DynamicGravity" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [127582 127688])
+            ("About" function
+               (:parent "QtCoinViewer"
+                :type "void")
+                nil [127690 128031])
+            ("EnvMessage" function
+               (:constructor-flag t
+                :parent "QtCoinViewer::EnvMessage"
+                :arguments 
+                  ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [128070 128094])
+                    ("ppreturn" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [128095 128111])
+                    ("bWaitForMutex" variable (:type "bool") (reparse-symbol arg-sub-list) [128112 128131]))                  
+                :type ("EnvMessage" type (:type "class") nil nil))
+                nil [128033 128292])
+            ("EnvMessage" function
+               (:destructor-flag t
+                :parent "QtCoinViewer::EnvMessage"
+                :type "void")
+                nil [128294 128357])
+            ("callerexecute" function
+               (:parent "QtCoinViewer::EnvMessage"
+                :arguments 
+                  ( ("bGuiThread" variable (:type "bool") (reparse-symbol arg-sub-list) [128442 128458]))                  
+                :type "void")
+                nil [128397 129141])
+            ("viewerexecute" function
+               (:parent "QtCoinViewer::EnvMessage"
+                :type "void")
+                nil [129181 129251])
+            ("_SetFiguresInCamera" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129292 129306])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129307 129323]))                  
+                :type "bool")
+                nil [129253 129387])
+            ("_CommandResize" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129423 129437])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129438 129454]))                  
+                :type "bool")
+                nil [129389 129583])
+            ("_SetFeedbackVisibility" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129627 129641])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129642 129658]))                  
+                :type "bool")
+                nil [129585 129808])
+            ("RegisterItemSelectionCallback" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("fncallback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ItemSelectionCallbackFn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129866 129908]))                  
+                :type ("UserDataPtr" type (:type "class") nil nil))
+                nil [129810 130149])
+            ("RegisterViewerImageCallback" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("fncallback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ViewerImageCallbackFn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [130205 130245]))                  
+                :type ("UserDataPtr" type (:type "class") nil nil))
+                nil [130151 130478])
+            ("RegisterViewerThreadCallback" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("fncallback" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ViewerThreadCallbackFn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [130535 130576]))                  
+                :type ("UserDataPtr" type (:type "class") nil nil))
+                nil [130480 130813])
+            ("_SaveBodyLinkToVRMLCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [130862 130876])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [130877 130893]))                  
+                :type "bool")
+                nil [130816 132269])
+            ("SetNearPlaneMessage" type
+               (:superclasses 
+                  ( ("QtCoinViewer::EnvMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [132333 132340])
+                    ("SetNearPlaneMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pviewer" variable (:type ("QtCoinViewerPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [132365 132389])
+                            ("ppreturn" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [132390 132406])
+                            ("fnearplane" variable (:type "bool") (reparse-symbol arg-sub-list) [132407 132423]))                          
+                        :type ("SetNearPlaneMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [132345 132503])
+                    ("viewerexecute" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [132509 132733])
+                    ("private" label nil (reparse-symbol classsubparts) [132735 132743])
+                    ("_fnearplane" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [132748 132766]))                  
+                :type "class")
+                nil [132271 132769])
+            ("_SetNearPlaneCommand" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("sout" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [132811 132825])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [132826 132842]))                  
+                :type "bool")
+                nil [132771 133038])
+            ("_SetNearPlane" function
+               (:parent "QtCoinViewer"
+                :arguments 
+                  ( ("nearplane" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [133073 133089]))                  
+                :type "void")
+                nil [133040 133176]))          
+      :file "qtcoinviewer.cpp"
+      :pointmax 135024
+      :fsize 138946
+      :lastmodtime '(23349 37112 14668 992000)
+      :unmatched-syntax '((punctuation 4220 . 4221) (punctuation 4219 . 4220) (punctuation 4218 . 4219) (symbol 4203 . 4218) (punctuation 4202 . 4203) (symbol 4198 . 4202) (punctuation 3446 . 3447) (punctuation 3445 . 3446) (punctuation 3444 . 3445) (symbol 3429 . 3444) (punctuation 3428 . 3429) (symbol 3424 . 3428) (punctuation 2671 . 2672) (punctuation 2670 . 2671) (punctuation 2669 . 2670) (symbol 2654 . 2669) (punctuation 2653 . 2654) (symbol 2649 . 2653))
+      :lexical-table 
+        '(("VIDEO_WIDTH" . ((number "640" 1758 . 1761)))
+          ("ADD_MENU" (spp-arg-list ("name" "checkable" "shortcut" "tip" "fn") 73093 . 73129) . ((semantic-list "{ \\
+        pact = new QAction(tr(name), this); \\
+        if( checkable ) pact->setCheckable(checkable); \\
+        if( shortcut != NULL ) pact->setShortcut(tr(shortcut)); \\
+        if( tip != NULL ) pact->setStatusTip(tr(tip)); \\
+        if( checkable ) \\
+            connect(pact, SIGNAL(triggered(bool)), this, SLOT(fn(bool))); \\
+        else \\
+            connect(pact, SIGNAL(triggered()), this, SLOT(fn())); \\
+        pcurmenu->addAction(pact); \\
+        if( pgroup != NULL ) pgroup->addAction(pact); \\
+}" 73130 . 73639)))
+          ("VIDEO_HEIGHT" . ((number "480" 1783 . 1786)))
+          ("VIDEO_FRAMERATE" . ((semantic-list "(30000.0/1001.0)" 1811 . 1827)))
+          ("ITEM_DELETER" . 
+              ((symbol "boost" 2050 . 2055) (punctuation ":" 2055 . 2056) (punctuation ":" 2056 . 2057) (symbol "bind" 2057 . 2061) (semantic-list "(DeleteItemCallbackSafe,weak_viewer(),_1)" 2061 . 2102)))
+          )
+)
+    (semanticdb-table "qtcoin.h"
+      :file "qtcoin.h"
+      :fsize 6961
+      :lastmodtime '(23349 37112 14668 992000)))
+  :file "!home!rvbust!Rvbust!Sources!OpenRave!plugins!qtcoinrave!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

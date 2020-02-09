@@ -1,0 +1,107 @@
+;; Object State/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "State/"
+  :tables
+  (list
+    (semanticdb-table "State.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cmath" include (:system-flag t) nil [67 83])
+            ("stdint.h" include (:system-flag t) nil [84 103])
+            ("URDF" type
+               (:members 
+                  ( ("TimeStamp" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [141 148])
+                            ("TimeStamp" function
+                               (:constructor-flag t
+                                :type ("TimeStamp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [153 177])
+                            ("Set" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("_seconds" variable (:type "double") (reparse-symbol arg-sub-list) [200 216]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [184 385])
+                            ("Clear" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [531 597])
+                            ("sec" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [609 621])
+                            ("nsec" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [626 639])
+                            ("private" label nil (reparse-symbol classsubparts) [645 653])
+                            ("_Correct" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [658 960]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [123 963])
+                    ("JointState" type
+                       (:members 
+                          ( ("JointState" function
+                               (:constructor-flag t
+                                :type ("JointState" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [989 1014])
+                            ("Clear" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1020 1150])
+                            ("joint" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1179 1197])
+                            ("position" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1202 1231])
+                            ("velocity" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1236 1265])
+                            ("effort" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1270 1297]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [965 1300])
+                    ("URDF_TYPEDEF_CLASS_POINTERS" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("JointState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1330 1341]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1302 1342])
+                    ("ModelState" type
+                       (:members 
+                          ( ("ModelState" function
+                               (:constructor-flag t
+                                :type ("ModelState" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1372 1397])
+                            ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1441 1458])
+                            ("timestamp" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1463 1483])
+                            ("Clear" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1489 1598])
+                            ("joint_states" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("JointStateSharedPtr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1604 1650]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1344 1653])
+                    ("URDF_TYPEDEF_CLASS_POINTERS" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ModelState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1683 1694]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1655 1695]))                  
+                :type "namespace")
+                nil [105 1698]))          
+      :file "State.h"
+      :pointmax 1718
+      :fsize 1717
+      :lastmodtime '(23559 59338 557393 15000)
+      :unmatched-syntax '((punctuation 597 . 598) (semantic-list 414 . 525) (semantic-list 407 . 409) (DOUBLE 400 . 406) (OPERATOR 391 . 399) (punctuation 177 . 178) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 597 . 598) (semantic-list 414 . 525) (semantic-list 407 . 409) (DOUBLE 400 . 406) (OPERATOR 391 . 399) (punctuation 177 . 178))))
+  :file "!home!rvbust!Rvbust!Sources!URDF!Include!URDF!State!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

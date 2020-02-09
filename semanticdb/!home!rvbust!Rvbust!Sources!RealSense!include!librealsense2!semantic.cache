@@ -1,0 +1,1245 @@
+;; Object librealsense2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "librealsense2/"
+  :tables
+  (list
+    (semanticdb-table "rs.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LIBREALSENSE_RS2_H" variable (:constant-flag t) nil [242 260])
+            ("rs2_get_time" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rs2_time_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4227 4245]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4202 4246])
+            ("rs2_depth_frame_get_distance" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "float"
+                :arguments 
+                  ( ("frame_ref" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_frame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3815 3842])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3843 3849])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3850 3856])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3857 3875]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3780 3876])
+            ("rs2_log" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3353 3379])
+                    ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3380 3401])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3402 3421]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3340 3422])
+            ("rs2_log_to_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2978 3008])
+                    ("file_path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3009 3032])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3033 3052]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2957 3053])
+            ("rs2_log_to_console" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2904 2934])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2935 2954]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2880 2955])
+            ("rs2_get_api_version" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2859 2877]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2835 2878])
+            ("rs2_get_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned char"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2459 2493])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2494 2512]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2421 2513])
+            ("rs2_delete_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2113 2147]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2088 2148])
+            ("rs2_get_raw_data_size" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1907 1941])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1942 1960]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1881 1961])
+            ("RS2_API_VERSION_STR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1486 1505])
+            ("RS2_API_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1326 1341])
+            ("VAR_ARG_STRING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [693 707])
+            ("STRINGIFY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [665 674])
+            ("RS2_API_BUILD_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [629 650])
+            ("RS2_API_PATCH_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [594 615])
+            ("RS2_API_MINOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [558 579])
+            ("RS2_API_MAJOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [523 544])
+            ("h/rs_sensor.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [489 513])
+            ("h/rs_record_playback.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [455 488])
+            ("h/rs_processing.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [426 454])
+            ("h/rs_option.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [401 425])
+            ("h/rs_frame.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [377 400])
+            ("h/rs_device.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [352 376])
+            ("h/rs_context.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [326 351])
+            ("h/rs_types.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [302 325])
+            ("rs2_get_time" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rs2_time_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4227 4245]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4202 4246])
+            ("rs2_depth_frame_get_distance" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "float"
+                :arguments 
+                  ( ("frame_ref" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_frame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3815 3842])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3843 3849])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3850 3856])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3857 3875]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3780 3876])
+            ("rs2_log" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3353 3379])
+                    ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3380 3401])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3402 3421]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3340 3422])
+            ("rs2_log_to_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2978 3008])
+                    ("file_path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3009 3032])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3033 3052]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2957 3053])
+            ("rs2_log_to_console" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2904 2934])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2935 2954]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2880 2955])
+            ("rs2_get_api_version" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2859 2877]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2835 2878])
+            ("rs2_get_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned char"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2459 2493])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2494 2512]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2421 2513])
+            ("rs2_delete_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2113 2147]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2088 2148])
+            ("rs2_get_raw_data_size" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1907 1941])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1942 1960]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1881 1961])
+            ("RS2_API_VERSION_STR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1486 1505])
+            ("RS2_API_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1326 1341])
+            ("VAR_ARG_STRING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [693 707])
+            ("STRINGIFY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [665 674])
+            ("RS2_API_BUILD_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [629 650])
+            ("RS2_API_PATCH_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [594 615])
+            ("RS2_API_MINOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [558 579])
+            ("RS2_API_MAJOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [523 544])
+            ("h/rs_sensor.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [489 513])
+            ("h/rs_record_playback.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [455 488])
+            ("h/rs_processing.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [426 454])
+            ("h/rs_option.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [401 425])
+            ("h/rs_frame.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [377 400])
+            ("h/rs_device.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [352 376])
+            ("h/rs_context.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [326 351])
+            ("h/rs_types.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [302 325])
+            ("rs2_get_time" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rs2_time_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4227 4245]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4202 4246])
+            ("rs2_depth_frame_get_distance" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "float"
+                :arguments 
+                  ( ("frame_ref" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_frame" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3815 3842])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3843 3849])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3850 3856])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3857 3875]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3780 3876])
+            ("rs2_log" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3353 3379])
+                    ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3380 3401])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3402 3421]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3340 3422])
+            ("rs2_log_to_file" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2978 3008])
+                    ("file_path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3009 3032])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3033 3052]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2957 3053])
+            ("rs2_log_to_console" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2904 2934])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2935 2954]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2880 2955])
+            ("rs2_get_api_version" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2859 2877]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2835 2878])
+            ("rs2_get_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned char"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2459 2493])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2494 2512]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2421 2513])
+            ("rs2_delete_raw_data" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2113 2147]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2088 2148])
+            ("rs2_get_raw_data_size" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rs2_raw_data_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1907 1941])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1942 1960]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1881 1961])
+            ("RS2_API_VERSION_STR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1486 1505])
+            ("RS2_API_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1326 1341])
+            ("VAR_ARG_STRING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [693 707])
+            ("STRINGIFY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [665 674])
+            ("RS2_API_BUILD_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [629 650])
+            ("RS2_API_PATCH_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [594 615])
+            ("RS2_API_MINOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [558 579])
+            ("RS2_API_MAJOR_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [523 544])
+            ("h/rs_sensor.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [489 513])
+            ("h/rs_record_playback.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [455 488])
+            ("h/rs_processing.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [426 454])
+            ("h/rs_option.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [401 425])
+            ("h/rs_frame.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [377 400])
+            ("h/rs_device.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [352 376])
+            ("h/rs_context.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [326 351])
+            ("h/rs_types.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [302 325]))          
+      :file "rs.h"
+      :pointmax 4283
+      :fsize 4282
+      :lastmodtime '(23395 48853 539047 118000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LIBREALSENSE_RS2_H")
+          ("VAR_ARG_STRING" (spp-arg-list ("arg") 707 . 712) . ((symbol "STRINGIFY" 713 . 722) (semantic-list "(arg)" 722 . 727)))
+          ("RS2_API_MINOR_VERSION" . ((number "14" 583 . 585)))
+          ("RS2_API_PATCH_VERSION" . ((number "1" 619 . 620)))
+          ("RS2_API_VERSION" . ((semantic-list "(((RS2_API_MAJOR_VERSION) * 10000) + ((RS2_API_MINOR_VERSION) * 100) + (RS2_API_PATCH_VERSION))" 1343 . 1438)))
+          ("STRINGIFY" (spp-arg-list ("arg") 674 . 679) . ((punctuation "#" 680 . 681) (symbol "arg" 681 . 684)))
+          ("RS2_API_BUILD_VERSION" . ((number "0" 654 . 655)))
+          ("RS2_API_VERSION_STR" . ((semantic-list "(VAR_ARG_STRING(RS2_API_MAJOR_VERSION.RS2_API_MINOR_VERSION.RS2_API_PATCH_VERSION))" 1506 . 1589)))
+          ("RS2_API_MAJOR_VERSION" . ((number "2" 548 . 549)))
+          )
+)
+    (semanticdb-table "rs_advanced_mode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RS400_ADVANCED_MODE_H" variable (:constant-flag t) nil [164 185])
+            ("RS400_ADVANCED_MODE_HPP" variable (:constant-flag t) nil [195 218])
+            ("h/rs_advanced_mode_command.h" include nil nil [219 258])
+            ("h/rs_types.h" include nil nil [291 314])
+            ("rs2_serialize_json" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rs2_raw_data_buffer" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4603 4619])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4620 4638]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4563 4639])
+            ("rs2_load_json" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4425 4441])
+                    ("json_content" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4442 4467])
+                    ("content_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4468 4490])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4491 4509]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4406 4510])
+            ("rs2_get_census" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4264 4280])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STCensusRadius" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4281 4303])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4304 4313])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4314 4332]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4244 4333])
+            ("rs2_set_census" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4176 4192])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STCensusRadius" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4193 4222])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4223 4241]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4156 4242])
+            ("rs2_get_ae_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4088 4104])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STAEControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4105 4124])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [4125 4134])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4135 4153]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4064 4154])
+            ("rs2_set_ae_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3999 4015])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STAEControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4016 4042])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4043 4061]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3975 4062])
+            ("rs2_get_depth_table" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3899 3915])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STDepthTableControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3916 3943])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3944 3953])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3954 3972]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3874 3973])
+            ("rs2_set_depth_table" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3733 3749])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STDepthTableControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3750 3784])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3785 3803]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3708 3804])
+            ("rs2_get_color_correction" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3566 3582])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STColorCorrection" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3583 3608])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3609 3618])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3619 3637]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3536 3638])
+            ("rs2_set_color_correction" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3399 3415])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STColorCorrection" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3416 3448])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3449 3467]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3369 3468])
+            ("rs2_get_hdad" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3240 3256])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STHdad" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3257 3271])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3272 3281])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3282 3300]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3222 3301])
+            ("rs2_set_hdad" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3108 3124])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STHdad" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3125 3145])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3146 3164]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3090 3165])
+            ("rs2_get_slo_penalty_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2959 2975])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STSloPenaltyControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2976 3003])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [3004 3013])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3014 3032]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2926 3033])
+            ("rs2_set_slo_penalty_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2786 2802])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STSloPenaltyControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2803 2836])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2837 2855]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2753 2856])
+            ("rs2_get_slo_color_thresholds_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2601 2617])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STSloColorThresholdsControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2618 2653])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [2654 2663])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2664 2682]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2559 2683])
+            ("rs2_set_slo_color_thresholds_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2403 2419])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STSloColorThresholdsControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2420 2461])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2462 2480]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2361 2481])
+            ("rs2_get_rau_thresholds_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2201 2217])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STRauColorThresholdsControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2218 2253])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [2254 2263])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2264 2282]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2165 2283])
+            ("rs2_set_rau_thresholds_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2009 2025])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STRauColorThresholdsControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2026 2067])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2068 2086]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1973 2087])
+            ("rs2_get_color_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1826 1842])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STColorControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1843 1865])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [1866 1875])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1876 1894]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1799 1895])
+            ("rs2_set_color_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1669 1685])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STColorControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1686 1714])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1715 1733]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1642 1734])
+            ("rs2_get_rau_support_vector_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1497 1513])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STRauSupportVectorControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1514 1547])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [1548 1557])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1558 1576]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1457 1577])
+            ("rs2_set_rau_support_vector_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1305 1321])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STRauSupportVectorControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1322 1361])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1362 1380]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1265 1381])
+            ("rs2_get_rsm" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1129 1145])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STRsm" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1146 1159])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [1160 1169])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1170 1188]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1112 1189])
+            ("rs2_set_rsm" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [996 1012])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STRsm" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1013 1032])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1033 1051]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [979 1052])
+            ("rs2_get_depth_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [845 861])
+                    ("group" variable
+                       (:pointer 1
+                        :type ("STDepthControlGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [862 889])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [890 899])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [900 918]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [818 919])
+            ("rs2_set_depth_control" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [678 694])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("STDepthControlGroup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [695 728])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [729 747]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [651 748])
+            ("rs2_is_enabled" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [531 547])
+                    ("enabled" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [548 561])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [562 580]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [511 581])
+            ("rs2_toggle_advanced_mode" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rs2_device" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [421 437])
+                    ("enable" variable (:type "int") (reparse-symbol arg-sub-list) [438 449])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("rs2_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [450 468]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [391 469]))          
+      :file "rs_advanced_mode.h"
+      :pointmax 4676
+      :fsize 4675
+      :lastmodtime '(23395 48853 539047 118000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("RS400_ADVANCED_MODE_H")
+          )
+)
+    (semanticdb-table "rs.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LIBREALSENSE_RS2_HPP" variable (:constant-flag t) nil [160 180])
+            ("rs.h" include nil nil [182 197])
+            ("hpp/rs_types.hpp" include nil nil [198 225])
+            ("hpp/rs_context.hpp" include nil nil [226 255])
+            ("hpp/rs_device.hpp" include nil nil [256 284])
+            ("hpp/rs_frame.hpp" include nil nil [285 312])
+            ("hpp/rs_processing.hpp" include nil nil [313 345])
+            ("hpp/rs_record_playback.hpp" include nil nil [346 383])
+            ("hpp/rs_sensor.hpp" include nil nil [384 412])
+            ("hpp/rs_pipeline.hpp" include nil nil [413 443])
+            ("rs2" type
+               (:members 
+                  ( ("log_to_console" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [492 522]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [465 638])
+                    ("log_to_file" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("min_severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [668 698])
+                            ("file_path" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "nullptr"
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [699 731]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [644 856])
+                    ("log" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [878 904])
+                            ("message" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [905 925]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [862 1035]))                  
+                :type "namespace")
+                nil [445 1037])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1074 1091])
+                    ("stream" variable (:type ("rs2_stream" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1092 1110]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1039 1156])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1192 1209])
+                    ("format" variable (:type ("rs2_format" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1210 1228]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1157 1274])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1310 1327])
+                    ("distortion" variable (:type ("rs2_distortion" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1328 1354]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1275 1408])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1444 1461])
+                    ("option" variable (:type ("rs2_option" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1462 1480]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1409 1526])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1562 1579])
+                    ("severity" variable (:type ("rs2_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1580 1606]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1527 1660])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1696 1713])
+                    ("camera_info" variable (:type ("rs2_camera_info" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1714 1742]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1661 1798])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1834 1851])
+                    ("metadata" variable (:type ("rs2_frame_metadata_value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1852 1886]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1799 1942])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1978 1995])
+                    ("domain" variable (:type ("rs2_timestamp_domain" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1996 2024]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [1943 2080])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2116 2133])
+                    ("notificaton" variable (:type ("rs2_notification_category" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2134 2172]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [2081 2238])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2274 2291])
+                    ("preset" variable (:type ("rs2_sr300_visual_preset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2292 2323]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [2239 2382])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2418 2435])
+                    ("exception_type" variable (:type ("rs2_exception_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2436 2470]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [2383 2532])
+            ("<<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2568 2585])
+                    ("status" variable (:type ("rs2_playback_status" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2613]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [2533 2668]))          
+      :file "rs.hpp"
+      :pointmax 2701
+      :fsize 2700
+      :lastmodtime '(23395 48853 539047 118000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LIBREALSENSE_RS2_HPP")
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!RealSense!include!librealsense2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

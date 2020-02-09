@@ -1,0 +1,212 @@
+;; Object urdfreader/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "urdfreader/"
+  :tables
+  (list
+    (semanticdb-table "urdfreader.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rbdl/rbdl.h" include (:system-flag t) nil [1 23])
+            ("urdfreader.h" include nil nil [25 48])
+            ("assert.h" include (:system-flag t) nil [50 69])
+            ("iostream" include (:system-flag t) nil [70 89])
+            ("fstream" include (:system-flag t) nil [90 108])
+            ("map" include (:system-flag t) nil [109 123])
+            ("stack" include (:system-flag t) nil [124 140])
+            ("urdf/urdfdom_headers/urdf_model/include/urdf_model/model.h" include (:system-flag t) nil [468 537])
+            ("urdf/urdfdom/urdf_parser/include/urdf_parser/urdf_parser.h" include (:system-flag t) nil [538 607])
+            ("LinkPtr" type
+               (:typedef ("my_shared_ptr" type
+                     (:template-specifier 
+                        ( ("urdf::Link" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [609 651])
+            ("ConstLinkPtr" type
+               (:typedef ("my_shared_ptr" type
+                     (:template-specifier 
+                        ( ("urdf::Link" type (:constant-flag t) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [652 711])
+            ("JointPtr" type
+               (:typedef ("my_shared_ptr" type
+                     (:template-specifier 
+                        ( ("urdf::Joint" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [712 756])
+            ("ModelPtr" type
+               (:typedef ("my_shared_ptr" type
+                     (:template-specifier 
+                        ( ("urdf::ModelInterface" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [757 810])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [820 840])
+            ("RigidBodyDynamics" type
+               (:members 
+                  ( ("Addons" type
+                       (:members 
+                          ( ("Math" using (:type ("Math" type
+                                 (:prototype t
+                                  :type "namespace")
+                                  nil nil)) (reparse-symbol namespacesubparts) [893 914])
+                            ("URDFLinkVector" type
+                               (:typedef ("vector" type
+                                     (:template-specifier 
+                                        ( ("LinkPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [916 955])
+                            ("URDFJointVector" type
+                               (:typedef ("vector" type
+                                     (:template-specifier 
+                                        ( ("JointPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [956 997])
+                            ("URDFLinkMap" type
+                               (:typedef ("map" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil)
+                                          ("LinkPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [998 1040])
+                            ("URDFJointMap" type
+                               (:typedef ("map" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil)
+                                          ("JointPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1041 1085])
+                            ("construct_model" function
+                               (:arguments 
+                                  ( ("rbdl_model" variable
+                                       (:pointer 1
+                                        :type ("Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1109 1127])
+                                    ("urdf_model" variable (:type ("ModelPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1128 1148])
+                                    ("floating_base" variable (:type "bool") (reparse-symbol arg-sub-list) [1149 1168])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [1169 1182]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1087 10402])
+                            ("URDFReadFromFile" function
+                               (:arguments 
+                                  ( ("filename" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [10439 10460])
+                                    ("model" variable
+                                       (:pointer 1
+                                        :type ("Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10461 10474])
+                                    ("floating_base" variable (:type "bool") (reparse-symbol arg-sub-list) [10475 10494])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [10495 10508]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [10416 11069])
+                            ("URDFReadFromString" function
+                               (:arguments 
+                                  ( ("model_xml_string" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [11108 11137])
+                                    ("model" variable
+                                       (:pointer 1
+                                        :type ("Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11138 11151])
+                                    ("floating_base" variable (:type "bool") (reparse-symbol arg-sub-list) [11152 11171])
+                                    ("verbose" variable (:type "bool") (reparse-symbol arg-sub-list) [11172 11185]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [11083 11481]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [873 11484]))                  
+                :type "namespace")
+                nil [842 11487]))          
+      :file "urdfreader.cc"
+      :pointmax 11488
+      :fsize 11487
+      :lastmodtime '(23274 977 0 0)
+      :unmatched-syntax '((symbol 11071 . 11082) (symbol 10404 . 10415)))
+    (semanticdb-table "urdfreader.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RBDL_URDFREADER_H" variable (:constant-flag t) nil [35 52])
+            ("rbdl/rbdl_config.h" include (:system-flag t) nil [54 83])
+            ("RigidBodyDynamics" type
+               (:members 
+                  ( ("Model" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [116 129])
+                    ("Addons" type
+                       (:members 
+                          ( ("URDFReadFromFile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("filename" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [187 208])
+                                    ("model" variable
+                                       (:pointer 1
+                                        :type ("Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [209 222])
+                                    ("floating_base" variable (:type "bool") (reparse-symbol arg-sub-list) [223 242])
+                                    ("verbose" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [243 263]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [164 265])
+                            ("URDFReadFromString" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("model_xml_string" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [305 334])
+                                    ("model" variable
+                                       (:pointer 1
+                                        :type ("Model" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [335 348])
+                                    ("floating_base" variable (:type "bool") (reparse-symbol arg-sub-list) [349 368])
+                                    ("verbose" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [369 389]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [280 391]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [131 393]))                  
+                :type "namespace")
+                nil [85 396]))          
+      :file "urdfreader.h"
+      :pointmax 430
+      :fsize 429
+      :lastmodtime '(23274 977 0 0)
+      :unmatched-syntax '((symbol 268 . 279) (symbol 152 . 163))
+      :lexical-table 
+        '(("RBDL_URDFREADER_H")
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!URDF!Tmp!rbdl-rbdl-0879ee8c548a!addons!urdfreader!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

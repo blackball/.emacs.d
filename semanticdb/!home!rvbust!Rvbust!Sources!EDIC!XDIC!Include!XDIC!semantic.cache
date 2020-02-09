@@ -1,0 +1,306 @@
+;; Object XDIC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "XDIC/"
+  :tables
+  (list
+    (semanticdb-table "CameraStreamer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Json.h" include nil nil [67 84])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [85 114])
+            ("stdint.h" include (:system-flag t) nil [115 134])
+            ("XDIC" type
+               (:members 
+                  ( ("CameraDevice" type
+                       (:members 
+                          ( ("uid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [180 193]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [154 197])
+                    ("CameraDevice_Name" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [229 251]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [199 252])
+                    ("CameraDevice_SerialNumber" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [291 313]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [253 314])
+                    ("CameraStreamer_Init" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [374 400])
+                    ("CameraStreamer_Shutdown" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [465 495])
+                    ("CameraStreamer_ListCameraDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [855 890])
+                            ("flag" variable
+                               (:default-value "0"
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [891 908]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [818 910])
+                    ("CameraStreamer_Config" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Json" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1639 1655]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1613 1656])
+                    ("CameraStreamer_SetOutputQueueSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outsize" variable (:type "int") (reparse-symbol arg-sub-list) [1741 1753]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1703 1754])
+                    ("CameraStreamer_GetOutputQueueSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outsize" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1793 1806]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1755 1807])
+                    ("CameraStreamer_AttachDevice" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2117 2144]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2085 2145])
+                    ("CameraStreamer_AttachDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2179 2220]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2146 2221])
+                    ("CameraStreamer_DettachDevice" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2643 2670]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2610 2671])
+                    ("CameraStreamer_DettachDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2706 2747]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2672 2748])
+                    ("CameraStreamer_DettachAllDevices" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2749 2788])
+                    ("CameraStreamer_StartStreaming" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3017 3053])
+                    ("CameraStreamer_StopStreaming" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3323 3358])
+                    ("CameraStreamer_IsStreaming" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3561 3595])
+                    ("CameraStreamer_ExecuteTrigger" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3911 3947])
+                    ("CameraStreamer_WaitForFrameToBeReady" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4280 4323])
+                    ("CameraStreamer_Retrieve" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("frames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4505 4534]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4477 4535]))                  
+                :type "namespace")
+                nil [136 4538]))          
+      :file "CameraStreamer.h"
+      :pointmax 4558
+      :fsize 4560
+      :lastmodtime '(23874 23214 661359 166000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (STRUCT 4538 . 4544) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "Json.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Json11/json.hpp" include (:system-flag t) nil [67 93])
+            ("XDIC" type
+               (:members 
+                  ( ("Json11::json" variable (:type "int") (reparse-symbol namespacesubparts) [126 139]))                  
+                :type "namespace")
+                nil [95 143]))          
+      :file "Json.h"
+      :pointmax 163
+      :fsize 162
+      :lastmodtime '(23870 29814 289323 912000)
+      :unmatched-syntax '((punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (punctuation 133 . 134) (punctuation 132 . 133) (symbol 126 . 132) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 133 . 134) (punctuation 132 . 133) (symbol 126 . 132) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (punctuation 132 . 133) (punctuation 131 . 132) (symbol 126 . 131) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 132 . 133) (punctuation 131 . 132) (symbol 126 . 131) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 124 . 125) (symbol 119 . 123) (USING 113 . 118) (USING 113 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+
+    (semanticdb-table "LaserDevice.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [68 85])
+            ("stdint.h" include (:system-flag t) nil [86 105])
+            ("XDIC" type
+               (:members 
+                  ( ("LaserDevice" type
+                       (:members 
+                          ( ("uid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [150 163]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [125 166])
+                    ("LaserDevice_Name" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [237 260]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [208 261])
+                    ("LaserDevice_SerialNumber" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [299 322]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [262 323])
+                    ("LaserDevice_ListAll" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("LaserDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [349 383]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [325 384])
+                    ("LaserDevice_CloseAll" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [385 412])
+                    ("LaserDevice_IsOpen" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [438 461]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [414 462])
+                    ("LaserDevice_Open" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [484 507]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [463 508])
+                    ("LaserDevice_Close" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [531 554]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [509 555])
+                    ("LaserDevice_Read" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [698 721])
+                            ("distance" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [722 739]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [677 740]))                  
+                :type "namespace")
+                nil [107 743]))          
+      :file "LaserDevice.h"
+      :pointmax 763
+      :fsize 762
+      :lastmodtime '(23874 26399 542129 532000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55))))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!XDIC!Include!XDIC!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

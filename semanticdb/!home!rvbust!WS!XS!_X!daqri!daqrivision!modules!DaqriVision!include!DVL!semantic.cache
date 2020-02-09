@@ -1,0 +1,591 @@
+;; Object DVL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "DVL/"
+  :tables
+  (list
+    (semanticdb-table "MappedEigen.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/Eigen.h" include (:system-flag t) nil [50 72])
+            ("cstring" include (:system-flag t) nil [73 91])
+            ("DVL" type
+               (:members 
+                  ( ("MappedMatrix" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [466 473])
+                            ("" type
+                               (:members 
+                                  ( ("CompileTimeRows" variable
+                                       (:constant-flag t
+                                        :default-value (515 520)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [497 520])
+                                    ("Dynamic" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [522 530])
+                                    ("CompileTimeCols" variable
+                                       (:constant-flag t
+                                        :default-value (557 562)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [539 562])
+                                    ("Dynamic" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [564 572])
+                                    ("Options" variable
+                                       (:constant-flag t
+                                        :default-value (591 596)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [581 596])
+                                    ("DontAlign" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [598 609])
+                                    ("OPTIONS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [610 623]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [478 624])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [642 660])
+                            ("Eigen::Matrix" variable (:type "int") (reparse-symbol classsubparts) [744 807])
+                            ("Eigen::Map" variable (:type "int") (reparse-symbol classsubparts) [858 874])
+                            ("MappedMatrix" function
+                               (:constructor-flag t
+                                :type ("MappedMatrix" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [945 984])
+                            ("MappedMatrix" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [1093 1102])
+                                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [1103 1112])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :default-value "nullptr"
+                                        :type ("PREC" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1113 1139]))                                  
+                                :type ("MappedMatrix" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1080 1303])
+                            ("MappedMatrix" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MappedMatrix" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1347 1373]))                                  
+                                :type ("MappedMatrix" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1334 1497])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MappedMatrix" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1555 1581]))                                  
+                                :type ("MappedMatrix" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1531 1722])
+                            ("rows" function (:type "int") (reparse-symbol classsubparts) [1784 1842])
+                            ("cols" function (:type "int") (reparse-symbol classsubparts) [1907 1965])
+                            ("size" function (:type "int") (reparse-symbol classsubparts) [2028 2072])
+                            ("resize" function
+                               (:arguments 
+                                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [2181 2190])
+                                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [2191 2200])
+                                    ("setZero" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2201 2221]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2169 2389])
+                            ("assign" function
+                               (:arguments 
+                                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [2479 2488])
+                                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [2489 2498])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("PREC" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2499 2516]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2467 2654])
+                            ("swap" function
+                               (:arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :type ("MappedMatrix" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2701 2721]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2691 3083])
+                            ("sliceRows" function
+                               (:arguments 
+                                  ( ("startRow" variable (:type "int") (reparse-symbol arg-sub-list) [3479 3492])
+                                    ("numRows" variable (:type "int") (reparse-symbol arg-sub-list) [3493 3505]))                                  
+                                :type ("MappedMat" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3459 3572])
+                            ("raw" function
+                               (:constant-flag t
+                                :type ("Raw" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3609 3685])
+                            ("raw" function (:type ("Raw" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3722 3786])
+                            ("mat" function
+                               (:constant-flag t
+                                :type ("MappedMat" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3821 3903])
+                            ("mat" function (:type ("MappedMat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3938 4008])
+                            ("data" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4014 4064])
+                            ("data" function
+                               (:pointer 1
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4070 4108])
+                            ("private" label nil (reparse-symbol classsubparts) [4110 4118])
+                            ("safePtr" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("r" variable
+                                       (:reference 1
+                                        :type ("Raw" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4209 4216]))                                  
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4188 4259])
+                            ("safePtr" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Raw" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4357 4370]))                                  
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4330 4413])
+                            ("checkSize" function (:type "void") (reparse-symbol classsubparts) [4475 4569])
+                            ("mRaw" variable (:type ("Raw" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4575 4584])
+                            ("mMat" variable (:type ("MappedMat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4617 4632]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [445 4678])
+                    ("MappedVector" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5055 5062])
+                            ("" type
+                               (:members 
+                                  ( ("CompileTimeRows" variable
+                                       (:constant-flag t
+                                        :default-value (5104 5111)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5086 5111])
+                                    ("Eigen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5115 5121])
+                                    ("RowMajor" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5122 5132])
+                                    ("Eigen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5137 5143])
+                                    ("Dynamic" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5144 5152])
+                                    ("CompileTimeCols" variable
+                                       (:constant-flag t
+                                        :default-value (5179 5186)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5161 5186])
+                                    ("Eigen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5190 5196])
+                                    ("RowMajor" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5197 5207])
+                                    ("Eigen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5208 5214])
+                                    ("Dynamic" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5215 5224])
+                                    ("Options" variable
+                                       (:constant-flag t
+                                        :default-value (5246 5251)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5236 5251])
+                                    ("DontAlign" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5253 5264])
+                                    ("OPTIONS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5265 5278]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [5067 5279])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [5297 5315])
+                            ("Eigen::Matrix" variable (:type "int") (reparse-symbol classsubparts) [5399 5462])
+                            ("Eigen::Map" variable (:type "int") (reparse-symbol classsubparts) [5513 5529])
+                            ("MappedVector" function
+                               (:constructor-flag t
+                                :type ("MappedVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5600 5636])
+                            ("MappedVector" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [5705 5714]))                                  
+                                :type ("MappedVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5692 5757])
+                            ("MappedVector" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MappedVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5801 5827]))                                  
+                                :type ("MappedVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5788 5918])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MappedVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5976 6002]))                                  
+                                :type ("MappedVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5952 6117])
+                            ("size" function (:type "int") (reparse-symbol classsubparts) [6183 6241])
+                            ("resize" function
+                               (:arguments 
+                                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [6304 6313])
+                                    ("setZero" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [6314 6334]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6292 6489])
+                            ("swap" function
+                               (:arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :type ("MappedVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6535 6555]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6525 6850])
+                            ("slice" function
+                               (:arguments 
+                                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [7200 7210])
+                                    ("numItems" variable (:type "int") (reparse-symbol arg-sub-list) [7211 7224]))                                  
+                                :type ("MappedVec" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7184 7272])
+                            ("raw" function
+                               (:constant-flag t
+                                :type ("Raw" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7309 7385])
+                            ("raw" function (:type ("Raw" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7422 7486])
+                            ("vec" function
+                               (:constant-flag t
+                                :type ("MappedVec" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7521 7603])
+                            ("vec" function (:type ("MappedVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7638 7708])
+                            ("data" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7714 7764])
+                            ("data" function
+                               (:pointer 1
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7770 7808])
+                            ("private" label nil (reparse-symbol classsubparts) [7810 7818])
+                            ("safePtr" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("r" variable
+                                       (:reference 1
+                                        :type ("Raw" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7909 7916]))                                  
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7888 7959])
+                            ("safePtr" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Raw" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8057 8070]))                                  
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8030 8113])
+                            ("checkSize" function (:type "void") (reparse-symbol classsubparts) [8175 8255])
+                            ("mRaw" variable (:type ("Raw" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8261 8270])
+                            ("mVec" variable (:type ("MappedVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8303 8318]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5034 8364])
+                    ("MappedMatrix" variable (:type "int") (reparse-symbol namespacesubparts) [8431 8451])
+                    ("MappedMatrix" variable (:type "int") (reparse-symbol namespacesubparts) [8519 8540])
+                    ("MappedVector" variable (:type "int") (reparse-symbol namespacesubparts) [8617 8637])
+                    ("MappedVector" variable (:type "int") (reparse-symbol namespacesubparts) [8715 8736])
+                    ("MappedVector" variable (:type "int") (reparse-symbol namespacesubparts) [8810 8847])
+                    ("MappedVector" variable (:type "int") (reparse-symbol namespacesubparts) [8922 8960]))                  
+                :type "namespace")
+                nil [93 8963])
+            ("std" type
+               (:members 
+                  ( ("swap" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("A" variable
+                               (:reference 1
+                                :type ("DVL::MappedMatrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("OPTIONS" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9047 9083])
+                            ("B" variable
+                               (:reference 1
+                                :type ("DVL::MappedMatrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("OPTIONS" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9084 9120]))                          )
+                        (reparse-symbol namespacesubparts) [8999 9139])
+                    ("swap" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :type ("DVL::MappedVector" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("OPTIONS" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9189 9225])
+                            ("b" variable
+                               (:reference 1
+                                :type ("DVL::MappedVector" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("OPTIONS" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9226 9262]))                          )
+                        (reparse-symbol namespacesubparts) [9141 9281]))                  
+                :type "namespace")
+                nil [8982 9284]))          
+      :file "MappedEigen.h"
+      :pointmax 9302
+      :fsize 9301
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 8920 . 8921) (symbol 8903 . 8919) (USING 8897 . 8902) (punctuation 8808 . 8809) (symbol 8791 . 8807) (USING 8785 . 8790) (punctuation 8713 . 8714) (symbol 8696 . 8712) (USING 8690 . 8695) (punctuation 8615 . 8616) (symbol 8598 . 8614) (USING 8592 . 8597) (punctuation 8517 . 8518) (symbol 8503 . 8516) (USING 8497 . 8502) (punctuation 8429 . 8430) (symbol 8415 . 8428) (USING 8409 . 8414) (punctuation 5511 . 5512) (symbol 5501 . 5510) (USING 5495 . 5500) (punctuation 5397 . 5398) (symbol 5393 . 5396) (USING 5387 . 5392) (punctuation 5295 . 5296) (symbol 5291 . 5294) (USING 5285 . 5290) (punctuation 5263 . 5264) (punctuation 5252 . 5253) (punctuation 5251 . 5252) (number 5225 . 5226) (punctuation 5223 . 5224) (punctuation 5214 . 5215) (punctuation 5213 . 5214) (punctuation 5206 . 5207) (punctuation 5196 . 5197) (punctuation 5195 . 5196) (punctuation 5188 . 5189) (punctuation 5187 . 5188) (punctuation 5143 . 5144) (punctuation 5142 . 5143) (punctuation 5135 . 5136) (number 5133 . 5134) (punctuation 5131 . 5132) (punctuation 5121 . 5122) (punctuation 5120 . 5121) (punctuation 5113 . 5114) (punctuation 5112 . 5113) (punctuation 5263 . 5264) (punctuation 5252 . 5253) (punctuation 5251 . 5252) (number 5225 . 5226) (punctuation 5223 . 5224) (punctuation 5214 . 5215) (punctuation 5213 . 5214) (punctuation 5206 . 5207) (punctuation 5196 . 5197) (punctuation 5195 . 5196) (punctuation 5188 . 5189) (punctuation 5187 . 5188) (punctuation 5143 . 5144) (punctuation 5142 . 5143) (punctuation 5135 . 5136) (number 5133 . 5134) (punctuation 5131 . 5132) (punctuation 5121 . 5122) (punctuation 5120 . 5121) (punctuation 5113 . 5114) (punctuation 5112 . 5113) (punctuation 5032 . 5033) (symbol 5024 . 5032) (punctuation 5023 . 5024) (punctuation 5022 . 5023) (symbol 5017 . 5022) (punctuation 5015 . 5016) (symbol 5007 . 5014) (INT 5003 . 5006) (punctuation 5001 . 5002) (symbol 4997 . 5001) (TYPENAME 4988 . 4996) (punctuation 4987 . 4988) (TEMPLATE 4978 . 4986) (punctuation 856 . 857) (symbol 846 . 855) (USING 840 . 845) (punctuation 742 . 743) (symbol 738 . 741) (USING 732 . 737) (punctuation 640 . 641) (symbol 636 . 639) (USING 630 . 635) (punctuation 608 . 609) (punctuation 597 . 598) (punctuation 596 . 597) (punctuation 563 . 564) (punctuation 562 . 563) (punctuation 521 . 522) (punctuation 520 . 521) (punctuation 608 . 609) (punctuation 597 . 598) (punctuation 596 . 597) (punctuation 563 . 564) (punctuation 562 . 563) (punctuation 521 . 522) (punctuation 520 . 521) (punctuation 443 . 444) (symbol 435 . 443) (punctuation 434 . 435) (punctuation 433 . 434) (symbol 428 . 433) (punctuation 426 . 427) (symbol 418 . 425) (INT 414 . 417) (punctuation 412 . 413) (symbol 408 . 412) (TYPENAME 399 . 407) (punctuation 398 . 399) (TEMPLATE 389 . 397) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37)))
+    (semanticdb-table "Eigen.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Eigen/Eigen" include (:system-flag t) nil [50 72])
+            ("DVL/System.h" include (:system-flag t) nil [73 96])
+            ("DVL" type
+               (:members 
+                  ( ("Eigen::Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [175 225])
+                    ("Eigen::Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [277 324])
+                    ("Eigen::Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [379 408])
+                    ("Eigen::Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [453 523])
+                    ("Eigen::Map" variable (:type "int") (reparse-symbol namespacesubparts) [588 643])
+                    ("Eigen::Map" variable (:type "int") (reparse-symbol namespacesubparts) [698 747])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [777 795])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [849 869])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [919 940])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [990 1010])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1061 1090])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1139 1167])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1223 1241])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1295 1315])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1365 1386])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1436 1456])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1507 1536])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1585 1613])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1668 1686])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1740 1760])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1810 1831])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1881 1901])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [1952 1981])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2030 2058])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2113 2131])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2185 2205])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2255 2276])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2326 2346])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2397 2426])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2475 2503])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2558 2576])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2630 2650])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2700 2721])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2771 2791])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2842 2871])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [2920 2948])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3003 3021])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3075 3095])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3145 3166])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3216 3236])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3287 3316])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3365 3393])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3448 3466])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3520 3540])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3590 3611])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3661 3681])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3732 3761])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3810 3838])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3895 3916])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [3959 3981])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4040 4060])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4110 4130])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4180 4201])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4251 4271])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4321 4342])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4392 4412])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4462 4483])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4535 4557])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4607 4630])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4679 4700])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4750 4772])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4822 4843])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4893 4915])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [4964 4984])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5034 5055])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5105 5125])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5175 5196])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5246 5266])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5316 5337])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5387 5407])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5457 5478])
+                    ("Matrix" variable (:type "int") (reparse-symbol namespacesubparts) [5556 5577])
+                    ("Matrix15x15" variable (:type "int") (reparse-symbol namespacesubparts) [5600 5620])
+                    ("Matrix15x15" variable (:type "int") (reparse-symbol namespacesubparts) [5671 5690])
+                    ("Eigen::Quaternion" variable (:type "int") (reparse-symbol namespacesubparts) [5793 5835])
+                    ("Quaternion" variable (:type "int") (reparse-symbol namespacesubparts) [5857 5875])
+                    ("Quaternion" variable (:type "int") (reparse-symbol namespacesubparts) [5923 5942])
+                    ("Eigen::AngleAxis" variable (:type "int") (reparse-symbol namespacesubparts) [6066 6089])
+                    ("AngleAxisAligned" variable (:type "int") (reparse-symbol namespacesubparts) [6117 6141])
+                    ("AngleAxisAligned" variable (:type "int") (reparse-symbol namespacesubparts) [6195 6220])
+                    ("vec2raw" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("vec" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6336 6363])
+                            ("raw" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6364 6371]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6284 6442])
+                    ("mat2raw" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil)
+                            ("int" type nil nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("mat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Matrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("ROWS" type nil nil nil)
+                                          ("COLS" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6561 6597])
+                            ("rawMat" variable
+                               (:pointer 1
+                                :type ("PREC" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6598 6611]))                          )
+                        (reparse-symbol namespacesubparts) [6503 6686])
+                    ("raw2vec" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("auto" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6796 6807]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6744 6865])
+                    ("raw2mat" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("auto" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7038 7049]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6976 7178])
+                    ("raw2matCM" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("auto" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7356 7367]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [7292 7431]))                  
+                :type "namespace")
+                nil [98 7433]))          
+      :file "Eigen.h"
+      :pointmax 7433
+      :fsize 7432
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 6193 . 6194) (symbol 6175 . 6192) (USING 6169 . 6174) (punctuation 6115 . 6116) (symbol 6097 . 6114) (USING 6091 . 6096) (punctuation 6064 . 6065) (symbol 6047 . 6063) (USING 6041 . 6046) (punctuation 6039 . 6040) (symbol 6035 . 6039) (TYPENAME 6026 . 6034) (punctuation 6025 . 6026) (TEMPLATE 6016 . 6024) (punctuation 5921 . 5922) (symbol 5909 . 5920) (USING 5903 . 5908) (punctuation 5855 . 5856) (symbol 5843 . 5854) (USING 5837 . 5842) (punctuation 5791 . 5792) (symbol 5780 . 5790) (USING 5774 . 5779) (punctuation 5772 . 5773) (symbol 5768 . 5772) (TYPENAME 5759 . 5767) (punctuation 5758 . 5759) (TEMPLATE 5749 . 5757) (punctuation 5669 . 5670) (symbol 5656 . 5668) (USING 5650 . 5655) (punctuation 5598 . 5599) (symbol 5585 . 5597) (USING 5579 . 5584) (punctuation 5554 . 5555) (symbol 5542 . 5553) (USING 5536 . 5541) (punctuation 5534 . 5535) (symbol 5530 . 5534) (TYPENAME 5521 . 5529) (punctuation 5520 . 5521) (TEMPLATE 5511 . 5519) (punctuation 5455 . 5456) (symbol 5445 . 5454) (USING 5439 . 5444) (punctuation 5385 . 5386) (symbol 5375 . 5384) (USING 5369 . 5374) (punctuation 5314 . 5315) (symbol 5304 . 5313) (USING 5298 . 5303) (punctuation 5244 . 5245) (symbol 5234 . 5243) (USING 5228 . 5233) (punctuation 5173 . 5174) (symbol 5163 . 5172) (USING 5157 . 5162) (punctuation 5103 . 5104) (symbol 5093 . 5102) (USING 5087 . 5092) (punctuation 5032 . 5033) (symbol 5022 . 5031) (USING 5016 . 5021) (punctuation 4962 . 4963) (symbol 4952 . 4961) (USING 4946 . 4951) (punctuation 4891 . 4892) (symbol 4880 . 4890) (USING 4874 . 4879) (punctuation 4820 . 4821) (symbol 4809 . 4819) (USING 4803 . 4808) (punctuation 4748 . 4749) (symbol 4737 . 4747) (USING 4731 . 4736) (punctuation 4677 . 4678) (symbol 4666 . 4676) (USING 4660 . 4665) (punctuation 4605 . 4606) (symbol 4593 . 4604) (USING 4587 . 4592) (punctuation 4533 . 4534) (symbol 4521 . 4532) (USING 4515 . 4520) (punctuation 4460 . 4461) (symbol 4450 . 4459) (USING 4444 . 4449) (punctuation 4390 . 4391) (symbol 4380 . 4389) (USING 4374 . 4379) (punctuation 4319 . 4320) (symbol 4309 . 4318) (USING 4303 . 4308) (punctuation 4249 . 4250) (symbol 4239 . 4248) (USING 4233 . 4238) (punctuation 4178 . 4179) (symbol 4168 . 4177) (USING 4162 . 4167) (punctuation 4108 . 4109) (symbol 4098 . 4107) (USING 4092 . 4097) (punctuation 4038 . 4039) (symbol 4028 . 4037) (USING 4022 . 4027) (punctuation 3957 . 3958) (symbol 3950 . 3956) (USING 3944 . 3949) (punctuation 3893 . 3894) (symbol 3886 . 3892) (USING 3880 . 3885) (punctuation 3808 . 3809) (symbol 3802 . 3807) (USING 3796 . 3801) (punctuation 3730 . 3731) (symbol 3723 . 3729) (USING 3717 . 3722) (punctuation 3659 . 3660) (symbol 3653 . 3658) (USING 3647 . 3652) (punctuation 3588 . 3589) (symbol 3582 . 3587) (USING 3576 . 3581) (punctuation 3518 . 3519) (symbol 3512 . 3517) (USING 3506 . 3511) (punctuation 3446 . 3447) (symbol 3440 . 3445) (USING 3434 . 3439) (punctuation 3363 . 3364) (symbol 3357 . 3362) (USING 3351 . 3356) (punctuation 3285 . 3286) (symbol 3278 . 3284) (USING 3272 . 3277) (punctuation 3214 . 3215) (symbol 3208 . 3213) (USING 3202 . 3207) (punctuation 3143 . 3144) (symbol 3137 . 3142) (USING 3131 . 3136) (punctuation 3073 . 3074) (symbol 3067 . 3072) (USING 3061 . 3066) (punctuation 3001 . 3002) (symbol 2995 . 3000) (USING 2989 . 2994) (punctuation 2918 . 2919) (symbol 2912 . 2917) (USING 2906 . 2911) (punctuation 2840 . 2841) (symbol 2833 . 2839) (USING 2827 . 2832) (punctuation 2769 . 2770) (symbol 2763 . 2768) (USING 2757 . 2762) (punctuation 2698 . 2699) (symbol 2692 . 2697) (USING 2686 . 2691) (punctuation 2628 . 2629) (symbol 2622 . 2627) (USING 2616 . 2621) (punctuation 2556 . 2557) (symbol 2550 . 2555) (USING 2544 . 2549) (punctuation 2473 . 2474) (symbol 2467 . 2472) (USING 2461 . 2466) (punctuation 2395 . 2396) (symbol 2388 . 2394) (USING 2382 . 2387) (punctuation 2324 . 2325) (symbol 2318 . 2323) (USING 2312 . 2317) (punctuation 2253 . 2254) (symbol 2247 . 2252) (USING 2241 . 2246) (punctuation 2183 . 2184) (symbol 2177 . 2182) (USING 2171 . 2176) (punctuation 2111 . 2112) (symbol 2105 . 2110) (USING 2099 . 2104) (punctuation 2028 . 2029) (symbol 2022 . 2027) (USING 2016 . 2021) (punctuation 1950 . 1951) (symbol 1943 . 1949) (USING 1937 . 1942) (punctuation 1879 . 1880) (symbol 1873 . 1878) (USING 1867 . 1872) (punctuation 1808 . 1809) (symbol 1802 . 1807) (USING 1796 . 1801) (punctuation 1738 . 1739) (symbol 1732 . 1737) (USING 1726 . 1731) (punctuation 1666 . 1667) (symbol 1660 . 1665) (USING 1654 . 1659) (punctuation 1583 . 1584) (symbol 1577 . 1582) (USING 1571 . 1576) (punctuation 1505 . 1506) (symbol 1498 . 1504) (USING 1492 . 1497) (punctuation 1434 . 1435) (symbol 1428 . 1433) (USING 1422 . 1427) (punctuation 1363 . 1364) (symbol 1357 . 1362) (USING 1351 . 1356) (punctuation 1293 . 1294) (symbol 1287 . 1292) (USING 1281 . 1286) (punctuation 1221 . 1222) (symbol 1215 . 1220) (USING 1209 . 1214) (punctuation 1137 . 1138) (symbol 1131 . 1136) (USING 1125 . 1130) (punctuation 1059 . 1060) (symbol 1052 . 1058) (USING 1046 . 1051) (punctuation 988 . 989) (symbol 982 . 987) (USING 976 . 981) (punctuation 917 . 918) (symbol 911 . 916) (USING 905 . 910) (punctuation 847 . 848) (symbol 841 . 846) (USING 835 . 840) (punctuation 775 . 776) (symbol 769 . 774) (USING 763 . 768) (punctuation 696 . 697) (symbol 686 . 695) (USING 680 . 685) (punctuation 678 . 679) (symbol 674 . 678) (INT 670 . 673) (punctuation 668 . 669) (symbol 664 . 668) (TYPENAME 655 . 663) (punctuation 654 . 655) (TEMPLATE 645 . 653) (punctuation 586 . 587) (symbol 576 . 585) (USING 570 . 575) (punctuation 568 . 569) (symbol 564 . 568) (INT 560 . 563) (punctuation 558 . 559) (symbol 554 . 558) (INT 550 . 553) (punctuation 548 . 549) (symbol 544 . 548) (TYPENAME 535 . 543) (punctuation 534 . 535) (TEMPLATE 525 . 533) (punctuation 451 . 452) (symbol 441 . 450) (USING 435 . 440) (punctuation 433 . 434) (symbol 429 . 433) (TYPENAME 420 . 428) (punctuation 419 . 420) (TEMPLATE 410 . 418) (punctuation 377 . 378) (symbol 367 . 376) (USING 361 . 366) (punctuation 359 . 360) (symbol 355 . 359) (INT 351 . 354) (punctuation 349 . 350) (symbol 345 . 349) (TYPENAME 336 . 344) (punctuation 335 . 336) (TEMPLATE 326 . 334) (punctuation 275 . 276) (symbol 268 . 274) (USING 262 . 267) (punctuation 260 . 261) (symbol 256 . 260) (INT 252 . 255) (punctuation 250 . 251) (symbol 246 . 250) (TYPENAME 237 . 245) (punctuation 236 . 237) (TEMPLATE 227 . 235) (punctuation 173 . 174) (symbol 166 . 172) (USING 160 . 165) (punctuation 158 . 159) (symbol 154 . 158) (INT 150 . 153) (punctuation 148 . 149) (symbol 144 . 148) (INT 140 . 143) (punctuation 138 . 139) (symbol 134 . 138) (TYPENAME 125 . 133) (punctuation 124 . 125) (TEMPLATE 115 . 123) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37) (punctuation 6193 . 6194) (symbol 6175 . 6192) (USING 6169 . 6174) (punctuation 6115 . 6116) (symbol 6097 . 6114) (USING 6091 . 6096) (punctuation 6064 . 6065) (symbol 6047 . 6063) (USING 6041 . 6046) (punctuation 6039 . 6040) (symbol 6035 . 6039) (TYPENAME 6026 . 6034) (punctuation 6025 . 6026) (TEMPLATE 6016 . 6024) (punctuation 5921 . 5922) (symbol 5909 . 5920) (USING 5903 . 5908) (punctuation 5855 . 5856) (symbol 5843 . 5854) (USING 5837 . 5842) (punctuation 5791 . 5792) (symbol 5780 . 5790) (USING 5774 . 5779) (punctuation 5772 . 5773) (symbol 5768 . 5772) (TYPENAME 5759 . 5767) (punctuation 5758 . 5759) (TEMPLATE 5749 . 5757) (punctuation 5669 . 5670) (symbol 5656 . 5668) (USING 5650 . 5655) (punctuation 5598 . 5599) (symbol 5585 . 5597) (USING 5579 . 5584) (punctuation 5554 . 5555) (symbol 5542 . 5553) (USING 5536 . 5541) (punctuation 5534 . 5535) (symbol 5530 . 5534) (TYPENAME 5521 . 5529) (punctuation 5520 . 5521) (TEMPLATE 5511 . 5519) (punctuation 5455 . 5456) (symbol 5445 . 5454) (USING 5439 . 5444) (punctuation 5385 . 5386) (symbol 5375 . 5384) (USING 5369 . 5374) (punctuation 5314 . 5315) (symbol 5304 . 5313) (USING 5298 . 5303) (punctuation 5244 . 5245) (symbol 5234 . 5243) (USING 5228 . 5233) (punctuation 5173 . 5174) (symbol 5163 . 5172) (USING 5157 . 5162) (punctuation 5103 . 5104) (symbol 5093 . 5102) (USING 5087 . 5092) (punctuation 5032 . 5033) (symbol 5022 . 5031) (USING 5016 . 5021) (punctuation 4962 . 4963) (symbol 4952 . 4961) (USING 4946 . 4951) (punctuation 4891 . 4892) (symbol 4880 . 4890) (USING 4874 . 4879) (punctuation 4820 . 4821) (symbol 4809 . 4819) (USING 4803 . 4808) (punctuation 4748 . 4749) (symbol 4737 . 4747) (USING 4731 . 4736) (punctuation 4677 . 4678) (symbol 4666 . 4676) (USING 4660 . 4665) (punctuation 4605 . 4606) (symbol 4593 . 4604) (USING 4587 . 4592) (punctuation 4533 . 4534) (symbol 4521 . 4532) (USING 4515 . 4520) (punctuation 4460 . 4461) (symbol 4450 . 4459) (USING 4444 . 4449) (punctuation 4390 . 4391) (symbol 4380 . 4389) (USING 4374 . 4379) (punctuation 4319 . 4320) (symbol 4309 . 4318) (USING 4303 . 4308) (punctuation 4249 . 4250) (symbol 4239 . 4248) (USING 4233 . 4238) (punctuation 4178 . 4179) (symbol 4168 . 4177) (USING 4162 . 4167) (punctuation 4108 . 4109) (symbol 4098 . 4107) (USING 4092 . 4097) (punctuation 4038 . 4039) (symbol 4028 . 4037) (USING 4022 . 4027) (punctuation 3957 . 3958) (symbol 3950 . 3956) (USING 3944 . 3949) (punctuation 3893 . 3894) (symbol 3886 . 3892) (USING 3880 . 3885) (punctuation 3808 . 3809) (symbol 3802 . 3807) (USING 3796 . 3801) (punctuation 3730 . 3731) (symbol 3723 . 3729) (USING 3717 . 3722) (punctuation 3659 . 3660) (symbol 3653 . 3658) (USING 3647 . 3652) (punctuation 3588 . 3589) (symbol 3582 . 3587) (USING 3576 . 3581) (punctuation 3518 . 3519) (symbol 3512 . 3517) (USING 3506 . 3511) (punctuation 3446 . 3447) (symbol 3440 . 3445) (USING 3434 . 3439) (punctuation 3363 . 3364) (symbol 3357 . 3362) (USING 3351 . 3356) (punctuation 3285 . 3286) (symbol 3278 . 3284) (USING 3272 . 3277) (punctuation 3214 . 3215) (symbol 3208 . 3213) (USING 3202 . 3207) (punctuation 3143 . 3144) (symbol 3137 . 3142) (USING 3131 . 3136) (punctuation 3073 . 3074) (symbol 3067 . 3072) (USING 3061 . 3066) (punctuation 3001 . 3002) (symbol 2995 . 3000) (USING 2989 . 2994) (punctuation 2918 . 2919) (symbol 2912 . 2917) (USING 2906 . 2911) (punctuation 2840 . 2841) (symbol 2833 . 2839) (USING 2827 . 2832) (punctuation 2769 . 2770) (symbol 2763 . 2768) (USING 2757 . 2762) (punctuation 2698 . 2699) (symbol 2692 . 2697) (USING 2686 . 2691) (punctuation 2628 . 2629) (symbol 2622 . 2627) (USING 2616 . 2621) (punctuation 2556 . 2557) (symbol 2550 . 2555) (USING 2544 . 2549) (punctuation 2473 . 2474) (symbol 2467 . 2472) (USING 2461 . 2466) (punctuation 2395 . 2396) (symbol 2388 . 2394) (USING 2382 . 2387) (punctuation 2324 . 2325) (symbol 2318 . 2323) (USING 2312 . 2317) (punctuation 2253 . 2254) (symbol 2247 . 2252) (USING 2241 . 2246) (punctuation 2183 . 2184) (symbol 2177 . 2182) (USING 2171 . 2176) (punctuation 2111 . 2112) (symbol 2105 . 2110) (USING 2099 . 2104) (punctuation 2028 . 2029) (symbol 2022 . 2027) (USING 2016 . 2021) (punctuation 1950 . 1951) (symbol 1943 . 1949) (USING 1937 . 1942) (punctuation 1879 . 1880) (symbol 1873 . 1878) (USING 1867 . 1872) (punctuation 1808 . 1809) (symbol 1802 . 1807) (USING 1796 . 1801) (punctuation 1738 . 1739) (symbol 1732 . 1737) (USING 1726 . 1731) (punctuation 1666 . 1667) (symbol 1660 . 1665) (USING 1654 . 1659) (punctuation 1583 . 1584) (symbol 1577 . 1582) (USING 1571 . 1576) (punctuation 1505 . 1506) (symbol 1498 . 1504) (USING 1492 . 1497) (punctuation 1434 . 1435) (symbol 1428 . 1433) (USING 1422 . 1427) (punctuation 1363 . 1364) (symbol 1357 . 1362) (USING 1351 . 1356) (punctuation 1293 . 1294) (symbol 1287 . 1292) (USING 1281 . 1286) (punctuation 1221 . 1222) (symbol 1215 . 1220) (USING 1209 . 1214) (punctuation 1137 . 1138) (symbol 1131 . 1136) (USING 1125 . 1130) (punctuation 1059 . 1060) (symbol 1052 . 1058) (USING 1046 . 1051) (punctuation 988 . 989) (symbol 982 . 987) (USING 976 . 981) (punctuation 917 . 918) (symbol 911 . 916) (USING 905 . 910) (punctuation 847 . 848) (symbol 841 . 846) (USING 835 . 840) (punctuation 775 . 776) (symbol 769 . 774) (USING 763 . 768) (punctuation 696 . 697) (symbol 686 . 695) (USING 680 . 685) (punctuation 678 . 679) (symbol 674 . 678) (INT 670 . 673) (punctuation 668 . 669) (symbol 664 . 668) (TYPENAME 655 . 663) (punctuation 654 . 655) (TEMPLATE 645 . 653) (punctuation 586 . 587) (symbol 576 . 585) (USING 570 . 575) (punctuation 568 . 569) (symbol 564 . 568) (INT 560 . 563) (punctuation 558 . 559) (symbol 554 . 558) (INT 550 . 553) (punctuation 548 . 549) (symbol 544 . 548) (TYPENAME 535 . 543) (punctuation 534 . 535) (TEMPLATE 525 . 533) (punctuation 451 . 452) (symbol 441 . 450) (USING 435 . 440) (punctuation 433 . 434) (symbol 429 . 433) (TYPENAME 420 . 428) (punctuation 419 . 420) (TEMPLATE 410 . 418) (punctuation 377 . 378) (symbol 367 . 376) (USING 361 . 366) (punctuation 359 . 360) (symbol 355 . 359) (INT 351 . 354) (punctuation 349 . 350) (symbol 345 . 349) (TYPENAME 336 . 344) (punctuation 335 . 336) (TEMPLATE 326 . 334) (punctuation 275 . 276) (symbol 268 . 274) (USING 262 . 267) (punctuation 260 . 261) (symbol 256 . 260) (INT 252 . 255) (punctuation 250 . 251) (symbol 246 . 250) (TYPENAME 237 . 245) (punctuation 236 . 237) (TEMPLATE 227 . 235) (punctuation 173 . 174) (symbol 166 . 172) (USING 160 . 165) (punctuation 158 . 159) (symbol 154 . 158) (INT 150 . 153) (punctuation 148 . 149) (symbol 144 . 148) (INT 140 . 143) (punctuation 138 . 139) (symbol 134 . 138) (TYPENAME 125 . 133) (punctuation 124 . 125) (TEMPLATE 115 . 123) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37) (punctuation 6193 . 6194) (symbol 6175 . 6192) (USING 6169 . 6174) (punctuation 6115 . 6116) (symbol 6097 . 6114) (USING 6091 . 6096) (punctuation 6064 . 6065) (symbol 6047 . 6063) (USING 6041 . 6046) (punctuation 6039 . 6040) (symbol 6035 . 6039) (TYPENAME 6026 . 6034) (punctuation 6025 . 6026) (TEMPLATE 6016 . 6024) (punctuation 5921 . 5922) (symbol 5909 . 5920) (USING 5903 . 5908) (punctuation 5855 . 5856) (symbol 5843 . 5854) (USING 5837 . 5842) (punctuation 5791 . 5792) (symbol 5780 . 5790) (USING 5774 . 5779) (punctuation 5772 . 5773) (symbol 5768 . 5772) (TYPENAME 5759 . 5767) (punctuation 5758 . 5759) (TEMPLATE 5749 . 5757) (punctuation 5669 . 5670) (symbol 5656 . 5668) (USING 5650 . 5655) (punctuation 5598 . 5599) (symbol 5585 . 5597) (USING 5579 . 5584) (punctuation 5554 . 5555) (symbol 5542 . 5553) (USING 5536 . 5541) (punctuation 5534 . 5535) (symbol 5530 . 5534) (TYPENAME 5521 . 5529) (punctuation 5520 . 5521) (TEMPLATE 5511 . 5519) (punctuation 5455 . 5456) (symbol 5445 . 5454) (USING 5439 . 5444) (punctuation 5385 . 5386) (symbol 5375 . 5384) (USING 5369 . 5374) (punctuation 5314 . 5315) (symbol 5304 . 5313) (USING 5298 . 5303) (punctuation 5244 . 5245) (symbol 5234 . 5243) (USING 5228 . 5233) (punctuation 5173 . 5174) (symbol 5163 . 5172) (USING 5157 . 5162) (punctuation 5103 . 5104) (symbol 5093 . 5102) (USING 5087 . 5092) (punctuation 5032 . 5033) (symbol 5022 . 5031) (USING 5016 . 5021) (punctuation 4962 . 4963) (symbol 4952 . 4961) (USING 4946 . 4951) (punctuation 4891 . 4892) (symbol 4880 . 4890) (USING 4874 . 4879) (punctuation 4820 . 4821) (symbol 4809 . 4819) (USING 4803 . 4808) (punctuation 4748 . 4749) (symbol 4737 . 4747) (USING 4731 . 4736) (punctuation 4677 . 4678) (symbol 4666 . 4676) (USING 4660 . 4665) (punctuation 4605 . 4606) (symbol 4593 . 4604) (USING 4587 . 4592) (punctuation 4533 . 4534) (symbol 4521 . 4532) (USING 4515 . 4520) (punctuation 4460 . 4461) (symbol 4450 . 4459) (USING 4444 . 4449) (punctuation 4390 . 4391) (symbol 4380 . 4389) (USING 4374 . 4379) (punctuation 4319 . 4320) (symbol 4309 . 4318) (USING 4303 . 4308) (punctuation 4249 . 4250) (symbol 4239 . 4248) (USING 4233 . 4238) (punctuation 4178 . 4179) (symbol 4168 . 4177) (USING 4162 . 4167) (punctuation 4108 . 4109) (symbol 4098 . 4107) (USING 4092 . 4097) (punctuation 4038 . 4039) (symbol 4028 . 4037) (USING 4022 . 4027) (punctuation 3957 . 3958) (symbol 3950 . 3956) (USING 3944 . 3949) (punctuation 3893 . 3894) (symbol 3886 . 3892) (USING 3880 . 3885) (punctuation 3808 . 3809) (symbol 3802 . 3807) (USING 3796 . 3801) (punctuation 3730 . 3731) (symbol 3723 . 3729) (USING 3717 . 3722) (punctuation 3659 . 3660) (symbol 3653 . 3658) (USING 3647 . 3652) (punctuation 3588 . 3589) (symbol 3582 . 3587) (USING 3576 . 3581) (punctuation 3518 . 3519) (symbol 3512 . 3517) (USING 3506 . 3511) (punctuation 3446 . 3447) (symbol 3440 . 3445) (USING 3434 . 3439) (punctuation 3363 . 3364) (symbol 3357 . 3362) (USING 3351 . 3356) (punctuation 3285 . 3286) (symbol 3278 . 3284) (USING 3272 . 3277) (punctuation 3214 . 3215) (symbol 3208 . 3213) (USING 3202 . 3207) (punctuation 3143 . 3144) (symbol 3137 . 3142) (USING 3131 . 3136) (punctuation 3073 . 3074) (symbol 3067 . 3072) (USING 3061 . 3066) (punctuation 3001 . 3002) (symbol 2995 . 3000) (USING 2989 . 2994) (punctuation 2918 . 2919) (symbol 2912 . 2917) (USING 2906 . 2911) (punctuation 2840 . 2841) (symbol 2833 . 2839) (USING 2827 . 2832) (punctuation 2769 . 2770) (symbol 2763 . 2768) (USING 2757 . 2762) (punctuation 2698 . 2699) (symbol 2692 . 2697) (USING 2686 . 2691) (punctuation 2628 . 2629) (symbol 2622 . 2627) (USING 2616 . 2621) (punctuation 2556 . 2557) (symbol 2550 . 2555) (USING 2544 . 2549) (punctuation 2473 . 2474) (symbol 2467 . 2472) (USING 2461 . 2466) (punctuation 2395 . 2396) (symbol 2388 . 2394) (USING 2382 . 2387) (punctuation 2324 . 2325) (symbol 2318 . 2323) (USING 2312 . 2317) (punctuation 2253 . 2254) (symbol 2247 . 2252) (USING 2241 . 2246) (punctuation 2183 . 2184) (symbol 2177 . 2182) (USING 2171 . 2176) (punctuation 2111 . 2112) (symbol 2105 . 2110) (USING 2099 . 2104) (punctuation 2028 . 2029) (symbol 2022 . 2027) (USING 2016 . 2021) (punctuation 1950 . 1951) (symbol 1943 . 1949) (USING 1937 . 1942) (punctuation 1879 . 1880) (symbol 1873 . 1878) (USING 1867 . 1872) (punctuation 1808 . 1809) (symbol 1802 . 1807) (USING 1796 . 1801) (punctuation 1738 . 1739) (symbol 1732 . 1737) (USING 1726 . 1731) (punctuation 1666 . 1667) (symbol 1660 . 1665) (USING 1654 . 1659) (punctuation 1583 . 1584) (symbol 1577 . 1582) (USING 1571 . 1576) (punctuation 1505 . 1506) (symbol 1498 . 1504) (USING 1492 . 1497) (punctuation 1434 . 1435) (symbol 1428 . 1433) (USING 1422 . 1427) (punctuation 1363 . 1364) (symbol 1357 . 1362) (USING 1351 . 1356) (punctuation 1293 . 1294) (symbol 1287 . 1292) (USING 1281 . 1286) (punctuation 1221 . 1222) (symbol 1215 . 1220) (USING 1209 . 1214) (punctuation 1137 . 1138) (symbol 1131 . 1136) (USING 1125 . 1130) (punctuation 1059 . 1060) (symbol 1052 . 1058) (USING 1046 . 1051) (punctuation 988 . 989) (symbol 982 . 987) (USING 976 . 981) (punctuation 917 . 918) (symbol 911 . 916) (USING 905 . 910) (punctuation 847 . 848) (symbol 841 . 846) (USING 835 . 840) (punctuation 775 . 776) (symbol 769 . 774) (USING 763 . 768) (punctuation 696 . 697) (symbol 686 . 695) (USING 680 . 685) (punctuation 678 . 679) (symbol 674 . 678) (INT 670 . 673) (punctuation 668 . 669) (symbol 664 . 668) (TYPENAME 655 . 663) (punctuation 654 . 655) (TEMPLATE 645 . 653) (punctuation 586 . 587) (symbol 576 . 585) (USING 570 . 575) (punctuation 568 . 569) (symbol 564 . 568) (INT 560 . 563) (punctuation 558 . 559) (symbol 554 . 558) (INT 550 . 553) (punctuation 548 . 549) (symbol 544 . 548) (TYPENAME 535 . 543) (punctuation 534 . 535) (TEMPLATE 525 . 533) (punctuation 451 . 452) (symbol 441 . 450) (USING 435 . 440) (punctuation 433 . 434) (symbol 429 . 433) (TYPENAME 420 . 428) (punctuation 419 . 420) (TEMPLATE 410 . 418) (punctuation 377 . 378) (symbol 367 . 376) (USING 361 . 366) (punctuation 359 . 360) (symbol 355 . 359) (INT 351 . 354) (punctuation 349 . 350) (symbol 345 . 349) (TYPENAME 336 . 344) (punctuation 335 . 336) (TEMPLATE 326 . 334) (punctuation 275 . 276) (symbol 268 . 274) (USING 262 . 267) (punctuation 260 . 261) (symbol 256 . 260) (INT 252 . 255) (punctuation 250 . 251) (symbol 246 . 250) (TYPENAME 237 . 245) (punctuation 236 . 237) (TEMPLATE 227 . 235) (punctuation 173 . 174) (symbol 166 . 172) (USING 160 . 165) (punctuation 158 . 159) (symbol 154 . 158) (INT 150 . 153) (punctuation 148 . 149) (symbol 144 . 148) (INT 140 . 143) (punctuation 138 . 139) (symbol 134 . 138) (TYPENAME 125 . 133) (punctuation 124 . 125) (TEMPLATE 115 . 123) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37))))
+  :file "!home!rvbust!WS!XS!_X!daqri!daqrivision!modules!DaqriVision!include!DVL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

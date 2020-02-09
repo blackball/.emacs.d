@@ -1,0 +1,83 @@
+;; Object median/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "median/"
+  :tables
+  (list
+    (semanticdb-table "median.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv/cv.h" include (:system-flag t) nil [1 23])
+            ("opencv/highgui.h" include (:system-flag t) nil [24 51])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [52 81])
+            ("vector" include (:system-flag t) nil [82 99])
+            ("time.h" include (:system-flag t) nil [100 117])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [119 138])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [139 159])
+            ("gamma_correction" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [197 206])
+                    ("g" variable (:type "float") (reparse-symbol arg-sub-list) [207 215]))                  
+                :type "void")
+                nil [161 511])
+            ("mdcp_dehaze" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [537 552])
+                    ("out" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [553 562]))                  
+                :type "void")
+                nil [513 2255])
+            ("on_video" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("video_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2278 2301]))                  
+                :type "void")
+                nil [2257 3092])
+            ("on_image" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("imgname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3115 3135]))                  
+                :type "void")
+                nil [3094 3515])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3526 3535])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3536 3549]))                  
+                :type "int")
+                nil [3517 3644]))          
+      :file "median.cpp"
+      :pointmax 3645
+      :fsize 3644
+      :lastmodtime '(23731 1135 693526 280000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Github!havon_dehaze!median!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,47 @@
+;; Object Python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Python/"
+  :tables
+  (list
+    (semanticdb-table "PyCommon.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11/pybind11.h" include (:system-flag t) nil [53 83])
+            ("pybind11/stl.h" include (:system-flag t) nil [84 109])
+            ("pybind11/eigen.h" include (:system-flag t) nil [110 137])
+            ("RVS/Vision/Common/Types.h" include (:system-flag t) nil [138 174])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [176 200])
+            ("RVS::Vision" using (:type ("RVS::Vision" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [202 230])
+            ("Bind_Common" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [264 278]))                  
+                :type "void")
+                nil [232 1056]))          
+      :file "PyCommon.cpp"
+      :pointmax 1057
+      :fsize 1056
+      :lastmodtime '(23778 19633 482164 763000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyVisionTypes.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "PyVisionTypes.cpp"
+      :pointmax 1049
+      :fsize 1048
+      :lastmodtime '(23609 61903 203086 870000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Common!Python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

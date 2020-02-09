@@ -1,0 +1,196 @@
+;; Object DIC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "DIC/"
+  :tables
+  (list
+    (semanticdb-table "DIC.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [67 96])
+            ("XDIC" type
+               (:members 
+                  ( ("DIC2D" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [129 136])
+                            ("DIC2D" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("DIC2D" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [239 247])
+                            ("DIC2D" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [252 269])
+                            ("SetSubsetSize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("subsetsize" variable
+                                       (:default-value "21"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [532 551]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [514 553])
+                            ("SetInitScheme" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("scheme" variable (:type "int") (reparse-symbol arg-sub-list) [815 826]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [797 827])
+                            ("SetReferenceTemplate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("image_template" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1228 1255])
+                                    ("width" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1256 1272])
+                                    ("height" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1273 1290]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1203 1291])
+                            ("SetReferenceTemplate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("image_template" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1321 1351]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1296 1352])
+                            ("GernaterROIChar" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("rects" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("cv::Rect" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1647 1682]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1627 1683])
+                            ("UpdateDetectImage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("image_detect" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2050 2075])
+                                    ("width" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2076 2092])
+                                    ("height" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2093 2110]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2028 2111])
+                            ("UpdateDetectImage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("image_detect" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2138 2166]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2116 2167])
+                            ("RunDIC" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2512 2525])
+                            ("GetResultUV" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("result_size" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2919 2936]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [2893 2937])
+                            ("GetResultXY" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("result_size" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2968 2985]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [2942 2986])
+                            ("GetHeatMap" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("width" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3479 3490])
+                                    ("height" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3491 3503]))                                  
+                                :type "char")
+                                (reparse-symbol classsubparts) [3456 3504])
+                            ("GetHeatMap" function
+                               (:prototype-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3509 3530])
+                            ("GetColorTable" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("cv::Vec3b" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3671 3704])
+                            ("ShowHeatMap" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("show_heatmap" variable (:type "bool") (reparse-symbol arg-sub-list) [3878 3896]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3862 3897])
+                            ("SetHeatRangeValue" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("min" variable (:type "int") (reparse-symbol arg-sub-list) [4185 4193])
+                                    ("max" variable (:type "int") (reparse-symbol arg-sub-list) [4194 4202]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4163 4203])
+                            ("private" label nil (reparse-symbol classsubparts) [4205 4213])
+                            ("Impl" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4218 4230])
+                            ("m_impl" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("Impl" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4235 4265]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [115 4268]))                  
+                :type "namespace")
+                nil [97 4271]))          
+      :file "DIC.h"
+      :pointmax 4273
+      :fsize 4275
+      :lastmodtime '(23888 50621 155330 285000)
+      :unmatched-syntax '((punctuation 4271 . 4272) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (punctuation 4272 . 4273) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55))))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!Include!XDIC!DIC!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

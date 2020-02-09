@@ -1,0 +1,1631 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "StereoViewDlg.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("StereoViewDlg.h" include nil nil [1 27])
+            ("GeneralWaitDlg.h" include nil nil [28 55])
+            ("LoadImagesDlg.h" include nil nil [56 82])
+            ("NxView.h" include nil nil [83 102])
+            ("settings.h" include nil nil [103 124])
+            ("qtColormaps.h" include nil nil [126 150])
+            ("qtMessageBoxes.h" include nil nil [151 178])
+            ("qtThreadControl.h" include nil nil [179 207])
+            ("cameraButton.h" include nil nil [209 234])
+            ("constants.h" include nil nil [236 258])
+            ("nxHelpers.h" include nil nil [259 281])
+            ("helpers.h" include nil nil [282 302])
+            ("loadAssemblyCalibration.h" include nil nil [303 339])
+            ("createVirtualCameraDlg.h" include nil nil [340 375])
+            ("iomanip" include (:system-flag t) nil [377 395])
+            ("iostream" include (:system-flag t) nil [396 415])
+            ("cmath" include (:system-flag t) nil [416 432])
+            ("set" include (:system-flag t) nil [433 447])
+            ("minimumDistanceToPivotPoint" variable
+               (:default-value "10"
+                :type "int")
+                nil [449 492])
+            ("zoomFactor" variable
+               (:default-value "1.1"
+                :type "double")
+                nil [493 523])
+            ("navigationKeys" variable
+               (:default-value "{
+	Qt::Key_W, Qt::Key_A, Qt::Key_S, Qt::Key_D,
+	Qt::Key_Q, Qt::Key_E,
+	Qt::Key_Up, Qt::Key_Down, Qt::Key_Left, Qt::Key_Right,
+	Qt::Key_PageUp, Qt::Key_PageDown }"
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [525 724])
+            ("numpadNavigationKeys" variable
+               (:default-value "{ Qt::Key_2, Qt::Key_4, Qt::Key_6, Qt::Key_8 }"
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [725 815])
+            ("formatCoordinate" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [846 859]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [817 984])
+            ("formatPositionAndAngle" function
+               (:arguments 
+                  ( ("value" variable (:type "double") (reparse-symbol arg-sub-list) [1021 1034])
+                    ("suffix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1035 1061]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [986 1180])
+            ("StereoViewDlg" function
+               (:constructor-flag t
+                :parent "StereoViewDlg"
+                :arguments 
+                  ( ("profile" variable
+                       (:reference 1
+                        :type ("ProfileQObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1211 1235])
+                    ("helper" variable
+                       (:reference 1
+                        :type ("EnsensoToolTipHelper" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1236 1265]))                  
+                :type ("StereoViewDlg" type (:type "class") nil nil))
+                nil [1182 20579])
+            ("openStereoCamera" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("camerasToOpen" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CameraInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20618 20663])
+                    ("loadCache" variable (:type "bool") (reparse-symbol arg-sub-list) [20664 20679])
+                    ("deleteOnClose" variable (:type "bool") (reparse-symbol arg-sub-list) [20680 20699]))                  
+                :type "void")
+                nil [20581 24392])
+            ("setupUiForCameras" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("camerasToOpen" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CameraInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24432 24477]))                  
+                :type "void")
+                nil [24394 26071])
+            ("closeEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QCloseEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26104 26123]))                  
+                :type "void")
+                nil [26073 26240])
+            ("setOriginBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [26242 26541])
+            ("recalibrateBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [26543 26831])
+            ("alignAxisBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [26833 27098])
+            ("alignPlaneBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [27100 27354])
+            ("setPoseManuallyBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [27356 27613])
+            ("clearOriginBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [27615 27789])
+            ("selectPlaneBtnClicked" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [27791 27936])
+            ("resetWorkspaceCalibUI" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [27938 28442])
+            ("setRunMode" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("runMode" variable (:type ("RunMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28475 28491]))                  
+                :type "void")
+                nil [28444 28804])
+            ("closeWindow" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [28806 29844])
+            ("switchRunMode" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [29846 29969])
+            ("stopStartLiveMode" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [29971 30128])
+            ("openRecordDlg" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [30130 30282])
+            ("loadAssemblyCalibration" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [30284 30363])
+            ("unloadAssemblyCalibration" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [30365 30533])
+            ("clearPatternSet" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [30535 30657])
+            ("loadPatternSet" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [30659 38518])
+            ("viewTitleForScene" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("scene" variable
+                       (:pointer 1
+                        :type ("QGraphicsScene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38565 38587]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [38520 38821])
+            ("toolTipForScene" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("scene" variable
+                       (:pointer 1
+                        :type ("QGraphicsScene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38866 38888]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [38823 39251])
+            ("assembleTransformations" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("type" variable (:type ("RotationType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39300 39318])
+                    ("px" variable (:type "double") (reparse-symbol arg-sub-list) [39321 39331])
+                    ("py" variable (:type "double") (reparse-symbol arg-sub-list) [39332 39342])
+                    ("pz" variable (:type "double") (reparse-symbol arg-sub-list) [39343 39353])
+                    ("rx" variable (:type "double") (reparse-symbol arg-sub-list) [39356 39366])
+                    ("ry" variable (:type "double") (reparse-symbol arg-sub-list) [39367 39377])
+                    ("rz" variable (:type "double") (reparse-symbol arg-sub-list) [39378 39388])
+                    ("ra" variable (:type "double") (reparse-symbol arg-sub-list) [39389 39399])
+                    ("tf0" variable
+                       (:reference 1
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39402 39417])
+                    ("tf1" variable
+                       (:reference 1
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39418 39433])
+                    ("tf2" variable
+                       (:reference 1
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39434 39449]))                  
+                :type "void")
+                nil [39253 40529])
+            ("computeCalibrationPose" function
+               (:parent "StereoViewDlg"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [40531 40886])
+            ("calibrateWorkspace" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("liveMode" variable (:type "bool") (reparse-symbol arg-sub-list) [40927 40941])
+                    ("livePreview" variable (:type "bool") (reparse-symbol arg-sub-list) [40942 40959]))                  
+                :type "void")
+                nil [40888 53505])
+            ("retryStoreOnCurrentCamera" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("message" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53553 53580]))                  
+                :type "bool")
+                nil [53507 53858])
+            ("switchViews" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [53860 54960])
+            ("renderCurrentCameraOnly" function
+               (:parent "StereoViewDlg"
+                :type "bool")
+                nil [54962 55154])
+            ("switchToCamera" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("serial" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55191 55217]))                  
+                :type "void")
+                nil [55156 55568])
+            ("cameraChanged" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [55570 57410])
+            ("camButtonClicked" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("button" variable
+                       (:pointer 1
+                        :type ("QAbstractButton" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57449 57473]))                  
+                :type "void")
+                nil [57412 57557])
+            ("updateFlexViewSlider" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [57559 57956])
+            ("updateViewTitles" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [57958 58863])
+            ("updateImageSet" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [58865 59167])
+            ("ensureCamerasConnected" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("showMessage" variable (:type "bool") (reparse-symbol arg-sub-list) [59212 59229]))                  
+                :type "bool")
+                nil [59169 59897])
+            ("imageToPixmap" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("image" variable
+                       (:reference 1
+                        :type ("QImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59936 59950])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [59951 59961])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [59962 59973])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [59974 59980])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [59981 59987]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [59899 60191])
+            ("pixmapFormat" function
+               (:parent "StereoViewDlg"
+                :type ("QImage::Format" type (:type "class") nil nil))
+                nil [60193 60312])
+            ("addToScene" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("scene" variable
+                       (:reference 1
+                        :type ("QGraphicsScene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60345 60367])
+                    ("imageBuf" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60368 60411])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [60412 60422])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [60423 60434])
+                    ("posX" variable (:type "int") (reparse-symbol arg-sub-list) [60435 60444])
+                    ("posY" variable (:type "int") (reparse-symbol arg-sub-list) [60445 60454])
+                    ("colormap" variable
+                       (:pointer 1
+                        :type ("QVector" type
+                             (:template-specifier 
+                                ( ("QRgb" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60455 60479])
+                    ("cacheBuffer" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint32_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60480 60515]))                  
+                :type "void")
+                nil [60314 61548])
+            ("addToScene" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("scene" variable
+                       (:reference 1
+                        :type ("QGraphicsScene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61581 61603])
+                    ("map" variable
+                       (:reference 1
+                        :type ("QPixmap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61604 61617])
+                    ("posX" variable (:type "int") (reparse-symbol arg-sub-list) [61618 61627])
+                    ("posY" variable (:type "int") (reparse-symbol arg-sub-list) [61628 61637]))                  
+                :type "void")
+                nil [61550 61741])
+            ("fitView" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("view" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61771 61792]))                  
+                :type "void")
+                nil [61743 62508])
+            ("greyOutItem" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("QTreeWidgetItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62542 62564]))                  
+                :type "void")
+                nil [62510 62842])
+            ("updateBar" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("QTreeWidgetItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62874 62896])
+                    ("timeElapsed" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [62897 62919]))                  
+                :type "void")
+                nil [62844 63335])
+            ("addCommandTimerInfo" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("command" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63377 63403])
+                    ("time" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [63404 63419])
+                    ("greyed" variable (:type "bool") (reparse-symbol arg-sub-list) [63420 63432]))                  
+                :type "void")
+                nil [63337 64347])
+            ("nonBlockingCommand" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("command" variable
+                       (:reference 1
+                        :type ("NxLibCommand" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64388 64410])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64411 64434])
+                    ("wait" variable (:type "bool") (reparse-symbol arg-sub-list) [64435 64445])
+                    ("accumulateTime" variable (:type "bool") (reparse-symbol arg-sub-list) [64446 64466]))                  
+                :type "void")
+                nil [64349 65249])
+            ("process" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("loadImageSet" variable (:type "bool") (reparse-symbol arg-sub-list) [65279 65297])
+                    ("imageSet" variable (:type "int") (reparse-symbol arg-sub-list) [65298 65311]))                  
+                :type "void")
+                nil [65251 66681])
+            ("updateTimerChart" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("timeElapsed" variable (:type "int") (reparse-symbol arg-sub-list) [66720 66736]))                  
+                :type "void")
+                nil [66683 67624])
+            ("updateColorScale" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [67626 68598])
+            ("drawColorScale" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [68600 69048])
+            ("updateViews" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("rawImagesOnly" variable (:type "bool") (reparse-symbol arg-sub-list) [69082 69101]))                  
+                :type "void")
+                nil [69050 76945])
+            ("updateRenderView" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("showPivotPoint" variable (:type "bool") (reparse-symbol arg-sub-list) [76984 77004]))                  
+                :type "void")
+                nil [76947 78400])
+            ("getPivotPoint" function
+               (:parent "StereoViewDlg"
+                :type ("Point" type (:type "class") nil nil))
+                nil [78402 78926])
+            ("resetPivotPoint" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [78928 79149])
+            ("cameraPosition" function
+               (:parent "StereoViewDlg"
+                :type ("Point" type (:type "class") nil nil))
+                nil [79151 79285])
+            ("cameraDistanceToOrigin" function
+               (:parent "StereoViewDlg"
+                :type "double")
+                nil [79287 79376])
+            ("alterView" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("updateView" variable (:type "bool") (reparse-symbol arg-sub-list) [79408 79424])
+                    ("alterRenderView" variable (:type "bool") (reparse-symbol arg-sub-list) [79425 79446])
+                    ("movementDirection" variable (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79447 79475])
+                    ("stepSize" variable (:type "double") (reparse-symbol arg-sub-list) [79476 79492])
+                    ("rotationDirection" variable (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79493 79521])
+                    ("angle" variable (:type "double") (reparse-symbol arg-sub-list) [79522 79535])
+                    ("originRotation" variable (:type "bool") (reparse-symbol arg-sub-list) [79536 79556])
+                    ("egoRotation" variable (:type "bool") (reparse-symbol arg-sub-list) [79557 79574])
+                    ("zoom" variable (:type "bool") (reparse-symbol arg-sub-list) [79575 79585]))                  
+                :type "void")
+                nil [79378 84407])
+            ("snapAngle" function
+               (:arguments 
+                  ( ("angle" variable (:type "double") (reparse-symbol arg-sub-list) [84426 84439])
+                    ("down" variable (:type "bool") (reparse-symbol arg-sub-list) [84440 84450]))                  
+                :type "double")
+                nil [84409 84815])
+            ("snapViewVertically" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("down" variable (:type "bool") (reparse-symbol arg-sub-list) [84856 84866]))                  
+                :type "void")
+                nil [84817 85727])
+            ("snapViewVerticallyUp" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [85729 85798])
+            ("snapViewVerticallyDown" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [85800 85875])
+            ("snapViewHorizontally" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("right" variable (:type "bool") (reparse-symbol arg-sub-list) [85918 85929]))                  
+                :type "void")
+                nil [85877 86792])
+            ("snapViewHorizontallyLeft" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [86794 86869])
+            ("snapViewHorizontallyRight" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [86871 86951])
+            ("shortenColorRepetitionDistance" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [86953 87109])
+            ("stretchColorRepetitionDistance" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [87111 87261])
+            ("switchColorsSymmetric" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [87263 87369])
+            ("resetColorRepetitionDistance" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [87371 87608])
+            ("resetViewPose" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [87610 87955])
+            ("graphicsViewKeyEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87998 88021])
+                    ("event" variable (:type ("QKeyEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88022 88038]))                  
+                :type "void")
+                nil [87957 90867])
+            ("isNavigationKey" function
+               (:arguments 
+                  ( ("event" variable (:type ("QKeyEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90890 90906]))                  
+                :type "bool")
+                nil [90869 91114])
+            ("graphicsViewKeyDownEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [91161 91184])
+                    ("event" variable (:type ("QKeyEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91185 91201]))                  
+                :type "void")
+                nil [91116 91262])
+            ("graphicsViewKeyUpEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [91307 91330])
+                    ("event" variable (:type ("QKeyEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91331 91347]))                  
+                :type "void")
+                nil [91264 91408])
+            ("pushDeferredScrollEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [91454 91477])
+                    ("event" variable (:type ("QWheelEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91478 91496]))                  
+                :type "void")
+                nil [91410 92453])
+            ("deferredScrollRenderView" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [92455 92531])
+            ("deferredScrollRenderPointMap" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [92533 92617])
+            ("scrollRenderView" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("updateImages" variable (:type "bool") (reparse-symbol arg-sub-list) [92656 92674]))                  
+                :type "void")
+                nil [92619 92853])
+            ("scrollRenderPointMap" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("updateImages" variable (:type "bool") (reparse-symbol arg-sub-list) [92896 92914]))                  
+                :type "void")
+                nil [92855 93085])
+            ("updateMouseToolTip" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [93087 94570])
+            ("graphicsViewMousePressEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94620 94643])
+                    ("event" variable (:type ("QMouseEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94644 94662]))                  
+                :type "void")
+                nil [94572 95792])
+            ("graphicsViewMouseReleaseEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95844 95867])
+                    ("event" variable (:type ("QMouseEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [95868 95886]))                  
+                :type "void")
+                nil [95794 95946])
+            ("graphicsViewMouseMoveEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95995 96018])
+                    ("event" variable (:type ("QMouseEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [96019 96037]))                  
+                :type "void")
+                nil [95948 98449])
+            ("openAoiDlg" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [98451 98592])
+            ("resetAOI" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [98594 98896])
+            ("selectRotationType" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("menuPosition" variable (:type ("QPoint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98945 98965])
+                    ("currentType" variable (:type ("RotationType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98966 98991]))                  
+                :type ("RotationType" type (:type "class") nil nil))
+                nil [98898 99854])
+            ("getCalibPose" function
+               (:parent "StereoViewDlg"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [99856 100519])
+            ("setCalibPose" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("poseAsJson" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100554 100584]))                  
+                :type "void")
+                nil [100521 102719])
+            ("getCalibOffset" function
+               (:parent "StereoViewDlg"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [102721 103381])
+            ("setCalibOffset" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("poseAsJson" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103418 103448]))                  
+                :type "void")
+                nil [103383 105565])
+            ("syncTrackedPatterns" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("patterns" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105607 105633]))                  
+                :type "void")
+                nil [105567 109492])
+            ("writeTrackedPatternsToItem" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("item" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [109541 109563]))                  
+                :type "void")
+                nil [109494 110324])
+            ("updateTrackingPoses" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [110326 115730])
+            ("findChild" function
+               (:pointer 1
+                :arguments 
+                  ( ("root" variable
+                       (:pointer 1
+                        :type ("QTreeWidgetItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115759 115781])
+                    ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115782 115806]))                  
+                :type ("QTreeWidgetItem" type (:type "class") nil nil))
+                nil [115732 116059])
+            ("grabAndProcessImage" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("reprocessOnly" variable (:type "bool") (reparse-symbol arg-sub-list) [116101 116120])
+                    ("loadImageSet" variable (:type "bool") (reparse-symbol arg-sub-list) [116121 116139])
+                    ("imageSet" variable (:type "int") (reparse-symbol arg-sub-list) [116140 116153]))                  
+                :type "void")
+                nil [116061 127170])
+            ("checkMinimumVoltage" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [127172 129327])
+            ("popupMenu" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("view" variable
+                       (:pointer 1
+                        :type ("NxGraphicsView" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129359 129380])
+                    ("event" variable (:type ("QContextMenuEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [129381 129405]))                  
+                :type "void")
+                nil [129329 130186])
+            ("openProfileDlg" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [130188 130299])
+            ("openRenderObjectsDialog" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [130301 130487])
+            ("openSceneWizard" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [130489 130612])
+            ("sceneWizardClosed" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [130614 130863])
+            ("setupCamerasForScene" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [130865 131136])
+            ("addVirtualCamera" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [131138 131921])
+            ("openTreeEdit" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [131923 132006])
+            ("saveLoadAction" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("selectedItem" variable
+                       (:pointer 1
+                        :type ("QAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [132043 132065]))                  
+                :type "void")
+                nil [132008 144515])
+            ("cacheCameraSettings" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [144517 145310])
+            ("cacheGlobalSettings" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [145312 145889])
+            ("loadCachedCameraSettings" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [145936 145960]))                  
+                :type "bool")
+                nil [145891 146825])
+            ("loadCachedGlobalSettings" function
+               (:parent "StereoViewDlg"
+                :type "bool")
+                nil [146827 147547])
+            ("addException" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("symbol" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [147582 147608])
+                    ("message" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [147609 147636]))                  
+                :type "void")
+                nil [147549 147928])
+            ("addException" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("e" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NxLibException" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [147963 147987]))                  
+                :type "bool")
+                nil [147930 148666])
+            ("openDocumentation" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [148668 148924])
+            ("changeDepthViewScene" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [148926 149394])
+            ("aoiPinMoveEvent" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("sender" variable
+                       (:pointer 1
+                        :type ("NxViewPin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [149432 149450])
+                    ("mode" variable (:type ("NxViewPin::MouseMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149451 149477]))                  
+                :type "void")
+                nil [149396 150262])
+            ("updateAOIPinPositions" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [150264 151106])
+            ("updateAOI" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [151108 151492])
+            ("operationModeChanged" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [151494 153894])
+            ("cacheLinkAndDynamicOffsetsForAllCameras" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [153896 154353])
+            ("restoreLinkAndDynamicOffsetsForAllCameras" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [154355 154778])
+            ("disableFlexViewForAllCameras" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [154780 155052])
+            ("cacheFlexViewForAllCameras" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [155054 155411])
+            ("restoreFlexViewForAllCameras" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [155413 155869])
+            ("depthDisplayModeChanged" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [155871 156495])
+            ("mapRangeForwardBackward" function
+               (:arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [156525 156535])
+                    ("maxValue" variable (:type "int") (reparse-symbol arg-sub-list) [156536 156549]))                  
+                :type "int")
+                nil [156497 156762])
+            ("valueToColorIndex" function
+               (:parent "StereoViewDlg"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("z" variable (:type "float") (reparse-symbol arg-sub-list) [156818 156826])
+                    ("offset" variable (:type "float") (reparse-symbol arg-sub-list) [156827 156840])
+                    ("colorRepetitionDistance" variable (:type "float") (reparse-symbol arg-sub-list) [156841 156871]))                  
+                :type "unsigned char")
+                nil [156764 157156])
+            ("getZRange" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("camSerial" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [157188 157216])
+                    ("minZ" variable
+                       (:reference 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [157217 157229])
+                    ("maxZ" variable
+                       (:reference 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [157230 157242]))                  
+                :type "void")
+                nil [157158 159208])
+            ("convertXYZBuffer" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("depthBuffer" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [159250 159288])
+                    ("bufferWidth" variable (:type "int") (reparse-symbol arg-sub-list) [159289 159305])
+                    ("bufferHeight" variable (:type "int") (reparse-symbol arg-sub-list) [159306 159323]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [159210 159954])
+            ("convertGreyXYZBuffer" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("depthBuffer" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [160000 160038])
+                    ("bufferWidth" variable (:type "int") (reparse-symbol arg-sub-list) [160039 160055])
+                    ("bufferHeight" variable (:type "int") (reparse-symbol arg-sub-list) [160056 160073]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [159956 160723])
+            ("convertDisparityBuffer" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("disparityBuffer" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("short" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [160771 160813])
+                    ("bufferWidth" variable (:type "int") (reparse-symbol arg-sub-list) [160814 160830])
+                    ("bufferHeight" variable (:type "int") (reparse-symbol arg-sub-list) [160831 160848]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [160725 163461])
+            ("convertGreyDisparityBuffer" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("disparityBuffer" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("short" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [163513 163555])
+                    ("bufferWidth" variable (:type "int") (reparse-symbol arg-sub-list) [163556 163572])
+                    ("bufferHeight" variable (:type "int") (reparse-symbol arg-sub-list) [163573 163590]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [163463 164239])
+            ("generateScale" function
+               (:parent "StereoViewDlg"
+                :arguments 
+                  ( ("scaleMinValue" variable (:type "float") (reparse-symbol arg-sub-list) [164278 164298])
+                    ("scaleMaxValue" variable (:type "float") (reparse-symbol arg-sub-list) [164299 164319])
+                    ("colorRepetitionDistance" variable (:type "float") (reparse-symbol arg-sub-list) [164320 164350]))                  
+                :type ("QPixmap" type (:type "class") nil nil))
+                nil [164241 166093])
+            ("normalSettingsChanged" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [166095 166269])
+            ("guessDisparityRange" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [166271 167554])
+            ("restoreDisparityDefaults" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [167556 168123])
+            ("restoreMatchingDefaults" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [168125 168766])
+            ("restorePostProcessingDefaults" function
+               (:parent "StereoViewDlg"
+                :type "void")
+                nil [168768 169123]))          
+      :file "StereoViewDlg.cpp"
+      :pointmax 169124
+      :fsize 170134
+      :lastmodtime '(23719 46770 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "loadSettingsDialog.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("loadSettingsDialog.h" include nil nil [1 32])
+            ("qtMessageBoxes.h" include nil nil [34 61])
+            ("constants.h" include nil nil [62 84])
+            ("nxHelpers.h" include nil nil [85 107])
+            ("LoadSettingsDialog" function
+               (:constructor-flag t
+                :parent "LoadSettingsDialog"
+                :arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [148 173])
+                    ("lastDirectory" variable
+                       (:pointer 1
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [174 197])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [198 214])
+                    ("f" variable (:type ("Qt::WindowFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [215 233]))                  
+                :type ("LoadSettingsDialog" type (:type "class") nil nil))
+                nil [109 908])
+            ("execWithFileDialog" function
+               (:parent "LoadSettingsDialog"
+                :type "int")
+                nil [910 1020])
+            ("filename" function
+               (:parent "LoadSettingsDialog"
+                :type ("QString" type (:type "class") nil nil))
+                nil [1022 1103])
+            ("loadLink" function
+               (:parent "LoadSettingsDialog"
+                :type "bool")
+                nil [1105 1180])
+            ("loadCalibration" function
+               (:parent "LoadSettingsDialog"
+                :type "bool")
+                nil [1182 1271])
+            ("loadParameters" function
+               (:parent "LoadSettingsDialog"
+                :type "bool")
+                nil [1273 1360])
+            ("searchFile" function
+               (:parent "LoadSettingsDialog"
+                :type "bool")
+                nil [1362 1770])
+            ("fileChanged" function
+               (:parent "LoadSettingsDialog"
+                :type "void")
+                nil [1772 1873])
+            ("loadParametersFromNode" function
+               (:arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1903 1928])
+                    ("parameters" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NxLibItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1929 1957]))                  
+                :type "void")
+                nil [1875 2421])
+            ("loadJsonSettings" function
+               (:arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2445 2470])
+                    ("json" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2471 2495])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2503 2517])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [2517 2523])
+                    ("" variable (:type ("beforeCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2525 2551])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2566])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [2566 2572])
+                    ("" variable (:type ("afterCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2574 2599])
+                    ("loadLink" variable (:type "bool") (reparse-symbol arg-sub-list) [2607 2621])
+                    ("loadCalibration" variable (:type "bool") (reparse-symbol arg-sub-list) [2622 2643])
+                    ("loadParameters" variable (:type "bool") (reparse-symbol arg-sub-list) [2644 2664]))                  
+                :type "bool")
+                nil [2423 3662])
+            ("loadSettingsDialog" function
+               (:arguments 
+                  ( ("camera" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3688 3713])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3720 3734])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [3734 3740])
+                    ("" variable (:type ("beforeCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3742 3768])
+                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3769 3783])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [3783 3789])
+                    ("" variable (:type ("afterCalibrationCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3791 3816])
+                    ("lastDirectory" variable
+                       (:pointer 1
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3823 3846])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3847 3863]))                  
+                :type "bool")
+                nil [3664 4576]))          
+      :file "loadSettingsDialog.cpp"
+      :pointmax 4577
+      :fsize 4576
+      :lastmodtime '(23719 46770 0 0)
+      :unmatched-syntax '((punctuation 3789 . 3790) (semantic-list 3787 . 3789) (punctuation 3782 . 3783) (punctuation 3740 . 3741) (semantic-list 3738 . 3740) (punctuation 3733 . 3734) (punctuation 2572 . 2573) (semantic-list 2570 . 2572) (punctuation 2565 . 2566) (punctuation 2523 . 2524) (semantic-list 2521 . 2523) (punctuation 2516 . 2517)))
+    (semanticdb-table "calibWizardCalibration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("calibWizardCalibration.h" include nil nil [1 36])
+            ("calibWizard.h" include nil nil [37 61])
+            ("QProgressBar" include (:system-flag t) nil [63 86])
+            ("CalibWizardCalibration" function
+               (:constructor-flag t
+                :parent "CalibWizardCalibration"
+                :arguments 
+                  ( ("calibrationProcesses" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CalibrationProcess" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [135 189])
+                    ("thread" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("BackgroundCalibrationThread" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [190 249])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [250 266]))                  
+                :type ("CalibWizardCalibration" type (:type "class") nil nil))
+                nil [88 2234])
+            ("updateProgress" function
+               (:parent "CalibWizardCalibration"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [2280 2290])
+                    ("stereo" variable (:type "double") (reparse-symbol arg-sub-list) [2291 2305])
+                    ("mono" variable (:type "double") (reparse-symbol arg-sub-list) [2306 2318]))                  
+                :type "void")
+                nil [2236 2554])
+            ("calibFinished" function
+               (:parent "CalibWizardCalibration"
+                :type "void")
+                nil [2556 2732])
+            ("calibrationException" function
+               (:parent "CalibWizardCalibration"
+                :type "void")
+                nil [2734 2822])
+            ("exportPatternBuffer" function
+               (:parent "CalibWizardCalibration"
+                :type "void")
+                nil [2824 2933]))          
+      :file "calibWizardCalibration.cpp"
+      :pointmax 2933
+      :fsize 2932
+      :lastmodtime '(23719 46770 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "CameraSelectorDlg.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CameraSelectorDlg.h" include nil nil [1 31])
+            ("CreateFileCameraDlg.h" include nil nil [33 65])
+            ("CreateStereoCameraDlg.h" include nil nil [66 100])
+            ("createProjectorStereoCameraDlg.h" include nil nil [101 144])
+            ("createVirtualCameraDlg.h" include nil nil [145 180])
+            ("blindIpConfig.h" include nil nil [181 207])
+            ("NxView.h" include nil nil [209 228])
+            ("qtMessageBoxes.h" include nil nil [229 256])
+            ("GeneralWaitDlg.h" include nil nil [257 284])
+            ("nxHelpers.h" include nil nil [285 307])
+            ("ipConfigDlg.h" include nil nil [308 332])
+            ("blackLevelCalibDlg.h" include nil nil [333 364])
+            ("calibWizard.h" include nil nil [365 389])
+            ("exception.h" include nil nil [390 412])
+            ("stringInput.h" include nil nil [413 437])
+            ("cameraInfo.h" include nil nil [438 461])
+            ("settings.h" include nil nil [462 483])
+            ("nxLib.h" include nil nil [588 607])
+            ("iostream" include (:system-flag t) nil [616 635])
+            ("assert.h" include (:system-flag t) nil [636 655])
+            ("iomanip" include (:system-flag t) nil [656 674])
+            ("memory" include (:system-flag t) nil [675 692])
+            ("set" include (:system-flag t) nil [693 707])
+            ("QtConcurrentRun" include (:system-flag t) nil [709 735])
+            ("CameraSelectorDlg.h" include (:system-flag t) nil [736 766])
+            ("itmHideUEyeDriverWarning" variable
+               (:pointer 1
+                :default-value "\"HideUEyeDriverWarning\""
+                :type "char")
+                nil [768 837])
+            ("run" function
+               (:parent "LicenseCheckThread"
+                :type "void")
+                nil [839 1297])
+            ("VersioningThread" function
+               (:destructor-flag t
+                :parent "VersioningThread"
+                :type "void")
+                nil [1299 1349])
+            ("run" function
+               (:parent "VersioningThread"
+                :type "void")
+                nil [1351 1671])
+            ("getInfosFromServer" function
+               (:parent "VersioningThread"
+                :type "void")
+                nil [1673 1795])
+            ("processServerInfos" function
+               (:parent "VersioningThread"
+                :type "void")
+                nil [1797 2253])
+            ("isUpdatable" function
+               (:parent "VersioningThread"
+                :type "bool")
+                nil [2255 2320])
+            ("getCurrentNxLib" function
+               (:parent "VersioningThread"
+                :constant-flag t
+                :type ("VersionInfo" type (:type "class") nil nil))
+                nil [2322 2408])
+            ("getBranchNxLib" function
+               (:parent "VersioningThread"
+                :constant-flag t
+                :type ("VersionInfo" type (:type "class") nil nil))
+                nil [2410 2494])
+            ("getLatestNxLib" function
+               (:parent "VersioningThread"
+                :constant-flag t
+                :type ("VersionInfo" type (:type "class") nil nil))
+                nil [2496 2580])
+            ("getAllVersions" function
+               (:parent "VersioningThread"
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("VersionInfo" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2582 2698])
+            ("areAllVersionsIgnored" function
+               (:parent "VersioningThread"
+                :type "bool")
+                nil [2700 2784])
+            ("extractZipFiles" function
+               (:arguments 
+                  ( ("mime" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QMimeData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2827 2849]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2786 3099])
+            ("CameraSelectorDlg" function
+               (:constructor-flag t
+                :parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("selectCameraForCalTabCalibration" variable (:type "bool") (reparse-symbol arg-sub-list) [3138 3176])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3177 3193]))                  
+                :type ("CameraSelectorDlg" type (:type "class") nil nil))
+                nil [3101 8960])
+            ("changeUpdateBtnAndToolTip" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("generallyUpdateable" variable (:type "bool") (reparse-symbol arg-sub-list) [9012 9037]))                  
+                :type "void")
+                nil [8962 9504])
+            ("CameraSelectorDlg" function
+               (:destructor-flag t
+                :parent "CameraSelectorDlg"
+                :type "void")
+                nil [9506 9611])
+            ("setTcpPort" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [9613 10197])
+            ("itemDoubleClicked" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("QTableWidgetItem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10241 10264]))                  
+                :type "void")
+                nil [10199 10693])
+            ("refreshActions" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [10695 13071])
+            ("openTreeEdit" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("expandedPath" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13110 13142]))                  
+                :type "void")
+                nil [13073 13774])
+            ("reject" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [13776 13811])
+            ("codeMeterLicenseAvailable" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("hasLicense" variable (:type "bool") (reparse-symbol arg-sub-list) [13863 13879]))                  
+                :type "void")
+                nil [13813 14012])
+            ("showEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QShowEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14048 14066]))                  
+                :type "void")
+                nil [14014 14565])
+            ("dragEnterEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QDragEnterEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14606 14629]))                  
+                :type "void")
+                nil [14567 14802])
+            ("dragMoveEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QDragMoveEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14842 14864]))                  
+                :type "void")
+                nil [14804 14958])
+            ("dropEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QDropEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14994 15012]))                  
+                :type "void")
+                nil [14960 15141])
+            ("keyPressEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QKeyEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15181 15198]))                  
+                :type "void")
+                nil [15143 15234])
+            ("keyReleaseEvent" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QKeyEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15276 15293]))                  
+                :type "void")
+                nil [15236 15405])
+            ("autoConfig" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [15407 17731])
+            ("ipConfig" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [17733 18255])
+            ("openNetworkWizard" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [18257 18848])
+            ("updateFirmware" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [18850 19225])
+            ("createStereoCamera" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [19227 19976])
+            ("createProjectorStereoCamera" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [19978 20622])
+            ("openBlackLevelCalibration" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [20624 21236])
+            ("deleteCameras" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [21238 23000])
+            ("createFileCamera" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [23002 23732])
+            ("createVirtualCamera" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [23734 23863])
+            ("refresh" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("force" variable (:type "bool") (reparse-symbol arg-sub-list) [23897 23908]))                  
+                :type "void")
+                nil [23865 27382])
+            ("calibrateStereoCameraBtnClick" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [27384 27479])
+            ("openCalibWizard" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [27481 28104])
+            ("doAction" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("action" variable (:type ("Action" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28139 28153])
+                    ("_serial" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28154 28170]))                  
+                :type "void")
+                nil [28106 29387])
+            ("openFocusModus" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [29389 29475])
+            ("openWithCachedSettings" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [29477 29565])
+            ("openWithDefaultSettings" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [29567 29657])
+            ("openCameraDispatcher" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("forCalibration" variable (:type "bool") (reparse-symbol arg-sub-list) [29704 29724])
+                    ("loadCache" variable (:type "bool") (reparse-symbol arg-sub-list) [29725 29740])
+                    ("focusModus" variable (:type "bool") (reparse-symbol arg-sub-list) [29741 29757]))                  
+                :type "void")
+                nil [29659 30250])
+            ("selectedCameraSerials" function
+               (:parent "CameraSelectorDlg"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [30252 30509])
+            ("openZipCameras" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("files" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30550 30588])
+                    ("addToList" variable (:type "bool") (reparse-symbol arg-sub-list) [30589 30604]))                  
+                :type "void")
+                nil [30511 31949])
+            ("getCameraItem" function
+               (:pointer 1
+                :parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("serial" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32004 32030]))                  
+                :type ("CameraSelectorItem" type (:type "class") nil nil))
+                nil [31951 32341])
+            ("getCameraItemByFileCameraPath" function
+               (:pointer 1
+                :parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("path" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32412 32436]))                  
+                :type ("CameraSelectorItem" type (:type "class") nil nil))
+                nil [32343 32745])
+            ("deleteEepromFiles" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [32747 33225])
+            ("deleteSettingsFiles" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [33227 33651])
+            ("dismissUEyeDriverWarning" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [33653 33921])
+            ("openUpdateNotifierExplicit" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [33923 34113])
+            ("isUpdateNotifierPopupIgnored" function
+               (:parent "CameraSelectorDlg"
+                :type "bool")
+                nil [34115 34489])
+            ("setupAndStartUpdateNotifierAsPopup" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("serverCallSuccessfull" variable (:type "bool") (reparse-symbol arg-sub-list) [34550 34577]))                  
+                :type "void")
+                nil [34491 35306])
+            ("openUpdateNotifierPopup" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [35308 35494])
+            ("isUpdateNotifierProhibited" function
+               (:parent "CameraSelectorDlg"
+                :type "bool")
+                nil [35496 35831])
+            ("openChangelog" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [35833 35940])
+            ("openManual" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [35942 36043])
+            ("openFirstStepsManual" function
+               (:parent "CameraSelectorDlg"
+                :type "void")
+                nil [36045 36183])
+            ("setOfflinePathBase" function
+               (:arguments 
+                  ( ("manualDir" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36209 36232]))                  
+                :type "void")
+                nil [36185 36676])
+            ("generateBaseUrl" function
+               (:arguments 
+                  ( ("changelog" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [36706 36728]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [36678 37259])
+            ("generateFullUrlTo" function
+               (:parent "CameraSelectorDlg"
+                :arguments 
+                  ( ("urlEnd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37303 37329]))                  
+                :type ("QUrl" type (:type "class") nil nil))
+                nil [37261 37606])
+            ("executeFileAsRoot" function
+               (:arguments 
+                  ( ("executablePath" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38470 38504])
+                    ("arguments" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38505 38534]))                  
+                :type "void")
+                nil [38447 39284]))          
+      :file "CameraSelectorDlg.cpp"
+      :pointmax 40090
+      :fsize 40089
+      :lastmodtime '(23719 46770 0 0)
+      :unmatched-syntax nil))
+  :file "!opt!ensenso!development!examples!C++!nxView!NxView!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

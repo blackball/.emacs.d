@@ -1,0 +1,994 @@
+;; Object RobotModel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RobotModel/"
+  :tables
+  (list
+
+    (semanticdb-table "KinBody.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/RobotModel/KinBodyState.h" include (:system-flag t) nil [67 116])
+            ("RVS/Common/PugiXML.h" include (:system-flag t) nil [118 149])
+            ("RVS/Robotics/Common/LoggerMacros.h" include (:system-flag t) nil [150 195])
+            ("RVS/Common/Utils.h" include (:system-flag t) nil [196 225])
+            ("RVS/Robotics/Common/Utils.h" include (:system-flag t) nil [226 264])
+            ("string" include (:system-flag t) nil [267 284])
+            ("vector" include (:system-flag t) nil [285 302])
+            ("iostream" include (:system-flag t) nil [303 322])
+            ("map" include (:system-flag t) nil [323 337])
+            ("unordered_set" include (:system-flag t) nil [338 362])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("g_world_name" variable
+                               (:constant-flag t
+                                :default-value "\"env_world\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [402 447])
+                            ("KinBody" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [448 462])
+                            ("KinBodyPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBody" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [463 507])
+                            ("KinBodyConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBody" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [508 563])
+                            ("KinBodyWeakPtr" type
+                               (:typedef ("std::weak_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBody" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [564 610])
+                            ("Link" type
+                               (:superclasses 
+                                  ( ("std::enable_shared_from_this" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [669 676])
+                                    ("Link" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("kinbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [686 705]))                                          
+                                        :type ("Link" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [681 706])
+                                    ("Link" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [711 727])
+                                    ("GetKinBody" function
+                                       (:typemodifiers ("inline")
+                                        :type ("KinBodyPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [732 796])
+                                    ("GetName" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [802 863])
+                                    ("GetGeometries" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("GeometryInfoPtr" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [869 968])
+                                    ("GetGeometry" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("geometry_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1001 1034]))                                          
+                                        :type ("GeometryInfoPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [973 1035])
+                                    ("GetKinBody" function (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1040 1098])
+                                    ("protected" label nil (reparse-symbol classsubparts) [1101 1111])
+                                    ("m_info" variable (:type ("LinkInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1116 1132])
+                                    ("private" label nil (reparse-symbol classsubparts) [1134 1142])
+                                    ("m_kinbody" variable (:type ("KinBodyWeakPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1147 1172])
+                                    ("KinBody" friend nil (reparse-symbol classsubparts) [1177 1197])
+                                    ("RobotBase" friend nil (reparse-symbol classsubparts) [1203 1225]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [612 1229])
+                            ("LinkPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Link" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1230 1268])
+                            ("LinkConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Link" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1269 1318])
+                            ("LinkWeakPtr" type
+                               (:typedef ("std::weak_ptr" type
+                                     (:template-specifier 
+                                        ( ("Link" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1319 1359])
+                            ("Joint" type
+                               (:superclasses 
+                                  ( ("std::enable_shared_from_this" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1421 1428])
+                                    ("Joint" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("kinbody" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KinBodyPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1439 1465])
+                                            ("type" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("JointType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1466 1488]))                                          
+                                        :type ("Joint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1433 1489])
+                                    ("Joint" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1494 1511])
+                                    ("GetKinBody" function
+                                       (:typemodifiers ("inline")
+                                        :type ("KinBodyPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1516 1586])
+                                    ("GetName" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1592 1659])
+                                    ("GetLocalPose" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1665 1737])
+                                    ("GetAxis" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("CVec3d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1743 1805])
+                                    ("GetJointType" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("JointType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1811 1887])
+                                    ("GetJointLimit" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("JointLimit" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1893 1972])
+                                    ("GetParentLinkName" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1978 2067])
+                                    ("GetChildLinkName" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2073 2160])
+                                    ("GetGearRatio" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2166 2239])
+                                    ("GetGearOffset" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2245 2320])
+                                    ("GetBacklash" function
+                                       (:typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2326 2396])
+                                    ("GetJointIndex" function (:type "int") (reparse-symbol classsubparts) [2402 2453])
+                                    ("protected" label nil (reparse-symbol classsubparts) [2455 2465])
+                                    ("m_info" variable (:type ("JointInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2470 2487])
+                                    ("m_joint_index" variable (:type "int") (reparse-symbol classsubparts) [2492 2510])
+                                    ("private" label nil (reparse-symbol classsubparts) [2541 2549])
+                                    ("m_kinbody" variable (:type ("KinBodyWeakPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2554 2579])
+                                    ("KinBody" friend nil (reparse-symbol classsubparts) [2584 2604])
+                                    ("RobotBase" friend nil (reparse-symbol classsubparts) [2610 2632]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1362 2636])
+                            ("JointPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2637 2677])
+                            ("JointConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2678 2729])
+                            ("JointWeakPtr" type
+                               (:typedef ("std::weak_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2730 2772])
+                            ("KinBody" type
+                               (:superclasses 
+                                  ( ("std::enable_shared_from_this" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2837 2844])
+                                    ("KinBody" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("KinBody" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2849 2859])
+                                    ("KinBody" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2864 2883])
+                                    ("InitFromURDF" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("path" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [2914 2931]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2888 2932])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("linkinfos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("LinkInfoConstPtr" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2955 3002])
+                                            ("jointinfos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("JointInfoConstPtr" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3003 3052]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2937 3053])
+                                    ("GetName" function
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3278 3331])
+                                    ("IsRobot" function
+                                       (:typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3336 3382])
+                                    ("GetJoints" function
+                                       (:constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointPtr" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [3387 3454])
+                                    ("GetLinks" function
+                                       (:constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("LinkPtr" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [3459 3523])
+                                    ("GetJoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("jointname" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3546 3575]))                                          
+                                        :type ("JointPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3528 3582])
+                                    ("GetLink" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("linkname" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3603 3631]))                                          
+                                        :type ("LinkPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3587 3638])
+                                    ("GetOrderedJoints" function
+                                       (:constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointPtr" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [3643 3725])
+                                    ("GetChain" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("start_link" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3744 3774])
+                                            ("end_link" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3775 3803])
+                                            ("contain_joints" variable (:type "bool") (reparse-symbol arg-sub-list) [3804 3824])
+                                            ("contain_links" variable (:type "bool") (reparse-symbol arg-sub-list) [3825 3844])
+                                            ("contain_fixed_joints" variable (:type "bool") (reparse-symbol arg-sub-list) [3845 3871])
+                                            ("chain" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3890 3922]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3730 3923])
+                                    ("ExportURDF" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("path" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [3944 3961]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3928 3962])
+                                    ("SetUserData" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3984 4007])
+                                            ("data" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4008 4025]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3967 4026])
+                                    ("GetUserData" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :default-value "std::string()"
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4055 4093]))                                          
+                                        :type ("UserDataPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4031 4101])
+                                    ("GetDoF" function
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4106 4149])
+                                    ("GetJointLimits" function
+                                       (:prototype-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointLimit" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [4154 4201])
+                                    ("GetJointParentName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4230 4260])
+                                            ("joint_parent" variable
+                                               (:reference 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4261 4287]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4206 4294])
+                                    ("GetJointChildName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4322 4352])
+                                            ("joint_child" variable
+                                               (:reference 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4353 4378]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4299 4385])
+                                    ("GetLinkParentName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("link_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4413 4442])
+                                            ("link_parent" variable
+                                               (:reference 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4443 4468]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4390 4475])
+                                    ("GetLinkChildrenName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("link_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4505 4534])
+                                            ("link_children" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4535 4575]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4480 4582])
+                                    ("GetRootLink" function
+                                       (:prototype-flag t
+                                        :type ("LinkPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4587 4615])
+                                    ("GetTipLink" function
+                                       (:prototype-flag t
+                                        :type ("LinkPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4788 4815])
+                                    ("CheckLinkNameVaild" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("link_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4844 4873]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4820 4880])
+                                    ("CheckJointNameVaild" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4910 4940]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4885 4947])
+                                    ("GetBaseTransfromation" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5077 5120])
+                                    ("SetBaseTransfromation" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("transform" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Mat4d" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5152 5175]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5125 5176])
+                                    ("GetMotorPositions" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5181 5221])
+                                    ("GetJointPositions" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5226 5266])
+                                    ("GetJointVelocities" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5271 5312])
+                                    ("GetJointAccelerations" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5317 5361])
+                                    ("GetJointEfforts" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5366 5404])
+                                    ("SetJointPositions" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("joint_positions" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5432 5462]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5409 5463])
+                                    ("GetJointFramePoses" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("RVS::Common::Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [5468 5534])
+                                    ("GetJointFramePose" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("joint_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5583 5613]))                                          
+                                        :type ("RVS::Common::Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5539 5620])
+                                    ("GetUpdateStamp" function
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5723 5791])
+                                    ("GetControllerMode" function
+                                       (:constant-flag t
+                                        :type ("ControllerMode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5796 5879])
+                                    ("IsRobotConnected" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5885 5960])
+                                    ("IsRealRobotEnabled" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5966 6046])
+                                    ("IsRobotPoweredOn" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6052 6128])
+                                    ("IsEmergencyStopped" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6134 6213])
+                                    ("IsProtectiveStopped" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6219 6300])
+                                    ("IsProgramRunning" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6306 6381])
+                                    ("IsProgramPaused" function
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6387 6460])
+                                    ("protected" label nil (reparse-symbol classsubparts) [6464 6474])
+                                    ("_SharedKinbody" function
+                                       (:typemodifiers ("inline")
+                                        :type ("KinBodyPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6479 6579])
+                                    ("_SharedKinbodyConst" function
+                                       (:typemodifiers ("inline")
+                                        :type ("KinBodyConstPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6584 6706])
+                                    ("m_state" variable (:type ("KinBodyState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6711 6732])
+                                    ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6737 6756])
+                                    ("m_links" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("LinkPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6761 6790])
+                                    ("m_joints" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("JointPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6795 6826])
+                                    ("m_joint_names" variable (:type ("std::unordered_set" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6831 6877])
+                                    ("m_link_names" variable (:type ("std::unordered_set" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6882 6927])
+                                    ("m_ordered_joints" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("JointPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6932 6971])
+                                    ("m_dof" variable (:type "int") (reparse-symbol classsubparts) [6976 6986])
+                                    ("m_userdata_map" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil)
+                                              ("UserDataPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6991 7041])
+                                    ("m_xml_doc" variable (:type ("pugi::xml_document" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7046 7075])
+                                    ("m_file_path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7080 7104])
+                                    ("m_has_xml" variable (:type "bool") (reparse-symbol classsubparts) [7109 7124]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2774 7127]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [381 7129]))                  
+                :type "namespace")
+                nil [365 7153]))          
+      :file "KinBody.h"
+      :pointmax 7170
+      :fsize 7169
+      :lastmodtime '(23837 22668 940181 367000)
+      :unmatched-syntax '((punctuation 6460 . 6461) (punctuation 6381 . 6382) (punctuation 6300 . 6301) (punctuation 6213 . 6214) (punctuation 6128 . 6129) (punctuation 6046 . 6047) (punctuation 5960 . 5961) (punctuation 5879 . 5880) (punctuation 2632 . 2633) (punctuation 2604 . 2605) (punctuation 2396 . 2397) (punctuation 2320 . 2321) (punctuation 2239 . 2240) (punctuation 2160 . 2161) (punctuation 2067 . 2068) (punctuation 1972 . 1973) (punctuation 1887 . 1888) (punctuation 1805 . 1806) (punctuation 1737 . 1738) (punctuation 1659 . 1660) (punctuation 1586 . 1587) (punctuation 1225 . 1226) (punctuation 1197 . 1198) (punctuation 1098 . 1099) (punctuation 863 . 864) (punctuation 796 . 797) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 2632 . 2633) (punctuation 2604 . 2605) (punctuation 2396 . 2397) (punctuation 2320 . 2321) (punctuation 2239 . 2240) (punctuation 2160 . 2161) (punctuation 2067 . 2068) (punctuation 1972 . 1973) (punctuation 1887 . 1888) (punctuation 1805 . 1806) (punctuation 1737 . 1738) (punctuation 1659 . 1660) (punctuation 1586 . 1587) (punctuation 1225 . 1226) (punctuation 1197 . 1198) (punctuation 1098 . 1099) (punctuation 863 . 864) (punctuation 796 . 797) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "KinBodyState.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Types.h" include nil nil [66 84])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::CVec3d" using (:type ("RVS::Common::CVec3d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [124 150])
+                            ("RVS::Common::CVec4d" using (:type ("RVS::Common::CVec4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [151 177])
+                            ("RVS::Common::CVec6d" using (:type ("RVS::Common::CVec6d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [178 204])
+                            ("RVS::Common::Mat4d" using (:type ("RVS::Common::Mat4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [205 230])
+                            ("RVS::Common::MatXd" using (:type ("RVS::Common::MatXd" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [231 256])
+                            ("KinBodyState" type
+                               (:members 
+                                  ( ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [284 303])
+                                    ("m_update_stamp" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [322 345])
+                                    ("m_joint_frame_poses" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("RVS::Common::Mat4d" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [395 447])
+                                    ("T_w_b" variable
+                                       (:default-value "RVS::Common::Mat4d::Identity()"
+                                        :type ("RVS::Common::Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [452 510])
+                                    ("m_active_manipulator_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [565 603])
+                                    ("m_motor_positions" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [609 634])
+                                    ("m_joint_positions" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [639 664])
+                                    ("m_joint_velocities" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [669 695])
+                                    ("m_joint_accelerations" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [700 729])
+                                    ("m_joint_efforts" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [734 757])
+                                    ("is_robot_connected" variable (:type "bool") (reparse-symbol classsubparts) [763 787])
+                                    ("is_real_robot_enabled" variable (:type "bool") (reparse-symbol classsubparts) [792 819])
+                                    ("is_robot_powered_on" variable (:type "bool") (reparse-symbol classsubparts) [824 849])
+                                    ("is_emergency_stopped" variable (:type "bool") (reparse-symbol classsubparts) [854 880])
+                                    ("is_protective_stopped" variable (:type "bool") (reparse-symbol classsubparts) [885 912])
+                                    ("is_program_running" variable (:type "bool") (reparse-symbol classsubparts) [917 941])
+                                    ("is_program_paused" variable (:type "bool") (reparse-symbol classsubparts) [946 969])
+                                    ("controller_mode" variable (:type ("ControllerMode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [974 1005]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [258 1008])
+                            ("KinBodyStatePtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBodyState" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1010 1064])
+                            ("KinBodyStateConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBodyState" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1065 1130]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [103 1205]))                  
+                :type "namespace")
+                nil [87 1229]))          
+      :file "KinBodyState.h"
+      :pointmax 1246
+      :fsize 1245
+      :lastmodtime '(23837 22668 944181 349000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "Types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Eigen.h" include (:system-flag t) nil [67 96])
+            ("RVS/Robotics/Common/Types.h" include (:system-flag t) nil [97 135])
+            ("RVS/Robotics/Types/JointLimit.h" include (:system-flag t) nil [136 178])
+            ("memory" include (:system-flag t) nil [180 197])
+            ("string" include (:system-flag t) nil [198 215])
+            ("math.h" include (:system-flag t) nil [216 233])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::CVec3d" using (:type ("RVS::Common::CVec3d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [272 298])
+                            ("RVS::Common::Mat4d" using (:type ("RVS::Common::Mat4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [299 324])
+                            ("JointType" type
+                               (:members 
+                                  ( ("JointType_Fixed" variable
+                                       (:constant-flag t
+                                        :default-value (365 366)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [347 366])
+                                    ("JointType_Revolute" variable
+                                       (:constant-flag t
+                                        :default-value (393 394)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [372 394])
+                                    ("JointType_Continuous" variable
+                                       (:constant-flag t
+                                        :default-value (423 424)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [400 424])
+                                    ("JointType_Prismatic" variable
+                                       (:constant-flag t
+                                        :default-value (452 453)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [430 453])
+                                    ("JointType_Unknown" variable
+                                       (:constant-flag t
+                                        :default-value (479 480)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [459 480]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [326 483])
+                            ("GeometryType" type
+                               (:members 
+                                  ( ("GeometryType_None" variable
+                                       (:constant-flag t
+                                        :default-value (530 531)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [510 531])
+                                    ("GeometryType_Mesh" variable
+                                       (:constant-flag t
+                                        :default-value (557 558)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [537 558])
+                                    ("GeometryType_Sphere" variable
+                                       (:constant-flag t
+                                        :default-value (586 587)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [564 587])
+                                    ("GeometryType_Box" variable
+                                       (:constant-flag t
+                                        :default-value (612 613)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [593 613])
+                                    ("GeometryType_Cylinder" variable
+                                       (:constant-flag t
+                                        :default-value (643 644)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [619 644]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [486 648])
+                            ("ControllerMode" type
+                               (:members 
+                                  ( ("ControllerMode_Unknown" variable
+                                       (:constant-flag t
+                                        :default-value (784 786)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [759 786])
+                                    ("ControllerMode_Manual" variable
+                                       (:constant-flag t
+                                        :default-value (816 817)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [792 817])
+                                    ("ControllerMode_Auto" variable
+                                       (:constant-flag t
+                                        :default-value (845 846)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [823 846])
+                                    ("ControllerMode_HandGuiding" variable
+                                       (:constant-flag t
+                                        :default-value (881 882)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [852 882]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [733 885])
+                            ("UserData" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [904 911])
+                                    ("UserData" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [916 938]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [887 941])
+                            ("UserDataPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("UserData" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [942 988])
+                            ("UserDataWeakPtr" type
+                               (:typedef ("std::weak_ptr" type
+                                     (:template-specifier 
+                                        ( ("UserData" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [989 1037])
+                            ("GeometryInfo" type
+                               (:members 
+                                  ( ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1065 1084])
+                                    ("m_geometry_type" variable (:type ("GeometryType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1089 1118])
+                                    ("m_path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1123 1142])
+                                    ("m_pose" variable (:type ("Mat4d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1147 1160])
+                                    ("m_geometry_data" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1165 1201]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1039 1204])
+                            ("GeometryInfoPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("GeometryInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1205 1259])
+                            ("GeometryInfoConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("GeometryInfo" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1260 1325])
+                            ("LinkInfo" type
+                               (:members 
+                                  ( ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1349 1368])
+                                    ("m_geometry_info" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("GeometryInfoPtr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1373 1418]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1327 1421])
+                            ("LinkInfoPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("LinkInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1422 1468])
+                            ("LinkInfoConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("LinkInfo" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1469 1526])
+                            ("JointInfo" type
+                               (:members 
+                                  ( ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1551 1570])
+                                    ("m_local_pose" variable (:type ("Mat4d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1575 1594])
+                                    ("m_axis" variable (:type ("CVec3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1599 1613])
+                                    ("m_joint_type" variable (:type ("JointType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1618 1641])
+                                    ("m_joint_limit" variable (:type ("JointLimit" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1646 1671])
+                                    ("m_parent_link_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1676 1707])
+                                    ("m_child_link_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1712 1742])
+                                    ("m_gear_ratio" variable (:type "double") (reparse-symbol classsubparts) [1748 1768])
+                                    ("m_gear_offset" variable (:type "double") (reparse-symbol classsubparts) [1842 1863])
+                                    ("m_backlash" variable (:type "double") (reparse-symbol classsubparts) [1868 1886]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1528 2090])
+                            ("JointInfoPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("JointInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2091 2139])
+                            ("JointInfoConstPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("JointInfo" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2140 2199]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [251 2202]))                  
+                :type "namespace")
+                nil [235 2226]))          
+      :file "Types.h"
+      :pointmax 2243
+      :fsize 2242
+      :lastmodtime '(23837 22668 944181 349000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!RobotModel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

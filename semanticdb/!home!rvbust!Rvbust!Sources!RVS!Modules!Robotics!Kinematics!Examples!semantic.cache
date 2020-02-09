@@ -1,0 +1,126 @@
+;; Object Examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Examples/"
+  :tables
+  (list
+    (semanticdb-table "TestOpswKin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Kinematics/OpswKinematicsPlugin.h" include (:system-flag t) nil [53 110])
+            ("RVS::Robotics" using (:type ("RVS::Robotics" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [112 142])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [143 163])
+            ("main" function (:type "int") nil [164 1792]))          
+      :file "TestOpswKin.cpp"
+      :pointmax 1793
+      :fsize 1736
+      :lastmodtime '(23837 22668 944181 349000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TestCeresIKin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Kinematics/CeresIKinematics.h" include (:system-flag t) nil [55 108])
+            ("RVS/Common/Random.h" include (:system-flag t) nil [109 139])
+            ("RVS/Robotics/Common/Utils.h" include (:system-flag t) nil [140 178])
+            ("fstream" include (:system-flag t) nil [180 198])
+            ("iostream" include (:system-flag t) nil [221 240])
+            ("RVS/Common/Timer.h" include (:system-flag t) nil [244 273])
+            ("RVS::Robotics" using (:type ("RVS::Robotics" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [278 308])
+            ("RVS::Robotics::PoE" using (:type ("RVS::Robotics::PoE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [309 344])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [345 365])
+            ("main" function (:type "int") nil [366 4898]))          
+      :file "TestCeresIKin.cpp"
+      :pointmax 4899
+      :fsize 4898
+      :lastmodtime '(23837 24892 292750 176000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TestCrash.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Eigen.h" include (:system-flag t) nil [54 83])
+            ("iostream" include (:system-flag t) nil [84 103])
+            ("vector" include (:system-flag t) nil [104 121])
+            ("string" include (:system-flag t) nil [122 139])
+            ("RVS::Common" using (:type ("RVS::Common" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [140 168])
+            ("State" type
+               (:members 
+                  ( ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [190 209])
+                    ("m_update_stamp" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [228 251])
+                    ("m_joint_frame_poses" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Mat4d" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [301 340])
+                    ("T_w_b" variable
+                       (:default-value "Mat4d::Identity()"
+                        :type ("Mat4d" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [345 377])
+                    ("m_active_manipulator_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [432 470])
+                    ("m_motor_positions" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [476 501])
+                    ("m_joint_positions" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [506 531])
+                    ("m_joint_velocities" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [536 562])
+                    ("m_joint_accelerations" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [567 596])
+                    ("m_joint_efforts" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [601 624])
+                    ("is_robot_connected" variable (:type "bool") (reparse-symbol classsubparts) [630 654])
+                    ("is_real_robot_enabled" variable (:type "bool") (reparse-symbol classsubparts) [659 686])
+                    ("is_robot_powered_on" variable (:type "bool") (reparse-symbol classsubparts) [691 716])
+                    ("is_emergency_stopped" variable (:type "bool") (reparse-symbol classsubparts) [721 747])
+                    ("is_protective_stopped" variable (:type "bool") (reparse-symbol classsubparts) [752 779])
+                    ("is_program_running" variable (:type "bool") (reparse-symbol classsubparts) [784 808])
+                    ("is_program_paused" variable (:type "bool") (reparse-symbol classsubparts) [813 836]))                  
+                :type "struct")
+                nil [171 839])
+            ("g_state" variable (:type ("State" type (:type "class") nil nil)) nil [841 855])
+            ("Object" type
+               (:members 
+                  ( ("Process" function
+                       (:arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CVecXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [895 911]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [882 1007])
+                    ("Init" function (:type "void") (reparse-symbol classsubparts) [1013 1133])
+                    ("m_state" variable (:type ("State" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1143 1157]))                  
+                :type "struct")
+                nil [858 1161])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1173 1182])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1183 1196]))                  
+                :type "int")
+                nil [1164 1246]))          
+      :file "TestCrash.cpp"
+      :pointmax 1247
+      :fsize 1246
+      :lastmodtime '(23837 40796 806970 666000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Kinematics!Examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

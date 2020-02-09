@@ -1,0 +1,401 @@
+;; Object Algorithm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Algorithm/"
+  :tables
+  (list
+    (semanticdb-table "RANSAC.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/Eigen.h" include (:system-flag t) nil [50 72])
+            ("DVL/Container/Span.h" include (:system-flag t) nil [73 104])
+            ("random" include (:system-flag t) nil [105 122])
+            ("unordered_set" include (:system-flag t) nil [123 147])
+            ("DVL" type
+               (:members 
+                  ( ("RANSACTool" type
+                       (:members 
+                          ( ("calcNumIterations" function
+                               (:typemodifiers ("static" "inline")
+                                :arguments 
+                                  ( ("successProbability" variable (:type "double") (reparse-symbol arg-sub-list) [370 396])
+                                    ("inlierRatio" variable (:type "double") (reparse-symbol arg-sub-list) [397 416])
+                                    ("modelSize" variable (:type "int") (reparse-symbol arg-sub-list) [417 431]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [331 568]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [166 571])
+                    ("UniformSampling" type
+                       (:members 
+                          ( ("Sampler" type
+                               (:template 
+                                  ( ("INDEX_TYPE" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [4793 4803])
+                                    ("IndexType" variable
+                                       (:default-value "INDEX_TYPE"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4818 4841])
+                                    ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [4872 4895])
+                                    ("ConstScalarSpan" variable (:type "int") (reparse-symbol classsubparts) [4924 4951])
+                                    ("Sampler" function
+                                       (:constructor-flag t
+                                        :type ("Sampler" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4961 4992])
+                                    ("start" function
+                                       (:arguments 
+                                          ( ("numItems" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5070 5086])
+                                            ("verificationSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5087 5111]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5059 5342])
+                                    ("ensureIndices" function
+                                       (:arguments 
+                                          ( ("numIndices" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5492 5510]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5473 5871])
+                                    ("getHypothesisIndices" function
+                                       (:arguments 
+                                          ( ("numIndices" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5966 5984]))                                          
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5933 6354])
+                                    ("getVerificationIndices" function
+                                       (:arguments 
+                                          ( ("numIndices" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6451 6469]))                                          
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6416 6768])
+                                    ("private" label nil (reparse-symbol classsubparts) [6774 6782])
+                                    ("generateShuffledIndices" function (:type "void") (reparse-symbol classsubparts) [6836 7284])
+                                    ("mShuffledIndices" variable (:type ("IndicesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7294 7325])
+                                    ("mHypoIndices" variable (:type ("IndicesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7401 7428])
+                                    ("mRandomEngine" variable (:type ("std::default_random_engine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7553 7594])
+                                    ("mNumItems" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7622 7643])
+                                    ("mVerificationSize" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7718 7747])
+                                    ("mIdx" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7824 7840]))                                  )
+                                (reparse-symbol classsubparts) [4734 7928]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [4705 7931])
+                    ("GuidedSampling" type
+                       (:members 
+                          ( ("Sampler" type
+                               (:template 
+                                  ( ("INDEX_TYPE" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("ConstScalarSpan" variable (:type "int") (reparse-symbol classsubparts) [8118 8139])
+                                    ("public" label nil (reparse-symbol classsubparts) [8145 8152])
+                                    ("setPriorities" function
+                                       (:arguments 
+                                          ( ("priorities" variable (:type ("PrioritiesSpan" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8578 8604]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [8559 8786])
+                                    ("protected" label nil (reparse-symbol classsubparts) [8792 8802])
+                                    ("IndexType" variable
+                                       (:default-value "INDEX_TYPE"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [8817 8840])
+                                    ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [8871 8894])
+                                    ("ConstScalarSpan" variable (:type "int") (reparse-symbol classsubparts) [8923 8950])
+                                    ("Sampler" function
+                                       (:constructor-flag t
+                                        :type ("Sampler" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8960 8991])
+                                    ("start" function
+                                       (:arguments 
+                                          ( ("numItems" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9069 9085])
+                                            ("verificationSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9086 9110]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9058 9367])
+                                    ("ensureIndices" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9517 9539]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9498 9653])
+                                    ("getHypothesisIndices" function
+                                       (:arguments 
+                                          ( ("numIndices" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9748 9766]))                                          
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [9715 10103])
+                                    ("getVerificationIndices" function
+                                       (:arguments 
+                                          ( ("numIndices" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10200 10218]))                                          
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10165 10869])
+                                    ("private" label nil (reparse-symbol classsubparts) [10875 10883])
+                                    ("mHypothesisIndices" variable (:type ("IndicesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10892 10925])
+                                    ("mVerificationIndices" variable (:type ("IndicesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11036 11071])
+                                    ("mRandomEngine" variable (:type ("std::default_random_engine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11171 11212])
+                                    ("mDistribution" variable (:type ("std::discrete_distribution" type
+                                         (:template-specifier 
+                                            ( ("IndexType" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [11251 11303])
+                                    ("mSelectedIndices" variable (:type ("std::unordered_set" type
+                                         (:template-specifier 
+                                            ( ("IndexType" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [11342 11389])
+                                    ("mNumItems" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11452 11473])
+                                    ("mVerificationSize" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11559 11588])
+                                    ("mNumPriorities" variable
+                                       (:default-value "0"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11676 11702]))                                  )
+                                (reparse-symbol classsubparts) [8032 11780]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [8004 11783]))                  
+                :type "namespace")
+                nil [149 11786]))          
+      :file "RANSAC.h"
+      :pointmax 11804
+      :fsize 11803
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "MeanShift.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/Eigen.h" include (:system-flag t) nil [86 108])
+            ("EPSILON" variable (:constant-flag t) nil [118 125])
+            ("CLUSTER_EPSILON" variable (:constant-flag t) nil [141 156])
+            ("DVL" type
+               (:members 
+                  ( ("Cluster" type
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("mode" variable (:type ("DVL::Matrix" type
+                                 (:template-specifier 
+                                    ( ("PREC" type nil nil nil)
+                                      ("SIZE" type nil nil nil)
+                                      ("1"))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [421 453])
+                            ("originalPoints" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DVL::Matrix" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [506 561])
+                            ("shiftedPoints" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("DVL::Matrix" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [589 643]))                          )
+                        (reparse-symbol namespacesubparts) [365 672])
+                    ("MeanShift" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [837 844])
+                            ("cluster" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Cluster" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1550 1604])
+                                    ("kernelBandWidth" variable (:type "double") (reparse-symbol arg-sub-list) [1605 1628]))                                  )
+                                (reparse-symbol classsubparts) [1470 1795])
+                            ("labelPoints" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("unsigned short" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2403 2457])
+                                    ("kernelBandWidth" variable (:type "double") (reparse-symbol arg-sub-list) [2458 2481]))                                  )
+                                (reparse-symbol classsubparts) [2324 2638])
+                            ("private" label nil (reparse-symbol classsubparts) [2640 2648])
+                            ("euclideanDistance" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "double"
+                                :arguments 
+                                  ( ("pointA" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DVL::Matrix" type
+                                             (:template-specifier 
+                                                ( ("PREC" type nil nil nil)
+                                                  ("SIZE" type nil nil nil)
+                                                  ("1"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3519 3560])
+                                    ("pointB" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DVL::Matrix" type
+                                             (:template-specifier 
+                                                ( ("PREC" type nil nil nil)
+                                                  ("SIZE" type nil nil nil)
+                                                  ("1"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3561 3602]))                                  )
+                                (reparse-symbol classsubparts) [3455 3708])
+                            ("gaussianKernel" function
+                               (:arguments 
+                                  ( ("distance" variable (:type "double") (reparse-symbol arg-sub-list) [4117 4133])
+                                    ("kernelBandWidth" variable (:type "double") (reparse-symbol arg-sub-list) [4134 4157]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [4095 4263])
+                            ("shiftPoint" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("DVL::Matrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("SIZE" type nil nil nil)
+                                          ("1"))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("point" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DVL::Matrix" type
+                                             (:template-specifier 
+                                                ( ("PREC" type nil nil nil)
+                                                  ("SIZE" type nil nil nil)
+                                                  ("1"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4885 4925])
+                                    ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4926 4980])
+                                    ("kernelBandWidth" variable (:type "double") (reparse-symbol arg-sub-list) [4981 5004]))                                  )
+                                (reparse-symbol classsubparts) [4799 5769])
+                            ("meanshift" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("DVL::Matrix" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6329 6383])
+                                    ("kernelBandWidth" variable (:type "double") (reparse-symbol arg-sub-list) [6384 6407]))                                  )
+                                (reparse-symbol classsubparts) [6240 7452])
+                            ("internalCluster" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Cluster" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8001 8055])
+                                    ("shiftedPoints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8056 8117]))                                  )
+                                (reparse-symbol classsubparts) [7904 8876])
+                            ("internalLabel" function
+                               (:template 
+                                  ( ("PREC" type (:type "class") nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("unsigned short" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("shiftedPoints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DVL::Matrix" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9371 9432]))                                  )
+                                (reparse-symbol classsubparts) [9290 9941]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [819 9945]))                  
+                :type "namespace")
+                nil [163 9963]))          
+      :file "MeanShift.h"
+      :pointmax 9984
+      :fsize 9983
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 3008 . 3009) (DELETE 3002 . 3008) (punctuation 3000 . 3001) (semantic-list 2986 . 2999) (symbol 2977 . 2986) (punctuation 2997 . 2998) (punctuation 2898 . 2899) (DELETE 2892 . 2898) (punctuation 2890 . 2891) (semantic-list 2871 . 2889) (punctuation 2870 . 2871) (OPERATOR 2862 . 2870) (punctuation 2860 . 2861) (symbol 2851 . 2860) (punctuation 2751 . 2752) (DELETE 2745 . 2751) (punctuation 2743 . 2744) (semantic-list 2718 . 2742) (symbol 2709 . 2718) (punctuation 898 . 899) (DEFAULT 891 . 898) (punctuation 889 . 890) (semantic-list 886 . 888) (symbol 877 . 886) (symbol 81 . 85) (symbol 74 . 80) (punctuation 73 . 74))
+      :lexical-table 
+        '(("EPSILON" . ((number "0.0001" 126 . 132)))
+          ("CLUSTER_EPSILON" . ((number "0.05" 157 . 161)))
+          )
+))
+  :file "!home!rvbust!WS!XS!_X!daqri!daqrivision!modules!DaqriVision!include!DVL!Algorithm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

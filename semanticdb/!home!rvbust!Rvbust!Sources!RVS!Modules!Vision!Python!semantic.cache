@@ -1,0 +1,366 @@
+;; Object Python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Python/"
+  :tables
+  (list
+    (semanticdb-table "PyVision.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11/pybind11.h" include (:system-flag t) nil [68 98])
+            ("RVS" type
+               (:members 
+                  ( ("PyVision" type
+                       (:members 
+                          ( ("py" type
+                               (:kind alias
+                                :members 
+                                  ( ("pybind11" type (:type "namespace") nil nil))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [139 163])
+                            ("Bind_Common" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [182 196]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [165 197])
+                            ("Bind_Cameras" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [216 230]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [198 231])
+                            ("Bind_ELSD" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [248 262]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [233 263])
+                            ("Bind_LSD" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [278 292]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [264 293])
+                            ("Bind_SubpixelEdgeDetector" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [325 339]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [294 340])
+                            ("Bind_Voter2dPre" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [363 377]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [342 378])
+                            ("Bind_SIFTDetector" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [402 416]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [379 417])
+                            ("Bind_Misc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("py::module" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [433 447]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [418 448]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [117 522]))                  
+                :type "namespace")
+                nil [100 547]))          
+      :file "PyVision.h"
+      :pointmax 565
+      :fsize 564
+      :lastmodtime '(23879 39934 808980 364000)
+      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+    (semanticdb-table "PyVision.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS::PyVision" using (:type ("RVS::PyVision" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [77 107])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("PyVision" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [125 134])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [135 137]))                  
+                :type "int")
+                nil [109 412]))          
+      :file "PyVision.cpp"
+      :pointmax 413
+      :fsize 412
+      :lastmodtime '(23879 39954 25033 924000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyCameras.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("pybind11/stl.h" include (:system-flag t) nil [77 102])
+            ("pybind11/functional.h" include (:system-flag t) nil [103 135])
+            ("RVS/Vision/Cameras/ICamera.h" include (:system-flag t) nil [137 176])
+            ("RVS/Common/PybindExt.h" include (:system-flag t) nil [177 210])
+            ("RVS::Vision::CameraStatus" using (:type ("RVS::Vision::CameraStatus" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [212 244])
+            ("RVS::Vision::ICamera" using (:type ("RVS::Vision::ICamera" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [245 272])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [530 554])
+            ("Bind_Cameras" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [590 604]))                  
+                :type "void")
+                nil [557 3356]))          
+      :file "PyCameras.cpp"
+      :pointmax 3357
+      :fsize 3356
+      :lastmodtime '(23876 293 468434 831000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyCommon.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [77 107])
+            ("pybind11/stl.h" include (:system-flag t) nil [108 133])
+            ("pybind11/eigen.h" include (:system-flag t) nil [134 161])
+            ("RVS/Common/Eigen.h" include (:system-flag t) nil [162 191])
+            ("RVS/Vision/Common/Types.h" include (:system-flag t) nil [192 228])
+            ("RVS/Common/FmtExt.h" include (:system-flag t) nil [229 259])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [261 285])
+            ("Bind_Common" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [339 353]))                  
+                :type "void")
+                nil [307 8350]))          
+      :file "PyCommon.cpp"
+      :pointmax 8370
+      :fsize 8369
+      :lastmodtime '(23876 1408 104935 621000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyELSD.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS/Vision/Features/ELSD.h" include (:system-flag t) nil [76 113])
+            ("fmt/format.h" include (:system-flag t) nil [114 137])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [138 168])
+            ("pybind11/complex.h" include (:system-flag t) nil [169 198])
+            ("pybind11/stl.h" include (:system-flag t) nil [199 224])
+            ("pybind11/stl_bind.h" include (:system-flag t) nil [225 255])
+            ("pybind11/functional.h" include (:system-flag t) nil [256 288])
+            ("pybind11/eigen.h" include (:system-flag t) nil [289 316])
+            ("pybind11/numpy.h" include (:system-flag t) nil [317 344])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [347 371])
+            ("RVS::Vision" using (:type ("RVS::Vision" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [617 645])
+            ("Bind_ELSD" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [677 691]))                  
+                :type "void")
+                nil [647 2434]))          
+      :file "PyELSD.cpp"
+      :pointmax 2435
+      :fsize 2434
+      :lastmodtime '(23879 39090 62217 778000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyPlaneEstimator.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS/Vision/Features/PlaneEstimator.h" include (:system-flag t) nil [77 124])
+            ("RVS/Vision/Common/LoggerUtils.h" include (:system-flag t) nil [125 167])
+            ("RVS/Common/FmtExt.h" include (:system-flag t) nil [168 198])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [199 229])
+            ("pybind11/complex.h" include (:system-flag t) nil [230 259])
+            ("pybind11/stl.h" include (:system-flag t) nil [260 285])
+            ("pybind11/stl_bind.h" include (:system-flag t) nil [286 316])
+            ("pybind11/functional.h" include (:system-flag t) nil [317 349])
+            ("pybind11/eigen.h" include (:system-flag t) nil [350 377])
+            ("pybind11/numpy.h" include (:system-flag t) nil [378 405])
+            ("RVS::Vision" using (:type ("RVS::Vision" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [407 435])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [437 461])
+            ("Bind_PlaneEstimator" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [503 517]))                  
+                :type "void")
+                nil [463 2531]))          
+      :file "PyPlaneEstimator.cpp"
+      :pointmax 2532
+      :fsize 2531
+      :lastmodtime '(23865 45934 667097 235000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyOpenCV.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS/Vision/Features/ELSD.h" include (:system-flag t) nil [76 113])
+            ("fmt/format.h" include (:system-flag t) nil [114 137])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [138 168])
+            ("pybind11/complex.h" include (:system-flag t) nil [169 198])
+            ("pybind11/stl.h" include (:system-flag t) nil [199 224])
+            ("pybind11/stl_bind.h" include (:system-flag t) nil [225 255])
+            ("pybind11/functional.h" include (:system-flag t) nil [256 288])
+            ("pybind11/eigen.h" include (:system-flag t) nil [289 316])
+            ("pybind11/numpy.h" include (:system-flag t) nil [317 344])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [345 374])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [376 400])
+            ("Bind_OpenCV" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [463 477]))                  
+                :type "void")
+                nil [431 486]))          
+      :file "PyOpenCV.cpp"
+      :pointmax 487
+      :fsize 486
+      :lastmodtime '(23857 38486 968666 565000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyLSD.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS/Vision/Features/LSD.h" include (:system-flag t) nil [76 112])
+            ("fmt/format.h" include (:system-flag t) nil [113 136])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [137 167])
+            ("pybind11/complex.h" include (:system-flag t) nil [168 197])
+            ("pybind11/stl.h" include (:system-flag t) nil [198 223])
+            ("pybind11/stl_bind.h" include (:system-flag t) nil [224 254])
+            ("pybind11/functional.h" include (:system-flag t) nil [255 287])
+            ("pybind11/eigen.h" include (:system-flag t) nil [288 315])
+            ("pybind11/numpy.h" include (:system-flag t) nil [316 343])
+            ("RVS/Common/PybindExt.h" include (:system-flag t) nil [344 376])
+            ("RVS/Vision/Common/LoggerUtils.h" include (:system-flag t) nil [377 419])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [421 445])
+            ("Bind_LSD" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [476 490]))                  
+                :type "void")
+                nil [447 2141]))          
+      :file "PyLSD.cpp"
+      :pointmax 2142
+      :fsize 2141
+      :lastmodtime '(23876 2619 682019 451000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PySubpixelEdgeDetector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PyVision.h" include nil nil [54 75])
+            ("RVS/Vision/Features/SubpixelEdgeDetector.h" include (:system-flag t) nil [76 129])
+            ("fmt/format.h" include (:system-flag t) nil [130 153])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [154 184])
+            ("pybind11/complex.h" include (:system-flag t) nil [185 214])
+            ("pybind11/stl.h" include (:system-flag t) nil [215 240])
+            ("pybind11/stl_bind.h" include (:system-flag t) nil [241 271])
+            ("pybind11/functional.h" include (:system-flag t) nil [272 304])
+            ("pybind11/eigen.h" include (:system-flag t) nil [305 332])
+            ("pybind11/numpy.h" include (:system-flag t) nil [333 360])
+            ("RVS/Common/PybindExt.h" include (:system-flag t) nil [361 393])
+            ("py" type
+               (:kind alias
+                :members 
+                  ( ("pybind11" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [395 419])
+            ("Bind_SubpixelEdgeDetector" function
+               (:parent "RVS::PyVision"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [467 481]))                  
+                :type "void")
+                nil [421 1093]))          
+      :file "PySubpixelEdgeDetector.cpp"
+      :pointmax 1094
+      :fsize 1093
+      :lastmodtime '(23880 988 817455 709000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Vision!Python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

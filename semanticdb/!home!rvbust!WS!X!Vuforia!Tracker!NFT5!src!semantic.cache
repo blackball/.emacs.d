@@ -1,0 +1,531 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "FeaturesExtractorScale.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("NFT5/FeaturesExtractorScale.h" include (:system-flag t) nil [484 524])
+            ("NFT5" type
+               (:members 
+                  ( ("FeaturesExtractorScale" function
+                       (:constructor-flag t
+                        :parent "FeaturesExtractorScale"
+                        :type ("FeaturesExtractorScale" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [546 844])
+                    ("init" function
+                       (:parent "FeaturesExtractorScale"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [847 1038])
+                    ("extract" function
+                       (:parent "FeaturesExtractorScale"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1078 1107])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescS::FeatureDBVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1108 1142])
+                            ("nTargetId" variable (:type ("TargetId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1143 1162]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1041 1698])
+                    ("createFromImageInternal" function
+                       (:template 
+                          ( ("FASTHESSIAN" type (:type "class") nil nil)
+                            ("INTERESTPOINTS" type (:type "class") nil nil)
+                            ("FEATURE" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1966 1995])
+                            ("nThreshold" variable (:type "float") (reparse-symbol arg-sub-list) [1996 2013])
+                            ("nFastHessian" variable
+                               (:reference 1
+                                :type ("FASTHESSIAN" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2014 2040])
+                            ("nInterestPoints" variable
+                               (:reference 1
+                                :type ("INTERESTPOINTS" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2041 2073])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("FEATURE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2122 2161])
+                            ("nCenter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2162 2182])
+                            ("nScale" variable (:type ("Float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2183 2196]))                          
+                        :parent "FeaturesExtractorScale")
+                        (reparse-symbol namespacesubparts) [1838 4757]))                  
+                :type "namespace")
+                nil [527 6020]))          
+      :file "FeaturesExtractorScale.cpp"
+      :pointmax 6040
+      :fsize 6205
+      :lastmodtime '(22112 24704 203780 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "FeaturesExtractorFAST.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("NFT5/FeaturesExtractorFAST.h" include (:system-flag t) nil [484 523])
+            ("NFT5/Logger.h" include (:system-flag t) nil [524 548])
+            ("NFT5/Tool.h" include (:system-flag t) nil [549 571])
+            ("AR/CV/Image/ImageIO.h" include (:system-flag t) nil [572 604])
+            ("AR/CV/Image/ImageOps.h" include (:system-flag t) nil [605 638])
+            ("AR/CV/Image/Blur.h" include (:system-flag t) nil [639 668])
+            ("AR/CV/HarrisCorner.h" include (:system-flag t) nil [669 700])
+            ("AR/CV/Image/Draw.h" include (:system-flag t) nil [701 730])
+            ("AR/CV/Image/ImageIO.h" include (:system-flag t) nil [731 763])
+            ("AR/CV/Image/BitMask.h" include (:system-flag t) nil [764 796])
+            ("AR/Common/Timing.h" include (:system-flag t) nil [797 826])
+            ("AR/Common/Macros.h" include (:system-flag t) nil [827 856])
+            ("stdio.h" include (:system-flag t) nil [857 875])
+            ("FastCV/fastcv.h" include (:system-flag t) nil [877 903])
+            ("FEF_BENCH" variable (:constant-flag t) nil [913 922])
+            ("AT_BEGIN" variable (:constant-flag t) nil [951 959])
+            ("AT_END" variable (:constant-flag t) nil [985 991])
+            ("NFT5" type
+               (:members 
+                  ( ("checkAlignment" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("nFeat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("DescF::FeatureCam" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1108 1139]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1081 1433])
+                    ("FeaturesExtractorFAST" function
+                       (:constructor-flag t
+                        :parent "FeaturesExtractorFAST"
+                        :type ("FeaturesExtractorFAST" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1436 1850])
+                    ("reset" function
+                       (:parent "FeaturesExtractorFAST"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1853 2380])
+                    ("extract" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2418 2447])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescF::FeatureDBVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2448 2482])
+                            ("nTargetId" variable (:type ("TargetId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2483 2502])
+                            ("numOptimalCorners" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2503 2531])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2564 2592])
+                            ("nScores" variable
+                               (:pointer 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2593 2626]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2382 5739])
+                    ("extractMultiFrame" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage0" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5788 5818])
+                            ("nImage1" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5819 5849])
+                            ("nImage2" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5850 5880])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5881 5910])
+                            ("nNumFeatures" variable (:type "int") (reparse-symbol arg-sub-list) [5952 5969])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescF::FeatureCamVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5970 6005])
+                            ("nExState" variable
+                               (:reference 1
+                                :type ("MultiFrame::ExtractionStage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6006 6044])
+                            ("nTimeBudget" variable
+                               (:reference 1
+                                :type ("MultiFrame::TimeBudget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6045 6081]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5742 10730])
+                    ("extractMultiFrameInternal" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10787 10816])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescF::FeatureCamVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10817 10852])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10853 10882])
+                            ("nScale" variable (:type "int") (reparse-symbol arg-sub-list) [10883 10894])
+                            ("nNumFeatures" variable (:type "int") (reparse-symbol arg-sub-list) [10895 10912])
+                            ("nReport" variable
+                               (:reference 1
+                                :type ("LevelReport" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10962 10983])
+                            ("nExLevel" variable
+                               (:reference 1
+                                :type ("MultiFrame::ExtractionLevel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10984 11022])
+                            ("nTimeBudget" variable
+                               (:reference 1
+                                :type ("MultiFrame::TimeBudget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11023 11059]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10733 21242])
+                    ("getOptimalNumFeatures" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21294 21323]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [21245 21815])
+                    ("extract" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage0" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21854 21884])
+                            ("nImage1" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21885 21915])
+                            ("nImage2" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21916 21946])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21978 22007])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [22008 22029])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescF::FeatureCamVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22030 22065])
+                            ("fastScores" variable
+                               (:pointer 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [22066 22102]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [21818 25251])
+                    ("extractInternal" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25299 25328])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25329 25358])
+                            ("nNumFeatures" variable (:type "int") (reparse-symbol arg-sub-list) [25359 25376])
+                            ("nScale" variable (:type "int") (reparse-symbol arg-sub-list) [25377 25388])
+                            ("nFeatures" variable
+                               (:reference 1
+                                :type ("DescF::FeatureCamVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25428 25463])
+                            ("nReport" variable
+                               (:reference 1
+                                :type ("LevelReport" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25464 25485])
+                            ("fastScores" variable
+                               (:pointer 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [25486 25522]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [25255 33280])
+                    ("report" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nReport" variable
+                               (:reference 1
+                                :type ("AR::Common::String" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33318 33346]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [33283 34875])
+                    ("getKeypoints" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nImage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34919 34948])
+                            ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34949 34978])
+                            ("corners" variable
+                               (:reference 1
+                                :type ("AR::CV::FAST::Vec2IVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34979 35014])
+                            ("scores" variable
+                               (:reference 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35015 35047])
+                            ("barrier" variable (:type "int") (reparse-symbol arg-sub-list) [35048 35060])
+                            ("maxCornerRatio" variable (:type "float") (reparse-symbol arg-sub-list) [35061 35082]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [34878 36218])
+                    ("filterKeypointsWithMask" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nMask" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36273 36301])
+                            ("nKptScale" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec2F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36302 36335])
+                            ("corners" variable
+                               (:reference 1
+                                :type ("AR::CV::FAST::Vec2IVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36336 36371])
+                            ("scores" variable
+                               (:reference 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36372 36404]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [36221 37097])
+                    ("filterKeypoints" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("corners" variable
+                               (:reference 1
+                                :type ("AR::CV::FAST::Vec2IVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37143 37178])
+                            ("scores" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37179 37217])
+                            ("nCount" variable (:type "int") (reparse-symbol arg-sub-list) [37218 37229])
+                            ("outFastScores" variable
+                               (:pointer 1
+                                :type ("AR::Common::Vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37230 37268]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [37100 37780])
+                    ("findOrientation" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Region" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37827 37849])
+                            ("nAngle" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [37850 37862])
+                            ("nMinStrength" variable (:type "int") (reparse-symbol arg-sub-list) [37863 37880]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [37783 40592])
+                    ("copyRotated" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Region" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [40635 40657])
+                            ("nPatch" variable
+                               (:reference 1
+                                :type ("Patch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [40658 40672])
+                            ("nOri" variable (:type "int") (reparse-symbol arg-sub-list) [40673 40682]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [40595 42353])
+                    ("copyRotatedLUT" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Region" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42399 42421])
+                            ("nPatch" variable
+                               (:reference 1
+                                :type ("Patch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42422 42436])
+                            ("nOri" variable (:type "int") (reparse-symbol arg-sub-list) [42437 42446])
+                            ("nSqueezed" variable (:type "bool") (reparse-symbol arg-sub-list) [42447 42462]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [42356 43892])
+                    ("getNormFactor" function
+                       (:arguments 
+                          ( ("nMaxVal" variable (:type "int") (reparse-symbol arg-sub-list) [43914 43926])
+                            ("nNormFact" variable
+                               (:reference 1
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [43927 43944]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [43895 43980])
+                    ("getNormFactor" function
+                       (:arguments 
+                          ( ("nMaxVal" variable (:type "int") (reparse-symbol arg-sub-list) [44002 44014])
+                            ("nNormFact" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [44015 44033]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [43983 44068])
+                    ("getNormFactor" function
+                       (:arguments 
+                          ( ("nMaxVal" variable (:type "int") (reparse-symbol arg-sub-list) [44090 44102])
+                            ("nNormFact" variable
+                               (:reference 1
+                                :type ("AR::Math::Fx32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44103 44129]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [44071 44276])
+                    ("createDescriptor" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nPatch" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Patch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44324 44344])
+                            ("nDescriptor" variable
+                               (:reference 1
+                                :type ("DescF::DescriptorChar" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44345 44380]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [44279 48252])
+                    ("maskFeatureCount" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nMask" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48299 48328])
+                            ("nNumFeatures" variable (:type "int") (reparse-symbol arg-sub-list) [48329 48346]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [48255 48615])
+                    ("init" function
+                       (:parent "FeaturesExtractorFAST"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [48618 51812])
+                    ("fillRotationLUT" function
+                       (:parent "FeaturesExtractorFAST"
+                        :arguments 
+                          ( ("nOri" variable (:type "int") (reparse-symbol arg-sub-list) [51859 51868])
+                            ("nSamples" variable
+                               (:reference 1
+                                :type ("RotationSamples" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [51869 51895])
+                            ("nFactorY" variable (:type "float") (reparse-symbol arg-sub-list) [51896 51911]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [51815 53465])
+                    ("print_findOrientation" function
+                       (:parent "FeaturesExtractorFAST"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [53468 54654]))                  
+                :type "namespace")
+                nil [1062 54658]))          
+      :file "FeaturesExtractorFAST.cpp"
+      :pointmax 54678
+      :fsize 56135
+      :lastmodtime '(22112 24704 199779 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FEF_BENCH")
+          ("AT_END" (spp-arg-list ("x") 991 . 994) . 
+              ((symbol "x" 996 . 997) (punctuation "." 997 . 998) (symbol "end" 998 . 1001) (semantic-list "()" 1001 . 1003) (punctuation ";" 1003 . 1004)))
+          ("AT_BEGIN" (spp-arg-list ("x") 959 . 962) . 
+              ((symbol "x" 964 . 965) (punctuation "." 965 . 966) (symbol "begin" 966 . 971) (semantic-list "()" 971 . 973) (punctuation ";" 973 . 974)))
+          )
+))
+  :file "!home!rvbust!WS!X!Vuforia!Tracker!NFT5!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

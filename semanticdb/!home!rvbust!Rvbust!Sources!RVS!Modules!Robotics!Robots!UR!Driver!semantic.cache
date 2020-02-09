@@ -1,0 +1,464 @@
+;; Object Driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Driver/"
+  :tables
+  (list
+    (semanticdb-table "UR5.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Robots/UR/Driver/UrDriver.h" include (:system-flag t) nil [54 105])
+            ("RVS/Robotics/Robots/UR/Kinematics/URKinematics.h" include (:system-flag t) nil [106 165])
+            ("RVS/Robotics/Robots/UR/Driver/UR5.h" include (:system-flag t) nil [166 212])
+            ("RVS/Common/NetworkUtils.h" include (:system-flag t) nil [214 250])
+            ("RVS/Common/Logger.h" include (:system-flag t) nil [289 319])
+            ("RVS/Common/Types.h" include (:system-flag t) nil [320 349])
+            ("Eigen/Core" include (:system-flag t) nil [350 371])
+            ("RVS/Robotics/Trajectory/Trajectory.h" include (:system-flag t) nil [373 420])
+            ("RVS/Robotics/Trajectory/Path.h" include (:system-flag t) nil [421 462])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("RVS::Common::CVecXd" using (:type ("RVS::Common::CVecXd" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [502 528])
+                            ("RVS::Common::Mat4d" using (:type ("RVS::Common::Mat4d" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [529 554])
+                            ("Impl" type
+                               (:parent "UR5"
+                                :members 
+                                  ( ("log" variable (:type ("RVS::Common::Logger::Ptr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [580 609])
+                                    ("robot" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("UrDriver" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [615 647])
+                                    ("rt_msg_cond" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [652 688])
+                                    ("msg_cond" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [693 726])
+                                    ("joint_names" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [731 768])
+                                    ("kin_solver" variable (:type ("UR5Kinematics" type (:type "class") nil nil)) (reparse-symbol classsubparts) [774 799])
+                                    ("acc_ratio" variable (:type "double") (reparse-symbol classsubparts) [805 833])
+                                    ("vel_ratio" variable (:type "double") (reparse-symbol classsubparts) [805 833])
+                                    ("servoj_time" variable (:type "double") (reparse-symbol classsubparts) [838 857])
+                                    ("is_connected" variable (:type "bool") (reparse-symbol classsubparts) [862 880])
+                                    ("in_goal" variable (:type "bool") (reparse-symbol classsubparts) [885 898])
+                                    ("dof" variable (:type "int") (reparse-symbol classsubparts) [903 911])
+                                    ("joint_threshold" variable (:type "double") (reparse-symbol classsubparts) [916 939])
+                                    ("controller_version" variable (:type "double") (reparse-symbol classsubparts) [944 970])
+                                    ("max_acceleration" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [976 1000])
+                                    ("max_velocity" variable (:type ("CVecXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1005 1025]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [556 1028])
+                            ("UR5" function
+                               (:constructor-flag t
+                                :parent "UR5"
+                                :type ("UR5" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1030 2069])
+                            ("UR5" function
+                               (:destructor-flag t
+                                :parent "UR5"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2071 2100])
+                            ("SetAccRatio" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("ratio" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2123 2142]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2102 2278])
+                            ("SetVelRatio" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("ratio" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2301 2320]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2280 2456])
+                            ("GetAccRatio" function
+                               (:parent "UR5"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2458 2519])
+                            ("GetVelRatio" function
+                               (:parent "UR5"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2521 2582])
+                            ("Connect" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("ipstr" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2601 2625])
+                                    ("port" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2626 2641]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2584 4134])
+                            ("Disconnect" function
+                               (:parent "UR5"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [4136 4282])
+                            ("GetVersion" function
+                               (:parent "UR5"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [4284 4347])
+                            ("IsReachable" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Common::Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4371 4397]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4349 4939])
+                            ("MoveTo" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4957 4975]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [4941 5575])
+                            ("GetJointState" function
+                               (:parent "UR5"
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("CVecXd" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [5577 6248])
+                            ("GetPose" function
+                               (:parent "UR5"
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Mat4d" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [6250 6758])
+                            ("GetControllerPose" function
+                               (:parent "UR5"
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Mat4d" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [6760 7859])
+                            ("ForwardKinematics" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("joints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7906 7927]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Mat4d" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [7861 8217])
+                            ("InverseKinematics" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8278 8290]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [8219 8447])
+                            ("NearestInverseKinematics" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8503 8515]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil)
+                                          ("CVecXd" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [8449 8895])
+                            ("NearestInverseKinematics" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("pose" variable
+                                       (:reference 1
+                                        :type ("Mat4d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8951 8963])
+                                    ("q_current" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8964 8982]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil)
+                                          ("CVecXd" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [8897 9178])
+                            ("ComputeCartesianPath" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("waypoints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9245 9281])
+                                    ("eef_step" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9282 9304])
+                                    ("joint_threshold" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9305 9334]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil)
+                                          ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [9180 9777])
+                            ("ComputeCartesianPath" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("start_joint" variable
+                                       (:reference 1
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9844 9864])
+                                    ("waypoints" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Mat4d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9865 9901])
+                                    ("eef_step" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9902 9924])
+                                    ("joint_threshold" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [9990 10019]))                                  
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil)
+                                          ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [9779 10398])
+                            ("MoveJoints" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("q" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11660 11689]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [11640 12139])
+                            ("MoveJoints" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("joint_valus" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12161 12187]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12141 12460])
+                            ("SpeedJoints" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("dq" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12483 12513]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12462 12803])
+                            ("SpeedEndEffector" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("dx" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12831 12861]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [12805 13151])
+                            ("MoveX" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [13168 13177]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [13153 13431])
+                            ("MoveY" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [13448 13457]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [13433 13711])
+                            ("MoveZ" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [13728 13737]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [13713 13991])
+                            ("RotateX" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [14010 14019]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [13993 14381])
+                            ("RotateY" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [14400 14409]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [14383 14771])
+                            ("RotateZ" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [14790 14799]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [14773 15161])
+                            ("RotateXB" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [15181 15190]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [15163 15644])
+                            ("RotateYB" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [15664 15673]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [15646 16127])
+                            ("RotateZB" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) [16147 16156]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [16129 16610])
+                            ("TransportWater" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("jerk" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16637 16655])
+                                    ("t_max" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16656 16675])
+                                    ("l_max" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16676 16695])
+                                    ("direction" variable (:type "int") (reparse-symbol arg-sub-list) [16696 16710]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [16612 19137])
+                            ("RunTraj" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::vector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [19156 19203]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [19139 21867])
+                            ("RunTraj" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("points" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("CVecXd" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [21886 21920]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [21869 22168])
+                            ("RunTrajRML" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("points" variable
+                                       (:constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [22190 22223]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [22170 22950])
+                            ("URScript" function
+                               (:parent "UR5"
+                                :arguments 
+                                  ( ("command" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22970 22990]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [22952 23177]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [480 23181]))                  
+                :type "namespace")
+                nil [464 23206]))          
+      :file "UR5.cpp"
+      :pointmax 23224
+      :fsize 23223
+      :lastmodtime '(23746 29031 828697 988000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Robots!UR!Driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

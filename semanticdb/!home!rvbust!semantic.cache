@@ -1,0 +1,110 @@
+;; Object rvbust/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rvbust/"
+  :tables
+  (list
+    (semanticdb-table "ICP.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.spatial.distance" include nil nil [20 60])
+            ("sklearn.neighbors" include nil nil [61 107])
+            ("time" include nil nil [108 119])
+            ("RVS" include nil nil [121 140])
+            ("cv2" include nil nil [142 152])
+            ("math" include nil nil [153 164])
+            ("imp" include nil nil [166 176])
+            ("NNSearcher" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [318 397]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [295 299])
+                            ("dstpts" variable nil (reparse-symbol function_parameters) [301 307]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [282 406])
+                    ("Search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [421 425])
+                            ("srcpts" variable nil (reparse-symbol function_parameters) [427 433]))                          )
+                        (reparse-symbol indented_block_body) [410 549]))                  
+                :type "class")
+                nil [252 549])
+            ("best_fit_transform" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [581 582])
+                ("B" variable nil (reparse-symbol function_parameters) [584 585]))              ) nil [558 1515])
+            ("nearest_neighbor" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [1537 1540])
+                ("dst" variable nil (reparse-symbol function_parameters) [1542 1545]))              ) nil [1516 2025])
+            ("remove_outliers" function (:arguments 
+              ( ("distances" variable nil (reparse-symbol function_parameters) [2046 2055])
+                ("indices" variable nil (reparse-symbol function_parameters) [2057 2064])
+                ("factor" variable nil (reparse-symbol function_parameters) [2066 2072]))              ) nil [2026 2317])
+            ("icp" function (:arguments 
+              ( ("viewer" variable nil (reparse-symbol function_parameters) [2331 2337])
+                ("A" variable nil (reparse-symbol function_parameters) [2339 2340])
+                ("B" variable nil (reparse-symbol function_parameters) [2342 2343])
+                ("init_pose" variable nil (reparse-symbol function_parameters) [2345 2354])
+                ("max_iterations" variable nil (reparse-symbol function_parameters) [2361 2375])
+                ("tolerance" variable nil (reparse-symbol function_parameters) [2382 2391])
+                ("nns" variable nil (reparse-symbol function_parameters) [2400 2403]))              ) nil [2323 5036])
+            ("main" function (:arguments 
+              ( ("E" variable nil (reparse-symbol function_parameters) [5046 5047])
+                ("pcaFile" variable nil (reparse-symbol function_parameters) [5049 5056])
+                ("pcbFile" variable nil (reparse-symbol function_parameters) [5058 5065]))              ) nil [5037 5923])
+            ("LoadPNGAsPC" function (:arguments 
+              ( ("camera" variable nil (reparse-symbol function_parameters) [5940 5946])
+                ("pcFile" variable nil (reparse-symbol function_parameters) [5948 5954])
+                ("dim" variable nil (reparse-symbol function_parameters) [5956 5959]))              ) nil [5924 6472])
+            ("isRotationMatrix" function (:arguments 
+              ( ("R" variable nil (reparse-symbol function_parameters) [6548 6549]))              ) nil [6527 6720])
+            ("rotationMatrixToEulerAngles" function (:arguments 
+              ( ("R" variable nil (reparse-symbol function_parameters) [6900 6901]))              ) nil [6868 7302])
+            ("mainPNG" function (:arguments 
+              ( ("E" variable nil (reparse-symbol function_parameters) [7316 7317])
+                ("pcaFile" variable nil (reparse-symbol function_parameters) [7319 7326])
+                ("pcbFile" variable nil (reparse-symbol function_parameters) [7328 7335]))              ) nil [7304 8274])
+            ("plyfile" include nil nil [8277 8304])
+            ("read_xyz" function
+               (:documentation " read a xyz file from file handle
+
+    Parameters
+    ----------
+    fin : file handle
+        file to read from
+
+    Returns
+    -------
+    fin : open file
+    xyz : namedtuple
+        returns a named tuple with coords, title and list of atomtypes.
+
+    See Also
+    --------
+    write_xyz
+
+    "
+                :arguments 
+                  ( ("fin" variable nil (reparse-symbol function_parameters) [8319 8322]))                  )
+                nil [8306 8739])
+            ("LoadXYZ" function (:arguments 
+              ( ("xyzFile" variable nil (reparse-symbol function_parameters) [8861 8868]))              ) nil [8849 8927])
+            ("LoadPLY" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [8940 8945]))              ) nil [8928 9080])
+            ("mainPLY" function (:arguments 
+              ( ("viewer" variable nil (reparse-symbol function_parameters) [9093 9099])
+                ("plyFileA" variable nil (reparse-symbol function_parameters) [9101 9109])
+                ("plyFileB" variable nil (reparse-symbol function_parameters) [9111 9119]))              ) nil [9081 10923])
+            ("if" code nil nil [10925 11865]))          
+      :file "ICP.py"
+      :pointmax 11865
+      :fsize 11864
+      :lastmodtime '(23863 46251 243797 442000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

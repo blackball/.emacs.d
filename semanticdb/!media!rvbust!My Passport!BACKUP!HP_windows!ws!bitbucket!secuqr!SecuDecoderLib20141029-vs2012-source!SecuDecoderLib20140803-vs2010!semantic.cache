@@ -1,0 +1,437 @@
+;; Object SecuDecoderLib20140803-vs2010/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SecuDecoderLib20140803-vs2010/"
+  :tables
+  (list
+    (semanticdb-table "SecuDecoderLib.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SecuDecoderLib.h" include nil nil [1 28])
+            ("SecuDecoder_anti.h" include nil nil [29 58])
+            ("epolicy.h" include nil nil [59 79])
+            ("timeout_clock.h" include nil nil [80 106])
+            ("string.h" include (:system-flag t) nil [107 126])
+            ("stdlib.h" include (:system-flag t) nil [127 146])
+            ("opencv/cv.h" include (:system-flag t) nil [147 169])
+            ("opencv/highgui.h" include (:system-flag t) nil [170 197])
+            ("QR_DATA_SIZE_MAX" variable (:constant-flag t) nil [207 223])
+            ("uchar" type
+               (:typedef ("unsigned char")
+                :type "typedef")
+                nil [234 262])
+            ("secuDecoder_t" type
+               (:members 
+                  ( ("enableAntiForm" variable (:type "int") (reparse-symbol classsubparts) [318 337])
+                    ("enableAntiQR" variable (:type "int") (reparse-symbol classsubparts) [346 363])
+                    ("enableAntiGray" variable (:type "int") (reparse-symbol classsubparts) [372 391])
+                    ("minSize" variable (:type "int") (reparse-symbol classsubparts) [400 421])
+                    ("maxSize" variable (:type "int") (reparse-symbol classsubparts) [400 421])
+                    ("thFindQR" variable (:type "int") (reparse-symbol classsubparts) [453 466])
+                    ("thDecodeQR" variable (:type "int") (reparse-symbol classsubparts) [475 490])
+                    ("scaleDecodeQR" variable (:type "double") (reparse-symbol classsubparts) [499 520])
+                    ("antiForm_th" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [548 571])
+                    ("antiForm_th_level2" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [615 652])
+                    ("antiGray_th" variable (:type "double") (reparse-symbol classsubparts) [690 709])
+                    ("antiForm_score" variable (:type "double") (reparse-symbol classsubparts) [746 768])
+                    ("antiGray_score" variable (:type "double") (reparse-symbol classsubparts) [771 793])
+                    ("antiFormFlag" variable (:type "int") (reparse-symbol classsubparts) [803 820])
+                    ("antiQRFlag" variable (:type "int") (reparse-symbol classsubparts) [829 844])
+                    ("antiGrayFlag" variable (:type "int") (reparse-symbol classsubparts) [853 870])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [879 888])
+                    ("version" variable (:type "int") (reparse-symbol classsubparts) [897 909])
+                    ("dataSize" variable (:type "int") (reparse-symbol classsubparts) [918 931])
+                    ("data" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [940 969])
+                    ("qrImg" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1012 1028])
+                    ("gradientBorderRatio" variable (:type "double") (reparse-symbol classsubparts) [1031 1058])
+                    ("borderImg" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1061 1081])
+                    ("origFoundQRArea" variable
+                       (:pointer 1
+                        :type ("IplImage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1139 1165])
+                    ("clock" variable
+                       (:pointer 1
+                        :type ("timeout_clock" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1219 1247]))                  
+                :type "struct")
+                nil [264 1250])
+            ("secuDecoder_new" function
+               (:pointer 1
+                :type ("secuDecoder_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1252 2315])
+            ("secuDecoder_clear" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2340 2364]))                  
+                :type "int")
+                nil [2317 2984])
+            ("secuDecoder_free" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 2
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3007 3032]))                  
+                :type "int")
+                nil [2986 3569])
+            ("secuDecoder_set_QRSize" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3598 3622])
+                    ("minSize" variable (:type "int") (reparse-symbol arg-sub-list) [3623 3635])
+                    ("maxSize" variable (:type "int") (reparse-symbol arg-sub-list) [3636 3648]))                  
+                :type "int")
+                nil [3571 3840])
+            ("secuDecoder_set_AntiFormThreshold" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3881 3905])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [3906 3918])
+                    ("th" variable (:type "double") (reparse-symbol arg-sub-list) [3919 3929]))                  
+                :type "int")
+                nil [3842 4161])
+            ("secuDecoder_set_AntiFormThresholdLevel2" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4207 4231])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [4232 4244])
+                    ("th" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4245 4262]))                  
+                :type "int")
+                nil [4163 4509])
+            ("secuDecoder_set_EnableAntiFormClone" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4552 4576])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [4577 4583]))                  
+                :type "int")
+                nil [4512 4720])
+            ("secuDecoder_set_GradientBorderRatio" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4763 4787])
+                    ("ratio" variable (:type "double") (reparse-symbol arg-sub-list) [4788 4801]))                  
+                :type "int")
+                nil [4722 4929])
+            ("secuDecoder_set_EnableAntiQRClone" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4969 4993])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [4994 5000]))                  
+                :type "int")
+                nil [4931 5135])
+            ("secuDecoder_set_AntiGrayThreshold" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5176 5200])
+                    ("th" variable (:type "double") (reparse-symbol arg-sub-list) [5201 5211]))                  
+                :type "int")
+                nil [5137 5326])
+            ("secuDecoder_set_EnableAntiGrayClone" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5368 5392])
+                    ("s" variable (:type "int") (reparse-symbol arg-sub-list) [5393 5399]))                  
+                :type "int")
+                nil [5328 5536])
+            ("secuDecoder_get_antiGrayCloneFlag" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5576 5606])
+                    ("s" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5607 5614]))                  
+                :type "int")
+                nil [5538 5728])
+            ("secuDecoder_get_antiFormCloneFlag" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5768 5798])
+                    ("s" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5799 5806]))                  
+                :type "int")
+                nil [5730 5919])
+            ("secuDecoder_get_antiQRCloneFlag" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5957 5987])
+                    ("s" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5988 5995]))                  
+                :type "int")
+                nil [5921 6158])
+            ("secuDecoder_get_version" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6188 6218])
+                    ("v" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6219 6226]))                  
+                :type "int")
+                nil [6160 6334])
+            ("secuDecoder_get_data" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6361 6391])
+                    ("data" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6392 6412])
+                    ("dataSize" variable (:type "int") (reparse-symbol arg-sub-list) [6413 6426])
+                    ("realSize" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6427 6441]))                  
+                :type "int")
+                nil [6336 6711])
+            ("secuDecoder_get_QRType" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6740 6770])
+                    ("t" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6771 6778]))                  
+                :type "int")
+                nil [6713 6883])
+            ("secuDecoder_get_AntiFormScore" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6920 6950])
+                    ("score" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6951 6965]))                  
+                :type "int")
+                nil [6885 7097])
+            ("secuDecoder_get_AntiGrayScore" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7134 7164])
+                    ("score" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7165 7179]))                  
+                :type "int")
+                nil [7099 7313])
+            ("SecuDecoder_core.h" include nil nil [7315 7344])
+            ("QrDecoder_to_secuDecoder" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("qd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("QrDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7383 7412])
+                    ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7413 7437]))                  
+                :type "void")
+                nil [7346 8302])
+            ("secuDecoder_setLogoAreaToBlank" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8429 8453]))                  
+                :type "int")
+                nil [8387 8942])
+            ("_cvt" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bgr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8969 8986]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [8944 9284])
+            ("loadGrayImage" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9318 9335]))                  
+                :type ("IplImage" type (:type "class") nil nil))
+                nil [9286 9784])
+            ("secuDecoder_decode" function
+               (:arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("secuDecoder_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9925 9949])
+                    ("imgName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9950 9970]))                  
+                :type "int")
+                nil [9902 12706]))          
+      :file "SecuDecoderLib.cpp"
+      :pointmax 12707
+      :fsize 13258
+      :lastmodtime '(22165 25116 303533 600000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QR_DATA_SIZE_MAX" . ((semantic-list "(1024*3)" 224 . 232)))
+          )
+)
+    (semanticdb-table "SecuDecoderLib.h"
+      :file "SecuDecoderLib.h"
+      :fsize 7612
+      :lastmodtime '(22149 26184 242193 300000))
+    (semanticdb-table "SecuDecoder_anti.h"
+      :file "SecuDecoder_anti.h"
+      :fsize 343
+      :lastmodtime '(22149 27018 273534 200000))
+    (semanticdb-table "epolicy.h"
+      :file "epolicy.h"
+      :fsize 286
+      :lastmodtime '(21565 44870 861603 0))
+    (semanticdb-table "timeout_clock.h"
+      :file "timeout_clock.h"
+      :fsize 379
+      :lastmodtime '(22165 25044 900554 0))
+    (semanticdb-table "SecuDecoder_core.h"
+      :file "SecuDecoder_core.h"
+      :fsize 1267
+      :lastmodtime '(22148 58915 131833 800000)))
+  :file "!media!rvbust!My Passport!BACKUP!HP_windows!ws!bitbucket!secuqr!SecuDecoderLib20141029-vs2012-source!SecuDecoderLib20140803-vs2010!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

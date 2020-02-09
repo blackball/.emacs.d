@@ -1,0 +1,437 @@
+;; Object basecontrollers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "basecontrollers/"
+  :tables
+  (list
+    (semanticdb-table "basecontrollers.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("plugindefs.h" include nil nil [746 769])
+            ("openrave/plugin.h" include (:system-flag t) nil [770 798])
+            ("CreateIdealController" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [840 864])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [865 886]))                  
+                :type ("ControllerBasePtr" type (:type "class") nil nil))
+                nil [800 887])
+            ("CreateIdealVelocityController" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [936 960])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [961 982]))                  
+                :type ("ControllerBasePtr" type (:type "class") nil nil))
+                nil [888 983])
+            ("CreateRedirectController" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1027 1051])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1052 1073]))                  
+                :type ("ControllerBasePtr" type (:type "class") nil nil))
+                nil [984 1074])
+            ("CreateInterfaceValidated" function
+               (:arguments 
+                  ( ("type" variable (:type ("InterfaceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1118 1137])
+                    ("interfacename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1138 1171])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1172 1193])
+                    ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1194 1218]))                  
+                :type ("InterfaceBasePtr" type (:type "class") nil nil))
+                nil [1076 1723])
+            ("GetPluginAttributesValidated" function
+               (:arguments 
+                  ( ("info" variable
+                       (:reference 1
+                        :type ("PLUGININFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1759 1776]))                  
+                :type "void")
+                nil [1725 1998])
+            ("DestroyPlugin" function (:type "void") nil [2020 2044]))          
+      :file "basecontrollers.cpp"
+      :pointmax 2045
+      :fsize 2044
+      :lastmodtime '(23349 37111 978669 6000)
+      :unmatched-syntax '((symbol 2000 . 2019)))
+    (semanticdb-table "plugindefs.h"
+      :file "plugindefs.h"
+      :fsize 2596
+      :lastmodtime '(23349 37111 978669 6000))
+    (semanticdb-table "idealcontroller.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("plugindefs.h" include nil nil [762 785])
+            ("boost/bind.hpp" include (:system-flag t) nil [787 812])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [813 846])
+            ("IdealController" type
+               (:superclasses 
+                  ( ("ControllerBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [896 903])
+                    ("IdealController" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [924 948])
+                            ("sinput" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [949 970]))                          
+                        :type ("IdealController" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [908 2587])
+                    ("IdealController" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2592 2626])
+                    ("Init" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("robot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2650 2669])
+                            ("dofindices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2670 2705])
+                            ("nControlTransformation" variable (:type "int") (reparse-symbol arg-sub-list) [2706 2733]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2632 4833])
+                    ("Reset" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("options" variable (:type "int") (reparse-symbol arg-sub-list) [4858 4870]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4839 5029])
+                    ("GetControlDOFIndices" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5035 5131])
+                    ("IsControlTransformation" function
+                       (:typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5136 5227])
+                    ("SetDesired" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("values" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5257 5290])
+                            ("trans" variable (:type ("TransformConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5291 5315]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5233 6538])
+                    ("SetPath" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptraj" variable (:type ("TrajectoryBaseConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6565 6594]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6544 12536])
+                    ("SimulationStep" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fTimeElapsed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12570 12589]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12542 17847])
+                    ("IsDone" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [17853 17907])
+                    ("GetTime" function
+                       (:typemodifiers ("virtual")
+                        :type ("dReal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17912 17979])
+                    ("GetRobot" function
+                       (:typemodifiers ("virtual")
+                        :type ("RobotBasePtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17984 18060])
+                    ("private" label nil (reparse-symbol classsubparts) [18062 18070])
+                    ("_Pause" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18095 18112])
+                            ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18113 18130]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [18075 18186])
+                    ("_SetCheckCollisions" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18224 18241])
+                            ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18242 18259]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [18191 18417])
+                    ("_SetThrowExceptions" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18455 18472])
+                            ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18473 18490]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [18422 18556])
+                    ("_SetEnableLogging" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18592 18609])
+                            ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18610 18627]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [18561 18691])
+                    ("shared_controller" function
+                       (:typemodifiers ("inline")
+                        :type ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("IdealController" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [18697 18847])
+                    ("shared_controller_const" function
+                       (:typemodifiers ("inline")
+                        :type ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("IdealController" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [18852 19026])
+                    ("weak_controller" function
+                       (:typemodifiers ("inline")
+                        :type ("boost::weak_ptr" type
+                             (:template-specifier 
+                                ( ("IdealController" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [19031 19132])
+                    ("_SetJointLimits" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [19138 19430])
+                    ("_SetDOFValues" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("values" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [19463 19495])
+                            ("timeelapsed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19496 19514]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [19436 20212])
+                    ("_SetDOFValues" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("values" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20244 20276])
+                            ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Transform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20277 20296])
+                            ("timeelapsed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20297 20315]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20217 20944])
+                    ("_CheckLimits" function
+                       (:arguments 
+                          ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20968 20988])
+                            ("prevvalues" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20989 21020])
+                            ("curvalues" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("dReal" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [21021 21050])
+                            ("timeelapsed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21051 21069]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20950 22306])
+                    ("_CheckConfiguration" function
+                       (:arguments 
+                          ( ("probot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22337 22357]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [22312 22827])
+                    ("_ReportError" function
+                       (:arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22851 22872]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [22833 23571])
+                    ("_probot" variable (:type ("RobotBaseWeakPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23577 23602])
+                    ("_fSpeed" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23642 23656])
+                    ("_ptraj" variable (:type ("TrajectoryBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23714 23739])
+                    ("_bTrajHasJoints" variable (:type "bool") (reparse-symbol classsubparts) [23829 23870])
+                    ("_bTrajHasTransform" variable (:type "bool") (reparse-symbol classsubparts) [23829 23870])
+                    ("_vgrablinks" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("pair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [23875 23917])
+                    ("GrabBody" type
+                       (:members 
+                          ( ("GrabBody" function
+                               (:constructor-flag t
+                                :type ("GrabBody" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [23988 24041])
+                            ("GrabBody" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("offset" variable (:type "int") (reparse-symbol arg-sub-list) [24059 24070])
+                                    ("robotlinkindex" variable (:type "int") (reparse-symbol arg-sub-list) [24071 24090])
+                                    ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24091 24108]))                                  
+                                :type ("GrabBody" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [24050 24183])
+                            ("offset" variable (:type "int") (reparse-symbol classsubparts) [24192 24203])
+                            ("robotlinkindex" variable (:type "int") (reparse-symbol classsubparts) [24212 24231])
+                            ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24240 24257])
+                            ("trelativepose" variable (:type ("boost::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Transform" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [24266 24309]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [23958 24423])
+                    ("_vgrabbodylinks" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("GrabBody" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24428 24466])
+                    ("_fCommandTime" variable (:type ("dReal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24471 24491])
+                    ("_vecdesired" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("dReal" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24497 24528])
+                    ("_tdesired" variable (:type ("Transform" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24575 24595])
+                    ("_dofindices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24601 24630])
+                    ("_dofcircular" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24635 24669])
+                    ("_vlower" variable (:type ("boost::array" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24674 24728])
+                    ("_vupper" variable (:type ("boost::array" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24674 24728])
+                    ("_nControlTransformation" variable (:type "int") (reparse-symbol classsubparts) [24778 24806])
+                    ("flog" variable (:type ("ofstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24811 24825])
+                    ("cmdid" variable (:type "int") (reparse-symbol classsubparts) [24830 24840])
+                    ("_bPause" variable (:type "bool") (reparse-symbol classsubparts) [24845 24922])
+                    ("_bIsDone" variable (:type "bool") (reparse-symbol classsubparts) [24845 24922])
+                    ("_bCheckCollision" variable (:type "bool") (reparse-symbol classsubparts) [24845 24922])
+                    ("_bThrowExceptions" variable (:type "bool") (reparse-symbol classsubparts) [24845 24922])
+                    ("_bEnableLogging" variable (:type "bool") (reparse-symbol classsubparts) [24845 24922])
+                    ("_report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24927 24954])
+                    ("_cblimits" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24959 24981])
+                    ("_samplespec" variable (:type ("ConfigurationSpecification" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24986 25025])
+                    ("_gjointvalues" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ConfigurationSpecification::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [25030 25110])
+                    ("_gtransform" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ConfigurationSpecification::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [25030 25110])
+                    ("_mutex" variable (:type ("boost::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25115 25135]))                  
+                :type "class")
+                nil [848 25138])
+            ("CreateIdealController" function
+               (:arguments 
+                  ( ("penv" variable (:type ("EnvironmentBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25180 25204])
+                    ("sinput" variable
+                       (:reference 1
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25205 25226]))                  
+                :type ("ControllerBasePtr" type (:type "class") nil nil))
+                nil [25140 25294]))          
+      :file "idealcontroller.cpp"
+      :pointmax 25295
+      :fsize 25294
+      :lastmodtime '(23349 37111 978669 6000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!OpenRave!plugins!basecontrollers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,42 @@
+;; Object MemoryWrapper/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MemoryWrapper/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("MALLOC" variable (:constant-flag t) nil [63 69])
+            ("FREE" variable (:constant-flag t) nil [111 115])
+            ("NEW" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [218 227]))                  
+                :pointer 1)
+                nil [190 236])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [249 258])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [259 272]))                  
+                :type "int")
+                nil [240 342]))          
+      :file "main.cpp"
+      :pointmax 343
+      :fsize 334
+      :lastmodtime '(23609 57924 301667 347000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MALLOC" (spp-arg-list ("sz_in_bytes") 69 . 82) . ((symbol "malloc" 83 . 89) (semantic-list "(sz_in_bytes)" 89 . 102)))
+          ("FREE" (spp-arg-list ("p") 115 . 118) . ((symbol "free" 119 . 123) (semantic-list "(p)" 123 . 126)))
+          )
+))
+  :file "!home!rvbust!WS!Sandbox!MemoryWrapper!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

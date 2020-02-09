@@ -1,0 +1,553 @@
+;; Object ShoeGluing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ShoeGluing/"
+  :tables
+  (list
+    (semanticdb-table "ShoePoseEstimator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ShoePoseEstimator" type
+               (:documentation " Shoe pose esitmator 
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [207 211]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [184 188]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [171 212])
+                    ("Config" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [227 231]))                          )
+                        (reparse-symbol indented_block_body) [216 247])
+                    ("Estimate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [264 268]))                          )
+                        (reparse-symbol indented_block_body) [251 293]))                  
+                :type "class")
+                nil [96 293])
+            ("TestShoePoseEstimator" function nil nil [294 333])
+            ("if" code nil nil [334 389]))          
+      :file "ShoePoseEstimator.py"
+      :pointmax 394
+      :fsize 393
+      :lastmodtime '(23876 293 424434 654000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ICP.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.spatial.distance" include nil nil [20 60])
+            ("sklearn.neighbors" include nil nil [61 107])
+            ("time" include nil nil [108 119])
+            ("RVS" include nil nil [121 140])
+            ("cv2" include nil nil [142 152])
+            ("math" include nil nil [153 164])
+            ("imp" include nil nil [166 176])
+            ("RVS.Common" include nil nil [177 213])
+            ("NNSearcher" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [289 368]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [266 270])
+                            ("dstpts" variable nil (reparse-symbol function_parameters) [272 278]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [253 377])
+                    ("Search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [392 396])
+                            ("srcpts" variable nil (reparse-symbol function_parameters) [398 404]))                          )
+                        (reparse-symbol indented_block_body) [381 520]))                  
+                :type "class")
+                nil [223 520])
+            ("best_fit_transform" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [552 553])
+                ("B" variable nil (reparse-symbol function_parameters) [555 556]))              ) nil [529 1486])
+            ("nearest_neighbor" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [1508 1511])
+                ("dst" variable nil (reparse-symbol function_parameters) [1513 1516]))              ) nil [1487 1996])
+            ("remove_outliers" function (:arguments 
+              ( ("distances" variable nil (reparse-symbol function_parameters) [2017 2026])
+                ("indices" variable nil (reparse-symbol function_parameters) [2028 2035])
+                ("factor" variable nil (reparse-symbol function_parameters) [2037 2043]))              ) nil [1997 2288])
+            ("icp" function (:arguments 
+              ( ("viewer" variable nil (reparse-symbol function_parameters) [2302 2308])
+                ("A_centered" variable nil (reparse-symbol function_parameters) [2310 2320])
+                ("A_mean" variable nil (reparse-symbol function_parameters) [2322 2328])
+                ("B_centered" variable nil (reparse-symbol function_parameters) [2330 2340])
+                ("B_mean" variable nil (reparse-symbol function_parameters) [2342 2348])
+                ("init_pose" variable nil (reparse-symbol function_parameters) [2350 2359])
+                ("max_iterations" variable nil (reparse-symbol function_parameters) [2366 2380])
+                ("tolerance" variable nil (reparse-symbol function_parameters) [2387 2396])
+                ("nns" variable nil (reparse-symbol function_parameters) [2406 2409]))              ) nil [2294 5578])
+            ("main" function (:arguments 
+              ( ("E" variable nil (reparse-symbol function_parameters) [5588 5589])
+                ("pcaFile" variable nil (reparse-symbol function_parameters) [5591 5598])
+                ("pcbFile" variable nil (reparse-symbol function_parameters) [5600 5607]))              ) nil [5579 6465])
+            ("LoadPNGAsPC" function (:arguments 
+              ( ("camera" variable nil (reparse-symbol function_parameters) [6482 6488])
+                ("pcFile" variable nil (reparse-symbol function_parameters) [6490 6496])
+                ("dim" variable nil (reparse-symbol function_parameters) [6498 6501]))              ) nil [6466 7014])
+            ("isRotationMatrix" function (:arguments 
+              ( ("R" variable nil (reparse-symbol function_parameters) [7090 7091]))              ) nil [7069 7262])
+            ("rotationMatrixToEulerAngles" function (:arguments 
+              ( ("R" variable nil (reparse-symbol function_parameters) [7442 7443]))              ) nil [7410 7844])
+            ("mainPNG" function (:arguments 
+              ( ("E" variable nil (reparse-symbol function_parameters) [7858 7859])
+                ("pcaFile" variable nil (reparse-symbol function_parameters) [7861 7868])
+                ("pcbFile" variable nil (reparse-symbol function_parameters) [7870 7877]))              ) nil [7846 8816])
+            ("plyfile" include nil nil [8817 8844])
+            ("read_xyz" function
+               (:documentation " read a xyz file from file handle
+
+    Parameters
+    ----------
+    fin : file handle
+        file to read from
+
+    Returns
+    -------
+    fin : open file
+    xyz : namedtuple
+        returns a named tuple with coords, title and list of atomtypes.
+
+    See Also
+    --------
+    write_xyz
+
+    "
+                :arguments 
+                  ( ("fin" variable nil (reparse-symbol function_parameters) [8859 8862]))                  )
+                nil [8846 9279])
+            ("LoadXYZ" function (:arguments 
+              ( ("xyzFile" variable nil (reparse-symbol function_parameters) [9401 9408]))              ) nil [9389 9467])
+            ("LoadPLY" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [9480 9485]))              ) nil [9468 9620])
+            ("mainPLY" function (:arguments 
+              ( ("viewer" variable nil (reparse-symbol function_parameters) [9633 9639])
+                ("plyFileA" variable nil (reparse-symbol function_parameters) [9641 9649])
+                ("plyFileB" variable nil (reparse-symbol function_parameters) [9651 9659]))              ) nil [9621 11463])
+            ("ShoeICP" function
+               (:documentation " Try to find a transform to transform shoe_ptr to shoe_pts_template 
+    "
+                :arguments 
+                  ( ("shoe_pts_template" variable nil (reparse-symbol function_parameters) [11476 11493])
+                    ("shoe_pts" variable nil (reparse-symbol function_parameters) [11495 11503])
+                    ("tolerance" variable nil (reparse-symbol function_parameters) [11505 11514])
+                    ("viewer" variable nil (reparse-symbol function_parameters) [11524 11530]))                  )
+                nil [11464 12087]))          
+      :file "ICP.py"
+      :pointmax 12164
+      :fsize 12163
+      :lastmodtime '(23893 33991 331000 64000)
+      :unmatched-syntax nil)
+    (semanticdb-table "DepthSensor.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS" include nil nil [97 116])
+            ("RVS.Common" include nil nil [148 177])
+            ("RVS.Vision" include nil nil [179 222])
+            ("numpy" include nil nil [223 241])
+            ("cv2" include nil nil [242 252])
+            ("json" include nil nil [253 264])
+            ("time" include nil nil [266 277])
+            ("glog" variable nil nil [279 323])
+            ("RemoveNaN" function (:arguments 
+              ( ("pm" variable nil (reparse-symbol function_parameters) [340 342]))              ) nil [326 410])
+            ("X36" type
+               (:documentation " Python wrapper on Ensenso
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Ensenso" code nil (reparse-symbol indented_block_body) [416 436])
+                            ("self" variable nil (reparse-symbol indented_block_body) [445 471])
+                            ("self" variable nil (reparse-symbol indented_block_body) [480 495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [504 519]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [490 494]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [477 609])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [634 638]))                          )
+                        (reparse-symbol indented_block_body) [622 699])
+                    ("Open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [721 725]))                          )
+                        (reparse-symbol indented_block_body) [712 1088])
+                    ("SetFromJsonFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1113 1117])
+                            ("jsfilename" variable nil (reparse-symbol function_parameters) [1119 1129]))                          )
+                        (reparse-symbol indented_block_body) [1093 1190])
+                    ("Close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1213 1217]))                          )
+                        (reparse-symbol indented_block_body) [1203 1259])
+                    ("Capture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1284 1288]))                          )
+                        (reparse-symbol indented_block_body) [1272 1909])
+                    ("CaptureImages" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1936 1940])
+                            ("rectified" variable nil (reparse-symbol function_parameters) [1942 1951]))                          
+                        :documentation " Close the projector and only capture the images 
+        ")
+                        (reparse-symbol indented_block_body) [1918 2593]))                  
+                :type "class")
+                nil [412 2593])
+            ("TestX36" function nil nil [2606 3151])
+            ("TestX36Images" function nil nil [3153 3874])
+            ("SnapPointMap" function nil nil [3879 4395])
+            ("if" code nil nil [4404 4450]))          
+      :file "DepthSensor.py"
+      :pointmax 4488
+      :fsize 4487
+      :lastmodtime '(23891 34809 275650 463000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("DepthSensor" include nil nil [186 213])
+            ("numpy" include nil nil [214 232])
+            ("cv2" include nil nil [233 243])
+            ("RANSAC" include nil nil [283 320])
+            ("ICP" include nil nil [336 359])
+            ("RVS" include nil nil [360 379])
+            ("g_roi" variable nil nil [383 413])
+            ("Rotation3D" function
+               (:documentation "
+    Return the rotation matrix associated with counterclockwise rotation about
+    the given axis by theta radians.
+    "
+                :arguments 
+                  ( ("axis" variable nil (reparse-symbol function_parameters) [430 434])
+                    ("theta" variable nil (reparse-symbol function_parameters) [436 441]))                  )
+                nil [415 1055])
+            ("GetROI" function (:arguments 
+              ( ("pm" variable nil (reparse-symbol function_parameters) [1067 1069])
+                ("roi" variable nil (reparse-symbol function_parameters) [1071 1074]))              ) nil [1056 1143])
+            ("RemoveNaN" function (:arguments 
+              ( ("pm" variable nil (reparse-symbol function_parameters) [1158 1160]))              ) nil [1144 1228])
+            ("FitPlaneSVD" function (:arguments 
+              ( ("XYZ" variable nil (reparse-symbol function_parameters) [1245 1248]))              ) nil [1229 1469])
+            ("SampleRange" function
+               (:documentation " Sample N anchors within a range. 
+
+    :param start: 
+    :param end: 
+    :param n: number of points will be retruned 
+    :param inclusive: if True, means start and end will also be included in the n points 
+    :returns: n values within start and end 
+    :rtype: list 
+    
+    NOTE: when start < end, it means the step will be negative
+    "
+                :arguments 
+                  ( ("start" variable nil (reparse-symbol function_parameters) [1486 1491])
+                    ("end" variable nil (reparse-symbol function_parameters) [1493 1496])
+                    ("n" variable nil (reparse-symbol function_parameters) [1498 1499])
+                    ("inclusive" variable nil (reparse-symbol function_parameters) [1501 1510]))                  )
+                nil [1470 2470])
+            ("AngularDistance" function
+               (:documentation " Calculate the angular distance between a and b. 
+    "
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [2491 2492])
+                    ("b" variable nil (reparse-symbol function_parameters) [2494 2495]))                  )
+                nil [2471 2664])
+            ("FindAngularHistogramPeaks" function
+               (:documentation " Find peaks of a angular histogram, using a modified version of mean-shift algorithm. 
+    
+    I am sitting in a Cafe with lots of girls and few dudes, listening 
+    to Bach and feeling so calm. This idea of using mean-shift came to 
+    my mind when I was looking at the mirror of the other building through 
+    the window of the Cafe, it was reflecting the  sky and clouds, looked so 
+    beautiful to make my time freeze... 
+
+    :param angles: 
+    :param seeds: 
+    :param bandwidtih: 
+    
+    Some special cases: 
+    - no peak at all : what should happen for this case ? 
+    - 
+    
+    The algorithm:
+    1. Group: group the bins to a seed when it's within the search radius # what are the problems within this step ?? 
+    2. Update: after the group, try to calculate new mean value, then go back to 1 unless there's no more updating happened. 
+    
+    Q1: what should happen when there's no peak at all ? 
+        all the seeds are standing where they are. The output will be very boring since it's all the same. 
+    Q2: when should we merge the seeds and how ? 
+        there're more than one way to do it. The most simple way of doing it is to eliminate overlaped ones before return. 
+        ideally, it should be perfectly overlaped for two seeds or there must be some bugs ?? need to test. 
+    Q3: can we have overlaped cluster ? 
+        Sure we could. Since it's perfectly fine when the cluster has a smaller radius than the bandwidth. 
+
+    "
+                :arguments 
+                  ( ("angles" variable nil (reparse-symbol function_parameters) [2695 2701])
+                    ("seeds" variable nil (reparse-symbol function_parameters) [2703 2708])
+                    ("bandwidtih" variable nil (reparse-symbol function_parameters) [2711 2721]))                  )
+                nil [2665 4331])
+            ("DivideToPatches" function
+               (:documentation " Simple strategy to dive a ROI into rows * cols patches
+
+    \"uniformly distribute N points in a rectangle\" is actually a non-trival problem. I would like to spend more time on it later TODO
+
+    For now, to get the job done, the simple way is to just make a grid 
+    "
+                :arguments 
+                  ( ("roi" variable nil (reparse-symbol function_parameters) [4380 4383])
+                    ("rows" variable nil (reparse-symbol function_parameters) [4385 4389])
+                    ("cols" variable nil (reparse-symbol function_parameters) [4395 4399])
+                    ("patchsize" variable nil (reparse-symbol function_parameters) [4405 4414])
+                    ("bordersize" variable nil (reparse-symbol function_parameters) [4421 4431]))                  )
+                nil [4360 5035])
+            ("AbsAngle" function (:arguments 
+              ( ("n1" variable nil (reparse-symbol function_parameters) [5049 5051])
+                ("n2" variable nil (reparse-symbol function_parameters) [5053 5055]))              ) nil [5036 5121])
+            ("MaxProjectionDistance" function (:arguments 
+              ( ("cn1" variable nil (reparse-symbol function_parameters) [5148 5151])
+                ("cn2" variable nil (reparse-symbol function_parameters) [5153 5156]))              ) nil [5122 5184])
+            ("Group" function (:arguments 
+              ( ("center_normals" variable nil (reparse-symbol function_parameters) [5227 5241]))              ) nil [5217 6064])
+            ("TryToFindTheRealPlane" function
+               (:documentation " The shoe will be somewhere, its point cloud will make the plane fitting 
+    incorrect if we do SVD using all points. 
+
+    Hey let's use small patches, and find the most prominent plane. 
+    "
+                :arguments 
+                  ( ("pm" variable nil (reparse-symbol function_parameters) [6549 6551])
+                    ("roi" variable nil (reparse-symbol function_parameters) [6553 6556])
+                    ("viewer" variable nil (reparse-symbol function_parameters) [6558 6564]))                  )
+                nil [6523 7123])
+            ("CropShoePoints" function
+               (:documentation " Crop out the shoe points for later pose estimation 
+    1. Crop ROI 
+    2. Fit plane 
+    3. Project points to the plane to crop the shoe points by Z 
+    4. Maybe some post processing 
+
+    Return: plane_center, plane_normal, shoe_pts
+    "
+                :arguments 
+                  ( ("pm" variable nil (reparse-symbol function_parameters) [7147 7149])
+                    ("roi" variable nil (reparse-symbol function_parameters) [7151 7154])
+                    ("viewer" variable nil (reparse-symbol function_parameters) [7156 7162]))                  )
+                nil [7128 7818])
+            ("GetInitPose" function
+               (:documentation " Get the init pose from the shoepoints 
+    NOTE: we may need to use 2d image to get a direction ?? 
+    "
+                :arguments 
+                  ( ("shoepoints" variable nil (reparse-symbol function_parameters) [7835 7845]))                  )
+                nil [7819 7973])
+            ("TestCropShoePoints" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [7997 8002])
+                ("roi" variable nil (reparse-symbol function_parameters) [8004 8007]))              ) nil [7974 8622])
+            ("CollectShoeTemplate" function (:documentation " Collect shoe template: shoe points and point normals 
+    1. Collect points
+    
+    ") nil [8623 11277])
+            ("TestICP" function nil nil [11278 12804])
+            ("FindTheROI" function (:documentation " find a proper ROI for the board 
+    ") nil [12809 14111])
+            ("App" function
+               (:documentation " The application used to demostrate the shoe pose estimation process 
+    
+    1. We have to use the TestCropShoePoint to test if the cropping works well, if yes, we save the shoe_pts as the template 
+    2. Use this function to do the on-line detection. 
+    "
+                :arguments 
+                  ( ("roi" variable nil (reparse-symbol function_parameters) [14121 14124]))                  )
+                nil [14113 15295])
+            ("ShoeDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [15365 15369]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15350 15354]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15337 15370])
+                    ("Init" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15384 15388]))                          )
+                        (reparse-symbol indented_block_body) [15375 15877])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15910 15914]))                          )
+                        (reparse-symbol indented_block_body) [15899 17377]))                  
+                :type "class")
+                nil [15305 17377])
+            ("App" function nil nil [17378 17466])
+            ("if" code nil nil [17467 17504]))          
+      :file "Utils.py"
+      :pointmax 17609
+      :fsize 17608
+      :lastmodtime '(23893 34187 891988 257000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PlaneFitting.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [94 112])
+            ("time" include nil nil [143 154])
+            ("numpy" include nil nil [156 174])
+            ("numpy.linalg" include nil nil [175 200])
+            ("eps" variable nil nil [202 215])
+            ("svd" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [225 226]))              ) nil [217 345])
+            ("inverse_sigma" function (:arguments 
+              ( ("S" variable nil (reparse-symbol function_parameters) [364 365]))              ) nil [346 530])
+            ("svd_solve" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [545 546])
+                ("b" variable nil (reparse-symbol function_parameters) [548 549]))              ) nil [531 966])
+            ("FitPlaneLSE" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [983 989]))              ) nil [967 1244])
+            ("get_point_dist" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [1264 1270])
+                ("plane" variable nil (reparse-symbol function_parameters) [1272 1277]))              ) nil [1245 1435])
+            ("FitPlaneLSE_RANSAC" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [1459 1465])
+                ("iters" variable nil (reparse-symbol function_parameters) [1467 1472])
+                ("inlier_thresh" variable nil (reparse-symbol function_parameters) [1479 1492])
+                ("return_outlier_list" variable nil (reparse-symbol function_parameters) [1496 1515]))              ) nil [1436 3180])
+            ("FitPlaneLTSQ" function (:arguments 
+              ( ("XYZ" variable nil (reparse-symbol function_parameters) [3207 3210]))              ) nil [3190 3517])
+            ("random" include nil nil [3519 3532])
+            ("RANSAC" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [3545 3549])
+                ("estimate" variable nil (reparse-symbol function_parameters) [3551 3559])
+                ("is_inlier" variable nil (reparse-symbol function_parameters) [3561 3570])
+                ("sample_size" variable nil (reparse-symbol function_parameters) [3572 3583])
+                ("goal_inliers" variable nil (reparse-symbol function_parameters) [3585 3597])
+                ("max_iterations" variable nil (reparse-symbol function_parameters) [3599 3613])
+                ("stop_at_goal" variable nil (reparse-symbol function_parameters) [3615 3627])
+                ("random_seed" variable nil (reparse-symbol function_parameters) [3634 3645]))              ) nil [3534 4374])
+            ("augment" function (:arguments 
+              ( ("xyz" variable nil (reparse-symbol function_parameters) [4387 4390]))              ) nil [4375 4469])
+            ("estimate" function (:arguments 
+              ( ("xyz" variable nil (reparse-symbol function_parameters) [4483 4486]))              ) nil [4470 4559])
+            ("is_inlier" function (:arguments 
+              ( ("coeffs" variable nil (reparse-symbol function_parameters) [4574 4580])
+                ("xyz" variable nil (reparse-symbol function_parameters) [4582 4585])
+                ("threshold" variable nil (reparse-symbol function_parameters) [4587 4596]))              ) nil [4560 4659])
+            ("FitPlaneSVD" function (:arguments 
+              ( ("XYZ" variable nil (reparse-symbol function_parameters) [4676 4679]))              ) nil [4660 4843])
+            ("NewRANSAC" function (:arguments 
+              ( ("xyz" variable nil (reparse-symbol function_parameters) [4858 4861]))              ) nil [4844 4898])
+            ("Main" function nil nil [4903 5057])
+            ("Main1" function nil nil [5632 6431])
+            ("if" code nil nil [6436 6475]))          
+      :file "PlaneFitting.py"
+      :pointmax 6475
+      :fsize 6474
+      :lastmodtime '(23891 34809 275650 463000)
+      :unmatched-syntax nil)
+    (semanticdb-table "KMeansFor1DAngulars.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("KMeansFor1DAngular" function
+               (:documentation " The angles are in range [0, 360]
+
+    :param angles: the list of angles 
+    :param init_seeds_num: the starting seeds number 
+    :param radius: the maximum search radius for one cluster, note that the seed number has some correlations on the radius 
+
+    "
+                :arguments 
+                  ( ("angles" variable nil (reparse-symbol function_parameters) [154 160])
+                    ("init_seeds_num" variable nil (reparse-symbol function_parameters) [162 176])
+                    ("radius" variable nil (reparse-symbol function_parameters) [183 189]))                  )
+                nil [131 475]))          
+      :file "KMeansFor1DAngulars.py"
+      :pointmax 475
+      :fsize 474
+      :lastmodtime '(23876 293 424434 654000)
+      :unmatched-syntax nil)
+    (semanticdb-table "RANSAC.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("time" include nil nil [50 61])
+            ("numpy" include nil nil [63 81])
+            ("numpy.linalg" include nil nil [82 107])
+            ("eps" variable nil nil [109 122])
+            ("svd" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [132 133]))              ) nil [124 252])
+            ("inverse_sigma" function (:arguments 
+              ( ("S" variable nil (reparse-symbol function_parameters) [271 272]))              ) nil [253 437])
+            ("svd_solve" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [452 453])
+                ("b" variable nil (reparse-symbol function_parameters) [455 456]))              ) nil [438 872])
+            ("FitPlaneSVD_" function (:arguments 
+              ( ("XYZ" variable nil (reparse-symbol function_parameters) [891 894]))              ) nil [874 1115])
+            ("FitPlaneLSE" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [1132 1138]))              ) nil [1116 1394])
+            ("get_point_dist" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [1414 1420])
+                ("plane" variable nil (reparse-symbol function_parameters) [1422 1427]))              ) nil [1395 1585])
+            ("FitPlaneLSE_RANSAC" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [1609 1615])
+                ("iters" variable nil (reparse-symbol function_parameters) [1617 1622])
+                ("inlier_thresh" variable nil (reparse-symbol function_parameters) [1629 1642])
+                ("return_outlier_list" variable nil (reparse-symbol function_parameters) [1646 1665]))              ) nil [1586 2929]))          
+      :file "RANSAC.py"
+      :pointmax 3396
+      :fsize 3395
+      :lastmodtime '(23891 34809 279650 479000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tmp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [1 11])
+            ("numpy" include nil nil [12 30])
+            ("drawing" variable nil nil [32 47])
+            ("mode" variable nil nil [75 86])
+            ("ix, iy" code nil nil [143 156])
+            ("pixels" variable nil nil [158 169])
+            ("collect_pixels_cb" function (:arguments 
+              ( ("event" variable nil (reparse-symbol function_parameters) [192 197])
+                ("x" variable nil (reparse-symbol function_parameters) [199 200])
+                ("y" variable nil (reparse-symbol function_parameters) [202 203])
+                ("flags" variable nil (reparse-symbol function_parameters) [205 210])
+                ("param" variable nil (reparse-symbol function_parameters) [212 217]))              ) nil [170 348])
+            ("img" variable nil nil [361 398])
+            ("cv2" code nil nil [399 423])
+            ("while" code nil nil [497 643])
+            ("cv2" code nil nil [644 667]))          
+      :file "tmp.py"
+      :pointmax 668
+      :fsize 667
+      :lastmodtime '(23893 4032 498083 669000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Apps!ShoeGluing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

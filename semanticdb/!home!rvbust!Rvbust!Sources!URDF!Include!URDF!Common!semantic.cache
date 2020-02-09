@@ -1,0 +1,502 @@
+;; Object Common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Common/"
+  :tables
+  (list
+    (semanticdb-table "Exception.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [54 71])
+            ("stdexcept" include (:system-flag t) nil [72 92])
+            ("URDF" type
+               (:members 
+                  ( ("ParseError" type
+                       (:superclasses 
+                          ( ("std::runtime_error" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [158 165])
+                            ("ParseError" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("errormsg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [181 209]))                                  
+                                :type ("ParseError" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [170 243]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [112 247]))                  
+                :type "namespace")
+                nil [94 250]))          
+      :file "Exception.h"
+      :pointmax 270
+      :fsize 266
+      :lastmodtime '(23559 21393 992174 992000)
+      :unmatched-syntax '((punctuation 243 . 244)))
+    (semanticdb-table "Utils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDFDOM_DLLIMPORT" variable (:constant-flag t) nil [861 878])
+            ("URDFDOM_DLLEXPORT" variable (:constant-flag t) nil [930 947])
+            ("URDFDOM_DLLLOCAL" variable (:constant-flag t) nil [999 1015])
+            ("URDFDOM_DLLAPI" variable (:constant-flag t) nil [1638 1652])
+            ("URDFDOM_LOCAL" variable (:constant-flag t) nil [1709 1722])
+            ("URDF_TYPEDEF_CLASS_POINTERS" variable (:constant-flag t) nil [1776 1803]))          
+      :file "Utils.h"
+      :pointmax 1809
+      :fsize 1770
+      :lastmodtime '(23559 21393 988174 993000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("URDFDOM_DLLEXPORT" . ((symbol "__attribute__" 948 . 961) (semantic-list "((visibility(\"default\")))" 962 . 987)))
+          ("URDFDOM_LOCAL" . ((symbol "URDFDOM_DLLLOCAL" 1723 . 1739)))
+          ("URDFDOM_DLLIMPORT" . ((symbol "__attribute__" 879 . 892) (semantic-list "((visibility(\"default\")))" 893 . 918)))
+          ("URDFDOM_DLLLOCAL" . ((symbol "__attribute__" 1017 . 1030) (semantic-list "((visibility(\"hidden\")))" 1031 . 1055)))
+          ("URDFDOM_DLLAPI" . ((symbol "URDFDOM_DLLIMPORT" 1653 . 1670)))
+          ("URDF_TYPEDEF_CLASS_POINTERS" (spp-arg-list ("Class") 1803 . 1810) . 
+              ((TYPEDEF "typedef" 1838 . 1845) (symbol "std" 1846 . 1849) (punctuation ":" 1849 . 1850) (punctuation ":" 1850 . 1851) (symbol "shared_ptr" 1851 . 1861) (punctuation "<" 1861 . 1862) (symbol "Class" 1862 . 1867) (punctuation ">" 1867 . 1868) (spp-symbol-merge ((symbol "Class" 1869 . 1874) (symbol "SharedPtr" 1876 . 1885)) 1869 . 1885) (punctuation ";" 1885 . 1886) (TYPEDEF "typedef" 1904 . 1911) (symbol "std" 1912 . 1915) (punctuation ":" 1915 . 1916) (punctuation ":" 1916 . 1917) (symbol "shared_ptr" 1917 . 1927) (punctuation "<" 1927 . 1928) (CONST "const" 1928 . 1933) (symbol "Class" 1934 . 1939) (punctuation ">" 1939 . 1940) (spp-symbol-merge ((symbol "Class" 1941 . 1946) (symbol "ConstSharedPtr" 1948 . 1962)) 1941 . 1962) (punctuation ";" 1962 . 1963) (TYPEDEF "typedef" 1970 . 1977) (symbol "std" 1978 . 1981) (punctuation ":" 1981 . 1982) (punctuation ":" 1982 . 1983) (symbol "weak_ptr" 1983 . 1991) (punctuation "<" 1991 . 1992) (symbol "Class" 1992 . 1997) (punctuation ">" 1997 . 1998) (spp-symbol-merge ((symbol "Class" 1999 . 2004) (symbol "WeakPtr" 2006 . 2013)) 1999 . 2013)))
+          )
+)
+    (semanticdb-table "Logger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spdlog/spdlog.h" include (:system-flag t) nil [108 134])
+            ("spdlog/sinks/stdout_color_sinks.h" include (:system-flag t) nil [135 179])
+            ("spdlog/sinks/stdout_sinks.h" include (:system-flag t) nil [180 218])
+            ("spdlog/sinks/basic_file_sink.h" include (:system-flag t) nil [219 260])
+            ("spdlog/sinks/rotating_file_sink.h" include (:system-flag t) nil [261 305])
+            ("spdlog/sinks/daily_file_sink.h" include (:system-flag t) nil [306 347])
+            ("spdlog/sinks/syslog_sink.h" include (:system-flag t) nil [348 385])
+            ("SPDLOG_ENABLE_SYSLOG" variable (:constant-flag t) nil [410 430])
+            ("spdlog/sinks/syslog_sink.h" include (:system-flag t) nil [431 468])
+            ("FmtExt.h" include nil nil [477 496])
+            ("URDF" type
+               (:members 
+                  ( ("Logger" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [549 556])
+                            ("Ptr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Logger" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [561 597])
+                            ("Get" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1140 1164]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1125 1210])
+                            ("GetConsoleLogger" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1244 1268]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1216 1743])
+                            ("GetFileLogger" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1774 1798])
+                                    ("filename" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1799 1827]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1749 2306])
+                            ("GetName" function
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2312 2498])
+                            ("GetType" function (:type ("Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2504 2543])
+                            ("GetLevel" function (:type ("Level" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2633 2675])
+                            ("SetLevel" function
+                               (:arguments 
+                                  ( ("l" variable (:type ("Logger::Level" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2695 2711]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2681 2858])
+                            ("Log" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("l" variable
+                                       (:constant-flag t
+                                        :type ("Level" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2899 2913])
+                                    ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2914 2927]))                                  )
+                                (reparse-symbol classsubparts) [2864 3034])
+                            ("Log" function
+                               (:arguments 
+                                  ( ("l" variable
+                                       (:constant-flag t
+                                        :type ("Logger::Level" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3081 3103])
+                                    ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3104 3120])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3121 3134])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3137 3142]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3072 3258])
+                            ("Trace" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3301 3312]))                                  )
+                                (reparse-symbol classsubparts) [3264 3362])
+                            ("Trace" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3422 3435])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3436 3449])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3452 3457]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3411 3518])
+                            ("Debug" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3561 3572]))                                  )
+                                (reparse-symbol classsubparts) [3524 3622])
+                            ("Debug" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3682 3695])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3696 3709])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3712 3717]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3671 3778])
+                            ("Info" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3820 3831]))                                  )
+                                (reparse-symbol classsubparts) [3784 3880])
+                            ("Info" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3939 3952])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3953 3966])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3969 3974]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3929 4034])
+                            ("Warn" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4076 4087]))                                  )
+                                (reparse-symbol classsubparts) [4040 4136])
+                            ("Warn" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4195 4208])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4209 4222])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4225 4230]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4185 4290])
+                            ("Error" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4333 4344]))                                  )
+                                (reparse-symbol classsubparts) [4296 4394])
+                            ("Error" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4454 4467])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4468 4481])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4484 4489]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4443 4550])
+                            ("Critical" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4596 4607]))                                  )
+                                (reparse-symbol classsubparts) [4556 4660])
+                            ("Critical" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4723 4736])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4737 4750])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4753 4758]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4709 4822])
+                            ("ShouldLog" function
+                               (:arguments 
+                                  ( ("l" variable
+                                       (:constant-flag t
+                                        :type ("Level" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4843 4857]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4828 4985])
+                            ("private" label nil (reparse-symbol classsubparts) [4987 4995])
+                            ("Logger" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5007 5031])
+                                    ("t" variable
+                                       (:constant-flag t
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5032 5045])
+                                    ("log" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("spdlog::logger" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5046 5091]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5000 5168])
+                            ("Logger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Logger" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5180 5195]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5173 5196])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Logger" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5219 5234]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5201 5235])
+                            ("Registry" type
+                               (:members 
+                                  ( ("Get" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5295 5319]))                                          
+                                        :type ("Ptr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5287 5537])
+                                    ("Put" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5556 5580])
+                                            ("ptr" variable (:type ("Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5581 5589]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5547 5838])
+                                    ("Drop" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5858 5882]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5848 6138])
+                                    ("GetInstance" function
+                                       (:typemodifiers ("static")
+                                        :type ("Registry" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6148 6251])
+                                    ("private" label nil (reparse-symbol classsubparts) [6257 6265])
+                                    ("_Has" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6291 6315]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6274 6359])
+                                    ("m_mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6369 6386])
+                                    ("m_map" variable (:type ("std::unordered_map" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil)
+                                              ("Ptr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6395 6438]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [5257 6445])
+                            ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6451 6470])
+                            ("m_type" variable (:type ("Logger::Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6475 6495])
+                            ("m_level" variable (:type ("Logger::Level" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6500 6522])
+                            ("m_logger" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("spdlog::logger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6527 6568]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [534 6571]))                  
+                :type "namespace")
+                nil [516 6574]))          
+      :file "Logger.h"
+      :pointmax 6593
+      :fsize 5887
+      :lastmodtime '(23559 21902 200068 327000)
+      :unmatched-syntax '((punctuation 4751 . 4752) (punctuation 4750 . 4751) (punctuation 4749 . 4750) (punctuation 4703 . 4704) (symbol 4699 . 4703) (punctuation 4697 . 4698) (punctuation 4696 . 4697) (punctuation 4695 . 4696) (TYPENAME 4687 . 4695) (punctuation 4685 . 4686) (symbol 4684 . 4685) (TYPENAME 4675 . 4683) (punctuation 4674 . 4675) (TEMPLATE 4665 . 4673) (punctuation 4482 . 4483) (punctuation 4481 . 4482) (punctuation 4480 . 4481) (punctuation 4437 . 4438) (symbol 4433 . 4437) (punctuation 4431 . 4432) (punctuation 4430 . 4431) (punctuation 4429 . 4430) (TYPENAME 4421 . 4429) (punctuation 4419 . 4420) (symbol 4418 . 4419) (TYPENAME 4409 . 4417) (punctuation 4408 . 4409) (TEMPLATE 4399 . 4407) (punctuation 4223 . 4224) (punctuation 4222 . 4223) (punctuation 4221 . 4222) (punctuation 4179 . 4180) (symbol 4175 . 4179) (punctuation 4173 . 4174) (punctuation 4172 . 4173) (punctuation 4171 . 4172) (TYPENAME 4163 . 4171) (punctuation 4161 . 4162) (symbol 4160 . 4161) (TYPENAME 4151 . 4159) (punctuation 4150 . 4151) (TEMPLATE 4141 . 4149) (punctuation 3967 . 3968) (punctuation 3966 . 3967) (punctuation 3965 . 3966) (punctuation 3923 . 3924) (symbol 3919 . 3923) (punctuation 3917 . 3918) (punctuation 3916 . 3917) (punctuation 3915 . 3916) (TYPENAME 3907 . 3915) (punctuation 3905 . 3906) (symbol 3904 . 3905) (TYPENAME 3895 . 3903) (punctuation 3894 . 3895) (TEMPLATE 3885 . 3893) (punctuation 3710 . 3711) (punctuation 3709 . 3710) (punctuation 3708 . 3709) (punctuation 3665 . 3666) (symbol 3661 . 3665) (punctuation 3659 . 3660) (punctuation 3658 . 3659) (punctuation 3657 . 3658) (TYPENAME 3649 . 3657) (punctuation 3647 . 3648) (symbol 3646 . 3647) (TYPENAME 3637 . 3645) (punctuation 3636 . 3637) (TEMPLATE 3627 . 3635) (punctuation 3450 . 3451) (punctuation 3449 . 3450) (punctuation 3448 . 3449) (punctuation 3405 . 3406) (symbol 3401 . 3405) (punctuation 3399 . 3400) (punctuation 3398 . 3399) (punctuation 3397 . 3398) (TYPENAME 3389 . 3397) (punctuation 3387 . 3388) (symbol 3386 . 3387) (TYPENAME 3377 . 3385) (punctuation 3376 . 3377) (TEMPLATE 3367 . 3375) (punctuation 3135 . 3136) (punctuation 3134 . 3135) (punctuation 3133 . 3134) (punctuation 3066 . 3067) (symbol 3062 . 3066) (punctuation 3060 . 3061) (punctuation 3059 . 3060) (punctuation 3058 . 3059) (TYPENAME 3050 . 3058) (punctuation 3049 . 3050) (TEMPLATE 3040 . 3048) (punctuation 1088 . 1089) (semantic-list 932 . 1088) (INT 924 . 927) (punctuation 922 . 923) (symbol 917 . 921) (CLASS 911 . 916) (ENUM 906 . 910) (punctuation 899 . 900) (semantic-list 630 . 899) (INT 622 . 625) (punctuation 620 . 621) (symbol 614 . 619) (CLASS 608 . 613) (ENUM 603 . 607) (symbol 102 . 106) (symbol 95 . 101) (punctuation 94 . 95))
+      :lexical-table 
+        '(("SPDLOG_ENABLE_SYSLOG")
+          )
+)
+    (semanticdb-table "FmtExt.h"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "FmtExt.h"
+      :pointmax 1
+      :fsize 1000
+      :lastmodtime '(23559 21902 200068 327000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PugiXML.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PUGIXML_HEADER_ONLY" variable (:constant-flag t) nil [75 94])
+            ("pugixml.hpp" include (:system-flag t) nil [95 117]))          
+      :file "PugiXML.h"
+      :pointmax 118
+      :fsize 117
+      :lastmodtime '(23559 21824 816067 333000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("PUGIXML_HEADER_ONLY")
+          )
+)
+    (semanticdb-table "Macros.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDFDOM_DLLIMPORT" variable (:constant-flag t) nil [847 864])
+            ("URDFDOM_DLLEXPORT" variable (:constant-flag t) nil [912 929])
+            ("URDFDOM_DLLLOCAL" variable (:constant-flag t) nil [977 993])
+            ("URDFDOM_DLLAPI" variable (:constant-flag t) nil [1584 1598])
+            ("URDFDOM_LOCAL" variable (:constant-flag t) nil [1651 1664])
+            ("URDF_TYPEDEF_CLASS_POINTERS" variable (:constant-flag t) nil [1716 1743]))          
+      :file "Macros.h"
+      :pointmax 1997
+      :fsize 1996
+      :lastmodtime '(23559 21393 992174 992000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("URDFDOM_DLLEXPORT" . ((symbol "__attribute__" 930 . 943) (semantic-list "((visibility(\"default\")))" 943 . 968)))
+          ("URDFDOM_LOCAL" . ((symbol "URDFDOM_DLLLOCAL" 1665 . 1681)))
+          ("URDFDOM_DLLIMPORT" . ((symbol "__attribute__" 865 . 878) (semantic-list "((visibility(\"default\")))" 878 . 903)))
+          ("URDFDOM_DLLLOCAL" . ((symbol "__attribute__" 994 . 1007) (semantic-list "((visibility(\"hidden\")))" 1007 . 1031)))
+          ("URDFDOM_DLLAPI" . ((symbol "URDFDOM_DLLIMPORT" 1599 . 1616)))
+          ("URDF_TYPEDEF_CLASS_POINTERS" (spp-arg-list ("Class") 1743 . 1750) . 
+              ((TYPEDEF "typedef" 1791 . 1798) (symbol "std" 1799 . 1802) (punctuation ":" 1802 . 1803) (punctuation ":" 1803 . 1804) (symbol "shared_ptr" 1804 . 1814) (punctuation "<" 1814 . 1815) (symbol "Class" 1815 . 1820) (punctuation ">" 1820 . 1821) (spp-symbol-merge ((symbol "Class" 1822 . 1827) (symbol "SharedPtr" 1829 . 1838)) 1822 . 1838) (punctuation ";" 1838 . 1839) (TYPEDEF "typedef" 1872 . 1879) (symbol "std" 1880 . 1883) (punctuation ":" 1883 . 1884) (punctuation ":" 1884 . 1885) (symbol "shared_ptr" 1885 . 1895) (punctuation "<" 1895 . 1896) (CONST "const" 1896 . 1901) (symbol "Class" 1902 . 1907) (punctuation ">" 1907 . 1908) (spp-symbol-merge ((symbol "Class" 1909 . 1914) (symbol "ConstSharedPtr" 1916 . 1930)) 1909 . 1930) (punctuation ";" 1930 . 1931) (TYPEDEF "typedef" 1953 . 1960) (symbol "std" 1961 . 1964) (punctuation ":" 1964 . 1965) (punctuation ":" 1965 . 1966) (symbol "weak_ptr" 1966 . 1974) (punctuation "<" 1974 . 1975) (symbol "Class" 1975 . 1980) (punctuation ">" 1980 . 1981) (spp-symbol-merge ((symbol "Class" 1982 . 1987) (symbol "WeakPtr" 1989 . 1996)) 1982 . 1996)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!URDF!Include!URDF!Common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

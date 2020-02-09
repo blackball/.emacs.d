@@ -1,0 +1,48 @@
+;; Object Tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tests/"
+  :tables
+  (list
+
+    (semanticdb-table "TestInterfaceEmpty.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Interface.h" include (:system-flag t) nil [15 42])
+            ("DummyInterface" type
+               (:superclasses 
+                  ( ("InterfaceBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :type "class")
+                nil [44 97])
+            ("main" function (:type "int") nil [99 132]))          
+      :file "TestInterfaceEmpty.cpp"
+      :pointmax 134
+      :fsize 161
+      :lastmodtime '(23676 35508 27786 415000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "TestRecursiveMutex.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("mutex" include (:system-flag t) nil [1 17])
+            ("iostream" include (:system-flag t) nil [18 37])
+            ("thread" include (:system-flag t) nil [38 55])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [66 75])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [76 89]))                  
+                :type "int")
+                nil [57 473]))          
+      :file "TestRecursiveMutex.cpp"
+      :pointmax 474
+      :fsize 473
+      :lastmodtime '(23676 35917 597414 778000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVIS!Tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

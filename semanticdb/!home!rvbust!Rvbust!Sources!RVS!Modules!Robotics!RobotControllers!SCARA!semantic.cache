@@ -1,0 +1,408 @@
+;; Object SCARA/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SCARA/"
+  :tables
+  (list
+    (semanticdb-table "Robot_SCARA.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [131 149])
+            ("socket" include nil nil [151 164])
+            ("time" include nil nil [165 176])
+            ("SCARA" type
+               (:documentation "The interface class for all robot controllers
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [378 410])
+                            ("self" variable nil (reparse-symbol indented_block_body) [419 448])
+                            ("self" variable nil (reparse-symbol indented_block_body) [490 516])
+                            ("self" variable nil (reparse-symbol indented_block_body) [525 551])
+                            ("self" variable nil (reparse-symbol indented_block_body) [566 598])
+                            ("self" variable nil (reparse-symbol indented_block_body) [607 639])
+                            ("self" variable nil (reparse-symbol indented_block_body) [674 698])
+                            ("self" variable nil (reparse-symbol indented_block_body) [707 737])
+                            ("self" variable nil (reparse-symbol indented_block_body) [746 776])
+                            ("self" variable nil (reparse-symbol indented_block_body) [785 815])
+                            ("self" variable nil (reparse-symbol indented_block_body) [824 857])
+                            ("self" variable nil (reparse-symbol indented_block_body) [866 898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [907 939])
+                            ("self" variable nil (reparse-symbol indented_block_body) [948 974])
+                            ("self" variable nil (reparse-symbol indented_block_body) [983 1014])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1023 1052])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1072 1109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1140 1175])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1201 1227]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [363 367]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [350 1254])
+                    ("GetName" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1271 1275]))                          )
+                        (reparse-symbol indented_block_body) [1259 1310])
+                    ("GetDeviceNumber" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1334 1338]))                          )
+                        (reparse-symbol indented_block_body) [1314 1374])
+                    ("GetControllerVersion" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1403 1407]))                          )
+                        (reparse-symbol indented_block_body) [1378 1443])
+                    ("GetType" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1459 1463]))                          )
+                        (reparse-symbol indented_block_body) [1447 1498])
+                    ("GetDof" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1513 1517]))                          )
+                        (reparse-symbol indented_block_body) [1502 1552])
+                    ("GetJointName" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1573 1577]))                          )
+                        (reparse-symbol indented_block_body) [1556 1614])
+                    ("GetJointLimits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1637 1641]))                          )
+                        (reparse-symbol indented_block_body) [1618 1677])
+                    ("IsConnected" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1697 1701]))                          )
+                        (reparse-symbol indented_block_body) [1681 1740])
+                    ("SpeedRatio" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1759 1763]))                          )
+                        (reparse-symbol indented_block_body) [1744 1802])
+                    ("SetPort" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1849 1853])
+                            ("port" variable nil (reparse-symbol function_parameters) [1855 1859]))                          
+                        :documentation "set TCP server port 
+        ")
+                        (reparse-symbol indented_block_body) [1837 1931])
+                    ("SetJointOffsets" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1956 1960])
+                            ("joint_offsets" variable nil (reparse-symbol function_parameters) [1962 1975]))                          
+                        :documentation "set joint offset, due to kinematics calibration
+        
+        :param joint_offsets: joint offset values, in rad
+        :type joint_offsets: list(float)
+        ")
+                        (reparse-symbol indented_block_body) [1936 2202])
+                    ("SetJointThreshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2230 2234])
+                            ("joint_threshold" variable nil (reparse-symbol function_parameters) [2236 2251]))                          
+                        :documentation "set joint threshold for maximumn movement threshold
+        
+        :param joint_threshold: 
+        :type joint_threshold: list(float)
+        ")
+                        (reparse-symbol indented_block_body) [2208 2463])
+                    ("SetTool" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2625 2629])
+                            ("eTt" variable nil (reparse-symbol function_parameters) [2631 2634]))                          
+                        :documentation "set tool frame
+
+        You should use this in IK, FK etc. functions
+        
+        :param eTt: transform from ee_link to tool frame
+        :type eTt: 4x4 numpy.ndarray
+        ")
+                        (reparse-symbol indented_block_body) [2613 2868])
+                    ("SetWorld" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2887 2891])
+                            ("wTb" variable nil (reparse-symbol function_parameters) [2893 2896]))                          
+                        :documentation "set world frame
+
+        You should use this in IK, FK etc. functions
+        
+        :param eTt: transform from world frame to base_link
+        :type eTt: 4x4 numpy.ndarray
+        ")
+                        (reparse-symbol indented_block_body) [2874 3133])
+                    ("SetSpeedRatio" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3157 3161])
+                            ("ratio" variable nil (reparse-symbol function_parameters) [3163 3168]))                          
+                        :documentation "Set speed ratio for MoveXXX function
+
+        XXX is MoveTool, MoveJoints, etc.
+        
+        :param ratio: [0,1] values
+        :type ratio: float
+        ")
+                        (reparse-symbol indented_block_body) [3139 3516])
+                    ("ComputeFK" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3536 3540])
+                            ("q" variable nil (reparse-symbol function_parameters) [3542 3543]))                          )
+                        (reparse-symbol indented_block_body) [3522 3639])
+                    ("ComputeIK" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3777 3781])
+                            ("pose" variable nil (reparse-symbol function_parameters) [3783 3787]))                          )
+                        (reparse-symbol indented_block_body) [3763 3901])
+                    ("ComputeNearestIK" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3928 3932])
+                            ("pose" variable nil (reparse-symbol function_parameters) [3934 3938])
+                            ("q_seed" variable nil (reparse-symbol function_parameters) [3940 3946]))                          )
+                        (reparse-symbol indented_block_body) [3907 4097])
+                    ("ComputeFD" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4117 4121])
+                            ("q" variable nil (reparse-symbol function_parameters) [4123 4124])
+                            ("qd" variable nil (reparse-symbol function_parameters) [4126 4128])
+                            ("tau" variable nil (reparse-symbol function_parameters) [4130 4133]))                          )
+                        (reparse-symbol indented_block_body) [4103 4239])
+                    ("ComputeID" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4259 4263])
+                            ("q" variable nil (reparse-symbol function_parameters) [4265 4266])
+                            ("qd" variable nil (reparse-symbol function_parameters) [4268 4270])
+                            ("qdd" variable nil (reparse-symbol function_parameters) [4272 4275]))                          )
+                        (reparse-symbol indented_block_body) [4245 4375])
+                    ("Connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4393 4397]))                          )
+                        (reparse-symbol indented_block_body) [4381 4842])
+                    ("Disconnect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4862 4866]))                          )
+                        (reparse-symbol indented_block_body) [4847 4963])
+                    ("StartMonitor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4986 4990]))                          )
+                        (reparse-symbol indented_block_body) [4969 5140])
+                    ("StopMonitor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5161 5165]))                          )
+                        (reparse-symbol indented_block_body) [5145 5232])
+                    ("GetJointState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5329 5333])
+                            ("msg" variable nil (reparse-symbol function_parameters) [5335 5338]))                          )
+                        (reparse-symbol indented_block_body) [5311 5528])
+                    ("GetPose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5546 5550]))                          )
+                        (reparse-symbol indented_block_body) [5534 5706])
+                    ("GetControllerPose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5734 5738]))                          )
+                        (reparse-symbol indented_block_body) [5712 5825])
+                    ("IsReachable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5847 5851])
+                            ("pose" variable nil (reparse-symbol function_parameters) [5853 5857]))                          )
+                        (reparse-symbol indented_block_body) [5831 5894])
+                    ("MoveJoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5919 5923])
+                            ("q" variable nil (reparse-symbol function_parameters) [5925 5926]))                          )
+                        (reparse-symbol indented_block_body) [5904 6188])
+                    ("SpeedJoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6210 6214])
+                            ("qd" variable nil (reparse-symbol function_parameters) [6216 6218]))                          )
+                        (reparse-symbol indented_block_body) [6194 6325])
+                    ("TorqueJoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6348 6352])
+                            ("tau" variable nil (reparse-symbol function_parameters) [6354 6357]))                          )
+                        (reparse-symbol indented_block_body) [6331 6444])
+                    ("JogJoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6467 6471])
+                            ("dq" variable nil (reparse-symbol function_parameters) [6473 6475]))                          )
+                        (reparse-symbol indented_block_body) [6453 6549])
+                    ("MoveTool" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6572 6576])
+                            ("pose" variable nil (reparse-symbol function_parameters) [6578 6582]))                          )
+                        (reparse-symbol indented_block_body) [6559 6860])
+                    ("SpeedTool" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6880 6884])
+                            ("vel" variable nil (reparse-symbol function_parameters) [6886 6889]))                          )
+                        (reparse-symbol indented_block_body) [6866 6963])
+                    ("JogTool" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6981 6985])
+                            ("vel" variable nil (reparse-symbol function_parameters) [6987 6990]))                          )
+                        (reparse-symbol indented_block_body) [6969 7079])
+                    ("MoveX" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7099 7103])
+                            ("v" variable nil (reparse-symbol function_parameters) [7105 7106]))                          )
+                        (reparse-symbol indented_block_body) [7089 7243])
+                    ("MoveY" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7259 7263])
+                            ("v" variable nil (reparse-symbol function_parameters) [7265 7266]))                          )
+                        (reparse-symbol indented_block_body) [7249 7358])
+                    ("MoveZ" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7374 7378])
+                            ("v" variable nil (reparse-symbol function_parameters) [7380 7381]))                          )
+                        (reparse-symbol indented_block_body) [7364 7473])
+                    ("RotateX" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7491 7495])
+                            ("v" variable nil (reparse-symbol function_parameters) [7497 7498]))                          )
+                        (reparse-symbol indented_block_body) [7479 7598])
+                    ("RotateY" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7616 7620])
+                            ("v" variable nil (reparse-symbol function_parameters) [7622 7623]))                          )
+                        (reparse-symbol indented_block_body) [7604 7724])
+                    ("RotateZ" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7742 7746])
+                            ("v" variable nil (reparse-symbol function_parameters) [7748 7749]))                          )
+                        (reparse-symbol indented_block_body) [7730 7850])
+                    ("MoveXT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7867 7871])
+                            ("v" variable nil (reparse-symbol function_parameters) [7873 7874]))                          )
+                        (reparse-symbol indented_block_body) [7856 7966])
+                    ("MoveYT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7983 7987])
+                            ("v" variable nil (reparse-symbol function_parameters) [7989 7990]))                          )
+                        (reparse-symbol indented_block_body) [7972 8082])
+                    ("MoveZT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8099 8103])
+                            ("v" variable nil (reparse-symbol function_parameters) [8105 8106]))                          )
+                        (reparse-symbol indented_block_body) [8088 8198])
+                    ("RotateXT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8217 8221])
+                            ("v" variable nil (reparse-symbol function_parameters) [8223 8224]))                          )
+                        (reparse-symbol indented_block_body) [8204 8324])
+                    ("RotateYT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8343 8347])
+                            ("v" variable nil (reparse-symbol function_parameters) [8349 8350]))                          )
+                        (reparse-symbol indented_block_body) [8330 8451])
+                    ("RotateZT" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8470 8474])
+                            ("v" variable nil (reparse-symbol function_parameters) [8476 8477]))                          )
+                        (reparse-symbol indented_block_body) [8457 8578])
+                    ("TrajectoryDownload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8639 8643])
+                            ("waypoints" variable nil (reparse-symbol function_parameters) [8645 8654]))                          )
+                        (reparse-symbol indented_block_body) [8616 8858])
+                    ("TrajectoryStreaming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8916 8920])
+                            ("waypoint" variable nil (reparse-symbol function_parameters) [8922 8930]))                          
+                        :documentation "
+        :param waypoint: np.array([[x1 y1 z1 c1 h1],[x2 y2 z2 c2 h2]...,[]]) 
+        ")
+                        (reparse-symbol indented_block_body) [8892 9309])
+                    ("SetZone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9327 9331])
+                            ("zone" variable nil (reparse-symbol function_parameters) [9333 9337]))                          )
+                        (reparse-symbol indented_block_body) [9315 9593])
+                    ("StopMove" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9612 9616]))                          )
+                        (reparse-symbol indented_block_body) [9599 9785])
+                    ("SetDIO" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9802 9806])
+                            ("value" variable nil (reparse-symbol function_parameters) [9808 9813])
+                            ("id" variable nil (reparse-symbol function_parameters) [9815 9817]))                          )
+                        (reparse-symbol indented_block_body) [9791 9953])
+                    ("SetAIO" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9970 9974])
+                            ("value" variable nil (reparse-symbol function_parameters) [9976 9981])
+                            ("id" variable nil (reparse-symbol function_parameters) [9983 9985]))                          )
+                        (reparse-symbol indented_block_body) [9959 10061])
+                    ("SendCommand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10083 10087])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [10089 10092]))                          )
+                        (reparse-symbol indented_block_body) [10067 10218])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10373 10377]))                          )
+                        (reparse-symbol indented_block_body) [10361 10406]))                  
+                :type "class")
+                nil [263 10406]))          
+      :file "Robot_SCARA.py"
+      :pointmax 10406
+      :fsize 10405
+      :lastmodtime '(23530 49186 667916 302000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!RobotControllers!SCARA!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

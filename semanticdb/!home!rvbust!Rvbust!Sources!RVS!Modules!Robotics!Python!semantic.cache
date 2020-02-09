@@ -1,0 +1,577 @@
+;; Object Python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Python/"
+  :tables
+  (list
+    (semanticdb-table "PoE.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [114 132])
+            ("'''
+*** BASIC HELPER FUNCTIONS ***
+'''" code nil nil [134 172])
+            ("NearZero" function
+               (:documentation "Determines whether a scalar is small enough to be treated as zero
+
+      :param z: A scalar input to check
+      :return: True if z is close to zero, false otherwise
+
+      Example Input:
+          z = -1e-7
+      Output:
+          True
+      "
+                :arguments 
+                  ( ("z" variable nil (reparse-symbol function_parameters) [188 189]))                  )
+                nil [175 471])
+            ("Normalize" function
+               (:documentation "Normalizes a vector
+
+    :param V: A vector
+    :return: A unit vector pointing in the same direction as z
+
+    Example Input: 
+        V = np.array([1, 2, 3])
+    Output:
+        np.array([0.26726124, 0.53452248, 0.80178373])
+    "
+                :arguments 
+                  ( ("V" variable nil (reparse-symbol function_parameters) [487 488]))                  )
+                nil [473 766])
+            ("RotInv" function
+               (:documentation "Inverts a rotation matrix
+
+    :param R: A rotation matrix
+    :return: The inverse of R
+
+    Example Input: 
+        R = np.array([[0, 0, 1],
+                      [1, 0, 0],
+                      [0, 1, 0]])
+    Output:
+        np.array([[0, 1, 0], 
+                  [0, 0, 1],
+                  [1, 0, 0]])
+    "
+                :arguments 
+                  ( ("R" variable nil (reparse-symbol function_parameters) [779 780]))                  )
+                nil [768 1134])
+            ("VecToso3" function
+               (:documentation "Converts a 3-vector to an so(3) representation
+
+    :param omg: A 3-vector
+    :return: The skew symmetric representation of omg
+
+    Example Input: 
+        omg = np.array([1, 2, 3])
+    Output:
+        np.array([[ 0, -3,  2],
+                  [ 3,  0, -1],
+                  [-2,  1,  0]])
+    "
+                :arguments 
+                  ( ("omg" variable nil (reparse-symbol function_parameters) [1149 1152]))                  )
+                nil [1136 1611])
+            ("so3ToVec" function
+               (:documentation "Converts an so(3) representation to a 3-vector
+
+    :param so3mat: A 3x3 skew-symmetric matrix
+    :return: The 3-vector corresponding to so3mat
+
+    Example Input: 
+        so3mat = np.array([[ 0, -3,  2],
+                           [ 3,  0, -1],
+                           [-2,  1,  0]])
+    Output:
+        np.array([1, 2, 3])
+    "
+                :arguments 
+                  ( ("so3mat" variable nil (reparse-symbol function_parameters) [1626 1632]))                  )
+                nil [1613 2044])
+            ("AxisAng3" function
+               (:documentation "Converts a 3-vector of exponential coordinates for rotation into 
+    axis-angle form
+
+    :param expc3: A 3-vector of exponential coordinates for rotation
+    :return omghat: A unit rotation axis 
+    :return theta: The corresponding rotation angle
+
+    Example Input: 
+        expc3 = np.array([1, 2, 3])
+    Output:
+        (np.array([0.26726124, 0.53452248, 0.80178373]), 3.7416573867739413)
+    "
+                :arguments 
+                  ( ("expc3" variable nil (reparse-symbol function_parameters) [2059 2064]))                  )
+                nil [2046 2531])
+            ("MatrixExp3" function
+               (:documentation "Computes the matrix exponential of a matrix in so(3)
+
+    :param so3mat: A 3x3 skew-symmetric matrix
+    :return: The matrix exponential of so3mat
+
+    Example Input:
+        so3mat = np.array([[ 0, -3,  2],
+                           [ 3,  0, -1],
+                           [-2,  1,  0]])
+    Output:
+        np.array([[-0.69492056,  0.71352099,  0.08929286],
+                  [-0.19200697, -0.30378504,  0.93319235],
+                  [ 0.69297817,  0.6313497 ,  0.34810748]])
+    "
+                :arguments 
+                  ( ("so3mat" variable nil (reparse-symbol function_parameters) [2548 2554]))                  )
+                nil [2533 3344])
+            ("MatrixLog3" function
+               (:documentation "Computes the matrix logarithm of a rotation matrix
+
+    :param R: A 3x3 rotation matrix
+    :return: The matrix logarithm of R
+
+    Example Input: 
+        R = np.array([[0, 0, 1],
+                      [1, 0, 0],
+                      [0, 1, 0]])
+    Output:
+        np.array([[          0, -1.20919958,  1.20919958],
+                  [ 1.20919958,           0, -1.20919958],
+                  [-1.20919958,  1.20919958,           0]])
+    "
+                :arguments 
+                  ( ("R" variable nil (reparse-symbol function_parameters) [3361 3362]))                  )
+                nil [3346 4672])
+            ("RpToTrans" function
+               (:documentation "Converts a rotation matrix and a position vector into homogeneous
+    tranformation matrix
+
+    :param R: A 3x3 rotation matrix
+    :param p: A 3-vector
+    :return: A homogeneous transformation matrix corresponding to the inputs
+
+    Example Input: 
+        R = np.array([[1, 0,  0], 
+                      [0, 0, -1], 
+                      [0, 1,  0]])
+        p = np.array([1, 2, 5])
+    Output:
+        np.array([[1, 0,  0, 1],
+                  [0, 0, -1, 2],
+                  [0, 1,  0, 5],
+                  [0, 0,  0, 1]])
+    "
+                :arguments 
+                  ( ("R" variable nil (reparse-symbol function_parameters) [4688 4689])
+                    ("p" variable nil (reparse-symbol function_parameters) [4691 4692]))                  )
+                nil [4674 5289])
+            ("TransToRp" function
+               (:documentation "Converts a homogeneous transformation matrix into a rotation matrix 
+    and position vector
+
+    :param T: A homogeneous transformation matrix 
+    :return R: The corresponding rotation matrix,
+    :return p: The corresponding position vector.
+
+    Example Input: 
+        T = np.array([[1, 0,  0, 0],
+                      [0, 0, -1, 0],
+                      [0, 1,  0, 3],
+                      [0, 0,  0, 1]])
+    Output:
+        (np.array([[1, 0,  0], 
+                   [0, 0, -1], 
+                   [0, 1,  0]]),  
+         np.array([0, 0, 3]))
+    "
+                :arguments 
+                  ( ("T" variable nil (reparse-symbol function_parameters) [5305 5306]))                  )
+                nil [5291 5937])
+            ("TransInv" function
+               (:documentation "Inverts a homogeneous transformation matrix
+
+    :param T: A homogeneous transformation matrix
+    :return: The inverse of T
+    Uses the structure of transformation matrices to avoid taking a matrix
+    inverse, for efficiency.
+
+    Example input:
+        T = np.array([[1, 0,  0, 0],
+                      [0, 0, -1, 0],
+                      [0, 1,  0, 3],
+                      [0, 0,  0, 1]])
+    Output:
+        np.array([[1,  0, 0,  0],
+                  [0,  0, 1, -3],
+                  [0, -1, 0,  0],
+                  [0,  0, 0,  1]])
+    "
+                :arguments 
+                  ( ("T" variable nil (reparse-symbol function_parameters) [5952 5953]))                  )
+                nil [5939 6625])
+            ("VecTose3" function
+               (:documentation "Converts a spatial velocity vector into a 4x4 matrix in se3
+
+    :param V: A 6-vector representing a spatial velocity
+    :return: The 4x4 se3 representation of V
+
+    Example Input: 
+        V = np.array([ 4, 5, 6,1, 2, 3])
+    Output:
+        np.array([[ 0, -3,  2, 4], 
+                  [ 3,  0, -1, 5], 
+                  [-2,  1,  0, 6], 
+                  [ 0,  0,  0, 0]])
+    "
+                :arguments 
+                  ( ("V" variable nil (reparse-symbol function_parameters) [6640 6641]))                  )
+                nil [6627 7149])
+            ("se3ToVec" function
+               (:documentation " Converts an se3 matrix into a spatial velocity vector
+
+    :param se3mat: A 4x4 matrix in se3
+    :return: The spatial velocity 6-vector corresponding to se3mat
+
+    Example Input: 
+        se3mat = np.array([[ 0, -3,  2, 4], 
+                           [ 3,  0, -1, 5], 
+                           [-2,  1,  0, 6], 
+                           [ 0,  0,  0, 0]])
+    Output:
+        np.array([ 4, 5, 6, 1, 2, 3])
+    "
+                :arguments 
+                  ( ("se3mat" variable nil (reparse-symbol function_parameters) [7164 7170]))                  )
+                nil [7151 7723])
+            ("Adjoint" function
+               (:documentation "Computes the adjoint representation of a homogeneous transformation 
+    matrix
+
+    :param T: A homogeneous transformation matrix
+    :return: The 6x6 adjoint representation [AdT] of T
+
+    Example Input: 
+        T = np.array([[1, 0,  0, 0], 
+                      [0, 0, -1, 0], 
+                      [0, 1,  0, 3], 
+                      [0, 0,  0, 1]])
+    Output:
+        np.array([[1, 0,  0, 0, 0,  3],
+                  [0, 0, -1, 3, 0,  0],
+                  [0, 1,  0, 0, 0,  0],
+                  [0, 0,  0, 1, 0,  0],
+                  [0, 0,  0, 0, 0, -1],
+                  [0, 0,  0, 0, 1,  0]])
+    "
+                :arguments 
+                  ( ("T" variable nil (reparse-symbol function_parameters) [7737 7738]))                  )
+                nil [7725 8488])
+            ("ScrewToAxis" function
+               (:documentation "Takes a parametric description of a scre axis and converts it to a 
+    normalized screw axis
+
+    :param q: A point lying on the screw axis
+    :param s: A unit vector in the direction of the screw axis
+    :param h: The pitch of the screw axis
+    :return: A normalized screw axis described by the inputs
+
+    Example Input: 
+        q = np.array([3, 0, 0])
+        s = np.array([0, 0, 1])
+        h = 2
+    Output:
+        np.array([0, 0, 1, 0, -3, 2])
+    "
+                :arguments 
+                  ( ("q" variable nil (reparse-symbol function_parameters) [8506 8507])
+                    ("s" variable nil (reparse-symbol function_parameters) [8509 8510])
+                    ("h" variable nil (reparse-symbol function_parameters) [8512 8513]))                  )
+                nil [8490 9038])
+            ("AxisAng6" function
+               (:documentation "Converts a 6-vector of exponenation coordinates into screw axis-angle
+    form
+
+    :param expc6: A 6-vector of exponential corrdinates for rigid-body motion
+                  S*theta
+    :return S: The corresponding normalized screw axis
+    :return theta: The distance traveled along/about S
+
+    Example Input: 
+        expc6 = np.array([ 1, 2, 3,1, 0, 0])
+    Output:
+        (np.array([1.0, 0.0, 0.0, 1.0, 2.0, 3.0]), 1.0)
+    "
+                :arguments 
+                  ( ("expc6" variable nil (reparse-symbol function_parameters) [9053 9058]))                  )
+                nil [9040 9694])
+            ("MatrixExp6" function
+               (:documentation "Computes the matrix exponential of an se3 representation of 
+    exponential coordinates
+
+    :param se3mat: A matrix in se3
+    :return: The matrix exponential of se3mat
+
+    Example Input: 
+        se3mat = np.array([[0,          0,           0,          0],
+                           [0,          0, -1.57079632, 2.35619449],
+                           [0, 1.57079632,           0, 2.35619449],
+                           [0,          0,           0,          0]])
+    Output:
+        np.array([[1.0, 0.0,  0.0, 0.0],
+                  [0.0, 0.0, -1.0, 0.0],
+                  [0.0, 1.0,  0.0, 3.0],
+                  [  0,   0,    0,   1]])        
+    "
+                :arguments 
+                  ( ("se3mat" variable nil (reparse-symbol function_parameters) [9711 9717]))                  )
+                nil [9696 11064])
+            ("MatrixLog6" function
+               (:documentation "Computes the matrix logarithm of a homogeneous transformation matrix
+
+    :param R: A matrix in SE3
+    :return: The matrix logarithm of R
+
+    Example Input: 
+        T = np.array([[1, 0, 0, 0], [0, 0, -1, 0], [0, 1, 0, 3], 
+                      [0, 0, 0, 1]])
+    Output:
+        np.array([[0,          0,           0,           0]
+                  [0,          0, -1.57079633,  2.35619449]
+                  [0, 1.57079633,           0,  2.35619449]
+                  [0,          0,           0,           0]])
+    "
+                :arguments 
+                  ( ("T" variable nil (reparse-symbol function_parameters) [11081 11082]))                  )
+                nil [11066 12508])
+            ("'''
+*** Robot Kinematics ***
+'''" code nil nil [12510 12542])
+            ("FKinBody" function
+               (:documentation "Computes forward kinematics in the body frame for an open chain robot
+
+    :param M: The home configuration (position and orientation) of the end-
+              effector
+    :param Blist: The joint screw axes in the end-effector frame when the 
+                  manipulator is at the home position, in the format of a 
+                  matrix with axes as the columns
+    :param thetalist: A list of joint coordinates   
+    :return: A homogeneous transformation matrix representing the end-
+             effector frame when the joints are at the specified coordinates
+             (i.t.o Body Frame)
+
+    Example Input: 
+        M = np.array([[-1, 0, 0, 0], [0, 1, 0, 6], [0, 0, -1, 2], 
+                      [0, 0, 0, 1]])
+        Blist = np.array([[ 2, 0,  0, 0, 0, -1],
+                          [ 0, 1,  0, 0, 0,  0,], 
+                          [ 0, 0, 0.1,0, 0,  1]]).T
+        thetalist = np.array([np.pi / 2.0, 3, np.pi])
+    Output:
+        np.array([[0, 1,  0,         -5],
+                  [1, 0,  0,          4],
+                  [0, 0, -1, 1.68584073],
+                  [0, 0,  0,          1]])         
+    "
+                :arguments 
+                  ( ("M" variable nil (reparse-symbol function_parameters) [12558 12559])
+                    ("Blist" variable nil (reparse-symbol function_parameters) [12561 12566])
+                    ("thetalist" variable nil (reparse-symbol function_parameters) [12568 12577]))                  )
+                nil [12545 13912])
+            ("FKinSpace" function
+               (:documentation "Computes forward kinematics in the space frame for an open chain robot
+
+    :param M: The home configuration (position and orientation) of the end-
+              effector
+    :param Slist: The joint screw axes in the space frame when the 
+                  manipulator is at the home position, in the format of a 
+                  matrix with axes as the columns
+    :param thetalist: A list of joint coordinates
+    :return: A homogeneous transformation matrix representing the end-
+             effector frame when the joints are at the specified coordinates
+             (i.t.o Space Frame)
+
+    Example Input: 
+        M = np.array([[-1, 0,  0, 0], 
+                      [ 0, 1,  0, 6], 
+                      [ 0, 0, -1, 2], 
+                      [ 0, 0,  0, 1]])
+        Slist = np.array([[  4, 0,    0,0, 0,  1],
+                          [  0, 1,    0,0, 0,  0],
+                          [ -6, 0, -0.1,0, 0, -1]]).T
+        thetalist = np.array([np.pi / 2.0, 3, np.pi])
+    Output:
+        np.array([[0, 1,  0,         -5],
+                  [1, 0,  0,          4],
+                  [0, 0, -1, 1.68584073],
+                  [0, 0,  0,          1]])
+    "
+                :arguments 
+                  ( ("M" variable nil (reparse-symbol function_parameters) [13928 13929])
+                    ("Slist" variable nil (reparse-symbol function_parameters) [13931 13936])
+                    ("thetalist" variable nil (reparse-symbol function_parameters) [13938 13947]))                  )
+                nil [13914 15330])
+            ("JacobianBody" function
+               (:documentation "Computes the body Jacobian for an open chain robot
+
+    :param Blist: The joint screw axes in the end-effector frame when the
+                  manipulator is at the home position, in the format of a 
+                  matrix with axes as the columns
+    :param thetalist: A list of joint coordinates
+    :return: The body Jacobian corresponding to the inputs (6xn real 
+             numbers)
+
+    Example Input: 
+        Blist = np.array([[  0, 0.2, 0.2,0, 0, 1, ], 
+                          [   2,   0,   3,1, 0, 0], 
+                          [   0,   2,   1,0, 1, 0], 
+                          [ 0.2, 0.3, 0.4,1, 0, 0]]).T
+        thetalist = np.array([0.2, 1.1, 0.1, 1.2])
+    Output:
+        np.array([[ 2.32586047,    1.66809,  0.56410831, 0.2]
+                  [-1.44321167, 2.94561275,  1.43306521, 0.3]
+                  [-2.06639565, 1.82881722, -1.58868628, 0.4]
+                  [-0.04528405, 0.99500417,           0,   1]
+                  [ 0.74359313, 0.09304865,  0.36235775,   0]
+                  [-0.66709716, 0.03617541, -0.93203909,   0]])
+    "
+                :arguments 
+                  ( ("Blist" variable nil (reparse-symbol function_parameters) [15349 15354])
+                    ("thetalist" variable nil (reparse-symbol function_parameters) [15356 15365]))                  )
+                nil [15332 16772])
+            ("JacobianSpace" function
+               (:documentation "Computes the space Jacobian for an open chain robot
+
+    :param Slist: The joint screw axes in the space frame when the 
+                  manipulator is at the home position, in the format of a 
+                  matrix with axes as the columns
+    :param thetalist: A list of joint coordinates
+    :return: The space Jacobian corresponding to the inputs (6xn real 
+             numbers)
+
+    Example Input: 
+        Slist = np.array([[   0, 0.2, 0.2,0, 0, 1], 
+                          [   2,   0,   3,1, 0, 0], 
+                          [   0,   2,   1,0, 1, 0], 
+                          [0.2, 0.3, 0.4,1, 0, 0]]).T
+        thetalist = np.array([0.2, 1.1, 0.1, 1.2])        
+    Output:
+        np.array([[  0, 1.95218638, -2.21635216, -0.51161537]
+                  [0.2, 0.43654132, -2.43712573,  2.77535713]
+                  [0.2, 2.96026613,  3.23573065,  2.22512443]
+                  [  0, 0.98006658, -0.09011564,  0.95749426]
+                  [  0, 0.19866933,   0.4445544,  0.28487557]
+                  [  1,          0,  0.89120736, -0.04528405]])
+    "
+                :arguments 
+                  ( ("Slist" variable nil (reparse-symbol function_parameters) [16792 16797])
+                    ("thetalist" variable nil (reparse-symbol function_parameters) [16799 16808]))                  )
+                nil [16774 18207])
+            ("IKinBody" function
+               (:documentation "Computes inverse kinematics in the body frame for an open chain robot
+
+    :param Blist: The joint screw axes in the end-effector frame when the 
+                  manipulator is at the home position, in the format of a
+                  matrix with axes as the columns
+    :param M: The home configuration of the end-effector
+    :param T: The desired end-effector configuration Tsd
+    :param thetalist0: An initial guess of joint angles that are close to 
+                       satisfying Tsd
+    :param eomg: A small positive tolerance on the end-effector orientation 
+                 error. The returned joint angles must give an end-effector 
+                 orientation error less than eomg
+    :param ev: A small positive tolerance on the end-effector linear position 
+               error. The returned joint angles must give an end-effector 
+               position error less than ev
+    :return thetalist: Joint angles that achieve T within the specified
+                       tolerances,
+    :return success: A logical value where TRUE means that the function found 
+                     a solution and FALSE means that it ran through the set 
+                     number of maximum iterations without finding a solution
+                     within the tolerances eomg and ev.
+    Uses an iterative Newton-Raphson root-finding method.
+    The maximum number of iterations before the algorithm is terminated has 
+    been hardcoded in as a variable called maxiterations. It is set to 20 at 
+    the start of the function, but can be changed if needed.  
+
+    Example Input: 
+        Blist = np.array([[ 2, 0,   0,0, 0, -1],
+                          [ 0, 1,   0,0, 0,  0], 
+                          [ 0, 0, 0.1,0, 0,  1]]).T
+        M = np.array([[-1, 0,  0, 0], 
+                      [ 0, 1,  0, 6], 
+                      [ 0, 0, -1, 2], 
+                      [ 0, 0,  0, 1]])
+        T = np.array([[0, 1,  0,     -5], 
+                      [1, 0,  0,      4], 
+                      [0, 0, -1, 1.6858], 
+                      [0, 0,  0,      1]])
+        thetalist0 = np.array([1.5, 2.5, 3])
+        eomg = 0.01
+        ev = 0.001
+    Output:
+        (np.array([1.57073819, 2.999667, 3.14153913]), True)
+    "
+                :arguments 
+                  ( ("Blist" variable nil (reparse-symbol function_parameters) [18222 18227])
+                    ("M" variable nil (reparse-symbol function_parameters) [18229 18230])
+                    ("T" variable nil (reparse-symbol function_parameters) [18232 18233])
+                    ("thetalist0" variable nil (reparse-symbol function_parameters) [18235 18245])
+                    ("eomg" variable nil (reparse-symbol function_parameters) [18247 18251])
+                    ("ev" variable nil (reparse-symbol function_parameters) [18253 18255]))                  )
+                nil [18209 21343])
+            ("IKinSpace" function
+               (:documentation "Computes inverse kinematics in the space frame for an open chain robot
+
+    :param Slist: The joint screw axes in the space frame when the 
+                  manipulator is at the home position, in the format of a
+                  matrix with axes as the columns
+    :param M: The home configuration of the end-effector
+    :param T: The desired end-effector configuration Tsd
+    :param thetalist0: An initial guess of joint angles that are close to 
+                       satisfying Tsd
+    :param eomg: A small positive tolerance on the end-effector orientation 
+                 error. The returned joint angles must give an end-effector 
+                 orientation error less than eomg
+    :param ev: A small positive tolerance on the end-effector linear position 
+               error. The returned joint angles must give an end-effector 
+               position error less than ev
+    :return thetalist: Joint angles that achieve T within the specified 
+                       tolerances,
+    :return success: A logical value where TRUE means that the function found 
+                     a solution and FALSE means that it ran through the set 
+                     number of maximum iterations without finding a solution
+                     within the tolerances eomg and ev.
+    Uses an iterative Newton-Raphson root-finding method.
+    The maximum number of iterations before the algorithm is terminated has 
+    been hardcoded in as a variable called maxiterations. It is set to 20 at 
+    the start of the function, but can be changed if needed.  
+
+    Example Input: 
+        Slist = np.array([[  4, 0,    0,0, 0,  1],
+                          [  0, 1,    0,0, 0,  0],
+                          [ -6, 0, -0.1,0, 0, -1]]).T
+        M = np.array([[-1, 0, 0, 0], [0, 1, 0, 6], [0, 0, -1, 2], [0, 0, 0, 1]])
+        T = np.array([[0, 1,  0,     -5], 
+                      [1, 0,  0,      4], 
+                      [0, 0, -1, 1.6858], 
+                      [0, 0,  0,      1]])
+        thetalist0 = np.array([1.5, 2.5, 3])
+        eomg = 0.01
+        ev = 0.001
+    Output:
+        (np.array([ 1.57073783,  2.99966384,  3.1415342 ]), True)
+    "
+                :arguments 
+                  ( ("Slist" variable nil (reparse-symbol function_parameters) [21359 21364])
+                    ("M" variable nil (reparse-symbol function_parameters) [21366 21367])
+                    ("T" variable nil (reparse-symbol function_parameters) [21369 21370])
+                    ("thetalist0" variable nil (reparse-symbol function_parameters) [21372 21382])
+                    ("eomg" variable nil (reparse-symbol function_parameters) [21384 21388])
+                    ("ev" variable nil (reparse-symbol function_parameters) [21390 21392]))                  )
+                nil [21345 24399]))          
+      :file "PoE.py"
+      :pointmax 24399
+      :fsize 24398
+      :lastmodtime '(23601 52397 140982 440000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

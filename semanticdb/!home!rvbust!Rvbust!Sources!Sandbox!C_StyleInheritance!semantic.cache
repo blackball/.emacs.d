@@ -1,0 +1,101 @@
+;; Object C_StyleInheritance/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "C_StyleInheritance/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("PluginType" type
+               (:members 
+                  ( ("PluginType_Robot" variable
+                       (:constant-flag t
+                        :default-value (109 110)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [90 110]))                  
+                :type "enum")
+                nil [68 114])
+            ("UserData" type
+               (:prototype t
+                :type "struct")
+                nil [116 132])
+            ("Plugin" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [154 163])
+                    ("pimpl" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [168 180]))                  
+                :type "struct")
+                nil [134 183])
+            ("PluginCreate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ptype" variable (:type "int") (reparse-symbol arg-sub-list) [205 215])
+                    ("env" variable (:type ("Plugin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [216 227]))                  
+                :type ("Plugin" type (:type "class") nil nil))
+                nil [185 228])
+            ("PluginDestroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pp" variable
+                       (:constant-flag t
+                        :type ("Plugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [263 279]))                  
+                :type "int")
+                nil [245 280])
+            ("PluginName" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:constant-flag t
+                        :type ("Plugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [304 319]))                  
+                :type "char")
+                nil [281 320])
+            ("SetUserData" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [337 354])
+                    ("pdata" variable (:type ("UserData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [355 370]))                  
+                :type "int")
+                nil [321 371])
+            ("GetUserData" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [388 405]))                  
+                :type "int")
+                nil [372 406])
+            ("RemoveUserData" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [426 443]))                  
+                :type "int")
+                nil [407 444])
+            ("Clone" function
+               (:prototype-flag t
+                :type ("Plugin" type (:type "class") nil nil))
+                nil [445 460]))          
+      :file "main.cpp"
+      :pointmax 501
+      :fsize 463
+      :lastmodtime '(23745 23035 636488 224000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!C_StyleInheritance!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

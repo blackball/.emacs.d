@@ -1,0 +1,505 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "spdlog.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("mutex" include (:system-flag t) nil [235 251])
+            ("chrono" include (:system-flag t) nil [252 269])
+            ("spdlog/details/null_mutex.h" include nil nil [271 309])
+            ("spdlog/async.h" include nil nil [310 335])
+            ("spdlog/spdlog-inl.h" include nil nil [337 367])
+            ("spdlog/common-inl.h" include nil nil [368 398])
+            ("spdlog/logger-inl.h" include nil nil [400 430])
+            ("logger" function
+               (:prototype-flag t
+                :parent "spdlog::logger"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [463 480])
+                    ("begin" variable (:type ("sinks_init_list::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [481 513])
+                    ("end" variable (:type ("sinks_init_list::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [514 544]))                  
+                :type "int")
+                nil [440 545])
+            ("spdlog/async_logger-inl.h" include nil nil [547 583])
+            ("spdlog/details/log_msg-inl.h" include nil nil [584 623])
+            ("spdlog/sinks/sink-inl.h" include nil nil [624 658])
+            ("spdlog/sinks/base_sink-inl.h" include nil nil [660 699])
+            ("base_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("std::mutex" type nil nil nil))                  
+                :type "class")
+                nil [709 752])
+            ("base_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::null_mutex" type nil nil nil))                  
+                :type "class")
+                nil [762 822])
+            ("spdlog/sinks/basic_file_sink-inl.h" include nil nil [824 869])
+            ("basic_file_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("std::mutex" type nil nil nil))                  
+                :type "class")
+                nil [879 928])
+            ("basic_file_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::null_mutex" type nil nil nil))                  
+                :type "class")
+                nil [938 1004])
+            ("spdlog/sinks/rotating_file_sink-inl.h" include nil nil [1006 1054])
+            ("rotating_file_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("std::mutex" type nil nil nil))                  
+                :type "class")
+                nil [1064 1116])
+            ("rotating_file_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::null_mutex" type nil nil nil))                  
+                :type "class")
+                nil [1126 1195])
+            ("spdlog/details/registry-inl.h" include nil nil [1197 1237])
+            ("spdlog/details/os-inl.h" include nil nil [1239 1273])
+            ("spdlog/details/periodic_worker-inl.h" include nil nil [1274 1321])
+            ("spdlog/details/file_helper-inl.h" include nil nil [1322 1365])
+            ("spdlog/details/pattern_formatter-inl.h" include nil nil [1366 1415])
+            ("spdlog/details/thread_pool-inl.h" include nil nil [1417 1460])
+            ("mpmc_blocking_queue" type
+               (:parent "spdlog::details"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::async_msg" type nil nil nil))                  
+                :type "class")
+                nil [1470 1541])
+            ("spdlog/sinks/ansicolor_sink-inl.h" include nil nil [2055 2099])
+            ("ansicolor_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::console_stdout" type nil nil nil)
+                    ("spdlog::details::console_mutex" type nil nil nil))                  
+                :type "class")
+                nil [2109 2210])
+            ("ansicolor_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::console_stdout" type nil nil nil)
+                    ("spdlog::details::console_nullmutex" type nil nil nil))                  
+                :type "class")
+                nil [2220 2325])
+            ("ansicolor_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::console_stderr" type nil nil nil)
+                    ("spdlog::details::console_mutex" type nil nil nil))                  
+                :type "class")
+                nil [2335 2436])
+            ("ansicolor_sink" type
+               (:parent "spdlog::sinks"
+                :prototype t
+                :template-specifier 
+                  ( ("spdlog::details::console_stderr" type nil nil nil)
+                    ("spdlog::details::console_nullmutex" type nil nil nil))                  
+                :type "class")
+                nil [2446 2551])
+            ("spdlog/sinks/stdout_color_sinks-inl.h" include nil nil [2560 2608])
+            ("stdout_color_mt" function
+               (:template-specifier 
+                  ( ("spdlog::synchronous_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2703 2734]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2618 2735])
+            ("stdout_color_st" function
+               (:template-specifier 
+                  ( ("spdlog::synchronous_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2830 2861]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2745 2862])
+            ("stderr_color_mt" function
+               (:template-specifier 
+                  ( ("spdlog::synchronous_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2957 2988]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2872 2989])
+            ("stderr_color_st" function
+               (:template-specifier 
+                  ( ("spdlog::synchronous_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3084 3115]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2999 3116])
+            ("stdout_color_mt" function
+               (:template-specifier 
+                  ( ("spdlog::async_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3206 3237]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3127 3238])
+            ("stdout_color_st" function
+               (:template-specifier 
+                  ( ("spdlog::async_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3327 3358]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3248 3359])
+            ("stderr_color_mt" function
+               (:template-specifier 
+                  ( ("spdlog::async_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3448 3479]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3369 3480])
+            ("stderr_color_st" function
+               (:template-specifier 
+                  ( ("spdlog::async_factory" type nil nil nil))                  
+                :prototype-flag t
+                :parent "spdlog"
+                :arguments 
+                  ( ("logger_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3569 3600]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("spdlog::logger" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3490 3601])
+            ("spdlog/fmt/bundled/format-inl.h" include nil nil [3774 3816])
+            ("basic_data" type
+               (:parent "internal"
+                :prototype t
+                :template-specifier 
+                  ( ("void" type nil nil nil))                  
+                :type "struct")
+                nil [3847 3881])
+            ("locale_ref" function
+               (:prototype-flag t
+                :parent "internal::locale_ref"
+                :arguments 
+                  ( ("loc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::locale" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3932 3955]))                  
+                :type ("FMT_API" type (:type "class") nil nil))
+                nil [3891 3956])
+            ("get" function
+               (:template-specifier 
+                  ( ("std::locale" type nil nil nil))                  
+                :prototype-flag t
+                :parent "internal::locale_ref"
+                :type ("std::locale" type (:type "class") nil nil))
+                nil [3974 4033])
+            ("thousands_sep_impl" function
+               (:prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type ("locale_ref" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4123 4134]))                  
+                :type "char")
+                nil [4089 4135])
+            ("append" function
+               (:prototype-flag t
+                :parent "internal::basic_buffer"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4195 4208])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4209 4222]))                  
+                :type "void")
+                nil [4153 4223])
+            ("init" function
+               (:prototype-flag t
+                :parent "internal::arg_map"
+                :arguments 
+                  ( ("args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("basic_format_args" type
+                             (:template-specifier 
+                                ( ("format_context" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4286 4332]))                  
+                :type "void")
+                nil [4241 4333])
+            ("format_float" function
+               (:prototype-flag t
+                :parent "internal::char_traits"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4397 4404])
+                    ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4405 4417])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4418 4431])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [4432 4436])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [4437 4444]))                  
+                :type "int")
+                nil [4351 4445])
+            ("format_float" function
+               (:prototype-flag t
+                :parent "internal::char_traits"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4509 4516])
+                    ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4517 4529])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4530 4543])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [4544 4548])
+                    ("" variable (:type "long double") (reparse-symbol arg-sub-list) [4549 4561]))                  
+                :type "int")
+                nil [4463 4562])
+            ("vformat" function
+               (:template-specifier 
+                  ( ("char" type nil nil nil))                  
+                :prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type ("string_view" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4616 4628])
+                    ("" variable (:type ("basic_format_args" type
+                         (:template-specifier 
+                            ( ("format_context" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4629 4663]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [4580 4664])
+            ("vformat_to" function
+               (:prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("internal::buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4728 4747])
+                    ("" variable (:type ("string_view" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4748 4760])
+                    ("" variable (:type ("basic_format_args" type
+                         (:template-specifier 
+                            ( ("format_context" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4761 4795]))                  
+                :type ("format_context::iterator" type (:type "class") nil nil))
+                nil [4682 4796])
+            ("sprintf_format" function
+               (:prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [4844 4851])
+                    ("" variable
+                       (:reference 1
+                        :type ("internal::buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4852 4871])
+                    ("" variable (:type ("core_format_specs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4872 4890]))                  
+                :type "void")
+                nil [4814 4891])
+            ("sprintf_format" function
+               (:prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type "long double") (reparse-symbol arg-sub-list) [4939 4951])
+                    ("" variable
+                       (:reference 1
+                        :type ("internal::buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4952 4971])
+                    ("" variable (:type ("core_format_specs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4972 4990]))                  
+                :type "void")
+                nil [4909 4991])
+            ("thousands_sep_impl" function
+               (:prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type ("locale_ref" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5087 5098]))                  
+                :type "wchar_t")
+                nil [5050 5099])
+            ("append" function
+               (:prototype-flag t
+                :parent "internal::basic_buffer"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5162 5178])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5179 5195]))                  
+                :type "void")
+                nil [5117 5196])
+            ("init" function
+               (:prototype-flag t
+                :parent "internal::arg_map"
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("basic_format_args" type
+                             (:template-specifier 
+                                ( ("wformat_context" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5260 5303]))                  
+                :type "void")
+                nil [5214 5304])
+            ("format_float" function
+               (:prototype-flag t
+                :parent "internal::char_traits"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5371 5381])
+                    ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5382 5394])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5395 5411])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [5412 5416])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [5417 5424]))                  
+                :type "int")
+                nil [5322 5425])
+            ("format_float" function
+               (:prototype-flag t
+                :parent "internal::char_traits"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5492 5502])
+                    ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5503 5515])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [5516 5532])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [5533 5537])
+                    ("" variable (:type "long double") (reparse-symbol arg-sub-list) [5538 5550]))                  
+                :type "int")
+                nil [5443 5551])
+            ("vformat" function
+               (:template-specifier 
+                  ( ("wchar_t" type nil nil nil))                  
+                :prototype-flag t
+                :parent "internal"
+                :arguments 
+                  ( ("" variable (:type ("wstring_view" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5609 5622])
+                    ("" variable (:type ("basic_format_args" type
+                         (:template-specifier 
+                            ( ("wformat_context" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [5623 5658]))                  
+                :type ("std::wstring" type (:type "class") nil nil))
+                nil [5569 5659]))          
+      :file "spdlog.cpp"
+      :pointmax 5685
+      :fsize 5684
+      :lastmodtime '(23772 63344 486032 172000)
+      :unmatched-syntax '((symbol 5660 . 5677) (symbol 5561 . 5568) (TEMPLATE 5552 . 5560) (symbol 5435 . 5442) (TEMPLATE 5426 . 5434) (symbol 5314 . 5321) (TEMPLATE 5305 . 5313) (symbol 5206 . 5213) (TEMPLATE 5197 . 5205) (symbol 5109 . 5116) (TEMPLATE 5100 . 5108) (symbol 5042 . 5049) (TEMPLATE 5033 . 5041) (symbol 4901 . 4908) (TEMPLATE 4892 . 4900) (symbol 4806 . 4813) (TEMPLATE 4797 . 4805) (symbol 4674 . 4681) (TEMPLATE 4665 . 4673) (symbol 4572 . 4579) (TEMPLATE 4563 . 4571) (symbol 4455 . 4462) (TEMPLATE 4446 . 4454) (symbol 4343 . 4350) (TEMPLATE 4334 . 4342) (symbol 4233 . 4240) (TEMPLATE 4224 . 4232) (symbol 4145 . 4152) (TEMPLATE 4136 . 4144) (symbol 4081 . 4088) (TEMPLATE 4072 . 4080) (symbol 3966 . 3973) (TEMPLATE 3957 . 3965) (TEMPLATE 3882 . 3890) (TEMPLATE 3838 . 3846) (symbol 3818 . 3837) (TEMPLATE 3481 . 3489) (TEMPLATE 3360 . 3368) (TEMPLATE 3239 . 3247) (TEMPLATE 3118 . 3126) (TEMPLATE 2990 . 2998) (TEMPLATE 2863 . 2871) (TEMPLATE 2736 . 2744) (TEMPLATE 2609 . 2617) (TEMPLATE 2437 . 2445) (TEMPLATE 2326 . 2334) (TEMPLATE 2211 . 2219) (TEMPLATE 2100 . 2108) (TEMPLATE 1461 . 1469) (TEMPLATE 1117 . 1125) (TEMPLATE 1055 . 1063) (TEMPLATE 929 . 937) (TEMPLATE 870 . 878) (TEMPLATE 753 . 761) (TEMPLATE 700 . 708) (TEMPLATE 431 . 439) (punctuation 225 . 226) (symbol 221 . 225) (symbol 216 . 220) (symbol 208 . 215) (symbol 205 . 207) (symbol 187 . 204) (symbol 180 . 186) (symbol 173 . 179) (symbol 167 . 172) (punctuation 166 . 167))))
+  :file "!home!rvbust!WS!Sandbox!UseSpdLogAsLib!SpdLog!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

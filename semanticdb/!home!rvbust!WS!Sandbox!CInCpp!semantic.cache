@@ -1,0 +1,48 @@
+;; Object CInCpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CInCpp/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("g_data" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("" type
+                     (:members 
+                        ( ("foo" variable (:type ("Foo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [109 117])
+                          ("bar" variable (:type ("Bar" type (:type "class") nil nil)) (reparse-symbol classsubparts) [122 130]))                        
+                      :type "union")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [97 141])
+            ("Bar" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [84 92]))                  )
+                (reparse-symbol extern-c-contents) [67 95])
+            ("Foo" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [53 61]))                  )
+                (reparse-symbol extern-c-contents) [36 65])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [156 165])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [166 179]))                  
+                :type "int")
+                nil [147 222]))          
+      :file "main.cpp"
+      :pointmax 225
+      :fsize 224
+      :lastmodtime '(23549 4667 672275 740000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!CInCpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

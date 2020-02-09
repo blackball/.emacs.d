@@ -1,0 +1,1322 @@
+;; Object Capturing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Capturing/"
+  :tables
+  (list
+    (semanticdb-table "Capturing.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [186 203])
+            ("KK" type
+               (:members 
+                  ( ("coeffs" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [222 239]))                  
+                :type "struct")
+                nil [206 242])
+            ("KC" type
+               (:members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [260 269])
+                    ("coeffs" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [274 292]))                  
+                :type "struct")
+                nil [244 295])
+            ("Point3d" type
+               (:members 
+                  ( ("x" variable (:type "double") (reparse-symbol classsubparts) [318 331])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [318 331])
+                    ("z" variable (:type "double") (reparse-symbol classsubparts) [318 331]))                  
+                :type "struct")
+                nil [297 335])
+            ("Image" type (:type "struct") nil [338 360])
+            ("PointMap" type (:type "struct") nil [362 387])
+            ("DepthCamera" type
+               (:members 
+                  ( ("Open" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [414 426])
+                    ("Close" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [458 471])
+                    ("Capture" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [476 491])
+                    ("GetImage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("image" variable
+                               (:reference 1
+                                :type ("Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [509 522]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [496 523])
+                    ("GetPointMap" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pm" variable
+                               (:reference 1
+                                :type ("PointMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [544 557]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [528 558]))                  
+                :type "struct")
+                nil [389 561])
+            ("Open" function
+               (:parent "DepthCamera"
+                :type "bool")
+                nil [564 724])
+            ("Close" function
+               (:parent "DepthCamera"
+                :type "bool")
+                nil [726 780])
+            ("Capture" function
+               (:parent "DepthCamera"
+                :type "bool")
+                nil [782 1026])
+            ("GetImage" function
+               (:parent "DepthCamera"
+                :arguments 
+                  ( ("image" variable
+                       (:reference 1
+                        :type ("Image" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1054 1067]))                  
+                :type "int")
+                nil [1028 1076])
+            ("GetPointMap" function
+               (:parent "DepthCamera"
+                :arguments 
+                  ( ("pm" variable
+                       (:reference 1
+                        :type ("PointMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1107 1120]))                  
+                :type "int")
+                nil [1078 1129])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1141 1150])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1151 1164]))                  
+                :type "int")
+                nil [1132 1362]))          
+      :file "Capturing.cpp"
+      :pointmax 1364
+      :fsize 1363
+      :lastmodtime '(23791 39508 423209 489000)
+      :unmatched-syntax nil)
+    (semanticdb-table "App.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [165 175])
+            ("numpy" include nil nil [176 194])
+            ("time" include nil nil [195 206])
+            ("X1" type
+               (:superclasses ("object")
+                :members 
+                  ( ("cv2" include nil nil [165 175])
+                    ("numpy" include nil nil [176 194])
+                    ("time" include nil nil [195 206])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [219 246]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [243 247]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [230 287])
+                    ("Open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [305 309]))                          
+                        :documentation " Open the serial port and check the camera 
+        ")
+                        (reparse-symbol indented_block_body) [296 392])
+                    ("Capture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [413 417]))                          
+                        :documentation " Capture the data from the camera 
+        ")
+                        (reparse-symbol indented_block_body) [401 919])
+                    ("Close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1036 1040]))                          )
+                        (reparse-symbol indented_block_body) [1026 1079])
+                    ("SendTriggerSignal" function (:documentation " Send capturing trigger to logic by serial port 
+        ") (reparse-symbol indented_block_body) [1141 1252]))                  
+                :type "class")
+                nil [208 1252])
+            ("App" function (:documentation " The application that we. 
+    ") nil [1257 1571])
+            ("if" code nil nil [1572 1609]))          
+      :file "App.py"
+      :pointmax 1609
+      :fsize 1608
+      :lastmodtime '(23807 725 752114 189000)
+      :unmatched-syntax nil)
+    (semanticdb-table "BaslerCamera.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [67 86])
+            ("BaslerCamera" type
+               (:members 
+                  ( ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [110 123])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [124 137]))                  
+                :type "struct")
+                nil [88 140])
+            ("BaslerCamera_Create" function
+               (:prototype-flag t
+                :type ("BaslerCamera" type (:type "class") nil nil))
+                nil [141 176])
+            ("BaslerCamera_Destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [202 225]))                  
+                :type "int")
+                nil [177 226])
+            ("BaslerCamera_IsValid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [253 276]))                  
+                :type "bool")
+                nil [227 277])
+            ("BaslerCamera_OpenForTrigger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [310 333]))                  
+                :type "int")
+                nil [278 334])
+            ("BaslerCamera_Close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [358 381]))                  
+                :type "int")
+                nil [335 382]))          
+      :file "BaslerCamera.h"
+      :pointmax 384
+      :fsize 383
+      :lastmodtime '(23842 38300 980606 467000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 232 . 235) (symbol 212 . 232) (BOOL 207 . 211) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 232 . 235) (symbol 212 . 232) (BOOL 207 . 211)))
+    (semanticdb-table "BaslerCamera.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BaslerCamera.h" include nil nil [54 79])
+            ("CameraEventHandlers.h" include nil nil [80 112])
+            ("pylon/PylonIncludes.h" include (:system-flag t) nil [153 185])
+            ("pylon/ThreadPriority.h" include (:system-flag t) nil [186 219])
+            ("thread" include (:system-flag t) nil [220 237])
+            ("mutex" include (:system-flag t) nil [238 254])
+            ("BaslerCameraStatus" type
+               (:members 
+                  ( ("BaslerCameraStatus_Idle" variable
+                       (:constant-flag t
+                        :default-value (312 313)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [286 313])
+                    ("BaslerCameraStatus_Used" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [319 343]))                  
+                :type "enum")
+                nil [256 346])
+            ("BaslerCameraImpl" type
+               (:members 
+                  ( ("status" variable (:type ("Status" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [378 397])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [406 419])
+                    ("instance_cam_ptr" variable
+                       (:pointer 1
+                        :type ("CInstantCamera" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [478 511])
+                    ("hardware_config_handler" variable
+                       (:pointer 1
+                        :type ("HardwareConfiguration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [516 563])
+                    ("image_capturing_handler" variable
+                       (:pointer 1
+                        :type ("CImageCapturingHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [568 616]))                  
+                :type "struct")
+                nil [348 620])
+            ("CAMERA_MAX_NUM" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "8"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [622 661])
+            ("sg_baslercamera_manager" variable
+               (:typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [682 697])
+                          ("cameras" variable
+                             (:dereference 1
+                              :type ("BaslerCameraImpl" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [707 750])
+                          ("Get" function
+                             (:pointer 1
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("BaslerCamera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [789 812]))                                
+                              :type ("BaslerCameraImpl" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [767 995])
+                          ("Allocate" function
+                             (:typemodifiers ("inline")
+                              :type ("BaslerCamera" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1007 1464])
+                          ("Deallocate" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("BaslerCamera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [1492 1515]))                                
+                              :type "int")
+                              (reparse-symbol classsubparts) [1470 1828])
+                          ("IsValid" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("BaslerCamera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [1854 1877]))                                
+                              :type "bool")
+                              (reparse-symbol classsubparts) [1834 1976]))                        
+                      :type "struct")
+                      nil nil))
+                nil [662 2008])
+            ("Pylon_Init" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2011 2061])
+            ("Pylon_Shutdown" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2063 2116])
+            ("BaslerCamera_IsValid" function
+               (:arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2144 2167]))                  
+                :type "bool")
+                nil [2118 2220])
+            ("BaslerCamera_Create" function (:type ("BaslerCamera" type (:type "class") nil nil)) nil [2222 2828])
+            ("BaslerCamera_Destroy" function
+               (:arguments 
+                  ( ("cam" variable (:type ("BaslerCamera" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2855 2872]))                  
+                :type "int")
+                nil [2830 3382])
+            ("BaslerCamera_OpenForTrigger" function
+               (:arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3416 3439]))                  
+                :type "int")
+                nil [3384 3915])
+            ("BaslerCamera_Close" function
+               (:arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("BaslerCamera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3940 3963]))                  
+                :type "int")
+                nil [3917 4064]))          
+      :file "BaslerCamera.cpp"
+      :pointmax 4065
+      :fsize 4064
+      :lastmodtime '(23863 55164 494157 967000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TestBaslerCamera.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BaslerCamera.h" include nil nil [54 79])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [90 99])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [100 113]))                  
+                :type "int")
+                nil [81 349]))          
+      :file "TestBaslerCamera.cpp"
+      :pointmax 353
+      :fsize 352
+      :lastmodtime '(23842 38285 644355 865000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CameraEventHandlers.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pylon/Platform.h" include (:system-flag t) nil [67 94])
+            ("pylon/InstantCamera.h" include (:system-flag t) nil [170 202])
+            ("HardwareConfiguration" type
+               (:superclasses 
+                  ( ("Pylon::CConfigurationEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [277 284])
+                    ("ApplyConfiguration" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("nodemap" variable
+                               (:reference 1
+                                :type ("GENAPI_NAMESPACE::INodeMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [321 357]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [289 4819])
+                    ("OnOpened" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("camera" variable
+                               (:reference 1
+                                :type ("Pylon::CInstantCamera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4880 4910]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4858 5565]))                  
+                :type "class")
+                nil [204 5568])
+            ("CImageCapturingHandler" type
+               (:superclasses 
+                  ( ("Pylon::CImageEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [5636 5643])
+                    ("CImageCapturingHandler" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("prefix_" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5680 5706]))                          
+                        :type ("CImageCapturingHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5657 6011])
+                    ("CImageCapturingHandler" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [6017 6932])
+                    ("OnImageGrabbed" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("camera" variable
+                               (:reference 1
+                                :type ("CInstantCamera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6970 6993])
+                            ("ptrGrabResult" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CGrabResultPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6994 7030]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6942 8217])
+                    ("private" label nil (reparse-symbol classsubparts) [8219 8227])
+                    ("NextName" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [8236 8524])
+                    ("counter" variable (:type "int") (reparse-symbol classsubparts) [8527 8539])
+                    ("failed_counter" variable (:type "int") (reparse-symbol classsubparts) [8541 8560])
+                    ("max_counter" variable (:type "int") (reparse-symbol classsubparts) [8562 8578])
+                    ("max_duration" variable (:type "double") (reparse-symbol classsubparts) [8581 8601])
+                    ("timer" variable (:type ("Utils::Timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8604 8623])
+                    ("imgcnt" variable (:type "int") (reparse-symbol classsubparts) [8629 8640])
+                    ("image_max_num" variable (:type "int") (reparse-symbol classsubparts) [8645 8663])
+                    ("prefixstr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8669 8691])
+                    ("img_ptrs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [8696 8725])
+                    ("timestamps" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [8728 8759]))                  
+                :type "class")
+                nil [5570 8763]))          
+      :file "CameraEventHandlers.h"
+      :pointmax 8764
+      :fsize 8763
+      :lastmodtime '(23842 39400 674118 936000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Projector.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [68 87])
+            ("Projector" type
+               (:members 
+                  ( ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [108 121])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [122 135]))                  
+                :type "struct")
+                nil [89 138])
+            ("Projector_Create" function
+               (:prototype-flag t
+                :type ("Projector" type (:type "class") nil nil))
+                nil [140 169])
+            ("Projector_Destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("projector" variable
+                       (:constant-flag t
+                        :type ("Projector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [192 218]))                  
+                :type "int")
+                nil [170 219])
+            ("Projector_Open" function
+               (:prototype-flag t
+                :type "int")
+                nil [220 241])
+            ("Projector_Close" function
+               (:prototype-flag t
+                :type "int")
+                nil [242 264])
+            ("Projector_Project" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ntimes" variable (:type "int") (reparse-symbol arg-sub-list) [287 298]))                  
+                :type "int")
+                nil [265 299]))          
+      :file "Projector.h"
+      :pointmax 302
+      :fsize 301
+      :lastmodtime '(23842 40529 200439 971000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FPP.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdafx.h" include nil nil [1 20])
+            ("FPP.h" include nil nil [21 37])
+            ("MFIPL\\\\include\\\\MFIPL.h" include nil nil [38 72])
+            ("math.h" include nil nil [73 90])
+            ("ppl.h" include nil nil [91 107])
+            ("unistd.h" include (:system-flag t) nil [108 127])
+            ("GetTempPathName" function
+               (:arguments 
+                  ( ("m_TempPathName" variable
+                       (:reference 1
+                        :type ("CString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [150 174]))                  
+                :type "void")
+                nil [129 282])
+            ("GetSystemPathName" function
+               (:arguments 
+                  ( ("m_SystemPathName" variable
+                       (:reference 1
+                        :type ("CString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [307 333]))                  
+                :type "void")
+                nil [284 463])
+            ("AverageFilter_Parallel" function
+               (:template 
+                  ( ("m_Type" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("Data_in" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [517 533])
+                    ("Data_out" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [534 551])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [552 562])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [563 574])
+                    ("Hsize" variable (:type "int") (reparse-symbol arg-sub-list) [575 585])
+                    ("Vsize" variable (:type "int") (reparse-symbol arg-sub-list) [586 596])
+                    ("skip_boundaries" variable (:type "bool") (reparse-symbol arg-sub-list) [597 618]))                  )
+                nil [465 2442])
+            ("Average_Filtering" function
+               (:template 
+                  ( ("m_Type" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("Image_data_in" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2491 2513])
+                    ("Image_data_out" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2514 2537])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [2538 2548])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [2549 2560])
+                    ("total_num_images" variable (:type "int") (reparse-symbol arg-sub-list) [2561 2582])
+                    ("Hsize" variable (:type "int") (reparse-symbol arg-sub-list) [2583 2593])
+                    ("Vsize" variable (:type "int") (reparse-symbol arg-sub-list) [2594 2604])
+                    ("skip_boundaries" variable (:type "bool") (reparse-symbol arg-sub-list) [2605 2626]))                  )
+                nil [2444 2848])
+            ("Sort_Shell" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2866 2876])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2877 2883]))                  
+                :type "void")
+                nil [2850 3150])
+            ("MedianFilter_Parallel" function
+               (:arguments 
+                  ( ("Data_in" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3179 3195])
+                    ("Data_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3196 3213])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [3214 3224])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [3225 3236])
+                    ("Hsize" variable (:type "int") (reparse-symbol arg-sub-list) [3237 3247])
+                    ("Vsize" variable (:type "int") (reparse-symbol arg-sub-list) [3248 3258])
+                    ("skip_boundaries" variable (:type "bool") (reparse-symbol arg-sub-list) [3259 3280]))                  
+                :type "void")
+                nil [3152 4774])
+            ("FPP_PhaseShifting_Run" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4803 4820])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4821 4835])
+                    ("image_data_length" variable (:type "int") (reparse-symbol arg-sub-list) [4836 4858])
+                    ("phase_calculation_length" variable (:type "int") (reparse-symbol arg-sub-list) [4859 4888])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [4889 4910])
+                    ("mask_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [4911 4930])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4931 4949]))                  
+                :type "void")
+                nil [4776 6749])
+            ("FPP_PhaseShifting" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6774 6791])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6792 6806])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6807 6818])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [6819 6840])
+                    ("mask_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [6841 6860])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6861 6879]))                  
+                :type "void")
+                nil [6751 13021])
+            ("FPP_PhaseFiltering" function
+               (:arguments 
+                  ( ("FringeOrderS" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13047 13068])
+                    ("num_set" variable (:type "int") (reparse-symbol arg-sub-list) [13069 13081])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [13082 13092])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [13093 13104])
+                    ("filtering_scheme" variable (:type "int") (reparse-symbol arg-sub-list) [13105 13126])
+                    ("filter_windows_half_size" variable (:type "int") (reparse-symbol arg-sub-list) [13127 13156])
+                    ("stability_threshold" variable (:type "double") (reparse-symbol arg-sub-list) [13157 13184]))                  
+                :type "void")
+                nil [13023 13886])
+            ("FPP_LoadParameters" function
+               (:arguments 
+                  ( ("fpp_analysis_para" variable
+                       (:reference 1
+                        :type ("FPP_Analysis_Para" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13912 13949])
+                    ("FPP_Para_Filename_Full" variable (:type ("CString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13950 13981]))                  
+                :type ("BOOL" type (:type "class") nil nil))
+                nil [13888 15467])
+            ("FPP_Generate_LUT" function
+               (:arguments 
+                  ( ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [15491 15509])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [15510 15531]))                  
+                :type "void")
+                nil [15469 16097])
+            ("FPP_Generate_LUT_All" function
+               (:arguments 
+                  ( ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16125 16143]))                  
+                :type "void")
+                nil [16099 16255])
+            ("FPP_Phase_Calculation" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16284 16301])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16302 16316])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [16317 16327])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [16328 16339])
+                    ("fringe_analysis_para" variable (:type ("Fringe_Analysis_Para" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16340 16382])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16383 16401]))                  
+                :type "void")
+                nil [16257 19410])
+            ("FPP_Z_Calculation" function
+               (:arguments 
+                  ( ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19468 19482])
+                    ("Z" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19483 19493])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [19494 19504])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [19505 19516])
+                    ("fpp_analysis_para" variable (:type ("FPP_Analysis_Para" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19517 19553]))                  
+                :type "void")
+                nil [19445 21858])
+            ("Calculate_xcn_ycn_from_i_j" function
+               (:arguments 
+                  ( ("i" variable (:type "double") (reparse-symbol arg-sub-list) [21892 21901])
+                    ("j" variable (:type "double") (reparse-symbol arg-sub-list) [21902 21911])
+                    ("xcn" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21912 21924])
+                    ("ycn" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21925 21937])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21938 21952])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21953 21967])
+                    ("method" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [21968 21982]))                  
+                :type "void")
+                nil [21860 25736])
+            ("Calculate_XY_From_Z" function
+               (:arguments 
+                  ( ("i" variable (:type "double") (reparse-symbol arg-sub-list) [25763 25772])
+                    ("j" variable (:type "double") (reparse-symbol arg-sub-list) [25773 25782])
+                    ("x" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25783 25793])
+                    ("y" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25794 25804])
+                    ("z" variable (:type "double") (reparse-symbol arg-sub-list) [25805 25814])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25815 25829])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25830 25844])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25845 25859])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25860 25874]))                  
+                :type "void")
+                nil [25738 26329])
+            ("FPP_XY_Calculation" function
+               (:arguments 
+                  ( ("X_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26388 26402])
+                    ("Y_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26403 26417])
+                    ("Z_in" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26418 26431])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [26432 26442])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [26443 26454])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26455 26469])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26470 26484])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26485 26499])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26500 26514]))                  
+                :type "void")
+                nil [26364 26951])
+            ("FPP_GetFileNames" function
+               (:arguments 
+                  ( ("f_str" variable
+                       (:pointer 1
+                        :type ("CString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26976 26991])
+                    ("num_files" variable (:type "int") (reparse-symbol arg-sub-list) [26992 27006]))                  
+                :type ("BOOL" type (:type "class") nil nil))
+                nil [26954 28160])
+            ("FPP_Read_Camera_Calibration_Data" function
+               (:arguments 
+                  ( ("FileName" variable (:type ("CString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28200 28217])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [28218 28232])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [28233 28247])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [28248 28262])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [28263 28277]))                  
+                :type ("BOOL" type (:type "class") nil nil))
+                nil [28162 28637])
+            ("Test_FPP" function
+               (:arguments 
+                  ( ("FPP_Para_Filename_Full" variable (:type ("CString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28686 28717])
+                    ("CC_Para_Filename_Full" variable (:type ("CString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28718 28748]))                  
+                :type "void")
+                nil [28672 32265]))          
+      :file "FPP.cpp"
+      :pointmax 32266
+      :fsize 33254
+      :lastmodtime '(23870 21121 394895 466000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FPP.h"
+      :file "FPP.h"
+      :fsize 1781
+      :lastmodtime '(23863 55164 494157 967000))
+    (semanticdb-table "X1Tool.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Json11.h" include nil nil [54 73])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [74 103])
+            ("vector" include (:system-flag t) nil [104 121])
+            ("string" include (:system-flag t) nil [122 139])
+            ("unistd.h" include (:system-flag t) nil [140 159])
+            ("INVALID_PHASE" variable (:constant-flag t) nil [171 184])
+            ("INVALID_Z" variable (:constant-flag t) nil [197 206])
+            ("INACTIVE_WC" variable (:constant-flag t) nil [219 230])
+            ("INACTIVE_IMPTS" variable (:constant-flag t) nil [249 263])
+            ("PI" variable (:constant-flag t) nil [280 282])
+            ("LUT_3_Length" variable
+               (:constant-flag t
+                :default-value "(2 * 510 + 1)*(2 * 255 + 1)"
+                :type "int")
+                nil [317 370])
+            ("LUT_4_Length" variable
+               (:constant-flag t
+                :default-value "(2 * 255 + 1)*(2 * 255 + 1)"
+                :type "int")
+                nil [371 424])
+            ("LUT_6_Length" variable
+               (:constant-flag t
+                :default-value "(2 * 1020 + 1)*(2 * 510 + 1)"
+                :type "int")
+                nil [425 479])
+            ("FPP_Params" type
+               (:members 
+                  ( ("FPP_Params" function
+                       (:constructor-flag t
+                        :type ("FPP_Params" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [502 703])
+                    ("num_freq" variable (:type "int") (reparse-symbol classsubparts) [706 719])
+                    ("fringe_freq" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [721 740])
+                    ("phase_shift_step" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [742 766])
+                    ("mask_threshold" variable (:type "int") (reparse-symbol classsubparts) [768 787])
+                    ("image_filter_size_n_control" variable (:type "int") (reparse-symbol classsubparts) [789 821])
+                    ("phase_filter_size_n_control" variable (:type "int") (reparse-symbol classsubparts) [823 855]))                  
+                :type "struct")
+                nil [481 858])
+            ("MFP" variable (:constant-flag t) nil [868 871])
+            ("FPP_Analysis_Params" type
+               (:members 
+                  ( ("FPP_Analysis_Params" function
+                       (:constructor-flag t
+                        :type ("FPP_Analysis_Params" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [933 1403])
+                    ("NN" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [1407 1432])
+                    ("DD" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [1434 1459])
+                    ("cc" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [1461 1474])
+                    ("pixels_per_sys_unit" variable (:type "double") (reparse-symbol classsubparts) [1477 1504])
+                    ("num_active_parameters" variable (:type "int") (reparse-symbol classsubparts) [1506 1532]))                  
+                :type "struct")
+                nil [903 1535])
+            ("Point3d" type
+               (:members 
+                  ( ("Point3d" function
+                       (:constructor-flag t
+                        :type ("Point3d" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1558 1595])
+                    ("Point3d" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_x" variable (:type "double") (reparse-symbol arg-sub-list) [1608 1618])
+                            ("_y" variable (:type "double") (reparse-symbol arg-sub-list) [1619 1629])
+                            ("_z" variable (:type "double") (reparse-symbol arg-sub-list) [1630 1640]))                          
+                        :type ("Point3d" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1600 1663])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [1668 1681])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [1668 1681])
+                    ("z" variable (:type "double") (reparse-symbol classsubparts) [1668 1681]))                  
+                :type "struct")
+                nil [1537 1684])
+            ("PointMap" type
+               (:members 
+                  ( ("PointMap" function
+                       (:constructor-flag t
+                        :type ("PointMap" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1708 1740])
+                    ("PointMap" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("r" variable (:type "int") (reparse-symbol arg-sub-list) [1754 1760])
+                            ("c" variable (:type "int") (reparse-symbol arg-sub-list) [1761 1767]))                          
+                        :type ("PointMap" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1745 1786])
+                    ("Reshape" function
+                       (:arguments 
+                          ( ("rows_" variable (:type "int") (reparse-symbol arg-sub-list) [1805 1815])
+                            ("cols_" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1826]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1792 1922])
+                    ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("r" variable (:type "int") (reparse-symbol arg-sub-list) [1959 1965])
+                            ("c" variable (:type "int") (reparse-symbol arg-sub-list) [1966 1972]))                          
+                        :type ("Point3d" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1932 2001])
+                    ("rows" variable (:type "int") (reparse-symbol classsubparts) [2006 2021])
+                    ("cols" variable (:type "int") (reparse-symbol classsubparts) [2006 2021])
+                    ("pm" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Point3d" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2027 2051]))                  
+                :type "struct")
+                nil [1686 2055])
+            ("LoadJson" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inputFileName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2078 2111]))                  
+                :type "bool")
+                nil [2057 2410])
+            ("_FPP_Generate_LUT" function
+               (:arguments 
+                  ( ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2435 2453])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [2454 2475]))                  
+                :type "void")
+                nil [2412 3193])
+            ("_FPP_Generate_LUT_All" function
+               (:arguments 
+                  ( ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3222 3240]))                  
+                :type "void")
+                nil [3195 3367])
+            ("_FPP_PhaseShifting_Run" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3397 3414])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3415 3429])
+                    ("image_data_length" variable (:type "int") (reparse-symbol arg-sub-list) [3430 3452])
+                    ("phase_calculation_length" variable (:type "int") (reparse-symbol arg-sub-list) [3453 3482])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [3483 3504])
+                    ("mask_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [3505 3524])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3525 3543]))                  
+                :type "void")
+                nil [3369 6041])
+            ("_FPP_PhaseShifting" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6067 6084])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6085 6099])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6100 6111])
+                    ("phase_shift_step" variable (:type "int") (reparse-symbol arg-sub-list) [6112 6133])
+                    ("mask_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [6134 6153])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6154 6172]))                  
+                :type "void")
+                nil [6043 6283])
+            ("Sort_Shell" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6301 6311])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [6312 6318]))                  
+                :type "void")
+                nil [6285 6708])
+            ("MedianFilter_Parallel" function
+               (:arguments 
+                  ( ("Data_in" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6738 6754])
+                    ("Data_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6755 6772])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [6773 6783])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [6784 6795])
+                    ("Hsize" variable (:type "int") (reparse-symbol arg-sub-list) [6796 6806])
+                    ("Vsize" variable (:type "int") (reparse-symbol arg-sub-list) [6807 6817])
+                    ("skip_boundaries" variable (:type "bool") (reparse-symbol arg-sub-list) [6818 6839]))                  
+                :type "void")
+                nil [6711 8974])
+            ("AverageFilter_Parallel" function
+               (:template 
+                  ( ("m_Type" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("Data_in" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9028 9044])
+                    ("Data_out" variable
+                       (:pointer 1
+                        :type ("m_Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9045 9062])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [9063 9073])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [9074 9085])
+                    ("Hsize" variable (:type "int") (reparse-symbol arg-sub-list) [9086 9096])
+                    ("Vsize" variable (:type "int") (reparse-symbol arg-sub-list) [9097 9107])
+                    ("skip_boundaries" variable (:type "bool") (reparse-symbol arg-sub-list) [9108 9129]))                  )
+                nil [8976 11789])
+            ("_FPP_PhaseFiltering" function
+               (:arguments 
+                  ( ("FringeOrderS" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11816 11837])
+                    ("num_set" variable (:type "int") (reparse-symbol arg-sub-list) [11838 11850])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [11851 11861])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [11862 11873])
+                    ("filtering_scheme" variable (:type "int") (reparse-symbol arg-sub-list) [11874 11895])
+                    ("filter_windows_half_size" variable (:type "int") (reparse-symbol arg-sub-list) [11896 11925])
+                    ("stability_threshold" variable (:type "double") (reparse-symbol arg-sub-list) [11926 11953]))                  
+                :type "void")
+                nil [11791 12783])
+            ("_FPP_Phase_Calculation" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12813 12830])
+                    ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12831 12845])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [12846 12856])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [12857 12868])
+                    ("fpp_params" variable (:type ("FPP_Params" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12869 12891])
+                    ("LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12892 12910]))                  
+                :type "void")
+                nil [12785 15973])
+            ("_FPP_Z_Calculation" function
+               (:arguments 
+                  ( ("Phase" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [15999 16013])
+                    ("Z" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16014 16024])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [16025 16035])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [16036 16047])
+                    ("fpp_analysis_params" variable (:type ("FPP_Analysis_Params" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16048 16088]))                  
+                :type "void")
+                nil [15975 19000])
+            ("Calculate_xcn_ycn_from_i_j" function
+               (:arguments 
+                  ( ("i" variable (:type "double") (reparse-symbol arg-sub-list) [19034 19043])
+                    ("j" variable (:type "double") (reparse-symbol arg-sub-list) [19044 19053])
+                    ("xcn" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19054 19066])
+                    ("ycn" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19067 19079])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19080 19094])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19095 19109])
+                    ("method" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [19110 19124]))                  
+                :type "void")
+                nil [19002 23343])
+            ("_Calculate_XY_From_Z" function
+               (:arguments 
+                  ( ("i" variable (:type "double") (reparse-symbol arg-sub-list) [23370 23379])
+                    ("j" variable (:type "double") (reparse-symbol arg-sub-list) [23380 23389])
+                    ("x" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23390 23400])
+                    ("y" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23401 23411])
+                    ("z" variable (:type "double") (reparse-symbol arg-sub-list) [23412 23421])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23422 23436])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23437 23451])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23452 23466])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23467 23481]))                  
+                :type "void")
+                nil [23344 23975])
+            ("_FPP_XY_Calculation" function
+               (:arguments 
+                  ( ("X_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24002 24016])
+                    ("Y_out" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24017 24031])
+                    ("Z_in" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24032 24045])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [24046 24056])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [24057 24068])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24069 24083])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24084 24098])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24099 24113])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24114 24128]))                  
+                :type "void")
+                nil [23977 24594])
+            ("FPP_System" type
+               (:members 
+                  ( ("FPP_System" function
+                       (:constructor-flag t
+                        :type ("FPP_System" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24620 24762])
+                    ("LoadParameters" function
+                       (:arguments 
+                          ( ("jsfile" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [24787 24813]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [24768 25050])
+                    ("GetWidth" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol classsubparts) [25056 25150])
+                    ("GetHeight" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol classsubparts) [25160 25256])
+                    ("CalculateXYZ" function
+                       (:arguments 
+                          ( ("gray_images" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [25279 25297])
+                            ("pm" variable
+                               (:reference 1
+                                :type ("PointMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25298 25311]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [25262 26327])
+                    ("mLUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26370 26389])
+                    ("cam_A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26394 26408])
+                    ("cam_K" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26413 26427])
+                    ("cam_R" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26432 26446])
+                    ("cam_T" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26451 26465])
+                    ("m_fpp_params" variable (:type ("FPP_Params" type (:type "class") nil nil)) (reparse-symbol classsubparts) [26471 26495])
+                    ("m_fpp_analysis_params" variable (:type ("FPP_Analysis_Params" type (:type "class") nil nil)) (reparse-symbol classsubparts) [26500 26542])
+                    ("m_LUT_atan2" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [26547 26567]))                  
+                :type "struct")
+                nil [24596 26571])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [26582 26591])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26592 26605]))                  
+                :type "int")
+                nil [26573 26956]))          
+      :file "X1Tool.cpp"
+      :pointmax 26958
+      :fsize 26957
+      :lastmodtime '(23870 21121 394895 466000)
+      :unmatched-syntax '((punctuation 1403 . 1404) (punctuation 703 . 704))
+      :lexical-table 
+        '(("PI" . ((number "3.1415926535897932384626433832795" 283 . 316)))
+          ("INACTIVE_IMPTS" . ((number "1.0e-6" 264 . 270)))
+          ("INVALID_Z" . ((number "1e6" 207 . 210)))
+          ("INVALID_PHASE" . ((number "1e3" 185 . 188)))
+          ("INACTIVE_WC" . ((punctuation "-" 231 . 232) (number "999999.0" 232 . 240)))
+          ("MFP" . ((number "59" 872 . 874)))
+          )
+)
+    (semanticdb-table "Json11.h"
+      :file "Json11.h"
+      :fsize 728427
+      :lastmodtime '(23870 21121 394895 466000)))
+  :file "!home!rvbust!Rvbust!Sources!RVC!Tools!Capturing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

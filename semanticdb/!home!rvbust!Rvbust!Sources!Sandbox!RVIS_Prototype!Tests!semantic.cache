@@ -1,0 +1,134 @@
+;; Object Tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tests/"
+  :tables
+  (list
+    (semanticdb-table "TestPybind11.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11/pybind11.h" include (:system-flag t) nil [1 31])
+            ("RVIS/Base/RefPtr.h" include (:system-flag t) nil [32 61])
+            ("RVIS/Base/Object.h" include (:system-flag t) nil [62 91])
+            ("RVIS/Core/Environment.h" include (:system-flag t) nil [92 126])
+            ("RVIS/Core/Interface.h" include (:system-flag t) nil [127 159])
+            ("RVIS/Core/Module.h" include (:system-flag t) nil [160 189])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [191 212])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [243 245])
+                    ("" variable (:type ("RefPtr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [246 256])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [257 262]))                  
+                :type "int")
+                nil [214 263])
+            ("pybind11" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("holder_helper" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("get" function
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("RefPtr" type
+                                                     (:template-specifier 
+                                                        ( ("T" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [419 438]))                                          
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [399 458]))                                  
+                                :template-specifier 
+                                  ( ("RefPtr" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [309 465]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [286 467]))                  
+                :type "namespace")
+                nil [265 468])
+            ("UserData" type
+               (:superclasses 
+                  ( ("Object" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [508 516]))                  
+                :type "struct")
+                nil [470 520])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("TestPybind11" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [538 551])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [552 554]))                  
+                :type "int")
+                nil [522 1292]))          
+      :file "TestPybind11.cpp"
+      :pointmax 1293
+      :fsize 1292
+      :lastmodtime '(23752 5512 82526 326000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TestInterface.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Object.h" include (:system-flag t) nil [54 83])
+            ("RVIS/Base/RefPtr.h" include (:system-flag t) nil [84 113])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [115 136])
+            ("Node" type
+               (:superclasses 
+                  ( ("Object" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [168 175])
+                    ("val" variable (:type "int") (reparse-symbol classsubparts) [180 192])
+                    ("Type" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [197 226])
+                    ("protected" label nil (reparse-symbol classsubparts) [227 237])
+                    ("Node" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [242 258]))                  
+                :type "class")
+                nil [139 261])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [272 281])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [282 295]))                  
+                :type "int")
+                nil [263 593]))          
+      :file "TestInterface.cpp"
+      :pointmax 595
+      :fsize 594
+      :lastmodtime '(23761 18813 978419 783000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!RVIS_Prototype!Tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

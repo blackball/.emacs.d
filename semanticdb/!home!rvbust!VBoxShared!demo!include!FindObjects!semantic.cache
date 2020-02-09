@@ -1,0 +1,174 @@
+;; Object FindObjects/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FindObjects/"
+  :tables
+  (list
+    (semanticdb-table "findHomo.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_FINDHOMO_H" variable (:constant-flag t) nil [29 40])
+            ("common_include.hpp" include nil nil [42 71])
+            ("Eigen/Core" include (:system-flag t) nil [74 95])
+            ("Eigen/Dense" include (:system-flag t) nil [96 118])
+            ("Eigen/Geometry" include (:system-flag t) nil [119 144])
+            ("opencv2/calib3d/calib3d.hpp" include nil nil [146 184])
+            ("opencv2/features2d/features2d.hpp" include (:system-flag t) nil [185 229])
+            ("opencv2/xfeatures2d.hpp" include (:system-flag t) nil [230 264])
+            ("opencv2/core/eigen.hpp" include (:system-flag t) nil [265 298])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [300 322])
+            ("Eigen::Vector2d" using (:type ("Eigen::Vector2d" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [323 345])
+            ("Eigen::Vector3d" using (:type ("Eigen::Vector3d" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [346 368])
+            ("cv::xfeatures2d" using (:type ("cv::xfeatures2d" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [369 401])
+            ("findHomo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [420 427])
+                    ("frame" variable (:type ("Mat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [429 439])
+                    ("input" variable (:type ("pt_cluster" type (:type "class") nil nil)) (reparse-symbol classsubparts) [441 458])
+                    ("H_cv" variable (:type ("Mat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [491 500])
+                    ("H_eigen" variable (:type ("Matrix3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [502 519])
+                    ("ref_keypoints" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("KeyPoint" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [522 558])
+                    ("ref_descriptors" variable (:type ("Mat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [560 597])
+                    ("src_descriptors" variable (:type ("Mat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [560 597])
+                    ("triangle" variable
+                       (:dereference 1
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [600 620])
+                    ("peak" variable
+                       (:dereference 1
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [671 687])
+                    ("nearest_pt" variable
+                       (:dereference 1
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [722 744])
+                    ("side_pt" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Point2f" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [779 808])
+                    ("near_slope" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [810 830])
+                    ("cluster_center" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [859 882])
+                    ("findHomo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("input" variable (:type ("pt_cluster" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [895 912]))                          
+                        :type ("findHomo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [886 913])
+                    ("findClusterCenter" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [915 939])
+                    ("getDistance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pt1" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [959 971])
+                            ("pt2" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [972 984]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [941 985])
+                    ("getSlope" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pt1" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1002 1014])
+                            ("pt2" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1015 1027]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [987 1028])
+                    ("getTriangleArea" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pt1" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1052 1064])
+                            ("pt2" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1065 1077])
+                            ("pt3" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1078 1090]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [1030 1091])
+                    ("ifEqual" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pt1" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1106 1118])
+                            ("pt2" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1119 1131]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1093 1132])
+                    ("ifcollinear" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pt1" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1151 1163])
+                            ("pt2" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1164 1176])
+                            ("pt3" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1177 1189]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1134 1190])
+                    ("findMinDisPt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1209 1221])
+                            ("dst" variable
+                               (:reference 1
+                                :type ("Point2f" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1222 1235]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1192 1236])
+                    ("findMaxDisPt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable (:type ("Point2f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1255 1267])
+                            ("dst" variable
+                               (:reference 1
+                                :type ("Point2f" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1268 1281]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1238 1282])
+                    ("findOutTriangle" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1284 1306])
+                    ("findHomography" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1308 1329])
+                    ("drawHomoResult" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1331 1352])
+                    ("private" label nil (reparse-symbol classsubparts) [1355 1363])
+                    ("template_points" variable
+                       (:dereference 1
+                        :default-value "{Point2f(6,10),Point2f(87,10),Point2f(118,10),Point2f(87,31),
+                                   Point2f(70,30),Point2f(21,35),Point2f(50,51),Point2f(74,51),Point2f(62,72),Point2f(62,106)}"
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1365 1584]))                  
+                :type "class")
+                nil [403 1587]))          
+      :file "findHomo.hpp"
+      :pointmax 1596
+      :fsize 1562
+      :lastmodtime '(23815 2710 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_FINDHOMO_H")
+          )
+)
+    (semanticdb-table "common_include.hpp"
+      :file "common_include.hpp"
+      :fsize 439
+      :lastmodtime '(23816 41455 0 0)))
+  :file "!home!rvbust!VBoxShared!demo!include!FindObjects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

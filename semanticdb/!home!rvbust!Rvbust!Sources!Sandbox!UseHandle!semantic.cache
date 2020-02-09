@@ -1,0 +1,218 @@
+;; Object UseHandle/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "UseHandle/"
+  :tables
+  (list
+    (semanticdb-table "Object.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("object" type
+               (:prototype t
+                :type "struct")
+                nil [36 50])
+            ("object_create" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [51 82])
+            ("object_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [103 122]))                  
+                :type "void")
+                nil [83 123])
+            ("object_use" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [139 162]))                  
+                :type "int")
+                nil [124 163])
+            ("use_object" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [178 298])
+            ("object" type
+               (:members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [464 472]))                  
+                :type "struct")
+                nil [448 475])
+            ("object_create" function
+               (:pointer 1
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [477 640]))          
+      :file "Object.c"
+      :pointmax 1085
+      :fsize 1084
+      :lastmodtime '(23843 18776 974375 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Object.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "Object.cpp"
+      :pointmax 1
+      :unmatched-syntax nil)
+    (semanticdb-table "ObjectHandle.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("object" type
+               (:members 
+                  ( ("uid" variable (:type "int") (reparse-symbol classsubparts) [21 29])
+                    ("gid" variable (:type "int") (reparse-symbol classsubparts) [34 42]))                  
+                :type "struct")
+                nil [1 46])
+            ("object_create" function
+               (:prototype-flag t
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [48 78])
+            ("object_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [99 123]))                  
+                :type "void")
+                nil [79 124])
+            ("object_use" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [140 164]))                  
+                :type "int")
+                nil [125 165])
+            ("object_impl" type
+               (:members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [254 262]))                  
+                :type "struct")
+                nil [229 266])
+            ("sg_system" variable
+               (:typemodifiers ("static")
+                :default-value "{0, 0}"
+                :type ("" type (:type "struct") nil nil))
+                nil [268 310])
+            ("object_create" function (:type ("object" type (:type "class") nil nil)) nil [313 344])
+            ("object_destroy" function
+               (:arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [366 390]))                  
+                :type "void")
+                nil [346 399]))          
+      :file "ObjectHandle.c"
+      :pointmax 402
+      :fsize 401
+      :lastmodtime '(23848 11946 229313 372000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SmallVec.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cstddef" include (:system-flag t) nil [68 86])
+            ("SmallObjectPool" type
+               (:members 
+                  ( ("SmallObjectPool" function
+                       (:constructor-flag t
+                        :type ("SmallObjectPool" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [147 222])
+                    ("SmallObjectPool" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [232 346])
+                    ("Size" function
+                       (:typemodifiers ("inline")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [356 401])
+                    ("Get" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("idx" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 431]))                          
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [406 454])
+                    ("Allocate" function
+                       (:typemodifiers ("inline")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [459 860])
+                    ("private" label nil (reparse-symbol classsubparts) [862 870])
+                    ("m_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [875 889])
+                    ("m_ptr" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [895 904])
+                    ("m_stack" variable
+                       (:dereference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [910 923]))                  
+                :type "struct")
+                nil [118 926]))          
+      :file "SmallVec.h"
+      :pointmax 928
+      :fsize 883
+      :lastmodtime '(23843 14746 320398 776000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SMALL_VEC")
+          )
+)
+    (semanticdb-table "small_vector.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("small_vector" type
+               (:members 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type ("T" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [81 95])
+                    ("objs" variable
+                       (:dereference 1
+                        :type ("T" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [101 119]))                  
+                :type "struct")
+                nil [55 122]))          
+      :file "small_vector.h"
+      :pointmax 137
+      :fsize 136
+      :lastmodtime '(23848 11950 965331 519000)
+      :unmatched-syntax '((symbol 124 . 136) (symbol 124 . 136) (symbol 124 . 129))))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!UseHandle!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

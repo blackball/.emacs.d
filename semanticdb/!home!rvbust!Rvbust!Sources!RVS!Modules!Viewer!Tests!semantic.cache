@@ -1,0 +1,115 @@
+;; Object Tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tests/"
+  :tables
+  (list
+    (semanticdb-table "TestViewerBasic.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Viewer/Environment.h" include (:system-flag t) nil [54 89])
+            ("RVS/Viewer/Manipulator/Viewer.h" include (:system-flag t) nil [90 132])
+            ("RVS/Viewer/Manipulator/Plotter.h" include (:system-flag t) nil [133 176])
+            ("iostream" include (:system-flag t) nil [177 196])
+            ("fstream" include (:system-flag t) nil [197 215])
+            ("numeric" include (:system-flag t) nil [216 234])
+            ("osg/Vec3" include (:system-flag t) nil [235 254])
+            ("thread" include (:system-flag t) nil [255 272])
+            ("chrono" include (:system-flag t) nil [273 290])
+            ("is_Initialied" variable
+               (:typemodifiers ("volatile")
+                :default-value "false"
+                :type "bool")
+                nil [293 329])
+            ("env" variable
+               (:pointer 1
+                :type ("RVS::Viewer::Environment" type (:type "class") nil nil))
+                nil [331 361])
+            ("lines" variable (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("std::array" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [363 407])
+            ("points" variable (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("osg::Vec3" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [408 438])
+            ("delta" variable
+               (:default-value "std::chrono::seconds(3)"
+                :type ("auto" type (:type "class") nil nil))
+                nil [440 477])
+            ("t1" function
+               (:type ("ThreadData" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :constructor-flag t
+                :prototype-flag t)
+                nil [479 750])
+            ("ThreadData" type
+               (:members 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [503 520])
+                    ("ThreadData" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [536 550])
+                            ("" variable (:type ("_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [550 556]))                          
+                        :type ("ThreadData" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [525 573])
+                    ("viewer" variable
+                       (:default-value "nullptr"
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("RVS::Viewer::ViewerManipulatorPlug" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [579 648])
+                    ("plotter" variable
+                       (:default-value "nullptr"
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("RVS::Viewer::PlotterManipulator" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [654 721]))                  
+                :type "struct")
+                nil [479 750])
+            ("Running" function
+               (:arguments 
+                  ( ("td" variable
+                       (:reference 1
+                        :type ("ThreadData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [766 781]))                  
+                :type "void")
+                nil [753 1025])
+            ("TestPointSharedPtr" function
+               (:arguments 
+                  ( ("td" variable (:type ("ThreadData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1051 1065]))                  
+                :type "void")
+                nil [1027 3039])
+            ("TestLineSharedPtr" function
+               (:arguments 
+                  ( ("td" variable (:type ("ThreadData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3064 3078]))                  
+                :type "void")
+                nil [3041 3219])
+            ("LoadTestDataFrom" function
+               (:arguments 
+                  ( ("file" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3243 3267]))                  
+                :type "void")
+                nil [3221 4461])
+            ("main" function (:type "int") nil [4463 4825]))          
+      :file "TestViewerBasic.cpp"
+      :pointmax 4826
+      :fsize 4828
+      :lastmodtime '(23613 23891 236863 210000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Viewer!Tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

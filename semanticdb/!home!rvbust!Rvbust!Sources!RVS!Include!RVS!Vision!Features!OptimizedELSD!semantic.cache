@@ -1,0 +1,158 @@
+;; Object OptimizedELSD/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "OptimizedELSD/"
+  :tables
+  (list
+    (semanticdb-table "ELSD.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [67 96])
+            ("memory" include (:system-flag t) nil [97 114])
+            ("vector" include (:system-flag t) nil [115 132])
+            ("RVS" type
+               (:members 
+                  ( ("Vision" type
+                       (:members 
+                          ( ("ShapeType2D" type
+                               (:members 
+                                  ( ("ShapeType2D_None" variable
+                                       (:constant-flag t
+                                        :default-value (979 980)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [957 980])
+                                    ("ShapeType2D_LineSegment" variable
+                                       (:constant-flag t
+                                        :default-value (1015 1016)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [986 1016])
+                                    ("ShapeType2D_Polygon" variable
+                                       (:constant-flag t
+                                        :default-value (1049 1050)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1027 1050])
+                                    ("ShapeType2D_Ellipse" variable
+                                       (:constant-flag t
+                                        :default-value (1083 1084)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1061 1084])
+                                    ("ShapeType2D_Curve" variable
+                                       (:constant-flag t
+                                        :default-value (1135 1136)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1113 1136]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [934 1149])
+                            ("ContrarioShapeDetector" type
+                               (:members 
+                                  ( ("ContrarioShapeDetector" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("ContrarioShapeDetector" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [1187 1212])
+                                    ("ContrarioShapeDetector" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1217 1251])
+                                    ("SetShapeType" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("shapetype" variable
+                                               (:default-value "ShapeType2D_LineSegment | ShapeType2D_Ellipse"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1274 1335]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1257 1337])
+                                    ("Detect" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("gray" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1353 1373])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :default-value "cv::Mat()"
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1374 1405]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1342 1407])
+                                    ("Get" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("lines" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("LineSegment" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1446 1478]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1438 1479])
+                                    ("Get" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("polys" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Polygon" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1492 1520]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1484 1521])
+                                    ("Get" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ells" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Ellipse" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1534 1561]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1526 1562])
+                                    ("Get" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("curves" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Curve" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1575 1602]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1567 1603])
+                                    ("private" label nil (reparse-symbol classsubparts) [1609 1617])
+                                    ("Impl" type
+                                       (:prototype t
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1622 1634])
+                                    ("m_impl" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("Impl" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1639 1668]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1151 1671]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [151 1674]))                  
+                :type "namespace")
+                nil [134 1698]))          
+      :file "ELSD.h"
+      :pointmax 1717
+      :fsize 1716
+      :lastmodtime '(23808 45074 764715 867000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Vision!Features!OptimizedELSD!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

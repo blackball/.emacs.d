@@ -1,0 +1,107 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "Viewer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("osg/ref_ptr" include (:system-flag t) nil [53 75])
+            ("osgViewer/Viewer" include (:system-flag t) nil [76 103])
+            ("osgViewer/config/SingleWindow" include (:system-flag t) nil [104 144])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [145 182])
+            ("Vis/Viewer.h" include (:system-flag t) nil [184 207])
+            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [208 244])
+            ("EventHandler/ImGUIHandler.h" include nil nil [245 283])
+            ("EventHandler/PickHandler.h" include nil nil [284 321])
+            ("thread" include (:system-flag t) nil [323 340])
+            ("OSGViewerEventHook" type
+               (:superclasses 
+                  ( ("osgGA::GUIEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [401 408])
+                    ("OSGViewerEventHook" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("view" variable
+                               (:pointer 1
+                                :type ("osgViewer::Viewer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [432 456]))                          
+                        :type ("OSGViewerEventHook" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [413 476])
+                    ("private" label nil (reparse-symbol classsubparts) [1183 1191])
+                    ("m_viewer" variable
+                       (:pointer 1
+                        :type ("osgViewer::Viewer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1196 1224]))                  
+                :type "class")
+                nil [342 1227])
+            ("Vis" using (:type ("Vis" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1229 1249])
+            ("Data" type
+               (:parent "Viewer"
+                :members 
+                  ( ("m_osgviewer" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("osgViewer::Viewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1277 1348])
+                    ("m_sceneroot" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1354 1418]))                  
+                :type "struct")
+                nil [1251 1421])
+            ("Viewer" function
+               (:constructor-flag t
+                :parent "Viewer"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1438 1455])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [1456 1462])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [1463 1469])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [1470 1480])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [1481 1492])
+                    ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1493 1516]))                  
+                :type ("Viewer" type (:type "class") nil nil))
+                nil [1423 3070])
+            ("Viewer" function
+               (:destructor-flag t
+                :parent "Viewer"
+                :type "void")
+                nil [3072 3106])
+            ("Delete" function
+               (:parent "Viewer"
+                :arguments 
+                  ( ("h" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("Vis::VisNodeHandle" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3128 3166]))                  
+                :type "void")
+                nil [3108 3188])
+            ("Home" function
+               (:parent "Viewer"
+                :type "void")
+                nil [3190 3242])
+            ("Close" function
+               (:parent "Viewer"
+                :type "void")
+                nil [3244 3502])
+            ("Detach" function
+               (:parent "Viewer"
+                :type "void")
+                nil [3504 3924]))          
+      :file "Viewer.cpp"
+      :pointmax 3924
+      :fsize 3923
+      :lastmodtime '(23708 31129 37645 771000)
+      :unmatched-syntax '((semantic-list 570 . 1181) (symbol 557 . 565) (semantic-list 493 . 556) (symbol 487 . 493) (BOOL 482 . 486))))
+  :file "!home!rvbust!Rvbust!Sources!Vis!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

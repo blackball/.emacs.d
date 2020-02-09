@@ -1,0 +1,493 @@
+;; Object demo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "demo/"
+  :tables
+  (list
+    (semanticdb-table "scanner.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [836 855])
+            ("ctype.h" include (:system-flag t) nil [856 874])
+            ("unistd.h" include (:system-flag t) nil [875 894])
+            ("quirc.h" include (:system-flag t) nil [895 913])
+            ("time.h" include (:system-flag t) nil [914 931])
+            ("getopt.h" include (:system-flag t) nil [932 951])
+            ("camera.h" include nil nil [953 972])
+            ("mjpeg.h" include nil nil [973 991])
+            ("convert.h" include nil nil [992 1012])
+            ("dthash.h" include nil nil [1013 1032])
+            ("demoutil.h" include nil nil [1033 1054])
+            ("camera_path" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"/dev/video0\""
+                :type "char")
+                nil [1095 1142])
+            ("video_width" variable
+               (:typemodifiers ("static")
+                :default-value "640"
+                :type "int")
+                nil [1143 1172])
+            ("video_height" variable
+               (:typemodifiers ("static")
+                :default-value "480"
+                :type "int")
+                nil [1173 1203])
+            ("want_verbose" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [1204 1232])
+            ("printer_timeout" variable
+               (:typemodifiers ("static")
+                :default-value "2"
+                :type "int")
+                nil [1233 1264])
+            ("main_loop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cam" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1287 1306])
+                    ("q" variable
+                       (:pointer 1
+                        :type ("quirc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1314 1330])
+                    ("mj" variable
+                       (:pointer 1
+                        :type ("mjpeg_decoder" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1331 1356]))                  
+                :type "int")
+                nil [1266 2352])
+            ("run_scanner" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2377 2382]))                  
+                :type "int")
+                nil [2354 3387])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("progname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3407 3428]))                  
+                :type "void")
+                nil [3389 3820])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3831 3840])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3841 3853]))                  
+                :type "int")
+                nil [3822 4686]))          
+      :file "scanner.c"
+      :pointmax 4687
+      :fsize 4686
+      :lastmodtime '(23836 16904 847536 155000)
+      :unmatched-syntax nil)
+    (semanticdb-table "camera.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CAMERA_H_" variable (:constant-flag t) nil [862 871])
+            ("stddef.h" include (:system-flag t) nil [873 892])
+            ("CAMERA_MAX_BUFFERS" variable (:constant-flag t) nil [902 920])
+            ("camera_format_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("CAMERA_FORMAT_UNKNOWN" variable
+                             (:constant-flag t
+                              :default-value (965 966)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [941 966])
+                          ("CAMERA_FORMAT_MJPEG" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [969 989])
+                          ("CAMERA_FORMAT_YUYV" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [991 1011]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [925 1028])
+            ("camera_parms" type
+               (:members 
+                  ( ("format" variable (:type ("camera_format_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1053 1077])
+                    ("width" variable (:type "int") (reparse-symbol classsubparts) [1079 1091])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [1093 1106])
+                    ("pitch_bytes" variable (:type "int") (reparse-symbol classsubparts) [1108 1126])
+                    ("interval_n" variable (:type "int") (reparse-symbol classsubparts) [1128 1145])
+                    ("interval_d" variable (:type "int") (reparse-symbol classsubparts) [1147 1164]))                  
+                :type "struct")
+                nil [1030 1167])
+            ("camera_buffer" type
+               (:members 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1193 1206])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1208 1222])
+                    ("offset" variable (:type "unsigned long") (reparse-symbol classsubparts) [1224 1246]))                  
+                :type "struct")
+                nil [1169 1249])
+            ("camera" type
+               (:members 
+                  ( ("fd" variable (:type "int") (reparse-symbol classsubparts) [1268 1277])
+                    ("parms" variable (:type ("camera_parms" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1280 1306])
+                    ("buf_desc" variable
+                       (:dereference 1
+                        :type ("camera_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1309 1359])
+                    ("buf_count" variable (:type "int") (reparse-symbol classsubparts) [1361 1377])
+                    ("s_on" variable (:type "int") (reparse-symbol classsubparts) [1400 1411])
+                    ("s_qc" variable (:type "int") (reparse-symbol classsubparts) [1413 1424])
+                    ("s_qhead" variable (:type "int") (reparse-symbol classsubparts) [1426 1440]))                  
+                :type "struct")
+                nil [1251 1443])
+            ("camera_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1525 1542]))                  
+                :type "void")
+                nil [1508 1543])
+            ("camera_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1564 1581]))                  
+                :type "void")
+                nil [1544 1582])
+            ("camera_open" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1635 1652])
+                    ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1653 1670])
+                    ("target_w" variable (:type "int") (reparse-symbol arg-sub-list) [1673 1686])
+                    ("target_h" variable (:type "int") (reparse-symbol arg-sub-list) [1687 1700])
+                    ("tr_n" variable (:type "int") (reparse-symbol arg-sub-list) [1703 1712])
+                    ("tr_d" variable (:type "int") (reparse-symbol arg-sub-list) [1713 1722]))                  
+                :type "int")
+                nil [1619 1723])
+            ("camera_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1742 1759]))                  
+                :type "void")
+                nil [1724 1760])
+            ("camera_get_fd" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1794 1817]))                  
+                :type "int")
+                nil [1762 1836])
+            ("camera_get_parms" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :constant-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1898 1921]))                  
+                :type ("camera_parms" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1838 1944])
+            ("camera_map" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1979 1996])
+                    ("buf_count" variable (:type "int") (reparse-symbol arg-sub-list) [1997 2011]))                  
+                :type "int")
+                nil [1964 2012])
+            ("camera_unmap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2031 2048]))                  
+                :type "void")
+                nil [2013 2049])
+            ("camera_get_buf_count" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2090 2113]))                  
+                :type "int")
+                nil [2051 2139])
+            ("camera_on" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2185 2202]))                  
+                :type "int")
+                nil [2171 2203])
+            ("camera_off" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2220 2237]))                  
+                :type "void")
+                nil [2204 2238])
+            ("camera_enqueue_all" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2323 2340]))                  
+                :type "int")
+                nil [2300 2341])
+            ("camera_dequeue_one" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2365 2382]))                  
+                :type "int")
+                nil [2342 2383])
+            ("camera_get_head" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :constant-flag t
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("camera" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2484 2507]))                  
+                :type ("camera_buffer" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2424 2581]))          
+      :file "camera.h"
+      :pointmax 2590
+      :fsize 2589
+      :lastmodtime '(23836 16904 847536 155000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CAMERA_MAX_BUFFERS" . ((number "32" 921 . 923)))
+          ("CAMERA_H_")
+          )
+)
+    (semanticdb-table "mjpeg.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MJPEG_H_" variable (:constant-flag t) nil [861 869])
+            ("stdint.h" include (:system-flag t) nil [871 890])
+            ("stdio.h" include (:system-flag t) nil [891 909])
+            ("jpeglib.h" include (:system-flag t) nil [910 930])
+            ("setjmp.h" include (:system-flag t) nil [931 950])
+            ("mjpeg_decoder" type
+               (:members 
+                  ( ("err" variable (:type ("jpeg_error_mgr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1039 1067])
+                    ("dinfo" variable (:type ("jpeg_decompress_struct" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1069 1106])
+                    ("src" variable (:type ("jpeg_source_mgr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1108 1137])
+                    ("env" variable (:type ("jmp_buf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1139 1155]))                  
+                :type "struct")
+                nil [952 1158])
+            ("mjpeg_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mj" variable
+                       (:pointer 1
+                        :type ("mjpeg_decoder" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1210 1235]))                  
+                :type "void")
+                nil [1194 1236])
+            ("mjpeg_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mj" variable
+                       (:pointer 1
+                        :type ("mjpeg_decoder" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1315 1340]))                  
+                :type "void")
+                nil [1299 1341])
+            ("mjpeg_decode_rgb32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mj" variable
+                       (:pointer 1
+                        :type ("mjpeg_decoder" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1528 1553])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1563 1583])
+                    ("datalen" variable (:type "int") (reparse-symbol arg-sub-list) [1584 1596])
+                    ("out" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1606 1619])
+                    ("pitch" variable (:type "int") (reparse-symbol arg-sub-list) [1620 1630])
+                    ("max_w" variable (:type "int") (reparse-symbol arg-sub-list) [1631 1641])
+                    ("max_h" variable (:type "int") (reparse-symbol arg-sub-list) [1642 1652]))                  
+                :type "int")
+                nil [1505 1653])
+            ("mjpeg_decode_gray" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mj" variable
+                       (:pointer 1
+                        :type ("mjpeg_decoder" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1800 1825])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1834 1854])
+                    ("datalen" variable (:type "int") (reparse-symbol arg-sub-list) [1855 1867])
+                    ("out" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1876 1889])
+                    ("pitch" variable (:type "int") (reparse-symbol arg-sub-list) [1890 1900])
+                    ("max_w" variable (:type "int") (reparse-symbol arg-sub-list) [1901 1911])
+                    ("max_h" variable (:type "int") (reparse-symbol arg-sub-list) [1912 1922]))                  
+                :type "int")
+                nil [1778 1923]))          
+      :file "mjpeg.h"
+      :pointmax 1932
+      :fsize 1931
+      :lastmodtime '(23836 16904 847536 155000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MJPEG_H_")
+          )
+)
+    (semanticdb-table "convert.h"
+      :file "convert.h"
+      :fsize 1455
+      :lastmodtime '(23836 16904 847536 155000))
+    (semanticdb-table "dthash.h"
+      :file "dthash.h"
+      :fsize 1724
+      :lastmodtime '(23836 16904 847536 155000))
+    (semanticdb-table "demoutil.h"
+      :file "demoutil.h"
+      :fsize 1333
+      :lastmodtime '(23836 16904 847536 155000)))
+  :file "!home!rvbust!WS!Sandbox!quirc!demo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

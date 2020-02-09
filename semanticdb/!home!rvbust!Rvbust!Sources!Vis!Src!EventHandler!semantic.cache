@@ -1,0 +1,703 @@
+;; Object EventHandler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "EventHandler/"
+  :tables
+  (list
+    (semanticdb-table "ImGUIHandler.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("functional" include (:system-flag t) nil [67 88])
+            ("iostream" include (:system-flag t) nil [89 108])
+            ("osg/Camera" include (:system-flag t) nil [109 130])
+            ("osgGA/GUIEventHandler" include (:system-flag t) nil [131 163])
+            ("osgViewer/ViewerEventHandlers" include (:system-flag t) nil [164 204])
+            ("memory" include (:system-flag t) nil [205 222])
+            ("mutex" include (:system-flag t) nil [223 239])
+            ("ImGuiIO" type
+               (:prototype t
+                :type "struct")
+                nil [241 256])
+            ("ImGuiContext" type
+               (:prototype t
+                :type "struct")
+                nil [257 277])
+            ("PositionAttitudeIEditor" type
+               (:prototype t
+                :type "class")
+                nil [278 308])
+            ("ImGUIData" type
+               (:members 
+                  ( ("m_imgui_handler" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ImGuiContext" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [332 378])
+                    ("mg_mutex" variable
+                       (:typemodifiers ("static")
+                        :type ("std::mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [383 410])
+                    ("public" label nil (reparse-symbol classsubparts) [411 418])
+                    ("ImGUIData" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("ImGUIData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [423 435])
+                    ("DrawUI" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [441 455])
+                    ("GetLockedIO" function
+                       (:prototype-flag t
+                        :type ("ImGuiIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [461 484])
+                    ("UnLockIO" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [490 506])
+                    ("SetEditor" function
+                       (:arguments 
+                          ( ("editor" variable
+                               (:pointer 1
+                                :type ("PositionAttitudeIEditor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [527 559])
+                            ("edit_scale" variable (:type "float") (reparse-symbol arg-sub-list) [560 577]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [512 657])
+                    ("is_showing_help_text" variable (:type "bool") (reparse-symbol classsubparts) [662 695])
+                    ("private" label nil (reparse-symbol classsubparts) [697 705])
+                    ("m_pat_editor" variable
+                       (:pointer 1
+                        :type ("PositionAttitudeIEditor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [710 757])
+                    ("m_pat_editor_scale" variable
+                       (:default-value "1.0f"
+                        :type "float")
+                        (reparse-symbol classsubparts) [762 794]))                  
+                :type "class")
+                nil [310 797])
+            ("ImGUIRender" type
+               (:superclasses 
+                  ( ("ImGUIData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [837 844])
+                    ("DrawFrame" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("renderInfo" variable
+                               (:reference 1
+                                :type ("osg::RenderInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [864 892]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [849 893])
+                    ("ImGUIRender" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [899 914])
+                    ("private" label nil (reparse-symbol classsubparts) [916 924])
+                    ("Initialize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("renderInfo" variable
+                               (:reference 1
+                                :type ("osg::RenderInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [946 974]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [930 975])
+                    ("private" label nil (reparse-symbol classsubparts) [977 985])
+                    ("m_context_id" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [990 1010])
+                    ("m_font_texture" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1015 1037])
+                    ("m_shaderhdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1042 1061])
+                    ("m_verthdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1066 1083])
+                    ("m_fraghdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1088 1105])
+                    ("m_attrib_loc_tex" variable (:type ("GLint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1110 1133])
+                    ("m_attrib_loc_proj" variable (:type ("GLint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1138 1162])
+                    ("m_vbohdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1167 1183])
+                    ("m_vaohdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1188 1204])
+                    ("m_elehdl" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1209 1225])
+                    ("is_intialized" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1231 1258]))                  
+                :type "class")
+                nil [799 1261])
+            ("UIRenderPostCallback" type
+               (:superclasses 
+                  ( ("osg::Camera::DrawCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1327 1334])
+                    ("override" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1384 1399])
+                    ("UIRenderPostCallback" function
+                       (:constructor-flag t
+                        :type ("UIRenderPostCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1405 1458])
+                    ("GetImGuiData" function
+                       (:pointer 1
+                        :type ("ImGUIRender" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1464 1518])
+                    ("private" label nil (reparse-symbol classsubparts) [1520 1528])
+                    ("m_render" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ImGUIRender" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1533 1571])
+                    ("UIEventHandler" friend nil (reparse-symbol classsubparts) [1576 1603]))                  
+                :type "class")
+                nil [1263 1607])
+            ("UIEventHandler" type
+               (:superclasses 
+                  ( ("osgGA::GUIEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1664 1671])
+                    ("handle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("eventAdapter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1688 1731])
+                            ("" variable
+                               (:reference 1
+                                :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1732 1776])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::Object" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1777 1802])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1819 1854]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1676 1855])
+                    ("UIEventHandler" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("ImGUIData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1876 1892]))                          
+                        :type ("UIEventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1861 1913])
+                    ("private" label nil (reparse-symbol classsubparts) [1915 1923])
+                    ("m_guidata" variable
+                       (:pointer 1
+                        :type ("ImGUIData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1928 1949]))                  
+                :type "class")
+                nil [1609 1952]))          
+      :file "ImGUIHandler.h"
+      :pointmax 1953
+      :fsize 1952
+      :lastmodtime '(23708 31118 85556 599000)
+      :unmatched-syntax '((punctuation 1603 . 1604) (semantic-list 1354 . 1383) (semantic-list 1352 . 1354) (OPERATOR 1344 . 1352) (VOID 1339 . 1343) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "PickHandler.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("osgGA/GUIEventHandler" include (:system-flag t) nil [67 99])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [100 140])
+            ("osg/ShapeDrawable" include (:system-flag t) nil [141 169])
+            ("osgFX/Outline" include (:system-flag t) nil [170 194])
+            ("ImGUIData" type
+               (:prototype t
+                :type "class")
+                nil [196 212])
+            ("PositionAttitudeIEditor" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [246 253])
+                    ("PositionAttitudeIEditor" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [291 330]))                          
+                        :type ("PositionAttitudeIEditor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [267 633])
+                    ("PositionAttitudeIEditor" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [638 778])
+                    ("Move" function
+                       (:arguments 
+                          ( ("offset" variable (:type ("osg::Vec3d" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [794 812]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [784 873])
+                    ("Rotate" function
+                       (:arguments 
+                          ( ("offset" variable (:type ("osg::Quat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [891 908]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [879 969])
+                    ("handle" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ea" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [995 1028])
+                            ("aa" variable
+                               (:reference 1
+                                :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1029 1057]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [975 1062])
+                    ("AttachAidGeometry" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bbox" variable (:type ("osg::BoundingBox" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1099 1121]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1068 1126])
+                    ("UnAttachAidGeometry" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1132 1171])
+                    ("GetName" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1177 1284])
+                    ("protected" label nil (reparse-symbol classsubparts) [1286 1296])
+                    ("m_target" variable
+                       (:pointer 1
+                        :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1301 1342])
+                    ("m_outline" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osgFX::Outline" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1347 1386]))                  
+                :type "class")
+                nil [214 1389])
+            ("BasicKeyBoardPositionAttitudeEditor" type
+               (:superclasses 
+                  ( ("PositionAttitudeIEditor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1468 1475])
+                    ("BasicKeyBoardPositionAttitudeEditor" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1516 1555]))                          
+                        :type ("BasicKeyBoardPositionAttitudeEditor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1480 1556])
+                    ("BasicKeyBoardPositionAttitudeEditor" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1561 1600])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1681 1690])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1742 1751])
+                    ("private" label nil (reparse-symbol classsubparts) [1753 1761])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [1793 1802])
+                    ("m_pickedVisibleBox" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::ShapeDrawable" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1808 1860]))                  
+                :type "class")
+                nil [1391 1863])
+            ("CylinderDragPositionAttitudeEditor" type
+               (:superclasses 
+                  ( ("PositionAttitudeIEditor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1942 1949])
+                    ("CylinderDragPositionAttitudeEditor" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1989 2028]))                          
+                        :type ("CylinderDragPositionAttitudeEditor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1954 2029])
+                    ("CylinderDragPositionAttitudeEditor" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2034 2072])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2153 2162])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2214 2223])
+                    ("private" label nil (reparse-symbol classsubparts) [2225 2233])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2265 2274])
+                    ("m_pickedVisibleCylinders" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2280 2330])
+                    ("m_rotate_axis" variable (:type ("osg::Vec3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2336 2361])
+                    ("m_move_axis_ud" variable (:type ("osg::Vec3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2366 2392])
+                    ("m_move_axis_lr" variable (:type ("osg::Vec3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2397 2423])
+                    ("m_rotate_copy" variable (:type ("osg::Quat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2428 2452])
+                    ("m_move_copy" variable (:type ("osg::Vec3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2457 2480])
+                    ("m_drag_pos" variable (:type ("osg::Vec2f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2485 2507])
+                    ("m_edit_mode" variable (:type ("EDIT_MODE" type
+                         (:prototype t
+                          :type "enum")
+                          nil nil)) (reparse-symbol classsubparts) [2513 2607])
+                    ("EDIT_MODE" type
+                       (:members 
+                          ( ("NONE" variable
+                               (:constant-flag t
+                                :default-value (2549 2550)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2542 2550])
+                            ("ROTATE" variable
+                               (:constant-flag t
+                                :default-value (2569 2570)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2560 2570])
+                            ("MOVE" variable
+                               (:constant-flag t
+                                :default-value (2587 2588)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2580 2588]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [2513 2607]))                  
+                :type "class")
+                nil [1866 2610])
+            ("PickEventHandler" type
+               (:superclasses 
+                  ( ("osgGA::GUIEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2669 2676])
+                    ("PickEventHandler" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("imGUIData" variable
+                               (:pointer 1
+                                :type ("ImGUIData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2698 2719]))                          
+                        :type ("PickEventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2681 2747])
+                    ("handle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ea" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2764 2797])
+                            ("aa" variable
+                               (:reference 1
+                                :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2798 2826]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2752 2827])
+                    ("private" label nil (reparse-symbol classsubparts) [2829 2837])
+                    ("m_editor" variable
+                       (:pointer 1
+                        :type ("PositionAttitudeIEditor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2842 2886])
+                    ("m_imguidata" variable
+                       (:pointer 1
+                        :type ("ImGUIData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2891 2914]))                  
+                :type "class")
+                nil [2612 2917]))          
+      :file "PickHandler.h"
+      :pointmax 2918
+      :fsize 2971
+      :lastmodtime '(23708 31118 85556 599000)
+      :unmatched-syntax '((semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (semantic-list 2262 . 2264) (symbol 2243 . 2262) (VOID 2238 . 2242) (semantic-list 2190 . 2213) (symbol 2173 . 2190) (VOID 2168 . 2172) (semantic-list 2089 . 2152) (symbol 2083 . 2089) (BOOL 2078 . 2082) (semantic-list 1790 . 1792) (symbol 1771 . 1790) (VOID 1766 . 1770) (semantic-list 1718 . 1741) (symbol 1701 . 1718) (VOID 1696 . 1700) (semantic-list 1617 . 1680) (symbol 1611 . 1617) (BOOL 1606 . 1610) (EXPLICIT 258 . 266) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "ImGUIHandler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ImGUIHandler.h" include nil nil [53 78])
+            ("PickHandler.h" include nil nil [79 103])
+            ("imgui/imgui.h" include (:system-flag t) nil [104 128])
+            ("imgui/imgui_internal.h" include (:system-flag t) nil [129 162])
+            ("osgUtil/SceneView" include (:system-flag t) nil [164 192])
+            ("osgUtil/UpdateVisitor" include (:system-flag t) nil [193 225])
+            ("osg/BlendEquation" include (:system-flag t) nil [226 254])
+            ("osg/BlendFunc" include (:system-flag t) nil [255 279])
+            ("osg/Camera" include (:system-flag t) nil [280 301])
+            ("osg/CullFace" include (:system-flag t) nil [302 325])
+            ("osg/PolygonMode" include (:system-flag t) nil [326 352])
+            ("osg/GLExtensions" include (:system-flag t) nil [353 380])
+            ("osg/Texture1D" include (:system-flag t) nil [381 405])
+            ("osg/Texture2D" include (:system-flag t) nil [406 430])
+            ("iterator" include (:system-flag t) nil [433 452])
+            ("iostream" include (:system-flag t) nil [453 472])
+            ("MAX_GL_ARRAY_BUFFER_SIZE" variable (:constant-flag t) nil [482 506])
+            ("MAX_GL_ELEMENT_ARRAY_BUFFER_SIZE" variable (:constant-flag t) nil [520 552])
+            ("DrawUI" function
+               (:parent "ImGUIData"
+                :type "void")
+                nil [560 4230])
+            ("ImGUIData" function
+               (:constructor-flag t
+                :parent "ImGUIData"
+                :type ("ImGUIData" type (:type "class") nil nil))
+                nil [4232 4331])
+            ("GetLockedIO" function
+               (:parent "ImGUIData"
+                :type ("ImGuiIO" type (:type "class") nil nil))
+                nil [4333 4471])
+            ("UnLockIO" function
+               (:parent "ImGUIData"
+                :type "void")
+                nil [4473 4522])
+            ("checkShader" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("shader" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4548 4562])
+                    ("extensions" variable
+                       (:pointer 1
+                        :type ("osg::GLExtensions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4563 4593]))                  
+                :type "void")
+                nil [4524 5243])
+            ("()" function
+               (:operator-flag t
+                :parent "UIRenderPostCallback"
+                :arguments 
+                  ( ("renderInfo" variable
+                       (:reference 1
+                        :type ("osg::RenderInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5284 5312]))                  
+                :type "void")
+                nil [5246 5355])
+            ("ImGUIData::mg_mutex" variable (:type ("std::mutex" type (:type "class") nil nil)) nil [5357 5388])
+            ("ImGUIRender" function
+               (:destructor-flag t
+                :parent "ImGUIRender"
+                :type "void")
+                nil [5390 6098])
+            ("DrawFrame" function
+               (:parent "ImGUIRender"
+                :arguments 
+                  ( ("renderInfo" variable
+                       (:reference 1
+                        :type ("osg::RenderInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6128 6156]))                  
+                :type "void")
+                nil [6100 9662])
+            ("Initialize" function
+               (:parent "ImGUIRender"
+                :arguments 
+                  ( ("renderInfo" variable
+                       (:reference 1
+                        :type ("osg::RenderInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10353 10381]))                  
+                :type "void")
+                nil [10324 16235])
+            ("ConvertFromOSGKey" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable (:type "int") (reparse-symbol arg-sub-list) [16381 16389]))                  
+                :type "int")
+                nil [16352 18061])
+            ("handle" function
+               (:parent "UIEventHandler"
+                :arguments 
+                  ( ("eventAdapter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18091 18134])
+                    ("" variable
+                       (:reference 1
+                        :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18135 18179])
+                    ("" variable
+                       (:pointer 1
+                        :type ("osg::Object" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18180 18205])
+                    ("" variable
+                       (:pointer 1
+                        :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18234 18269]))                  
+                :type "bool")
+                nil [18063 21907]))          
+      :file "ImGUIHandler.cpp"
+      :pointmax 21908
+      :fsize 21907
+      :lastmodtime '(23708 31118 85556 599000)
+      :unmatched-syntax '((punctuation 10321 . 10322) (semantic-list 9756 . 10321) (INT 9752 . 9755) (punctuation 9750 . 9751) (symbol 9737 . 9749) (ENUM 9732 . 9736))
+      :lexical-table 
+        '(("MAX_GL_ELEMENT_ARRAY_BUFFER_SIZE" . ((number "80000" 553 . 558)))
+          ("MAX_GL_ARRAY_BUFFER_SIZE" . ((number "8000" 507 . 511)))
+          )
+)
+    (semanticdb-table "PickHandler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PickHandler.h" include nil nil [53 77])
+            ("ImGUIHandler.h" include nil nil [78 103])
+            ("osgViewer/Viewer" include (:system-flag t) nil [105 132])
+            ("osg/PolygonMode" include (:system-flag t) nil [133 159])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [160 200])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [201 238])
+            ("iostream" include (:system-flag t) nil [240 259])
+            ("Vis/Concepts.h" include (:system-flag t) nil [260 285])
+            ("PathAnimation" type
+               (:superclasses 
+                  ( ("osg::Callback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [333 340])
+                    ("PathAnimation" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:pointer 1
+                                :type ("osg::Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [359 376])
+                            ("manipulator" variable
+                               (:pointer 1
+                                :type ("osgGA::TrackballManipulator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [377 418])
+                            ("orients" variable (:type ("osg::Vec3" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [419 437])
+                            ("dis_scale" variable (:type "double") (reparse-symbol arg-sub-list) [438 455]))                          
+                        :type ("PathAnimation" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [345 640])
+                    ("override" variable (:type "int") (reparse-symbol classsubparts) [695 935])
+                    ("private" label nil (reparse-symbol classsubparts) [937 945])
+                    ("m_manip" variable
+                       (:pointer 1
+                        :type ("osgGA::TrackballManipulator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [950 987])
+                    ("m_camera" variable
+                       (:pointer 1
+                        :type ("osg::Camera" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [992 1014])
+                    ("m_orient_delta" variable (:type ("osg::Vec3" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1019 1044])
+                    ("m_dis" variable (:type "double") (reparse-symbol classsubparts) [1049 1062])
+                    ("m_frames" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [1067 1084]))                  
+                :type "class")
+                nil [288 1087])
+            ("BasicKeyBoardPositionAttitudeEditor" function
+               (:constructor-flag t
+                :parent "BasicKeyBoardPositionAttitudeEditor"
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1162 1201]))                  
+                :type ("BasicKeyBoardPositionAttitudeEditor" type (:type "class") nil nil))
+                nil [1089 1238])
+            ("BasicKeyBoardPositionAttitudeEditor" function
+               (:destructor-flag t
+                :parent "BasicKeyBoardPositionAttitudeEditor"
+                :type "void")
+                nil [1240 1342])
+            ("handle" function
+               (:parent "BasicKeyBoardPositionAttitudeEditor"
+                :arguments 
+                  ( ("ea" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1393 1426])
+                    ("aa" variable
+                       (:reference 1
+                        :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1427 1455]))                  
+                :type "bool")
+                nil [1344 3154])
+            ("AttachAidGeometry" function
+               (:parent "BasicKeyBoardPositionAttitudeEditor"
+                :arguments 
+                  ( ("box" variable (:type ("osg::BoundingBox" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3216 3237]))                  
+                :type "void")
+                nil [3156 3817])
+            ("UnAttachAidGeometry" function
+               (:parent "BasicKeyBoardPositionAttitudeEditor"
+                :type "void")
+                nil [3819 3929])
+            ("CylinderDragPositionAttitudeEditor" function
+               (:constructor-flag t
+                :parent "CylinderDragPositionAttitudeEditor"
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4002 4041]))                  
+                :type ("CylinderDragPositionAttitudeEditor" type (:type "class") nil nil))
+                nil [3931 4114])
+            ("CylinderDragPositionAttitudeEditor" function
+               (:destructor-flag t
+                :parent "CylinderDragPositionAttitudeEditor"
+                :type "void")
+                nil [4116 4216])
+            ("handle" function
+               (:parent "CylinderDragPositionAttitudeEditor"
+                :arguments 
+                  ( ("ea" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4266 4299])
+                    ("aa" variable
+                       (:reference 1
+                        :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4300 4328]))                  
+                :type "bool")
+                nil [4218 7041])
+            ("AttachAidGeometry" function
+               (:parent "CylinderDragPositionAttitudeEditor"
+                :arguments 
+                  ( ("box" variable (:type ("osg::BoundingBox" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7102 7123]))                  
+                :type "void")
+                nil [7043 9794])
+            ("UnAttachAidGeometry" function
+               (:parent "CylinderDragPositionAttitudeEditor"
+                :type "void")
+                nil [9796 9911])
+            ("handle" function
+               (:parent "PickEventHandler"
+                :arguments 
+                  ( ("ea" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9943 9976])
+                    ("aa" variable
+                       (:reference 1
+                        :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9977 10005]))                  
+                :type "bool")
+                nil [9913 12058]))          
+      :file "PickHandler.cpp"
+      :pointmax 12059
+      :fsize 12058
+      :lastmodtime '(23708 31118 85556 599000)
+      :unmatched-syntax '((semantic-list 654 . 694) (symbol 651 . 654) (BOOL 646 . 650) (semantic-list 654 . 694) (symbol 651 . 654) (BOOL 646 . 650))))
+  :file "!home!rvbust!Rvbust!Sources!Vis!Src!EventHandler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

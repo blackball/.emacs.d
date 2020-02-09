@@ -1,0 +1,642 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RVC/Common/Common.h" include (:system-flag t) nil [67 97])
+            ("stdint.h" include (:system-flag t) nil [125 144])
+            ("SERIALPORT_NAME_MAX" variable (:constant-flag t) nil [154 173])
+            ("SERIALPORT_DESCRIPTION_MAX" variable (:constant-flag t) nil [231 257])
+            ("SERIALPORT_OK" variable (:constant-flag t) nil [271 284])
+            ("SERIALPORT_ERROR" variable (:constant-flag t) nil [310 326])
+            ("SERIALPORT_ERROR_NOT_OPEN" variable (:constant-flag t) nil [349 374])
+            ("SERIALPORT_ERROR_IO" variable (:constant-flag t) nil [388 407])
+            ("SERIALPORT_ERROR_TIMEOUT" variable (:constant-flag t) nil [427 451])
+            ("SERIALPORT_ERROR_BUSY" variable (:constant-flag t) nil [466 487])
+            ("SERIALPORT_NOT_FOUND" variable (:constant-flag t) nil [505 525])
+            ("SERIALPORT_MAX_NUM" variable (:constant-flag t) nil [545 563])
+            ("SERIALPORT_ID_MAX" variable (:constant-flag t) nil [580 597])
+            ("SerialPortInfo" type
+               (:members 
+                  ( ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [635 668])
+                    ("description" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [674 721])
+                    ("vid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [787 800])
+                    ("pid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [860 873]))                  
+                :type "struct")
+                nil [607 932])
+            ("BaudRate" type
+               (:members 
+                  ( ("BaudRate_9600" variable
+                       (:constant-flag t
+                        :default-value (1026 1030)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1010 1030])
+                    ("BaudRate_38400" variable
+                       (:constant-flag t
+                        :default-value (1053 1058)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1036 1058])
+                    ("BaudRate_57600" variable
+                       (:constant-flag t
+                        :default-value (1081 1086)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1064 1086])
+                    ("BaudRate_115200" variable
+                       (:constant-flag t
+                        :default-value (1110 1116)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1092 1116]))                  
+                :type "enum")
+                nil [990 1119])
+            ("ByteSize" type
+               (:members 
+                  ( ("ByteSize_5" variable
+                       (:constant-flag t
+                        :default-value (1154 1155)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1141 1155])
+                    ("ByteSize_6" variable
+                       (:constant-flag t
+                        :default-value (1174 1175)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1161 1175])
+                    ("ByteSize_7" variable
+                       (:constant-flag t
+                        :default-value (1194 1195)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1181 1195])
+                    ("ByteSize_8" variable
+                       (:constant-flag t
+                        :default-value (1214 1215)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1201 1215]))                  
+                :type "enum")
+                nil [1121 1218])
+            ("Parity" type
+               (:members 
+                  ( ("Parity_None" variable
+                       (:constant-flag t
+                        :default-value (1252 1253)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1238 1253])
+                    ("Parity_Odd" variable
+                       (:constant-flag t
+                        :default-value (1272 1273)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1259 1273])
+                    ("Parity_Even" variable
+                       (:constant-flag t
+                        :default-value (1293 1294)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1279 1294]))                  
+                :type "enum")
+                nil [1220 1297])
+            ("StopBits" type
+               (:members 
+                  ( ("StopBits_1" variable
+                       (:constant-flag t
+                        :default-value (1332 1333)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1319 1333])
+                    ("StopBits_2" variable
+                       (:constant-flag t
+                        :default-value (1352 1353)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1339 1353])
+                    ("StopBits_1_5" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1359 1373]))                  
+                :type "enum")
+                nil [1299 1374])
+            ("FlowCtrl" type
+               (:members 
+                  ( ("FlowCtrl_None" variable
+                       (:constant-flag t
+                        :default-value (1412 1413)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1396 1413])
+                    ("FlowCtrl_Software" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1419 1437])
+                    ("FlowCtrl_Hardware" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1442 1461]))                  
+                :type "enum")
+                nil [1376 1462])
+            ("SerialPortConfig" type
+               (:members 
+                  ( ("baudrate" variable (:type ("BaudRate" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1494 1517])
+                    ("bytesize" variable (:type ("ByteSize" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1522 1545])
+                    ("parity" variable (:type ("Parity" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1550 1571])
+                    ("stopbits" variable (:type ("StopBits" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1576 1599])
+                    ("flowctrl" variable (:type ("FlowCtrl" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1604 1627])
+                    ("timeout_ms" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1632 1652]))                  
+                :type "struct")
+                nil [1464 1655])
+            ("SerialPort" type
+               (:members 
+                  ( ("uid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1681 1694])
+                    ("gid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1699 1712]))                  
+                :type "struct")
+                nil [1657 1715])
+            ("SerialPort_IsValid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1741 1761]))                  
+                :type "bool")
+                nil [1717 1762])
+            ("SerialPort_Scan" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("infos" variable
+                       (:dereference 1
+                        :type ("SerialPortInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1783 1806])
+                    ("maxsize" variable (:type "int") (reparse-symbol arg-sub-list) [1807 1819])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1820 1830]))                  
+                :type "int")
+                nil [1763 1831])
+            ("SerialPort_Open" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1859 1876])
+                    ("cfg" variable
+                       (:constant-flag t
+                        :type ("SerialPortConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1877 1904]))                  
+                :type ("SerialPort" type (:type "class") nil nil))
+                nil [1832 1905])
+            ("SerialPort_IsOpen" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1929 1949]))                  
+                :type "bool")
+                nil [1906 1950])
+            ("SerialPort_Close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1972 1992]))                  
+                :type "int")
+                nil [1951 1993])
+            ("SerialPort_Read" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2014 2034])
+                    ("buff" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2035 2050])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [2051 2064])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2065 2075]))                  
+                :type "int")
+                nil [1994 2076])
+            ("SerialPort_Write" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2098 2118])
+                    ("buff" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2119 2140])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [2141 2154])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2155 2165]))                  
+                :type "int")
+                nil [2077 2166])
+            ("SerialPort_Flush" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2188 2208]))                  
+                :type "int")
+                nil [2167 2209]))          
+      :file "SerialPort.h"
+      :pointmax 2234
+      :fsize 2233
+      :lastmodtime '(23899 44667 639203 672000)
+      :unmatched-syntax '((semantic-list 2228 . 2233) (symbol 2211 . 2228) (semantic-list 118 . 123) (symbol 99 . 118) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("SERIALPORT_ERROR" . ((punctuation "-" 338 . 339) (number "1" 339 . 340)))
+          ("SERIALPORT_OK" . ((number "0" 300 . 301)))
+          ("SERIALPORT_ERROR_NOT_OPEN" . ((punctuation "-" 377 . 378) (number "2" 378 . 379)))
+          ("SERIALPORT_ERROR_IO" . ((punctuation "-" 416 . 417) (number "3" 417 . 418)))
+          ("SERIALPORT_ERROR_TIMEOUT" . ((punctuation "-" 455 . 456) (number "4" 456 . 457)))
+          ("SERIALPORT_NOT_FOUND" . ((punctuation "-" 533 . 534) (number "6" 534 . 535)))
+          ("SERIALPORT_MAX_NUM" . ((number "32" 569 . 571)))
+          ("SERIALPORT_DESCRIPTION_MAX" . ((number "128" 258 . 261)))
+          ("SERIALPORT_NAME_MAX" . ((number "16" 174 . 176)))
+          ("SERIALPORT_ERROR_BUSY" . ((punctuation "-" 494 . 495) (number "5" 495 . 496)))
+          ("SERIALPORT_ID_MAX" . ((number "4" 604 . 605)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SerialPort.h" include nil nil [54 77])
+            ("Spinlock.h" include nil nil [78 99])
+            ("Logger.h" include nil nil [100 119])
+            ("g_serialport_manager" variable
+               (:typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("lock" variable (:type ("Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [255 269])
+                          ("ports" variable
+                             (:dereference 1
+                              :type ("SerialPortImpl" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [274 319]))                        
+                      :type "struct")
+                      nil nil))
+                nil [235 343])
+            ("Manager_Get" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable (:type ("SerialPort" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [387 401]))                  
+                :type ("SerialPortImpl" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [345 453])
+            ("Manager_IsValidPortName" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [498 515]))                  
+                :type "bool")
+                nil [455 583])
+            ("Manager_IsPortOpen" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [623 640]))                  
+                :type "bool")
+                nil [585 852])
+            ("Manager_Allocate" function
+               (:typemodifiers ("static")
+                :type ("SerialPort" type (:type "class") nil nil))
+                nil [927 1449])
+            ("Manager_Release" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable (:type ("SerialPort" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1514 1528]))                  
+                :type "void")
+                nil [1486 1832])
+            ("SerialPort_IsValid" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1885 1905]))                  
+                :type "bool")
+                nil [1861 2016])
+            ("SerialPort_IsOpen" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2041 2061]))                  
+                :type "bool")
+                nil [2018 2127])
+            ("SerialPort_Scan" function
+               (:arguments 
+                  ( ("infos" variable
+                       (:dereference 1
+                        :type ("SerialPortInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2149 2172])
+                    ("maxsize" variable (:type "int") (reparse-symbol arg-sub-list) [2173 2185])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2186 2196]))                  
+                :type "int")
+                nil [2129 2239])
+            ("SerialPort_Open" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2268 2285])
+                    ("cfg" variable
+                       (:constant-flag t
+                        :type ("SerialPortConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2286 2313]))                  
+                :type ("SerialPort" type (:type "class") nil nil))
+                nil [2241 2911])
+            ("SerialPort_Close" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2934 2954]))                  
+                :type "int")
+                nil [2913 3301])
+            ("SerialPort_Read" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3323 3343])
+                    ("buff" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3344 3359])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [3360 3373])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3374 3384]))                  
+                :type "int")
+                nil [3303 3566])
+            ("SerialPort_Write" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3589 3609])
+                    ("buff" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3610 3631])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [3632 3645])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3646 3656]))                  
+                :type "int")
+                nil [3568 3839])
+            ("SerialPort_Flush" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:constant-flag t
+                        :type ("SerialPort" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3862 3882]))                  
+                :type "int")
+                nil [3841 3989]))          
+      :file "SerialPort.cpp"
+      :pointmax 4014
+      :fsize 4013
+      :lastmodtime '(23899 44781 247540 909000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SerialPort.h" include nil nil [67 90])
+            ("Spinlock.h" include nil nil [91 112])
+            ("Logger.h" include nil nil [113 132])
+            ("unistd.h" include (:system-flag t) nil [134 153])
+            ("limits.h" include (:system-flag t) nil [154 173])
+            ("fcntl.h" include (:system-flag t) nil [174 192])
+            ("sys/ioctl.h" include (:system-flag t) nil [193 215])
+            ("sys/time.h" include (:system-flag t) nil [216 237])
+            ("errno.h" include (:system-flag t) nil [238 256])
+            ("termios.h" include (:system-flag t) nil [257 277])
+            ("string.h" include (:system-flag t) nil [278 297])
+            ("linux/serial.h" include (:system-flag t) nil [298 323])
+            ("glob.h" include (:system-flag t) nil [324 341])
+            ("stdio.h" include (:system-flag t) nil [342 360])
+            ("stdlib.h" include (:system-flag t) nil [361 380])
+            ("SERIALPORT_DEVICE_NAME" variable (:constant-flag t) nil [391 413])
+            ("SYS_DEVICE_PATH_MAX" variable (:constant-flag t) nil [438 457])
+            ("SerialPort_Reconfigure" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [523 530])
+                    ("cfg" variable
+                       (:constant-flag t
+                        :type ("SerialPortConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [531 558]))                  
+                :type "bool")
+                nil [488 3804])
+            ("Scan" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("infos" variable
+                       (:dereference 1
+                        :type ("SerialPortInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3823 3846])
+                    ("maxsize" variable (:type "int") (reparse-symbol arg-sub-list) [3847 3859])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3860 3870]))                  
+                :type "int")
+                nil [3806 6670])
+            ("SerialPortImpl" type
+               (:members 
+                  ( ("isopen" variable (:type "bool") (reparse-symbol classsubparts) [6700 6712])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6717 6748])
+                    ("rlock" variable (:type ("Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6799 6821])
+                    ("wlock" variable (:type ("Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6799 6821])
+                    ("fd" variable (:type "int") (reparse-symbol classsubparts) [6826 6833])
+                    ("gid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6857 6870])
+                    ("cfg" variable (:type ("SerialPortConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6927 6948])
+                    ("Open" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6963 6980])
+                            ("cfg" variable
+                               (:constant-flag t
+                                :type ("SerialPortConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6981 7008]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6954 7902])
+                    ("Close" function (:type "int") (reparse-symbol classsubparts) [7908 8109])
+                    ("Read" function
+                       (:arguments 
+                          ( ("buff" variable
+                               (:dereference 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8191 8206])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [8207 8220])
+                            ("size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [8221 8231]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8182 10918])
+                    ("Write" function
+                       (:arguments 
+                          ( ("buff" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10934 10955])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [10956 10969])
+                            ("size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10970 10980]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [10924 13699])
+                    ("Flush" function (:type "int") (reparse-symbol classsubparts) [13709 13914]))                  
+                :type "struct")
+                nil [6672 13917]))          
+      :file "SerialPortImpl_Linux.h"
+      :pointmax 13918
+      :fsize 13917
+      :lastmodtime '(23899 45154 788649 733000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SYS_DEVICE_PATH_MAX" . ((number "256" 462 . 465)))
+          ("SERIALPORT_DEVICE_NAME" . ((string "\"/dev/ttyUSB*\"" 415 . 429)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SerialPort.h" include nil nil [68 91])
+            ("Spinlock.h" include nil nil [92 113])
+            ("Logger.h" include nil nil [114 133])
+            ("windows.h" include (:system-flag t) nil [135 155])
+            ("setupapi.h" include (:system-flag t) nil [156 177])
+            ("stdio.h" include (:system-flag t) nil [215 233])
+            ("string.h" include (:system-flag t) nil [234 253])
+            ("SERIALPORT_DEVICE_NAME" variable (:constant-flag t) nil [262 284])
+            ("SerialPort_Reconfigure" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("HANDLE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [349 359])
+                    ("cfg" variable
+                       (:constant-flag t
+                        :type ("SerialPortConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [360 387]))                  
+                :type "bool")
+                nil [314 2999])
+            ("Scan" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("infos" variable
+                       (:dereference 1
+                        :type ("SerialPortInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3017 3040])
+                    ("maxsize" variable (:type "int") (reparse-symbol arg-sub-list) [3041 3053])
+                    ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3054 3064]))                  
+                :type "int")
+                nil [3001 6496])
+            ("SerialPortImpl" type
+               (:members 
+                  ( ("isopen" variable (:type "bool") (reparse-symbol classsubparts) [6526 6538])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6543 6576])
+                    ("rlock" variable (:type ("Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6627 6649])
+                    ("wlock" variable (:type ("Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6627 6649])
+                    ("fd" variable (:type ("HANDLE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6654 6664])
+                    ("gid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6688 6701])
+                    ("cfg" variable (:type ("SerialPortConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6758 6779])
+                    ("Open" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6794 6811])
+                            ("cfg" variable
+                               (:constant-flag t
+                                :type ("SerialPortConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6812 6839]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6785 7725])
+                    ("Close" function (:type "int") (reparse-symbol classsubparts) [7731 7955])
+                    ("Read" function
+                       (:arguments 
+                          ( ("buff" variable
+                               (:dereference 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7970 7985])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [7986 7999])
+                            ("size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [8000 8010]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7961 8666])
+                    ("Write" function
+                       (:arguments 
+                          ( ("buff" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8682 8703])
+                            ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [8704 8717])
+                            ("size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [8718 8728]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8672 9395])
+                    ("Flush" function (:type "int") (reparse-symbol classsubparts) [9401 9618]))                  
+                :type "struct")
+                nil [6498 9621]))          
+      :file "SerialPortImpl_Win32.h"
+      :pointmax 9622
+      :fsize 9621
+      :lastmodtime '(23899 44911 631927 943000)
+      :unmatched-syntax '((semantic-list 193 . 214) (symbol 186 . 193) (string 199 . 213) (symbol 179 . 185) (string 199 . 213) (punctuation 178 . 179) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("SERIALPORT_DEVICE_NAME" . ((string "\"COM\"" 286 . 291)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!RVC!SDK!Modules!Internal!SerialPort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,258 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "Viewer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("osg/ref_ptr" include (:system-flag t) nil [53 75])
+            ("osgViewer/Viewer" include (:system-flag t) nil [76 103])
+            ("osgViewer/config/SingleWindow" include (:system-flag t) nil [104 144])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [145 182])
+            ("Vis/Viewer.h" include (:system-flag t) nil [184 207])
+            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [208 244])
+            ("EventHandler/ImGUIHandler.h" include nil nil [245 283])
+            ("EventHandler/PickHandler.h" include nil nil [284 321])
+            ("thread" include (:system-flag t) nil [323 340])
+            ("OSGViewerEventHook" type
+               (:superclasses 
+                  ( ("osgGA::GUIEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [401 408])
+                    ("OSGViewerEventHook" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("view" variable
+                               (:pointer 1
+                                :type ("osgViewer::Viewer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [432 456]))                          
+                        :type ("OSGViewerEventHook" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [413 476])
+                    ("private" label nil (reparse-symbol classsubparts) [1183 1191])
+                    ("m_viewer" variable
+                       (:pointer 1
+                        :type ("osgViewer::Viewer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1196 1224]))                  
+                :type "class")
+                nil [342 1227])
+            ("Vis" using (:type ("Vis" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1229 1249])
+            ("Data" type
+               (:parent "Viewer"
+                :members 
+                  ( ("m_osgviewer" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("osgViewer::Viewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1277 1348])
+                    ("m_sceneroot" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1353 1417])
+                    ("m_axes" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("Vis::VisNodeHandle" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1435 1478]))                  
+                :type "struct")
+                nil [1251 1481])
+            ("m_osgviewer" variable
+               (:default-value "static_cast<Viewer *>(this)->m_dPtr->m_osgviewer;"
+                :type ("auto" type (:type "class") nil nil))
+                nil [1766 1835])
+            ("m_sceneroot" variable
+               (:default-value "static_cast<Viewer *>(this)->m_dPtr->m_sceneroot;"
+                :type ("auto" type (:type "class") nil nil))
+                nil [1840 1908])
+            ("apply" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("osgViewer::SingleWindow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1936 1991]))                  
+                :type "int")
+                nil [1926 1993])
+            ("realize" function
+               (:prototype-flag t
+                :type "int")
+                nil [2011 2021])
+            ("setName" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2047 2052]))                  
+                :type "int")
+                nil [2039 2053])
+            ("ViewerWindow" variable (:type ("osgViewer::Viewer::Windows" type (:type "class") nil nil)) nil [2058 2098])
+            ("getWindows" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ViewerWindow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2127 2140]))                  
+                :type "int")
+                nil [2116 2141])
+            ("setWindowName" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2182 2187]))                  
+                :type "int")
+                nil [2168 2188])
+            ("cameraPtr" variable
+               (:default-value "m_osgviewer->getCamera()"
+                :type ("auto" type (:type "class") nil nil))
+                nil [2194 2236])
+            ("setViewport" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("width" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2270 2276])
+                    ("" variable (:type ("height" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2277 2284]))                  
+                :type "int")
+                nil [2252 2285])
+            ("setClearColor" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("osg::Vec4" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2315 2344]))                  
+                :type "int")
+                nil [2301 2346])
+            ("setClearMask" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("GL_COLOR_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2375 2396])
+                    ("" variable (:type ("GL_DEPTH_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2397 2418])
+                    ("" variable (:type ("GL_STENCIL_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2419 2441]))                  
+                :type "int")
+                nil [2362 2442])
+            ("setCullingMode" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cameraPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2535 2545])
+                    ("" variable (:type ("getCullingMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2562])
+                    ("" variable (:type ("osg::CullSettings::SMALL_FEATURE_CULLING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2566 2607]))                  
+                :type "int")
+                nil [2520 2608])
+            ("addEventHandler" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("OSGViewerEventHook" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2647 2684]))                  
+                :type "int")
+                nil [2627 2686])
+            ("UIRenderPostCallback" variable (:type "int") nil [2713 2734])
+            ("addEventHandler" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("UIEventHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2772 2813]))                  
+                :type "int")
+                nil [2752 2815])
+            ("addEventHandler" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("PickEventHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2853 2896]))                  
+                :type "int")
+                nil [2833 2898])
+            ("addPostDrawCallback" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ui_render" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2934 2944]))                  
+                :type "int")
+                nil [2914 2945])
+            ("setSceneData" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2977 2989])
+                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2989 2994]))                  
+                :type "int")
+                nil [2964 2996])
+            ("SetVisNodeRootGroup" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3079 3091])
+                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3091 3096]))                  
+                :type "int")
+                nil [3059 3098])
+            ("SetVisNodeRootGroup" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3163 3175])
+                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3175 3180]))                  
+                :type "int")
+                nil [3143 3182])
+            ("setName" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3209 3214]))                  
+                :type "int")
+                nil [3201 3215])
+            ("ShowAxes" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("show_axes" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3230 3240]))                  
+                :type "int")
+                nil [3221 3241])
+            ("SetVisNodeRootGroup" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3410 3422])
+                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3422 3427]))                  
+                :type "int")
+                nil [3390 3429])
+            ("SetVisNodeRootGroup" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3497 3509])
+                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3509 3514]))                  
+                :type "int")
+                nil [3477 3516])
+            ("Detach" function
+               (:prototype-flag t
+                :type "int")
+                nil [3543 3552])
+            ("Close" function
+               (:prototype-flag t
+                :type "int")
+                nil [3921 3929])
+            ("Close" function
+               (:prototype-flag t
+                :type "int")
+                nil [3964 3972])
+            ("home" function
+               (:prototype-flag t
+                :type "int")
+                nil [4034 4041])
+            ("setDone" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4139 4144]))                  
+                :type "int")
+                nil [4131 4145])
+            ("_tmp_mutex" variable (:type ("std::mutex" type (:type "class") nil nil)) nil [4151 4173])
+            ("lk" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("_tmp_mutex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4210 4221]))                  
+                :type ("std::unique_lock" type
+                     (:template-specifier 
+                        ( ("std::mutex" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4178 4222])
+            ("wait" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("lk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4256 4259]))                  
+                :type "int")
+                nil [4251 4301])
+            ("detach" function
+               (:prototype-flag t
+                :type "int")
+                nil [4723 4732]))          
+      :file "Viewer.cpp"
+      :pointmax 4735
+      :fsize 4734
+      :lastmodtime '(23708 18543 447901 306000)
+      :unmatched-syntax '((close-paren 4733 . 4734) (punctuation 4722 . 4723) (semantic-list 4344 . 4713) (symbol 4338 . 4344) (semantic-list 4352 . 4712) (semantic-list 4345 . 4351) (punctuation 4337 . 4338) (punctuation 4336 . 4337) (symbol 4333 . 4336) (semantic-list 4352 . 4712) (semantic-list 4345 . 4351) (open-paren 4327 . 4328) (close-paren 4325 . 4326) (open-paren 4324 . 4325) (symbol 4318 . 4324) (punctuation 4317 . 4318) (punctuation 4316 . 4317) (symbol 4310 . 4316) (VOID 4305 . 4309) (close-paren 4302 . 4303) (semantic-list 4267 . 4299) (semantic-list 4260 . 4266) (punctuation 4250 . 4251) (symbol 4227 . 4250) (punctuation 4130 . 4131) (punctuation 4129 . 4130) (symbol 4118 . 4129) (punctuation 4117 . 4118) (punctuation 4116 . 4117) (symbol 4110 . 4116) (punctuation 4104 . 4105) (RETURN 4098 . 4104) (semantic-list 4075 . 4097) (IF 4072 . 4074) (open-paren 4066 . 4067) (close-paren 4064 . 4065) (open-paren 4063 . 4064) (symbol 4058 . 4063) (punctuation 4057 . 4058) (punctuation 4056 . 4057) (symbol 4050 . 4056) (VOID 4045 . 4049) (close-paren 4042 . 4043) (punctuation 4033 . 4034) (punctuation 4032 . 4033) (symbol 4021 . 4032) (punctuation 4020 . 4021) (punctuation 4019 . 4020) (symbol 4013 . 4019) (open-paren 4011 . 4012) (close-paren 4009 . 4010) (open-paren 4008 . 4009) (symbol 4004 . 4008) (punctuation 4003 . 4004) (punctuation 4002 . 4003) (symbol 3996 . 4002) (VOID 3991 . 3995) (symbol 3983 . 3989) (punctuation 3981 . 3982) (punctuation 3980 . 3981) (punctuation 3979 . 3980) (punctuation 3978 . 3979) (punctuation 3977 . 3978) (punctuation 3976 . 3977) (punctuation 3975 . 3976) (close-paren 3973 . 3974) (open-paren 3958 . 3959) (close-paren 3956 . 3957) (open-paren 3955 . 3956) (symbol 3949 . 3955) (punctuation 3948 . 3949) (punctuation 3947 . 3948) (punctuation 3946 . 3947) (symbol 3940 . 3946) (punctuation 3938 . 3939) (punctuation 3937 . 3938) (punctuation 3936 . 3937) (punctuation 3935 . 3936) (punctuation 3934 . 3935) (punctuation 3933 . 3934) (punctuation 3932 . 3933) (close-paren 3930 . 3931) (open-paren 3919 . 3920) (close-paren 3917 . 3918) (open-paren 3916 . 3917) (symbol 3910 . 3916) (punctuation 3909 . 3910) (punctuation 3908 . 3909) (punctuation 3907 . 3908) (symbol 3901 . 3907) (close-paren 3898 . 3899) (semantic-list 3830 . 3897) (semantic-list 3822 . 3829) (IF 3820 . 3822) (ELSE 3815 . 3819) (semantic-list 3636 . 3815) (semantic-list 3610 . 3635) (IF 3608 . 3610) (open-paren 3602 . 3603) (close-paren 3600 . 3601) (symbol 3596 . 3600) (BOOL 3591 . 3595) (open-paren 3590 . 3591) (symbol 3582 . 3590) (punctuation 3581 . 3582) (punctuation 3580 . 3581) (symbol 3574 . 3580) (VOID 3569 . 3573) (symbol 3564 . 3568) (punctuation 3562 . 3563) (punctuation 3561 . 3562) (punctuation 3560 . 3561) (punctuation 3559 . 3560) (punctuation 3558 . 3559) (punctuation 3557 . 3558) (punctuation 3556 . 3557) (close-paren 3553 . 3554) (punctuation 3542 . 3543) (punctuation 3541 . 3542) (symbol 3537 . 3541) (symbol 3525 . 3531) (punctuation 3523 . 3524) (punctuation 3522 . 3523) (punctuation 3521 . 3522) (punctuation 3520 . 3521) (punctuation 3519 . 3520) (punctuation 3518 . 3519) (punctuation 3517 . 3518) (semantic-list 3512 . 3514) (punctuation 3508 . 3509) (punctuation 3476 . 3477) (punctuation 3475 . 3476) (semantic-list 3469 . 3475) (punctuation 3468 . 3469) (punctuation 3467 . 3468) (symbol 3446 . 3467) (punctuation 3445 . 3446) (symbol 3434 . 3445) (semantic-list 3425 . 3427) (punctuation 3421 . 3422) (punctuation 3389 . 3390) (punctuation 3388 . 3389) (semantic-list 3382 . 3388) (punctuation 3381 . 3382) (punctuation 3380 . 3381) (symbol 3363 . 3380) (punctuation 3362 . 3363) (symbol 3351 . 3362) (punctuation 3248 . 3249) (punctuation 3247 . 3248) (punctuation 3246 . 3247) (punctuation 3245 . 3246) (punctuation 3244 . 3245) (punctuation 3243 . 3244) (punctuation 3242 . 3243) (punctuation 3200 . 3201) (punctuation 3199 . 3200) (symbol 3188 . 3199) (semantic-list 3178 . 3180) (punctuation 3174 . 3175) (punctuation 3142 . 3143) (punctuation 3141 . 3142) (semantic-list 3135 . 3141) (punctuation 3134 . 3135) (punctuation 3133 . 3134) (symbol 3115 . 3132) (punctuation 3114 . 3115) (symbol 3103 . 3114) (semantic-list 3094 . 3096) (punctuation 3090 . 3091) (punctuation 3058 . 3059) (punctuation 3057 . 3058) (semantic-list 3051 . 3057) (punctuation 3050 . 3051) (punctuation 3049 . 3050) (symbol 3027 . 3048) (punctuation 3026 . 3027) (symbol 3015 . 3026) (symbol 3006 . 3010) (punctuation 3004 . 3005) (punctuation 3003 . 3004) (punctuation 3002 . 3003) (punctuation 3001 . 3002) (punctuation 3000 . 3001) (punctuation 2999 . 3000) (punctuation 2998 . 2999) (semantic-list 2992 . 2994) (punctuation 2988 . 2989) (punctuation 2963 . 2964) (punctuation 2962 . 2963) (symbol 2951 . 2962) (punctuation 2913 . 2914) (punctuation 2912 . 2913) (symbol 2903 . 2912) (semantic-list 2869 . 2896) (NEW 2849 . 2852) (punctuation 2832 . 2833) (punctuation 2831 . 2832) (symbol 2820 . 2831) (semantic-list 2786 . 2813) (NEW 2768 . 2771) (punctuation 2751 . 2752) (punctuation 2750 . 2751) (symbol 2739 . 2750) (NEW 2709 . 2712) (punctuation 2707 . 2708) (symbol 2697 . 2706) (symbol 2692 . 2696) (semantic-list 2665 . 2684) (NEW 2643 . 2646) (punctuation 2626 . 2627) (punctuation 2625 . 2626) (symbol 2614 . 2625) (punctuation 2565 . 2566) (punctuation 2563 . 2564) (semantic-list 2560 . 2562) (punctuation 2545 . 2546) (punctuation 2544 . 2545) (punctuation 2519 . 2520) (punctuation 2518 . 2519) (symbol 2509 . 2518) (punctuation 2417 . 2418) (punctuation 2395 . 2396) (punctuation 2361 . 2362) (punctuation 2360 . 2361) (symbol 2351 . 2360) (semantic-list 2324 . 2344) (punctuation 2300 . 2301) (punctuation 2299 . 2300) (symbol 2290 . 2299) (number 2267 . 2268) (number 2264 . 2265) (punctuation 2251 . 2252) (punctuation 2250 . 2251) (symbol 2241 . 2250) (punctuation 2167 . 2168) (punctuation 2166 . 2167) (semantic-list 2164 . 2166) (symbol 2159 . 2164) (punctuation 2158 . 2159) (symbol 2146 . 2158) (punctuation 2115 . 2116) (punctuation 2114 . 2115) (symbol 2103 . 2114) (punctuation 2038 . 2039) (punctuation 2037 . 2038) (symbol 2026 . 2037) (punctuation 2010 . 2011) (punctuation 2009 . 2010) (symbol 1998 . 2009) (semantic-list 1959 . 1991) (NEW 1932 . 1935) (punctuation 1925 . 1926) (punctuation 1924 . 1925) (symbol 1913 . 1924) (open-paren 1760 . 1761) (symbol 1753 . 1759) (punctuation 1751 . 1752) (punctuation 1750 . 1751) (punctuation 1749 . 1750) (punctuation 1748 . 1749) (punctuation 1747 . 1748) (punctuation 1746 . 1747) (punctuation 1745 . 1746) (close-paren 1743 . 1744) (symbol 1739 . 1743) (NEW 1735 . 1738) (open-paren 1734 . 1735) (symbol 1728 . 1734) (punctuation 1726 . 1727) (close-paren 1716 . 1717) (symbol 1707 . 1716) (INT 1703 . 1706) (UNSIGNED 1694 . 1702) (punctuation 1692 . 1693) (symbol 1686 . 1692) (INT 1682 . 1685) (punctuation 1680 . 1681) (symbol 1675 . 1680) (INT 1671 . 1674) (punctuation 1669 . 1670) (symbol 1668 . 1669) (INT 1664 . 1667) (punctuation 1662 . 1663) (symbol 1661 . 1662) (INT 1657 . 1660) (punctuation 1655 . 1656) (symbol 1651 . 1655) (symbol 1644 . 1650) (punctuation 1643 . 1644) (punctuation 1642 . 1643) (symbol 1639 . 1642) (open-paren 1638 . 1639) (symbol 1632 . 1638) (punctuation 1631 . 1632) (punctuation 1630 . 1631) (symbol 1624 . 1630) (punctuation 1621 . 1622) (close-paren 1620 . 1621) (punctuation 1618 . 1619) (punctuation 1617 . 1618) (punctuation 1616 . 1617) (punctuation 1615 . 1616) (punctuation 1614 . 1615) (punctuation 1613 . 1614) (punctuation 1612 . 1613) (semantic-list 1601 . 1611) (symbol 1595 . 1601) (NEW 1602 . 1605) (punctuation 1593 . 1594) (semantic-list 1497 . 1592) (symbol 1491 . 1497) (punctuation 1490 . 1491) (punctuation 1489 . 1490) (symbol 1483 . 1489) (symbol 1426 . 1430) (punctuation 1424 . 1425) (punctuation 1423 . 1424) (punctuation 1422 . 1423) (punctuation 1421 . 1422) (punctuation 1420 . 1421) (punctuation 1419 . 1420) (punctuation 1418 . 1419) (semantic-list 570 . 1181) (symbol 557 . 565) (semantic-list 493 . 556) (symbol 487 . 493) (BOOL 482 . 486))))
+  :file "!home!rvbust!WS!Sandbox!Vis!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

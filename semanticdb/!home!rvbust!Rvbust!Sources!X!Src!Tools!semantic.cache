@@ -1,0 +1,130 @@
+;; Object Tools/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tools/"
+  :tables
+  (list
+    (semanticdb-table "FPPImageGenerator.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../FmtExt.h" include nil nil [54 76])
+            ("../Utils.h" include nil nil [77 98])
+            ("cmath" include (:system-flag t) nil [99 115])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [116 145])
+            ("X::Common::ZeroFill" using (:type ("X::Common::ZeroFill" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [147 173])
+            ("GenerateFPPImages_EachFrequency" function
+               (:arguments 
+                  ( ("Image_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [212 229])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [230 240])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [241 252])
+                    ("num_fringes" variable (:type "int") (reparse-symbol arg-sub-list) [253 269])
+                    ("num_shift" variable (:type "int") (reparse-symbol arg-sub-list) [307 321])
+                    ("fringes_are_vertical" variable (:type "bool") (reparse-symbol arg-sub-list) [322 348])
+                    ("contrast" variable (:type "double") (reparse-symbol arg-sub-list) [349 365])
+                    ("gamma_lut" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [403 440]))                  
+                :type "void")
+                nil [175 1674])
+            ("GenerateGammaLUT" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lut" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1705 1730])
+                    ("N" variable
+                       (:constant-flag t
+                        :default-value "10001"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1731 1750])
+                    ("gamma" variable
+                       (:constant-flag t
+                        :default-value "1.0"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1781 1805]))                  
+                :type "void")
+                nil [1676 2072])
+            ("SaveDataToColorImage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("imgname" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2107 2134])
+                    ("dataptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2135 2155])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [2156 2166])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [2200 2211]))                  
+                :type "void")
+                nil [2074 2636])
+            ("GenerateFPPImages" function
+               (:arguments 
+                  ( ("file_directory" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2661 2695])
+                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [2696 2706])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [2707 2718])
+                    ("fringe_frequency" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2742 2764])
+                    ("num_frequency" variable (:type "int") (reparse-symbol arg-sub-list) [2765 2783])
+                    ("num_shift" variable (:type "int") (reparse-symbol arg-sub-list) [2784 2798])
+                    ("last_frequency_label" variable
+                       (:default-value "1"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2822 2850])
+                    ("fringes_are_vertical" variable
+                       (:default-value "true"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2852 2884])
+                    ("contrast" variable
+                       (:default-value "1.0"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2909 2930])
+                    ("gamma" variable
+                       (:default-value "1.0"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2932 2950]))                  
+                :type "void")
+                nil [2638 3898])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3909 3918])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3919 3932]))                  
+                :type "int")
+                nil [3900 4438]))          
+      :file "FPPImageGenerator.cpp"
+      :pointmax 4439
+      :fsize 4438
+      :lastmodtime '(23637 20618 217425 446000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X!Src!Tools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

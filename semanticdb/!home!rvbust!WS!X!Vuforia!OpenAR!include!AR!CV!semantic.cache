@@ -1,0 +1,2377 @@
+;; Object CV/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CV/"
+  :tables
+  (list
+    (semanticdb-table "OrientationUtils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__AR_CV_ORIENTATIONUTILS_HEADERFILE__" variable (:constant-flag t) nil [539 576])
+            ("AR/CV/Fitting.h" include (:system-flag t) nil [578 604])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("OrientationUtils" type
+                               (:members 
+                                  ( ("DefaultGetter" type
+                                       (:members 
+                                          ( ("getOrientation" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("nOri" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type "int")
+                                                        (reparse-symbol arg-sub-list) [733 751]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [706 767]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [671 782])
+                                    ("getAbsoluteOrientationOffset" function
+                                       (:template 
+                                          ( ("size_t" type nil nil nil))                                          
+                                        :type "int"
+                                        :arguments 
+                                          ( ("nV1" variable (:type "int") (reparse-symbol arg-sub-list) [859 867])
+                                            ("nV2" variable (:type "int") (reparse-symbol arg-sub-list) [868 876]))                                          )
+                                        (reparse-symbol namespacesubparts) [788 1013]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [638 1015])
+                            ("OrientationHistogram" type
+                               (:template 
+                                  ( ("DATATYPE" type (:type "class") nil nil)
+                                    ("size_t" type nil nil nil)
+                                    ("size_t" type nil nil nil)
+                                    ("size_t" type nil nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1142 1149])
+                                    ("" type
+                                       (:members 
+                                          ( ("ORI_HIST_MASK" variable
+                                               (:constant-flag t
+                                                :default-value (1194 1209)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1178 1209])
+                                            ("ORI_HIST_BITS" variable
+                                               (:constant-flag t
+                                                :default-value (1319 1321)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1303 1321])
+                                            ("Math" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1323 1328])
+                                            ("Integer" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1329 1337])
+                                            ("c_msb" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1338 1344])
+                                            ("ORI_HIST_SIZE" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1344 1358])
+                                            ("result" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1360 1367])
+                                            ("ORI_HIST_SHIFT" variable
+                                               (:constant-flag t
+                                                :default-value (1442 1471)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1425 1471])
+                                            ("ORI_HIST_ROUND" variable
+                                               (:constant-flag t
+                                                :default-value (1543 1573)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1526 1573]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [1155 1580])
+                                    ("OrientationHistogram" function
+                                       (:constructor-flag t
+                                        :type ("OrientationHistogram" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1586 1637])
+                                    ("reset" function (:type "void") (reparse-symbol classsubparts) [1643 1753])
+                                    ("addData" function
+                                       (:template 
+                                          ( ("ORIENTEXTRACTOR" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("nData" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DATATYPE" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1814 1837]))                                          )
+                                        (reparse-symbol classsubparts) [1759 2467])
+                                    ("findMax" function (:type "int") (reparse-symbol classsubparts) [2473 3811])
+                                    ("private" label nil (reparse-symbol classsubparts) [3813 3821])
+                                    ("oriHist" variable
+                                       (:dereference 1
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [3827 3890])
+                                    ("oriWindows" variable
+                                       (:dereference 1
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [3827 3890])
+                                    ("numCorrs" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3895 3911]))                                  )
+                                (reparse-symbol namespacesubparts) [1018 3914])
+                            ("findOrientation" function
+                               (:template 
+                                  ( ("DATATYPE" type (:type "class") nil nil)
+                                    ("ORIENTEXTRACTOR" type (:type "class") nil nil)
+                                    ("size_t" type nil nil nil)
+                                    ("size_t" type nil nil nil)
+                                    ("size_t" type nil nil nil))                                  
+                                :type "int"
+                                :arguments 
+                                  ( ("nData" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AR::Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("DATATYPE" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4130 4174]))                                  )
+                                (reparse-symbol namespacesubparts) [3989 4462]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [622 4465]))                  
+                :type "namespace")
+                nil [607 4484]))          
+      :file "OrientationUtils.h"
+      :pointmax 4554
+      :fsize 4703
+      :lastmodtime '(22112 24680 960632 0)
+      :unmatched-syntax '((number 1367 . 1368) (punctuation 1366 . 1367) (punctuation 1359 . 1360) (punctuation 1358 . 1359) (punctuation 1357 . 1358) (punctuation 1343 . 1344) (punctuation 1337 . 1338) (punctuation 1336 . 1337) (punctuation 1328 . 1329) (punctuation 1327 . 1328) (punctuation 1322 . 1323) (punctuation 1321 . 1322) (number 1367 . 1368) (punctuation 1366 . 1367) (punctuation 1359 . 1360) (punctuation 1358 . 1359) (punctuation 1357 . 1358) (punctuation 1343 . 1344) (punctuation 1337 . 1338) (punctuation 1336 . 1337) (punctuation 1328 . 1329) (punctuation 1327 . 1328) (punctuation 1322 . 1323) (punctuation 1321 . 1322))
+      :lexical-table 
+        '(("__AR_CV_ORIENTATIONUTILS_HEADERFILE__")
+          )
+)
+    (semanticdb-table "RobustFASTHarris.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_ROBUST_FAST_HARRIS_H_" variable (:constant-flag t) nil [521 543])
+            ("AR/CV/FASTHarris.h" include (:system-flag t) nil [546 575])
+            ("AR/CV/GridSort.h" include (:system-flag t) nil [576 603])
+            ("AR/CV/Image/BitMask.h" include (:system-flag t) nil [604 636])
+            ("AR/Common/FlatSet.h" include (:system-flag t) nil [637 667])
+            ("AR/CV/Image/NCCPatch8x8.h" include (:system-flag t) nil [668 704])
+            ("AR/CV/Image/PatchMatch8x8.h" include (:system-flag t) nil [705 743])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("" type
+                               (:members 
+                                  ( ("BORDER" variable
+                                       (:constant-flag t
+                                        :default-value (808 809)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [799 809]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [788 813])
+                            ("UInt16_hash" type
+                               (:members 
+                                  ( ("result_type" type
+                                       (:typedef ("size_t" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [840 867])
+                                    ("argument_type" type
+                                       (:typedef ("AR::UInt16" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [872 905])
+                                    ("()" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("v" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("argument_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [933 957]))                                          
+                                        :type ("result_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [910 1002]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [815 1005])
+                            ("RobustFASTHarris" type
+                               (:superclasses 
+                                  ( ("AR::CV::FASTHarris" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1090 1097])
+                                    ("CoordVector" type
+                                       (:typedef ("AR::Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("AR::Math::Vec2I" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1102 1158])
+                                    ("Vec2FVector" type
+                                       (:typedef ("AR::Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("AR::Math::Vec2F" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1163 1219])
+                                    ("GridSort" type
+                                       (:typedef ("AR::CV::GridSort" type
+                                             (:template-specifier (("8") ("6") ("100"))
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1224 1269])
+                                    ("UInt16Set" type
+                                       (:typedef ("AR::Common::FlatSet" type
+                                             (:template-specifier 
+                                                ( ("AR::UInt16" type nil nil nil)
+                                                  ("UInt16_hash" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1274 1337])
+                                    ("DetectorConfig" type
+                                       (:members 
+                                          ( ("minScoreToAcceptPoint" variable (:type "int") (reparse-symbol classsubparts) [1410 1436])
+                                            ("scoringFunction" variable (:type "int") (reparse-symbol classsubparts) [1507 1527])
+                                            ("scoringLevel" variable (:type "int") (reparse-symbol classsubparts) [1593 1610])
+                                            ("minContrastToAcceptPoint" variable (:type "int") (reparse-symbol classsubparts) [1700 1729])
+                                            ("minFramesPerDetection" variable (:type "int") (reparse-symbol classsubparts) [1799 1825])
+                                            ("minPointsInCell" variable (:type "int") (reparse-symbol classsubparts) [1959 1979])
+                                            ("maxPointsInCell" variable (:type "int") (reparse-symbol classsubparts) [2130 2150])
+                                            ("maskScaleLevel" variable (:type "int") (reparse-symbol classsubparts) [2277 2296])
+                                            ("maskDotSize" variable (:type "int") (reparse-symbol classsubparts) [2418 2434])
+                                            ("doHarris" variable (:type "int") (reparse-symbol classsubparts) [2558 2571])
+                                            ("doBileratalFilter" variable (:type "int") (reparse-symbol classsubparts) [2667 2689])
+                                            ("doHalfResFAST" variable (:type "int") (reparse-symbol classsubparts) [2782 2800])
+                                            ("doScoringWithBlurredPatch" variable (:type "int") (reparse-symbol classsubparts) [2902 2932])
+                                            ("doBoostOnEmptyCell" variable (:type "int") (reparse-symbol classsubparts) [3022 3045])
+                                            ("filterSinglePoint" variable (:type ("AR::Math::Vec2I" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3151 3185])
+                                            ("fastHarrisCfg" variable (:type ("AR::CV::FASTHarris::CONFIG" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3279 3320]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1374 3382])
+                                    ("ImageCell" type
+                                       (:members 
+                                          ( ("ImageCell" function
+                                               (:constructor-flag t
+                                                :type ("ImageCell" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [3458 3575])
+                                            ("needDetection" variable (:type "bool") (reparse-symbol classsubparts) [3585 3604])
+                                            ("kptsFast" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3614 3653])
+                                            ("kpts" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3614 3653])
+                                            ("kptsTmp" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3614 3653])
+                                            ("numDuplicateHarrisPts" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3662 3691])
+                                            ("coordSet" variable (:type ("UInt16Set" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3700 3719])
+                                            ("pos" variable (:type ("AR::Math::Vec2S" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3728 3748])
+                                            ("oldKpts" variable (:type ("CoordVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3757 3777])
+                                            ("numFeatures" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3787 3806])
+                                            ("numFramesSinceCellUpdate" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3815 3847])
+                                            ("reset" function (:type "void") (reparse-symbol classsubparts) [3857 4035]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [3427 4042])
+                                    ("RobustFASTHarris" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("cfg" variable
+                                               (:reference 1
+                                                :type ("CONFIG" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4065 4077]))                                          
+                                        :type ("RobustFASTHarris" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4048 4078])
+                                    ("RobustFASTHarris" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4084 4115])
+                                    ("reset" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4121 4134])
+                                    ("update" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pyramid" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::ImagePyramid" type
+                                                     (:template-specifier 
+                                                        ( ("unsigned char" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4444 4495])
+                                            ("featureLocations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4496 4532])
+                                            ("maxPoints" variable
+                                               (:constant-flag t
+                                                :type ("size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4533 4556])
+                                            ("detectorCfg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DetectorConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4557 4591]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4432 4592])
+                                    ("detectCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("cell" variable
+                                               (:reference 1
+                                                :type ("ImageCell" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4614 4630])
+                                            ("detectorCfg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DetectorConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4631 4665])
+                                            ("cellSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4666 4698])
+                                            ("fullImg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4719 4749])
+                                            ("halfImg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4750 4780])
+                                            ("quarterImg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4781 4814])
+                                            ("coordsTmp" variable
+                                               (:reference 1
+                                                :type ("AR::Math::Vec2IVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4835 4868])
+                                            ("scoresTmp" variable
+                                               (:reference 1
+                                                :type ("KeypointScoreVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4869 4900])
+                                            ("fast10ScratchBuffer" variable
+                                               (:reference 1
+                                                :type ("AR::Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("unsigned char" type nil nil nil)
+                                                          ("AR::Common::VectorGrowConstant" type nil nil nil)
+                                                          ("AR::Common::VectorAllocAligned" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4921 5049])
+                                            ("patchMatch" variable
+                                               (:reference 1
+                                                :type ("AR::CV::PatchMatch8x8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5070 5104])
+                                            ("bitmask" variable
+                                               (:reference 1
+                                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5105 5130]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4598 5131])
+                                    ("writeCornersToPngFile" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("fileName" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [5164 5185])
+                                            ("img8" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5186 5213])
+                                            ("pts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5214 5237]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5137 5238])
+                                    ("getDefaultConfig" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :type ("DetectorConfig" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5361 5402])
+                                    ("protected" label nil (reparse-symbol classsubparts) [5404 5414])
+                                    ("findCellsToUpdate" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("detectorCfg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DetectorConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5445 5479]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5420 5480])
+                                    ("scoreByTrackability" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("img" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5511 5537])
+                                            ("kpts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5538 5559])
+                                            ("scoringFunction" variable (:type "int") (reparse-symbol arg-sub-list) [5560 5580])
+                                            ("scoringLevel" variable (:type "int") (reparse-symbol arg-sub-list) [5581 5598])
+                                            ("minContrast" variable (:type "int") (reparse-symbol arg-sub-list) [5599 5615])
+                                            ("blurPatch" variable (:type "bool") (reparse-symbol arg-sub-list) [5645 5660])
+                                            ("patchMatch8x8" variable
+                                               (:reference 1
+                                                :type ("AR::CV::PatchMatch8x8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5661 5698]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5486 5699])
+                                    ("scoreByMultiLevelTrackability" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("imgs" variable
+                                               (:constant-flag t
+                                                :type ("AR::Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("AR::CV::Image8" type
+                                                             (:pointer 1
+                                                              :constant-flag t)
+                                                              nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [5740 5793])
+                                            ("kpts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5794 5815])
+                                            ("blurPatch" variable (:type "bool") (reparse-symbol arg-sub-list) [5816 5831])
+                                            ("doOnlyOneLvel" variable (:type "bool") (reparse-symbol arg-sub-list) [5832 5851])
+                                            ("level" variable
+                                               (:default-value "1"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [5852 5865]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5705 5867])
+                                    ("testTrackability" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("img" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6462 6488])
+                                            ("imgScale" variable (:type "int") (reparse-symbol arg-sub-list) [6489 6502])
+                                            ("nccDiffThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [6503 6524])
+                                            ("searhR" variable (:type "int") (reparse-symbol arg-sub-list) [6525 6536])
+                                            ("minNCCScore" variable (:type "int") (reparse-symbol arg-sub-list) [6537 6553])
+                                            ("newPts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6554 6577]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6440 6578])
+                                    ("filterAgainstMask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("newPts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6607 6630])
+                                            ("maskScale" variable (:type "int") (reparse-symbol arg-sub-list) [6631 6645])
+                                            ("dotSize" variable (:type "int") (reparse-symbol arg-sub-list) [6646 6658])
+                                            ("maxPts" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6659 6673])
+                                            ("tmpKeypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6674 6703]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6584 6704])
+                                    ("countFeatures" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("featureLocations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6729 6765])
+                                            ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6766 6797]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6710 6798])
+                                    ("generateMaskFromTrackedPoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("featureLocations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6893 6929])
+                                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [6930 6940])
+                                            ("dotSize" variable (:type "int") (reparse-symbol arg-sub-list) [6941 6953]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6858 6954])
+                                    ("detectOnEmptyCells" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("featureLocations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6984 7020])
+                                            ("fullImg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7021 7051])
+                                            ("detectorCfg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DetectorConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7052 7086])
+                                            ("ptCoords" variable (:type ("AR::Common::Vector" type
+                                                 (:template-specifier 
+                                                    ( ("AR::Math::Vec2I" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [7087 7132])
+                                            ("ptScores" variable (:type ("AR::Common::Vector" type
+                                                 (:template-specifier 
+                                                    ( ("int" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [7133 7166]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6960 7167])
+                                    ("doMaskingPoint3x3" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7359 7386])
+                                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [7387 7397])
+                                            ("testFirst" variable (:type "bool") (reparse-symbol arg-sub-list) [7398 7413]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7336 7414])
+                                    ("doMaskingPoint5x5" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7443 7470])
+                                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [7471 7481])
+                                            ("testFirst" variable (:type "bool") (reparse-symbol arg-sub-list) [7482 7497]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7420 7498])
+                                    ("fillEmptyMask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("maskScale" variable (:type "int") (reparse-symbol arg-sub-list) [7523 7537]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7504 7538])
+                                    ("checkAgainstCoordSet" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("coordSet" variable (:type ("UInt16Set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7577 7596])
+                                            ("pt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7597 7623])
+                                            ("cellWidth" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [7624 7644]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7544 7645])
+                                    ("removeDuplicates" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("coordSet" variable (:type ("UInt16Set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7675 7694])
+                                            ("kpts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7695 7716])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7717 7745])
+                                            ("cellSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7746 7778])
+                                            ("kptsTmp" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7779 7803]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7651 7804])
+                                    ("getCoord" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("kpt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Keypoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7835 7855]))                                          
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7810 7856])
+                                    ("getCoord" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("kpt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7887 7914]))                                          
+                                        :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7862 7915])
+                                    ("isClose" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("kpt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Keypoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7934 7954])
+                                            ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7955 7982])
+                                            ("maxDist" variable (:type "int") (reparse-symbol arg-sub-list) [7983 7995]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7921 7996])
+                                    ("allowOnlySinglePoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8028 8048])
+                                            ("pt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8049 8075]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8002 8076])
+                                    ("mask" variable (:type ("AR::CV::Image8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8082 8113])
+                                    ("maskEmpty" variable (:type ("AR::CV::Image8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8082 8113])
+                                    ("gridSort" variable (:type ("GridSort" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8211 8229])
+                                    ("cellsToUpdate" variable (:type ("AR::Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("size_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8235 8276])
+                                    ("detectionCells" variable (:type ("AR::Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("ImageCell" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8353 8398]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1037 8414]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [760 8417]))                  
+                :type "namespace")
+                nil [745 8419]))          
+      :file "RobustFASTHarris.h"
+      :pointmax 8453
+      :fsize 8642
+      :lastmodtime '(22112 24680 998640 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ROBUST_FAST_HARRIS_H_")
+          )
+)
+    (semanticdb-table "FASTHarris.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__AR_CV_FASTHARRIS_HEADERFILE__" variable (:constant-flag t) nil [565 596])
+            ("AR/CV/HarrisCorner.h" include (:system-flag t) nil [599 630])
+            ("AR/CV/InterestPointFilter.h" include (:system-flag t) nil [631 669])
+            ("AR/CV/TinyHarris.h" include (:system-flag t) nil [670 699])
+            ("AR/CV/Image/ImagePyramid.h" include (:system-flag t) nil [700 737])
+            ("AR/CV/Image/BitMask.h" include (:system-flag t) nil [738 770])
+            ("AR/CV/Image/ImageIO.h" include (:system-flag t) nil [771 803])
+            ("AR/Common/Timing.h" include (:system-flag t) nil [804 833])
+            ("AR/Common/Mutex.h" include (:system-flag t) nil [834 862])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("FASTHarris" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1005 1012])
+                                    ("CONFIG" type
+                                       (:members 
+                                          ( ("MODE" type
+                                               (:members 
+                                                  ( ("MODE_SCENE" variable
+                                                       (:constant-flag t
+                                                        :default-value (1090 1091)
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [1077 1091])
+                                                    ("MODE_OBJECT" variable
+                                                       (:constant-flag t
+                                                        :default-value (1119 1120)
+                                                        :type "int")
+                                                        (reparse-symbol enumsubparts) [1105 1120]))                                                  
+                                                :type "enum")
+                                                (reparse-symbol classsubparts) [1045 1131])
+                                            ("mode" variable (:type ("MODE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1141 1151])
+                                            ("numLevels" variable (:type "int") (reparse-symbol classsubparts) [1160 1174])
+                                            ("fastThresholdLevel2" variable (:type "int") (reparse-symbol classsubparts) [1183 1249])
+                                            ("fastThresholdLevel1" variable (:type "int") (reparse-symbol classsubparts) [1183 1249])
+                                            ("fastThresholdLevel0" variable (:type "int") (reparse-symbol classsubparts) [1183 1249])
+                                            ("harrisThreshold" variable (:type "int") (reparse-symbol classsubparts) [1258 1278])
+                                            ("maxPointsPerCell" variable (:type "int") (reparse-symbol classsubparts) [1287 1308])
+                                            ("maxPoints" variable (:type "int") (reparse-symbol classsubparts) [1317 1331])
+                                            ("Dynamic" variable (:type ("DYNAMIC" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil)) (reparse-symbol classsubparts) [1341 1717])
+                                            ("DYNAMIC" type
+                                               (:members 
+                                                  ( ("enabled" variable (:type "bool") (reparse-symbol classsubparts) [1378 1391])
+                                                    ("lowSigma" variable (:type "int") (reparse-symbol classsubparts) [1404 1429])
+                                                    ("lowBarrier" variable (:type "int") (reparse-symbol classsubparts) [1404 1429])
+                                                    ("medSigma" variable (:type "int") (reparse-symbol classsubparts) [1442 1467])
+                                                    ("medBarrier" variable (:type "int") (reparse-symbol classsubparts) [1442 1467])
+                                                    ("highSigma" variable (:type "int") (reparse-symbol classsubparts) [1480 1507])
+                                                    ("highBarrier" variable (:type "int") (reparse-symbol classsubparts) [1480 1507])
+                                                    ("analyzeAtHalfRes" variable (:type "bool") (reparse-symbol classsubparts) [1520 1542])
+                                                    ("boostSparseCells" variable (:type "bool") (reparse-symbol classsubparts) [1555 1577]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [1341 1717]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1017 1724])
+                                    ("STATS" type
+                                       (:members 
+                                          ( ("time" variable (:type ("Time" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil)) (reparse-symbol classsubparts) [1801 2436])
+                                            ("Time" type
+                                               (:members 
+                                                  ( ("overall" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("maskBuild" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("depthMaskBuild" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("visibilityTest" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("maskConvert" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("level2" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("level1" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("level0" variable (:type "float") (reparse-symbol classsubparts) [1835 2380])
+                                                    ("filter" variable (:type "float") (reparse-symbol classsubparts) [1835 2380]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [1801 2436])
+                                            ("STATS" function
+                                               (:constructor-flag t
+                                                :type ("STATS" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2446 2469])
+                                            ("clear" function (:type "void") (reparse-symbol classsubparts) [2479 2715]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1774 2722])
+                                    ("" type
+                                       (:members 
+                                          ( ("MAX_RAW_CORNERS" variable
+                                               (:constant-flag t
+                                                :default-value (2761 2766)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [2743 2766])
+                                            ("NUM_CELLS_X" variable
+                                               (:constant-flag t
+                                                :default-value (2790 2791)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [2776 2791])
+                                            ("NUM_CELLS_Y" variable
+                                               (:constant-flag t
+                                                :default-value (2815 2816)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [2801 2816]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [2728 2824])
+                                    ("ImagePointFilter" type
+                                       (:typedef ("InterestPointFilter" type
+                                             (:template-specifier 
+                                                ( ("NUM_CELLS_X" type nil nil nil)
+                                                  ("NUM_CELLS_Y" type nil nil nil)
+                                                  ("128"))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2830 2906])
+                                    ("KeypointCoordVector" type
+                                       (:typedef ("Math::Vec2FVector" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2912 2958])
+                                    ("KeypointScoreVector" type
+                                       (:typedef ("Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("Common::VectorGrowConstant" type nil nil nil)
+                                                  ("Common::VectorAllocAligned" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3008 3121])
+                                    ("ImagePyramid" type
+                                       (:typedef ("AR::CV::ImagePyramid" type
+                                             (:template-specifier 
+                                                ( ("unsigned char" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3151 3208])
+                                    ("Fast10ScratchBuffer" type
+                                       (:typedef ("Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("unsigned char" type nil nil nil)
+                                                  ("Common::VectorGrowConstant" type nil nil nil)
+                                                  ("Common::VectorAllocAligned" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3280 3403])
+                                    ("FASTHarris" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("_cfgRoot" variable
+                                               (:reference 1
+                                                :type ("CONFIG" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3420 3437]))                                          
+                                        :type ("FASTHarris" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3409 3438])
+                                    ("FASTHarris" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3443 3465])
+                                    ("detect" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("pyramid" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3903 3931])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3932 3945])
+                                            ("filterWithGrid" variable (:type "bool") (reparse-symbol arg-sub-list) [3946 3966]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3883 3967])
+                                    ("getKeypoints" function
+                                       (:typemodifiers ("virtual")
+                                        :constant-flag t
+                                        :type ("KeypointCoordVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4012 4089])
+                                    ("getScores" function
+                                       (:typemodifiers ("virtual")
+                                        :constant-flag t
+                                        :type ("AR::Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("unsigned int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [4156 4243])
+                                    ("getConfig" function (:type ("CONFIG" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4296 4351])
+                                    ("getGradientResponse" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("img" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "unsigned char")
+                                                (reparse-symbol arg-sub-list) [4397 4422])
+                                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [4423 4433])
+                                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [4434 4445])
+                                            ("stride" variable (:type "int") (reparse-symbol arg-sub-list) [4446 4457]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [4357 4458])
+                                    ("protected" label nil (reparse-symbol classsubparts) [4460 4470])
+                                    ("Keypoint" type
+                                       (:members 
+                                          ( ("Keypoint" function
+                                               (:constructor-flag t
+                                                :type ("Keypoint" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4501 4526])
+                                            ("Keypoint" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("coord_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4544 4570])
+                                                    ("score_" variable (:type "int") (reparse-symbol arg-sub-list) [4571 4582])
+                                                    ("cell_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4583 4608]))                                                  
+                                                :type ("Keypoint" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4535 4656])
+                                            ("deref" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("kpt" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Keypoint" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4682 4702]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [4665 4728])
+                                            ("coord" variable (:type ("Math::Vec2I" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4737 4755])
+                                            ("cell" variable (:type ("Math::Vec2S" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4764 4781])
+                                            ("score" variable (:type "int") (reparse-symbol classsubparts) [4790 4800]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [4475 4807])
+                                    ("KeypointVector" type
+                                       (:typedef ("Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("Keypoint" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [4812 4860])
+                                    ("getPoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pyramid" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4881 4909])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4910 4923]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4866 4924])
+                                    ("getMaskedPoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pyramid" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4950 4978])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4979 4992]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4929 4993])
+                                    ("getBaseCorners" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5019 5039])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5040 5067])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5068 5094]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4999 5095])
+                                    ("getBaseCornersStatic" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5126 5146])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5147 5173]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5100 5174])
+                                    ("getBaseCornersDynamic" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5206 5226])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5227 5254])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5255 5281]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5179 5282])
+                                    ("getMaskedBaseCorners" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5314 5334])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5335 5362])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5363 5382])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5383 5409])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5410 5423]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5288 5424])
+                                    ("getMaskedBaseCornersStatic" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5461 5481])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5482 5501])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5502 5528])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5529 5542]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5429 5543])
+                                    ("getMaskedBaseCornersDynamic" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5581 5601])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5602 5629])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5630 5649])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5650 5676])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5677 5690]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5548 5691])
+                                    ("getFast10CornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5725 5745])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5746 5773])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5774 5798])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5799 5825]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5697 5826])
+                                    ("getMaskedFast9CornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5865 5885])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5886 5913])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5914 5933])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5934 5958])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5959 5985]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5832 5986])
+                                    ("getMaskedFast10CornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6026 6046])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6047 6074])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6075 6094])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6095 6119])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6120 6146]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5992 6147])
+                                    ("getMaskedFastCornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("fastVersion" variable (:type "int") (reparse-symbol arg-sub-list) [6185 6201])
+                                            ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6202 6230])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6231 6266])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6267 6294])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6295 6323])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6324 6350]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6153 6351])
+                                    ("getMaskedFast9CornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6390 6410])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6411 6438])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6439 6458])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6459 6483])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6484 6510])
+                                            ("coordsTmp" variable
+                                               (:reference 1
+                                                :type ("Math::Vec2IVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6519 6548])
+                                            ("scoresTmp" variable
+                                               (:reference 1
+                                                :type ("KeypointScoreVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6549 6580])
+                                            ("fast10ScratchBuffer" variable
+                                               (:reference 1
+                                                :type ("Fast10ScratchBuffer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6581 6622])
+                                            ("bitmask" variable
+                                               (:reference 1
+                                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6623 6648]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6357 6649])
+                                    ("getMaskedFast10CornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6689 6709])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6710 6737])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6738 6757])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6758 6782])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6783 6809])
+                                            ("coordsTmp" variable
+                                               (:reference 1
+                                                :type ("Math::Vec2IVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6818 6847])
+                                            ("scoresTmp" variable
+                                               (:reference 1
+                                                :type ("KeypointScoreVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6848 6879])
+                                            ("fast10ScratchBuffer" variable
+                                               (:reference 1
+                                                :type ("Fast10ScratchBuffer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6880 6921])
+                                            ("bitmask" variable
+                                               (:reference 1
+                                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6922 6947]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6655 6948])
+                                    ("getMaskedFastCornersInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("fastVersion" variable (:type "int") (reparse-symbol arg-sub-list) [6986 7002])
+                                            ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7003 7031])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7032 7067])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7068 7095])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7096 7124])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7125 7151])
+                                            ("coordsTmp" variable
+                                               (:reference 1
+                                                :type ("Math::Vec2IVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7160 7189])
+                                            ("scoresTmp" variable
+                                               (:reference 1
+                                                :type ("KeypointScoreVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7190 7221])
+                                            ("fast10ScratchBuffer" variable
+                                               (:reference 1
+                                                :type ("Fast10ScratchBuffer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7222 7263])
+                                            ("bitmask" variable
+                                               (:reference 1
+                                                :type ("AR::CV::BitMask" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7264 7289]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6954 7290])
+                                    ("getMaskedFastCornersStaticInCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("fastVersion" variable (:type "int") (reparse-symbol arg-sub-list) [7400 7416])
+                                            ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7417 7445])
+                                            ("mask" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::CV::Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7446 7473])
+                                            ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2S" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7474 7502])
+                                            ("barrier" variable (:type "int") (reparse-symbol arg-sub-list) [7503 7515])
+                                            ("nCellX" variable (:type "int") (reparse-symbol arg-sub-list) [7516 7527])
+                                            ("nCellY" variable (:type "int") (reparse-symbol arg-sub-list) [7528 7539])
+                                            ("keypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7540 7566]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7362 7567])
+                                    ("verifyKeypoints" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7594 7614])
+                                            ("baseKeypoints" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7615 7651])
+                                            ("newKeypoints" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7652 7681])
+                                            ("upscale" variable (:type "bool") (reparse-symbol arg-sub-list) [7682 7695]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7573 7696])
+                                    ("boostSparseCells" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("image" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7724 7744])
+                                            ("imageHalfRes" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7745 7772])
+                                            ("masked" variable (:type "bool") (reparse-symbol arg-sub-list) [7773 7785]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7702 7786])
+                                    ("removeDuplicates" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("refBegin" variable
+                                               (:constant-flag t
+                                                :type ("KeypointVector::const_iterator" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7814 7860])
+                                            ("refEnd" variable
+                                               (:constant-flag t
+                                                :type ("KeypointVector::const_iterator" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7861 7905])
+                                            ("inputPts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7906 7937])
+                                            ("outputPts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7938 7964]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7792 7965])
+                                    ("dumpCornersToBitmaps" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pyramid" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7997 8025]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7971 8026])
+                                    ("getBarrierFromVariance" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("variance" variable (:type "int") (reparse-symbol arg-sub-list) [8059 8072]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [8032 8073])
+                                    ("getBarrierFromAvgGrad" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("variance" variable (:type "int") (reparse-symbol arg-sub-list) [8105 8118]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [8079 8119])
+                                    ("logDetection" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [8143 8160])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8161 8180]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8125 8181])
+                                    ("filterAgainstGrid" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("keypoints" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8210 8242])
+                                            ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8243 8270])
+                                            ("stats" variable
+                                               (:reference 1
+                                                :type ("STATS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8271 8284]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8187 8285])
+                                    ("checkMaxPointsPerCell" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8318 8345]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8291 8346])
+                                    ("writeCoordsToImage" function
+                                       (:template 
+                                          ( ("VEC2" type (:type "class") nil nil)
+                                            ("V_GROWTH" type (:type "class") nil nil)
+                                            ("V_ALIGN" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("coords" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("VEC2" type nil nil nil)
+                                                          ("V_GROWTH" type nil nil nil)
+                                                          ("V_ALIGN" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [8442 8494])
+                                            ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8495 8522])
+                                            ("scale" variable (:type "float") (reparse-symbol arg-sub-list) [8523 8535])
+                                            ("fileName" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [8536 8557]))                                          )
+                                        (reparse-symbol classsubparts) [8352 8969])
+                                    ("filterAgainstMax" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("inputCoords" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointCoordVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8997 9036])
+                                            ("inputScores" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("unsigned int" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [9037 9085])
+                                            ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9086 9113])
+                                            ("maxPts" variable (:type "int") (reparse-symbol arg-sub-list) [9114 9125])
+                                            ("outputCoords" variable
+                                               (:reference 1
+                                                :type ("KeypointCoordVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9126 9160])
+                                            ("outputScores" variable
+                                               (:reference 1
+                                                :type ("AR::Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("unsigned int" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [9161 9208]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8975 9209])
+                                    ("filterAgainstMax" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("inputPts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9237 9268])
+                                            ("maxPts" variable (:type "int") (reparse-symbol arg-sub-list) [9269 9280])
+                                            ("outputCoords" variable
+                                               (:reference 1
+                                                :type ("KeypointCoordVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9281 9315])
+                                            ("outputScores" variable
+                                               (:reference 1
+                                                :type ("AR::Common::Vector" type
+                                                     (:template-specifier 
+                                                        ( ("unsigned int" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [9316 9363]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9215 9364])
+                                    ("filterPeripheral" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("srcPts" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9392 9421])
+                                            ("dstPts" variable
+                                               (:reference 1
+                                                :type ("KeypointVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9422 9445])
+                                            ("imgSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9446 9473]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9370 9474])
+                                    ("imagePointFilter" variable (:type ("ImagePointFilter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9480 9514])
+                                    ("coords" variable (:type ("KeypointCoordVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9520 9547])
+                                    ("scores" variable (:type ("AR::Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("unsigned int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [9552 9592])
+                                    ("coordsTmp" variable (:type ("Math::Vec2IVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9598 9626])
+                                    ("scoresTmp" variable (:type ("KeypointScoreVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9631 9661])
+                                    ("keypointsL0" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9667 9720])
+                                    ("keypointsL1" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9667 9720])
+                                    ("keypointsL2" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9667 9720])
+                                    ("keypointsBoostTmp" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9725 9778])
+                                    ("keypointsBoostTmp2" variable (:type ("KeypointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9725 9778])
+                                    ("fast10ScratchBuffer" variable (:type ("Fast10ScratchBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9784 9824])
+                                    ("tinyHarris" variable (:type ("TinyHarris" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9830 9852])
+                                    ("fastThreshold" variable (:type "int") (reparse-symbol classsubparts) [9858 9876])
+                                    ("chronoMaskConvert" variable (:type ("Common::Timing" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9882 9932])
+                                    ("timing" variable (:type ("Common::Timing" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9882 9932])
+                                    ("timing2" variable (:type ("Common::Timing" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9882 9932])
+                                    ("bitmask" variable (:type ("BitMask" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9937 9953])
+                                    ("configKeypointDetector" variable (:type ("CONFIG" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9959 9990])
+                                    ("mutex" variable (:type ("Common::Mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9996 10016]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [986 10019]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [880 10023]))                  
+                :type "namespace")
+                nil [865 10044]))          
+      :file "FASTHarris.h"
+      :pointmax 10107
+      :fsize 10340
+      :lastmodtime '(22112 24680 841108 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__AR_CV_FASTHARRIS_HEADERFILE__")
+          )
+)
+    (semanticdb-table "InterestPointFilter.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_AR_CV_INTERESTPOINTFILTER_H_" variable (:constant-flag t) nil [573 602])
+            ("AR/CV/Sort.h" include (:system-flag t) nil [605 628])
+            ("AR/Math/Integer.h" include (:system-flag t) nil [629 657])
+            ("AR/Common/Array.h" include (:system-flag t) nil [658 686])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("InterestPointFilter" type
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1656 1663])
+                                    ("" type
+                                       (:members 
+                                          ( ("GRID_WIDTH" variable
+                                               (:constant-flag t
+                                                :default-value (1696 1707)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1683 1707])
+                                            ("GRID_HEIGHT" variable
+                                               (:constant-flag t
+                                                :default-value (1837 1849)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1823 1849])
+                                            ("MAX_ITEMS_PER_CELL" variable
+                                               (:constant-flag t
+                                                :default-value (1984 2003)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1963 2003])
+                                            ("MASK_SHIFT" variable
+                                               (:constant-flag t
+                                                :default-value (2094 2095)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [2081 2095]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [1668 2258])
+                                    ("IndexType" type
+                                       (:typedef ("unsigned short")
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2264 2297])
+                                    ("ScoreVector" type
+                                       (:typedef ("Common::Vector" type
+                                             (:template-specifier 
+                                                ( ("unsigned int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2302 2351])
+                                    ("InterestPointFilter" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("InterestPointFilter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2357 2379])
+                                    ("setSize" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("imageSize" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2433 2462]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2420 2463])
+                                    ("getSize" function
+                                       (:constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2507 2566])
+                                    ("prealloc" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("numItems" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2759 2775]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2745 2776])
+                                    ("clear" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2808 2821])
+                                    ("addOldPoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3126 3149])
+                                            ("maxPointsPerCell" variable
+                                               (:default-value "MAX_ITEMS_PER_CELL"
+                                                :type ("size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3150 3194]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3109 3196])
+                                    ("addOldUntestedPoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3227 3250]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3202 3251])
+                                    ("addNewPoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3426 3449])
+                                            ("score" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [3450 3471]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3409 3472])
+                                    ("addBadPoint" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3559 3582]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3542 3583])
+                                    ("addInvalidPixel" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3646 3669]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3625 3670])
+                                    ("filter" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("maxPointsPerCell" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3927 3951])
+                                            ("maxPoints" variable
+                                               (:default-value "-1"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3952 3968]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3915 3970])
+                                    ("subtractMask" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4035 4055])
+                                    ("getMask" function
+                                       (:constant-flag t
+                                        :type ("Image8" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4093 4142])
+                                    ("getMaskBad" function
+                                       (:constant-flag t
+                                        :type ("Image8" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4149 4204])
+                                    ("getFilteredPoints" function
+                                       (:constant-flag t
+                                        :type ("Math::Vec2FVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4273 4356])
+                                    ("getFilteredScores" function
+                                       (:constant-flag t
+                                        :type ("ScoreVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4414 4491])
+                                    ("isOccluded" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4513 4536])
+                                            ("z" variable (:type "float") (reparse-symbol arg-sub-list) [4537 4545])
+                                            ("maskDepth" variable (:type "float") (reparse-symbol arg-sub-list) [4546 4562])
+                                            ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [4563 4579])
+                                            ("cntTest" variable
+                                               (:reference 1
+                                                :type ("size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4580 4596])
+                                            ("runVerification" variable
+                                               (:reference 1
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [4597 4619])
+                                            ("bad" variable
+                                               (:reference 1
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [4620 4630])
+                                            ("good" variable
+                                               (:reference 1
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [4631 4642]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4497 4643])
+                                    ("protected" label nil (reparse-symbol classsubparts) [4645 4655])
+                                    ("drawToMask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4676 4699])
+                                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [4700 4710])
+                                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [4711 4722])
+                                            ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4723 4741]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4660 4742])
+                                    ("drawToMask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4763 4786])
+                                            ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4787 4805]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4747 4806])
+                                    ("drawToMaskBad" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("pos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4830 4853])
+                                            ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4854 4872]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4811 4873])
+                                    ("drawCellToMask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("cell" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4898 4922])
+                                            ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4923 4941]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4878 4942])
+                                    ("oldPtIndices" variable
+                                       (:dereference 3
+                                        :type ("IndexType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4948 5222])
+                                    ("newPtIndices" variable
+                                       (:dereference 3
+                                        :type ("IndexType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4948 5222])
+                                    ("filteredIndicesInGrids" variable
+                                       (:dereference 3
+                                        :type ("IndexType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4948 5222])
+                                    ("numOldPts" variable
+                                       (:dereference 2
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5363 5523])
+                                    ("numNewPts" variable
+                                       (:dereference 2
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5363 5523])
+                                    ("numFilteredPointsInGrids" variable
+                                       (:dereference 2
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5363 5523])
+                                    ("imageSize" variable (:type ("Math::Vec2I" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5620 5642])
+                                    ("coordScale" variable (:type ("Math::Vec2F" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5647 5670])
+                                    ("gridSizePixels" variable (:type ("Math::Vec2I" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5675 5702])
+                                    ("oldPtCoords" variable (:type ("Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("Math::Vec2F" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [5707 5852])
+                                    ("newPtCoords" variable (:type ("Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("Math::Vec2F" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [5707 5852])
+                                    ("newPtScores" variable (:type ("Common::Vector" type
+                                         (:template-specifier 
+                                            ( ("unsigned short" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [5857 5900])
+                                    ("mask" variable (:type ("Image8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5905 5917])
+                                    ("maskBad" variable (:type ("Image8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5922 5937])
+                                    ("sortArray" variable (:type ("Common::Array" type
+                                         (:template-specifier 
+                                            ( ("unsigned int" type nil nil nil)
+                                              ("MAX_ITEMS_PER_CELL" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [5992 6050])
+                                    ("filteredNewCoords" variable (:type ("Math::Vec2FVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6056 6092])
+                                    ("filteredNewScores" variable (:type ("ScoreVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6158 6188]))                                  )
+                                (reparse-symbol namespacesubparts) [1230 6191])
+                            ("InterestPointFilter" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type ("InterestPointFilter" type (:type "class") nil nil)
+                                :parent "InterestPointFilter"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [6194 6686])
+                            ("clear" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [6689 7106])
+                            ("prealloc" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("numItems" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7262 7278]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [7109 7387])
+                            ("setSize" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("imageSize" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7542 7571]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [7390 8037])
+                            ("addOldPoint" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8196 8219])
+                                    ("maxPointsPerCell" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8220 8244]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [8040 9280])
+                            ("addOldUntestedPoint" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9450 9473]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [9282 10398])
+                            ("addBadPoint" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10557 10580]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [10401 11427])
+                            ("addNewPoint" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11586 11609])
+                                    ("score" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [11610 11631]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [11430 12763])
+                            ("addInvalidPixel" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12926 12949]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [12766 13088])
+                            ("filter" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("maxPointsPerCell" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13242 13266])
+                                    ("maxPoints" variable (:type "int") (reparse-symbol arg-sub-list) [13267 13281]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [13091 17636])
+                            ("drawToMask" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17793 17816])
+                                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [17817 17827])
+                                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [17828 17839])
+                                    ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [17840 17858]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [17638 18553])
+                            ("drawToMask" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18711 18734])
+                                    ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [18735 18753]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [18556 20185])
+                            ("drawToMaskBad" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20346 20369])
+                                    ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [20370 20388]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [20188 21859])
+                            ("drawCellToMask" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("cell" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22021 22045])
+                                    ("col" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [22046 22064]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [21862 22434])
+                            ("subtractMask" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "void"
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [22437 22763])
+                            ("isOccluded" function
+                               (:template 
+                                  ( ("int" type nil nil nil)
+                                    ("int" type nil nil nil)
+                                    ("int" type nil nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Math::Vec2F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22922 22945])
+                                    ("z" variable (:type "float") (reparse-symbol arg-sub-list) [22946 22954])
+                                    ("maskDepth" variable (:type "float") (reparse-symbol arg-sub-list) [22955 22971])
+                                    ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [22972 22988])
+                                    ("cntTest" variable
+                                       (:reference 1
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22989 23005])
+                                    ("runVerification" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23006 23028])
+                                    ("bad" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23029 23039])
+                                    ("good" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23040 23051]))                                  
+                                :parent "InterestPointFilter")
+                                (reparse-symbol namespacesubparts) [22766 24296]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [704 24300]))                  
+                :type "namespace")
+                nil [689 24321]))          
+      :file "InterestPointFilter.h"
+      :pointmax 24382
+      :fsize 25105
+      :lastmodtime '(22112 24680 934127 0)
+      :unmatched-syntax '((punctuation 4204 . 4205) (punctuation 4142 . 4143))
+      :lexical-table 
+        '(("_AR_CV_INTERESTPOINTFILTER_H_")
+          )
+)
+    (semanticdb-table "TinyHarris.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_AR_CV_TINYHARRIS_H_" variable (:constant-flag t) nil [557 577])
+            ("AR/Common/NonCopyable.h" include (:system-flag t) nil [580 614])
+            ("AR/CV/Image/Image.h" include (:system-flag t) nil [615 645])
+            ("AR/CV/System.h" include (:system-flag t) nil [646 671])
+            ("AR" type
+               (:members 
+                  ( ("CV" type
+                       (:members 
+                          ( ("TinyHarris" type
+                               (:superclasses 
+                                  ( ("AR::Common::NonCopyable" type
+                                       (:protection "private"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [759 766])
+                                    ("" type
+                                       (:members 
+                                          ( ("PATCH_SIZE" variable
+                                               (:constant-flag t
+                                                :default-value (799 801)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [786 801])
+                                            ("GRADIENT_SIZE" variable
+                                               (:constant-flag t
+                                                :default-value (827 828)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [811 828])
+                                            ("CORNER_AREA_SIZE" variable
+                                               (:constant-flag t
+                                                :default-value (857 858)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [838 858]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [771 865])
+                                    ("getMax" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("img" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [883 901])
+                                            ("patchLT" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [902 933])
+                                            ("doShiTomasi" variable (:type "bool") (reparse-symbol arg-sub-list) [934 951])
+                                            ("maxCoord" variable
+                                               (:reference 1
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [952 978])
+                                            ("maxResponse" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [979 996]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [871 997])
+                                    ("protected" label nil (reparse-symbol classsubparts) [999 1009])
+                                    ("extractPatch" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("img" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Image8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1032 1050])
+                                            ("patchLT" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1051 1082]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1014 1083])
+                                    ("calcGradients" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1088 1109])
+                                    ("weightGradients" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1114 1137])
+                                    ("findMax" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("doShiTomasi" variable (:type "bool") (reparse-symbol arg-sub-list) [1155 1172])
+                                            ("maxCoord" variable
+                                               (:reference 1
+                                                :type ("AR::Math::Vec2I" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1173 1199])
+                                            ("maxResponce" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1200 1217]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1142 1218])
+                                    ("patch" variable
+                                       (:dereference 1
+                                        :type "unsigned char")
+                                        (reparse-symbol classsubparts) [1224 1267])
+                                    ("dxx" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1272 1393])
+                                    ("dxy" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1272 1393])
+                                    ("dyy" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1272 1393])
+                                    ("dxxV" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1398 1531])
+                                    ("dyyV" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1398 1531])
+                                    ("dxyV" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1398 1531])
+                                    ("dxxH" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1536 1669])
+                                    ("dyyH" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1536 1669])
+                                    ("dxyH" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1536 1669])
+                                    ("dxxG" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1674 1816])
+                                    ("dyyG" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1674 1816])
+                                    ("dxyG" variable
+                                       (:dereference 1
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1674 1816]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [706 1819]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [689 1823]))                  
+                :type "namespace")
+                nil [674 1844]))          
+      :file "TinyHarris.h"
+      :pointmax 1896
+      :fsize 1959
+      :lastmodtime '(22112 24681 17643 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_AR_CV_TINYHARRIS_H_")
+          )
+))
+  :file "!home!rvbust!WS!X!Vuforia!OpenAR!include!AR!CV!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,190 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "zmalloc.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1684 1702])
+            ("stdlib.h" include (:system-flag t) nil [1703 1722])
+            ("stdint.h" include (:system-flag t) nil [1723 1742])
+            ("zlibc_free" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2066 2076]))                  
+                :type "void")
+                nil [2050 2095])
+            ("string.h" include (:system-flag t) nil [2097 2116])
+            ("pthread.h" include (:system-flag t) nil [2117 2137])
+            ("config.h" include nil nil [2138 2157])
+            ("zmalloc.h" include nil nil [2158 2178])
+            ("atomicvar.h" include nil nil [2179 2201])
+            ("PREFIX_SIZE" variable (:constant-flag t) nil [2372 2383])
+            ("update_zmalloc_stat_alloc" variable (:constant-flag t) nil [2977 3002])
+            ("update_zmalloc_stat_free" variable (:constant-flag t) nil [3168 3192])
+            ("used_memory" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [3350 3380])
+            ("used_memory_mutex" variable
+               (:default-value "PTHREAD_MUTEX_INITIALIZER"
+                :type ("pthread_mutex_t" type (:type "class") nil nil))
+                nil [3381 3443])
+            ("zmalloc_default_oom" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3477 3489]))                  
+                :type "void")
+                nil [3445 3618])
+            ("zmalloc_default_oom" variable (:type "int") nil [3665 3685])
+            ("zmalloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3701 3713]))                  
+                :type "void")
+                nil [3687 4016])
+            ("zcalloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4615 4627]))                  
+                :type "void")
+                nil [4601 4933])
+            ("zrealloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4950 4960])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4961 4973]))                  
+                :type "void")
+                nil [4935 5703])
+            ("zmalloc_size" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5955 5965]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [5935 6272])
+            ("zmalloc_usable" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6295 6305]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [6273 6351])
+            ("zfree" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6371 6381]))                  
+                :type "void")
+                nil [6360 6730])
+            ("zstrdup" function
+               (:pointer 1
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6746 6760]))                  
+                :type "char")
+                nil [6732 6852])
+            ("zmalloc_used_memory" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6881 6886]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [6854 6951])
+            ("zmalloc_set_oom_handler" function
+               (:arguments 
+                  ( ("oom_handler" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7002 7009]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [6953 7053])
+            ("zmalloc_get_rss" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8832 8837]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [8809 9105])
+            ("zmalloc_get_allocator_info" function
+               (:arguments 
+                  ( ("allocated" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10130 10148])
+                    ("active" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10180 10195])
+                    ("resident" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10227 10244]))                  
+                :type "int")
+                nil [10099 10304])
+            ("zmalloc_get_smap_bytes_by_field" function
+               (:arguments 
+                  ( ("field" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11482 11494])
+                    ("pid" variable (:type "long") (reparse-symbol arg-sub-list) [11495 11504]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [11443 11560])
+            ("zmalloc_get_private_dirty" function
+               (:arguments 
+                  ( ("pid" variable (:type "long") (reparse-symbol arg-sub-list) [11602 11611]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [11569 11681])
+            ("zmalloc_get_memory_size" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12297 12302]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [12266 13807]))          
+      :file "zmalloc.c"
+      :pointmax 14321
+      :fsize 14320
+      :lastmodtime '(23513 1198 698311 712000)
+      :unmatched-syntax '((punctuation 3663 . 3664) (semantic-list 3654 . 3662) (semantic-list 3632 . 3654) (VOID 3627 . 3631) (STATIC 3620 . 3626))
+      :lexical-table 
+        '(("update_zmalloc_stat_free" (spp-arg-list ("__n") 3192 . 3197) . 
+              ((DO "do" 3198 . 3200) (semantic-list "{ \\
+    size_t _n = (__n); \\
+    if (_n&(sizeof(long)-1)) _n += sizeof(long)-(_n&(sizeof(long)-1)); \\
+    atomicDecr(used_memory,__n); \\
+}" 3201 . 3339) (WHILE "while" 3340 . 3345) (semantic-list "(0)" 3345 . 3348)))
+          ("PREFIX_SIZE" . ((semantic-list "(sizeof(size_t))" 2384 . 2400)))
+          ("update_zmalloc_stat_alloc" (spp-arg-list ("__n") 3002 . 3007) . 
+              ((DO "do" 3008 . 3010) (semantic-list "{ \\
+    size_t _n = (__n); \\
+    if (_n&(sizeof(long)-1)) _n += sizeof(long)-(_n&(sizeof(long)-1)); \\
+    atomicIncr(used_memory,__n); \\
+}" 3011 . 3149) (WHILE "while" 3150 . 3155) (semantic-list "(0)" 3155 . 3158)))
+          )
+)
+    (semanticdb-table "config.h"
+      :file "config.h"
+      :fsize 7028
+      :lastmodtime '(23513 1198 674311 198000))
+    (semanticdb-table "zmalloc.h"
+      :file "zmalloc.h"
+      :fsize 4079
+      :lastmodtime '(23513 1198 698311 712000))
+    (semanticdb-table "atomicvar.h"
+      :file "atomicvar.h"
+      :fsize 5367
+      :lastmodtime '(23513 1198 670311 112000)))
+  :file "!home!rvbust!WS!Sandbox!redis!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

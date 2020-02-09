@@ -1,0 +1,60 @@
+;; Object condvar/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "condvar/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("thread" include (:system-flag t) nil [39 56])
+            ("mutex" include (:system-flag t) nil [57 73])
+            ("condition_variable" include (:system-flag t) nil [74 103])
+            ("mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) nil [105 120])
+            ("cv" variable (:type ("std::condition_variable" type (:type "class") nil nil)) nil [121 148])
+            ("need_help" variable (:type "bool") nil [149 171])
+            ("data" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [172 196])
+            ("own_job" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [199 303])
+            ("help_other" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [305 501])
+            ("busy_workder" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [503 596])
+            ("ask_for_help" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("d" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [623 644]))                  
+                :type "void")
+                nil [598 772])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [783 792])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [793 806]))                  
+                :type "int")
+                nil [774 965]))          
+      :file "main.cpp"
+      :pointmax 966
+      :fsize 965
+      :lastmodtime '(23764 54382 957026 15000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!condvar!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

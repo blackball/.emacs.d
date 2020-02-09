@@ -1,0 +1,479 @@
+;; Object Manipulator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Manipulator/"
+  :tables
+  (list
+    (semanticdb-table "Plotter.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Vis/Concepts.h" include (:system-flag t) nil [67 92])
+            ("tuple" include (:system-flag t) nil [93 109])
+            ("Vis" type
+               (:members 
+                  ( ("Viewer" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [126 139])
+                    ("OsgPlotterManipulator" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [141 169]))                  
+                :type "namespace")
+                nil [111 171])
+            ("quat_cast" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [204 220]))                  
+                :type ("std::array" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil)
+                          ("4"))                        
+                      :type "class")
+                      nil nil))
+                nil [173 225])
+            ("OsgPlotterManipulator" type
+               (:parent "Vis"
+                :superclasses 
+                  ( ("VisValidFlag" type
+                       (:protection "protected"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [294 301])
+                    ("OsgPlotterManipulator" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("OsgPlotterManipulator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [307 331])
+                    ("OsgPlotterManipulator" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [337 362])
+                    ("ShowAxes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [382 392]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [368 393])
+                    ("Point" function
+                       (:template 
+                          ( ("int" type nil nil nil))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("std::vector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [468 480])
+                            ("" variable (:type "float") (reparse-symbol arg-sub-list) [480 488])
+                            ("" variable (:type ("v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [491 493])
+                            ("" variable (:type ("std::vector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [494 506])
+                            ("" variable (:type "float") (reparse-symbol arg-sub-list) [506 525])
+                            ("" variable (:type ("color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [528 534])
+                            ("size" variable (:type "float") (reparse-symbol arg-sub-list) [535 546]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [399 547])
+                    ("Line" function
+                       (:template 
+                          ( ("int" type nil nil nil))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("std::vector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [621 633])
+                            ("" variable (:type "float") (reparse-symbol arg-sub-list) [633 641])
+                            ("" variable (:type ("v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [644 646])
+                            ("" variable (:type ("std::vector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [647 659])
+                            ("" variable (:type "float") (reparse-symbol arg-sub-list) [659 678])
+                            ("" variable (:type ("color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [681 687])
+                            ("width" variable (:type "float") (reparse-symbol arg-sub-list) [687 699]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [553 701])
+                    ("Cylinder" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [747 781])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [782 795])
+                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [796 809])
+                            ("orient" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [810 844])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [845 878]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [707 880])
+                    ("Arrow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tail" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [923 955])
+                            ("head" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [956 988])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [989 1002])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1003 1036]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [886 1038])
+                    ("Cone" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1080 1114])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [1115 1128])
+                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [1129 1142])
+                            ("orient" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1143 1177])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1178 1211]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1044 1213])
+                    ("Axes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1255 1289])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [1290 1303])
+                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [1304 1317]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1219 1319])
+                    ("Box" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1360 1395])
+                            ("extent" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1396 1431])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1432 1466]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1325 1468])
+                    ("Plane" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1511 1545])
+                            ("norm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1546 1578])
+                            ("extention" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1579 1616])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1617 1650]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1474 1652])
+                    ("TexPlane" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1698 1732])
+                            ("norm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1733 1765])
+                            ("extention" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1766 1803])
+                            ("texture" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1804 1824]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisNodeHandle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1658 1826])
+                    ("Rotate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("h" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("VisNodeHandle" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1844 1877])
+                            ("quart" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1878 1911])
+                            ("override" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1912 1933]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1832 1935])
+                    ("Translate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("h" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("VisNodeHandle" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1956 1989])
+                            ("offset" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1990 2024])
+                            ("override" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2025 2046]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1941 2048])
+                    ("Scale" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("h" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("VisNodeHandle" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2069 2102])
+                            ("scales" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2103 2137])
+                            ("override" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2138 2159]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2058 2161])
+                    ("Delete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("h" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("VisNodeHandle" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2179 2212]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2167 2214])
+                    ("SetVisNodeRootGroup" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2245 2255]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2220 2257])
+                    ("Data" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol classsubparts) [2263 2275])
+                    ("private" label nil (reparse-symbol classsubparts) [2277 2285])
+                    ("m_dPtr" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("Data" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2290 2319]))                  
+                :type "class")
+                nil [227 2322]))          
+      :file "Plotter.h"
+      :pointmax 2323
+      :fsize 2322
+      :lastmodtime '(23707 33398 983601 726000)
+      :unmatched-syntax '((punctuation 679 . 680) (punctuation 678 . 679) (semantic-list 664 . 678) (punctuation 658 . 659) (punctuation 642 . 643) (punctuation 641 . 642) (semantic-list 638 . 641) (punctuation 632 . 633) (punctuation 526 . 527) (punctuation 525 . 526) (semantic-list 511 . 525) (punctuation 505 . 506) (punctuation 489 . 490) (punctuation 488 . 489) (semantic-list 485 . 488) (punctuation 479 . 480) (semantic-list 220 . 223) (semantic-list 216 . 220) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 679 . 680) (punctuation 678 . 679) (semantic-list 664 . 678) (punctuation 658 . 659) (punctuation 642 . 643) (punctuation 641 . 642) (semantic-list 638 . 641) (punctuation 632 . 633) (punctuation 526 . 527) (punctuation 525 . 526) (semantic-list 511 . 525) (punctuation 505 . 506) (punctuation 489 . 490) (punctuation 488 . 489) (semantic-list 485 . 488) (punctuation 479 . 480) (semantic-list 220 . 223) (semantic-list 216 . 220) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 697 . 698) (punctuation 696 . 697) (semantic-list 682 . 696) (punctuation 676 . 677) (punctuation 660 . 661) (punctuation 659 . 660) (semantic-list 656 . 659) (punctuation 650 . 651) (punctuation 544 . 545) (punctuation 543 . 544) (semantic-list 529 . 543) (punctuation 523 . 524) (punctuation 507 . 508) (punctuation 506 . 507) (semantic-list 503 . 506) (punctuation 497 . 498) (semantic-list 238 . 241) (semantic-list 234 . 238) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+  :file "!home!rvbust!Rvbust!Sources!Vis!Include!Vis!Manipulator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

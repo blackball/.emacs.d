@@ -1,0 +1,343 @@
+;; Object RB/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RB/"
+  :tables
+  (list
+    (semanticdb-table "RB.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdafx.h" include nil nil [32 51])
+            ("iostream" include (:system-flag t) nil [52 71])
+            ("fstream" include (:system-flag t) nil [72 90])
+            ("sstream" include (:system-flag t) nil [91 109])
+            ("vector" include (:system-flag t) nil [110 127])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [129 149])
+            ("RelationShip" type
+               (:members 
+                  ( ("RelationShip_Unknown" variable
+                       (:constant-flag t
+                        :default-value (202 203)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [179 203])
+                    ("RelationShip_Inside" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [206 226])
+                    ("RelationShip_Outside" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [228 249])
+                    ("RelationShip_Intersecting" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [251 277]))                  
+                :type "enum")
+                nil [158 280])
+            ("ST_dot" type
+               (:members 
+                  ( ("coordinate_x" variable (:type "int") (reparse-symbol classsubparts) [312 329])
+                    ("coordinate_y" variable (:type "int") (reparse-symbol classsubparts) [331 348]))                  
+                :type "struct")
+                nil [288 357])
+            ("st_dot" type
+               (:typedef ("ST_dot" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [288 357])
+            ("Rect" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [372 379])
+                    ("Rect" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("X" variable (:type "int") (reparse-symbol arg-sub-list) [386 392])
+                            ("Y" variable (:type "int") (reparse-symbol arg-sub-list) [392 398])
+                            ("W" variable (:type "int") (reparse-symbol arg-sub-list) [398 404])
+                            ("H" variable (:type "int") (reparse-symbol arg-sub-list) [404 410]))                          
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [381 411])
+                    ("Rect" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [413 421])
+                    ("GetDot" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [437 447]))                          
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [423 448])
+                    ("CompareRects" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rectA" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [474 486])
+                            ("rectB" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [487 499]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [450 500])
+                    ("DotWithRect" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rect" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [526 537])
+                            ("dot" variable (:type ("st_dot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [538 549]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [502 550])
+                    ("RectEdge" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rectA" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [573 585])
+                            ("rectB" variable
+                               (:reference 1
+                                :type ("Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [586 598]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [552 599])
+                    ("private" label nil (reparse-symbol classsubparts) [600 608])
+                    ("x" variable (:type "int") (reparse-symbol classsubparts) [610 616])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [618 624])
+                    ("w" variable (:type "int") (reparse-symbol classsubparts) [626 632])
+                    ("h" variable (:type "int") (reparse-symbol classsubparts) [634 640])
+                    ("dotarray" variable
+                       (:dereference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [642 661]))                  
+                :type "class")
+                nil [359 664])
+            ("Rect" function
+               (:constructor-flag t
+                :parent "Rect"
+                :arguments 
+                  ( ("X" variable (:type "int") (reparse-symbol arg-sub-list) [789 795])
+                    ("Y" variable (:type "int") (reparse-symbol arg-sub-list) [795 801])
+                    ("W" variable (:type "int") (reparse-symbol arg-sub-list) [801 807])
+                    ("H" variable (:type "int") (reparse-symbol arg-sub-list) [807 813]))                  
+                :type ("Rect" type (:type "class") nil nil))
+                nil [778 1105])
+            ("Rect" function
+               (:destructor-flag t
+                :parent "Rect"
+                :type "void")
+                nil [1107 1125])
+            ("GetDot" function
+               (:parent "Rect"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [1147 1157]))                  
+                :type ("st_dot" type (:type "class") nil nil))
+                nil [1127 1303])
+            ("CompareRects" function
+               (:parent "Rect"
+                :arguments 
+                  ( ("rectA" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1399 1411])
+                    ("rectB" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1412 1424]))                  
+                :type "int")
+                nil [1376 2324])
+            ("GetCross" function
+               (:arguments 
+                  ( ("p1" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2363 2374])
+                    ("p2" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2375 2386])
+                    ("p" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2386 2396]))                  
+                :type "float")
+                nil [2348 2582])
+            ("DotWithRect" function
+               (:parent "Rect"
+                :arguments 
+                  ( ("rect" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2619 2630])
+                    ("dot" variable (:type ("st_dot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2631 2642]))                  
+                :type "bool")
+                nil [2596 2854])
+            ("lineIntersectSide" function
+               (:arguments 
+                  ( ("A" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2879 2889])
+                    ("B" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2890 2900])
+                    ("C" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2901 2911])
+                    ("D" variable
+                       (:reference 1
+                        :type ("st_dot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2912 2922]))                  
+                :type "bool")
+                nil [2856 3398])
+            ("RectEdge" function
+               (:parent "Rect"
+                :arguments 
+                  ( ("rectA" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3438 3450])
+                    ("rectB" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3451 3463]))                  
+                :type "bool")
+                nil [3418 3710])
+            ("LUT" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3725 3732])
+                    ("LUT" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("strpath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3738 3760]))                          
+                        :type ("LUT" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3734 3761])
+                    ("LUT" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3763 3770])
+                    ("ReadStream" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3789 3807]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3773 3808])
+                    ("Initialize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rects" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Rect" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3826 3852]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3810 3853])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3880 3886])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [3887 3893]))                          
+                        :type ("RelationShip" type (:type "enum") nil nil))
+                        (reparse-symbol classsubparts) [3856 3900])
+                    ("private" label nil (reparse-symbol classsubparts) [3901 3909])
+                    ("m_filepath" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3911 3929])
+                    ("m_vec" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("Rect" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3931 3950]))                  
+                :type "class")
+                nil [3712 3953])
+            ("LUT" function
+               (:constructor-flag t
+                :parent "LUT"
+                :arguments 
+                  ( ("strpath" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3964 3986]))                  
+                :type ("LUT" type (:type "class") nil nil))
+                nil [3955 4036])
+            ("LUT" function
+               (:destructor-flag t
+                :parent "LUT"
+                :type "void")
+                nil [4038 4054])
+            ("Initialize" function
+               (:parent "LUT"
+                :arguments 
+                  ( ("rects" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Rect" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4095 4121]))                  
+                :type "void")
+                nil [4074 4259])
+            ("Query" function
+               (:parent "LUT"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4299 4305])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [4306 4312]))                  
+                :type ("RelationShip" type (:type "enum") nil nil))
+                nil [4270 4783])
+            ("ReadStream" function
+               (:parent "LUT"
+                :arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4806 4824]))                  
+                :type "void")
+                nil [4785 5173])
+            ("_tmain" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5186 5195])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("_TCHAR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5196 5211]))                  
+                :type "int")
+                nil [5175 5779]))          
+      :file "RB.cpp"
+      :pointmax 5781
+      :fsize 7163
+      :lastmodtime '(23823 30496 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "stdafx.h"
+      :file "stdafx.h"
+      :fsize 233
+      :lastmodtime '(23823 10190 0 0)))
+  :file "!home!rvbust!VBoxShared!RB_code!RB!RB!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

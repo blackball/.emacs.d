@@ -1,0 +1,334 @@
+;; Object osgcallback/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "osgcallback/"
+  :tables
+  (list
+    (semanticdb-table "osgcallback.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("osgViewer/Viewer" include (:system-flag t) nil [982 1009])
+            ("osg/Transform" include (:system-flag t) nil [1011 1035])
+            ("osg/Billboard" include (:system-flag t) nil [1036 1060])
+            ("osg/Geode" include (:system-flag t) nil [1061 1081])
+            ("osg/Group" include (:system-flag t) nil [1082 1102])
+            ("osg/Notify" include (:system-flag t) nil [1103 1124])
+            ("osgDB/Registry" include (:system-flag t) nil [1126 1151])
+            ("osgDB/ReadFile" include (:system-flag t) nil [1152 1177])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [1179 1216])
+            ("osgGA/FlightManipulator" include (:system-flag t) nil [1217 1251])
+            ("osgGA/DriveManipulator" include (:system-flag t) nil [1252 1285])
+            ("osgUtil/Optimizer" include (:system-flag t) nil [1287 1315])
+            ("iostream" include (:system-flag t) nil [1317 1336])
+            ("UpdateCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1420 1436])
+                            ("nv" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1437 1458]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1396 1658]))                  
+                :type "class")
+                nil [1338 1661])
+            ("CullCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1743 1759])
+                            ("nv" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1760 1781]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1719 1977]))                  
+                :type "class")
+                nil [1663 1980])
+            ("DrawableDrawCallback" type
+               (:superclasses 
+                  ( ("osg::Drawable::DrawCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("drawImplementation" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("renderInfo" variable
+                               (:reference 1
+                                :type ("osg::RenderInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2088 2116])
+                            ("drawable" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osg::Drawable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2116 2146]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2056 2401]))                  
+                :type "class")
+                nil [1982 2404])
+            ("DrawableUpdateCallback" type
+               (:superclasses 
+                  ( ("osg::DrawableUpdateCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2499 2517])
+                            ("drawable" variable
+                               (:pointer 1
+                                :type ("osg::Drawable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2518 2542]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2479 2623]))                  
+                :type "struct")
+                nil [2406 2626])
+            ("DrawableCullCallback" type
+               (:superclasses 
+                  ( ("osg::DrawableCullCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("cull" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2750 2768])
+                            ("drawable" variable
+                               (:pointer 1
+                                :type ("osg::Drawable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2769 2793])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::State" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2794 2816]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2732 2923]))                  
+                :type "struct")
+                nil [2628 2926])
+            ("InsertCallbacksVisitor" type
+               (:superclasses 
+                  ( ("osg::NodeVisitor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2989 2996])
+                    ("InsertCallbacksVisitor" function
+                       (:constructor-flag t
+                        :type ("InsertCallbacksVisitor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3006 3108])
+                    ("apply" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:reference 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3137 3153]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3118 3316])
+                    ("apply" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("geode" variable
+                               (:reference 1
+                                :type ("osg::Geode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3345 3363]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3326 4116])
+                    ("apply" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:reference 1
+                                :type ("osg::Transform" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4145 4166]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4126 4223]))                  
+                :type "class")
+                nil [2928 4226])
+            ("MyReadFileCallback" type
+               (:superclasses 
+                  ( ("osgDB::Registry::ReadFileCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4298 4305])
+                    ("readNode" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fileName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4359 4387])
+                            ("options" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osgDB::ReaderWriter::Options" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4388 4432]))                          
+                        :type ("osgDB::ReaderWriter::ReadResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4310 4852]))                  
+                :type "class")
+                nil [4228 4855])
+            ("CameraUpdateCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4941 4957])
+                            ("nv" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4958 4979]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4917 5173]))                  
+                :type "class")
+                nil [4857 5176])
+            ("CameraEventCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5261 5277])
+                            ("nv" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5278 5299]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5237 5491]))                  
+                :type "class")
+                nil [5178 5494])
+            ("TestDrawableUpdateCallback" type
+               (:superclasses 
+                  ( ("osg::DrawableUpdateCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestDrawableUpdateCallback" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("message" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5601 5628]))                          
+                        :type ("TestDrawableUpdateCallback" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [5574 5650])
+                    ("update" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5676 5694])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::Drawable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5695 5718]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5656 5768])
+                    ("_message" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5773 5794]))                  
+                :type "struct")
+                nil [5497 5797])
+            ("TestNodeUpdateCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestNodeUpdateCallback" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("message" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5885 5912]))                          
+                        :type ("TestNodeUpdateCallback" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [5862 5934])
+                    ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5964 5984])
+                            ("" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5985 6010]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5940 6060])
+                    ("_message" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6065 6086]))                  
+                :type "struct")
+                nil [5799 6089])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6102 6111])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6112 6125]))                  
+                :type "int")
+                nil [6092 9356]))          
+      :file "osgcallback.cpp"
+      :pointmax 9357
+      :fsize 9356
+      :lastmodtime '(23493 24179 643877 203000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!OSG!examples!osgcallback!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

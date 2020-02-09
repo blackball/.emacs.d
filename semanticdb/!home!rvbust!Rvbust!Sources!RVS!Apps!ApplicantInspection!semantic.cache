@@ -1,0 +1,410 @@
+;; Object ApplicantInspection/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ApplicantInspection/"
+  :tables
+  (list
+    (semanticdb-table "ApplicantDetector.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("EnsensoStreamming" include nil nil [96 221])
+            ("RVS.Common" include nil nil [222 251])
+            ("Sensor" include nil nil [253 278])
+            ("numpy" include nil nil [279 297])
+            ("cv2" include nil nil [298 308])
+            ("Viewer" include nil nil [309 334])
+            ("glog" variable nil nil [336 380])
+            ("CalcCenterAndAxis" function (:arguments 
+              ( ("pts" variable nil (reparse-symbol function_parameters) [406 409]))              ) nil [384 572])
+            ("ValidatePointMap" function
+               (:documentation " Check if all NaN ? "
+                :arguments 
+                  ( ("origpp" variable nil (reparse-symbol function_parameters) [594 600]))                  )
+                nil [573 685])
+            ("ApplicantDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [759 782])
+                            ("self" variable nil (reparse-symbol indented_block_body) [791 813])
+                            ("self" variable nil (reparse-symbol indented_block_body) [822 843])
+                            ("glog" code nil (reparse-symbol indented_block_body) [852 980])
+                            ("self" code nil (reparse-symbol indented_block_body) [989 1006])
+                            ("self" code nil (reparse-symbol indented_block_body) [1085 1144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1188 1207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1216 1239])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1248 1278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1287 1314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1323 1349]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [736 740])
+                            ("config" variable nil (reparse-symbol function_parameters) [742 748]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [723 1350])
+                    ("Setup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377]))                          
+                        :documentation " Setup the detector, capture template date, requires user input 
+        Logic:
+        1. move to the standard place
+        2. capture data 
+        3. display the data
+        4. user label the place that needs to inspect
+        5. user finished the labeling 
+        6. save the data into a file
+        7. done 
+        ")
+                        (reparse-symbol indented_block_body) [1363 2189])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2205 2209])
+                            ("debug" variable nil (reparse-symbol function_parameters) [2211 2216]))                          
+                        :documentation " Detect the inspection point provide the information for the robot to do inspection.         
+        ")
+                        (reparse-symbol indented_block_body) [2194 6737])
+                    ("HasSetup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6755 6759]))                          )
+                        (reparse-symbol indented_block_body) [6742 6793])
+                    ("_HardCapture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6815 6819]))                          )
+                        (reparse-symbol indented_block_body) [6798 7135])
+                    ("_HardCaptureImages" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7175 7179]))                          )
+                        (reparse-symbol indented_block_body) [7152 7501]))                  
+                :type "class")
+                nil [686 7501])
+            ("TestSensor" function nil nil [7507 7621])
+            ("if" code nil nil [7622 7666]))          
+      :file "ApplicantDetector.py"
+      :pointmax 7666
+      :fsize 1038
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "VisualizePointCloud.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [45 63])
+            ("Viewer" include nil nil [64 89])
+            ("Sensor" include nil nil [90 115])
+            ("Utils" include nil nil [116 135])
+            ("Visualize" function nil nil [137 1204])
+            ("if" code nil nil [1215 1258]))          
+      :file "VisualizePointCloud.py"
+      :pointmax 1258
+      :fsize 337
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Viewer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [97 115])
+            ("Vis" include nil nil [117 127])
+            ("Viewer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [183 231]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [168 172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [155 232])
+                    ("Point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [255 259])
+                            ("pts" variable nil (reparse-symbol function_parameters) [261 264])
+                            ("color" variable nil (reparse-symbol function_parameters) [266 271])
+                            ("size" variable nil (reparse-symbol function_parameters) [290 294]))                          )
+                        (reparse-symbol indented_block_body) [245 364])
+                    ("Box" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385])
+                            ("center" variable nil (reparse-symbol function_parameters) [387 393])
+                            ("exts" variable nil (reparse-symbol function_parameters) [405 409])
+                            ("color" variable nil (reparse-symbol function_parameters) [421 426]))                          )
+                        (reparse-symbol indented_block_body) [373 519])
+                    ("Arrow" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [534 538])
+                            ("start" variable nil (reparse-symbol function_parameters) [540 545])
+                            ("head" variable nil (reparse-symbol function_parameters) [547 551])
+                            ("color" variable nil (reparse-symbol function_parameters) [553 558])
+                            ("size" variable nil (reparse-symbol function_parameters) [572 576]))                          )
+                        (reparse-symbol indented_block_body) [524 815])
+                    ("Line" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [829 833]))                          )
+                        (reparse-symbol indented_block_body) [820 866])
+                    ("Delete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [886 890])
+                            ("handle" variable nil (reparse-symbol function_parameters) [892 898]))                          )
+                        (reparse-symbol indented_block_body) [875 931]))                  
+                :type "class")
+                nil [129 931])
+            ("if" code nil nil [932 1249]))          
+      :file "Viewer.py"
+      :pointmax 1249
+      :fsize 579
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Sensor.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Common" include nil nil [96 125])
+            ("RVS.Vision" include nil nil [127 170])
+            ("numpy" include nil nil [171 189])
+            ("cv2" include nil nil [190 200])
+            ("json" include nil nil [201 212])
+            ("glog" variable nil nil [215 259])
+            ("Sensor" type
+               (:documentation " Python wrapper on Ensenso
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Ensenso" code nil (reparse-symbol indented_block_body) [357 377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [386 412])
+                            ("ret, info" code nil (reparse-symbol indented_block_body) [421 457])
+                            ("if" code nil (reparse-symbol indented_block_body) [466 572])
+                            ("self" variable nil (reparse-symbol indented_block_body) [580 608])
+                            ("self" variable nil (reparse-symbol indented_block_body) [617 646]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [342 346]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [329 647])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [672 676]))                          )
+                        (reparse-symbol indented_block_body) [660 737])
+                    ("Open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [759 763]))                          )
+                        (reparse-symbol indented_block_body) [750 803])
+                    ("SetFromJsonFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [828 832])
+                            ("jsfilename" variable nil (reparse-symbol function_parameters) [834 844]))                          )
+                        (reparse-symbol indented_block_body) [808 905])
+                    ("Close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [928 932]))                          )
+                        (reparse-symbol indented_block_body) [918 974])
+                    ("Capture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [999 1003]))                          )
+                        (reparse-symbol indented_block_body) [987 1435]))                  
+                :type "class")
+                nil [261 1435]))          
+      :file "Sensor.py"
+      :pointmax 1435
+      :fsize 1434
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EnsensoStreamming.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Sensor" include nil nil [96 121])
+            ("Viewer" include nil nil [122 147])
+            ("Utils" include nil nil [148 167])
+            ("time" include nil nil [168 179])
+            ("MapPointsAndPixels" function (:documentation " 
+    ") nil [322 374])
+            ("SelectSpotCallback" function (:documentation "
+    ") nil [375 427])
+            ("Streamming" function nil nil [428 1176])
+            ("if" code nil nil [1182 1226]))          
+      :file "EnsensoStreamming.py"
+      :pointmax 1226
+      :fsize 1225
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [96 114])
+            ("cv2" include nil nil [115 125])
+            ("RemoveNaN" function
+               (:documentation " return pts which is not NaN 
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [141 144]))                  )
+                nil [127 283])
+            ("Truncate" function
+               (:documentation " only return points in (mind, maxd)
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [297 300])
+                    ("axis_id" variable nil (reparse-symbol function_parameters) [302 309])
+                    ("mind" variable nil (reparse-symbol function_parameters) [311 315])
+                    ("maxd" variable nil (reparse-symbol function_parameters) [317 321]))                  )
+                nil [284 508]))          
+      :file "Utils.py"
+      :pointmax 508
+      :fsize 507
+      :lastmodtime '(23782 7726 549334 513000)
+      :unmatched-syntax nil)
+    (semanticdb-table "DemoSelectSpots.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [96 106])
+            ("numpy" include nil nil [107 125])
+            ("sys" include nil nil [126 136])
+            ("g_ling" variable nil nil [138 149])
+            ("g_drawing" variable nil nil [150 167])
+            ("win_callback" function (:arguments 
+              ( ("event" variable nil (reparse-symbol function_parameters) [186 191])
+                ("x" variable nil (reparse-symbol function_parameters) [193 194])
+                ("y" variable nil (reparse-symbol function_parameters) [196 197])
+                ("flag" variable nil (reparse-symbol function_parameters) [199 203])
+                ("param" variable nil (reparse-symbol function_parameters) [205 210]))              ) nil [169 814])
+            ("Main" function nil nil [831 1206])
+            ("if" code nil nil [1211 1249]))          
+      :file "DemoSelectSpots.py"
+      :pointmax 1249
+      :fsize 1249
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FixInRectangle.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("InRectangle" function
+               (:documentation " Check if point p inside of a rectangle
+    "
+                :arguments 
+                  ( ("p" variable nil (reparse-symbol function_parameters) [48 49])
+                    ("a" variable nil (reparse-symbol function_parameters) [51 52])
+                    ("b" variable nil (reparse-symbol function_parameters) [53 54])
+                    ("c" variable nil (reparse-symbol function_parameters) [55 56]))                  )
+                nil [32 436])
+            ("Main" function nil nil [437 535])
+            ("if" code nil nil [535 573]))          
+      :file "FixInRectangle.py"
+      :pointmax 573
+      :fsize 572
+      :lastmodtime '(23782 7726 477333 176000)
+      :unmatched-syntax nil)
+    (semanticdb-table "App.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Common" include nil nil [96 125])
+            ("json" include nil nil [127 138])
+            ("numpy" include nil nil [140 158])
+            ("ApplicantDetector" include nil nil [159 206])
+            ("ApplicantInspector" include nil nil [207 256])
+            ("glog" variable nil nil [258 299])
+            ("LoadJsonFile" function (:arguments 
+              ( ("jsfile" variable nil (reparse-symbol function_parameters) [318 324]))              ) nil [301 573])
+            ("App" function (:arguments 
+              ( ("cfgfile" variable nil (reparse-symbol function_parameters) [582 589]))              ) nil [574 1459])
+            ("if" code nil nil [1473 1535]))          
+      :file "App.py"
+      :pointmax 1535
+      :fsize 641
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax '((NAME 603 . 605) (IF 630 . 632) (ELSE 653 . 657)))
+    (semanticdb-table "ApplicantInspector.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Robotics.PyUR5" include nil nil [96 130])
+            ("numpy" include nil nil [131 149])
+            ("copy" include nil nil [150 175])
+            ("time" include nil nil [176 187])
+            ("RotX" function (:arguments 
+              ( ("angle_x" variable nil (reparse-symbol function_parameters) [198 205]))              ) nil [189 467])
+            ("RotY" function (:arguments 
+              ( ("angle_y" variable nil (reparse-symbol function_parameters) [477 484]))              ) nil [468 745])
+            ("GetApproachingPose" function (:arguments 
+              ( ("direction" variable nil (reparse-symbol function_parameters) [769 778])
+                ("distance" variable nil (reparse-symbol function_parameters) [780 788]))              ) nil [746 1282])
+            ("ApplicantInspector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1349 1369])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1378 1480])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1489 1513])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1522 1547])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1583 1617])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1626 1659])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1936 2088]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1334 1338]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1321 2089])
+                    ("MoveHome" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2116 2120]))                          )
+                        (reparse-symbol indented_block_body) [2103 2246])
+                    ("Setup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2261 2265]))                          )
+                        (reparse-symbol indented_block_body) [2251 2468])
+                    ("HasSetup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2487 2491]))                          )
+                        (reparse-symbol indented_block_body) [2474 2526])
+                    ("ComputeToolPoses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2553 2557])
+                            ("detected_spots_list" variable nil (reparse-symbol function_parameters) [2559 2578]))                          )
+                        (reparse-symbol indented_block_body) [2532 4378])
+                    ("ComputeTraj" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4400 4404])
+                            ("bTi" variable nil (reparse-symbol function_parameters) [4406 4409])
+                            ("bTl" variable nil (reparse-symbol function_parameters) [4411 4414])
+                            ("skip_btl" variable nil (reparse-symbol function_parameters) [4416 4424]))                          )
+                        (reparse-symbol indented_block_body) [4384 5401])
+                    ("MoveTraj" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5427 5431])
+                            ("traj" variable nil (reparse-symbol function_parameters) [5433 5437]))                          )
+                        (reparse-symbol indented_block_body) [5414 5475])
+                    ("Inspect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5492 5496])
+                            ("detected_spots_list" variable nil (reparse-symbol function_parameters) [5498 5517]))                          )
+                        (reparse-symbol indented_block_body) [5480 5919]))                  
+                :type "class")
+                nil [1283 5919]))          
+      :file "ApplicantInspector.py"
+      :pointmax 5919
+      :fsize 95
+      :lastmodtime '(23785 11546 522897 188000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Apps!ApplicantInspection!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

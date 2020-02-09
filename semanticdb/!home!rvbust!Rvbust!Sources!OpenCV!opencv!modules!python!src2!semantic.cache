@@ -1,0 +1,2494 @@
+;; Object src2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src2/"
+  :tables
+  (list
+    (semanticdb-table "pycompat.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__PYCOMPAT_HPP__" variable (:constant-flag t) nil [2237 2253])
+            ("getUnicodeString" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2753 2768])
+                    ("str" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2769 2786]))                  
+                :type "bool")
+                nil [2717 3406])
+            ("CV_PY_FN_WITH_KW_" variable (:constant-flag t) nil [3518 3535])
+            ("CV_PY_FN_NOARGS_" variable (:constant-flag t) nil [3645 3661])
+            ("CV_PY_FN_WITH_KW" variable (:constant-flag t) nil [3723 3739])
+            ("CV_PY_FN_NOARGS" variable (:constant-flag t) nil [3777 3792])
+            ("CV_PY_TO_CLASS" variable (:constant-flag t) nil [3830 3844])
+            ("CV_PY_FROM_CLASS" variable (:constant-flag t) nil [4977 4993])
+            ("CV_PY_TO_CLASS_PTR" variable (:constant-flag t) nil [5812 5830])
+            ("CV_PY_FROM_CLASS_PTR" variable (:constant-flag t) nil [6959 6979])
+            ("CV_PY_TO_ENUM" variable (:constant-flag t) nil [7378 7391])
+            ("CV_PY_FROM_ENUM" variable (:constant-flag t) nil [8496 8511])
+            ("CVPY_TYPE_HEAD" variable (:constant-flag t) nil [9227 9241])
+            ("CVPY_TYPE_INCREF" variable (:constant-flag t) nil [9286 9302])
+            ("CVPY_TYPE_DECLARE" variable (:constant-flag t) nil [9377 9394])
+            ("CVPY_TYPE_INIT_STATIC" variable (:constant-flag t) nil [10668 10689])
+            ("CVPY_TYPE_DECLARE_DYNAMIC" variable (:constant-flag t) nil [11776 11801])
+            ("CVPY_TYPE_INIT_DYNAMIC" variable (:constant-flag t) nil [13431 13453]))          
+      :file "pycompat.hpp"
+      :pointmax 14774
+      :fsize 14773
+      :lastmodtime '(23824 39753 907724 251000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__PYCOMPAT_HPP__")
+          ("CV_PY_TO_CLASS" (spp-arg-list ("TYPE") 3844 . 3850) . 
+              ((TEMPLATE "template" 3926 . 3934) (punctuation "<" 3934 . 3935) (punctuation ">" 3935 . 3936) (BOOL "bool" 4030 . 4034) (symbol "pyopencv_to" 4035 . 4046) (semantic-list "(PyObject* dst, TYPE& src, const char* name)" 4046 . 4090) (semantic-list "{                                                                                                     \\
+    if (!dst || dst == Py_None)                                                                       \\
+        return true;                                                                                  \\
+    Ptr<TYPE> ptr;                                                                                    \\
+                                                                                                      \\
+    if (!pyopencv_to(dst, ptr, name)) return false;                                                   \\
+    src = *ptr;                                                                                       \\
+    return true;                                                                                      \\
+}" 4134 . 4967)))
+          ("CVPY_TYPE_DECLARE_DYNAMIC" (spp-arg-list ("NAME" "STORAGE" "SNAME") 11801 . 11823) . 
+              ((STRUCT "struct" 11830 . 11836) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 11837 . 11846) (symbol "NAME" 11848 . 11852)) 11837 . 11852) (symbol "_t" 11854 . 11856)) 11837 . 11856) (semantic-list "{ \\
+        PyObject_HEAD \\
+        STORAGE v; \\
+    }" 11863 . 11917) (punctuation ";" 11917 . 11918) (STATIC "static" 11925 . 11931) (symbol "PyObject" 11932 . 11940) (punctuation "*" 11941 . 11942) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 11943 . 11952) (symbol "NAME" 11954 . 11958)) 11943 . 11958) (symbol "_TypePtr" 11960 . 11968)) 11943 . 11968) (punctuation "=" 11969 . 11970) (number "0" 11971 . 11972) (punctuation ";" 11972 . 11973) (STATIC "static" 11980 . 11986) (BOOL "bool" 11987 . 11991) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 11992 . 12001) (symbol "NAME" 12003 . 12007)) 11992 . 12007) (symbol "_getp" 12009 . 12014)) 11992 . 12014) (semantic-list "(PyObject * self, STORAGE * & dst)" 12014 . 12048) (semantic-list "{ \\
+        if (PyObject_TypeCheck(self, (PyTypeObject*)pyopencv_##NAME##_TypePtr)) \\
+        { \\
+            dst = &(((pyopencv_##NAME##_t*)self)->v); \\
+            return true; \\
+        } \\
+        return false; \\
+    }" 12055 . 12277) (STATIC "static" 12284 . 12290) (symbol "PyObject" 12291 . 12299) (punctuation "*" 12300 . 12301) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 12302 . 12311) (symbol "NAME" 12313 . 12317)) 12302 . 12317) (symbol "_Instance" 12319 . 12328)) 12302 . 12328) (semantic-list "(const STORAGE &r)" 12328 . 12346) (semantic-list "{ \\
+        pyopencv_##NAME##_t *m = PyObject_New(pyopencv_##NAME##_t, (PyTypeObject*)pyopencv_##NAME##_TypePtr); \\
+        new (&(m->v)) STORAGE(r); \\
+        return (PyObject*)m; \\
+    }" 12353 . 12541) (STATIC "static" 12548 . 12554) (VOID "void" 12555 . 12559) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 12560 . 12569) (symbol "NAME" 12571 . 12575)) 12560 . 12575) (symbol "_dealloc" 12577 . 12585)) 12560 . 12585) (semantic-list "(PyObject* self)" 12585 . 12601) (semantic-list "{ \\
+        ((pyopencv_##NAME##_t*)self)->v.STORAGE::~SNAME(); \\
+        PyObject_Del(self); \\
+    }" 12608 . 12708) (STATIC "static" 12715 . 12721) (symbol "PyObject" 12722 . 12730) (punctuation "*" 12730 . 12731) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 12732 . 12741) (symbol "NAME" 12743 . 12747)) 12732 . 12747) (symbol "_repr" 12749 . 12754)) 12732 . 12754) (semantic-list "(PyObject* self)" 12754 . 12770) (semantic-list "{ \\
+        char str[1000]; \\
+        sprintf(str, \"<\"#NAME\" %p>\", self); \\
+        return PyString_FromString(str); \\
+    }" 12777 . 12901) (STATIC "static" 12908 . 12914) (symbol "PyType_Slot" 12915 . 12926) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 12927 . 12936) (symbol "NAME" 12938 . 12942)) 12927 . 12942) (symbol "_Slots" 12944 . 12950)) 12927 . 12950) (semantic-list "[]" 12950 . 12952) (punctuation "=" 12953 . 12954) (semantic-list "{ \\
+        {Py_tp_dealloc, 0}, \\
+        {Py_tp_repr, 0}, \\
+        {Py_tp_getset, 0}, \\
+        {Py_tp_init, 0}, \\
+        {Py_tp_methods, 0}, \\
+        {Py_tp_alloc, 0}, \\
+        {Py_tp_new, 0}, \\
+        {0, 0} \\
+    }" 12962 . 13185) (punctuation ";" 13185 . 13186) (STATIC "static" 13193 . 13199) (symbol "PyType_Spec" 13200 . 13211) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 13212 . 13221) (symbol "NAME" 13223 . 13227)) 13212 . 13227) (symbol "_Spec" 13229 . 13234)) 13212 . 13234) (punctuation "=" 13235 . 13236) (semantic-list "{ \\
+        MODULESTR\".\"#NAME, \\
+        sizeof(pyopencv_##NAME##_t), \\
+        0, \\
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, \\
+        pyopencv_##NAME##_Slots  \\
+    }" 13243 . 13420) (punctuation ";" 13420 . 13421)))
+          ("CV_PY_TO_ENUM" (spp-arg-list ("TYPE") 7391 . 7397) . 
+              ((TEMPLATE "template" 7474 . 7482) (punctuation "<" 7482 . 7483) (punctuation ">" 7483 . 7484) (BOOL "bool" 7578 . 7582) (symbol "pyopencv_to" 7583 . 7594) (semantic-list "(PyObject* dst, TYPE& src, const char* name)" 7594 . 7638) (semantic-list "{                                                                                                     \\
+    if (!dst || dst == Py_None)                                                                       \\
+        return true;                                                                                  \\
+    int underlying = 0;                                                  \\
+                                                                                                      \\
+    if (!pyopencv_to(dst, underlying, name)) return false;                                            \\
+    src = static_cast<TYPE>(underlying);                                                              \\
+    return true;                                                                                      \\
+}" 7682 . 8486)))
+          ("CVPY_TYPE_INIT_STATIC" (spp-arg-list ("NAME" "ERROR_HANDLER" "BASE" "CONSTRUCTOR") 10689 . 10729) . ((semantic-list "{ \\
+        pyopencv_##NAME##_TypePtr->tp_base = pyopencv_##BASE##_TypePtr; \\
+        pyopencv_##NAME##_TypePtr->tp_dealloc = pyopencv_##NAME##_dealloc; \\
+        pyopencv_##NAME##_TypePtr->tp_repr = pyopencv_##NAME##_repr; \\
+        pyopencv_##NAME##_TypePtr->tp_getset = pyopencv_##NAME##_getseters; \\
+        pyopencv_##NAME##_TypePtr->tp_init = (initproc) CONSTRUCTOR; \\
+        pyopencv_##NAME##_TypePtr->tp_methods = pyopencv_##NAME##_methods; \\
+        pyopencv_##NAME##_TypePtr->tp_alloc = PyType_GenericAlloc; \\
+        pyopencv_##NAME##_TypePtr->tp_new = PyType_GenericNew; \\
+        pyopencv_##NAME##_TypePtr->tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE; \\
+        if (PyType_Ready(pyopencv_##NAME##_TypePtr) != 0) \\
+        { \\
+            ERROR_HANDLER; \\
+        } \\
+        CVPY_TYPE_INCREF(pyopencv_##NAME##_TypePtr); \\
+        PyModule_AddObject(m, #NAME, (PyObject *)pyopencv_##NAME##_TypePtr); \\
+    }" 10736 . 11664)))
+          ("CV_PY_FN_NOARGS" (spp-arg-list ("fn") 3792 . 3796) . ((symbol "CV_PY_FN_NOARGS_" 3797 . 3813) (semantic-list "(fn, 0)" 3813 . 3820)))
+          ("CV_PY_TO_CLASS_PTR" (spp-arg-list ("TYPE") 5830 . 5836) . 
+              ((TEMPLATE "template" 5908 . 5916) (punctuation "<" 5916 . 5917) (punctuation ">" 5917 . 5918) (BOOL "bool" 6012 . 6016) (symbol "pyopencv_to" 6017 . 6028) (semantic-list "(PyObject* dst, TYPE*& src, const char* name)" 6028 . 6073) (semantic-list "{                                                                                                     \\
+    if (!dst || dst == Py_None)                                                                       \\
+        return true;                                                                                  \\
+    Ptr<TYPE> ptr;                                                                                    \\
+                                                                                                      \\
+    if (!pyopencv_to(dst, ptr, name)) return false;                                                   \\
+    src = ptr;                                                                                        \\
+    return true;                                                                                      \\
+}" 6116 . 6949)))
+          ("CV_PY_FROM_ENUM" (spp-arg-list ("TYPE") 8511 . 8517) . 
+              ((TEMPLATE "template" 8592 . 8600) (punctuation "<" 8600 . 8601) (punctuation ">" 8601 . 8602) (symbol "PyObject" 8696 . 8704) (punctuation "*" 8704 . 8705) (symbol "pyopencv_from" 8706 . 8719) (semantic-list "(const TYPE& src)" 8719 . 8736) (semantic-list "{                                                                                                     \\
+    return pyopencv_from(static_cast<int>(src));                         \\
+}" 8800 . 8980)))
+          ("CVPY_TYPE_DECLARE" (spp-arg-list ("NAME" "STORAGE" "SNAME") 9394 . 9416) . 
+              ((STRUCT "struct" 9423 . 9429) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 9430 . 9439) (symbol "NAME" 9441 . 9445)) 9430 . 9445) (symbol "_t" 9447 . 9449)) 9430 . 9449) (semantic-list "{ \\
+        PyObject_HEAD \\
+        STORAGE v; \\
+    }" 9456 . 9510) (punctuation ";" 9510 . 9511) (STATIC "static" 9518 . 9524) (symbol "PyTypeObject" 9525 . 9537) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 9538 . 9547) (symbol "NAME" 9549 . 9553)) 9538 . 9553) (symbol "_TypeXXX" 9555 . 9563)) 9538 . 9563) (punctuation "=" 9564 . 9565) (semantic-list "{ \\
+        CVPY_TYPE_HEAD \\
+        MODULESTR\".\"#NAME, \\
+        sizeof(pyopencv_##NAME##_t), \\
+    }" 9572 . 9674) (punctuation ";" 9674 . 9675) (STATIC "static" 9682 . 9688) (symbol "PyTypeObject" 9689 . 9701) (punctuation "*" 9702 . 9703) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 9704 . 9713) (symbol "NAME" 9715 . 9719)) 9704 . 9719) (symbol "_TypePtr" 9721 . 9729)) 9704 . 9729) (punctuation "=" 9730 . 9731) (punctuation "&" 9732 . 9733) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 9733 . 9742) (symbol "NAME" 9744 . 9748)) 9733 . 9748) (symbol "_TypeXXX" 9750 . 9758)) 9733 . 9758) (punctuation ";" 9758 . 9759) (STATIC "static" 9766 . 9772) (BOOL "bool" 9773 . 9777) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 9778 . 9787) (symbol "NAME" 9789 . 9793)) 9778 . 9793) (symbol "_getp" 9795 . 9800)) 9778 . 9800) (semantic-list "(PyObject * self, STORAGE * & dst)" 9800 . 9834) (semantic-list "{ \\
+        if (PyObject_TypeCheck(self, pyopencv_##NAME##_TypePtr)) \\
+        { \\
+            dst = &(((pyopencv_##NAME##_t*)self)->v); \\
+            return true; \\
+        } \\
+        return false; \\
+    }" 9841 . 10048) (STATIC "static" 10055 . 10061) (symbol "PyObject" 10062 . 10070) (punctuation "*" 10071 . 10072) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 10073 . 10082) (symbol "NAME" 10084 . 10088)) 10073 . 10088) (symbol "_Instance" 10090 . 10099)) 10073 . 10099) (semantic-list "(const STORAGE &r)" 10099 . 10117) (semantic-list "{ \\
+        pyopencv_##NAME##_t *m = PyObject_NEW(pyopencv_##NAME##_t, pyopencv_##NAME##_TypePtr); \\
+        new (&(m->v)) STORAGE(r); \\
+        return (PyObject*)m; \\
+    }" 10124 . 10297) (STATIC "static" 10304 . 10310) (VOID "void" 10311 . 10315) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 10316 . 10325) (symbol "NAME" 10327 . 10331)) 10316 . 10331) (symbol "_dealloc" 10333 . 10341)) 10316 . 10341) (semantic-list "(PyObject* self)" 10341 . 10357) (semantic-list "{ \\
+        ((pyopencv_##NAME##_t*)self)->v.STORAGE::~SNAME(); \\
+        PyObject_Del(self); \\
+    }" 10364 . 10464) (STATIC "static" 10471 . 10477) (symbol "PyObject" 10478 . 10486) (punctuation "*" 10486 . 10487) (spp-symbol-merge ((spp-symbol-merge ((symbol "pyopencv_" 10488 . 10497) (symbol "NAME" 10499 . 10503)) 10488 . 10503) (symbol "_repr" 10505 . 10510)) 10488 . 10510) (semantic-list "(PyObject* self)" 10510 . 10526) (semantic-list "{ \\
+        char str[1000]; \\
+        sprintf(str, \"<\"#NAME\" %p>\", self); \\
+        return PyString_FromString(str); \\
+    }" 10533 . 10657)))
+          ("CVPY_TYPE_HEAD" . 
+              ((symbol "PyObject_HEAD_INIT" 9242 . 9260) (semantic-list "(&PyType_Type)" 9260 . 9274) (number "0" 9275 . 9276) (punctuation "," 9276 . 9277)))
+          ("CVPY_TYPE_INIT_DYNAMIC" (spp-arg-list ("NAME" "ERROR_HANDLER" "BASE" "CONSTRUCTOR") 13453 . 13493) . ((semantic-list "{ \\
+        pyopencv_##NAME##_Slots[0].pfunc /*tp_dealloc*/ = (void*)pyopencv_##NAME##_dealloc; \\
+        pyopencv_##NAME##_Slots[1].pfunc /*tp_repr*/ = (void*)pyopencv_##NAME##_repr; \\
+        pyopencv_##NAME##_Slots[2].pfunc /*tp_getset*/ = (void*)pyopencv_##NAME##_getseters; \\
+        pyopencv_##NAME##_Slots[3].pfunc /*tp_init*/ = (void*) CONSTRUCTOR; \\
+        pyopencv_##NAME##_Slots[4].pfunc /*tp_methods*/ = pyopencv_##NAME##_methods; \\
+        pyopencv_##NAME##_Slots[5].pfunc /*tp_alloc*/ = (void*)PyType_GenericAlloc; \\
+        pyopencv_##NAME##_Slots[6].pfunc /*tp_new*/ = (void*)PyType_GenericNew; \\
+        PyObject * bases = 0; \\
+        if (pyopencv_##BASE##_TypePtr) \\
+            bases = PyTuple_Pack(1, pyopencv_##BASE##_TypePtr); \\
+        pyopencv_##NAME##_TypePtr = PyType_FromSpecWithBases(&pyopencv_##NAME##_Spec, bases); \\
+        if (!pyopencv_##NAME##_TypePtr) \\
+        { \\
+            printf(\"Failed to init: \" #NAME \", base (\" #BASE \")\" \"\\n\"); \\
+            ERROR_HANDLER; \\
+        } \\
+        PyModule_AddObject(m, #NAME, (PyObject *)pyopencv_##NAME##_TypePtr); \\
+    }" 13500 . 14602)))
+          ("CV_PY_FN_NOARGS_" (spp-arg-list ("fn" "flags") 3661 . 3672) . 
+              ((semantic-list "(PyCFunction)" 3673 . 3686) (semantic-list "(fn)" 3686 . 3690) (punctuation "," 3690 . 3691) (semantic-list "(flags)" 3692 . 3699) (punctuation "|" 3700 . 3701) (symbol "METH_NOARGS" 3702 . 3713)))
+          ("CV_PY_FROM_CLASS" (spp-arg-list ("TYPE") 4993 . 4999) . 
+              ((TEMPLATE "template" 5073 . 5081) (punctuation "<" 5081 . 5082) (punctuation ">" 5082 . 5083) (symbol "PyObject" 5177 . 5185) (punctuation "*" 5185 . 5186) (symbol "pyopencv_from" 5187 . 5200) (semantic-list "(const TYPE& src)" 5200 . 5217) (semantic-list "{                                                                                                     \\
+    Ptr<TYPE> ptr(new TYPE());                                                                        \\
+                                                                                                      \\
+    *ptr = src;                                                                                       \\
+    return pyopencv_from(ptr);                                                                        \\
+}" 5281 . 5802)))
+          ("CV_PY_FROM_CLASS_PTR" (spp-arg-list ("TYPE") 6979 . 6985) . 
+              ((STATIC "static" 7055 . 7061) (symbol "PyObject" 7062 . 7070) (punctuation "*" 7070 . 7071) (symbol "pyopencv_from" 7072 . 7085) (semantic-list "(TYPE*& src)" 7085 . 7097) (semantic-list "{                                                                                                     \\
+    return pyopencv_from(Ptr<TYPE>(src));                                                             \\
+}" 7159 . 7368)))
+          ("CVPY_TYPE_INCREF" (spp-arg-list ("T") 9302 . 9305) . 
+              ((symbol "_Py_INC_REFTOTAL" 9306 . 9322) (symbol "_Py_REF_DEBUG_COMMA" 9323 . 9342) (semantic-list "(T)" 9343 . 9346) (punctuation "-" 9346 . 9347) (punctuation ">" 9347 . 9348) (symbol "ob_refcnt" 9348 . 9357) (punctuation "+" 9357 . 9358) (punctuation "+" 9358 . 9359)))
+          ("CV_PY_FN_WITH_KW_" (spp-arg-list ("fn" "flags") 3535 . 3546) . 
+              ((semantic-list "(PyCFunction)" 3547 . 3560) (semantic-list "(void*)" 3560 . 3567) (semantic-list "(PyCFunctionWithKeywords)" 3567 . 3592) (semantic-list "(fn)" 3592 . 3596) (punctuation "," 3596 . 3597) (semantic-list "(flags)" 3598 . 3605) (punctuation "|" 3606 . 3607) (symbol "METH_VARARGS" 3608 . 3620) (punctuation "|" 3621 . 3622) (symbol "METH_KEYWORDS" 3623 . 3636)))
+          ("CV_PY_FN_WITH_KW" (spp-arg-list ("fn") 3739 . 3743) . ((symbol "CV_PY_FN_WITH_KW_" 3744 . 3761) (semantic-list "(fn, 0)" 3761 . 3768)))
+          )
+)
+    (semanticdb-table "cv2.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [434 451])
+            ("Python.h" include (:system-flag t) nil [452 471])
+            ("MODULESTR" variable (:constant-flag t) nil [611 620])
+            ("NPY_NO_DEPRECATED_API" variable (:constant-flag t) nil [635 656])
+            ("numpy/ndarrayobject.h" include (:system-flag t) nil [678 710])
+            ("pyopencv_generated_include.h" include nil nil [712 751])
+            ("opencv2/core/types_c.h" include nil nil [752 785])
+            ("opencv2/opencv_modules.hpp" include nil nil [786 823])
+            ("pycompat.hpp" include nil nil [824 847])
+            ("map" include (:system-flag t) nil [848 862])
+            ("type_traits" include (:system-flag t) nil [864 886])
+            ("PyOpenCV_Converter" type (:type "struct") nil [988 1136])
+            ("pyopencv_to" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1183 1197])
+                    ("p" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1198 1203])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"<unknown>\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1204 1234]))                  
+                :typemodifiers ("static"))
+                nil [1138 1287])
+            ("pyopencv_from" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1341 1354]))                  
+                :typemodifiers ("static")
+                :pointer 1)
+                nil [1289 1399])
+            ("opencv_error" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [1401 1438])
+            ("failmsg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1459 1475])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1476 1480]))                  
+                :type "int")
+                nil [1440 1660])
+            ("ArgInfo" type
+               (:members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1683 1701])
+                    ("outputarg" variable (:type "bool") (reparse-symbol classsubparts) [1706 1721])
+                    ("ArgInfo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1780 1799])
+                            ("outputarg_" variable (:type "bool") (reparse-symbol arg-sub-list) [1800 1816]))                          
+                        :type ("ArgInfo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1772 1873]))                  
+                :type "struct")
+                nil [1662 1986])
+            ("PyAllowThreads" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2011 2018])
+                    ("PyAllowThreads" function
+                       (:constructor-flag t
+                        :type ("PyAllowThreads" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2023 2072])
+                    ("PyAllowThreads" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2077 2144])
+                    ("private" label nil (reparse-symbol classsubparts) [2145 2153])
+                    ("_state" variable
+                       (:pointer 1
+                        :type ("PyThreadState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2158 2180]))                  
+                :type "class")
+                nil [1988 2183])
+            ("PyEnsureGIL" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2205 2212])
+                    ("PyEnsureGIL" function
+                       (:constructor-flag t
+                        :type ("PyEnsureGIL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2217 2263])
+                    ("PyEnsureGIL" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2268 2330])
+                    ("private" label nil (reparse-symbol classsubparts) [2331 2339])
+                    ("_state" variable (:type ("PyGILState_STATE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2344 2368]))                  
+                :type "class")
+                nil [2185 2371])
+            ("ERRWRAP2" variable (:constant-flag t) nil [2381 2389])
+            ("cv" using (:type ("cv" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [3066 3085])
+            ("vector_uchar" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("uchar" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3087 3127])
+            ("vector_char" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("char" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3128 3166])
+            ("vector_int" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3167 3203])
+            ("vector_float" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3204 3244])
+            ("vector_double" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3245 3287])
+            ("vector_size_t" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("size_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3288 3330])
+            ("vector_Point" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Point" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3331 3371])
+            ("vector_Point2f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Point2f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3372 3416])
+            ("vector_Point3f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Point3f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3417 3461])
+            ("vector_Size" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Size" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3462 3500])
+            ("vector_Vec2f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Vec2f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3501 3541])
+            ("vector_Vec3f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Vec3f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3542 3582])
+            ("vector_Vec4f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Vec4f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3583 3623])
+            ("vector_Vec6f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Vec6f" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3624 3664])
+            ("vector_Vec4i" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Vec4i" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3665 3705])
+            ("vector_Rect" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Rect" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3706 3744])
+            ("vector_Rect2d" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Rect2d" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3745 3787])
+            ("vector_RotatedRect" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("RotatedRect" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3788 3840])
+            ("vector_KeyPoint" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("KeyPoint" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3841 3887])
+            ("vector_Mat" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Mat" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3888 3924])
+            ("vector_vector_Mat" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3925 3982])
+            ("vector_UMat" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("UMat" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3983 4021])
+            ("vector_DMatch" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("DMatch" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4022 4064])
+            ("vector_String" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("String" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4065 4107])
+            ("vector_Scalar" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("Scalar" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4108 4150])
+            ("vector_vector_char" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4152 4211])
+            ("vector_vector_Point" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4212 4273])
+            ("vector_vector_Point2f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4274 4339])
+            ("vector_vector_Point3f" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4340 4405])
+            ("vector_vector_DMatch" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4406 4469])
+            ("vector_vector_KeyPoint" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4470 4537])
+            ("failmsgp" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4565 4581])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4582 4586]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [4539 4752])
+            ("NumpyAllocator" type
+               (:superclasses 
+                  ( ("MatAllocator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4799 4806])
+                    ("NumpyAllocator" function
+                       (:constructor-flag t
+                        :type ("NumpyAllocator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4811 4870])
+                    ("NumpyAllocator" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4875 4895])
+                    ("allocate" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("o" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4920 4932])
+                            ("dims" variable (:type "int") (reparse-symbol arg-sub-list) [4933 4942])
+                            ("sizes" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4943 4960])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4961 4970])
+                            ("step" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4971 4984]))                          
+                        :type ("UMatData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4901 5393])
+                    ("stdAllocator" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MatAllocator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7282 7315]))                  
+                :type "class")
+                nil [4754 7318])
+            ("g_numpyAllocator" variable (:type ("NumpyAllocator" type (:type "class") nil nil)) nil [7320 7352])
+            ("" type
+               (:members 
+                  ( ("ARG_NONE" variable
+                       (:constant-flag t
+                        :default-value (7373 7374)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [7362 7374])
+                    ("ARG_MAT" variable
+                       (:constant-flag t
+                        :default-value (7386 7387)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [7376 7387])
+                    ("ARG_SCALAR" variable
+                       (:constant-flag t
+                        :default-value (7402 7403)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [7389 7403]))                  
+                :type "enum")
+                nil [7355 7406])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7497 7509])
+                    ("m" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7510 7517])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("ArgInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7518 7537]))                  
+                :type "bool")
+                nil [7473 12529])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12559 12571])
+                    ("m" variable
+                       (:reference 1
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12572 12579])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12580 12597]))                  )
+                nil [12531 12649])
+            ("pyopencv_to" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12705 12717])
+                    ("mx" variable
+                       (:reference 1
+                        :type ("Matx" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil)
+                                  ("m" type nil nil nil)
+                                  ("n" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12718 12738])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("ArgInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12739 12758]))                  )
+                nil [12651 12879])
+            ("pyopencv_to" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12935 12947])
+                    ("mx" variable
+                       (:reference 1
+                        :type ("Matx" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil)
+                                  ("m" type nil nil nil)
+                                  ("n" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12948 12968])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12969 12986]))                  )
+                nil [12881 13039])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13076 13089]))                  
+                :pointer 1)
+                nil [13041 13401])
+            ("pyopencv_from" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil)
+                    ("int" type nil nil nil)
+                    ("int" type nil nil nil))                  
+                :type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("matx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Matx" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil)
+                                  ("m" type nil nil nil)
+                                  ("n" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13464 13492]))                  
+                :pointer 1)
+                nil [13403 13533])
+            ("PyOpenCV_Converter" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Ptr" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13624 13644]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13602 13734])
+                    ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("o" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13754 13766])
+                            ("p" variable
+                               (:reference 1
+                                :type ("Ptr" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13767 13777])
+                            ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [13778 13795]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [13739 13931]))                  
+                :template-specifier 
+                  ( ("cv::Ptr" type nil nil nil))                  )
+                nil [13535 13934])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13964 13978])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13979 13985])
+                    ("" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13986 13990])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13991 14008]))                  )
+                nil [13936 14215])
+            ("pyopencv_from" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14248 14254])
+                    ("" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14255 14259]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [14217 14299])
+            ("SafeSeqItem" type
+               (:members 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14326 14342])
+                    ("SafeSeqItem" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14359 14373])
+                            ("idx" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14374 14385]))                          
+                        :type ("SafeSeqItem" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [14347 14426])
+                    ("SafeSeqItem" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [14431 14467]))                  
+                :type "struct")
+                nil [14301 14470])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14496 14508])
+                    ("s" variable
+                       (:reference 1
+                        :type ("Scalar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14509 14519])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("ArgInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14520 14539]))                  
+                :type "bool")
+                nil [14472 15467])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15497 15509])
+                    ("s" variable
+                       (:reference 1
+                        :type ("Scalar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15510 15520])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15521 15538]))                  )
+                nil [15469 15590])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Scalar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15627 15645]))                  
+                :pointer 1)
+                nil [15592 15717])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [15754 15772]))                  
+                :pointer 1)
+                nil [15719 15811])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15841 15855])
+                    ("value" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [15856 15868])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15869 15886]))                  )
+                nil [15813 16078])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16115 16135]))                  
+                :pointer 1)
+                nil [16080 16176])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16206 16220])
+                    ("value" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16221 16235])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16236 16253]))                  )
+                nil [16178 16428])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16465 16482]))                  
+                :pointer 1)
+                nil [16430 16520])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16550 16564])
+                    ("value" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16565 16576])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16577 16594]))                  )
+                nil [16522 16884])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17781 17800]))                  
+                :pointer 1)
+                nil [17746 17838])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17868 17882])
+                    ("value" variable
+                       (:reference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17883 17896])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17897 17914]))                  )
+                nil [17840 18124])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [18161 18181]))                  
+                :pointer 1)
+                nil [18126 18223])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18253 18267])
+                    ("value" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [18268 18282])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18283 18300]))                  )
+                nil [18225 18531])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [18568 18587]))                  
+                :pointer 1)
+                nil [18533 18629])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18659 18673])
+                    ("value" variable
+                       (:reference 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [18674 18687])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18688 18705]))                  )
+                nil [18631 18942])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("int64" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18979 18998]))                  
+                :pointer 1)
+                nil [18944 19041])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("String" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19078 19098]))                  
+                :pointer 1)
+                nil [19043 19170])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19200 19214])
+                    ("value" variable
+                       (:reference 1
+                        :type ("String" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19215 19229])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19230 19247]))                  )
+                nil [19172 19453])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19483 19497])
+                    ("sz" variable
+                       (:reference 1
+                        :type ("Size" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19498 19507])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19508 19525]))                  )
+                nil [19455 19669])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("sz" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Size" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19706 19721]))                  
+                :pointer 1)
+                nil [19671 19780])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19810 19824])
+                    ("sz" variable
+                       (:reference 1
+                        :type ("Size_" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19825 19842])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19843 19860]))                  )
+                nil [19782 20004])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("sz" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Size_" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20041 20064]))                  
+                :pointer 1)
+                nil [20006 20123])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20153 20167])
+                    ("r" variable
+                       (:reference 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20168 20176])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20177 20194]))                  )
+                nil [20125 20350])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("r" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20387 20401]))                  
+                :pointer 1)
+                nil [20352 20470])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20500 20514])
+                    ("r" variable
+                       (:reference 1
+                        :type ("Rect2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20515 20525])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20526 20543]))                  )
+                nil [20472 20699])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("r" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Rect2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20736 20752]))                  
+                :pointer 1)
+                nil [20701 20821])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20851 20865])
+                    ("r" variable
+                       (:reference 1
+                        :type ("Range" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20866 20875])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20876 20893]))                  )
+                nil [20823 22026])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("r" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Range" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22063 22078]))                  
+                :pointer 1)
+                nil [22028 22132])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22162 22176])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Point" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22177 22186])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22187 22204]))                  )
+                nil [22134 22525])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22555 22569])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22570 22581])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22582 22599]))                  )
+                nil [22527 22925])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22955 22969])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Point2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22970 22981])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22982 22999]))                  )
+                nil [22927 23280])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23310 23324])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Point3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23325 23336])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23337 23354]))                  )
+                nil [23282 23494])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23524 23538])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Point3d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23539 23550])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23551 23568]))                  )
+                nil [23496 23708])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23745 23760]))                  
+                :pointer 1)
+                nil [23710 23808])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point2f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23845 23862]))                  
+                :pointer 1)
+                nil [23810 23910])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23947 23964]))                  
+                :pointer 1)
+                nil [23912 24018])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24044 24058])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24059 24068])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24069 24082]))                  
+                :type "bool")
+                nil [24020 24216])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24245 24259])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24260 24269])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24270 24287]))                  )
+                nil [24217 24341])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24367 24381])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24382 24391])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24392 24405]))                  
+                :type "bool")
+                nil [24343 24539])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24568 24582])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24583 24592])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24593 24610]))                  )
+                nil [24540 24664])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24690 24704])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24705 24714])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24715 24728]))                  
+                :type "bool")
+                nil [24666 24862])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24891 24905])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec4i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24906 24915])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24916 24933]))                  )
+                nil [24863 24987])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25013 25027])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25028 25037])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25038 25051]))                  
+                :type "bool")
+                nil [24989 25177])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25206 25220])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25221 25230])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25231 25248]))                  )
+                nil [25178 25302])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25328 25342])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25343 25352])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25353 25366]))                  
+                :type "bool")
+                nil [25304 25492])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25521 25535])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25536 25545])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25546 25563]))                  )
+                nil [25493 25617])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25643 25657])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25658 25667])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25668 25681]))                  
+                :type "bool")
+                nil [25619 25807])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25836 25850])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec3i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25851 25860])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25861 25878]))                  )
+                nil [25808 25932])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25958 25972])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25973 25982])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25983 25996]))                  
+                :type "bool")
+                nil [25934 26114])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26143 26157])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26158 26167])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26168 26185]))                  )
+                nil [26115 26239])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26265 26279])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26280 26289])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26290 26303]))                  
+                :type "bool")
+                nil [26241 26421])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26450 26464])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26465 26474])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26475 26492]))                  )
+                nil [26422 26546])
+            ("pyopencv_to" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26572 26586])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26587 26596])
+                    ("info" variable (:type ("ArgInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26597 26610]))                  
+                :type "bool")
+                nil [26548 26728])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26757 26771])
+                    ("v" variable
+                       (:reference 1
+                        :type ("Vec2i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26772 26781])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26782 26799]))                  )
+                nil [26729 26853])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec4d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26890 26905]))                  
+                :pointer 1)
+                nil [26855 26969])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec4f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27006 27021]))                  
+                :pointer 1)
+                nil [26971 27085])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec4i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27122 27137]))                  
+                :pointer 1)
+                nil [27087 27201])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec3d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27238 27253]))                  
+                :pointer 1)
+                nil [27203 27310])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27347 27362]))                  
+                :pointer 1)
+                nil [27312 27419])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec3i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27456 27471]))                  
+                :pointer 1)
+                nil [27421 27528])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27565 27580]))                  
+                :pointer 1)
+                nil [27530 27630])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec2f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27667 27682]))                  
+                :pointer 1)
+                nil [27632 27732])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Vec2i" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27769 27784]))                  
+                :pointer 1)
+                nil [27734 27834])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point2d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27871 27888]))                  
+                :pointer 1)
+                nil [27836 27936])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point3d" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27973 27990]))                  
+                :pointer 1)
+                nil [27938 28044])
+            ("pyopencvVecConverter" type
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("_Cp" variable (:type ("channel_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28135 28152])
+                    ("copyOneItem" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28188 28202])
+                            ("start" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28203 28216])
+                            ("channels" variable (:type "int") (reparse-symbol arg-sub-list) [28217 28230])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("_Cp" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28231 28242]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [28157 29258])
+                    ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29278 29292])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("_Tp" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29293 29317])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29318 29337]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [29263 31610])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("_Tp" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [31638 31668]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [31616 31961]))                  )
+                nil [28046 31964])
+            ("pyopencv_to" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32006 32020])
+                    ("value" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32021 32045])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("ArgInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32046 32065]))                  )
+                nil [31966 32129])
+            ("pyopencv_from" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32178 32208]))                  
+                :pointer 1)
+                nil [32131 32263])
+            ("pyopencv_to_generic_vec" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32331 32345])
+                    ("value" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32346 32370])
+                    ("info" variable
+                       (:constant-flag t
+                        :type ("ArgInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32371 32390]))                  
+                :typemodifiers ("static" "inline"))
+                nil [32265 32743])
+            ("pyopencv_from_generic_vec" function
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("_Tp" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32818 32848]))                  
+                :typemodifiers ("static" "inline")
+                :pointer 1)
+                nil [32745 33173])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33210 33244]))                  
+                :pointer 1)
+                nil [33175 33305])
+            ("pyopencvVecConverter" type
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil)
+                    ("_Tr" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33415 33429])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33430 33471])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33472 33491]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [33400 33561])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33589 33636]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33567 33697]))                  
+                :template-specifier 
+                  ( ("std::pair" type nil nil nil))                  )
+                nil [33307 33700])
+            ("pyopencvVecConverter" type
+               (:template 
+                  ( ("_Tp" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33793 33807])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33808 33846])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33847 33866]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [33778 33936])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33964 34008]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33942 34069]))                  
+                :template-specifier 
+                  ( ("std::vector" type nil nil nil))                  )
+                nil [33702 34072])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34139 34153])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34154 34178])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34179 34198]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [34124 34268])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34296 34326]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34274 34387]))                  
+                :template-specifier 
+                  ( ("Mat" type nil nil nil))                  )
+                nil [34074 34390])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34458 34472])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("UMat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34473 34498])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34499 34518]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [34443 34588])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("UMat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34616 34647]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34594 34708]))                  
+                :template-specifier 
+                  ( ("UMat" type nil nil nil))                  )
+                nil [34392 34711])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34783 34797])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyPoint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34798 34827])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34828 34847]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [34768 34917])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyPoint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34945 34980]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34923 35041]))                  
+                :template-specifier 
+                  ( ("KeyPoint" type nil nil nil))                  )
+                nil [34713 35044])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35114 35128])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("DMatch" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35129 35156])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35157 35176]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [35099 35246])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("DMatch" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35274 35307]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [35252 35368]))                  
+                :template-specifier 
+                  ( ("DMatch" type nil nil nil))                  )
+                nil [35046 35371])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35441 35455])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("String" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35456 35483])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35484 35503]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [35426 35573])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("String" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35601 35634]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [35579 35695]))                  
+                :template-specifier 
+                  ( ("String" type nil nil nil))                  )
+                nil [35373 35698])
+            ("pyopencvVecConverter" type
+               (:type "struct"
+                :members 
+                  ( ("to" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("PyObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35773 35787])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RotatedRect" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35788 35820])
+                            ("info" variable
+                               (:constant-flag t
+                                :type ("ArgInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [35821 35840]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [35758 35910])
+                    ("from" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RotatedRect" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35937 35975]))                          
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [35915 36036]))                  
+                :template-specifier 
+                  ( ("RotatedRect" type nil nil nil))                  )
+                nil [35700 36039])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36069 36083])
+                    ("dst" variable
+                       (:reference 1
+                        :type ("TermCriteria" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36084 36102])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [36103 36120]))                  )
+                nil [36041 36264])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TermCriteria" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36301 36325]))                  
+                :pointer 1)
+                nil [36266 36401])
+            ("pyopencv_to" function
+               (:type "bool"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36431 36445])
+                    ("dst" variable
+                       (:reference 1
+                        :type ("RotatedRect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36446 36463])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [36464 36481]))                  )
+                nil [36403 36668])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RotatedRect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36705 36728]))                  
+                :pointer 1)
+                nil [36670 36845])
+            ("pyopencv_from" function
+               (:type ("PyObject" type (:type "class") nil nil)
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Moments" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36882 36899]))                  
+                :pointer 1)
+                nil [36847 37569])
+            ("OnError" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [37590 37601])
+                    ("func_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37602 37624])
+                    ("err_msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37625 37645])
+                    ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37646 37668])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [37669 37678])
+                    ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [37679 37694]))                  
+                :type "int")
+                nil [37571 38139])
+            ("pycvRedirectError" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38176 38186])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38187 38202])
+                    ("kw" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38203 38216]))                  
+                :type ("PyObject" type (:type "class") nil nil))
+                nil [38141 39030])
+            ("OnMouse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [39052 39062])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [39063 39069])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [39070 39076])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [39077 39087])
+                    ("param" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [39088 39100]))                  
+                :type "void")
+                nil [39032 39487])
+            ("OnChange" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [40643 40651])
+                    ("param" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [40652 40664]))                  
+                :type "void")
+                nil [40622 41010])
+            ("convert_to_char" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("o" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44159 44171])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44172 44182])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"no_name\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44183 44211]))                  
+                :type "int")
+                nil [44132 44420])
+            ("pyopencv_generated_enums.h" include nil nil [44565 44602])
+            ("pyopencv_custom_headers.h" include nil nil [44603 44639])
+            ("CVPY_TYPE" variable (:constant-flag t) nil [44776 44785])
+            ("pyopencv_generated_types.h" include nil nil [44863 44900])
+            ("pyopencv_generated_types_content.h" include nil nil [44919 44964])
+            ("pyopencv_generated_funcs.h" include nil nil [44965 45002])
+            ("special_methods" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+  {\"redirectError\", CV_PY_FN_WITH_KW(pycvRedirectError), \"redirectError(onError) -> None\"},
+#ifdef HAVE_OPENCV_HIGHGUI
+  {\"createTrackbar\", (PyCFunction)pycvCreateTrackbar, METH_VARARGS, \"createTrackbar(trackbarName, windowName, value, count, onChange) -> None\"},
+  {\"createButton\", CV_PY_FN_WITH_KW(pycvCreateButton), \"createButton(buttonName, onChange [, userData, buttonType, initialButtonState]) -> None\"},
+  {\"setMouseCallback\", CV_PY_FN_WITH_KW(pycvSetMouseCallback), \"setMouseCallback(windowName, onMouse [, param]) -> None\"},
+#endif
+#ifdef HAVE_OPENCV_DNN
+  {\"dnn_registerLayer\", CV_PY_FN_WITH_KW(pyopencv_cv_dnn_registerLayer), \"registerLayer(type, class) -> None\"},
+  {\"dnn_unregisterLayer\", CV_PY_FN_WITH_KW(pyopencv_cv_dnn_unregisterLayer), \"unregisterLayer(type) -> None\"},
+#endif
+  {NULL, NULL},
+}"
+                :type ("PyMethodDef" type (:type "class") nil nil))
+                nil [45005 45858])
+            ("ConstDef" type
+               (:members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [45976 45994])
+                    ("val" variable (:type "long long") (reparse-symbol classsubparts) [45999 46013]))                  
+                :type "struct")
+                nil [45954 46016])
+            ("init_submodule" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("root" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46045 46061])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [46062 46080])
+                    ("methods" variable
+                       (:pointer 1
+                        :type ("PyMethodDef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46081 46103])
+                    ("consts" variable
+                       (:pointer 1
+                        :type ("ConstDef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46104 46122]))                  
+                :type "void")
+                nil [46018 47192])
+            ("pyopencv_generated_modules_content.h" include nil nil [47194 47241])
+            ("init_body" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("PyObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47265 47278]))                  
+                :type "bool")
+                nil [47243 49471])
+            ("initcv2" function
+               (:prototype-flag t
+                :type ("PyMODINIT_FUNC" type (:type "class") nil nil))
+                nil [50080 50105])
+            ("initcv2" function (:type "void") nil [50106 50237]))          
+      :file "cv2.cpp"
+      :pointmax 50246
+      :fsize 50245
+      :lastmodtime '(23824 39753 903724 235000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NPY_NO_DEPRECATED_API" . ((symbol "NPY_1_7_API_VERSION" 657 . 676)))
+          ("MODULESTR" . ((string "\"cv2\"" 621 . 626)))
+          ("ERRWRAP2" (spp-arg-list ("expr") 2389 . 2395) . 
+              ((TRY "try" 2398 . 2401) (semantic-list "{ \\
+    PyAllowThreads allowThreads; \\
+    expr; \\
+}" 2404 . 2456) (CATCH "catch" 2459 . 2464) (semantic-list "(const cv::Exception &e)" 2465 . 2489) (semantic-list "{ \\
+    PyObject_SetAttrString(opencv_error, \"file\", PyString_FromString(e.file.c_str())); \\
+    PyObject_SetAttrString(opencv_error, \"func\", PyString_FromString(e.func.c_str())); \\
+    PyObject_SetAttrString(opencv_error, \"line\", PyInt_FromLong(e.line)); \\
+    PyObject_SetAttrString(opencv_error, \"code\", PyInt_FromLong(e.code)); \\
+    PyObject_SetAttrString(opencv_error, \"msg\", PyString_FromString(e.msg.c_str())); \\
+    PyObject_SetAttrString(opencv_error, \"err\", PyString_FromString(e.err.c_str())); \\
+    PyErr_SetString(opencv_error, e.what()); \\
+    return 0; \\
+}" 2492 . 3064)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!OpenCV!opencv!modules!python!src2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

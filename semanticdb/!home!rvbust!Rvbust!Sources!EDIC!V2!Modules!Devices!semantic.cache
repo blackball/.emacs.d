@@ -1,0 +1,339 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("XDIC/Devices/Streamer.h" include (:system-flag t) nil [1 35])
+            ("Camera_BaslerUSB3.h" include nil nil [36 66])
+            ("StreamerImpl" type
+               (:members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [94 105])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [111 124])
+                    ("cameraArr" variable (:type ("Pylon::CInstantCameraArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [134 171])
+                    ("nodemap" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("GenApi::INodeMap" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [176 216])
+                    ("device_infos" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Pylon::CDeviceInfo" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [221 266])
+                    ("Attach" function
+                       (:arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [288 305]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [277 485]))                  
+                :type "struct")
+                nil [68 488])
+            ("sg_streamers_manager" variable
+               (:typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("streamers" variable
+                             (:dereference 1
+                              :type ("StreamerImpl" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [511 537]))                        
+                      :type "struct")
+                      nil nil))
+                nil [491 561])
+            ("System_Allocate" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("StreamerImpl" type (:type "class") nil nil))
+                nil [564 611])
+            ("System_Deallocate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:constant-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [643 660]))                  
+                :type "void")
+                nil [613 710])
+            ("Streamer_Create" function (:type ("Streamer" type (:type "class") nil nil)) nil [735 795])
+            ("Streamer_Destroy" function
+               (:arguments 
+                  ( ("s" variable
+                       (:constant-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [818 835]))                  
+                :type "int")
+                nil [797 872])
+            ("Streamer_Attach" function
+               (:arguments 
+                  ( ("s" variable
+                       (:constant-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [894 911])
+                    ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [912 929]))                  
+                :type "int")
+                nil [874 1034])
+            ("Streamer_Detach" function
+               (:arguments 
+                  ( ("s" variable
+                       (:constant-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1056 1073])
+                    ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1074 1091]))                  
+                :type "int")
+                nil [1036 1100])
+            ("Streamer_DetachAll" function
+               (:arguments 
+                  ( ("s" variable
+                       (:constant-flag t
+                        :type ("Streamer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1125 1142]))                  
+                :type "int")
+                nil [1102 1151]))          
+      :file "Streamer_BaslerUSB3.cpp"
+      :pointmax 1154
+      :fsize 1153
+      :lastmodtime '(23898 9305 907505 12000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("XDIC/Devices/Camera.h" include (:system-flag t) nil [1 33])
+            ("Camera_GetPylonDeviceInfo" function
+               (:prototype-flag t
+                :constant-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87 104]))                  
+                :type ("Pylon::CDeviceInfo" type (:type "class") nil nil))
+                nil [35 105]))          
+      :file "Camera_BaslerUSB3.h"
+      :pointmax 106
+      :fsize 105
+      :lastmodtime '(23898 8664 26723 169000)
+      :unmatched-syntax '((semantic-list 79 . 94) (symbol 54 . 79) (symbol 42 . 53) (punctuation 41 . 42) (punctuation 40 . 41) (symbol 35 . 40) (symbol 127 . 145) (symbol 114 . 126) (symbol 127 . 137) (symbol 114 . 126) (symbol 114 . 121)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("Camera_BaslerUSB3.h" include nil nil [1 31])
+            ("string" include (:system-flag t) nil [32 49])
+            ("XDIC" using (:type ("XDIC" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [51 72])
+            ("Status" type
+               (:members 
+                  ( ("Status_Free" variable
+                       (:constant-flag t
+                        :default-value (106 107)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [92 107])
+                    ("Status_Used" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [113 125]))                  
+                :type "enum")
+                nil [74 129])
+            ("Camera_BaslerUSB3" type
+               (:members 
+                  ( ("status" variable (:type ("Status" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [162 181])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [187 200])
+                    ("device_info" variable (:type ("Pylon::CDeviceInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [256 287])
+                    ("GetSerialNumber" function
+                       (:methodconst-flag t
+                        :typemodifiers ("inline")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [297 388]))                  
+                :type "struct")
+                nil [131 391])
+            ("CAMERA_MAX_NUM" variable (:constant-flag t) nil [402 416])
+            ("sg_cameras_manager" variable
+               (:typemodifiers ("static")
+                :type ("" type
+                     (:members 
+                        ( ("cams" variable
+                             (:dereference 1
+                              :type ("Camera_BaslerUSB3" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [439 482])
+                          ("Get" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("Camera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [548 565]))                                
+                              :type ("Camera_BaslerUSB3" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [518 644])
+                          ("Get" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [679 687]))                                
+                              :type ("Camera_BaslerUSB3" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [649 753])
+                          ("IsValid" function
+                             (:methodconst-flag t
+                              :typemodifiers ("inline")
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("Camera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [779 796]))                                
+                              :type "bool")
+                              (reparse-symbol classsubparts) [759 900])
+                          ("Allocate" function (:type "int") (reparse-symbol classsubparts) [956 1258])
+                          ("Deallocate" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [1411 1419]))                                
+                              :type "int")
+                              (reparse-symbol classsubparts) [1389 1649])
+                          ("Deallocate" function
+                             (:typemodifiers ("inline")
+                              :arguments 
+                                ( ("cam" variable
+                                     (:constant-flag t
+                                      :type ("Camera" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [1681 1698]))                                
+                              :type "int")
+                              (reparse-symbol classsubparts) [1659 1802])
+                          ("Exits" function
+                             (:methodconst-flag t
+                              :typemodifiers ("inline")
+                              :arguments 
+                                ( ("sn" variable
+                                     (:reference 1
+                                      :constant-flag t
+                                      :type ("std::string" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [1830 1852]))                                
+                              :type "bool")
+                              (reparse-symbol classsubparts) [1812 2111]))                        
+                      :type "struct")
+                      nil nil))
+                nil [419 2138])
+            ("Camera_GetPylonDeviceInfo" function
+               (:constant-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2193 2210]))                  
+                :type ("Pylon::CDeviceInfo" type (:type "class") nil nil))
+                nil [2141 2266])
+            ("Camera_IsValid" function
+               (:arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2297 2314]))                  
+                :type "bool")
+                nil [2277 2419])
+            ("Camera_Scan" function
+               (:arguments 
+                  ( ("camarr" variable
+                       (:pointer 1
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2437 2452])
+                    ("maxn" variable (:type "int") (reparse-symbol arg-sub-list) [2453 2462])
+                    ("psize" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2463 2474]))                  
+                :type "int")
+                nil [2421 3582])
+            ("Camera_SerialNumber" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3616 3633]))                  
+                :type "char")
+                nil [3584 3766])
+            ("Camera_Open" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3785 3802]))                  
+                :type "int")
+                nil [3768 3803])
+            ("Camera_GetProp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3824 3841])
+                    ("prop" variable
+                       (:pointer 1
+                        :type ("CameraProp" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3842 3859]))                  
+                :type "int")
+                nil [3804 3860])
+            ("Camera_Close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3879 3896]))                  
+                :type "int")
+                nil [3861 3897])
+            ("Camera_IsOpen" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3917 3934]))                  
+                :type "int")
+                nil [3898 3935])
+            ("Camera_Status" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3955 3972]))                  
+                :type "int")
+                nil [3936 3973])
+            ("Camera_Capture" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cam" variable
+                       (:constant-flag t
+                        :type ("Camera" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3994 4011])
+                    ("pimg" variable
+                       (:pointer 1
+                        :type ("Image8U" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4012 4026]))                  
+                :type "int")
+                nil [3974 4027]))          
+      :file "Camera_BaslerUSB3.cpp"
+      :pointmax 4065
+      :fsize 4064
+      :lastmodtime '(23898 8668 922741 866000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CAMERA_MAX_NUM" . ((number "8" 412 . 413)))
+          )
+)
+)
+  :file "!home!rvbust!Rvbust!Sources!EDIC!V2!Modules!Devices!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,86 @@
+;; Object urdf_world/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "urdf_world/"
+  :tables
+  (list
+    (semanticdb-table "types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDF_WORLD_TYPES_H" variable (:constant-flag t) nil [1835 1853])
+            ("memory" include (:system-flag t) nil [1855 1872])
+            ("urdf" type
+               (:members 
+                  ( ("ModelInterface" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1892 1913])
+                    ("ModelInterfaceSharedPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ModelInterface" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1942 2006]))                  
+                :type "namespace")
+                nil [1875 2009]))          
+      :file "types.h"
+      :pointmax 2018
+      :fsize 2017
+      :lastmodtime '(23558 32637 670629 104000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("URDF_WORLD_TYPES_H")
+          )
+)
+    (semanticdb-table "world.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDF_WORLD_H" variable (:constant-flag t) nil [2625 2637])
+            ("string" include (:system-flag t) nil [2639 2656])
+            ("vector" include (:system-flag t) nil [2657 2674])
+            ("map" include (:system-flag t) nil [2675 2689])
+            ("urdf_model/model.h" include nil nil [2691 2720])
+            ("urdf_model/pose.h" include nil nil [2721 2749])
+            ("urdf_model/twist.h" include nil nil [2750 2779])
+            ("urdf_world/types.h" include nil nil [2780 2809])
+            ("urdf" type
+               (:members 
+                  ( ("Entity" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2843 2850])
+                            ("model" variable (:type ("ModelInterfaceSharedPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2853 2883])
+                            ("origin" variable (:type ("Pose" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2886 2898])
+                            ("twist" variable (:type ("Twist" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2901 2913]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2828 2916])
+                    ("World" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2932 2939])
+                            ("World" function
+                               (:constructor-flag t
+                                :type ("World" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2942 2968])
+                            ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3005 3022])
+                            ("models" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Entity" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3026 3053])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [3057 3101]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2918 3105]))                  
+                :type "namespace")
+                nil [2811 3107]))          
+      :file "world.h"
+      :pointmax 3117
+      :fsize 3116
+      :lastmodtime '(23558 32637 670629 104000)
+      :unmatched-syntax '((punctuation 3101 . 3102) (punctuation 2968 . 2969))
+      :lexical-table 
+        '(("URDF_WORLD_H")
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!URDF!Tmp!URDF!U!urdfdom_headers!urdf_world!include!urdf_world!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

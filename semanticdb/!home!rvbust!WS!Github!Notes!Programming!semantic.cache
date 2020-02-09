@@ -1,0 +1,351 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DemoImpl" type
+               (:members 
+                  ( ("CommandType" type
+                       (:members 
+                          ( ("CMD_OPEN" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1283 1292])
+                            ("CMD_CLOSE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1297 1307]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [1260 1311])
+                    ("JsonBuffer" type (:type "struct") (reparse-symbol namespacesubparts) [1313 1334])
+                    ("Command" type
+                       (:members 
+                          ( ("Command" function
+                               (:arguments 
+                                  ( ("ct" variable (:type ("CommandType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1365 1380]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1357 1382])
+                            ("execute" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1387 1401])
+                            ("input" variable (:type ("JsonBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1410 1427])
+                            ("output" variable (:type ("JsonBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1432 1450]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1336 1454]))                  
+                :type "namespace")
+                nil [1237 1457]))          
+      :file "command_drive_design.cpp"
+      :pointmax 1753
+      :fsize 1751
+      :lastmodtime '(23684 42094 14041 904000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [430 448])
+            ("stdlib.h" include (:system-flag t) nil [449 468])
+            ("stdint.h" include (:system-flag t) nil [469 488])
+            ("object" type
+               (:members 
+                  ( ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [508 526])
+                    ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [508 526]))                  
+                :type "struct")
+                nil [490 530])
+            ("object_create" function
+               (:prototype-flag t
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [532 562])
+            ("object_isvalid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [582 606]))                  
+                :type "int")
+                nil [563 607])
+            ("object_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [628 652]))                  
+                :type "void")
+                nil [608 653])
+            ("object_use" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [670 694]))                  
+                :type "void")
+                nil [654 695])
+            ("objectimplstatus" type
+               (:members 
+                  ( ("objectimplstatus_free" variable
+                       (:constant-flag t
+                        :default-value (771 772)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [746 771])
+                    ("objectimplstatus_inuse" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [775 798]))                  
+                :type "enum")
+                nil [721 802])
+            ("objectimpl" type
+               (:members 
+                  ( ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [828 841])
+                    ("status" variable (:type "int") (reparse-symbol classsubparts) [896 907])
+                    ("val" variable (:type "int") (reparse-symbol classsubparts) [912 920]))                  
+                :type "struct")
+                nil [804 924])
+            ("OBJECT_INVALID_ID" variable (:constant-flag t) nil [934 951])
+            ("OBJECT_MAX_NUM" variable (:constant-flag t) nil [962 976])
+            ("sg_object_pool" variable
+               (:typemodifiers ("static")
+                :type ("objectpool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [985 1116])
+            ("objectpool" type
+               (:members 
+                  ( ("impls" variable
+                       (:dereference 1
+                        :type ("objectimpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1017 1059]))                  
+                :type "struct")
+                nil [985 1116])
+            ("pool_get" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("objectpool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1362 1386])
+                    ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1387 1411]))                  
+                :type ("objectimpl" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1326 1448])
+            ("pool_size" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("objectpool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1479 1509]))                  
+                :type "int")
+                nil [1450 1564])
+            ("pool_isvalid" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("objectpool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1598 1628])
+                    ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1629 1653]))                  
+                :type "int")
+                nil [1566 1749])
+            ("pool_allocate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("objectpool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1787 1811]))                  
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1751 2065])
+            ("pool_deallocate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("objectpool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2096 2120])
+                    ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2121 2145]))                  
+                :type "void")
+                nil [2067 2328])
+            ("object_isvalid" function
+               (:arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2396 2420]))                  
+                :type "int")
+                nil [2376 2469])
+            ("object_create" function (:type ("object" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [2471 2545])
+            ("object_destroy" function
+               (:arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2568 2592]))                  
+                :type "void")
+                nil [2547 2637])
+            ("object_use" function
+               (:arguments 
+                  ( ("obj" variable
+                       (:constant-flag t
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2656 2680]))                  
+                :type "void")
+                nil [2639 2822])
+            ("main" function (:type "int") nil [2824 2967]))          
+      :file "UseHandleToDesignAPI.cpp"
+      :pointmax 2968
+      :fsize 2967
+      :lastmodtime '(23899 17044 656297 870000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OBJECT_MAX_NUM" . ((number "32" 981 . 983)))
+          ("OBJECT_INVALID_ID" . ((number "0" 953 . 954)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("object" type (:type "struct") nil [2 25])
+            ("allocator" type
+               (:members 
+                  ( ("id" variable (:type "int") (reparse-symbol classsubparts) [140 147]))                  
+                :type "struct")
+                nil [117 150])
+            ("allocator_get" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("allocator" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [152 186])
+            ("object_set_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("allocator" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [212 232])
+                    ("own" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [233 249]))                  
+                :type "int")
+                nil [187 251])
+            ("object_create" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("object" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [252 283])
+            ("object_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [303 320]))                  
+                :type "int")
+                nil [284 321])
+            ("object_use" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("object" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [337 356]))                  
+                :type "int")
+                nil [322 357]))          
+      :file "APIWithAllocator.cpp"
+      :pointmax 358
+      :fsize 327
+      :lastmodtime '(23899 19749 148500 911000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Github!Notes!Programming!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

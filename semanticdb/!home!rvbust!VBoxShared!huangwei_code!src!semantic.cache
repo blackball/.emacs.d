@@ -1,0 +1,152 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pch.h" include nil nil [2 18])
+            ("Utils.h" include nil nil [19 37])
+            ("SegPlane.h" include nil nil [38 59])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [70 79])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [79 92]))                  
+                :type "int")
+                nil [61 624]))          
+      :file "main.cpp"
+      :pointmax 625
+      :fsize 656
+      :lastmodtime '(23805 63653 915612 936000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SegPlane.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Utils.h" include nil nil [1 19])
+            ("pch.h" include nil nil [20 36])
+            ("SegPlane.h" include nil nil [37 58])
+            ("RansacFitPlane.hpp" include nil nil [59 88])
+            ("Eigen/Dense" include (:system-flag t) nil [90 112])
+            ("SegPlane" function
+               (:constructor-flag t
+                :parent "SegPlane"
+                :arguments 
+                  ( ("inputFile" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [133 155])
+                    ("maxPointCount" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [156 177]))                  
+                :type ("SegPlane" type (:type "class") nil nil))
+                nil [114 264])
+            ("SegPlane" function
+               (:destructor-flag t
+                :parent "SegPlane"
+                :type "void")
+                nil [266 292])
+            ("loadPointCloud" function
+               (:parent "SegPlane"
+                :type "bool")
+                nil [294 923])
+            ("segmentPlanes" function
+               (:parent "SegPlane"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [925 3036])
+            ("variancePrinciple" function
+               (:parent "SegPlane"
+                :type ("SegPlane::PointIndicesPtr" type (:type "class") nil nil))
+                nil [3038 5980])
+            ("getThresholdByStatisticHistogram" function
+               (:parent "SegPlane"
+                :arguments 
+                  ( ("variance" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6031 6066])
+                    ("minVar" variable (:type "float") (reparse-symbol arg-sub-list) [6067 6080])
+                    ("maxVar" variable (:type "float") (reparse-symbol arg-sub-list) [6081 6094]))                  
+                :type "float")
+                nil [5982 6743])
+            ("regionGrowSegment" function
+               (:parent "SegPlane"
+                :arguments 
+                  ( ("candiIndices" variable
+                       (:constant-flag t
+                        :type ("PointIndicesPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6805 6840]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("pcl::PointIndices" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6745 7688])
+            ("mergeEstimatedPlanes" function
+               (:parent "SegPlane"
+                :arguments 
+                  ( ("planes" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("PlaneParams" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7752 7791]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [7690 8493])
+            ("isNeedMergePlanes" function
+               (:parent "SegPlane"
+                :arguments 
+                  ( ("plane1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PlaneParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8528 8554])
+                    ("plane2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PlaneParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8555 8581]))                  
+                :type "bool")
+                nil [8495 9048])
+            ("pointToPlaneDist" function
+               (:parent "SegPlane"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Eigen::Vector3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9083 9108])
+                    ("param" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [9108 9129]))                  
+                :type "float")
+                nil [9050 9316]))          
+      :file "SegPlane.cpp"
+      :pointmax 9317
+      :fsize 9316
+      :lastmodtime '(23805 63828 88306 651000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!VBoxShared!huangwei_code!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

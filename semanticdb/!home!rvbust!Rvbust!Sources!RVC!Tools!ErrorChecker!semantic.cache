@@ -1,0 +1,69 @@
+;; Object ErrorChecker/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ErrorChecker/"
+  :tables
+  (list
+    (semanticdb-table "GenerateImages.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [131 145])
+            ("os" include nil nil [131 145])
+            ("cv2" include nil nil [147 157])
+            ("numpy" include nil nil [158 176])
+            ("DrawCircles" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [196 199])
+                ("ncircles" variable nil (reparse-symbol function_parameters) [201 209]))              ) nil [180 250])
+            ("Generate" function
+               (:documentation " Generate N dot images to the folder. 
+
+    :param w: width of the image 
+    :param h: height of the image 
+    :param folder: to put the images 
+    :param N: number of images 
+    
+    "
+                :arguments 
+                  ( ("w" variable nil (reparse-symbol function_parameters) [677 678])
+                    ("h" variable nil (reparse-symbol function_parameters) [679 680])
+                    ("folder" variable nil (reparse-symbol function_parameters) [682 688])
+                    ("N" variable nil (reparse-symbol function_parameters) [696 697]))                  )
+                nil [664 1154])
+            ("App" function nil nil [1155 1219])
+            ("if" code nil nil [1220 1257]))          
+      :file "GenerateImages.py"
+      :pointmax 1257
+      :fsize 1256
+      :lastmodtime '(23861 5346 819050 190000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Checker.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [96 106])
+            ("numpy" include nil nil [107 125])
+            ("sys" include nil nil [127 141])
+            ("os" include nil nil [127 141])
+            ("DetectCircles" function
+               (:documentation " TODO: use blob detector to get the number of dots 
+    "
+                :arguments 
+                  ( ("img" variable nil (reparse-symbol function_parameters) [163 166]))                  )
+                nil [145 249])
+            ("Check" function
+               (:documentation " Check the images by detecting the continours of the dots in the images, if it's not continuous, report the break point 
+    "
+                :arguments 
+                  ( ("folder" variable nil (reparse-symbol function_parameters) [260 266])
+                    ("offset" variable nil (reparse-symbol function_parameters) [274 280]))                  )
+                nil [250 1280])
+            ("App" function (:arguments 
+              ( ("folder" variable nil (reparse-symbol function_parameters) [1310 1316])
+                ("offset" variable nil (reparse-symbol function_parameters) [1318 1324]))              ) nil [1302 1357])
+            ("if" code nil nil [1358 1397]))          
+      :file "Checker.py"
+      :pointmax 1397
+      :fsize 1396
+      :lastmodtime '(23861 6219 643810 769000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVC!Tools!ErrorChecker!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

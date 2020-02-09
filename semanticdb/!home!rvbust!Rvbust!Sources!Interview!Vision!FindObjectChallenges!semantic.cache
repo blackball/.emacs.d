@@ -1,0 +1,64 @@
+;; Object FindObjectChallenges/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FindObjectChallenges/"
+  :tables
+  (list
+    (semanticdb-table "FindObjectsChallenges.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [312 330])
+            ("cv2" include nil nil [332 342])
+            ("FindObjectsFromVideo" function
+               (:documentation " Find template objects from given video, visualize your detection results. 
+    
+    :param template: the template image
+    :param video: a video file taken statically with a webcam
+    
+    Task: the task here is very simple, you need to modify this function to add vision codes 
+    to detect as many objects as possible in the given video. Typically, a keypoint + ransac framework 
+    should give you good starting point. 
+    "
+                :arguments 
+                  ( ("template" variable nil (reparse-symbol function_parameters) [374 382])
+                    ("video" variable nil (reparse-symbol function_parameters) [406 411]))                  )
+                nil [349 1152])
+            ("FindObjectsFromVideoImproved" function
+               (:documentation " Improved version of FindObjectsFromVideo
+
+    :param template: the same template image 
+    :param video: the same video file. 
+    
+
+    Task: In the given video, the camera is not moving at all. Which means, your detection 
+    results should always be still. If your detection results changes from frame to frame (jitter), 
+    please figure out a way to stablize them. 
+    "
+                :arguments 
+                  ( ("template" variable nil (reparse-symbol function_parameters) [1187 1195])
+                    ("video" variable nil (reparse-symbol function_parameters) [1219 1224]))                  )
+                nil [1154 1910])
+            ("FindObjectsFromVideo2" function
+               (:documentation " Find template objects from another video. 
+
+    :param template: the same template image 
+    :param video: a different video file, the backgroud color is changed.
+
+    Task: From the percetion of human eyes, the temaplte image and the objects in the video 
+    are the same. But you probably will get different detection results with this new video. 
+    Try to analyze the results, figure out a way to improve your detection with the old template. 
+    "
+                :arguments 
+                  ( ("template" variable nil (reparse-symbol function_parameters) [1937 1945])
+                    ("video" variable nil (reparse-symbol function_parameters) [1969 1974]))                  )
+                nil [1911 2750])
+            ("Demo" function (:documentation " The demo testing function. 
+    ") nil [2760 2953])
+            ("if" code nil nil [2954 2992]))          
+      :file "FindObjectsChallenges.py"
+      :pointmax 2993
+      :fsize 2992
+      :lastmodtime '(23808 62795 103314 234000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Interview!Vision!FindObjectChallenges!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

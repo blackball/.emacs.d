@@ -1,0 +1,73 @@
+;; Object TemplateInYourSpace/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "TemplateInYourSpace/"
+  :tables
+  (list
+    (semanticdb-table "Types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Point" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [55 62])
+                    ("y" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [55 62]))                  )
+                nil [15 65]))          
+      :file "Types.h"
+      :pointmax 67
+      :fsize 66
+      :lastmodtime '(23817 38675 783574 971000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 34 . 35) (symbol 33 . 34) (TYPENAME 24 . 32) (punctuation 23 . 24) (TEMPLATE 15 . 23) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Types.h" include nil nil [1 19])
+            ("+" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("Point" type
+                     (:template-specifier 
+                        ( ("T" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [68 86])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Point" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [87 105]))                  
+                :typemodifiers ("static")
+                :operator-flag t)
+                nil [21 183])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [194 203])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [204 217]))                  
+                :type "int")
+                nil [185 278]))          
+      :file "main.cpp"
+      :pointmax 279
+      :fsize 278
+      :lastmodtime '(23818 6222 777209 116000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!TemplateInYourSpace!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

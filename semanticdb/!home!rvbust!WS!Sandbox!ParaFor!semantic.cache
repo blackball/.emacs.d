@@ -1,0 +1,319 @@
+;; Object ParaFor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ParaFor/"
+  :tables
+  (list
+    (semanticdb-table "ParaFor.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("timer.h" include nil nil [1 19])
+            ("iostream" include (:system-flag t) nil [20 39])
+            ("vector" include (:system-flag t) nil [40 57])
+            ("pthread.h" include (:system-flag t) nil [58 78])
+            ("limits.h" include (:system-flag t) nil [79 98])
+            ("unistd.h" include (:system-flag t) nil [99 118])
+            ("ParaFor" type
+               (:template 
+                  ( ("OP" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("_op" variable (:type ("OP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [219 226])
+                    ("ParaFor" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [299 305])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [309 314]))                          
+                        :type ("ParaFor" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [291 357])
+                    ("Join" function (:type "void") (reparse-symbol classsubparts) [367 1037])
+                    ("private" label nil (reparse-symbol classsubparts) [1043 1051])
+                    ("ParaFor" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ParaFor" type
+                                     (:template-specifier 
+                                        ( ("OP" type nil nil nil)
+                                          ("TN" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1064 1087]))                          
+                        :type ("ParaFor" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1056 1088])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ParaFor" type
+                                     (:template-specifier 
+                                        ( ("OP" type nil nil nil)
+                                          ("TN" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1120 1143]))                          
+                        :type ("ParaFor" type
+                             (:template-specifier 
+                                ( ("OP" type nil nil nil)
+                                  ("TN" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1093 1144])
+                    ("_Worker" type
+                       (:members 
+                          ( ("currindex" variable (:type "int") (reparse-symbol classsubparts) [1179 1198])
+                            ("tid" variable (:type "int") (reparse-symbol classsubparts) [1179 1198])
+                            ("pf" variable
+                               (:pointer 1
+                                :type ("ParaFor" type
+                                     (:template-specifier 
+                                        ( ("OP" type nil nil nil)
+                                          ("TN" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1207 1227]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1154 1234])
+                    ("_threads" variable
+                       (:dereference 1
+                        :type ("pthread_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1244 1267])
+                    ("_workers" variable
+                       (:dereference 1
+                        :type ("_Worker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1272 1293])
+                    ("_Callback" function
+                       (:pointer 1
+                        :typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1329 1340]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1299 1424])
+                    ("_Work" function
+                       (:arguments 
+                          ( ("worker" variable
+                               (:pointer 1
+                                :type ("_Worker" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1441 1457]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1430 1938])
+                    ("_Steal" function (:type "int") (reparse-symbol classsubparts) [1944 2436]))                  )
+                nil [168 2439])
+            ("PrimeTest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("val" variable (:type "long") (reparse-symbol arg-sub-list) [2464 2473]))                  
+                :type "bool")
+                nil [2442 2641])
+            ("PrimeOp" type
+               (:members 
+                  ( ("_vals" variable
+                       (:constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("long" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2664 2695])
+                    ("_dst" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("long" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2700 2724])
+                    ("_perthreads" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2729 2774])
+                    ("_sum" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2784 2796])
+                    ("PrimeOp" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("vals" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("long" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2809 2839])
+                            ("dst" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("long" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2840 2863])
+                            ("numthreads" variable (:type "int") (reparse-symbol arg-sub-list) [2864 2879]))                          
+                        :type ("PrimeOp" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2801 2967])
+                    ("GetNumItems" function
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2977 3043])
+                    ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [3076 3086])
+                            ("tid" variable (:type "int") (reparse-symbol arg-sub-list) [3087 3095]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3053 3160])
+                    ("Post" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3166 3236]))                  
+                :type "struct")
+                nil [2643 3239])
+            ("PrimeTaskOmp" function
+               (:arguments 
+                  ( ("in" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("long" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3380 3401])
+                    ("out" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("long" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3402 3424]))                  
+                :type "void")
+                nil [3362 3640])
+            ("Compare" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3642 4303])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4314 4323])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4324 4337]))                  
+                :type "int")
+                nil [4305 4370]))          
+      :file "ParaFor.h"
+      :pointmax 5211
+      :fsize 5210
+      :lastmodtime '(23834 50324 190442 824000)
+      :unmatched-syntax '((semantic-list 3272 . 3361) (symbol 3262 . 3271) (semantic-list 3315 . 3360) (punctuation 3308 . 3309) (punctuation 3299 . 3300) (punctuation 3279 . 3280) (symbol 3254 . 3261) (semantic-list 3315 . 3360) (punctuation 3308 . 3309) (punctuation 3299 . 3300) (punctuation 3279 . 3280) (symbol 3250 . 3253) (symbol 3243 . 3249) (punctuation 3242 . 3243) (punctuation 307 . 308) (punctuation 306 . 307) (punctuation 305 . 306) (punctuation 304 . 305) (punctuation 285 . 286) (symbol 281 . 285) (punctuation 279 . 280) (punctuation 278 . 279) (punctuation 277 . 278) (TYPENAME 269 . 277) (punctuation 268 . 269) (TEMPLATE 259 . 267)))
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("KTHREAD_H" variable (:constant-flag t) nil [27 36])
+            ("kt_forpool" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("_fp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [346 356])
+                    ("func" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [370 376])
+                            ("" variable (:type "long") (reparse-symbol arg-sub-list) [376 381])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [381 385]))                          
+                        :type "void")
+                        nil nil)
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [387 398])
+                    ("n" variable (:type "long") (reparse-symbol arg-sub-list) [399 406]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [330 407])
+            ("kt_forpool_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("_fp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [318 328]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [294 329])
+            ("kt_forpool_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("n_threads" variable (:type "int") (reparse-symbol arg-sub-list) [278 292]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [256 293])
+            ("kt_pipeline" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("n_threads" variable (:type "int") (reparse-symbol arg-sub-list) [173 187])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [188 201])
+                    ("shared_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [222 240])
+                    ("n_steps" variable (:type "int") (reparse-symbol arg-sub-list) [241 253]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [156 254])
+            ("kt_for" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("n_threads" variable (:type "int") (reparse-symbol arg-sub-list) [90 104])
+                    ("func" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [118 124])
+                            ("" variable (:type "long") (reparse-symbol arg-sub-list) [124 129])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [129 133]))                          
+                        :type "void")
+                        nil nil)
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [135 146])
+                    ("n" variable (:type "long") (reparse-symbol arg-sub-list) [147 154]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [78 155]))          
+      :file "main.cpp"
+      :pointmax 445
+      :fsize 444
+      :lastmodtime '(23835 65373 622172 476000)
+      :unmatched-syntax '((semantic-list 201 . 220) (semantic-list 194 . 201))
+      :lexical-table 
+        '(("KTHREAD_H")
+          )
+))
+  :file "!home!rvbust!WS!Sandbox!ParaFor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

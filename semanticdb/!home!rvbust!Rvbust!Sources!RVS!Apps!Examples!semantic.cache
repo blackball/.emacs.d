@@ -1,0 +1,358 @@
+;; Object Examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Examples/"
+  :tables
+  (list
+    (semanticdb-table "UseImGui.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Utils.h" include (:system-flag t) nil [329 358])
+            ("imgui/imgui.h" include (:system-flag t) nil [359 383])
+            ("imgui/imgui_impl_opengl3.h" include (:system-flag t) nil [384 421])
+            ("imgui/imgui_impl_glfw.h" include (:system-flag t) nil [422 456])
+            ("stdio.h" include (:system-flag t) nil [457 475])
+            ("GLFW/glfw3.h" include (:system-flag t) nil [1206 1229])
+            ("glfw_error_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [1311 1321])
+                    ("description" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1322 1346]))                  
+                :type "void")
+                nil [1279 1410])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1421 1430])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1431 1444]))                  
+                :type "int")
+                nil [1412 8459]))          
+      :file "UseImGui.cpp"
+      :pointmax 8460
+      :fsize 8459
+      :lastmodtime '(23782 1935 905210 105000)
+      :unmatched-syntax '((symbol 1166 . 1197) (symbol 1158 . 1165) (punctuation 1157 . 1158)))
+    (semanticdb-table "UseCeresSolver.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ceres/ceres.h" include (:system-flag t) nil [54 78])
+            ("ceres::AutoDiffCostFunction" using (:type ("ceres::AutoDiffCostFunction" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [80 114])
+            ("ceres::CostFunction" using (:type ("ceres::CostFunction" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [115 141])
+            ("ceres::Problem" using (:type ("ceres::Problem" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [142 163])
+            ("ceres::Solver" using (:type ("ceres::Solver" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [164 184])
+            ("ceres::Solve" using (:type ("ceres::Solve" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [185 204])
+            ("CostFunctor" type
+               (:members 
+                  ( ("()" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("x" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [317 334])
+                            ("residual" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [335 347]))                          
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [276 425]))                  
+                :type "struct")
+                nil [251 428])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [439 448])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [449 461]))                  
+                :type "int")
+                nil [430 1309]))          
+      :file "UseCeresSolver.cpp"
+      :pointmax 1310
+      :fsize 1351
+      :lastmodtime '(23782 1935 905210 105000)
+      :unmatched-syntax nil)
+    (semanticdb-table "UsePybind11.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Eigen.h" include (:system-flag t) nil [55 84])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [85 115])
+            ("pybind11/eigen.h" include (:system-flag t) nil [116 143])
+            ("pybind11/stl.h" include (:system-flag t) nil [144 169])
+            ("pybind11/functional.h" include (:system-flag t) nil [170 202])
+            ("iostream" include (:system-flag t) nil [204 223])
+            ("numeric" include (:system-flag t) nil [224 242])
+            ("KK" type
+               (:members 
+                  ( ("kk" variable (:type ("RVS::Common::Mat3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [260 282]))                  
+                :type "struct")
+                nil [244 285])
+            ("KK2" type
+               (:members 
+                  ( ("kk" variable (:type ("RVS::Common::Mat3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [304 326]))                  
+                :type "struct")
+                nil [287 329])
+            ("IFoo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [344 351])
+                    ("IFoo" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [356 374])
+                    ("Hello" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [379 404]))                  
+                :type "class")
+                nil [331 407])
+            ("Foo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [421 428])
+                    ("Hello" function (:type "void") (reparse-symbol classsubparts) [433 451])
+                    ("Hey" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [473 497])
+                            ("a" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [498 508]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [457 512])
+                    ("Calc" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [551 561]))                          )
+                        (reparse-symbol classsubparts) [518 595]))                  
+                :type "class")
+                nil [409 598])
+            ("Car" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [612 619])
+                    ("GetType" function (:type ("Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [699 732])
+                    ("private" label nil (reparse-symbol classsubparts) [734 742])
+                    ("m_type" variable (:type ("Type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [747 771]))                  
+                :type "class")
+                nil [600 774])
+            ("Func" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [793 817])
+                    ("a" variable
+                       (:default-value "10"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [818 828]))                  
+                :type "void")
+                nil [776 873])
+            ("IntObj" type
+               (:superclasses 
+                  ( ("std::enable_shared_from_this" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("IntObj" function
+                       (:constructor-flag t
+                        :type ("IntObj" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [934 954])
+                    ("IntObj" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("v" variable (:type "int") (reparse-symbol arg-sub-list) [966 972]))                          
+                        :type ("IntObj" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [959 984])
+                    ("val" variable (:type "int") (reparse-symbol classsubparts) [990 998]))                  
+                :type "struct")
+                nil [875 1001])
+            ("MakeSharedInt" function (:type ("std::shared_ptr" type
+                 (:template-specifier 
+                    ( ("IntObj" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1003 1093])
+            ("Assign" function
+               (:arguments 
+                  ( ("p" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("IntObj" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1126 1152]))                  
+                :type ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("IntObj" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1095 1187])
+            ("PrintIt" function
+               (:arguments 
+                  ( ("p" variable
+                       (:constant-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("IntObj" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1202 1234]))                  
+                :type "void")
+                nil [1189 1267])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("UsePybind11" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1286 1298])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1299 1301]))                  
+                :type "int")
+                nil [1270 2676]))          
+      :file "UsePybind11.cpp"
+      :pointmax 2677
+      :fsize 2676
+      :lastmodtime '(23884 14450 514721 379000)
+      :unmatched-syntax nil)
+    (semanticdb-table "UseOSG.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Utils.h" include (:system-flag t) nil [1026 1055])
+            ("osg/AnimationPath" include (:system-flag t) nil [1057 1085])
+            ("osg/MatrixTransform" include (:system-flag t) nil [1086 1116])
+            ("osg/Geode" include (:system-flag t) nil [1117 1137])
+            ("osg/ShapeDrawable" include (:system-flag t) nil [1138 1166])
+            ("osg/Material" include (:system-flag t) nil [1167 1190])
+            ("osg/Texture2D" include (:system-flag t) nil [1191 1215])
+            ("osgUtil/ShaderGen" include (:system-flag t) nil [1216 1244])
+            ("osgViewer/Viewer" include (:system-flag t) nil [1245 1272])
+            ("osgGA/StateSetManipulator" include (:system-flag t) nil [1273 1309])
+            ("osgDB/ReadFile" include (:system-flag t) nil [1310 1335])
+            ("osgDB/WriteFile" include (:system-flag t) nil [1336 1362])
+            ("osg/Math" include (:system-flag t) nil [1363 1382])
+            ("createShapes" function
+               (:pointer 1
+                :arguments 
+                  ( ("arguments" variable
+                       (:reference 1
+                        :type ("osg::ArgumentParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1409 1440]))                  
+                :type ("osg::Geode" type (:type "class") nil nil))
+                nil [1384 3713])
+            ("createTransformNode" function
+               (:pointer 1
+                :arguments 
+                  ( ("shape" variable
+                       (:pointer 1
+                        :type ("osg::Drawable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3758 3779])
+                    ("matrix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osg::Matrix" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3780 3807]))                  
+                :type ("osg::MatrixTransform" type (:type "class") nil nil))
+                nil [3715 4071])
+            ("createWheelAnimation" function
+               (:pointer 1
+                :arguments 
+                  ( ("base" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("osg::Vec3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4123 4146]))                  
+                :type ("osg::AnimationPathCallback" type (:type "class") nil nil))
+                nil [4073 4815])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4827 4836])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4837 4850]))                  
+                :type "int")
+                nil [4817 7227]))          
+      :file "UseOSG.cpp"
+      :pointmax 7228
+      :fsize 7227
+      :lastmodtime '(23782 1935 905210 105000)
+      :unmatched-syntax nil)
+    (semanticdb-table "UseFmtLib.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Point.h" include nil nil [54 72])
+            ("RVS/Common/Utils.h" include (:system-flag t) nil [73 102])
+            ("RVS/Common/FmtExt.h" include (:system-flag t) nil [103 133])
+            ("RVS/Common/Logger.h" include (:system-flag t) nil [134 164])
+            ("fmt/format.h" include (:system-flag t) nil [165 188])
+            ("fmt/ostream.h" include (:system-flag t) nil [189 213])
+            ("iostream" include (:system-flag t) nil [214 233])
+            ("vector" include (:system-flag t) nil [234 251])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [262 271])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [272 285]))                  
+                :type "int")
+                nil [253 641]))          
+      :file "UseFmtLib.cpp"
+      :pointmax 642
+      :fsize 290
+      :lastmodtime '(23782 1935 905210 105000)
+      :unmatched-syntax nil)
+    (semanticdb-table "UseEigen.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Common/Eigen.h" include (:system-flag t) nil [1 30])
+            ("iostream" include (:system-flag t) nil [31 50])
+            ("RVS::Common::Mat2d" using (:type ("RVS::Common::Mat2d" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [52 77])
+            ("RVS::Common::Vec3d" using (:type ("RVS::Common::Vec3d" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [78 103])
+            ("main" function (:type "int") nil [105 372]))          
+      :file "UseEigen.cpp"
+      :pointmax 373
+      :fsize 374
+      :lastmodtime '(23865 45934 611098 551000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Apps!Examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

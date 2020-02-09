@@ -1,0 +1,523 @@
+;; Object Draft/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Draft/"
+  :tables
+  (list
+    (semanticdb-table "EDICApp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("EDICApp" function
+               (:constructor-flag t
+                :parent "EDICApp"
+                :type ("EDICApp" type (:type "class") nil nil))
+                nil [23 223])
+            ("EDICApp" function
+               (:destructor-flag t
+                :parent "EDICApp"
+                :type "void")
+                nil [225 253]))          
+      :file "EDICApp.cpp"
+      :pointmax 257
+      :fsize 259
+      :lastmodtime '(23768 61197 354884 690000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EDICApp.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [15 32])
+            ("stdio.h" include (:system-flag t) nil [33 51])
+            ("DEBUG" variable (:constant-flag t) nil [61 66])
+            ("EDICApp" type
+               (:members 
+                  ( ("Status" type
+                       (:members 
+                          ( ("Status_Home" variable
+                               (:constant-flag t
+                                :default-value (145 146)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [131 146])
+                            ("Status_DIC2D" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [156 169])
+                            ("Status_DIC3D" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [178 191])
+                            ("Status_Config" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [200 214])
+                            ("Status_Exit" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [223 235]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [105 242])
+                    ("EDICApp" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("EDICApp" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [256 266])
+                    ("EDICApp" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [271 282])
+                    ("Status" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol classsubparts) [288 328])
+                    ("SetStatus" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("s" variable (:type ("Status" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [354 368]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [333 386])
+                    ("Home" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [391 403])
+                    ("DIC2D" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [408 421])
+                    ("DIC3D" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [426 439])
+                    ("Config" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [444 458])
+                    ("private" label nil (reparse-symbol classsubparts) [464 472])
+                    ("m_status" variable (:type ("Status" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [477 498])
+                    ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [530 549])
+                    ("m_version" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [554 576]))                  
+                :type "struct")
+                nil [84 652]))          
+      :file "EDICApp.h"
+      :pointmax 653
+      :fsize 2356
+      :lastmodtime '(23768 61197 354884 690000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEBUG" (spp-arg-list ("msg") 66 . 71) . ((symbol "puts" 72 . 76) (semantic-list "(msg)" 76 . 81)))
+          )
+)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [32 41])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [42 55]))                  
+                :type "int")
+                nil [23 549]))          
+      :file "main.cpp"
+      :pointmax 550
+      :fsize 777
+      :lastmodtime '(23768 61197 358884 656000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EDICApp_Home.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("../LoggerUtils.h" include nil nil [23 50])
+            ("imgui/imgui.h" include (:system-flag t) nil [52 76])
+            ("imgui/imgui_custom_widgets.h" include (:system-flag t) nil [77 116])
+            ("imgui/imgui_impl_opengl3.h" include (:system-flag t) nil [117 154])
+            ("imgui/imgui_impl_glfw.h" include (:system-flag t) nil [155 189])
+            ("glad/glad.h" include (:system-flag t) nil [190 212])
+            ("GLFW/glfw3.h" include (:system-flag t) nil [245 268])
+            ("stdio.h" include (:system-flag t) nil [317 335])
+            ("GLFW_Error_Callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [369 379])
+                    ("description" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [380 404]))                  
+                :type "void")
+                nil [337 462])
+            ("Home" function
+               (:parent "EDICApp"
+                :type "int")
+                nil [464 3702]))          
+      :file "EDICApp_Home.cpp"
+      :pointmax 3703
+      :fsize 3705
+      :lastmodtime '(23768 61197 358884 656000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EDICApp_DIC2D.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("../Colors.h" include nil nil [22 44])
+            ("../LoggerUtils.h" include nil nil [45 72])
+            ("EDIC/EDIC.h" include (:system-flag t) nil [73 95])
+            ("../Utils.h" include nil nil [96 117])
+            ("nfd.h" include nil nil [148 164])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [165 194])
+            ("imgui/imgui.h" include (:system-flag t) nil [195 219])
+            ("imgui/imgui_custom_widgets.h" include (:system-flag t) nil [220 259])
+            ("imgui/imgui_impl_opengl3.h" include (:system-flag t) nil [260 297])
+            ("imgui/imgui_impl_glfw.h" include (:system-flag t) nil [298 332])
+            ("glad/glad.h" include (:system-flag t) nil [333 355])
+            ("GLFW/glfw3.h" include (:system-flag t) nil [388 411])
+            ("stdio.h" include (:system-flag t) nil [460 478])
+            ("filesystem" include (:system-flag t) nil [479 500])
+            ("fs" type
+               (:kind alias
+                :members 
+                  ( ("std::experimental::filesystem" type (:type "namespace") nil nil))                  
+                :type "namespace")
+                nil [501 546])
+            ("g_config" variable (:type ("" type
+                 (:members 
+                    ( ("show_demo_window" variable (:type "bool") (reparse-symbol classsubparts) [561 592])
+                      ("show_plots" variable (:type "bool") (reparse-symbol classsubparts) [597 622])
+                      ("show_camera_config" variable (:type "bool") (reparse-symbol classsubparts) [627 660])
+                      ("plot_width" variable (:type "float") (reparse-symbol classsubparts) [665 689])
+                      ("plot_height" variable (:type "float") (reparse-symbol classsubparts) [694 718])
+                      ("plot_inc_step" variable
+                         (:constant-flag t
+                          :type "float")
+                          (reparse-symbol classsubparts) [723 755]))                    
+                  :type "struct")
+                  nil nil)) nil [548 767])
+            ("GLFW_Error_Callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [801 811])
+                    ("description" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [812 836]))                  
+                :type "void")
+                nil [769 894])
+            ("Frequency" function
+               (:typemodifiers ("inline")
+                :type "float")
+                nil [896 1413])
+            ("GLFW_Key_Callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("window" variable
+                       (:pointer 1
+                        :type ("GLFWwindow" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1445 1464])
+                    ("key" variable (:type "int") (reparse-symbol arg-sub-list) [1465 1473])
+                    ("scancode" variable (:type "int") (reparse-symbol arg-sub-list) [1474 1487])
+                    ("action" variable (:type "int") (reparse-symbol arg-sub-list) [1488 1499])
+                    ("mods" variable (:type "int") (reparse-symbol arg-sub-list) [1500 1509]))                  
+                :type "void")
+                nil [1415 2721])
+            ("MakeTexture" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bgrimg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2750 2772]))                  
+                :type ("GLuint" type (:type "class") nil nil))
+                nil [2724 3182])
+            ("ShowExampleAppSimpleOverlay" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p_open" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [3353 3366]))                  
+                :type "void")
+                nil [3313 5466])
+            ("DIC_CALCULATE_MAX_ROIS" variable (:constant-flag t) nil [5475 5497])
+            ("Plots" type
+               (:members 
+                  ( ("pop_back" function (:type "void") (reparse-symbol classsubparts) [5520 5689])
+                    ("push_back" function
+                       (:arguments 
+                          ( ("r" variable
+                               (:constant-flag t
+                                :type ("cv::Rect" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5710 5727])
+                            ("color" variable
+                               (:constant-flag t
+                                :type ("ImU32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5728 5746]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5695 5846])
+                    ("Draw" function
+                       (:arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5862 5883]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5852 7790])
+                    ("vals" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [7796 7835])
+                    ("check_dxdy_idx" variable (:type "int") (reparse-symbol classsubparts) [7840 7859])
+                    ("rois" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("cv::Rect" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [7864 7891])
+                    ("colors" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("ImU32" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [7896 7922]))                  
+                :type "struct")
+                nil [5501 7925])
+            ("ImageCanvas" type
+               (:members 
+                  ( ("ImageCanvas" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("winname_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7965 7993])
+                            ("plots_" variable
+                               (:reference 1
+                                :type ("Plots" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7994 8008]))                          
+                        :type ("ImageCanvas" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [7953 8170])
+                    ("MakeTexture" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("bgrimg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8202 8224]))                          
+                        :type ("GLuint" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8176 8678])
+                    ("MakeRect" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("p1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImVec2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8709 8726])
+                            ("p2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImVec2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8727 8744]))                          
+                        :type ("cv::Rect" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8684 8985])
+                    ("Draw" function
+                       (:arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9083 9104])
+                            ("mode" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [9105 9117]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9073 14651])
+                    ("Text" function
+                       (:arguments 
+                          ( ("showtext" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14667 14688])
+                            ("textpos" variable
+                               (:reference 1
+                                :type ("ImVec2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14689 14705]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14657 14775])
+                    ("DeleteTextures" function (:type "void") (reparse-symbol classsubparts) [14781 14851])
+                    ("GetRects" function
+                       (:constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("cv::Rect" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14857 14935])
+                    ("GetColors" function
+                       (:constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("ImU32" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14941 15018])
+                    ("rects" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("cv::Rect" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [15024 15052])
+                    ("colors" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("ImU32" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [15057 15083])
+                    ("plots" variable (:type ("Plots" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15089 15102])
+                    ("texid" variable (:type ("GLuint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15107 15120])
+                    ("adding_rect" variable (:type "bool") (reparse-symbol classsubparts) [15125 15142])
+                    ("adding_preview" variable (:type "bool") (reparse-symbol classsubparts) [15147 15167])
+                    ("points" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("ImVec2" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [15172 15199])
+                    ("is_opened" variable (:type "bool") (reparse-symbol classsubparts) [15204 15219])
+                    ("winname" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15224 15244])
+                    ("show_text" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15266 15288])
+                    ("text_pos" variable (:type ("ImVec2" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15293 15309]))                  
+                :type "struct")
+                nil [7927 15312])
+            ("PlayViedo" type
+               (:members 
+                  ( ("PlayViedo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("winname_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15348 15376]))                          
+                        :type ("PlayViedo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [15338 15485])
+                    ("PlayViedo" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [15491 15506])
+                    ("Show" function (:type "void") (reparse-symbol classsubparts) [15512 16250])
+                    ("is_opened" variable (:type "bool") (reparse-symbol classsubparts) [16260 16283])
+                    ("doplay" variable (:type "bool") (reparse-symbol classsubparts) [16288 16308])
+                    ("winname" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16313 16334])
+                    ("framerate" variable (:type "float") (reparse-symbol classsubparts) [16339 16361]))                  
+                :type "struct")
+                nil [15314 16369])
+            ("CheckBox" type
+               (:members 
+                  ( ("CheckBox" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("winname_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16402 16430]))                          
+                        :type ("CheckBox" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [16393 16466])
+                    ("CheckBox" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [16472 16486])
+                    ("Show" function (:type "void") (reparse-symbol classsubparts) [16493 17242])
+                    ("is_opened" variable (:type "bool") (reparse-symbol classsubparts) [17248 17271])
+                    ("check_dx" variable (:type "bool") (reparse-symbol classsubparts) [17276 17305])
+                    ("check_dy" variable (:type "bool") (reparse-symbol classsubparts) [17310 17338])
+                    ("winname" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17343 17364]))                  
+                :type "struct")
+                nil [16371 17368])
+            ("CameraConfig" type
+               (:members 
+                  ( ("CameraConfig" function
+                       (:constructor-flag t
+                        :type ("CameraConfig" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [17396 17413])
+                    ("CameraConfig" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [17419 17437])
+                    ("Show" function (:type "void") (reparse-symbol classsubparts) [17444 17688])
+                    ("Load" function (:type "void") (reparse-symbol classsubparts) [17693 18414])
+                    ("Save" function
+                       (:arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("EDIC::Config" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18430 18454]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [18420 18666])
+                    ("is_opened" variable (:type "bool") (reparse-symbol classsubparts) [18672 18695])
+                    ("winname" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18700 18738])
+                    ("exposure_value" variable (:type "int") (reparse-symbol classsubparts) [18743 18772]))                  
+                :type "struct")
+                nil [17370 18775])
+            ("DIC2D" function
+               (:parent "EDICApp"
+                :type "int")
+                nil [18778 29329])
+            ("DIC2D_CalculateDIC" function
+               (:parent "EDICApp"
+                :arguments 
+                  ( ("camidx" variable (:type "int") (reparse-symbol arg-sub-list) [29363 29374]))                  
+                :type "int")
+                nil [29331 36569])
+            ("DIC2D_Selector" function
+               (:parent "EDICApp"
+                :type "int")
+                nil [36571 40426])
+            ("DIC2D_OffLine" function
+               (:parent "EDICApp"
+                :type "int")
+                nil [40429 44531])
+            ("DIC2D_OffLine_Play" function
+               (:parent "EDICApp"
+                :type "int")
+                nil [44533 52369]))          
+      :file "EDICApp_DIC2D.cpp"
+      :pointmax 52370
+      :fsize 52514
+      :lastmodtime '(23769 1604 324078 369000)
+      :unmatched-syntax '((punctuation 17437 . 17438) (punctuation 17413 . 17414) (punctuation 16486 . 16487) (punctuation 16466 . 16467) (punctuation 15506 . 15507) (punctuation 15485 . 15486) (punctuation 17437 . 17438) (punctuation 17413 . 17414) (punctuation 16486 . 16487) (punctuation 16466 . 16467) (punctuation 15506 . 15507) (punctuation 15485 . 15486))
+      :lexical-table 
+        '(("DIC_CALCULATE_MAX_ROIS" . ((number "10" 5498 . 5500)))
+          )
+)
+    (semanticdb-table "EDICApp_DIC3D.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("DIC3D" function
+               (:parent "EDICApp"
+                :type "void")
+                nil [23 102]))          
+      :file "EDICApp_DIC3D.cpp"
+      :pointmax 103
+      :fsize 7290
+      :lastmodtime '(23768 61197 358884 656000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EDICApp_Config.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("EDICApp.h" include nil nil [1 21])
+            ("Config" function
+               (:parent "EDICApp"
+                :type "void")
+                nil [23 98]))          
+      :file "EDICApp_Config.cpp"
+      :pointmax 99
+      :fsize 614
+      :lastmodtime '(23768 61197 354884 690000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!Src!Draft!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,325 @@
+;; Object Vis3d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Vis3d/"
+  :tables
+  (list
+    (semanticdb-table "Vis3d.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [15 32])
+            ("string" include (:system-flag t) nil [33 50])
+            ("stdint.h" include (:system-flag t) nil [51 70])
+            ("Vis3d" type
+               (:members 
+                  ( ("Handle" type
+                       (:members 
+                          ( ("type" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [120 134])
+                            ("flag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [143 157])
+                            ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [167 180])
+                            ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [221 234]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [91 263])
+                    ("Init" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [269 288])
+                    ("Shutdown" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [293 316])
+                    ("Vis3d" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [336 360]))                          
+                        :type ("Vis3d" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [330 361])
+                    ("Vis3d" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [372 396])
+                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [397 403])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [404 410])
+                            ("w" variable (:type "int") (reparse-symbol arg-sub-list) [411 417])
+                            ("h" variable (:type "int") (reparse-symbol arg-sub-list) [418 424]))                          
+                        :type ("Vis3d" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [366 425])
+                    ("Vis3d" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [435 452])
+                    ("Home" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [462 474])
+                    ("SetLighting" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [496 509]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [479 510])
+                    ("SetWireMode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [532 545]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [515 546])
+                    ("Point" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pts" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [565 595])
+                            ("ptsize" variable (:type "int") (reparse-symbol arg-sub-list) [596 607])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [608 641]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [552 642])
+                    ("private" label nil (reparse-symbol classsubparts) [762 770])
+                    ("m_viewerhandle" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [775 797]))                  
+                :type "struct")
+                nil [72 801]))          
+      :file "Vis3d.h"
+      :pointmax 802
+      :fsize 801
+      :lastmodtime '(23696 26310 184152 855000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Vis3d.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Vis3d.h" include nil nil [1 19])
+            ("osgViewer/Viewer" include (:system-flag t) nil [20 47])
+            ("osgViewer/config/SingleWindow" include (:system-flag t) nil [48 88])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [89 126])
+            ("array" include (:system-flag t) nil [127 143])
+            ("thread" include (:system-flag t) nil [144 161])
+            ("Viewer" type
+               (:members 
+                  ( ("Viewer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [190 214]))                          
+                        :type ("Viewer" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [183 462])
+                    ("handle" variable (:type ("Vis3d::Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [468 489])
+                    ("osglights" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [495 530])
+                    ("sceneroot" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [536 571])
+                    ("osgviewer" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Viewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [578 614])
+                    ("viewcamera_matrix" variable (:type ("osg::Matrixf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [619 650])
+                    ("is_lighton" variable (:type "bool") (reparse-symbol classsubparts) [659 675])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [680 697]))                  
+                :type "struct")
+                nil [163 701])
+            ("Vis3d_System" type
+               (:members 
+                  ( ("mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [777 792])
+                    ("viewer_ptrs" variable (:type "int") (reparse-symbol classsubparts) [823 835]))                  
+                :type "struct")
+                nil [703 872])
+            ("sg_system" variable
+               (:typemodifiers ("static")
+                :type ("Vis3d_System" type (:type "class") nil nil))
+                nil [874 904])
+            ("Vis3d_System_Scoped_Lock" variable (:constant-flag t) nil [915 939])
+            ("Vis3d_System_Init" function
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [995 1175])
+            ("Vis3d_System_Shutdown" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1177 1416])
+            ("Vis3d_Viewer_NextFreeSlot" function
+               (:typemodifiers ("static" "inline")
+                :type "int")
+                nil [1418 1592])
+            ("Vis3d_Viewer_Get" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("h" variable
+                       (:constant-flag t
+                        :type ("Vis3d::Handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1675 1697]))                  
+                :type ("Viewer" type (:type "class") nil nil))
+                nil [1636 1706])
+            ("Vis3d_Viewer_Create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1749 1773]))                  
+                :type ("Vis3d::Handle" type (:type "class") nil nil))
+                nil [1708 1907])
+            ("Vis3d_Viewer_Destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable (:type ("Vis3d::Handle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1942 1958]))                  
+                :type "void")
+                nil [1909 1998])
+            ("Vis3d_Viewer_Home" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable (:type ("Vis3d::Handle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2030 2046]))                  
+                :type "void")
+                nil [2000 2055])
+            ("Vis3d_Viewer_Point" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2097 2127])
+                    ("ptsize" variable (:type "int") (reparse-symbol arg-sub-list) [2128 2139])
+                    ("colors" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2140 2173]))                  
+                :type ("Vis3d::Handle" type (:type "class") nil nil))
+                nil [2057 2182])
+            ("Init" function
+               (:parent "Vis3d"
+                :type "bool")
+                nil [2225 2279])
+            ("Shutdown" function
+               (:parent "Vis3d"
+                :type "void")
+                nil [2281 2336])
+            ("Vis3d" function
+               (:constructor-flag t
+                :parent "Vis3d"
+                :arguments 
+                  ( ("wname" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2351 2376]))                  
+                :type ("Vis3d" type (:type "class") nil nil))
+                nil [2338 2461])
+            ("Vis3d" function
+               (:constructor-flag t
+                :parent "Vis3d"
+                :arguments 
+                  ( ("wname" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2476 2501])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2502 2508])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2509 2515])
+                    ("w" variable (:type "int") (reparse-symbol arg-sub-list) [2516 2522])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [2523 2529]))                  
+                :type ("Vis3d" type (:type "class") nil nil))
+                nil [2463 2538])
+            ("Vis3d" function
+               (:destructor-flag t
+                :parent "Vis3d"
+                :type "void")
+                nil [2540 2601])
+            ("Home" function
+               (:parent "Vis3d"
+                :type "void")
+                nil [2603 2664])
+            ("SetLighting" function
+               (:parent "Vis3d"
+                :arguments 
+                  ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [2690 2703]))                  
+                :type "void")
+                nil [2666 2762])
+            ("SetWireMode" function
+               (:parent "Vis3d"
+                :arguments 
+                  ( ("enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [2788 2801]))                  
+                :type "void")
+                nil [2764 2860])
+            ("Point" function
+               (:parent "Vis3d"
+                :arguments 
+                  ( ("pts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2889 2919])
+                    ("ptsize" variable (:type "int") (reparse-symbol arg-sub-list) [2920 2931])
+                    ("colors" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2932 2965]))                  
+                :type ("Vis3d::Handle" type (:type "class") nil nil))
+                nil [2862 3029]))          
+      :file "Vis3d.cpp"
+      :pointmax 3030
+      :fsize 3029
+      :lastmodtime '(23696 28993 580840 177000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("Vis3d_System_Scoped_Lock" (spp-arg-list nil 909 . 911) . 
+              ((symbol "std" 912 . 915) (punctuation ":" 915 . 916) (punctuation ":" 916 . 917) (symbol "scoped_lock" 917 . 928) (punctuation "<" 928 . 929) (symbol "std" 929 . 932) (punctuation ":" 932 . 933) (punctuation ":" 933 . 934) (symbol "mutex" 934 . 939) (punctuation ">" 939 . 940) (symbol "lk" 941 . 943) (semantic-list "(sg_system.mtx)" 943 . 958)))
+          )
+))
+  :file "!home!rvbust!WS!Github!Vis3d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

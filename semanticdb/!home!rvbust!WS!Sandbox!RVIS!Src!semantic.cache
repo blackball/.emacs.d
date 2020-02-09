@@ -1,0 +1,1084 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "EnvironmentCore.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Private.h" include nil nil [15 35])
+            ("RVIS/Timer.h" include (:system-flag t) nil [36 59])
+            ("RVIS/LoggerUtils.h" include (:system-flag t) nil [60 89])
+            ("CHECK_INTERFACE" variable (:constant-flag t) nil [100 115])
+            ("CHECK_COLLISION_BODY" variable (:constant-flag t) nil [590 610])
+            ("Environment" type
+               (:superclasses 
+                  ( ("EnvironmentBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CollisionCallbackData" type
+                       (:superclasses 
+                          ( ("UserData" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1178 1185])
+                            ("CollisionCallbackData" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("callback" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CollisionCallbackFn" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1216 1252])
+                                    ("penv" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Environment" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1253 1287]))                                  
+                                :type ("CollisionCallbackData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1194 1335])
+                            ("CollisionCallbackData" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1344 1662])
+                            ("m_iterator" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1695 1715])
+                            ("m_callback" variable (:type ("CollisionCallbackFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1724 1755])
+                            ("protected" label nil (reparse-symbol classsubparts) [1761 1771])
+                            ("m_env_weak_ptr" variable (:type ("std::weak_ptr" type
+                                 (:template-specifier 
+                                    ( ("Environment" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1780 1822]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1122 1829])
+                    ("CollisionCallbackData" friend nil (reparse-symbol classsubparts) [1834 1868])
+                    ("CollisionCallbackDataPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CollisionCallbackData" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1874 1946])
+                    ("BodyCallbackData" type
+                       (:superclasses 
+                          ( ("UserData" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2003 2010])
+                            ("BodyCallbackData" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("callback" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BodyCallbackFn" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2036 2067])
+                                    ("penv" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Environment" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2068 2102]))                                  
+                                :type ("BodyCallbackData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2019 2147])
+                            ("BodyCallbackData" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2156 2463])
+                            ("m_iterator" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2496 2516])
+                            ("Callback" variable (:type ("BodyCallbackFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2525 2549])
+                            ("protected" label nil (reparse-symbol classsubparts) [2555 2565])
+                            ("m_env_weakptr" variable (:type ("std::weak_ptr" type
+                                 (:template-specifier 
+                                    ( ("Environment" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2574 2615]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1952 2622])
+                    ("BodyCallbackData" friend nil (reparse-symbol classsubparts) [2627 2656])
+                    ("BodyCallbackDataPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("BodyCallbackData" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [2662 2724])
+                    ("public" label nil (reparse-symbol classsubparts) [2726 2733])
+                    ("Environment" function
+                       (:constructor-flag t
+                        :type ("Environment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2738 4447])
+                    ("Environment" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [4453 4490])
+                    ("Init" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bStartSimulationThread" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4514 4548]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4496 7630])
+                    ("Destroy" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [7636 9710])
+                    ("Reset" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [9716 11866])
+                    ("GlobalState" function
+                       (:typemodifiers ("virtual")
+                        :type ("UserDataPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11872 11935])
+                    ("OwnInterface" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pinterface" variable (:type ("InterfaceBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11966 11994]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11940 12225])
+                    ("DisownInterface" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pinterface" variable (:type ("InterfaceBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12259 12287]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12230 12514])
+                    ("CloneSelf" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("options" variable (:type "int") (reparse-symbol arg-sub-list) [12557 12569]))                          
+                        :type ("EnvironmentBasePtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12520 12830])
+                    ("Clone" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("preference" variable (:type ("EnvironmentBaseConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12855 12890])
+                            ("cloningoptions" variable (:type "int") (reparse-symbol arg-sub-list) [12891 12910]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12836 13080])
+                    ("AddModule" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("module" variable (:type ("ModuleBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13109 13130])
+                            ("cmdargs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13131 13158]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [13087 13609])
+                    ("GetModules" function
+                       (:arguments 
+                          ( ("listModules" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("ModuleBasePtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13631 13669])
+                            ("timeout" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13670 13687]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13615 14368])
+                    ("ReadTrimeshURI" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptrimesh" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("TriMesh" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [29431 29465])
+                            ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29466 29494])
+                            ("atts" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AttributesList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29495 29522]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("TriMesh" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [29383 29674])
+                    ("_ReadTrimeshURI" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptrimesh" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("TriMesh" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [29729 29763])
+                            ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29764 29792])
+                            ("diffuseColor" variable
+                               (:reference 1
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29793 29825])
+                            ("ambientColor" variable
+                               (:reference 1
+                                :type ("RaveVector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29879 29911])
+                            ("atts" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AttributesList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29912 29939]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("TriMesh" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [29680 30939])
+                    ("Add" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pinterface" variable (:type ("InterfaceBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32757 32785])
+                            ("bAnonymous" variable (:type "bool") (reparse-symbol arg-sub-list) [32786 32802])
+                            ("cmdargs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32803 32830]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [32740 33596])
+                    ("_AddKinBody" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33627 33644])
+                            ("bAnonymous" variable (:type "bool") (reparse-symbol arg-sub-list) [33645 33661]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [33602 35112])
+                    ("_AddRobot" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("robot" variable (:type ("RobotBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35141 35160])
+                            ("bAnonymous" variable (:type "bool") (reparse-symbol arg-sub-list) [35161 35177]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [35118 36976])
+                    ("Remove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pinterface" variable (:type ("InterfaceBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37003 37031]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [36983 38431])
+                    ("RemoveKinBodyByName" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38470 38494]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [38437 39214])
+                    ("RegisterBodyCallback" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("callback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("BodyCallbackFn" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39261 39292]))                          
+                        :type ("UserDataPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39220 39624])
+                    ("GetKinBody" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pname" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39660 39685]))                          
+                        :type ("KinBodyPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39630 39938])
+                    ("GetRobot" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pname" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39974 39999]))                          
+                        :type ("RobotBasePtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39944 40254])
+                    ("SetCollisionChecker" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pchecker" variable (:type ("CollisionCheckerBasePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41281 41314]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [41248 42114])
+                    ("GetCollisionChecker" function
+                       (:typemodifiers ("virtual")
+                        :type ("CollisionCheckerBasePtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42120 42213])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody1" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42247 42270])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42271 42297]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [42219 42480])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody1" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42514 42537])
+                            ("pbody2" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42538 42561])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42562 42588]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [42486 42841])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("plink" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42875 42903])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42904 42930]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [42847 43124])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("plink1" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43158 43187])
+                            ("plink2" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43188 43217])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43218 43244]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [43130 43499])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("plink" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43533 43561])
+                            ("pbody" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43562 43584])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43585 43611]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [43505 43849])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("plink" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43883 43911])
+                            ("vbodyexcluded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KinBodyConstPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [43912 43962])
+                            ("vlinkexcluded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KinBody::LinkConstPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [43995 44051])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44052 44078]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [43855 44302])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44336 44358])
+                            ("vbodyexcluded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KinBodyConstPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [44359 44409])
+                            ("vlinkexcluded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KinBody::LinkConstPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [44442 44498])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44499 44525]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [44308 44736])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ray" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RAY" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44770 44785])
+                            ("plink" variable (:type ("KinBody::LinkConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44786 44814])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44815 44841]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [44742 45040])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ray" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RAY" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [45073 45088])
+                            ("pbody" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45089 45111])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45112 45138]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [45045 45324])
+                    ("CheckCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ray" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RAY" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [45357 45372])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45373 45399]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [45329 45462])
+                    ("CheckStandaloneSelfCollision" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45825 45847])
+                            ("report" variable (:type ("CollisionReportPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45848 45874]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [45783 46069])
+                    ("RegisterCollisionCallback" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("callback" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CollisionCallbackFn" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [46122 46158]))                          
+                        :type ("UserDataPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [46076 46510])
+                    ("HasRegisteredCollisionCallbacks" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [46515 46706])
+                    ("GetRegisteredCollisionCallbacks" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("listcallbacks" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("CollisionCallbackFn" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [46757 46803]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [46712 47157])
+                    ("StepSimulation" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fTimeStep" variable (:type ("Real" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47338 47353]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [47310 49043])
+                    ("GetMutex" function
+                       (:typemodifiers ("virtual")
+                        :type ("EnvironmentMutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [49049 49123])
+                    ("GetBodies" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bodies" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KinBodyPtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [49152 49184])
+                            ("timeout" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49185 49202]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [49129 49792])
+                    ("GetRobots" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("robots" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RobotBasePtr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [49821 49855])
+                            ("timeout" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49856 49873]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [49798 50424])
+                    ("GetBodyFromEnvironmentId" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [53784 53791]))                          
+                        :type ("KinBodyPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [53740 54139])
+                    ("StartSimulation" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fDeltaTime" variable (:type ("Real" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54174 54190])
+                            ("bRealTime" variable (:type "bool") (reparse-symbol arg-sub-list) [54191 54206]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [54145 54637])
+                    ("IsSimulationRunning" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [54643 54715])
+                    ("StopSimulation" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("shutdownthread" variable
+                               (:default-value "1"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [54749 54771]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [54721 55026])
+                    ("GetSimulationTime" function
+                       (:typemodifiers ("virtual")
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [55032 55095])
+                    ("SetDebugLevel" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("level" variable (:type ("RVIS::Logger::Level" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55128 55154]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [55101 55181])
+                    ("_UpdatePublishedBodies" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [61122 62878])
+                    ("GetUnit" function
+                       (:typemodifiers ("virtual")
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("Real" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [62884 62955])
+                    ("SetUnit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("unit" variable (:type ("std::pair" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("Real" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [62982 63016]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [62961 63035])
+                    ("protected" label nil (reparse-symbol classsubparts) [63038 63048])
+                    ("_RemoveKinBodyFromIterator" function
+                       (:arguments 
+                          ( ("" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("KinBodyPtr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [63218 63237])
+                            ("it" variable (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63238 63250]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [63186 64315])
+                    ("_Clone" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("r" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Environment" type (:constant-flag t) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [65400 65437])
+                            ("options" variable (:type "int") (reparse-symbol arg-sub-list) [65438 65450])
+                            ("bCheckSharedResources" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [65451 65485]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [65380 85152])
+                    ("_CheckUniqueName" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyConstPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85188 85210])
+                            ("bDoThrow" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [85211 85232]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [85158 85645])
+                    ("SetEnvironmentId" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85681 85698]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [85651 85968])
+                    ("RemoveEnvironmentId" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86007 86024]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [85974 86202])
+                    ("_StartSimulationThread" function (:type "void") (reparse-symbol classsubparts) [86208 86451])
+                    ("_StopSimulationThread" function (:type "void") (reparse-symbol classsubparts) [86457 86671])
+                    ("_SimulationThread" function (:type "void") (reparse-symbol classsubparts) [86677 91098])
+                    ("_CallBodyCallbacks" function
+                       (:arguments 
+                          ( ("pbody" variable (:type ("KinBodyPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91174 91191])
+                            ("action" variable (:type "int") (reparse-symbol arg-sub-list) [91192 91203]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [91150 91696])
+                    ("_IsOpenRAVEFile" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("filename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [92369 92397]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [92341 92740])
+                    ("m_robots" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("RobotBasePtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [92747 92782])
+                    ("m_bodies" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("KinBodyPtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [92821 92854])
+                    ("m_modules" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("std::pair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [92915 92977])
+                    ("m_delta_sim_time" variable (:type ("Real" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93110 93132])
+                    ("m_cur_sim_time" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93171 93195])
+                    ("m_sim_start_time" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93256 93282])
+                    ("m_bodies_modified_stamp" variable (:type "int") (reparse-symbol classsubparts) [93287 93315])
+                    ("m_current_checker_ptr" variable (:type ("CollisionCheckerBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93375 93421])
+                    ("m_physicsengine_ptr" variable (:type ("PhysicsEngineBasePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93426 93467])
+                    ("m_registered_collisioncallbacks" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("UserDataWeakPtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [93472 93531])
+                    ("m_registered_bodycallbacks" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("UserDataWeakPtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [93588 93642])
+                    ("m_environment_index" variable (:type "int") (reparse-symbol classsubparts) [93695 93719])
+                    ("m_bodies_map" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("KinBodyWeakPtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [93748 93791])
+                    ("m_thread_simulation" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("std::thread" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [93905 93954])
+                    ("m_environment_ids_mutex" variable
+                       (:typemodifiers ("mutable")
+                        :type ("std::mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [94003 94046])
+                    ("m_interfaces_mutex" variable
+                       (:typemodifiers ("mutable")
+                        :type ("std::timed_mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [94110 94154])
+                    ("m_init_mutex" variable
+                       (:typemodifiers ("mutable")
+                        :type ("std::mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [94248 94280])
+                    ("m_published_bodies" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("KinBody::BodyState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [94327 94373])
+                    ("m_homedirectory" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94378 94401])
+                    ("m_unit" variable (:type ("std::pair" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("Real" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [94406 94442])
+                    ("m_generic_robot_handle" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94511 94676])
+                    ("m_generic_trajectory_handle" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94511 94676])
+                    ("m_multicontroller_handle" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94511 94676])
+                    ("m_generic_physicsengine_handle" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94511 94676])
+                    ("m_generic_collisionchecker_handle" variable (:type ("UserDataPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [94511 94676])
+                    ("m_owned_interfaces" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("InterfaceBasePtr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [94682 94724])
+                    ("m_initialized" variable (:type "bool") (reparse-symbol classsubparts) [94730 94749])
+                    ("m_enable_simulation" variable (:type "bool") (reparse-symbol classsubparts) [94786 94811])
+                    ("m_should_shutdown_simulation" variable (:type "bool") (reparse-symbol classsubparts) [94844 94878])
+                    ("m_is_realtime" variable (:type "bool") (reparse-symbol classsubparts) [94935 94954])
+                    ("EnvironmentXMLReader" friend nil (reparse-symbol classsubparts) [94960 94993]))                  
+                :type "class")
+                nil [1072 94997]))          
+      :file "EnvironmentCore.h"
+      :pointmax 94998
+      :fsize 94997
+      :lastmodtime '(23745 28967 792685 889000)
+      :unmatched-syntax '((punctuation 94993 . 94994) (punctuation 63237 . 63238) (punctuation 63236 . 63237) (punctuation 2656 . 2657) (punctuation 2495 . 2496) (punctuation 2494 . 2495) (punctuation 2493 . 2494) (symbol 2478 . 2493) (punctuation 2477 . 2478) (symbol 2473 . 2477) (punctuation 2495 . 2496) (punctuation 2494 . 2495) (punctuation 2493 . 2494) (symbol 2478 . 2493) (punctuation 2477 . 2478) (symbol 2473 . 2477) (punctuation 1868 . 1869) (punctuation 1694 . 1695) (punctuation 1693 . 1694) (punctuation 1692 . 1693) (symbol 1677 . 1692) (punctuation 1676 . 1677) (symbol 1672 . 1676) (punctuation 1694 . 1695) (punctuation 1693 . 1694) (punctuation 1692 . 1693) (symbol 1677 . 1692) (punctuation 1676 . 1677) (symbol 1672 . 1676) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 2656 . 2657) (punctuation 2495 . 2496) (punctuation 2494 . 2495) (punctuation 2493 . 2494) (symbol 2478 . 2493) (punctuation 2477 . 2478) (symbol 2473 . 2477) (punctuation 2495 . 2496) (punctuation 2494 . 2495) (punctuation 2493 . 2494) (symbol 2478 . 2493) (punctuation 2477 . 2478) (symbol 2473 . 2477) (punctuation 1868 . 1869) (punctuation 1694 . 1695) (punctuation 1693 . 1694) (punctuation 1692 . 1693) (symbol 1677 . 1692) (punctuation 1676 . 1677) (symbol 1672 . 1676) (punctuation 1694 . 1695) (punctuation 1693 . 1694) (punctuation 1692 . 1693) (symbol 1677 . 1692) (punctuation 1676 . 1677) (symbol 1672 . 1676) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("CHECK_INTERFACE" (spp-arg-list ("pinterface") 115 . 127) . ((semantic-list "{                                                                                                                                                          \\
+        if ((pinterface)->GetEnv() != shared_from_this()) throw RVIS_Exception(\"Interface is from a different environment\", RVE_InvalidArguments);             \\
+    }" 257 . 580)))
+          ("CHECK_COLLISION_BODY" (spp-arg-list ("body") 610 . 616) . ((semantic-list "{                                                                                                                                                          \\
+        CHECK_INTERFACE(body);                                                                                                                                 \\
+    }" 747 . 1070)))
+          )
+)
+    (semanticdb-table "Private.h"
+      :file "Private.h"
+      :fsize 9167
+      :lastmodtime '(23745 28967 796685 905000))
+    (semanticdb-table "SharedLib_Win.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("windows.h" include (:system-flag t) nil [15 35])
+            ("rv_lib_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("handle" variable (:type ("HMODULE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [59 74])
+                          ("errmsg" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [79 92]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [37 104])
+            ("rv_lib_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("plib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [132 147]))                  
+                :type "void")
+                nil [107 231])
+            ("rv__dlerror" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [256 270])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [271 292])
+                    ("errorno" variable (:type ("DWORD" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [293 307]))                  
+                :type "int")
+                nil [233 308])
+            ("rv_dlopen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [331 352])
+                    ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [353 367])
+                    ("lazy_loading" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [368 393]))                  
+                :type "int")
+                nil [310 976])
+            ("rv_dlclose" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1002 1016]))                  
+                :type "void")
+                nil [979 1288])
+            ("rv_dlsym" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1311 1325])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1326 1343])
+                    ("ptr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1344 1355]))                  
+                :type "int")
+                nil [1291 1565])
+            ("rv_dlerror" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1598 1618]))                  
+                :type "char")
+                nil [1568 1673])
+            ("rv__format_fallback_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1714 1728])
+                    ("errorno" variable (:type "int") (reparse-symbol arg-sub-list) [1729 1741]))                  
+                :type "void")
+                nil [1676 2132])
+            ("rv__dlerror" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2157 2171])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2172 2193])
+                    ("errorno" variable (:type ("DWORD" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2194 2208]))                  
+                :type "int")
+                nil [2134 3675]))          
+      :file "SharedLib_Win.h"
+      :pointmax 3677
+      :fsize 3676
+      :lastmodtime '(23745 28967 796685 905000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "SharedLib_Unix.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("dlfcn.h" include (:system-flag t) nil [15 33])
+            ("errno.h" include (:system-flag t) nil [34 52])
+            ("string.h" include (:system-flag t) nil [53 72])
+            ("locale.h" include (:system-flag t) nil [73 92])
+            ("stdlib.h" include (:system-flag t) nil [93 112])
+            ("rv_lib_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("handle" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [133 146])
+                          ("errmsg" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [149 162]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [114 174])
+            ("rv_lib_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("plib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [201 216]))                  
+                :type "void")
+                nil [176 300])
+            ("rv__dlerror" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [325 339]))                  
+                :type "int")
+                nil [302 340])
+            ("rv_dlopen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [363 384])
+                    ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [385 399])
+                    ("lazy_loading" variable
+                       (:default-value "true"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [400 424]))                  
+                :type "int")
+                nil [342 606])
+            ("rv_dlclose" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [632 646]))                  
+                :type "void")
+                nil [609 845])
+            ("rv_dlsym" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [868 882])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [883 900])
+                    ("ptr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [901 912]))                  
+                :type "int")
+                nil [848 1017])
+            ("rv_dlerror" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1050 1070]))                  
+                :type "char")
+                nil [1020 1123])
+            ("rv__dlerror" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lib" variable
+                       (:pointer 1
+                        :type ("rv_lib_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1149 1163]))                  
+                :type "int")
+                nil [1126 1355]))          
+      :file "SharedLib_Unix.h"
+      :pointmax 1357
+      :fsize 1356
+      :lastmodtime '(23745 28967 796685 905000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "SharedLib.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SharedLib_Unix.h" include nil nil [239 266])
+            ("RVIS_PLUGIN_LAZY_LOADING" variable (:constant-flag t) nil [275 299])
+            ("RVIS_PLUGIN_EXTENSION" variable (:constant-flag t) nil [379 400])
+            ("RVIS/LoggerUtils.h" include (:system-flag t) nil [422 451])
+            ("RVIS/SharedLib.h" include (:system-flag t) nil [452 479])
+            ("RVIS" type
+               (:members 
+                  ( ("Lib" type
+                       (:parent "SharedLib"
+                        :members 
+                          ( ("lib" variable (:type ("rv_lib_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [527 540]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [499 544])
+                    ("SharedLib" function
+                       (:constructor-flag t
+                        :parent "SharedLib"
+                        :type ("SharedLib" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [546 702])
+                    ("SharedLib" function
+                       (:destructor-flag t
+                        :parent "SharedLib"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [704 855])
+                    ("Open" function
+                       (:parent "SharedLib"
+                        :arguments 
+                          ( ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [878 899]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [857 1203])
+                    ("Close" function
+                       (:parent "SharedLib"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1205 1387])
+                    ("Sym" function
+                       (:parent "SharedLib"
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1409 1426])
+                            ("ptr" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1427 1438]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1389 1710])
+                    ("Error" function
+                       (:pointer 1
+                        :parent "SharedLib"
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1712 1874])
+                    ("IsOpened" function
+                       (:parent "SharedLib"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1876 1935]))                  
+                :type "namespace")
+                nil [481 1938]))          
+      :file "SharedLib.cpp"
+      :pointmax 1958
+      :fsize 1957
+      :lastmodtime '(23745 28967 796685 905000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("RVIS_PLUGIN_LAZY_LOADING" . ((symbol "true" 300 . 304)))
+          ("RVIS_PLUGIN_EXTENSION" . ((string "\".so\"" 401 . 406)))
+          )
+))
+  :file "!home!rvbust!WS!Sandbox!RVIS!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

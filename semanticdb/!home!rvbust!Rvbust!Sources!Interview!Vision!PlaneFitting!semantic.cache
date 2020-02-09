@@ -1,0 +1,73 @@
+;; Object PlaneFitting/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "PlaneFitting/"
+  :tables
+  (list
+    (semanticdb-table "Utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+tools for reading from and writing to .xyz files
+.. currentmodule:: pele.utils.xyz
+.. autosummary::
+    :toctree: generated/
+    
+    read_xyz
+    write_xyz
+\"\"\"" code nil nil [1 165])
+            ("numpy" include nil nil [167 185])
+            ("itertools" include nil nil [186 213])
+            ("collections" include nil nil [214 248])
+            ("__all__" variable nil nil [250 285])
+            ("read_xyz" function
+               (:documentation " read a xyz file from file handle
+    Parameters
+    ----------
+    fin : file handle
+        file to read from
+    Returns
+    -------
+    fin : open file
+    xyz : namedtuple
+        returns a named tuple with coords, title and list of atomtypes.
+    See Also
+    --------
+    write_xyz
+    "
+                :arguments 
+                  ( ("fin" variable nil (reparse-symbol function_parameters) [301 304]))                  )
+                nil [288 988])
+            ("write_xyz" function
+               (:documentation " write a xyz file from file handle
+    Writes coordinates in xyz format. It uses atomtypes as names. The list is
+    cycled if it contains less entries than there are coordinates,
+    One can also directly write xyz data which was generated with read_xyz.
+    >>> xx = read_xyz(\"in.xyz\")
+    >>> write_xyz(open(\"out.xyz\", \"w\"), *xx)
+    Parameters
+    ----------
+    fout : an open file
+    coords : np.array
+        array of coordinates
+    title : title section, optional
+        title for xyz file
+    atomtypes : iteratable
+        list of atomtypes.
+    See Also
+    --------
+    read_xyz
+    "
+                :arguments 
+                  ( ("fout" variable nil (reparse-symbol function_parameters) [1004 1008])
+                    ("coords" variable nil (reparse-symbol function_parameters) [1010 1016])
+                    ("title" variable nil (reparse-symbol function_parameters) [1018 1023])
+                    ("atomtypes" variable nil (reparse-symbol function_parameters) [1028 1037]))                  )
+                nil [990 1855]))          
+      :file "Utils.py"
+      :pointmax 1855
+      :fsize 1854
+      :lastmodtime '(23799 6250 7227 373000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Interview!Vision!PlaneFitting!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

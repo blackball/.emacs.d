@@ -1,0 +1,87 @@
+;; Object FindCenters/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FindCenters/"
+  :tables
+  (list
+    (semanticdb-table "FindCenters.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [248 277])
+            ("vector" include (:system-flag t) nil [278 295])
+            ("Detector" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [314 321])
+                    ("SetTemplate" function
+                       (:arguments 
+                          ( ("templname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [391 413]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [375 459])
+                    ("Detect" function
+                       (:arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [533 554])
+                            ("centers" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Point2f" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [555 589]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [522 635]))                  
+                :type "class")
+                nil [297 642])
+            ("DrawCenters" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("frame" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [668 683])
+                    ("pts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("cv::Point2f" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [684 720]))                  
+                :type "void")
+                nil [644 864])
+            ("Test" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tmplname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [883 904]))                  
+                :type "void")
+                nil [866 1347])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1358 1367])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1368 1381]))                  
+                :type "int")
+                nil [1349 1425]))          
+      :file "FindCenters.cpp"
+      :pointmax 1427
+      :fsize 1720
+      :lastmodtime '(23500 16050 139102 893000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Interview!Vision!FindCenters!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

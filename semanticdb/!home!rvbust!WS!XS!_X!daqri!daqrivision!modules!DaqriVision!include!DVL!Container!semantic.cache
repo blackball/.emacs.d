@@ -1,0 +1,729 @@
+;; Object Container/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Container/"
+  :tables
+  (list
+    (semanticdb-table "Span.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("array" include (:system-flag t) nil [50 66])
+            ("DVL/Eigen.h" include (:system-flag t) nil [67 89])
+            ("DVL/Container/SmallVector.h" include (:system-flag t) nil [90 128])
+            ("gsl/span" include (:system-flag t) nil [129 148])
+            ("DVL" type
+               (:members 
+                  ( ("makeSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("item" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [247 255]))                          )
+                        (reparse-symbol namespacesubparts) [203 294])
+                    ("makeConstSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("item" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [387 401]))                          )
+                        (reparse-symbol namespacesubparts) [332 446])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("InPlaceVector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [539 565]))                          )
+                        (reparse-symbol namespacesubparts) [487 611])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("InPlaceVector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [710 742]))                          )
+                        (reparse-symbol namespacesubparts) [652 794])
+                    ("asConstSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("InPlaceVector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [898 930]))                          )
+                        (reparse-symbol namespacesubparts) [835 982])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1072 1091]))                          )
+                        (reparse-symbol namespacesubparts) [1020 1137])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1233 1258]))                          )
+                        (reparse-symbol namespacesubparts) [1175 1310])
+                    ("asConstSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1411 1436]))                          )
+                        (reparse-symbol namespacesubparts) [1348 1488])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("size_t" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1580 1603]))                          )
+                        (reparse-symbol namespacesubparts) [1525 1649])
+                    ("asSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("size_t" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1747 1776]))                          )
+                        (reparse-symbol namespacesubparts) [1686 1828])
+                    ("asConstSpan" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("size_t" type nil nil nil))                          
+                        :type ("gsl::span" type
+                             (:template-specifier 
+                                ( ("T" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("SIZE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1931 1960]))                          )
+                        (reparse-symbol namespacesubparts) [1865 2012])
+                    ("gsl::span" variable (:type "int") (reparse-symbol namespacesubparts) [2128 2164])
+                    ("gsl::span" variable (:type "int") (reparse-symbol namespacesubparts) [2262 2284]))                  
+                :type "namespace")
+                nil [150 2287]))          
+      :file "Span.h"
+      :pointmax 2305
+      :fsize 2304
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 2260 . 2261) (symbol 2244 . 2259) (USING 2238 . 2243) (punctuation 2236 . 2237) (symbol 2232 . 2236) (TYPENAME 2223 . 2231) (punctuation 2222 . 2223) (TEMPLATE 2213 . 2221) (punctuation 2126 . 2127) (symbol 2110 . 2125) (USING 2104 . 2109) (punctuation 2102 . 2103) (symbol 2098 . 2102) (INT 2094 . 2097) (punctuation 2092 . 2093) (symbol 2088 . 2092) (TYPENAME 2079 . 2087) (punctuation 2078 . 2079) (TEMPLATE 2069 . 2077) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37)))
+    (semanticdb-table "ObjectPool.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [49 66])
+            ("assert.h" include (:system-flag t) nil [67 86])
+            ("stddef.h" include (:system-flag t) nil [87 106])
+            ("DVL" type
+               (:members 
+                  ( ("ObjectPool" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [360 367])
+                            ("" type
+                               (:members 
+                                  ( ("DEPOT_OUTER" variable
+                                       (:constant-flag t
+                                        :default-value (405 409)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [391 409])
+                                    ("DEPOT_INNER" variable
+                                       (:constant-flag t
+                                        :default-value (498 508)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [484 508])
+                                    ("DEPOT_MAXSIZE" variable
+                                       (:constant-flag t
+                                        :default-value (593 618)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [577 618]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [372 706])
+                            ("Item" variable
+                               (:default-value "ITEM"
+                                :type "int")
+                                (reparse-symbol classsubparts) [718 730])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [749 767])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [856 875])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [933 952])
+                            ("ObjectPool" function
+                               (:constructor-flag t
+                                :type ("ObjectPool" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1017 1041])
+                            ("createItem" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1384 1390])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1394 1399]))                                  
+                                :type ("Item" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1367 2428])
+                            ("returnItem" function
+                               (:arguments 
+                                  ( ("item" variable
+                                       (:pointer 1
+                                        :type ("Item" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2488 2499]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2472 2631])
+                            ("size" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2699 2740])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [2868 2988])
+                            ("private" label nil (reparse-symbol classsubparts) [2990 2998])
+                            ("init" function (:type "void") (reparse-symbol classsubparts) [3003 3246])
+                            ("mDepot" variable (:type ("Depot" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3252 3265])
+                            ("mReturnedItems" variable (:type ("ItemPtrVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3312 3341])
+                            ("mNumItems" variable
+                               (:default-value "0"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3381 3402]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [341 3460]))                  
+                :type "namespace")
+                nil [108 3463]))          
+      :file "ObjectPool.h"
+      :pointmax 3481
+      :fsize 3480
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 1392 . 1393) (punctuation 1391 . 1392) (punctuation 1390 . 1391) (punctuation 1389 . 1390) (punctuation 1361 . 1362) (symbol 1357 . 1361) (punctuation 1355 . 1356) (punctuation 1354 . 1355) (punctuation 1353 . 1354) (TYPENAME 1345 . 1353) (punctuation 1344 . 1345) (TEMPLATE 1335 . 1343) (punctuation 931 . 932) (symbol 917 . 930) (USING 911 . 916) (punctuation 854 . 855) (symbol 848 . 853) (USING 842 . 847) (punctuation 747 . 748) (symbol 741 . 746) (USING 735 . 740) (USING 712 . 717) (punctuation 339 . 340) (number 335 . 339) (punctuation 333 . 334) (symbol 322 . 332) (INT 318 . 321) (punctuation 316 . 317) (symbol 312 . 316) (TYPENAME 303 . 311) (punctuation 302 . 303) (TEMPLATE 293 . 301) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37)))
+    (semanticdb-table "SmallVector.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("assert.h" include (:system-flag t) nil [50 69])
+            ("stddef.h" include (:system-flag t) nil [70 89])
+            ("DVL" type
+               (:members 
+                  ( ("InPlaceVector" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [560 567])
+                            ("value_type" variable
+                               (:default-value "T"
+                                :type "int")
+                                (reparse-symbol classsubparts) [578 593])
+                            ("size_type" variable
+                               (:default-value "size_t"
+                                :type "int")
+                                (reparse-symbol classsubparts) [604 623])
+                            ("InPlaceVector" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [723 830])
+                            ("size" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [836 876])
+                            ("empty" function (:type "bool") (reparse-symbol classsubparts) [882 924])
+                            ("capacity" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [930 977])
+                            ("push_back" function
+                               (:arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("value_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [998 1022]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [983 1116])
+                            ("emplace_back" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1172 1178])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1182 1187]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1154 1283])
+                            ("pop_back" function (:type "void") (reparse-symbol classsubparts) [1289 1378])
+                            ("resize" function
+                               (:arguments 
+                                  ( ("count" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1396 1412]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1384 1754])
+                            ("resize" function
+                               (:arguments 
+                                  ( ("count" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1772 1788])
+                                    ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("value_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1789 1813]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1760 2160])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [2166 2241])
+                            ("begin" function
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2247 2276])
+                            ("begin" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2282 2323])
+                            ("end" function
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2329 2361])
+                            ("end" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2367 2411])
+                            ("[]" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("idx" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2440 2454]))                                  
+                                :type ("value_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2417 2519])
+                            ("[]" function
+                               (:operator-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("idx" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2554 2568]))                                  
+                                :type ("value_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2525 2639])
+                            ("InPlaceVector" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InPlaceVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2659 2684]))                                  
+                                :type ("InPlaceVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2645 2717])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InPlaceVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2748 2775]))                                  
+                                :type ("InPlaceVector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2723 3013])
+                            ("private" label nil (reparse-symbol classsubparts) [3015 3023])
+                            ("at" function
+                               (:arguments 
+                                  ( ("idx" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3034 3048]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3028 3095])
+                            ("at" function
+                               (:constant-flag t
+                                :arguments 
+                                  ( ("idx" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3113 3127]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3101 3186])
+                            ("mBuffer" variable
+                               (:dereference 1
+                                :type "unsigned char")
+                                (reparse-symbol classsubparts) [3192 3236])
+                            ("mSize" variable
+                               (:default-value "0"
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3241 3261]))                          )
+                        (reparse-symbol namespacesubparts) [502 3264])
+                    ("==" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("int" type nil nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("lhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("InPlaceVector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("CAPACITY" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3358 3396])
+                            ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("InPlaceVector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("CAPACITY" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3408 3446]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [3306 3674]))                  
+                :type "namespace")
+                nil [91 3677]))          
+      :file "SmallVector.h"
+      :pointmax 3695
+      :fsize 3694
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 1180 . 1181) (punctuation 1179 . 1180) (punctuation 1178 . 1179) (punctuation 1177 . 1178) (punctuation 1148 . 1149) (symbol 1144 . 1148) (punctuation 1142 . 1143) (punctuation 1141 . 1142) (punctuation 1140 . 1141) (TYPENAME 1132 . 1140) (punctuation 1131 . 1132) (TEMPLATE 1122 . 1130) (punctuation 716 . 717) (DEFAULT 709 . 716) (punctuation 707 . 708) (semantic-list 704 . 706) (symbol 691 . 704) (punctuation 684 . 685) (punctuation 683 . 684) (symbol 682 . 683) (CONST 676 . 681) (punctuation 674 . 675) (symbol 659 . 673) (USING 653 . 658) (punctuation 647 . 648) (punctuation 646 . 647) (symbol 645 . 646) (punctuation 643 . 644) (symbol 634 . 642) (USING 628 . 633) (USING 598 . 603) (USING 572 . 577) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37)))
+    (semanticdb-table "PolygonMesh.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/System.h" include (:system-flag t) nil [50 73])
+            ("memory" include (:system-flag t) nil [74 91])
+            ("unordered_map" include (:system-flag t) nil [92 116])
+            ("vector" include (:system-flag t) nil [117 134])
+            ("DVL" type
+               (:members 
+                  ( ("BaseAttribute" type
+                       (:members 
+                          ( ("getDataSize" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [355 394])
+                            ("getNumElements" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [399 441])
+                            ("getDataPointer" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [446 493])
+                            ("version" variable
+                               (:default-value "0"
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [499 520])
+                            ("incrementVersion" function (:type "void") (reparse-symbol classsubparts) [525 563])
+                            ("clone" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("BaseAttribute" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [569 626]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [257 629])
+                    ("Attribute" type
+                       (:template 
+                          ( ("ELEMENT_TYPE" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1116 1123])
+                            ("data" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("ELEMENT_TYPE" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1128 1159]))                          
+                        :superclasses 
+                          ( ("BaseAttribute" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1041 1629])
+                    ("PolygonMesh" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2252 2259])
+                            ("NAME" type (:type "class") (reparse-symbol classsubparts) [2354 2715])
+                            ("setShared" function
+                               (:template 
+                                  ( ("ELEMENT_TYPE" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2841 2851])
+                                    ("attrib" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Attribute" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2852 2900]))                                  )
+                                (reparse-symbol classsubparts) [2789 2947])
+                            ("setShared" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3049 3059])
+                                    ("attrib" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("BaseAttribute" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3060 3098]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3034 3129])
+                            ("getShared" function
+                               (:template 
+                                  ( ("ELEMENT_TYPE" type (:type "class") nil nil))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Attribute" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3363 3373]))                                  )
+                                (reparse-symbol classsubparts) [3275 3602])
+                            ("getShared" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3746 3756]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("BaseAttribute" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3705 3917])
+                            ("getSharedConst" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4063 4073]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("BaseAttribute" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4011 4240])
+                            ("get" function
+                               (:template 
+                                  ( ("ELEMENT_TYPE" type (:type "class") nil nil))                                  
+                                :type ("Attribute" type
+                                     (:template-specifier 
+                                        ( ("ELEMENT_TYPE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4440 4450]))                                  )
+                                (reparse-symbol classsubparts) [4374 4674])
+                            ("getData" function
+                               (:template 
+                                  ( ("ELEMENT_TYPE" type (:type "class") nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("ELEMENT_TYPE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4903 4913]))                                  )
+                                (reparse-symbol classsubparts) [4831 4970])
+                            ("getConst" function
+                               (:pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5087 5097]))                                  
+                                :type ("BaseAttribute" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5057 5270])
+                            ("getConst" function
+                               (:template 
+                                  ( ("ELEMENT_TYPE" type (:type "class") nil nil))                                  
+                                :type ("Attribute" type
+                                     (:template-specifier 
+                                        ( ("ELEMENT_TYPE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5456 5466]))                                  
+                                :constant-flag t
+                                :pointer 1)
+                                (reparse-symbol classsubparts) [5379 5561])
+                            ("getNames" function (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("NAME" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5626 5821])
+                            ("incrementAllAttributeVersions" function (:type "void") (reparse-symbol classsubparts) [5906 6052])
+                            ("copyFromMesh" function
+                               (:arguments 
+                                  ( ("othermesh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PolygonMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6125 6154]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6107 6286])
+                            ("copyFromMesh" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6368 6378])
+                                    ("othermesh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PolygonMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6379 6408]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6350 6557])
+                            ("linkFromMesh" function
+                               (:arguments 
+                                  ( ("othermesh" variable
+                                       (:reference 1
+                                        :type ("PolygonMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6629 6652]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6611 6814])
+                            ("linkFromMesh" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6895 6905])
+                                    ("othermesh" variable
+                                       (:reference 1
+                                        :type ("PolygonMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6906 6929]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6877 6979])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [7057 7093])
+                            ("remove" function
+                               (:arguments 
+                                  ( ("name" variable (:type ("NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7184 7194]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7172 7222])
+                            ("private" label nil (reparse-symbol classsubparts) [7224 7232])
+                            ("EnumClassHash" type
+                               (:members 
+                                  ( ("()" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type ("std::size_t" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("t" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7374 7378]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol classsubparts) [7321 7452]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [7237 7459])
+                            ("attributes" variable (:type ("std::unordered_map" type
+                                 (:template-specifier 
+                                    ( ("NAME" type nil nil nil)
+                                      ("std::shared_ptr" type nil nil nil)
+                                      ("EnumClassHash" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [7464 7547]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2232 7658]))                  
+                :type "namespace")
+                nil [136 7661]))          
+      :file "PolygonMesh.h"
+      :pointmax 7679
+      :fsize 7678
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((symbol 2701 . 2708) (punctuation 2691 . 2692) (symbol 2684 . 2691) (punctuation 2674 . 2675) (symbol 2667 . 2674) (punctuation 2657 . 2658) (symbol 2650 . 2657) (punctuation 2640 . 2641) (symbol 2633 . 2640) (punctuation 2623 . 2624) (symbol 2616 . 2623) (punctuation 2606 . 2607) (symbol 2596 . 2606) (punctuation 2586 . 2587) (symbol 2576 . 2586) (punctuation 2566 . 2567) (symbol 2556 . 2566) (punctuation 2491 . 2492) (symbol 2485 . 2491) (punctuation 2475 . 2476) (symbol 2468 . 2475) (punctuation 2458 . 2459) (symbol 2449 . 2458) (punctuation 2439 . 2440) (symbol 2432 . 2439) (punctuation 2422 . 2423) (symbol 2414 . 2422) (symbol 2701 . 2708) (punctuation 2691 . 2692) (symbol 2684 . 2691) (punctuation 2674 . 2675) (symbol 2667 . 2674) (punctuation 2657 . 2658) (symbol 2650 . 2657) (punctuation 2640 . 2641) (symbol 2633 . 2640) (punctuation 2623 . 2624) (symbol 2616 . 2623) (punctuation 2606 . 2607) (symbol 2596 . 2606) (punctuation 2586 . 2587) (symbol 2576 . 2586) (punctuation 2566 . 2567) (symbol 2556 . 2566) (punctuation 2491 . 2492) (symbol 2485 . 2491) (punctuation 2475 . 2476) (symbol 2468 . 2475) (punctuation 2458 . 2459) (symbol 2449 . 2458) (punctuation 2439 . 2440) (symbol 2432 . 2439) (punctuation 2422 . 2423) (symbol 2414 . 2422) (ENUM 2349 . 2353) (punctuation 2287 . 2288) (DEFAULT 2280 . 2287) (punctuation 2278 . 2279) (semantic-list 2275 . 2277) (symbol 2264 . 2275) (semantic-list 1449 . 1626) (symbol 1436 . 1444) (CONST 1430 . 1435) (semantic-list 1427 . 1429) (symbol 1422 . 1427) (punctuation 1420 . 1421) (symbol 1407 . 1420) (punctuation 1406 . 1407) (symbol 1396 . 1406) (punctuation 1395 . 1396) (punctuation 1394 . 1395) (symbol 1391 . 1394) (semantic-list 1365 . 1385) (symbol 1356 . 1364) (CONST 1350 . 1355) (semantic-list 1347 . 1349) (symbol 1333 . 1347) (punctuation 1331 . 1332) (VOID 1327 . 1331) (CONST 1321 . 1326) (semantic-list 1292 . 1315) (symbol 1283 . 1291) (CONST 1277 . 1282) (semantic-list 1274 . 1276) (symbol 1260 . 1274) (symbol 1253 . 1259) (semantic-list 1201 . 1247) (symbol 1192 . 1200) (CONST 1186 . 1191) (semantic-list 1183 . 1185) (symbol 1172 . 1183) (symbol 1165 . 1171) (punctuation 349 . 350) (DEFAULT 342 . 349) (punctuation 340 . 341) (semantic-list 337 . 339) (symbol 324 . 337) (punctuation 323 . 324) (VIRTUAL 315 . 322) (punctuation 309 . 310) (DEFAULT 302 . 309) (punctuation 300 . 301) (semantic-list 297 . 299) (symbol 284 . 297) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37))))
+  :file "!home!rvbust!WS!XS!_X!daqri!daqrivision!modules!DaqriVision!include!DVL!Container!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

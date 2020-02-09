@@ -1,0 +1,164 @@
+;; Object cr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cr/"
+  :tables
+  (list
+    (semanticdb-table "cr.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__CR_H__" variable (:constant-flag t) nil [15021 15029])
+            ("CR_LINUX" variable (:constant-flag t) nil [15193 15201])
+            ("CR_PLUGIN" variable (:constant-flag t) nil [15210 15219])
+            ("CR_EXPORT" variable (:constant-flag t) nil [15885 15894])
+            ("CR_IMPORT" variable (:constant-flag t) nil [16023 16032])
+            ("cr_mode" type
+               (:members 
+                  ( ("CR_SAFEST" variable
+                       (:constant-flag t
+                        :default-value (16286 16287)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [16274 16287])
+                    ("CR_SAFE" variable
+                       (:constant-flag t
+                        :default-value (16419 16420)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [16409 16420])
+                    ("CR_UNSAFE" variable
+                       (:constant-flag t
+                        :default-value (16632 16633)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [16620 16633])
+                    ("CR_DISABLE" variable
+                       (:constant-flag t
+                        :default-value (16768 16769)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [16755 16769]))                  
+                :type "enum")
+                nil [16255 16818])
+            ("cr_op" type
+               (:members 
+                  ( ("CR_LOAD" variable
+                       (:constant-flag t
+                        :default-value (16993 16994)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [16983 16994])
+                    ("CR_STEP" variable
+                       (:constant-flag t
+                        :default-value (17010 17011)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17000 17011])
+                    ("CR_UNLOAD" variable
+                       (:constant-flag t
+                        :default-value (17029 17030)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17017 17030])
+                    ("CR_CLOSE" variable
+                       (:constant-flag t
+                        :default-value (17047 17048)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17036 17048]))                  
+                :type "enum")
+                nil [16966 17052])
+            ("cr_failure" type
+               (:members 
+                  ( ("CR_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17076 17084])
+                    ("CR_SEGFAULT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17105 17117])
+                    ("CR_ILLEGAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17162 17173])
+                    ("CR_ABORT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17243 17252])
+                    ("CR_MISALIGN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17278 17290])
+                    ("CR_BOUNDS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17351 17361])
+                    ("CR_STACKOVERFLOW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17403 17420])
+                    ("CR_STATE_INVALIDATED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17453 17474])
+                    ("CR_BAD_IMAGE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17657 17670])
+                    ("CR_OTHER" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17733 17742])
+                    ("CR_USER" variable
+                       (:constant-flag t
+                        :default-value (17788 17793)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [17778 17793]))                  
+                :type "enum")
+                nil [17054 17797])
+            ("cr_plugin" type
+               (:prototype t
+                :type "struct")
+                nil [17799 17816])
+            ("cr_plugin_main_func" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("cr_plugin" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17853 17875])
+                    ("operation" variable (:type ("cr_op" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17876 17897]))                  
+                :type "int")
+                nil [17826 17898])
+            ("cr_plugin" type
+               (:members 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [18373 18381])
+                    ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [18386 18401])
+                    ("version" variable (:type "unsigned int") (reparse-symbol classsubparts) [18406 18427])
+                    ("failure" variable (:type ("cr_failure" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [18432 18456])
+                    ("next_version" variable (:type "unsigned int") (reparse-symbol classsubparts) [18461 18487])
+                    ("last_working_version" variable (:type "unsigned int") (reparse-symbol classsubparts) [18492 18526]))                  
+                :type "struct")
+                nil [18350 18529])
+            ("CR_STATE" variable (:constant-flag t) nil [18912 18920]))          
+      :file "cr.h"
+      :pointmax 65641
+      :fsize 65640
+      :lastmodtime '(23742 26800 777897 353000)
+      :unmatched-syntax '((semantic-list 18880 . 18903) (symbol 18873 . 18880) (string 18881 . 18889) (symbol 18866 . 18872) (string 18881 . 18889) (punctuation 18865 . 18866) (TYPEDEF 17818 . 17825) (string 15340 . 15442) (symbol 15334 . 15339) (punctuation 15333 . 15334))
+      :lexical-table 
+        '(("CR_LINUX")
+          ("CR_PLUGIN" (spp-arg-list ("name") 15219 . 15225) . 
+              ((string "\"lib\"" 15226 . 15231) (symbol "name" 15232 . 15236) (string "\".so\"" 15237 . 15242)))
+          ("CR_IMPORT")
+          ("CR_STATE" . ((symbol "__attribute__" 18921 . 18934) (semantic-list "((section(\".state\")))" 18934 . 18955)))
+          ("__CR_H__")
+          ("CR_EXPORT" . 
+              ((EXTERN "extern" 15895 . 15901) (string "\"C\"" 15902 . 15905) (symbol "__attribute__" 15906 . 15919) (semantic-list "((visibility(\"default\")))" 15919 . 15944)))
+          )
+))
+  :file "!home!rvbust!WS!Sandbox!cr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

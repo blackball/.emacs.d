@@ -1,0 +1,572 @@
+;; Object Geometry/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Geometry/"
+  :tables
+  (list
+    (semanticdb-table "LieInterpolate.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Eigen/Eigenvalues" include (:system-flag t) nil [15 43])
+            ("DVL/Geometry/LieInterpolateDetails.h" include (:system-flag t) nil [45 92])
+            ("DVL" type
+               (:members 
+                  ( ("interpolate" function
+                       (:template 
+                          ( ("G" type (:type "class") nil nil)
+                            ("Scalar2" type (:type "class") nil nil))                          
+                        :type ("enable_if_t" type
+                             (:template-specifier 
+                                ( ("interp_details::Traits::supported" type nil nil nil)
+                                  ("G" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("foo_T_bar" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("G" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [788 807])
+                            ("foo_T_baz" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("G" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [808 827])
+                            ("p" variable
+                               (:default-value "Scalar2(0.5f)"
+                                :type ("Scalar2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [828 853]))                          )
+                        (reparse-symbol namespacesubparts) [689 1092]))                  
+                :type "namespace")
+                nil [94 1095]))          
+      :file "LieInterpolate.h"
+      :pointmax 1113
+      :fsize 1112
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "Homography.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/Container/Span.h" include (:system-flag t) nil [50 81])
+            ("DVL/Math/WLS.h" include (:system-flag t) nil [82 107])
+            ("DVL/Math/Math.h" include (:system-flag t) nil [108 134])
+            ("DVL" type
+               (:members 
+                  ( ("getHomographySquareToQuad" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("quad" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [569 599])
+                            ("H" variable
+                               (:reference 1
+                                :type ("Matrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("3")
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [600 622]))                          )
+                        (reparse-symbol namespacesubparts) [513 1841])
+                    ("getHomographyDirect" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("fromPts" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2321 2354])
+                            ("toPts" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("Vector" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2355 2386])
+                            ("H" variable
+                               (:reference 1
+                                :type ("Matrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("3")
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2387 2409]))                          )
+                        (reparse-symbol namespacesubparts) [2271 2956])
+                    ("getHomography" function
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil)
+                            ("INDEX_TYPE" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("fromPts" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ConstVectorSpan" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3880 3920])
+                            ("toPts" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ConstVectorSpan" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3921 3959])
+                            ("weights" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ConstScalarSpan" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3960 3997])
+                            ("indices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ConstScalarSpan" type
+                                     (:template-specifier 
+                                        ( ("INDEX_TYPE" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4012 4055])
+                            ("H" variable
+                               (:reference 1
+                                :type ("Matrix" type
+                                     (:template-specifier 
+                                        ( ("PREC" type nil nil nil)
+                                          ("3")
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4056 4078]))                          )
+                        (reparse-symbol namespacesubparts) [3804 5158])
+                    ("HomographyEstimator" type
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5477 5484])
+                            ("MODEL_SIZE" variable
+                               (:default-value "4"
+                                :type "int")
+                                (reparse-symbol classsubparts) [5506 5525])
+                            ("scalar_t" variable
+                               (:default-value "PREC"
+                                :type "int")
+                                (reparse-symbol classsubparts) [5537 5553])
+                            ("IndexType" variable
+                               (:default-value "uint32_t"
+                                :type "int")
+                                (reparse-symbol classsubparts) [5564 5585])
+                            ("Matrix" variable (:type "int") (reparse-symbol classsubparts) [5604 5623])
+                            ("Vector" variable (:type "int") (reparse-symbol classsubparts) [5641 5657])
+                            ("ConstScalarSpan" variable (:type "int") (reparse-symbol classsubparts) [5682 5708])
+                            ("ConstVectorSpan" variable (:type "int") (reparse-symbol classsubparts) [5732 5757])
+                            ("ConstScalarSpan" variable (:type "int") (reparse-symbol classsubparts) [5782 5804])
+                            ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [5831 5854])
+                            ("CONFIG" type
+                               (:members 
+                                  ( ("inlierThreshold" variable
+                                       (:default-value "scalar_t(0.7)"
+                                        :type ("scalar_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5930 5971])
+                                    ("numInferiorIterationsUntilExpansion" variable
+                                       (:default-value "10"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6034 6094]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [5902 6206])
+                            ("Hypothesis" type
+                               (:members 
+                                  ( ("H" variable (:type ("Mat33" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6244 6252]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [6212 6259])
+                            ("Solution" type
+                               (:members 
+                                  ( ("clear" function (:type "void") (reparse-symbol classsubparts) [6326 6409])
+                                    ("swap" function
+                                       (:arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :type ("Solution" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6429 6445]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6419 6576])
+                                    ("isSuperior" function
+                                       (:arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Solution" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6602 6624]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6586 6923])
+                                    ("indices" variable (:type ("IndicesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6933 6955])
+                                    ("rsme" variable (:type ("scalar_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6984 6998])
+                                    ("H" variable (:type ("Mat33" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7025 7033]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [6265 7070])
+                            ("setup" function
+                               (:arguments 
+                                  ( ("fromPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PointsSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7109 7135])
+                                    ("toPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PointsSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7136 7160])
+                                    ("weights" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("WeightsSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7161 7192]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7098 7394])
+                            ("getNumItems" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7446 7500])
+                            ("getNumInliers" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7564 7738])
+                            ("getBestSolution" function
+                               (:constant-flag t
+                                :type ("Solution" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7795 7964])
+                            ("start" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CONFIG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8023 8045]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8012 8274])
+                            ("finish" function
+                               (:arguments 
+                                  ( ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CONFIG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8331 8349]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8319 8734])
+                            ("makeHypothesis" function
+                               (:arguments 
+                                  ( ("indices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8820 8847])
+                                    ("hypo" variable
+                                       (:reference 1
+                                        :type ("Hypothesis" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8848 8865]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8800 9408])
+                            ("checkHypothesis" function
+                               (:arguments 
+                                  ( ("hypoIndices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9500 9531])
+                                    ("verifyIndices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9532 9565])
+                                    ("hypo" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Hypothesis" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9566 9589])
+                                    ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CONFIG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9590 9608]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [9479 10894])
+                            ("areInvalidCorrespondences" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("fromPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ConstVectorSpan" type
+                                             (:template-specifier 
+                                                ( ("PREC" type nil nil nil)
+                                                  ("2"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11015 11055])
+                                    ("toPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ConstVectorSpan" type
+                                             (:template-specifier 
+                                                ( ("PREC" type nil nil nil)
+                                                  ("2"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11056 11094]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10977 11929])
+                            ("protected" label nil (reparse-symbol classsubparts) [11931 11941])
+                            ("makeSolution" function
+                               (:arguments 
+                                  ( ("indices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IndicesSpan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12034 12061])
+                                    ("H" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat33" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12062 12077])
+                                    ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CONFIG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12078 12096])
+                                    ("solution" variable
+                                       (:reference 1
+                                        :type ("Solution" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12097 12116]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12016 12845])
+                            ("expandSolution" function
+                               (:arguments 
+                                  ( ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CONFIG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12975 12993])
+                                    ("solution" variable
+                                       (:reference 1
+                                        :type ("Solution" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12994 13013]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12955 13650])
+                            ("checkCorrespondence" function
+                               (:arguments 
+                                  ( ("idx" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13681 13700])
+                                    ("H" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Mat33" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13701 13716])
+                                    ("maxErr2" variable
+                                       (:constant-flag t
+                                        :type ("scalar_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13717 13740])
+                                    ("solution" variable
+                                       (:reference 1
+                                        :type ("Solution" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13741 13760]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13656 14153])
+                            ("mPtsFrom" variable (:type ("PointsSpan" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14159 14179])
+                            ("mPtsTo" variable (:type ("PointsSpan" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14220 14238])
+                            ("mWeights" variable (:type ("WeightsSpan" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14283 14304])
+                            ("mSolution" variable (:type ("Solution" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14344 14382])
+                            ("mExpandedSolution" variable (:type ("Solution" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14344 14382])
+                            ("mBestInitialSolution" variable (:type ("Solution" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14409 14439])
+                            ("mBestExpandedSolution" variable (:type ("Solution" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14486 14517])
+                            ("mNumIterationsWithoutExpansion" variable
+                               (:default-value "0"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14565 14607])
+                            ("mDidExpandBestInitialSolution" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol classsubparts) [14707 14750]))                          )
+                        (reparse-symbol namespacesubparts) [5424 14819]))                  
+                :type "namespace")
+                nil [136 14822]))          
+      :file "Homography.h"
+      :pointmax 14840
+      :fsize 14839
+      :lastmodtime '(22981 30470 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "AbsoluteOrientation.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("DVL/Eigen.h" include (:system-flag t) nil [50 72])
+            ("vector" include (:system-flag t) nil [73 90])
+            ("DVL/Geometry/SE3.h" include (:system-flag t) nil [91 120])
+            ("gsl/span" include (:system-flag t) nil [121 140])
+            ("DVL" type
+               (:members 
+                  ( ("AbsoluteOrientation" type
+                       (:template 
+                          ( ("PREC" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [212 219])
+                            ("Vector" variable (:type "int") (reparse-symbol classsubparts) [237 253])
+                            ("gsl::span" variable (:type "int") (reparse-symbol classsubparts) [275 297])
+                            ("Vector" variable (:type "int") (reparse-symbol classsubparts) [315 331])
+                            ("Matrix" variable (:type "int") (reparse-symbol classsubparts) [349 368])
+                            ("Matrix" variable (:type "int") (reparse-symbol classsubparts) [386 405])
+                            ("SE3" variable (:type "int") (reparse-symbol classsubparts) [423 433])
+                            ("CONFIG" type
+                               (:members 
+                                  ( ("maxIterations" variable
+                                       (:default-value "5"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [467 492])
+                                    ("minPoseChange" variable
+                                       (:default-value "PREC(1e-4)"
+                                        :type ("PREC" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [501 533]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [439 540])
+                            ("getConfig" function (:type ("CONFIG" type (:type "class") nil nil)) (reparse-symbol classsubparts) [546 582])
+                            ("point2point" function
+                               (:arguments 
+                                  ( ("aPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1034 1055])
+                                    ("bPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1056 1077])
+                                    ("deltaPose" variable
+                                       (:reference 1
+                                        :type ("SE_3" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1078 1094]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1017 2818])
+                            ("point2plane" function
+                               (:arguments 
+                                  ( ("aPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2951 2972])
+                                    ("bPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2973 2994])
+                                    ("bNormals" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2995 3020])
+                                    ("deltaPose" variable
+                                       (:reference 1
+                                        :type ("SE_3" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3021 3037]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2934 3267])
+                            ("point2plane" function
+                               (:arguments 
+                                  ( ("aPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3400 3421])
+                                    ("bPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3422 3443])
+                                    ("bNormals" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3444 3469])
+                                    ("deltaPoseLn" variable
+                                       (:reference 1
+                                        :type ("Vec6" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3470 3488]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3383 4750])
+                            ("point2planeIterative" function
+                               (:arguments 
+                                  ( ("aPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4841 4862])
+                                    ("bPts" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4863 4884])
+                                    ("bNormals" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vec3Span" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4885 4910])
+                                    ("deltaPose" variable
+                                       (:reference 1
+                                        :type ("SE_3" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4911 4927]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4815 5779])
+                            ("private" label nil (reparse-symbol classsubparts) [5781 5789])
+                            ("mCfg" variable (:type ("CONFIG" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5794 5806])
+                            ("mAZeroMean" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Vec3" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5812 5853])
+                            ("mBZeroMean" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Vec3" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5812 5853])
+                            ("mAPtsOpt" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Vec3" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5858 5885]))                          )
+                        (reparse-symbol namespacesubparts) [159 5888]))                  
+                :type "namespace")
+                nil [142 5891]))          
+      :file "AbsoluteOrientation.h"
+      :pointmax 5909
+      :fsize 5908
+      :lastmodtime '(22972 19684 0 0)
+      :unmatched-syntax '((punctuation 421 . 422) (symbol 416 . 420) (USING 410 . 415) (punctuation 384 . 385) (symbol 379 . 383) (USING 373 . 378) (punctuation 347 . 348) (symbol 342 . 346) (USING 336 . 341) (punctuation 313 . 314) (symbol 308 . 312) (USING 302 . 307) (punctuation 273 . 274) (symbol 264 . 272) (USING 258 . 263) (punctuation 235 . 236) (symbol 230 . 234) (USING 224 . 229) (symbol 44 . 48) (symbol 37 . 43) (punctuation 36 . 37))))
+  :file "!home!rvbust!WS!XS!_X!daqri!daqrivision!modules!DaqriVision!include!DVL!Geometry!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

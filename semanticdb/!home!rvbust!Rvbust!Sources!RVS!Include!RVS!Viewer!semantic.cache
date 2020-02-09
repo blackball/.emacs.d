@@ -1,0 +1,149 @@
+;; Object Viewer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Viewer/"
+  :tables
+  (list
+    (semanticdb-table "Environment.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("unordered_map" include (:system-flag t) nil [67 91])
+            ("Manipulator/Viewer.h" include nil nil [92 123])
+            ("osg" type
+               (:members 
+                  ( ("Group" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [141 153]))                  
+                :type "namespace")
+                nil [125 155])
+            ("RVS" type
+               (:members 
+                  ( ("Viewer" type
+                       (:members 
+                          ( ("PlotterManipulator" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [193 218])
+                            ("ViewerManipulatorPlug" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [219 247])
+                            ("Environment" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [248 266]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [174 268]))                  
+                :type "namespace")
+                nil [157 291])
+            ("Environment" type
+               (:parent "RVS::Viewer"
+                :superclasses 
+                  ( ("DefualtManipulatorSlot" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("ViewerManipulatorSlot" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [405 412])
+                    ("Environment" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Environment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [417 431])
+                    ("CreateViewer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [516 534])
+                            ("x" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [535 544])
+                            ("y" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [546 555])
+                            ("width" variable
+                               (:default-value "800"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [557 572])
+                            ("height" variable
+                               (:default-value "600"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [574 590])
+                            ("screenNum" variable
+                               (:default-value "0"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [592 618]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ViewerManipulatorPlug" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [464 620])
+                    ("GetViewer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [675 693]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ViewerManipulatorPlug" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [626 694])
+                    ("GetPlotter" function
+                       (:prototype-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("PlotterManipulator" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [700 749])
+                    ("override" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [820 835])
+                    ("private" label nil (reparse-symbol classsubparts) [837 845])
+                    ("_GetOrCreateManipulator" function
+                       (:arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [965 982])
+                            ("" variable (:type ("Args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [983 988])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [991 996]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ManipulatorType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [908 1469])
+                    ("m_manipulators_map" variable (:type ("std::unordered_map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::shared_ptr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1475 1560])
+                    ("m_scenes_map" variable (:type ("std::unordered_map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("osg::Group" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1566 1625])
+                    ("m_mutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1631 1650]))                  
+                :type "class")
+                nil [310 1653]))          
+      :file "Environment.h"
+      :pointmax 1653
+      :fsize 1652
+      :lastmodtime '(23613 23452 521124 830000)
+      :unmatched-syntax '((punctuation 989 . 990) (punctuation 988 . 989) (punctuation 987 . 988) (punctuation 902 . 903) (symbol 898 . 902) (punctuation 896 . 897) (punctuation 895 . 896) (punctuation 894 . 895) (TYPENAME 886 . 894) (punctuation 884 . 885) (symbol 869 . 884) (TYPENAME 860 . 868) (punctuation 859 . 860) (TEMPLATE 850 . 858) (semantic-list 817 . 819) (symbol 808 . 817) (punctuation 807 . 808) (punctuation 805 . 806) (punctuation 804 . 805) (symbol 798 . 803) (punctuation 797 . 798) (punctuation 796 . 797) (symbol 793 . 796) (punctuation 791 . 792) (symbol 785 . 791) (punctuation 784 . 785) (punctuation 783 . 784) (symbol 780 . 783) (punctuation 779 . 780) (symbol 766 . 779) (punctuation 765 . 766) (punctuation 764 . 765) (symbol 761 . 764) (CONST 755 . 760) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Viewer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

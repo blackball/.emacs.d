@@ -1,0 +1,1134 @@
+;; Object spdlog/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spdlog/"
+  :tables
+  (list
+    (semanticdb-table "logger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spdlog/common.h" include nil nil [719 745])
+            ("spdlog/formatter.h" include nil nil [746 775])
+            ("spdlog/sinks/sink.h" include nil nil [776 806])
+            ("memory" include (:system-flag t) nil [808 825])
+            ("string" include (:system-flag t) nil [826 843])
+            ("vector" include (:system-flag t) nil [844 861])
+            ("spdlog" type
+               (:members 
+                  ( ("logger" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [898 905])
+                            ("logger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [917 934])
+                                    ("single_sink" variable (:type ("sink_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [935 956]))                                  
+                                :type ("logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [910 957])
+                            ("logger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [969 986])
+                                    ("sinks" variable (:type ("sinks_init_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [987 1009]))                                  
+                                :type ("logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [962 1010])
+                            ("logger" function
+                               (:template 
+                                  ( ("It" type (:type "class") nil nil))                                  
+                                :type ("logger" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1049 1066])
+                                    ("begin" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("It" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1067 1083])
+                                    ("end" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("It" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1084 1098]))                                  
+                                :constructor-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1016 1099])
+                            ("logger" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1105 1123])
+                            ("log" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1255 1277])
+                                    ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1278 1294])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1295 1308])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1311 1316]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1246 1317])
+                            ("log" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1363 1385])
+                                    ("msg" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1386 1402]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1354 1403])
+                            ("trace" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1451 1467])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1468 1481])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1484 1489]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1440 1490])
+                            ("debug" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1538 1554])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1555 1568])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1571 1576]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1527 1577])
+                            ("info" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1624 1640])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1641 1654])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1657 1662]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1614 1663])
+                            ("warn" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1710 1726])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1727 1740])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1743 1748]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1700 1749])
+                            ("error" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1797 1813])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1814 1827])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1830 1835]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1786 1836])
+                            ("critical" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1887 1903])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1904 1917])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1920 1925]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1873 1926])
+                            ("log" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2693 2715])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2716 2726]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2659 2727])
+                            ("trace" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2769 2782]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2733 2783])
+                            ("debug" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2825 2838]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2789 2839])
+                            ("info" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2880 2893]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2845 2894])
+                            ("warn" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2935 2948]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2900 2949])
+                            ("error" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2991 3004]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2955 3005])
+                            ("critical" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3050 3063]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [3011 3064])
+                            ("should_log" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3086 3114]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3070 3121])
+                            ("set_level" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("log_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3141 3169]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3126 3170])
+                            ("level" function
+                               (:prototype-flag t
+                                :type ("level::level_enum" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3175 3207])
+                            ("name" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3212 3244])
+                            ("set_formatter" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("formatter" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("formatter" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3392 3429]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3373 3430])
+                            ("set_pattern" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pattern" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3452 3472])
+                                    ("time_type" variable
+                                       (:default-value "pattern_time_type"
+                                        :type ("pattern_time_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3473 3520])
+                                    ("" variable (:type ("local" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3522 3528]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3435 3529])
+                            ("flush" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3558 3571])
+                            ("flush_on" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("log_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3590 3618]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3576 3619])
+                            ("flush_level" function
+                               (:prototype-flag t
+                                :type ("level::level_enum" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3624 3662])
+                            ("sinks" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("sink_ptr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3681 3724])
+                            ("sinks" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("sink_ptr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3729 3760])
+                            ("set_error_handler" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("err_handler" variable (:type ("log_err_handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3810 3838]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3787 3839])
+                            ("error_handler" function
+                               (:prototype-flag t
+                                :type ("log_err_handler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3844 3876])
+                            ("clone" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3980 4004]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("logger" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3942 4005])
+                            ("protected" label nil (reparse-symbol classsubparts) [4007 4017])
+                            ("sink_it_" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("details::log_msg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4044 4072]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4022 4073])
+                            ("flush_" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4078 4100])
+                            ("should_flush_" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("details::log_msg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4125 4153]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4106 4154])
+                            ("default_err_handler_" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4287 4310]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4261 4311])
+                            ("incr_msg_counter_" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("details::log_msg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4431 4453]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4408 4454])
+                            ("name_" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4460 4484])
+                            ("sinks_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("sink_ptr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4489 4518])
+                            ("level_" variable (:type ("spdlog::level_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4523 4546])
+                            ("flush_level_" variable (:type ("spdlog::level_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4551 4580])
+                            ("err_handler_" variable (:type ("log_err_handler" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4585 4614])
+                            ("last_err_time_" variable (:type ("std::atomic" type
+                                 (:template-specifier 
+                                    ( ("time_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4619 4654])
+                            ("msg_counter_" variable (:type ("std::atomic" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4659 4692]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [883 4853]))                  
+                :type "namespace")
+                nil [863 4855])
+            ("details/logger_impl.h" include nil nil [4877 4909]))          
+      :file "logger.h"
+      :pointmax 4910
+      :fsize 8903
+      :lastmodtime '(23773 2931 0 0)
+      :unmatched-syntax '((punctuation 3521 . 3522) (punctuation 3520 . 3521) (punctuation 1918 . 1919) (punctuation 1917 . 1918) (punctuation 1916 . 1917) (punctuation 1867 . 1868) (symbol 1863 . 1867) (punctuation 1861 . 1862) (punctuation 1860 . 1861) (punctuation 1859 . 1860) (TYPENAME 1851 . 1859) (punctuation 1850 . 1851) (TEMPLATE 1842 . 1850) (punctuation 1828 . 1829) (punctuation 1827 . 1828) (punctuation 1826 . 1827) (punctuation 1780 . 1781) (symbol 1776 . 1780) (punctuation 1774 . 1775) (punctuation 1773 . 1774) (punctuation 1772 . 1773) (TYPENAME 1764 . 1772) (punctuation 1763 . 1764) (TEMPLATE 1755 . 1763) (punctuation 1741 . 1742) (punctuation 1740 . 1741) (punctuation 1739 . 1740) (punctuation 1694 . 1695) (symbol 1690 . 1694) (punctuation 1688 . 1689) (punctuation 1687 . 1688) (punctuation 1686 . 1687) (TYPENAME 1678 . 1686) (punctuation 1677 . 1678) (TEMPLATE 1669 . 1677) (punctuation 1655 . 1656) (punctuation 1654 . 1655) (punctuation 1653 . 1654) (punctuation 1608 . 1609) (symbol 1604 . 1608) (punctuation 1602 . 1603) (punctuation 1601 . 1602) (punctuation 1600 . 1601) (TYPENAME 1592 . 1600) (punctuation 1591 . 1592) (TEMPLATE 1583 . 1591) (punctuation 1569 . 1570) (punctuation 1568 . 1569) (punctuation 1567 . 1568) (punctuation 1521 . 1522) (symbol 1517 . 1521) (punctuation 1515 . 1516) (punctuation 1514 . 1515) (punctuation 1513 . 1514) (TYPENAME 1505 . 1513) (punctuation 1504 . 1505) (TEMPLATE 1496 . 1504) (punctuation 1482 . 1483) (punctuation 1481 . 1482) (punctuation 1480 . 1481) (punctuation 1434 . 1435) (symbol 1430 . 1434) (punctuation 1428 . 1429) (punctuation 1427 . 1428) (punctuation 1426 . 1427) (TYPENAME 1418 . 1426) (punctuation 1417 . 1418) (TEMPLATE 1409 . 1417) (punctuation 1348 . 1349) (symbol 1344 . 1348) (punctuation 1342 . 1343) (punctuation 1341 . 1342) (punctuation 1340 . 1341) (TYPENAME 1332 . 1340) (punctuation 1331 . 1332) (TEMPLATE 1323 . 1331) (punctuation 1309 . 1310) (punctuation 1308 . 1309) (punctuation 1307 . 1308) (punctuation 1240 . 1241) (symbol 1236 . 1240) (punctuation 1234 . 1235) (punctuation 1233 . 1234) (punctuation 1232 . 1233) (TYPENAME 1224 . 1232) (punctuation 1223 . 1224) (TEMPLATE 1215 . 1223) (punctuation 1208 . 1209) (DELETE 1202 . 1208) (punctuation 1200 . 1201) (semantic-list 1183 . 1199) (punctuation 1182 . 1183) (OPERATOR 1174 . 1182) (punctuation 1173 . 1174) (symbol 1166 . 1172) (punctuation 1160 . 1161) (DELETE 1154 . 1160) (punctuation 1152 . 1153) (semantic-list 1135 . 1151) (symbol 1129 . 1135) (symbol 129 . 133) (symbol 122 . 128) (punctuation 121 . 122)))
+    (semanticdb-table "common.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spdlog/tweakme.h" include nil nil [154 181])
+            ("atomic" include (:system-flag t) nil [183 200])
+            ("chrono" include (:system-flag t) nil [201 218])
+            ("initializer_list" include (:system-flag t) nil [219 246])
+            ("memory" include (:system-flag t) nil [247 264])
+            ("stdexcept" include (:system-flag t) nil [265 285])
+            ("string" include (:system-flag t) nil [286 303])
+            ("type_traits" include (:system-flag t) nil [304 326])
+            ("functional" include (:system-flag t) nil [327 348])
+            ("SPDLOG_HEADER_ONLY" variable (:constant-flag t) nil [559 577])
+            ("SPDLOG_INLINE" variable (:constant-flag t) nil [586 599])
+            ("spdlog/fmt/fmt.h" include nil nil [615 642])
+            ("SPDLOG_NOEXCEPT" variable (:constant-flag t) nil [825 840])
+            ("SPDLOG_CONSTEXPR" variable (:constant-flag t) nil [858 874])
+            ("SPDLOG_DEPRECATED" variable (:constant-flag t) nil [945 962])
+            ("SPDLOG_DEPRECATED" variable (:constant-flag t) nil [1078 1095])
+            ("SPDLOG_STRRCHR" variable (:constant-flag t) nil [1453 1467])
+            ("SPDLOG_FILE_BASENAME" variable (:constant-flag t) nil [1635 1655])
+            ("SPDLOG_FUNCTION" variable (:constant-flag t) nil [1736 1751])
+            ("spdlog" type
+               (:members 
+                  ( ("formatter" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1793 1809])
+                    ("sinks" type
+                       (:members 
+                          ( ("sink" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1829 1840]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1811 1842])
+                    ("std::string" variable (:type "int") (reparse-symbol namespacesubparts) [2156 2168])
+                    ("SPDLOG_FILENAME_T" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2177 2194])
+                    ("std::chrono::system_clock" variable (:type "int") (reparse-symbol namespacesubparts) [2226 2252])
+                    ("std::shared_ptr" variable (:type "int") (reparse-symbol namespacesubparts) [2270 2299])
+                    ("std::initializer_list" variable (:type "int") (reparse-symbol namespacesubparts) [2324 2356])
+                    ("fmt::string_view" variable (:type "int") (reparse-symbol namespacesubparts) [2610 2627])
+                    ("std::atomic" variable (:type "int") (reparse-symbol namespacesubparts) [2737 2754])
+                    ("SPDLOG_LEVEL_TRACE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2771 2789])
+                    ("SPDLOG_LEVEL_DEBUG" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2800 2818])
+                    ("SPDLOG_LEVEL_INFO" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2829 2846])
+                    ("SPDLOG_LEVEL_WARN" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2857 2874])
+                    ("SPDLOG_LEVEL_ERROR" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2885 2903])
+                    ("SPDLOG_LEVEL_CRITICAL" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2914 2935])
+                    ("SPDLOG_LEVEL_OFF" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2946 2962])
+                    ("SPDLOG_ACTIVE_LEVEL" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3008 3027])
+                    ("level" type
+                       (:members 
+                          ( ("level_enum" type
+                               (:members 
+                                  ( ("trace" variable
+                                       (:constant-flag t
+                                        :default-value (3120 3138)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3112 3138])
+                                    ("debug" variable
+                                       (:constant-flag t
+                                        :default-value (3152 3170)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3144 3170])
+                                    ("info" variable
+                                       (:constant-flag t
+                                        :default-value (3183 3200)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3176 3200])
+                                    ("warn" variable
+                                       (:constant-flag t
+                                        :default-value (3213 3230)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3206 3230])
+                                    ("err" variable
+                                       (:constant-flag t
+                                        :default-value (3242 3260)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3236 3260])
+                                    ("critical" variable
+                                       (:constant-flag t
+                                        :default-value (3277 3298)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3266 3298])
+                                    ("off" variable
+                                       (:constant-flag t
+                                        :default-value (3310 3326)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3304 3326]))                                  
+                                :type "enum")
+                                (reparse-symbol namespacesubparts) [3090 3330])
+                            ("SPDLOG_LEVEL_NAMES" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3373 3391])
+                            ("SPDLOG_SHORT_LEVEL_NAMES" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3850 3874])
+                            ("noexcept" variable (:type "int") (reparse-symbol namespacesubparts) [4338 4354])
+                            ("noexcept" variable (:type "int") (reparse-symbol namespacesubparts) [4411 4427])
+                            ("noexcept" variable (:type "int") (reparse-symbol namespacesubparts) [4488 4504])
+                            ("std::hash" variable (:type "int") (reparse-symbol namespacesubparts) [4527 4542]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3072 4544])
+                    ("pattern_time_type" type (:type "class") (reparse-symbol namespacesubparts) [4671 4749])
+                    ("spdlog_ex" type
+                       (:superclasses 
+                          ( ("std::exception" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4816 4823])
+                            ("spdlog_ex" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("msg" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4847 4863]))                                  
+                                :type ("spdlog_ex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4837 4864])
+                            ("spdlog_ex" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4879 4902])
+                                    ("last_errno" variable (:type "int") (reparse-symbol arg-sub-list) [4903 4918]))                                  
+                                :type ("spdlog_ex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4869 4919])
+                            ("override" variable
+                               (:constant-flag t
+                                :type ("noexcept" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4943 4974])
+                            ("private" label nil (reparse-symbol classsubparts) [4976 4984])
+                            ("msg_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4989 5006]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4774 5009])
+                    ("source_loc" type
+                       (:members 
+                          ( ("source_loc" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("filename_in" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [5108 5132])
+                                    ("line_in" variable (:type "int") (reparse-symbol arg-sub-list) [5133 5145])
+                                    ("funcname_in" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [5146 5170]))                                  
+                                :type ("constexpr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5080 5265])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [5365 5395])
+                            ("line" variable (:type "int") (reparse-symbol classsubparts) [5400 5412])
+                            ("funcname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [5417 5447]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [5011 5450])
+                    ("details" type
+                       (:members 
+                          ( ("make_unique" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5657 5664])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5668 5673]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [5626 5813]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5452 5822]))                  
+                :type "namespace")
+                nil [1773 5845])
+            ("common-inl.h" include nil nil [5893 5916]))          
+      :file "common.h"
+      :pointmax 5923
+      :fsize 5922
+      :lastmodtime '(23773 2931 0 0)
+      :unmatched-syntax '((punctuation 5666 . 5667) (punctuation 5665 . 5666) (punctuation 5664 . 5665) (punctuation 5663 . 5664) (punctuation 5624 . 5625) (symbol 5620 . 5624) (punctuation 5618 . 5619) (punctuation 5617 . 5618) (punctuation 5616 . 5617) (TYPENAME 5608 . 5616) (punctuation 5606 . 5607) (symbol 5605 . 5606) (TYPENAME 5596 . 5604) (punctuation 5595 . 5596) (TEMPLATE 5587 . 5595) (semantic-list 5327 . 5360) (symbol "noexcept" 5307 . 5322) (CONST 5301 . 5306) (semantic-list 5298 . 5300) (symbol 5293 . 5298) (BOOL 5288 . 5292) (symbol "constexpr" 5271 . 5287) (punctuation 5074 . 5075) (DEFAULT 5067 . 5074) (punctuation 5065 . 5066) (semantic-list 5062 . 5064) (symbol 5052 . 5062) (symbol "constexpr" 5035 . 5051) (semantic-list 4940 . 4942) (symbol 4936 . 4940) (punctuation 4935 . 4936) (CHAR 4930 . 4934) (CONST 4924 . 4929) (EXPLICIT 4828 . 4836) (symbol 4729 . 4732) (punctuation 4706 . 4707) (symbol 4701 . 4706) (ENUM 4666 . 4670) (punctuation 4525 . 4526) (symbol 4512 . 4524) (USING 4506 . 4511) (semantic-list 4462 . 4487) (symbol 4454 . 4462) (symbol 4443 . 4453) (punctuation 4442 . 4443) (punctuation 4441 . 4442) (symbol 4436 . 4441) (punctuation 4435 . 4436) (punctuation 4434 . 4435) (symbol 4428 . 4434) (semantic-list 4381 . 4410) (symbol 4367 . 4381) (punctuation 4366 . 4367) (CHAR 4361 . 4365) (CONST 4355 . 4360) (semantic-list 4308 . 4337) (symbol 4294 . 4308) (punctuation 4293 . 4294) (symbol 4279 . 4292) (punctuation 2735 . 2736) (symbol 2727 . 2734) (USING 2721 . 2726) (punctuation 2608 . 2609) (symbol 2594 . 2607) (USING 2588 . 2593) (punctuation 2424 . 2425) (punctuation 2423 . 2424) (semantic-list 2395 . 2423) (VOID 2391 . 2395) (punctuation 2390 . 2391) (symbol 2382 . 2390) (punctuation 2381 . 2382) (punctuation 2380 . 2381) (symbol 2377 . 2380) (punctuation 2375 . 2376) (symbol 2363 . 2374) (USING 2357 . 2362) (punctuation 2322 . 2323) (symbol 2306 . 2321) (USING 2300 . 2305) (punctuation 2268 . 2269) (symbol 2259 . 2267) (USING 2253 . 2258) (punctuation 2224 . 2225) (symbol 2214 . 2223) (USING 2208 . 2213) (punctuation 2154 . 2155) (symbol 2143 . 2153) (USING 2137 . 2142) (symbol 148 . 152) (symbol 141 . 147) (punctuation 140 . 141))
+      :lexical-table 
+        '(("SPDLOG_HEADER_ONLY")
+          ("SPDLOG_LEVEL_CRITICAL" . ((number "5" 2936 . 2937)))
+          ("SPDLOG_STRRCHR" (spp-arg-list ("str" "sep") 1467 . 1477) . ((symbol "strrchr" 1478 . 1485) (semantic-list "(str, sep)" 1485 . 1495)))
+          ("SPDLOG_ACTIVE_LEVEL" . ((symbol "SPDLOG_LEVEL_INFO" 3028 . 3045)))
+          ("SPDLOG_NOEXCEPT" . ((symbol "noexcept" 841 . 849)))
+          ("SPDLOG_CONSTEXPR" . ((symbol "constexpr" 875 . 884)))
+          ("SPDLOG_FILENAME_T" (spp-arg-list ("s") 2194 . 2197) . ((symbol "s" 2198 . 2199)))
+          ("SPDLOG_LEVEL_TRACE" . ((number "0" 2790 . 2791)))
+          ("SPDLOG_LEVEL_WARN" . ((number "3" 2875 . 2876)))
+          ("SPDLOG_LEVEL_ERROR" . ((number "4" 2904 . 2905)))
+          ("SPDLOG_LEVEL_NAMES" . ((semantic-list "{                                                                                                                                      \\
+        \"trace\", \"debug\", \"info\", \"warning\", \"error\", \"critical\", \"off\"                                                                    \\
+    }" 3510 . 3793)))
+          ("SPDLOG_FUNCTION" . ((symbol "__FUNCTION__" 1752 . 1764)))
+          ("SPDLOG_LEVEL_DEBUG" . ((number "1" 2819 . 2820)))
+          ("SPDLOG_LEVEL_INFO" . ((number "2" 2847 . 2848)))
+          ("SPDLOG_SHORT_LEVEL_NAMES" . ((semantic-list "{                                                                                                                                      \\
+        \"T\", \"D\", \"I\", \"W\", \"E\", \"C\", \"O\"                                                                                                  \\
+    }" 3987 . 4270)))
+          ("SPDLOG_DEPRECATED")
+          ("SPDLOG_INLINE" . ((INLINE "inline" 600 . 606)))
+          ("SPDLOG_FILE_BASENAME" (spp-arg-list ("file") 1655 . 1661) . 
+              ((symbol "SPDLOG_STRRCHR" 1662 . 1676) (semantic-list "(\"/\" file, '/')" 1676 . 1691) (punctuation "+" 1692 . 1693) (number "1" 1694 . 1695)))
+          ("SPDLOG_LEVEL_OFF" . ((number "6" 2963 . 2964)))
+          )
+)
+    (semanticdb-table "formatter.h"
+      :file "formatter.h"
+      :fsize 460
+      :lastmodtime '(23773 2931 0 0))
+    (semanticdb-table "spdlog.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SPDLOG_H" variable (:constant-flag t) nil [231 239])
+            ("spdlog/common.h" include nil nil [255 281])
+            ("spdlog/details/registry.h" include nil nil [282 318])
+            ("spdlog/logger.h" include nil nil [319 345])
+            ("spdlog/version.h" include nil nil [346 373])
+            ("chrono" include (:system-flag t) nil [375 392])
+            ("functional" include (:system-flag t) nil [393 414])
+            ("memory" include (:system-flag t) nil [415 432])
+            ("string" include (:system-flag t) nil [433 450])
+            ("spdlog" type
+               (:members 
+                  ( ("synchronous_factory" type
+                       (:members 
+                          ( ("create" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [657 681])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("SinkArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [682 693])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [697 702]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("spdlog::logger" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [611 980]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [528 983])
+                    ("default_factory" variable
+                       (:default-value "synchronous_factory"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [991 1029])
+                    ("create" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("logger_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1372 1396])
+                            ("" variable
+                               (:reference 1
+                                :type ("SinkArgs" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1397 1408])
+                            ("" variable (:type ("sink_args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1412 1422]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("spdlog::logger" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1326 1530])
+                    ("initialize_logger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("logger" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("logger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1961 1992]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1938 1993])
+                    ("get" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2173 2197]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("logger" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [2145 2198])
+                    ("set_formatter" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("formatter" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("spdlog::formatter" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2301 2346]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2282 2347])
+                    ("set_pattern" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pattern" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2460 2480])
+                            ("time_type" variable
+                               (:default-value "pattern_time_type"
+                                :type ("pattern_time_type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2481 2528])
+                            ("" variable (:type ("local" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2530 2536]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2443 2537])
+                    ("set_level" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("log_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2582 2610]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2567 2611])
+                    ("flush_on" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("log_level" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2653 2681]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2639 2682])
+                    ("flush_every" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("interval" variable (:type ("std::chrono::seconds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2802 2832]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2785 2833])
+                    ("set_error_handler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("handler" function
+                               (:function-pointer t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2902 2925]))                                  
+                                :type "void")
+                                nil nil))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2863 2927])
+                    ("register_logger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("logger" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("logger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2999 3030]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2978 3031])
+                    ("apply_all" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("std::function" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3195 3215])
+                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [3215 3244])
+                            ("" variable (:type ("fun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3247 3251]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3180 3252])
+                    ("drop" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3306 3330]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3296 3331])
+                    ("drop_all" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3374 3390])
+                    ("shutdown" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3465 3481])
+                    ("set_automatic_registration" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("automatic_registation" variable (:type "bool") (reparse-symbol arg-sub-list) [3604 3631]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3572 3632])
+                    ("default_logger" function
+                       (:prototype-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("spdlog::logger" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4300 4349])
+                    ("default_logger_raw" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("spdlog::logger" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4351 4388])
+                    ("set_default_logger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("default_logger" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("spdlog::logger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [4414 4461]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4390 4462])
+                    ("log" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("source" variable (:type ("source_loc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4507 4525])
+                            ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4526 4548])
+                            ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4549 4565])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4566 4579])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4582 4587]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4491 4649])
+                    ("log" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4694 4716])
+                            ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4717 4733])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4734 4747])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4750 4755]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4678 4823])
+                    ("trace" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4870 4886])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4887 4900])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4903 4908]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4852 4959])
+                    ("debug" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5006 5022])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5023 5036])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5039 5044]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4988 5095])
+                    ("info" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5141 5157])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5158 5171])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5174 5179]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5124 5229])
+                    ("warn" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5275 5291])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5292 5305])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5308 5313]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5258 5363])
+                    ("error" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5410 5426])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5427 5440])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5443 5448]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5392 5499])
+                    ("critical" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5549 5565])
+                            ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5566 5579])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5582 5587]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5528 5641])
+                    ("log" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("lvl" variable (:type ("level::level_enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5680 5702])
+                            ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5703 5716]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [5643 5761])
+                    ("trace" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5802 5815]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [5763 5857])
+                    ("debug" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5898 5911]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [5859 5953])
+                    ("info" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5993 6006]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [5955 6047])
+                    ("warn" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6087 6100]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6049 6141])
+                    ("error" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6182 6195]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6143 6237])
+                    ("critical" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6281 6294]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6239 6339]))                  
+                :type "namespace")
+                nil [452 7417])
+            ("SPDLOG_LOGGER_CALL" variable (:constant-flag t) nil [7762 7780])
+            ("SPDLOG_LOGGER_TRACE" variable (:constant-flag t) nil [8530 8549])
+            ("SPDLOG_TRACE" variable (:constant-flag t) nil [8633 8645])
+            ("SPDLOG_LOGGER_DEBUG" variable (:constant-flag t) nil [8865 8884])
+            ("SPDLOG_DEBUG" variable (:constant-flag t) nil [8968 8980])
+            ("SPDLOG_LOGGER_INFO" variable (:constant-flag t) nil [9199 9217])
+            ("SPDLOG_INFO" variable (:constant-flag t) nil [9300 9311])
+            ("SPDLOG_LOGGER_WARN" variable (:constant-flag t) nil [9527 9545])
+            ("SPDLOG_WARN" variable (:constant-flag t) nil [9628 9639])
+            ("SPDLOG_LOGGER_ERROR" variable (:constant-flag t) nil [9856 9875])
+            ("SPDLOG_ERROR" variable (:constant-flag t) nil [9957 9969])
+            ("SPDLOG_LOGGER_CRITICAL" variable (:constant-flag t) nil [10192 10214])
+            ("SPDLOG_CRITICAL" variable (:constant-flag t) nil [10301 10316]))          
+      :file "spdlog.h"
+      :pointmax 10568
+      :fsize 10567
+      :lastmodtime '(23773 2931 0 0)
+      :unmatched-syntax '((punctuation 5580 . 5581) (punctuation 5579 . 5580) (punctuation 5578 . 5579) (punctuation 5526 . 5527) (symbol 5522 . 5526) (punctuation 5520 . 5521) (punctuation 5519 . 5520) (punctuation 5518 . 5519) (TYPENAME 5510 . 5518) (punctuation 5509 . 5510) (TEMPLATE 5501 . 5509) (punctuation 5441 . 5442) (punctuation 5440 . 5441) (punctuation 5439 . 5440) (punctuation 5390 . 5391) (symbol 5386 . 5390) (punctuation 5384 . 5385) (punctuation 5383 . 5384) (punctuation 5382 . 5383) (TYPENAME 5374 . 5382) (punctuation 5373 . 5374) (TEMPLATE 5365 . 5373) (punctuation 5306 . 5307) (punctuation 5305 . 5306) (punctuation 5304 . 5305) (punctuation 5256 . 5257) (symbol 5252 . 5256) (punctuation 5250 . 5251) (punctuation 5249 . 5250) (punctuation 5248 . 5249) (TYPENAME 5240 . 5248) (punctuation 5239 . 5240) (TEMPLATE 5231 . 5239) (punctuation 5172 . 5173) (punctuation 5171 . 5172) (punctuation 5170 . 5171) (punctuation 5122 . 5123) (symbol 5118 . 5122) (punctuation 5116 . 5117) (punctuation 5115 . 5116) (punctuation 5114 . 5115) (TYPENAME 5106 . 5114) (punctuation 5105 . 5106) (TEMPLATE 5097 . 5105) (punctuation 5037 . 5038) (punctuation 5036 . 5037) (punctuation 5035 . 5036) (punctuation 4986 . 4987) (symbol 4982 . 4986) (punctuation 4980 . 4981) (punctuation 4979 . 4980) (punctuation 4978 . 4979) (TYPENAME 4970 . 4978) (punctuation 4969 . 4970) (TEMPLATE 4961 . 4969) (punctuation 4901 . 4902) (punctuation 4900 . 4901) (punctuation 4899 . 4900) (punctuation 4850 . 4851) (symbol 4846 . 4850) (punctuation 4844 . 4845) (punctuation 4843 . 4844) (punctuation 4842 . 4843) (TYPENAME 4834 . 4842) (punctuation 4833 . 4834) (TEMPLATE 4825 . 4833) (punctuation 4748 . 4749) (punctuation 4747 . 4748) (punctuation 4746 . 4747) (punctuation 4676 . 4677) (symbol 4672 . 4676) (punctuation 4670 . 4671) (punctuation 4669 . 4670) (punctuation 4668 . 4669) (TYPENAME 4660 . 4668) (punctuation 4659 . 4660) (TEMPLATE 4651 . 4659) (punctuation 4580 . 4581) (punctuation 4579 . 4580) (punctuation 4578 . 4579) (punctuation 4489 . 4490) (symbol 4485 . 4489) (punctuation 4483 . 4484) (punctuation 4482 . 4483) (punctuation 4481 . 4482) (TYPENAME 4473 . 4481) (punctuation 4472 . 4473) (TEMPLATE 4464 . 4472) (punctuation 3246 . 3247) (punctuation 3244 . 3245) (semantic-list 3219 . 3244) (punctuation 3214 . 3215) (punctuation 2529 . 2530) (punctuation 2528 . 2529) (punctuation 1410 . 1411) (punctuation 1409 . 1410) (punctuation 1408 . 1409) (punctuation 1407 . 1408) (punctuation 1324 . 1325) (symbol 1316 . 1324) (punctuation 1314 . 1315) (punctuation 1313 . 1314) (punctuation 1312 . 1313) (TYPENAME 1304 . 1312) (punctuation 1302 . 1303) (symbol 1298 . 1302) (TYPENAME 1289 . 1297) (punctuation 1288 . 1289) (TEMPLATE 1280 . 1288) (USING 985 . 990) (punctuation 695 . 696) (punctuation 694 . 695) (punctuation 693 . 694) (punctuation 692 . 693) (punctuation 605 . 606) (symbol 597 . 605) (punctuation 595 . 596) (punctuation 594 . 595) (punctuation 593 . 594) (TYPENAME 585 . 593) (punctuation 583 . 584) (symbol 579 . 583) (TYPENAME 570 . 578) (punctuation 569 . 570) (TEMPLATE 561 . 569) (symbol 249 . 253) (symbol 242 . 248) (punctuation 241 . 242))
+      :lexical-table 
+        '(("SPDLOG_DEBUG" (spp-arg-list ("...") 8980 . 8985) . ((symbol "SPDLOG_LOGGER_DEBUG" 8986 . 9005) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 9005 . 9048)))
+          ("SPDLOG_LOGGER_INFO" (spp-arg-list ("logger" "...") 9217 . 9230) . ((symbol "SPDLOG_LOGGER_CALL" 9231 . 9249) (semantic-list "(logger, spdlog::level::info, __VA_ARGS__)" 9249 . 9291)))
+          ("SPDLOG_LOGGER_TRACE" (spp-arg-list ("logger" "...") 8549 . 8562) . ((symbol "SPDLOG_LOGGER_CALL" 8563 . 8581) (semantic-list "(logger, spdlog::level::trace, __VA_ARGS__)" 8581 . 8624)))
+          ("SPDLOG_H")
+          ("SPDLOG_LOGGER_ERROR" (spp-arg-list ("logger" "...") 9875 . 9888) . ((symbol "SPDLOG_LOGGER_CALL" 9889 . 9907) (semantic-list "(logger, spdlog::level::err, __VA_ARGS__)" 9907 . 9948)))
+          ("SPDLOG_LOGGER_CALL" (spp-arg-list ("logger" "level" "...") 7780 . 7800) . 
+              ((DO "do" 7899 . 7901) (semantic-list "{                                                                                                                                      \\
+        if (logger->should_log(level))                                                                                                     \\
+            logger->log(spdlog::source_loc{SPDLOG_FILE_BASENAME(__FILE__), __LINE__, SPDLOG_FUNCTION}, level, __VA_ARGS__);                \\
+    }" 8040 . 8464) (WHILE "while" 8465 . 8470) (semantic-list "(0)" 8471 . 8474)))
+          ("SPDLOG_TRACE" (spp-arg-list ("...") 8645 . 8650) . ((symbol "SPDLOG_LOGGER_TRACE" 8651 . 8670) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 8670 . 8713)))
+          ("SPDLOG_WARN" (spp-arg-list ("...") 9639 . 9644) . ((symbol "SPDLOG_LOGGER_WARN" 9645 . 9663) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 9663 . 9706)))
+          ("SPDLOG_LOGGER_WARN" (spp-arg-list ("logger" "...") 9545 . 9558) . ((symbol "SPDLOG_LOGGER_CALL" 9559 . 9577) (semantic-list "(logger, spdlog::level::warn, __VA_ARGS__)" 9577 . 9619)))
+          ("SPDLOG_ERROR" (spp-arg-list ("...") 9969 . 9974) . ((symbol "SPDLOG_LOGGER_ERROR" 9975 . 9994) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 9994 . 10037)))
+          ("SPDLOG_CRITICAL" (spp-arg-list ("...") 10316 . 10321) . ((symbol "SPDLOG_LOGGER_CRITICAL" 10322 . 10344) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 10344 . 10387)))
+          ("SPDLOG_LOGGER_DEBUG" (spp-arg-list ("logger" "...") 8884 . 8897) . ((symbol "SPDLOG_LOGGER_CALL" 8898 . 8916) (semantic-list "(logger, spdlog::level::debug, __VA_ARGS__)" 8916 . 8959)))
+          ("SPDLOG_LOGGER_CRITICAL" (spp-arg-list ("logger" "...") 10214 . 10227) . ((symbol "SPDLOG_LOGGER_CALL" 10228 . 10246) (semantic-list "(logger, spdlog::level::critical, __VA_ARGS__)" 10246 . 10292)))
+          ("SPDLOG_INFO" (spp-arg-list ("...") 9311 . 9316) . ((symbol "SPDLOG_LOGGER_INFO" 9317 . 9335) (semantic-list "(spdlog::default_logger_raw(), __VA_ARGS__)" 9335 . 9378)))
+          )
+)
+    (semanticdb-table "version.h"
+      :file "version.h"
+      :fsize 329
+      :lastmodtime '(23773 2931 0 0))
+    (semanticdb-table "tweakme.h"
+      :file "tweakme.h"
+      :fsize 6478
+      :lastmodtime '(23773 2931 0 0))
+    (semanticdb-table "common-inl.h"
+      :file "common-inl.h"
+      :fsize 1384
+      :lastmodtime '(23773 2931 0 0)))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Externals!SpdLog!include!spdlog!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

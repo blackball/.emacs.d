@@ -1,0 +1,541 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "RansacFitPlane.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_RANSAC_FITTING_PLANE" variable (:constant-flag t) nil [39 60])
+            ("pcl/point_types.h" include (:system-flag t) nil [62 90])
+            ("pcl/octree/octree_search.h" include (:system-flag t) nil [91 128])
+            ("random" include (:system-flag t) nil [130 147])
+            ("PlaneModel" type
+               (:template 
+                  ( ("PointT" type (:type "class") nil nil)
+                    ("PointNT" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [211 218])
+                    ("Point" variable
+                       (:default-value "PointT"
+                        :type "int")
+                        (reparse-symbol classsubparts) [226 241])
+                    ("Normal" variable
+                       (:default-value "PointNT"
+                        :type "int")
+                        (reparse-symbol classsubparts) [249 266])
+                    ("pcl::PointCloud" variable (:type "int") (reparse-symbol classsubparts) [288 312])
+                    ("boost::shared_ptr" variable (:type "int") (reparse-symbol classsubparts) [336 366])
+                    ("pcl::PointCloud" variable (:type "int") (reparse-symbol classsubparts) [388 412])
+                    ("boost::shared_ptr" variable (:type "int") (reparse-symbol classsubparts) [432 463])
+                    ("boost::shared_ptr" variable (:type "int") (reparse-symbol classsubparts) [499 562])
+                    ("PlaneModel" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("inputPointsIndices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [576 619])
+                            ("pointCloud" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PointCloudPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [619 651])
+                            ("normals" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NormalPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [654 679])
+                            ("pointCloudOctree" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("OctreePointCloudSearchPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [679 729]))                          
+                        :type ("PlaneModel" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [565 860])
+                    ("PlaneModel" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [864 952])
+                    ("initialize" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("inputPointsIndices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [979 1022]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [955 2763])
+                    ("public" label nil (reparse-symbol classsubparts) [2765 2772])
+                    ("evaluate" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("evaluateParams" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2828 2867])
+                            ("distThreshold" variable (:type "float") (reparse-symbol arg-sub-list) [2868 2888])
+                            ("angleThreshold" variable (:type "float") (reparse-symbol arg-sub-list) [2888 2909]))                          
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil)
+                                  ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2775 3836])
+                    ("getModelCoeff" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :type "float")
+                        (reparse-symbol classsubparts) [3840 3894])
+                    ("protected" label nil (reparse-symbol classsubparts) [3896 3906])
+                    ("computeDistanceMeasure" function
+                       (:arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [3938 3948]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [3909 4037])
+                    ("computeDistanceMeasure" function
+                       (:arguments 
+                          ( ("point" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Point" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4070 4089]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [4041 4278])
+                    ("computeAngleMeasure" function
+                       (:arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [4307 4317]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [4281 4631])
+                    ("private" label nil (reparse-symbol classsubparts) [4632 4640])
+                    ("_planeParams" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [4642 4664])
+                    ("_distDenominator" variable (:type "float") (reparse-symbol classsubparts) [4667 4690])
+                    ("_pointCloud" variable (:type ("PointCloudPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4694 4720])
+                    ("_normals" variable (:type ("NormalPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4722 4741])
+                    ("_pointCloudOctree" variable (:type ("OctreePointCloudSearchPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4744 4788]))                  )
+                nil [149 4791])
+            ("SacPlane" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4871 4878])
+                    ("Point" variable
+                       (:default-value "PointT"
+                        :type "int")
+                        (reparse-symbol classsubparts) [4886 4901])
+                    ("Normal" variable
+                       (:default-value "PointNT"
+                        :type "int")
+                        (reparse-symbol classsubparts) [4909 4926])
+                    ("Model" variable (:type "int") (reparse-symbol classsubparts) [4947 4953])
+                    ("PlaneModel::PointCloudPtr" variable
+                       (:typemodifiers ("typename")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5033 5068])
+                    ("PlaneModel::NormalPtr" variable
+                       (:typemodifiers ("typename")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5146 5177])
+                    ("SacPlane" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5180 5281])
+                    ("SacPlane" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pointCloud" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PointCloudPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5293 5325])
+                            ("normals" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NormalPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5325 5350])
+                            ("paramNum" variable (:type "int") (reparse-symbol arg-sub-list) [5350 5363])
+                            ("minSamplerNum" variable (:type "int") (reparse-symbol arg-sub-list) [5363 5381]))                          
+                        :type ("SacPlane" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5284 5626])
+                    ("initialize" function
+                       (:arguments 
+                          ( ("distThreshold" variable (:type "float") (reparse-symbol arg-sub-list) [5646 5666])
+                            ("angleThreshold" variable (:type "float") (reparse-symbol arg-sub-list) [5666 5687])
+                            ("maxIterations" variable
+                               (:default-value "2000"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5688 5712])
+                            ("probability" variable
+                               (:default-value "0.99"
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [5714 5736]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5630 5878])
+                    ("getBestModel" function
+                       (:typemodifiers ("inline")
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5882 5943])
+                    ("getBestInliers" function
+                       (:typemodifiers ("inline")
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5946 6018])
+                    ("getParams" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :type "float")
+                        (reparse-symbol classsubparts) [6021 6070])
+                    ("estimate" function
+                       (:arguments 
+                          ( ("pointIndices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6087 6124]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6073 9172])
+                    ("protected" label nil (reparse-symbol classsubparts) [9175 9185])
+                    ("isProperSampler" function
+                       (:arguments 
+                          ( ("samplerIndex" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9210 9247]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9189 10312])
+                    ("vectorAngle" function
+                       (:arguments 
+                          ( ("v1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::Vector3f" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10334 10360])
+                            ("v2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::Vector3f" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10361 10387]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [10316 10487])
+                    ("reset" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10490 10585])
+                    ("private" label nil (reparse-symbol classsubparts) [10588 10596])
+                    ("_pointCloud" variable (:type ("PointCloudPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10598 10624])
+                    ("_normals" variable (:type ("NormalPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10626 10649])
+                    ("_bestModel" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [10652 10680])
+                    ("_bestInliers" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [10683 10713])
+                    ("_maxIterations" variable (:type "int") (reparse-symbol classsubparts) [10716 10735])
+                    ("_distThreshold" variable (:type "float") (reparse-symbol classsubparts) [10738 10759])
+                    ("_angleThreshold" variable (:type "float") (reparse-symbol classsubparts) [10762 10784])
+                    ("_bestModelScore" variable (:type "float") (reparse-symbol classsubparts) [10786 10808])
+                    ("_estModelIdx" variable (:type "int") (reparse-symbol classsubparts) [10810 10827])
+                    ("_minSamplerNum" variable (:type "int") (reparse-symbol classsubparts) [10830 10849])
+                    ("_modelCoeff" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [10851 10870])
+                    ("_paramNum" variable (:type "int") (reparse-symbol classsubparts) [10872 10886])
+                    ("_probability" variable (:type "float") (reparse-symbol classsubparts) [10889 10908])
+                    ("_randEngines" variable (:type ("std::mt19937" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10910 10936]))                  
+                :type "class")
+                nil [4854 10940]))          
+      :file "RansacFitPlane.hpp"
+      :pointmax 10973
+      :fsize 10972
+      :lastmodtime '(23805 64859 468414 548000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_RANSAC_FITTING_PLANE")
+          )
+)
+    (semanticdb-table "SegPlane.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_SEGMENT_PLANES_H_" variable (:constant-flag t) nil [36 54])
+            ("pcl/point_types.h" include (:system-flag t) nil [56 84])
+            ("pcl/PointIndices.h" include (:system-flag t) nil [85 114])
+            ("pcl/point_cloud.h" include (:system-flag t) nil [115 143])
+            ("pcl/kdtree/kdtree_flann.h" include (:system-flag t) nil [144 180])
+            ("pcl/segmentation/region_growing.h" include (:system-flag t) nil [181 224])
+            ("pcl/search/kdtree.h" include (:system-flag t) nil [225 255])
+            ("pcl/filters/fast_bilateral.h" include (:system-flag t) nil [256 295])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [297 328])
+            ("PlaneParams" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [352 359])
+                    ("PlaneParams" function
+                       (:constructor-flag t
+                        :type ("PlaneParams" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [361 465])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("planeParams" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PlaneParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [483 514]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [468 643])
+                    ("public" label nil (reparse-symbol classsubparts) [645 652])
+                    ("_params" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol classsubparts) [654 671])
+                    ("_center" variable (:type ("Eigen::Vector3f" type (:type "class") nil nil)) (reparse-symbol classsubparts) [673 697])
+                    ("_index" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [699 723]))                  
+                :type "struct")
+                nil [330 726])
+            ("SegPlane" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [744 751])
+                    ("Point" type
+                       (:typedef ("pcl::PointXYZ" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [753 781])
+                    ("Normal" type
+                       (:typedef ("pcl::Normal" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [783 811])
+                    ("PointCloud" type
+                       (:typedef ("pcl::PointCloud" type
+                             (:template-specifier 
+                                ( ("Point" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [813 855])
+                    ("PointCloudPtr" type
+                       (:typedef ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("PointCloud" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [857 909])
+                    ("NormalPtr" type
+                       (:typedef ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("pcl::PointCloud" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [911 973])
+                    ("PointIndicesPtr" type
+                       (:typedef ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("pcl::PointIndices" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [975 1036])
+                    ("SegPlane" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("inputFile" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1048 1070])
+                            ("maxPointCount" variable
+                               (:default-value "2000000"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1070 1098]))                          
+                        :type ("SegPlane" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1039 1100])
+                    ("SegPlane" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1102 1114])
+                    ("loadPointCloud" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1117 1139])
+                    ("segmentPlanes" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1142 1189])
+                    ("protected" label nil (reparse-symbol classsubparts) [1191 1201])
+                    ("variancePrinciple" function
+                       (:prototype-flag t
+                        :type ("PointIndicesPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1204 1240])
+                    ("regionGrowSegment" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("candiIndices" variable
+                               (:constant-flag t
+                                :type ("PointIndicesPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1293 1328]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("pcl::PointIndices" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1243 1329])
+                    ("getThresholdByStatisticHistogram" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("variance" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1371 1406])
+                            ("minVar" variable (:type "float") (reparse-symbol arg-sub-list) [1407 1420])
+                            ("maxVar" variable (:type "float") (reparse-symbol arg-sub-list) [1421 1434]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [1332 1435])
+                    ("mergeEstimatedPlanes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("planes" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("PlaneParams" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1490 1529]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1438 1530])
+                    ("isNeedMergePlanes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("plane1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PlaneParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1556 1582])
+                            ("plane2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PlaneParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1583 1609]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1533 1610])
+                    ("pointToPlaneDist" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::Vector3f" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1636 1661])
+                            ("param" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [1662 1683]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [1613 1684])
+                    ("private" label nil (reparse-symbol classsubparts) [1685 1693])
+                    ("_pointCloud" variable (:type ("PointCloudPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1695 1721])
+                    ("_normals" variable (:type ("NormalPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1723 1746])
+                    ("_inputFile" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1748 1771])
+                    ("_maxPointCloudCount" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1774 1804])
+                    ("_noiseRatio" variable (:type "float") (reparse-symbol classsubparts) [1807 1829]))                  
+                :type "class")
+                nil [727 1832]))          
+      :file "SegPlane.h"
+      :pointmax 1860
+      :fsize 1932
+      :lastmodtime '(23804 50654 660809 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_SEGMENT_PLANES_H_")
+          )
+)
+    (semanticdb-table "pch.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PCH_H" variable (:constant-flag t) nil [539 544]))          
+      :file "pch.h"
+      :pointmax 617
+      :fsize 630
+      :lastmodtime '(23802 5227 16315 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PCH_H")
+          )
+)
+    (semanticdb-table "Utils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [16 35])
+            ("DEBUG" variable (:constant-flag t) nil [45 50]))          
+      :file "Utils.h"
+      :pointmax 102
+      :fsize 101
+      :lastmodtime '(23805 63614 895457 522000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 22 . 25) (symbol 22 . 25))
+      :lexical-table 
+        '(("DEBUG" (spp-arg-list ("msg") 50 . 55) . ((symbol "printf" 56 . 62) (semantic-list "(\"%s:%d:%s\\n\", __FILE__, __LINE__, msg)" 62 . 101)))
+          )
+))
+  :file "!home!rvbust!VBoxShared!huangwei_code!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

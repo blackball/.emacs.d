@@ -1,0 +1,874 @@
+;; Object api/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "api/"
+  :tables
+  (list
+    (semanticdb-table "nlopt-in.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("NLOPT_HPP" variable (:constant-flag t) nil [1294 1303])
+            ("nlopt.h" include (:system-flag t) nil [1305 1323])
+            ("vector" include (:system-flag t) nil [1325 1342])
+            ("stdexcept" include (:system-flag t) nil [1343 1363])
+            ("new" include (:system-flag t) nil [1364 1378])
+            ("cstdlib" include (:system-flag t) nil [1379 1397])
+            ("cstring" include (:system-flag t) nil [1398 1416])
+            ("cmath" include (:system-flag t) nil [1417 1433])
+            ("nlopt_get_initial_step" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("opt" variable
+                       (:constant-flag t
+                        :type ("nlopt_opt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1556 1576])
+                    ("dx" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1577 1588]))                  
+                :type ("nlopt_result" type (:type "class") nil nil))
+                nil [1513 1661])
+            ("nlopt" type
+               (:members 
+                  ( ("func" type
+                       (:typedef ("nlopt_func" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1961 1985])
+                    ("mfunc" type
+                       (:typedef ("nlopt_mfunc" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2011 2037])
+                    ("vfunc" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2195 2224])
+                            ("grad" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2230 2256])
+                            ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2257 2268]))                          
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [2179 2269])
+                    ("roundoff_limited" type
+                       (:superclasses 
+                          ( ("std::runtime_error" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2467 2474])
+                            ("roundoff_limited" function
+                               (:constructor-flag t
+                                :type ("roundoff_limited" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2479 2547]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2412 2552])
+                    ("forced_stop" type
+                       (:superclasses 
+                          ( ("std::runtime_error" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2606 2613])
+                            ("forced_stop" function
+                               (:constructor-flag t
+                                :type ("forced_stop" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2618 2676]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2556 2681])
+                    ("opt" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [2773 2781])
+                            ("o" variable (:type ("nlopt_opt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2786 2798])
+                            ("mythrow" function
+                               (:arguments 
+                                  ( ("ret" variable (:type ("nlopt_result" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2821 2838]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2808 3286])
+                            ("myfunc_data" type
+                               (:typedef ("" type
+                                     (:members 
+                                        ( ("o" variable
+                                             (:pointer 1
+                                              :type ("opt" type (:type "class") nil nil))
+                                              (reparse-symbol classsubparts) [3315 3322])
+                                          ("mf" variable (:type ("mfunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3329 3338])
+                                          ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3339 3346])
+                                          ("f_data" variable
+                                             (:pointer 1
+                                              :type "void")
+                                              (reparse-symbol classsubparts) [3347 3360])
+                                          ("vf" variable (:type ("vfunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3367 3376])
+                                          ("munge_destroy" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3383 3421])
+                                          ("munge_copy" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3383 3421]))                                        
+                                      :type "struct")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3292 3470])
+                            ("free_myfunc_data" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [3579 3587]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3549 3756])
+                            ("dup_myfunc_data" function
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [3790 3798]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3761 4161])
+                            ("myfunc" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4238 4249])
+                                    ("x" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4250 4266])
+                                    ("grad" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4267 4280])
+                                    ("d_" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [4281 4290]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [4217 4914])
+                            ("mymfunc" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("m" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4991 5002])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5003 5018])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5022 5033])
+                                    ("x" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5034 5050])
+                                    ("grad" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5051 5064])
+                                    ("d_" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [5065 5074]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4971 5750])
+                            ("xtmp" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5756 5800])
+                            ("gradtmp" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5756 5800])
+                            ("gradtmp0" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5756 5800])
+                            ("myvfunc" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5904 5915])
+                                    ("x" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5916 5932])
+                                    ("grad" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [5933 5946])
+                                    ("d_" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [5947 5956]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [5882 6840])
+                            ("alloc_tmp" function (:type "void") (reparse-symbol classsubparts) [6846 7038])
+                            ("last_result" variable (:type ("result" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7044 7063])
+                            ("last_optf" variable (:type "double") (reparse-symbol classsubparts) [7068 7085])
+                            ("forced_stop_reason" variable (:type ("nlopt_result" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7090 7122])
+                            ("public" label nil (reparse-symbol classsubparts) [7126 7133])
+                            ("opt" function
+                               (:constructor-flag t
+                                :type ("opt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7163 7315])
+                            ("opt" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [7320 7348])
+                            ("opt" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("a" variable (:type ("algorithm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7357 7369])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7370 7381]))                                  
+                                :type ("opt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7353 7678])
+                            ("opt" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("f" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("opt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7687 7700]))                                  
+                                :type ("opt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7683 7925])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("f" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("opt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7945 7958]))                                  
+                                :type ("opt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7930 8288])
+                            ("optimize" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8338 8361])
+                                    ("opt_f" variable
+                                       (:reference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [8362 8376]))                                  
+                                :type ("result" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8322 8788])
+                            ("optimize" function
+                               (:arguments 
+                                  ( ("x0" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8871 8901]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8842 9002])
+                            ("last_optimize_result" function (:type ("result" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9007 9066])
+                            ("last_optimum_value" function (:type "double") (reparse-symbol classsubparts) [9071 9126])
+                            ("get_algorithm" function (:type ("algorithm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9150 9305])
+                            ("get_algorithm_name" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [9310 9483])
+                            ("get_dimension" function (:type "unsigned int") (reparse-symbol classsubparts) [9488 9631])
+                            ("set_min_objective" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9694 9701])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [9702 9715]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9671 9996])
+                            ("set_min_objective" function
+                               (:arguments 
+                                  ( ("vf" variable (:type ("vfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10024 10033])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [10034 10047]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10001 10349])
+                            ("set_max_objective" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10377 10384])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [10385 10398]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10354 10679])
+                            ("set_max_objective" function
+                               (:arguments 
+                                  ( ("vf" variable (:type ("vfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10707 10716])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [10717 10730]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10684 11032])
+                            ("set_min_objective" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11182 11189])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [11190 11203])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11210 11225])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11226 11241]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [11159 11524])
+                            ("set_max_objective" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11552 11559])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [11560 11573])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11580 11595])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11596 11611]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [11529 11894])
+                            ("remove_inequality_constraints" function (:type "void") (reparse-symbol classsubparts) [11931 12060])
+                            ("add_inequality_constraint" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12096 12103])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12104 12117])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [12118 12130]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12065 12408])
+                            ("add_inequality_constraint" function
+                               (:arguments 
+                                  ( ("vf" variable (:type ("vfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12444 12453])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12454 12467])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [12468 12480]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12413 12779])
+                            ("add_inequality_mconstraint" function
+                               (:arguments 
+                                  ( ("mf" variable (:type ("mfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12816 12825])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12826 12839])
+                                    ("tol" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12849 12880]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12784 13210])
+                            ("remove_equality_constraints" function (:type "void") (reparse-symbol classsubparts) [13216 13341])
+                            ("add_equality_constraint" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13375 13382])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [13383 13396])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [13397 13409]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13346 13685])
+                            ("add_equality_constraint" function
+                               (:arguments 
+                                  ( ("vf" variable (:type ("vfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13719 13728])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [13729 13742])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [13743 13755]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13690 14052])
+                            ("add_equality_mconstraint" function
+                               (:arguments 
+                                  ( ("mf" variable (:type ("mfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14087 14096])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [14097 14110])
+                                    ("tol" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14118 14149]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14057 14475])
+                            ("add_inequality_constraint" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14570 14577])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [14578 14591])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14600 14615])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14616 14631])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14639 14651]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14539 14931])
+                            ("add_equality_constraint" function
+                               (:arguments 
+                                  ( ("f" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14965 14972])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [14973 14986])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14993 15008])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15009 15024])
+                                    ("tol" variable
+                                       (:default-value "0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [15030 15042]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14936 15320])
+                            ("add_inequality_mconstraint" function
+                               (:arguments 
+                                  ( ("mf" variable (:type ("mfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15357 15366])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15367 15380])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15390 15405])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15406 15421])
+                                    ("tol" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [15430 15461]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15325 15793])
+                            ("add_equality_mconstraint" function
+                               (:arguments 
+                                  ( ("mf" variable (:type ("mfunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15828 15837])
+                                    ("f_data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15838 15851])
+                                    ("md" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15859 15874])
+                                    ("mc" variable (:type ("nlopt_munge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15875 15890])
+                                    ("tol" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [15897 15928]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15798 16256])
+                            ("NLOPT_GETSET_VEC" variable (:constant-flag t) (reparse-symbol classsubparts) [16266 16282])
+                            ("set_lower_bounds" function
+                               (:arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17151 17181])
+                            ("get_lower_bounds" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17151 17181])
+                            ("get_lower_bounds" function (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [17151 17181])
+                            ("set_lower_bounds" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17151 17181])
+                            ("set_upper_bounds" function
+                               (:arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17186 17216])
+                            ("get_upper_bounds" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17186 17216])
+                            ("get_upper_bounds" function (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [17186 17216])
+                            ("set_upper_bounds" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17186 17216])
+                            ("NLOPT_GETSET" variable (:constant-flag t) (reparse-symbol classsubparts) [17253 17265])
+                            ("get_stopval" function (:type "double") (reparse-symbol classsubparts) [17536 17565])
+                            ("set_stopval" function
+                               (:arguments 
+                                  ( ("stopval" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17536 17565])
+                            ("get_ftol_rel" function (:type "double") (reparse-symbol classsubparts) [17570 17600])
+                            ("set_ftol_rel" function
+                               (:arguments 
+                                  ( ("ftol_rel" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17570 17600])
+                            ("get_ftol_abs" function (:type "double") (reparse-symbol classsubparts) [17605 17635])
+                            ("set_ftol_abs" function
+                               (:arguments 
+                                  ( ("ftol_abs" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17605 17635])
+                            ("get_xtol_rel" function (:type "double") (reparse-symbol classsubparts) [17640 17670])
+                            ("set_xtol_rel" function
+                               (:arguments 
+                                  ( ("xtol_rel" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17640 17670])
+                            ("set_xtol_abs" function
+                               (:arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17675 17701])
+                            ("get_xtol_abs" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17675 17701])
+                            ("get_xtol_abs" function (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [17675 17701])
+                            ("set_xtol_abs" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17675 17701])
+                            ("get_maxeval" function (:type "int") (reparse-symbol classsubparts) [17706 17732])
+                            ("set_maxeval" function
+                               (:arguments 
+                                  ( ("maxeval" variable (:type "int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17706 17732])
+                            ("get_numevals" function (:type "int") (reparse-symbol classsubparts) [17738 17874])
+                            ("get_maxtime" function (:type "double") (reparse-symbol classsubparts) [17880 17909])
+                            ("set_maxtime" function
+                               (:arguments 
+                                  ( ("maxtime" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17880 17909])
+                            ("get_force_stop" function (:type "int") (reparse-symbol classsubparts) [17915 17944])
+                            ("set_force_stop" function
+                               (:arguments 
+                                  ( ("force_stop" variable (:type "int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17915 17944])
+                            ("force_stop" function (:type "void") (reparse-symbol classsubparts) [17949 17989])
+                            ("get_errmsg" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [17995 18140])
+                            ("set_local_optimizer" function
+                               (:arguments 
+                                  ( ("lo" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("opt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18210 18224]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18185 18313])
+                            ("get_population" function (:type "unsigned int") (reparse-symbol classsubparts) [18319 18353])
+                            ("set_population" function
+                               (:arguments 
+                                  ( ("population" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18319 18353])
+                            ("get_vector_storage" function (:type "unsigned int") (reparse-symbol classsubparts) [18358 18396])
+                            ("set_vector_storage" function
+                               (:arguments 
+                                  ( ("vector_storage" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18358 18396])
+                            ("set_initial_step" function
+                               (:arguments 
+                                  ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18401 18431])
+                            ("get_initial_step" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18401 18431])
+                            ("get_initial_step" function (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [18401 18431])
+                            ("set_initial_step" function
+                               (:arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18401 18431])
+                            ("set_default_initial_step" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [18467 18496]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18437 18612])
+                            ("get_initial_step" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [18639 18668])
+                                    ("dx" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [18669 18693]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18617 18992])
+                            ("get_initial_step_" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [19035 19064]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [18997 19245]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2759 19250])
+                    ("srand" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("seed" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [19391 19410]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19373 19433])
+                    ("srand_time" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19436 19484])
+                    ("version" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("major" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [19507 19518])
+                            ("minor" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [19519 19530])
+                            ("bugfix" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [19531 19543]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19487 19593])
+                    ("version_major" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19596 19720])
+                    ("version_minor" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19723 19847])
+                    ("version_bugfix" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19850 19976])
+                    ("algorithm_name" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :constant-flag t
+                        :arguments 
+                          ( ("a" variable (:type ("algorithm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20013 20025]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [19979 20084]))                  
+                :type "namespace")
+                nil [1663 20161]))          
+      :file "nlopt-in.hpp"
+      :pointmax 20205
+      :fsize 20204
+      :lastmodtime '(23613 23231 835217 635000)
+      :unmatched-syntax '((TYPEDEF 2171 . 2178))
+      :lexical-table 
+        '(("NLOPT_GETSET" (spp-arg-list ("T" "name") 17265 . 17274) . 
+              ((symbol "T" 17286 . 17287) (spp-symbol-merge ((symbol "get_" 17288 . 17292) (symbol "name" 17294 . 17298)) 17288 . 17298) (semantic-list "()" 17298 . 17300) (CONST "const" 17301 . 17306) (semantic-list "{						\\
+      if (!o) throw std::runtime_error(\"uninitialized nlopt::opt\");	\\
+      return nlopt_get_##name(o);					\\
+    }" 17307 . 17431) (VOID "void" 17446 . 17450) (spp-symbol-merge ((symbol "set_" 17451 . 17455) (symbol "name" 17457 . 17461)) 17451 . 17461) (semantic-list "(T name)" 17461 . 17469) (semantic-list "{						\\
+      mythrow(nlopt_set_##name(o, name));				\\
+    }" 17470 . 17531)))
+          ("NLOPT_HPP")
+          ("NLOPT_GETSET_VEC" (spp-arg-list ("name") 16282 . 16288) . 
+              ((VOID "void" 16300 . 16304) (spp-symbol-merge ((symbol "set_" 16305 . 16309) (symbol "name" 16311 . 16315)) 16305 . 16315) (semantic-list "(double val)" 16315 . 16327) (semantic-list "{					\\
+      mythrow(nlopt_set_##name##1(o, val));				\\
+    }" 16328 . 16390) (VOID "void" 16405 . 16409) (spp-symbol-merge ((symbol "get_" 16410 . 16414) (symbol "name" 16416 . 16420)) 16410 . 16420) (semantic-list "(std::vector<double> &v)" 16420 . 16444) (CONST "const" 16445 . 16450) (semantic-list "{			\\
+      if (o && nlopt_get_dimension(o) != v.size())			\\
+        throw std::invalid_argument(\"dimension mismatch\");		\\
+      mythrow(nlopt_get_##name(o, v.empty() ? NULL : &v[0]));		\\
+    }" 16451 . 16644) (symbol "std" 16659 . 16662) (punctuation ":" 16662 . 16663) (punctuation ":" 16663 . 16664) (symbol "vector" 16664 . 16670) (punctuation "<" 16670 . 16671) (DOUBLE "double" 16671 . 16677) (punctuation ">" 16677 . 16678) (spp-symbol-merge ((symbol "get_" 16679 . 16683) (symbol "name" 16685 . 16689)) 16679 . 16689) (semantic-list "()" 16689 . 16691) (CONST "const" 16692 . 16697) (semantic-list "{			\\
+      if (!o) throw std::runtime_error(\"uninitialized nlopt::opt\");	\\
+      std::vector<double> v(nlopt_get_dimension(o));			\\
+      get_##name(v);							\\
+      return v;								\\
+    }" 16698 . 16890) (VOID "void" 16906 . 16910) (spp-symbol-merge ((symbol "set_" 16911 . 16915) (symbol "name" 16917 . 16921)) 16911 . 16921) (semantic-list "(const std::vector<double> &v)" 16921 . 16951) (semantic-list "{			\\
+      if (o && nlopt_get_dimension(o) != v.size())			\\
+        throw std::invalid_argument(\"dimension mismatch\");		\\
+      mythrow(nlopt_set_##name(o, v.empty() ? NULL : &v[0]));		\\
+    }" 16952 . 17145)))
+          )
+)
+    (semanticdb-table "nlopt.h"
+      :file "nlopt.h"
+      :fsize 14403
+      :lastmodtime '(23613 23231 835217 635000)))
+  :file "!home!rvbust!Rvbust!Sources!Nlopt!src!api!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

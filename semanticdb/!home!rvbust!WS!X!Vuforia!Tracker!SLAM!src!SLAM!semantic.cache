@@ -1,0 +1,564 @@
+;; Object SLAM/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SLAM/"
+  :tables
+  (list
+    (semanticdb-table "KeypointDetector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SLAM/KeypointDetector.h" include (:system-flag t) nil [484 518])
+            ("AR/CV/CameraTool.h" include (:system-flag t) nil [519 548])
+            ("AR/CV/Image/ImageIO.h" include (:system-flag t) nil [549 581])
+            ("AR/Common/Timing.h" include (:system-flag t) nil [582 611])
+            ("AR/Common/BenchmarkingTiming.h" include (:system-flag t) nil [612 653])
+            ("SLAM" type
+               (:members 
+                  ( ("KeypointDetector" function
+                       (:constructor-flag t
+                        :parent "KeypointDetector"
+                        :arguments 
+                          ( ("_cfgRoot" variable
+                               (:reference 1
+                                :type ("SLAM::Config_Root" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [710 738]))                          
+                        :type ("KeypointDetector" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [675 1129])
+                    ("detectAgainstMap" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("pyramid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1172 1200])
+                            ("pose" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Pose" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1201 1218])
+                            ("map" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SourceMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1219 1240])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Camera" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1241 1277])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1313 1344])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1345 1377])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1378 1407]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1132 2130])
+                    ("detectAgainst2DPoints" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("pyramid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2178 2206])
+                            ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2207 2245])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2246 2289])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2330 2351])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2352 2383])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2384 2416])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2417 2446]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2133 3446])
+                    ("detectAgainst2DPointsAndDepth" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("pyramid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3502 3530])
+                            ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3531 3569])
+                            ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3570 3606])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3655 3698])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3699 3720])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3721 3752])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3802 3834])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3835 3864]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3449 4827])
+                    ("detectWithOcclusionHandling" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("pyramid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4881 4909])
+                            ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4910 4946])
+                            ("mapPointSet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceMapPointSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4994 5031])
+                            ("keyframeSet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceKeyframeSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5032 5069])
+                            ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5116 5154])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5155 5176])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5177 5220])
+                            ("untestedVisibleMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapPointIdVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5268 5317])
+                            ("poseW2C" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Pose" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5318 5338])
+                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [5339 5349])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5397 5428])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5429 5461])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5462 5491]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4829 6499])
+                    ("getDepth" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6531 6567])
+                            ("posF" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec2F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6568 6596]))                          
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [6502 7290])
+                    ("generateMaskFrom2DPoints" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7341 7379])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7380 7423])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7424 7445])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7489 7520])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7521 7553])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7554 7583]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7293 9339])
+                    ("maskInvalidDepthValues" function
+                       (:template 
+                          ( ("DEPTH" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("depthPixels" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("DEPTH" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9402 9427])
+                            ("depthWidth" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [9428 9458])
+                            ("depthHeight" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [9459 9490])
+                            ("scaleFactor" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [9491 9522])
+                            ("imagePointFilter" variable
+                               (:reference 1
+                                :type ("AR::CV::FASTHarris::ImagePointFilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9523 9578]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [9342 9918])
+                    ("generateMaskFrom2DPointsAndDepth" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9977 10015])
+                            ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10016 10052])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10053 10096])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10149 10170])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10171 10202])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10203 10235])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10236 10265]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9921 12788])
+                    ("verifyMapPoint" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12830 12856])
+                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [12857 12867])
+                            ("searchRadius" variable (:type "int") (reparse-symbol arg-sub-list) [12868 12885])
+                            ("mp" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceMapPoint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12886 12911])
+                            ("keyframeSet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceKeyframeSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12912 12949])
+                            ("poseW2C" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Pose" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12950 12970])
+                            ("nccScore" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [12971 12985]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12791 13596])
+                    ("expectVisibility" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("ptPix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec2F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13639 13668])
+                            ("posCam" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec3F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13669 13699])
+                            ("errorStoringOldPoint" variable (:type "bool") (reparse-symbol arg-sub-list) [13736 13762])
+                            ("runVerification" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [13763 13785])
+                            ("isBadPoint" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [13786 13803])
+                            ("isGoodPaint" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [13804 13822])
+                            ("vstats" variable
+                               (:reference 1
+                                :type ("VisibilityStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13823 13847]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [13599 14593])
+                    ("checkVisibility" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14635 14671])
+                            ("ptPix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec2F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14672 14701])
+                            ("posCam" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::Math::Vec3F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14702 14732])
+                            ("errorStoringOldPoint" variable (:type "bool") (reparse-symbol arg-sub-list) [14767 14793])
+                            ("runVerification" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14794 14816])
+                            ("isBadPoint" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14817 14834])
+                            ("isGoodPaint" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14835 14853])
+                            ("vstats" variable
+                               (:reference 1
+                                :type ("VisibilityStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14854 14878]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [14596 15760])
+                    ("generateMaskWithOcclusionHandling" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImagePyramid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15821 15847])
+                            ("depthImage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("AR::Common::Image" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15848 15884])
+                            ("mapPointSet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceMapPointSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15938 15975])
+                            ("keyframeSet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SourceKeyframeSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15976 16013])
+                            ("matches" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ObservedMapPointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16066 16104])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16105 16126])
+                            ("untestedProjectedPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16127 16170])
+                            ("untestedVisibleMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapPointIdVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16224 16273])
+                            ("poseW2C" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Pose" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16274 16294])
+                            ("scale" variable (:type "int") (reparse-symbol arg-sub-list) [16295 16305])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16359 16390])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16391 16423])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16424 16453]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15763 21890])
+                    ("filterPoints" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("keypoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("KeypointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21929 21961])
+                            ("pose" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Pose" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21962 21979])
+                            ("map" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SourceMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21980 22001])
+                            ("camera" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AR::CV::Camera" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [22002 22038])
+                            ("imagePoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22070 22101])
+                            ("newMapPoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vec2FVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22102 22134])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22135 22164]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [21893 24449])
+                    ("selectPoints" function
+                       (:parent "KeypointDetector"
+                        :arguments 
+                          ( ("keypoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("KeypointVector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [24488 24520])
+                            ("stats" variable
+                               (:reference 1
+                                :type ("KeypointDetectorStats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [24521 24550]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [24452 25083]))                  
+                :type "namespace")
+                nil [656 25087]))          
+      :file "KeypointDetector.cpp"
+      :pointmax 25107
+      :fsize 25808
+      :lastmodtime '(22112 24705 228485 0)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!X!Vuforia!Tracker!SLAM!src!SLAM!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

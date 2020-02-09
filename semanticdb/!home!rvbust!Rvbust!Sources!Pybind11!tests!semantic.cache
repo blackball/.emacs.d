@@ -1,0 +1,440 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables
+  (list
+    (semanticdb-table "test_eigen.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11_tests.h" include nil nil [255 282])
+            ("constructor_stats.h" include nil nil [283 313])
+            ("pybind11/eigen.h" include (:system-flag t) nil [314 341])
+            ("pybind11/stl.h" include (:system-flag t) nil [342 367])
+            ("Eigen/Cholesky" include (:system-flag t) nil [476 501])
+            ("Eigen::Matrix" variable (:type "int") nil [521 592])
+            ("reset_ref" function
+               (:template 
+                  ( ("M" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type ("M" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [757 762]))                  )
+                nil [720 873])
+            ("get_cm" function (:type ("Eigen::MatrixXd" type (:type "class") nil nil)) nil [916 1073])
+            ("get_rm" function (:type ("MatrixXdR" type (:type "class") nil nil)) nil [1101 1240])
+            ("reset_refs" function (:type "void") nil [1315 1386])
+            ("get_elem" function
+               (:arguments 
+                  ( ("m" variable (:type ("Eigen::Ref" type
+                         (:template-specifier 
+                            ( ("Eigen::MatrixXd" type (:constant-flag t) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1468 1504]))                  
+                :type "double")
+                nil [1452 1524])
+            ("adjust_matrix" function
+               (:template 
+                  ( ("MatrixArgType" type (:type "class") nil nil))                  
+                :type ("Eigen::MatrixXd" type (:type "class") nil nil)
+                :arguments 
+                  ( ("m" variable (:type ("MatrixArgType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1742 1758]))                  )
+                nil [1678 1915])
+            ("CustomOperatorNew" type
+               (:members 
+                  ( ("a" variable
+                       (:default-value "Eigen::Matrix4d::Zero()"
+                        :type ("Eigen::Matrix4d" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1984 2028])
+                    ("b" variable
+                       (:default-value "Eigen::Matrix4d::Identity()"
+                        :type ("Eigen::Matrix4d" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2033 2081])
+                    ("EIGEN_MAKE_ALIGNED_OPERATOR_NEW" variable (:type "int") (reparse-symbol classsubparts) [2087 2119]))                  
+                :type "struct")
+                nil [1917 2122])
+            ("TEST_SUBMODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("eigen" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2139 2145])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2146 2148]))                  
+                :type "int")
+                nil [2124 16682]))          
+      :file "test_eigen.cpp"
+      :pointmax 16683
+      :fsize 16683
+      :lastmodtime '(23741 18204 933157 654000)
+      :unmatched-syntax '((punctuation 1977 . 1978) (DEFAULT 1970 . 1977) (punctuation 1968 . 1969) (semantic-list 1965 . 1967) (symbol 1948 . 1965) (punctuation 1524 . 1525) (USING 503 . 508)))
+    (semanticdb-table "test_eigen.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pytest" include nil nil [1 14])
+            ("pybind11_tests" include nil nil [15 58])
+            ("pytestmark" variable nil nil [60 104])
+            ("with" code nil nil [106 439])
+            ("assert_equal_ref" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [462 465]))              ) nil [441 512])
+            ("assert_sparse_equal_ref" function (:arguments 
+              ( ("sparse_mat" variable nil (reparse-symbol function_parameters) [542 552]))              ) nil [514 598])
+            ("test_fixed" function nil nil [600 886])
+            ("test_dense" function nil nil [888 1174])
+            ("test_partially_fixed" function nil nil [1176 2782])
+            ("test_mutator_descriptors" function nil nil [2784 3845])
+            ("test_cpp_casting" function nil nil [3847 4827])
+            ("test_pass_readonly_array" function nil nil [4829 5180])
+            ("test_nonunit_stride_from_python" function nil nil [5182 6363])
+            ("test_negative_stride_from_python" function
+               (:documentation "Eigen doesn't support (as of yet) negative strides. When a function takes an Eigen matrix by
+    copy or const reference, we can pass a numpy array that has negative strides.  Otherwise, an
+    exception will be thrown as Eigen will not be able to map the numpy array."
+                :arguments 
+                  ( ("msg" variable nil (reparse-symbol function_parameters) [6402 6405]))                  )
+                nil [6365 8580])
+            ("test_nonunit_stride_to_python" function nil nil [8582 9029])
+            ("test_eigen_ref_to_python" function nil nil [9031 9345])
+            ("assign_both" function (:arguments 
+              ( ("a1" variable nil (reparse-symbol function_parameters) [9363 9365])
+                ("a2" variable nil (reparse-symbol function_parameters) [9367 9369])
+                ("r" variable nil (reparse-symbol function_parameters) [9371 9372])
+                ("c" variable nil (reparse-symbol function_parameters) [9374 9375])
+                ("v" variable nil (reparse-symbol function_parameters) [9377 9378]))              ) nil [9347 9415])
+            ("array_copy_but_one" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [9440 9441])
+                ("r" variable nil (reparse-symbol function_parameters) [9443 9444])
+                ("c" variable nil (reparse-symbol function_parameters) [9446 9447])
+                ("v" variable nil (reparse-symbol function_parameters) [9449 9450]))              ) nil [9417 9513])
+            ("test_eigen_return_references" function (:documentation "Tests various ways of returning references and non-referencing copies") nil [9515 14053])
+            ("assert_keeps_alive" function (:arguments 
+              ( ("cl" variable nil (reparse-symbol function_parameters) [14078 14080])
+                ("method" variable nil (reparse-symbol function_parameters) [14082 14088])
+                ("args" variable nil (reparse-symbol function_parameters) [14090 14095]))              ) nil [14055 14475])
+            ("test_eigen_keepalive" function nil nil [14477 15295])
+            ("test_eigen_ref_mutators" function (:documentation "Tests Eigen's ability to mutate numpy values") nil [15297 17684])
+            ("test_numpy_ref_mutators" function (:documentation "Tests numpy mutating Eigen matrices (for returned Eigen::Ref<...>s)") nil [17686 19292])
+            ("test_both_ref_mutators" function (:documentation "Tests a complex chain of nested eigen/numpy references") nil [19294 20848])
+            ("test_nocopy_wrapper" function nil nil [20850 23341])
+            ("test_eigen_ref_life_support" function (:documentation "Ensure the lifetime of temporary arrays created by the `Ref` caster
+
+    The `Ref` caster sometimes creates a copy which needs to stay alive. This needs to
+    happen both for directs casts (just the array) or indirectly (e.g. list of arrays).
+    ") nil [23343 23798])
+            ("test_special_matrix_objects" function nil nil [23800 24403])
+            ("test_dense_signature" function (:arguments 
+              ( ("doc" variable nil (reparse-symbol function_parameters) [24430 24433]))              ) nil [24405 24978])
+            ("test_named_arguments" function nil nil [24980 25736])
+            ("test_sparse" function (:decorators 
+              ( ("pytest.requires_eigen_and_scipy" function (:type "decorator") nil nil))              ) nil [25738 26110])
+            ("test_sparse_signature" function
+               (:decorators 
+                  ( ("pytest.requires_eigen_and_scipy" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("doc" variable nil (reparse-symbol function_parameters) [26171 26174]))                  )
+                nil [26112 26523])
+            ("test_issue738" function (:documentation "Ignore strides on a length-1 dimension (even if they would be incompatible length > 1)") nil [26525 26996])
+            ("test_issue1105" function (:documentation "Issue 1105: 1xN or Nx1 input arrays weren't accepted for eigen
+    compile-time row vectors or column vector") nil [26998 27573])
+            ("test_custom_operator_new" function (:documentation "Using Eigen types as member variables requires a class-specific
+    operator new with proper alignment") nil [27575 27844]))          
+      :file "test_eigen.py"
+      :pointmax 27844
+      :fsize 27843
+      :lastmodtime '(23741 17910 667909 164000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pybind11_tests.h"
+      :file "pybind11_tests.h"
+      :fsize 2151
+      :lastmodtime '(23303 46019 700562 457000))
+    (semanticdb-table "constructor_stats.h"
+      :file "constructor_stats.h"
+      :fsize 11158
+      :lastmodtime '(23741 18204 929157 637000))
+    (semanticdb-table "pybind11_tests.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11_tests.h" include nil nil [250 277])
+            ("constructor_stats.h" include nil nil [278 308])
+            ("functional" include (:system-flag t) nil [310 331])
+            ("list" include (:system-flag t) nil [332 347])
+            ("initializers" function (:type "int") nil [1152 1251])
+            ("test_initializer" function
+               (:constructor-flag t
+                :parent "test_initializer"
+                :arguments 
+                  ( ("init" variable (:type ("Initializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1288 1305]))                  
+                :type ("test_initializer" type (:type "class") nil nil))
+                nil [1253 1345])
+            ("test_initializer" function
+               (:constructor-flag t
+                :parent "test_initializer"
+                :arguments 
+                  ( ("submodule_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1382 1409])
+                    ("init" variable (:type ("Initializer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1410 1427]))                  
+                :type ("test_initializer" type (:type "class") nil nil))
+                nil [1347 1566])
+            ("bind_ConstructorStats" function
+               (:arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :type ("py::module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1595 1609]))                  
+                :type "void")
+                nil [1568 2674])
+            ("PYBIND11_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("pybind11_tests" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2692 2707])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2708 2710]))                  
+                :type "int")
+                nil [2676 3707]))          
+      :file "pybind11_tests.cpp"
+      :pointmax 3708
+      :fsize 3707
+      :lastmodtime '(23303 46019 700562 457000)
+      :unmatched-syntax '((punctuation 1151 . 1152) (punctuation 1149 . 1150) (punctuation 1148 . 1149) (semantic-list 1134 . 1148) (VOID 1130 . 1134) (punctuation 1129 . 1130) (symbol 1121 . 1129) (punctuation 1120 . 1121) (punctuation 1119 . 1120) (symbol 1116 . 1119) (punctuation 1115 . 1116) (symbol 1111 . 1115) (punctuation 1110 . 1111) (punctuation 1109 . 1110) (symbol 1106 . 1109)))
+    (semanticdb-table "test_smart_ptr.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("pybind11_tests.h" include nil nil [434 461])
+            ("object.h" include nil nil [462 481])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [793 795])
+                    ("" variable (:type ("ref" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [796 803])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [804 809]))                  
+                :type "int")
+                nil [764 810])
+            ("pybind11" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("holder_helper" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("get" function
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ref" type
+                                                     (:template-specifier 
+                                                        ( ("T" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1006 1022]))                                          
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [986 1046]))                                  
+                                :template-specifier 
+                                  ( ("ref" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [921 1053]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [898 1055]))                  
+                :type "namespace")
+                nil [877 1056])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1186 1188])
+                    ("" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1189 1208]))                  
+                :type "int")
+                nil [1157 1209])
+            ("huge_unique_ptr" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("ptr" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1480 1503])
+                    ("padding" variable
+                       (:dereference 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1508 1529])
+                    ("public" label nil (reparse-symbol classsubparts) [1530 1537])
+                    ("huge_unique_ptr" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1558 1563]))                          
+                        :type ("huge_unique_ptr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1542 1575])
+                    ("get" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1581 1611]))                  )
+                nil [1430 1614])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1644 1646])
+                    ("" variable (:type ("huge_unique_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1647 1666]))                  
+                :type "int")
+                nil [1615 1667])
+            ("custom_unique_ptr" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("impl" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1772 1796])
+                    ("public" label nil (reparse-symbol classsubparts) [1797 1804])
+                    ("custom_unique_ptr" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1827 1832]))                          
+                        :type ("custom_unique_ptr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1809 1846])
+                    ("get" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1851 1888])
+                    ("release_ptr" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1893 1936]))                  )
+                nil [1720 1939])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1969 1971])
+                    ("" variable (:type ("custom_unique_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1972 1993]))                  
+                :type "int")
+                nil [1940 1994])
+            ("shared_ptr_with_addressof_operator" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("impl" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2299 2323])
+                    ("public" label nil (reparse-symbol classsubparts) [2324 2331])
+                    ("shared_ptr_with_addressof_operator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2424 2429]))                          
+                        :type ("shared_ptr_with_addressof_operator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2389 2443])
+                    ("get" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2448 2485])
+                    ("&" function
+                       (:operator-flag t
+                        :pointer 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2490 2581]))                  )
+                nil [2230 2584])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2614 2616])
+                    ("" variable (:type ("shared_ptr_with_addressof_operator" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2617 2655]))                  
+                :type "int")
+                nil [2585 2656])
+            ("unique_ptr_with_addressof_operator" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("impl" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2961 2985])
+                    ("public" label nil (reparse-symbol classsubparts) [2986 2993])
+                    ("unique_ptr_with_addressof_operator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3085 3090]))                          
+                        :type ("unique_ptr_with_addressof_operator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3050 3104])
+                    ("get" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3109 3146])
+                    ("release_ptr" function
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3151 3194])
+                    ("&" function
+                       (:operator-flag t
+                        :pointer 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3199 3290]))                  )
+                nil [2892 3293])
+            ("PYBIND11_DECLARE_HOLDER_TYPE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3323 3325])
+                    ("" variable (:type ("unique_ptr_with_addressof_operator" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3326 3364]))                  
+                :type "int")
+                nil [3294 3365])
+            ("TEST_SUBMODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("smart_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3383 3393])
+                    ("" variable (:type ("m" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3394 3396]))                  
+                :type "int")
+                nil [3368 16639]))          
+      :file "test_smart_ptr.cpp"
+      :pointmax 16640
+      :fsize 16639
+      :lastmodtime '(23741 18204 937157 671000)
+      :unmatched-syntax '((punctuation 3044 . 3045) (DEFAULT 3037 . 3044) (punctuation 3035 . 3036) (semantic-list 3032 . 3034) (symbol 2998 . 3032) (punctuation 2383 . 2384) (DEFAULT 2376 . 2383) (punctuation 2374 . 2375) (semantic-list 2370 . 2373) (symbol 2336 . 2370) (punctuation 1575 . 1576)))
+    (semanticdb-table "object.h"
+      :file "object.h"
+      :fsize 5389
+      :lastmodtime '(23303 46019 700562 457000)))
+  :file "!home!rvbust!Rvbust!Sources!Pybind11!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

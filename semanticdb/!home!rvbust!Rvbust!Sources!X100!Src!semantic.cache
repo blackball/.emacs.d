@@ -1,0 +1,1689 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "Motor.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("X100/Motor.h" include (:system-flag t) nil [54 77])
+            ("MotorDC_Rotate" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:constant-flag t
+                        :type ("MotorConfig" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [110 139])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [140 152])
+                    ("rotate_direciton" variable (:type "int") (reparse-symbol arg-sub-list) [153 174])
+                    ("pwm" variable (:type "int") (reparse-symbol arg-sub-list) [175 183])
+                    ("duration_ms" variable (:type "int") (reparse-symbol arg-sub-list) [184 200]))                  
+                :type ("MotorRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [79 610])
+            ("MotorStepper_Rotate" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:constant-flag t
+                        :type ("MotorConfig" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [648 677])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [678 690])
+                    ("rotate_direciton" variable (:type "int") (reparse-symbol arg-sub-list) [691 712])
+                    ("pwm" variable (:type "int") (reparse-symbol arg-sub-list) [713 721])
+                    ("duration_ms" variable (:type "int") (reparse-symbol arg-sub-list) [722 738]))                  
+                :type ("MotorRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [612 950]))          
+      :file "Motor.c"
+      :pointmax 951
+      :fsize 950
+      :lastmodtime '(23567 27151 624547 159000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Uart.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("X100/Uart.h" include nil nil [126 148])
+            ("ack_funs" variable
+               (:dereference 1
+                :default-value "{
+	cmd_test_ack,
+	NULL,
+}"
+                :type ("ack_fun_t" type (:type "class") nil nil))
+                nil [162 211])
+            ("MAX_CMD" variable (:constant-flag t) nil [220 227])
+            ("res" variable (:type "int") nil [268 276])
+            ("a_thread" variable (:type ("pthread_t" type (:type "class") nil nil)) nil [277 296])
+            ("thread_result" variable
+               (:pointer 1
+                :type "void")
+                nil [297 317])
+            ("uart_init" function
+               (:arguments 
+                  ( ("uart_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [333 350]))                  
+                :type "int")
+                nil [319 1593])
+            ("writen" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1696 1703])
+                    ("vptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1704 1721])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1722 1728]))                  
+                :type "int")
+                nil [1685 2046])
+            ("run_going" function (:type "void") nil [2048 2282])
+            ("run_exiting" function (:type "void") nil [2284 2492])
+            ("uart_msg_send" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2560 2577])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2578 2586]))                  
+                :type "int")
+                nil [2542 3501])
+            ("uart_msg_reset" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3541 3546]))                  
+                :type "void")
+                nil [3521 3595])
+            ("uart_msg_check" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3637 3654])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [3655 3663]))                  
+                :type "int")
+                nil [3618 3978])
+            ("cmd_test_ack" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4020 4031]))                  
+                :type "int")
+                nil [4003 4350])
+            ("uart_ev_handler" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4403 4420])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [4421 4429]))                  
+                :type "int")
+                nil [4383 5155])
+            ("uart_msg_parse" function
+               (:arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5194 5211])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5212 5218]))                  
+                :type "void")
+                nil [5174 6082])
+            ("send_test_cmd" function (:type "void") nil [6108 6407])
+            ("thread_recv" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6434 6444]))                  
+                :type "void")
+                nil [6416 6928]))          
+      :file "Uart.c"
+      :pointmax 6929
+      :fsize 7793
+      :lastmodtime '(23567 25674 148075 389000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_CMD" . ((semantic-list "(sizeof(ack_funs)/sizeof(ack_funs[0]))" 228 . 266)))
+          )
+)
+    (semanticdb-table "Serial.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Serial_Open" function
+               (:prototype-flag t
+                :type "int")
+                nil [67 85])
+            ("Serial_Send" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("blocking" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [102 118]))                  
+                :type "int")
+                nil [86 120])
+            ("Serial_Recv" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("blocking" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [137 153]))                  
+                :type "int")
+                nil [121 155])
+            ("Serial_Close" function
+               (:prototype-flag t
+                :type "int")
+                nil [156 175])
+            ("MotorDC_Rotate" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:constant-flag t
+                        :type ("MotorConfig" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [209 238])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [239 251])
+                    ("rotate_direciton" variable (:type "int") (reparse-symbol arg-sub-list) [252 273])
+                    ("pwm" variable (:type "int") (reparse-symbol arg-sub-list) [274 282])
+                    ("duration_ms" variable (:type "int") (reparse-symbol arg-sub-list) [283 299]))                  
+                :type ("MotorRet" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [178 1514]))          
+      :file "Serial.h"
+      :pointmax 1516
+      :fsize 1507
+      :lastmodtime '(23567 26177 77601 363000)
+      :unmatched-syntax nil)
+    (semanticdb-table "MessageUtils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MakeMessage_MotorRotate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [95 108])
+                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [109 125])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [126 138])
+                    ("rotation_direction" variable (:type "int") (reparse-symbol arg-sub-list) [139 162])
+                    ("pwm" variable (:type "float") (reparse-symbol arg-sub-list) [163 173])
+                    ("duration_ms" variable (:type "float") (reparse-symbol arg-sub-list) [174 192])
+                    ("positive_current_limit" variable (:type "float") (reparse-symbol arg-sub-list) [193 222])
+                    ("negative_current_limit" variable (:type "float") (reparse-symbol arg-sub-list) [223 252]))                  
+                :type "int")
+                nil [67 253]))          
+      :file "MessageUtils.h"
+      :pointmax 256
+      :fsize 255
+      :lastmodtime '(23567 26749 579322 275000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 72 . 89) (INT 68 . 71) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 72 . 82) (INT 68 . 71) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 72 . 85) (INT 68 . 71) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 72 . 82) (INT 68 . 71) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 72 . 76) (INT 68 . 71) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "cJSON.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [1529 1548])
+            ("stdio.h" include (:system-flag t) nil [1549 1567])
+            ("math.h" include (:system-flag t) nil [1568 1585])
+            ("stdlib.h" include (:system-flag t) nil [1586 1605])
+            ("limits.h" include (:system-flag t) nil [1606 1625])
+            ("ctype.h" include (:system-flag t) nil [1626 1644])
+            ("X100/cJSON.h" include (:system-flag t) nil [1798 1821])
+            ("true" variable (:constant-flag t) nil [1865 1869])
+            ("false" variable (:constant-flag t) nil [1894 1899])
+            ("error" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("json" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "unsigned char")
+                              (reparse-symbol classsubparts) [1938 1964])
+                          ("position" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1969 1985]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1917 1994])
+            ("global_error" variable
+               (:typemodifiers ("static")
+                :default-value "{ NULL, 0 }"
+                :type ("error" type (:type "class") nil nil))
+                nil [1995 2035])
+            ("cJSON_GetErrorPtr" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2082 2087]))                  
+                :type "int")
+                nil [2064 2161])
+            ("cJSON_GetStringValue" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2205 2217]))                  
+                :type "int")
+                nil [2184 2312])
+            ("cJSON_Version" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2637 2642]))                  
+                :type "int")
+                nil [2623 2793])
+            ("case_insensitive_strcmp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("string1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [2920 2949])
+                    ("string2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [2950 2979]))                  
+                :type "int")
+                nil [2885 3334])
+            ("internal_hooks" type
+               (:typedef ("internal_hooks" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [3336 3549])
+            ("internal_malloc" variable (:constant-flag t) nil [3941 3956])
+            ("internal_free" variable (:constant-flag t) nil [3972 3985])
+            ("internal_realloc" variable (:constant-flag t) nil [3999 4015])
+            ("global_hooks" variable
+               (:typemodifiers ("static")
+                :default-value "{ internal_malloc, internal_free, internal_realloc }"
+                :type ("internal_hooks" type (:type "class") nil nil))
+                nil [4032 4122])
+            ("cJSON_strdup" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [4159 4187])
+                    ("hooks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("internal_hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4188 4223]))                  
+                :type "unsigned char")
+                nil [4124 4555])
+            ("cJSON_InitHooks" function
+               (:arguments 
+                  ( ("hooks" variable
+                       (:pointer 1
+                        :type ("cJSON_Hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4592 4611]))                  
+                :type "int")
+                nil [4576 5311])
+            ("cJSON_New_Item" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("hooks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("internal_hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5370 5405]))                  
+                :type ("cJSON" type (:type "class") nil nil))
+                nil [5341 5554])
+            ("cJSON_Delete" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5620 5632]))                  
+                :type "int")
+                nil [5607 6215])
+            ("get_decimal_point" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6316 6321]))                  
+                :type "unsigned char")
+                nil [6277 6468])
+            ("parse_buffer" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("content" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "unsigned char")
+                              (reparse-symbol classsubparts) [6491 6520])
+                          ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6525 6539])
+                          ("offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6544 6558])
+                          ("depth" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6563 6576])
+                          ("hooks" variable (:type ("internal_hooks" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6661 6682]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [6470 6698])
+            ("can_read" variable (:constant-flag t) nil [6796 6804])
+            ("can_access_at_index" variable (:constant-flag t) nil [6976 6995])
+            ("cannot_access_at_index" variable (:constant-flag t) nil [7089 7111])
+            ("buffer_at_offset" variable (:constant-flag t) nil [7223 7239])
+            ("parse_number" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7403 7422])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7423 7457]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [7372 9320])
+            ("cJSON_SetNumberHelper" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9452 9466])
+                    ("number" variable (:type "double") (reparse-symbol arg-sub-list) [9467 9481]))                  
+                :type "int")
+                nil [9430 9751])
+            ("printbuffer" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("buffer" variable
+                             (:pointer 1
+                              :type "unsigned char")
+                              (reparse-symbol classsubparts) [9774 9796])
+                          ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9801 9815])
+                          ("offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9820 9834])
+                          ("depth" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9839 9852])
+                          ("noalloc" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9910 9929])
+                          ("format" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9934 9952])
+                          ("hooks" variable (:type ("internal_hooks" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9995 10016]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [9753 10031])
+            ("ensure" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10138 10160])
+                    ("needed" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10161 10175]))                  
+                :type "unsigned char")
+                nil [10109 11947])
+            ("update_offset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12059 12086]))                  
+                :type "void")
+                nil [12033 12334])
+            ("print_number" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12433 12458])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12459 12493]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [12402 14218])
+            ("parse_hex4" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [14286 14320]))                  
+                :type "unsigned int")
+                nil [14259 15024])
+            ("utf16_literal_to_utf8" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input_pointer" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [15170 15212])
+                    ("input_end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [15213 15251])
+                    ("output_pointer" variable
+                       (:pointer 2
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [15252 15283]))                  
+                :type "unsigned char")
+                nil [15127 18458])
+            ("parse_string" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18563 18582])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18583 18617]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [18532 22366])
+            ("print_string_ptr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [22480 22514])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22515 22549]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [22445 25852])
+            ("print_string" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25945 25970])
+                    ("p" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25971 25993]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [25914 26064])
+            ("parse_value" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26131 26150])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26151 26185]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26101 26186])
+            ("print_value" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26217 26242])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26243 26277]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26187 26278])
+            ("parse_array" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26309 26328])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26329 26363]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26279 26364])
+            ("print_array" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26395 26420])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26421 26455]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26365 26456])
+            ("parse_object" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26488 26507])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26508 26542]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26457 26543])
+            ("print_object" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26575 26600])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26601 26635]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [26544 26636])
+            ("buffer_skip_whitespace" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26725 26753]))                  
+                :type ("parse_buffer" type (:type "class") nil nil))
+                nil [26681 27066])
+            ("skip_utf8_bom" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27184 27212]))                  
+                :type ("parse_buffer" type (:type "class") nil nil))
+                nil [27149 27507])
+            ("cJSON_ParseWithOpts" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27608 27626])
+                    ("return_parse_end" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27627 27657])
+                    ("require_null_terminated" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27658 27693]))                  
+                :type "int")
+                nil [27588 29453])
+            ("cJSON_Parse" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [29527 29545]))                  
+                :type "int")
+                nil [29515 29594])
+            ("cjson_min" variable (:constant-flag t) nil [29604 29613])
+            ("print" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29667 29692])
+                    ("format" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29693 29711])
+                    ("hooks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("internal_hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29712 29747]))                  
+                :type "unsigned char")
+                nil [29639 31211])
+            ("cJSON_Print" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31298 31316]))                  
+                :type "int")
+                nil [31286 31372])
+            ("cJSON_PrintUnformatted" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31418 31436]))                  
+                :type "int")
+                nil [31395 31493])
+            ("cJSON_PrintBuffered" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31536 31554])
+                    ("prebuffer" variable (:type "int") (reparse-symbol arg-sub-list) [31555 31569])
+                    ("fmt" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31570 31585]))                  
+                :type "int")
+                nil [31516 32089])
+            ("cJSON_PrintPreallocated" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32140 32152])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32153 32163])
+                    ("len" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [32164 32178])
+                    ("fmt" variable
+                       (:constant-flag t
+                        :type ("cJSON_bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32179 32200]))                  
+                :type "int")
+                nil [32116 32518])
+            ("parse_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32617 32636])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32637 32671]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [32587 34338])
+            ("print_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34400 34425])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34426 34460]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [34370 36171])
+            ("parse_array" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36241 36260])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36261 36295]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [36211 38516])
+            ("print_array" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38578 38603])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38604 38638]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [38548 40045])
+            ("parse_object" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40115 40134])
+                    ("input_buffer" variable
+                       (:pointer 1
+                        :type ("parse_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40135 40169]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [40084 43042])
+            ("print_object" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43107 43132])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("printbuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43133 43167]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [43076 45957])
+            ("cJSON_GetArraySize" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46037 46056]))                  
+                :type "int")
+                nil [46018 46371])
+            ("get_array_item" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46402 46421])
+                    ("index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46422 46435]))                  
+                :type ("cJSON" type (:type "class") nil nil))
+                nil [46373 46716])
+            ("cJSON_GetArrayItem" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46759 46778])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [46779 46789]))                  
+                :type "int")
+                nil [46740 46895])
+            ("get_object_item" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46927 46954])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [46955 46979])
+                    ("case_sensitive" variable
+                       (:constant-flag t
+                        :type ("cJSON_bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46980 47012]))                  
+                :type ("cJSON" type (:type "class") nil nil))
+                nil [46897 47642])
+            ("cJSON_GetObjectItem" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47686 47713])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47714 47740]))                  
+                :type "int")
+                nil [47666 47795])
+            ("cJSON_GetObjectItemCaseSensitive" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47852 47879])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47880 47906]))                  
+                :type "int")
+                nil [47819 47960])
+            ("cJSON_HasObjectItem" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48007 48027])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [48028 48047]))                  
+                :type "int")
+                nil [47987 48107])
+            ("suffix_object" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48174 48186])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48187 48199]))                  
+                :type "void")
+                nil [48148 48249])
+            ("create_reference" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48321 48339])
+                    ("hooks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("internal_hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48340 48375]))                  
+                :type ("cJSON" type (:type "class") nil nil))
+                nil [48290 48748])
+            ("add_item_to_array" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48786 48799])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48800 48812]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [48750 49242])
+            ("cJSON_AddItemToArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49316 49329])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49330 49342]))                  
+                :type "int")
+                nil [49295 49382])
+            ("cast_away_const" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49673 49692]))                  
+                :type "void")
+                nil [49644 49722])
+            ("add_item_to_object" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49912 49933])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49934 49960])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49961 49980])
+                    ("hooks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("internal_hooks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49981 50016])
+                    ("constant_key" variable
+                       (:constant-flag t
+                        :type ("cJSON_bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50017 50047]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [49875 50801])
+            ("cJSON_AddItemToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50844 50858])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [50859 50878])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50879 50891]))                  
+                :type "int")
+                nil [50822 50963])
+            ("cJSON_AddItemToObjectCS" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51067 51081])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51082 51101])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51102 51114]))                  
+                :type "int")
+                nil [51043 51185])
+            ("cJSON_AddItemReferenceToArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51236 51249])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51250 51262]))                  
+                :type "int")
+                nil [51206 51387])
+            ("cJSON_AddItemReferenceToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51439 51453])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51454 51473])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51474 51486]))                  
+                :type "int")
+                nil [51408 51666])
+            ("cJSON_AddNullToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51711 51732])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [51733 51757]))                  
+                :type "int")
+                nil [51689 51944])
+            ("cJSON_AddTrueToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51989 52010])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52011 52035]))                  
+                :type "int")
+                nil [51967 52242])
+            ("cJSON_AddFalseToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52288 52309])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52310 52334]))                  
+                :type "int")
+                nil [52265 52546])
+            ("cJSON_AddBoolToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52591 52612])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52613 52637])
+                    ("boolean" variable
+                       (:constant-flag t
+                        :type ("cJSON_bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52638 52663]))                  
+                :type "int")
+                nil [52569 52877])
+            ("cJSON_AddNumberToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52924 52945])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52946 52970])
+                    ("number" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [52971 52991]))                  
+                :type "int")
+                nil [52900 53214])
+            ("cJSON_AddStringToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53261 53282])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53283 53307])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53308 53334]))                  
+                :type "int")
+                nil [53237 53557])
+            ("cJSON_AddRawToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53601 53622])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53623 53647])
+                    ("raw" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53648 53671]))                  
+                :type "int")
+                nil [53580 53876])
+            ("cJSON_AddObjectToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53923 53944])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53945 53969]))                  
+                :type "int")
+                nil [53899 54186])
+            ("cJSON_AddArrayToObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54232 54253])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [54254 54278]))                  
+                :type "int")
+                nil [54209 54470])
+            ("cJSON_DetachItemViaPointer" function
+               (:arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54521 54535])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54536 54555]))                  
+                :type "int")
+                nil [54494 55107])
+            ("cJSON_DetachItemFromArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55157 55170])
+                    ("which" variable (:type "int") (reparse-symbol arg-sub-list) [55171 55181]))                  
+                :type "int")
+                nil [55131 55322])
+            ("cJSON_DeleteItemFromArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55369 55382])
+                    ("which" variable (:type "int") (reparse-symbol arg-sub-list) [55383 55393]))                  
+                :type "int")
+                nil [55343 55456])
+            ("cJSON_DetachItemFromObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55507 55521])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [55522 55541]))                  
+                :type "int")
+                nil [55480 55664])
+            ("cJSON_DetachItemFromObjectCaseSensitive" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55728 55742])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [55743 55762]))                  
+                :type "int")
+                nil [55688 55898])
+            ("cJSON_DeleteItemFromObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55946 55960])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [55961 55980]))                  
+                :type "int")
+                nil [55919 56046])
+            ("cJSON_DeleteItemFromObjectCaseSensitive" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56107 56121])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56122 56141]))                  
+                :type "int")
+                nil [56067 56220])
+            ("cJSON_InsertItemInArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56313 56326])
+                    ("which" variable (:type "int") (reparse-symbol arg-sub-list) [56327 56337])
+                    ("newitem" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56338 56353]))                  
+                :type "int")
+                nil [56289 56861])
+            ("cJSON_ReplaceItemViaPointer" function
+               (:arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56916 56937])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56938 56957])
+                    ("replacement" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56958 56978]))                  
+                :type "int")
+                nil [56888 57579])
+            ("cJSON_ReplaceItemInArray" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57625 57638])
+                    ("which" variable (:type "int") (reparse-symbol arg-sub-list) [57639 57649])
+                    ("newitem" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57650 57665]))                  
+                :type "int")
+                nil [57600 57804])
+            ("replace_item_in_object" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57847 57861])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [57862 57881])
+                    ("replacement" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57882 57901])
+                    ("case_sensitive" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57902 57928]))                  
+                :type ("cJSON_bool" type (:type "class") nil nil))
+                nil [57806 58463])
+            ("cJSON_ReplaceItemInObject" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58510 58524])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58525 58544])
+                    ("newitem" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58545 58560]))                  
+                :type "int")
+                nil [58484 58624])
+            ("cJSON_ReplaceItemInObjectCaseSensitive" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58684 58698])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58699 58718])
+                    ("newitem" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58719 58734]))                  
+                :type "int")
+                nil [58645 58797])
+            ("cJSON_CreateNull" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [58864 58869]))                  
+                :type "int")
+                nil [58847 58998])
+            ("cJSON_CreateTrue" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [59039 59044]))                  
+                :type "int")
+                nil [59022 59173])
+            ("cJSON_CreateFalse" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [59215 59220]))                  
+                :type "int")
+                nil [59197 59350])
+            ("cJSON_CreateBool" function
+               (:arguments 
+                  ( ("b" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59391 59404]))                  
+                :type "int")
+                nil [59374 59551])
+            ("cJSON_CreateNumber" function
+               (:arguments 
+                  ( ("num" variable (:type "double") (reparse-symbol arg-sub-list) [59594 59605]))                  
+                :type "int")
+                nil [59575 60076])
+            ("cJSON_CreateString" function
+               (:arguments 
+                  ( ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60119 60138]))                  
+                :type "int")
+                nil [60100 60471])
+            ("cJSON_CreateStringReference" function
+               (:arguments 
+                  ( ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60523 60542]))                  
+                :type "int")
+                nil [60495 60762])
+            ("cJSON_CreateObjectReference" function
+               (:arguments 
+                  ( ("child" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60814 60833]))                  
+                :type "int")
+                nil [60786 61043])
+            ("cJSON_CreateArrayReference" function
+               (:arguments 
+                  ( ("child" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61094 61113]))                  
+                :type "int")
+                nil [61067 61322])
+            ("cJSON_CreateRaw" function
+               (:arguments 
+                  ( ("raw" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [61362 61378]))                  
+                :type "int")
+                nil [61346 61705])
+            ("cJSON_CreateArray" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [61747 61752]))                  
+                :type "int")
+                nil [61729 61880])
+            ("cJSON_CreateObject" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [61923 61928]))                  
+                :type "int")
+                nil [61904 62060])
+            ("cJSON_CreateIntArray" function
+               (:arguments 
+                  ( ("numbers" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [62126 62145])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [62146 62156]))                  
+                :type "int")
+                nil [62105 62696])
+            ("cJSON_CreateFloatArray" function
+               (:arguments 
+                  ( ("numbers" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [62743 62764])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [62765 62775]))                  
+                :type "int")
+                nil [62720 63323])
+            ("cJSON_CreateDoubleArray" function
+               (:arguments 
+                  ( ("numbers" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [63371 63393])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [63394 63404]))                  
+                :type "int")
+                nil [63347 63943])
+            ("cJSON_CreateStringArray" function
+               (:arguments 
+                  ( ("strings" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [63991 64012])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [64013 64023]))                  
+                :type "int")
+                nil [63967 64563])
+            ("cJSON_Duplicate" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64621 64639])
+                    ("recurse" variable (:type ("cJSON_bool" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64640 64659]))                  
+                :type "int")
+                nil [64605 66518])
+            ("cJSON_Minify" function
+               (:arguments 
+                  ( ("json" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [66552 66563]))                  
+                :type "int")
+                nil [66539 68117])
+            ("cJSON_IsInvalid" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68160 68185]))                  
+                :type "int")
+                nil [68144 68295])
+            ("cJSON_IsFalse" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68336 68361]))                  
+                :type "int")
+                nil [68322 68469])
+            ("cJSON_IsTrue" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68509 68534]))                  
+                :type "int")
+                nil [68496 68641])
+            ("cJSON_IsBool" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68682 68707]))                  
+                :type "int")
+                nil [68669 68827])
+            ("cJSON_IsNull" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68866 68891]))                  
+                :type "int")
+                nil [68853 68998])
+            ("cJSON_IsNumber" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69040 69065]))                  
+                :type "int")
+                nil [69025 69174])
+            ("cJSON_IsString" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69216 69241]))                  
+                :type "int")
+                nil [69201 69350])
+            ("cJSON_IsArray" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69391 69416]))                  
+                :type "int")
+                nil [69377 69524])
+            ("cJSON_IsObject" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69566 69591]))                  
+                :type "int")
+                nil [69551 69700])
+            ("cJSON_IsRaw" function
+               (:arguments 
+                  ( ("item" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69739 69764]))                  
+                :type "int")
+                nil [69727 69870])
+            ("cJSON_Compare" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69911 69933])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69934 69956])
+                    ("case_sensitive" variable
+                       (:constant-flag t
+                        :type ("cJSON_bool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69957 69989]))                  
+                :type "int")
+                nil [69897 73124])
+            ("cJSON_malloc" function
+               (:arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [73160 73172]))                  
+                :type "int")
+                nil [73147 73216])
+            ("cJSON_free" function
+               (:arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [73248 73261]))                  
+                :type "int")
+                nil [73237 73302]))          
+      :file "cJSON.c"
+      :pointmax 73303
+      :fsize 73302
+      :lastmodtime '(23567 24549 412358 632000)
+      :unmatched-syntax '((semantic-list 73230 . 73236) (symbol 73218 . 73230) (semantic-list 73138 . 73146) (symbol 73126 . 73138) (semantic-list 69884 . 69896) (symbol 69872 . 69884) (semantic-list 69714 . 69726) (symbol 69702 . 69714) (semantic-list 69538 . 69550) (symbol 69526 . 69538) (semantic-list 69364 . 69376) (symbol 69352 . 69364) (semantic-list 69188 . 69200) (symbol 69176 . 69188) (semantic-list 69012 . 69024) (symbol 69000 . 69012) (semantic-list 68840 . 68852) (symbol 68828 . 68840) (semantic-list 68656 . 68668) (symbol 68644 . 68656) (semantic-list 68483 . 68495) (symbol 68471 . 68483) (semantic-list 68309 . 68321) (symbol 68297 . 68309) (semantic-list 68131 . 68143) (symbol 68119 . 68131) (semantic-list 66532 . 66538) (symbol 66520 . 66532) (semantic-list 64595 . 64604) (symbol 64583 . 64595) (semantic-list 63957 . 63966) (symbol 63945 . 63957) (semantic-list 63337 . 63346) (symbol 63325 . 63337) (semantic-list 62710 . 62719) (symbol 62698 . 62710) (semantic-list 62095 . 62104) (symbol 62083 . 62095) (semantic-list 61894 . 61903) (symbol 61882 . 61894) (semantic-list 61719 . 61728) (symbol 61707 . 61719) (semantic-list 61336 . 61345) (symbol 61324 . 61336) (semantic-list 61057 . 61066) (symbol 61045 . 61057) (semantic-list 60776 . 60785) (symbol 60764 . 60776) (semantic-list 60485 . 60494) (symbol 60473 . 60485) (semantic-list 60090 . 60099) (symbol 60078 . 60090) (semantic-list 59565 . 59574) (symbol 59553 . 59565) (semantic-list 59364 . 59373) (symbol 59352 . 59364) (semantic-list 59187 . 59196) (symbol 59175 . 59187) (semantic-list 59012 . 59021) (symbol 59000 . 59012) (semantic-list 58837 . 58846) (symbol 58825 . 58837) (semantic-list 58638 . 58644) (symbol 58626 . 58638) (semantic-list 58477 . 58483) (symbol 58465 . 58477) (semantic-list 57593 . 57599) (symbol 57581 . 57593) (semantic-list 56875 . 56887) (symbol 56863 . 56875) (semantic-list 56282 . 56288) (symbol 56270 . 56282) (semantic-list 56060 . 56066) (symbol 56048 . 56060) (semantic-list 55912 . 55918) (symbol 55900 . 55912) (semantic-list 55678 . 55687) (symbol 55666 . 55678) (semantic-list 55470 . 55479) (symbol 55458 . 55470) (semantic-list 55336 . 55342) (symbol 55324 . 55336) (semantic-list 55121 . 55130) (symbol 55109 . 55121) (semantic-list 54484 . 54493) (symbol 54472 . 54484) (semantic-list 54200 . 54208) (symbol 54188 . 54200) (semantic-list 53890 . 53898) (symbol 53878 . 53890) (semantic-list 53571 . 53579) (symbol 53559 . 53571) (semantic-list 53228 . 53236) (symbol 53216 . 53228) (semantic-list 52891 . 52899) (symbol 52879 . 52891) (semantic-list 52560 . 52568) (symbol 52548 . 52560) (semantic-list 52256 . 52264) (symbol 52244 . 52256) (semantic-list 51958 . 51966) (symbol 51946 . 51958) (semantic-list 51680 . 51688) (symbol 51668 . 51680) (semantic-list 51401 . 51407) (symbol 51389 . 51401) (semantic-list 51199 . 51205) (symbol 51187 . 51199) (semantic-list 51036 . 51042) (symbol 51024 . 51036) (semantic-list 50815 . 50821) (symbol 50803 . 50815) (symbol 49862 . 49865) (symbol 49851 . 49861) (symbol 49847 . 49850) (symbol 49840 . 49846) (punctuation 49839 . 49840) (string 49582 . 49595) (symbol 49574 . 49581) (symbol 49563 . 49573) (symbol 49559 . 49562) (symbol 49552 . 49558) (punctuation 49551 . 49552) (symbol 49523 . 49527) (symbol 49512 . 49522) (symbol 49508 . 49511) (symbol 49501 . 49507) (punctuation 49500 . 49501) (semantic-list 49288 . 49294) (symbol 49276 . 49288) (semantic-list 47974 . 47986) (symbol 47962 . 47974) (semantic-list 47809 . 47818) (symbol 47797 . 47809) (semantic-list 47656 . 47665) (symbol 47644 . 47656) (semantic-list 46730 . 46739) (symbol 46718 . 46730) (semantic-list 46012 . 46017) (symbol 46000 . 46012) (semantic-list 32103 . 32115) (symbol 32091 . 32103) (semantic-list 31507 . 31515) (symbol 31495 . 31507) (semantic-list 31386 . 31394) (symbol 31374 . 31386) (semantic-list 31277 . 31285) (symbol 31265 . 31277) (semantic-list 29505 . 29514) (symbol 29493 . 29505) (semantic-list 27578 . 27587) (symbol 27566 . 27578) (semantic-list 9421 . 9429) (symbol 9409 . 9421) (semantic-list 5600 . 5606) (symbol 5588 . 5600) (semantic-list 4569 . 4575) (symbol 4557 . 4569) (punctuation 3530 . 3531) (semantic-list 3502 . 3530) (semantic-list 3477 . 3502) (punctuation 3476 . 3477) (VOID 3471 . 3475) (punctuation 3465 . 3466) (semantic-list 3450 . 3465) (semantic-list 3425 . 3450) (VOID 3420 . 3424) (punctuation 3414 . 3415) (semantic-list 3401 . 3414) (semantic-list 3378 . 3401) (punctuation 3377 . 3378) (VOID 3372 . 3376) (semantic-list 2609 . 2622) (symbol 2597 . 2609) (punctuation 2587 . 2588) (symbol 2583 . 2587) (symbol 2579 . 2582) (symbol 2574 . 2578) (symbol 2569 . 2573) (symbol 2564 . 2568) (symbol 2559 . 2563) (symbol 2554 . 2558) (punctuation 2552 . 2553) (symbol 2544 . 2552) (symbol 2534 . 2543) (symbol 2529 . 2533) (symbol 2527 . 2528) (punctuation 2526 . 2527) (symbol 2521 . 2526) (symbol 2517 . 2520) (symbol 2515 . 2516) (punctuation 2514 . 2515) (symbol 2509 . 2514) (symbol 2503 . 2508) (punctuation 2502 . 2503) (semantic-list 2175 . 2183) (symbol 2163 . 2175) (semantic-list 2049 . 2063) (symbol 2037 . 2049) (symbol 1786 . 1789) (symbol 1775 . 1785) (symbol 1771 . 1774) (symbol 1764 . 1770) (punctuation 1763 . 1764) (semantic-list 1359 . 1368) (symbol 1355 . 1359) (DEFAULT 1360 . 1367) (symbol 1344 . 1354) (DEFAULT 1360 . 1367) (symbol 1340 . 1343) (symbol 1333 . 1339) (punctuation 1332 . 1333))
+      :lexical-table 
+        '(("can_access_at_index" (spp-arg-list ("buffer" "index") 6995 . 7010) . ((semantic-list "((buffer != NULL) && (((buffer)->offset + index) < (buffer)->length))" 7011 . 7080)))
+          ("false" . ((semantic-list "((cJSON_bool)0)" 1900 . 1915)))
+          ("internal_free" . ((symbol "free" 3986 . 3990)))
+          ("can_read" (spp-arg-list ("buffer" "size") 6804 . 6818) . ((semantic-list "((buffer != NULL) && (((buffer)->offset + size) <= (buffer)->length))" 6819 . 6888)))
+          ("internal_malloc" . ((symbol "malloc" 3957 . 3963)))
+          ("internal_realloc" . ((symbol "realloc" 4016 . 4023)))
+          ("cjson_min" (spp-arg-list ("a" "b") 29613 . 29619) . ((semantic-list "((a < b) ? a : b)" 29620 . 29637)))
+          ("true" . ((semantic-list "((cJSON_bool)1)" 1870 . 1885)))
+          ("cannot_access_at_index" (spp-arg-list ("buffer" "index") 7111 . 7126) . ((semantic-list "(!can_access_at_index(buffer, index))" 7127 . 7164)))
+          ("buffer_at_offset" (spp-arg-list ("buffer") 7239 . 7247) . ((semantic-list "((buffer)->content + (buffer)->offset)" 7248 . 7286)))
+          )
+)
+    (semanticdb-table "MessageUtils.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("cJSON.h" include nil nil [54 72])
+            ("string.h" include (:system-flag t) nil [73 92])
+            ("stdlib.h" include (:system-flag t) nil [93 112])
+            ("CMD_MotorDC_Rotate" variable (:constant-flag t) nil [122 140])
+            ("CMD_MotorStepper_Rotate" variable (:constant-flag t) nil [165 188])
+            ("CMD_FPGACapture_Execute" variable (:constant-flag t) nil [208 231])
+            ("CMD_OpticsEngine_Open" variable (:constant-flag t) nil [251 272])
+            ("CMD_OpticsEngine_Close" variable (:constant-flag t) nil [294 316])
+            ("CMD_OpticsEngine_Play" variable (:constant-flag t) nil [337 358])
+            ("CMD_TEST" variable (:constant-flag t) nil [381 389])
+            ("CMD_DLPC_LED_POWER" variable (:constant-flag t) nil [410 428])
+            ("MakeMessage_MotorRotate" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [460 473])
+                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [474 490])
+                    ("motorid" variable (:type "int") (reparse-symbol arg-sub-list) [491 503])
+                    ("rotation_direction" variable (:type "int") (reparse-symbol arg-sub-list) [504 527])
+                    ("pwm" variable (:type "float") (reparse-symbol arg-sub-list) [528 538])
+                    ("duration_ms" variable (:type "float") (reparse-symbol arg-sub-list) [539 557])
+                    ("positive_current_limit" variable (:type "float") (reparse-symbol arg-sub-list) [558 587])
+                    ("negative_current_limit" variable (:type "float") (reparse-symbol arg-sub-list) [588 617]))                  
+                :type "int")
+                nil [432 1385]))          
+      :file "MessageUtils.c"
+      :pointmax 1386
+      :fsize 1380
+      :lastmodtime '(23567 27120 940453 466000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CMD_DLPC_LED_POWER" . ((number "1" 429 . 430)))
+          ("CMD_TEST" . ((number "0" 400 . 401)))
+          ("CMD_FPGACapture_Execute" . ((number "3" 241 . 242)))
+          ("CMD_OpticsEngine_Open" . ((number "4" 284 . 285)))
+          ("CMD_MotorDC_Rotate" . ((number "1" 155 . 156)))
+          ("CMD_OpticsEngine_Play" . ((number "6" 370 . 371)))
+          ("CMD_MotorStepper_Rotate" . ((number "2" 198 . 199)))
+          ("CMD_OpticsEngine_Close" . ((number "5" 327 . 328)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!X100!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,752 @@
+;; Object app-dev/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "app-dev/"
+  :tables
+  (list
+    (semanticdb-table "fpga_cmd.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("sys/stat.h" include (:system-flag t) nil [1 22])
+            ("stdio.h" include (:system-flag t) nil [23 41])
+            ("fcntl.h" include (:system-flag t) nil [42 60])
+            ("unistd.h" include (:system-flag t) nil [61 80])
+            ("sys/mman.h" include (:system-flag t) nil [81 102])
+            ("ctype.h" include (:system-flag t) nil [103 121])
+            ("cJSON.h" include nil nil [122 140])
+            ("pl.h" include nil nil [142 157])
+            ("cmd_api.h" include nil nil [158 178])
+            ("MAPSIZE" variable (:constant-flag t) nil [188 195])
+            ("PLDDR_SIZE" variable (:constant-flag t) nil [211 221])
+            ("IMG_PATH" variable (:constant-flag t) nil [246 254])
+            ("lcd0_ptr" variable
+               (:pointer 1
+                :type ("u32" type (:type "class") nil nil))
+                nil [270 308])
+            ("vdma0_ptr" variable
+               (:pointer 1
+                :type ("u32" type (:type "class") nil nil))
+                nil [270 308])
+            ("vdma1_ptr" variable
+               (:pointer 1
+                :type ("u32" type (:type "class") nil nil))
+                nil [270 308])
+            ("ddr_ptr" variable
+               (:pointer 1
+                :type "char")
+                nil [309 323])
+            ("lcd_fd" variable (:type "int") nil [324 355])
+            ("vdma0_fd" variable (:type "int") nil [324 355])
+            ("vdma1_fd" variable (:type "int") nil [324 355])
+            ("ddr_fd" variable (:type "int") nil [356 367])
+            ("get_file_size" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [397 414]))                  
+                :type "unsigned long")
+                nil [369 636])
+            ("fpga_init" function (:type "int") nil [638 2166])
+            ("fpga_clear" function (:type "int") nil [2168 2388])
+            ("VDMA1_setting" function
+               (:arguments 
+                  ( ("width" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2409 2419])
+                    ("height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2420 2431])
+                    ("hStride" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2431 2443])
+                    ("s2mm_addr" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2449 2463])
+                    ("mm2s_addr" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2464 2478])
+                    ("bmpByteSize" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2478 2494]))                  
+                :type "void")
+                nil [2390 3664])
+            ("VDMA2_setting" function
+               (:arguments 
+                  ( ("width" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3685 3695])
+                    ("height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3696 3707])
+                    ("hStride" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3707 3719])
+                    ("s2mm_addr" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3722 3736])
+                    ("mm2s_addr" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3737 3751])
+                    ("bmpByteSize" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3751 3767]))                  
+                :type "void")
+                nil [3666 4709])
+            ("VDMA_All_start" function
+               (:arguments 
+                  ( ("height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4732 4743]))                  
+                :type "void")
+                nil [4712 5116])
+            ("VDMA_All_start_03" function
+               (:arguments 
+                  ( ("height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5140 5151]))                  
+                :type "void")
+                nil [5117 5523])
+            ("VDMA_All_stop" function (:type "void") nil [5524 5764])
+            ("LCD0_Setting" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5784 5789]))                  
+                :type "void")
+                nil [5766 6443])
+            ("StartVDMA" function (:type "void") nil [6444 6800])
+            ("LCD0_Start" function
+               (:arguments 
+                  ( ("dwMODE" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6818 6829]))                  
+                :type "void")
+                nil [6802 7022])
+            ("LCD0_Stop" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7039 7044]))                  
+                :type "void")
+                nil [7024 7107])
+            ("cmd_play" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7122 7133])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7134 7145]))                  
+                :type "int")
+                nil [7109 9218])
+            ("cmd_capture_start" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9242 9253])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9254 9265]))                  
+                :type "int")
+                nil [9220 11785])
+            ("cmd_capture_stop" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11808 11819])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11820 11831]))                  
+                :type "int")
+                nil [11787 11896]))          
+      :file "fpga_cmd.c"
+      :pointmax 11896
+      :fsize 12495
+      :lastmodtime '(23678 13431 984512 844000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAPSIZE" . ((number "0x1000" 196 . 202)))
+          ("PLDDR_SIZE" . ((semantic-list "(128*1024*1024)" 222 . 237)))
+          ("IMG_PATH" . ((string "\"/mnt/rbimg/\"" 255 . 268)))
+          )
+)
+    (semanticdb-table "cJSON.h"
+      :file "cJSON.h"
+      :fsize 14881
+      :lastmodtime '(23678 13431 984512 844000))
+    (semanticdb-table "pl.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("__PL_H__" variable (:constant-flag t) nil [50 58])
+            ("VDMA_Test" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5822 5827]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5807 5828])
+            ("VDMA_All_stop" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5785 5806])
+            ("VDMA_All_start" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("height" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5763 5783]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5743 5784])
+            ("VDMA2_setting" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("width" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5601 5620])
+                    ("height" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5621 5641])
+                    ("hStride" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5641 5662])
+                    ("s2mm_addr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5666 5689])
+                    ("mm2s_addr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5690 5713])
+                    ("bmpByteSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5713 5738]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5582 5740])
+            ("VDMA1_setting" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("width" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5443 5462])
+                    ("height" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5463 5483])
+                    ("hStride" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5483 5504])
+                    ("s2mm_addr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5506 5529])
+                    ("mm2s_addr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5530 5553])
+                    ("bmpByteSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5553 5578]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5424 5580])
+            ("REVERSE4" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5308 5316])
+            ("DEF_BMP_HALFSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5263 5279])
+            ("DEF_BMP_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5207 5219])
+            ("DEF_BMP_HEIGHT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5167 5181])
+            ("DEF_BMP_WIDTH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5126 5139])
+            ("DEF_LCD_HALF_PIX_CNT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5068 5088])
+            ("DEF_LCD_PIX_CNT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5002 5017])
+            ("DEF_LCD_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4959 4971])
+            ("DEF_LCD_H" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4926 4935])
+            ("DEF_LCD_W" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4868 4877])
+            ("DEF_LCD_H_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4801 4815])
+            ("DEF_LCD_H_STRIDE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4720 4736])
+            ("DFF_H_TOTAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4641 4652])
+            ("DFF_V_BACK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3547 3557])
+            ("DFF_V_SYNC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3431 3441])
+            ("DFF_V_FRONT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3316 3327])
+            ("DFF_V_ACTIVE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3201 3213])
+            ("DFF_H_BACK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3069 3079])
+            ("DFF_H_SYNC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2911 2921])
+            ("DFF_H_FRONT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2781 2792])
+            ("DFF_H_ACTIVE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2693 2705])
+            ("DEF_ODDR_OUT_EN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2638 2653])
+            ("DEF_REG_ENABLE_VERTICAL_FLIP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2411 2439])
+            ("DEF_REG_S2MM_START_ADDRESS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2320 2346])
+            ("DEF_REG_S2MM_FRMDLY_" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2214 2234])
+            ("DEF_REG_S2MM_HSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2122 2140])
+            ("DEF_REG_S2MM_VSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2032 2050])
+            ("DEF_REG_MM2S_START_ADDRESS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1875 1901])
+            ("DEF_REG_MM2S_FRMDLY_STRIDE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1776 1802])
+            ("DEF_REG_MM2S_HSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1684 1702])
+            ("DEF_REG_MM2S_VSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1594 1612])
+            ("DEF_REG_S2MM_REG_INDEX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1383 1405])
+            ("DEF_REG_S2MM_VDMA_IRQ_MASK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1220 1246])
+            ("DEF_REG_Reserved" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1154 1170])
+            ("DEF_REG_S2MM_VDMASR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1066 1085])
+            ("DEF_REG_S2MM_VDMACR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [977 996])
+            ("DEF_REG_VDMA_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [888 908])
+            ("DEF_REG_PARK_PTR_REG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [790 810])
+            ("DEF_REG_MM2S_REG_INDEX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [577 599])
+            ("DEF_REG_MM2S_VDMASR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [423 442])
+            ("DEF_REG_MM2S_VDMACR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [334 353])
+            ("XPAR_AXIVDMA_1_NUM_FSTORES" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [291 317])
+            ("XPAR_AXIVDMA_0_NUM_FSTORES" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [252 278])
+            ("DEF_BMP_BASE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [211 223])
+            ("u32" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [185 188])
+            ("u16" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [158 161])
+            ("u8" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [133 135]))          
+      :file "pl.h"
+      :pointmax 5886
+      :fsize 5885
+      :lastmodtime '(23678 14077 13995 547000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__PL_H__")
+          )
+)
+    (semanticdb-table "cmd_api.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cmd_api__h" variable (:constant-flag t) nil [161 171])
+            ("fpga_clear" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [984 1001])
+            ("fpga_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [967 983])
+            ("cmd_capture_stop" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [941 952])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [953 964]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [920 965])
+            ("cmd_capture_start" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [895 906])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [907 918]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [873 919])
+            ("cmd_play" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [848 859])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [860 871]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [835 872])
+            ("cmd_step_motor_ctl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [810 821])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [822 833]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [787 834])
+            ("cmd_dc_motor_ctl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [762 773])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [774 785]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [741 786])
+            ("cmd_dlpc_power" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [716 727])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [728 739]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [697 740])
+            ("cmd_fun_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [672 683])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [684 695]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [655 696])
+            ("uchar" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("unsigned char"))
+                (reparse-symbol extern-c-contents) [604 632])
+            ("CMD_API_CHECKSUM_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [571 591])
+            ("CMD_API_PKG_LEN_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [532 551])
+            ("CMD_API_PKG_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [495 510])
+            ("CMD_API_PARAM_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [457 474])
+            ("CMD_API_EXEC_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [419 435])
+            ("CMD_API_PARAM_RANGE_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [373 396])
+            ("CMD_API_PARAM_TYPE_ERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [330 352])
+            ("CMD_API_PARAM_MISS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [291 309])
+            ("CMD_API_CMD_MISS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [255 271])
+            ("CMD_API_SUCCESS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [222 237]))          
+      :file "cmd_api.h"
+      :pointmax 1039
+      :fsize 1182
+      :lastmodtime '(23678 13431 984512 844000)
+      :unmatched-syntax '((TYPEDEF 647 . 654))
+      :lexical-table 
+        '(("CMD_API_CMD_MISS" . ((punctuation "-" 273 . 274) (number "1" 274 . 275)))
+          ("cmd_api__h")
+          ("CMD_API_PKG_ERR" . ((punctuation "-" 513 . 514) (number "6" 514 . 515)))
+          ("CMD_API_PARAM_ERR" . ((punctuation "-" 476 . 477) (number "6" 477 . 478)))
+          ("CMD_API_PARAM_MISS" . ((punctuation "-" 311 . 312) (number "2" 312 . 313)))
+          ("CMD_API_CHECKSUM_ERR" . ((punctuation "-" 592 . 593) (number "8" 593 . 594)))
+          ("CMD_API_PARAM_TYPE_ERR" . ((punctuation "-" 353 . 354) (number "3" 354 . 355)))
+          ("CMD_API_PARAM_RANGE_ERR" . ((punctuation "-" 397 . 398) (number "4" 398 . 399)))
+          ("CMD_API_PKG_LEN_ERR" . ((punctuation "-" 553 . 554) (number "7" 554 . 555)))
+          ("CMD_API_SUCCESS" . ((number "0" 240 . 241)))
+          ("CMD_API_EXEC_ERR" . ((punctuation "-" 437 . 438) (number "5" 438 . 439)))
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("$(CROSS_COMPILE)gcc")) nil [36 62])
+            ("ROOTFS" variable (:default-value ("../rootfs")) nil [62 82])
+            ("CFLAGS" variable (:default-value ("-Wall")) nil [83 99])
+            ("CFLAGS" variable (:default-value ("-DDEBUG=$(DEBUG)")) nil [113 140])
+            ("R_CFLAGS" variable (:default-value ("-lm" "$(CFLAGS)")) nil [392 418])
+            ("PROGS" variable (:default-value ("main-app" "misc-test" "dlpc-test" "loadbin" "vdma-test" "dumpddr")) nil [419 483])
+            ("all" function (:arguments ("$(PROGS)")) nil [485 499])
+            ("main-app" function (:arguments ("main.c" "motor-cmd.c" "dlpc-cmd.c" "fpga_cmd.c" "cJSON.c" "cJSON.h" "debug.h" "cmd_api.h" "pl.h")) nil [499 668])
+            ("misc-test" function (:arguments ("misc-test.c")) nil [669 734])
+            ("dlpc-test" function (:arguments ("dlpc-test.c")) nil [735 800])
+            ("loadbin" function (:arguments ("loadbin.c")) nil [801 858])
+            ("vdma-test" function (:arguments ("vdma.c")) nil [859 914])
+            ("dumpddr" function (:arguments ("dumpddr.c")) nil [915 972])
+            ("install" function nil nil [973 1200])
+            ("clean" function nil nil [1202 1226]))          
+      :file "Makefile"
+      :pointmax 1226
+      :fsize 1225
+      :lastmodtime '(23678 13431 984512 844000)
+      :unmatched-syntax '((shell-command 1210 . 1225) (bol 1209 . 1209)))
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pthread.h" include (:system-flag t) nil [1 21])
+            ("stdio.h" include (:system-flag t) nil [22 40])
+            ("stdlib.h" include (:system-flag t) nil [41 60])
+            ("string.h" include (:system-flag t) nil [61 80])
+            ("semaphore.h" include (:system-flag t) nil [81 103])
+            ("unistd.h" include (:system-flag t) nil [104 123])
+            ("fcntl.h" include (:system-flag t) nil [132 150])
+            ("errno.h" include (:system-flag t) nil [151 169])
+            ("termios.h" include (:system-flag t) nil [170 190])
+            ("cJSON.h" include nil nil [191 209])
+            ("debug.h" include nil nil [225 243])
+            ("cmd_api.h" include nil nil [244 264])
+            ("APP_VER" variable (:constant-flag t) nil [274 281])
+            ("CMD_DLPC_POWER" variable (:constant-flag t) nil [305 319])
+            ("UART_NAME" variable (:constant-flag t) nil [331 340])
+            ("UART_MSG_LEN_MIN" variable (:constant-flag t) nil [371 387])
+            ("UART_MSG_LEN_MAX" variable (:constant-flag t) nil [398 414])
+            ("PKG_HEAD_CHAR" variable (:constant-flag t) nil [427 440])
+            ("PKG_TAIL_CHAR" variable (:constant-flag t) nil [455 468])
+            ("PKG_CHECKSUM_MARK" variable (:constant-flag t) nil [483 500])
+            ("uart_fd" variable (:type "int") nil [507 519])
+            ("dlpc_fd" variable (:type "int") nil [520 532])
+            ("uart_init" function
+               (:arguments 
+                  ( ("uart_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [548 565]))                  
+                :type "int")
+                nil [534 1849])
+            ("writen" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1952 1959])
+                    ("vptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1960 1977])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1978 1984]))                  
+                :type "int")
+                nil [1941 2316])
+            ("uart_msg_send" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2336 2353])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2354 2362]))                  
+                :type "int")
+                nil [2318 2874])
+            ("RECV_INIT" variable (:constant-flag t) nil [2884 2893])
+            ("RECV_PKG" variable (:constant-flag t) nil [2904 2912])
+            ("recv_status" variable (:type "int") nil [2916 2932])
+            ("recv_msg_len" variable (:type "int") nil [2933 2950])
+            ("recv_buf" variable
+               (:dereference 1
+                :type ("uchar" type (:type "class") nil nil))
+                nil [2951 2986])
+            ("uart_msg_reset" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3008 3013]))                  
+                :type "void")
+                nil [2988 3062])
+            ("uart_msg_check" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3082 3099])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [3100 3108]))                  
+                :type "int")
+                nil [3063 3492])
+            ("cmd_test" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3507 3518])
+                    ("rst" variable
+                       (:pointer 1
+                        :type ("cJSON" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3519 3530]))                  
+                :type "int")
+                nil [3494 3652])
+            ("cmd_funs" variable
+               (:dereference 1
+                :default-value "{
+	cmd_test,
+	cmd_dlpc_power,
+	cmd_step_motor_ctl,
+	cmd_dc_motor_ctl,
+	cmd_play,
+	cmd_capture_start,
+	cmd_capture_stop
+}"
+                :type ("cmd_fun_t" type (:type "class") nil nil))
+                nil [3666 3810])
+            ("MAX_CMD" variable (:constant-flag t) nil [3819 3826])
+            ("uart_ev_handler" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3918 3935])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [3936 3944]))                  
+                :type "int")
+                nil [3898 5425])
+            ("uart_msg_parse" function
+               (:arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5447 5464])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5465 5471]))                  
+                :type "void")
+                nil [5427 6351])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6362 6367]))                  
+                :type "int")
+                nil [6353 7293]))          
+      :file "main.c"
+      :pointmax 7293
+      :fsize 8033
+      :lastmodtime '(23678 13431 988512 243000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("UART_MSG_LEN_MAX" . ((number "500" 415 . 418)))
+          ("UART_MSG_LEN_MIN" . ((number "8" 388 . 389)))
+          ("RECV_INIT" . ((number "0" 2894 . 2895)))
+          ("UART_NAME" . ((string "\"/dev/ttyPS1\"" 342 . 355)))
+          ("PKG_TAIL_CHAR" . ((number "0xA5" 470 . 474)))
+          ("CMD_DLPC_POWER" . ((number "1" 320 . 321)))
+          ("PKG_HEAD_CHAR" . ((number "0xAA" 442 . 446)))
+          ("APP_VER" . ((string "\"MYFPGA V0.4\"" 282 . 295)))
+          ("PKG_CHECKSUM_MARK" . ((number "0xE0" 501 . 505)))
+          ("RECV_PKG" . ((number "1" 2914 . 2915)))
+          ("MAX_CMD" . ((semantic-list "(sizeof(cmd_funs)/sizeof(cmd_funs[0]))" 3827 . 3865)))
+          )
+)
+    (semanticdb-table "debug.h"
+      :file "debug.h"
+      :fsize 513
+      :lastmodtime '(23678 13431 984512 844000)))
+  :file "!home!rvbust!Rvbust!Sources!X100!Server!app-dev!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

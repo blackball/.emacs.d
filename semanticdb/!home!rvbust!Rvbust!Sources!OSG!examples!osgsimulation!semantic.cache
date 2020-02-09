@@ -1,0 +1,130 @@
+;; Object osgsimulation/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "osgsimulation/"
+  :tables
+  (list
+    (semanticdb-table "osgsimulation.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("osgViewer/Viewer" include (:system-flag t) nil [1766 1793])
+            ("osgViewer/ViewerEventHandlers" include (:system-flag t) nil [1794 1834])
+            ("osg/Group" include (:system-flag t) nil [1836 1856])
+            ("osg/Geode" include (:system-flag t) nil [1857 1877])
+            ("osg/ShapeDrawable" include (:system-flag t) nil [1878 1906])
+            ("osg/Texture2D" include (:system-flag t) nil [1907 1931])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [1932 1972])
+            ("osg/MatrixTransform" include (:system-flag t) nil [1973 2003])
+            ("osg/CoordinateSystemNode" include (:system-flag t) nil [2004 2039])
+            ("osgDB/FileUtils" include (:system-flag t) nil [2041 2067])
+            ("osgDB/fstream" include (:system-flag t) nil [2068 2092])
+            ("osgDB/ReadFile" include (:system-flag t) nil [2093 2118])
+            ("osgText/Text" include (:system-flag t) nil [2120 2143])
+            ("osg/CoordinateSystemNode" include (:system-flag t) nil [2145 2180])
+            ("osgSim/OverlayNode" include (:system-flag t) nil [2182 2211])
+            ("osgSim/SphereSegment" include (:system-flag t) nil [2212 2243])
+            ("osgGA/NodeTrackerManipulator" include (:system-flag t) nil [2245 2284])
+            ("osgGA/StateSetManipulator" include (:system-flag t) nil [2285 2321])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [2322 2359])
+            ("osgGA/FlightManipulator" include (:system-flag t) nil [2360 2394])
+            ("osgGA/DriveManipulator" include (:system-flag t) nil [2395 2428])
+            ("osgGA/KeySwitchMatrixManipulator" include (:system-flag t) nil [2429 2472])
+            ("osgGA/AnimationPathManipulator" include (:system-flag t) nil [2473 2514])
+            ("osgGA/TerrainManipulator" include (:system-flag t) nil [2515 2550])
+            ("osgParticle/FireEffect" include (:system-flag t) nil [2552 2585])
+            ("iostream" include (:system-flag t) nil [2587 2606])
+            ("createEarth" function
+               (:pointer 1
+                :type ("osg::Node" type (:type "class") nil nil))
+                nil [2608 3306])
+            ("ModelPositionCallback" type
+               (:superclasses 
+                  ( ("osg::NodeCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3366 3373])
+                    ("ModelPositionCallback" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("speed" variable (:type "double") (reparse-symbol arg-sub-list) [3401 3414]))                          
+                        :type ("ModelPositionCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3379 3596])
+                    ("updateParameters" function (:type "void") (reparse-symbol classsubparts) [3602 3696])
+                    ("()" function
+                       (:operator-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3727 3743])
+                            ("nv" variable
+                               (:pointer 1
+                                :type ("osg::NodeVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3744 3765]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3703 5176])
+                    ("_latitude" variable (:type "double") (reparse-symbol classsubparts) [5182 5216])
+                    ("_longitude" variable (:type "double") (reparse-symbol classsubparts) [5221 5256])
+                    ("_height" variable (:type "double") (reparse-symbol classsubparts) [5261 5293])
+                    ("_rotation" variable (:type ("osg::Quat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5298 5332])
+                    ("_speed" variable (:type "double") (reparse-symbol classsubparts) [5337 5368]))                  
+                :type "class")
+                nil [3309 5371])
+            ("FindNamedNodeVisitor" type
+               (:superclasses 
+                  ( ("osg::NodeVisitor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [5429 5436])
+                    ("FindNamedNodeVisitor" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5462 5486]))                          
+                        :type ("FindNamedNodeVisitor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5441 5577])
+                    ("apply" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("node" variable
+                               (:reference 1
+                                :type ("osg::Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5602 5618]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5583 5751])
+                    ("NodeList" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("osg::ref_ptr" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5757 5813])
+                    ("_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5819 5837])
+                    ("_foundNodes" variable (:type ("NodeList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5842 5863]))                  
+                :type "class")
+                nil [5374 5866])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5878 5887])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5888 5900]))                  
+                :type "int")
+                nil [5869 17540]))          
+      :file "osgsimulation.cpp"
+      :pointmax 17541
+      :fsize 17540
+      :lastmodtime '(23493 24179 655878 500000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!OSG!examples!osgsimulation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

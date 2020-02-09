@@ -1,0 +1,163 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("XDIC/Common/Image.h" include (:system-flag t) nil [15 45])
+            ("XDIC" type
+               (:members 
+                  ( ("CameraStatus" type
+                       (:members 
+                          ( ("CameraStatus_None" variable
+                               (:constant-flag t
+                                :default-value (109 110)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [89 110])
+                            ("CameraStatus_Open" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [116 134])
+                            ("CameraStatus_Close" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [139 158])
+                            ("CameraStatus_Error" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [163 182])
+                            ("CameraStatus_Attached" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [187 209]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [65 213])
+                    ("CameraProp" type
+                       (:members 
+                          ( ("fps" variable (:type "int") (reparse-symbol classsubparts) [239 247])
+                            ("frame_w" variable (:type "int") (reparse-symbol classsubparts) [252 264])
+                            ("frame_h" variable (:type "int") (reparse-symbol classsubparts) [269 281])
+                            ("frame_pixel_size" variable (:type "int") (reparse-symbol classsubparts) [286 307]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [215 311])
+                    ("CameraConfig" type
+                       (:members 
+                          ( ("exposure" variable (:type "float") (reparse-symbol classsubparts) [339 354]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [313 371])
+                    ("CameraGrabStrategy" type (:type "enum") (reparse-symbol namespacesubparts) [373 406])
+                    ("CameraTriggerMode" type (:type "enum") (reparse-symbol namespacesubparts) [408 440])
+                    ("Camera" type
+                       (:members 
+                          ( ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [458 471])
+                            ("gid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [472 485]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [442 488])
+                    ("Camera_IsValid" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [693 710]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [673 711])
+                    ("Camera_Scan" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("camarr" variable
+                               (:pointer 1
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1013 1028])
+                            ("maxn" variable (:type "int") (reparse-symbol arg-sub-list) [1029 1038])
+                            ("psize" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1039 1050]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [996 1051])
+                    ("Camera_SerialNumber" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1085 1102]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1053 1103])
+                    ("Camera_Open" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1122 1139]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1105 1140])
+                    ("Camera_GetProp" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1161 1178])
+                            ("prop" variable
+                               (:pointer 1
+                                :type ("CameraProp" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1179 1196]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1141 1197])
+                    ("Camera_Close" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1216 1233]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1198 1234])
+                    ("Camera_IsOpen" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1254 1271]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1235 1272])
+                    ("Camera_Status" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1292 1309]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1273 1310])
+                    ("Camera_Capture" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cam" variable
+                               (:constant-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1331 1348])
+                            ("pimg" variable
+                               (:pointer 1
+                                :type ("Image8U" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1349 1363]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1311 1364]))                  
+                :type "namespace")
+                nil [47 1404]))          
+      :file "Camera.h"
+      :pointmax 1424
+      :fsize 1423
+      :lastmodtime '(23898 6506 48705 891000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!V2!Include!XDIC!Devices!Camera!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

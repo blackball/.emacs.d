@@ -1,0 +1,185 @@
+;; Object FuckIt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "FuckIt/"
+  :tables
+  (list
+    (semanticdb-table "ObjectDetector.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [75 85])
+            ("numpy" include nil nil [86 104])
+            ("pyrealsense2" include nil nil [106 131])
+            ("time" include nil nil [132 143])
+            ("DepthSensor" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [238 269])
+                            ("config" variable nil (reparse-symbol indented_block_body) [401 421])
+                            ("config" code nil (reparse-symbol indented_block_body) [430 496])
+                            ("config" code nil (reparse-symbol indented_block_body) [505 572])
+                            ("profile" variable nil (reparse-symbol indented_block_body) [608 647])
+                            ("intr" variable nil (reparse-symbol indented_block_body) [657 742])
+                            ("self" variable nil (reparse-symbol indented_block_body) [752 953])
+                            ("self" variable nil (reparse-symbol indented_block_body) [963 1020])
+                            ("depth_sensor" variable nil (reparse-symbol indented_block_body) [1134 1190])
+                            ("depth_scale" variable nil (reparse-symbol indented_block_body) [1199 1243])
+                            ("clipping_distance_max" code nil (reparse-symbol indented_block_body) [1370 1411])
+                            ("clipping_distance_min" code nil (reparse-symbol indented_block_body) [1420 1461])
+                            ("clipping_distance_in_meters" variable nil (reparse-symbol indented_block_body) [1471 1504])
+                            ("clipping_distance" code nil (reparse-symbol indented_block_body) [1522 1583])
+                            ("align_to" variable nil (reparse-symbol indented_block_body) [1793 1819])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1878 1911])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1949 1976]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [198 202]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [185 1980])
+                    ("GetColorKKKC" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2425 2429]))                          
+                        :documentation " Get KK, KC from realsense 
+        ")
+                        (reparse-symbol indented_block_body) [2408 2532])
+                    ("Capture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2553 2557]))                          )
+                        (reparse-symbol indented_block_body) [2541 3561])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3586 3590]))                          )
+                        (reparse-symbol indented_block_body) [3574 3624]))                  
+                :type "class")
+                nil [154 3624])
+            ("g_debug" variable nil nil [3634 3649])
+            ("g_tTe, g_cTb" code nil nil [3652 4303])
+            ("ObjectDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [4365 4369]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4353 4357]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4340 4373])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4388 4392])
+                            ("E" variable nil (reparse-symbol function_parameters) [4394 4395])
+                            ("depth_img" variable nil (reparse-symbol function_parameters) [4397 4406])
+                            ("color_img" variable nil (reparse-symbol function_parameters) [4408 4417])
+                            ("pts" variable nil (reparse-symbol function_parameters) [4419 4422])
+                            ("tcc" variable nil (reparse-symbol function_parameters) [4424 4427])
+                            ("visualize" variable nil (reparse-symbol function_parameters) [4429 4438]))                          )
+                        (reparse-symbol indented_block_body) [4377 5968])
+                    ("_Clipping" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5995 5999])
+                            ("pts" variable nil (reparse-symbol function_parameters) [6001 6004])
+                            ("clip_min" variable nil (reparse-symbol function_parameters) [6006 6014])
+                            ("clip_max" variable nil (reparse-symbol function_parameters) [6016 6024]))                          )
+                        (reparse-symbol indented_block_body) [5981 6116])
+                    ("_CropByPlane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6139 6143])
+                            ("pts" variable nil (reparse-symbol function_parameters) [6145 6148])
+                            ("plane_t" variable nil (reparse-symbol function_parameters) [6150 6157])
+                            ("plane_extxy" variable nil (reparse-symbol function_parameters) [6159 6170]))                          
+                        :documentation " Crop pts by a plane
+        
+        full algorithm should be:
+        - project points onto the plane
+        - check if it's inside the range 
+
+        current simplified impl:
+        - assume the plane is aligned with xy-plane 
+        - check pts's xyz in range or not 
+        ")
+                        (reparse-symbol indented_block_body) [6122 7035])
+                    ("_DetectCentersAssumeXYPlane" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7080 7084])
+                            ("pts" variable nil (reparse-symbol function_parameters) [7086 7089]))                          
+                        :documentation " Project pts on the XY plane to get the depth
+        
+        The goal is to find proper peak for pickingg.         
+        ")
+                        (reparse-symbol indented_block_body) [7048 8487])
+                    ("_GetMeanDepth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8518 8522])
+                            ("H" variable nil (reparse-symbol function_parameters) [8524 8525])
+                            ("cx" variable nil (reparse-symbol function_parameters) [8527 8529])
+                            ("cy" variable nil (reparse-symbol function_parameters) [8531 8533])
+                            ("radius" variable nil (reparse-symbol function_parameters) [8535 8541]))                          )
+                        (reparse-symbol indented_block_body) [8500 8626])
+                    ("_DetectRoughCenters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8655 8659])
+                            ("H" variable nil (reparse-symbol function_parameters) [8661 8662]))                          
+                        :documentation " Find contours, use it's center
+        ")
+                        (reparse-symbol indented_block_body) [8631 9346])
+                    ("_RemoveTooCloseCenters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9387 9391])
+                            ("centers" variable nil (reparse-symbol function_parameters) [9393 9400]))                          
+                        :documentation " because centers is arrange from big to small 
+        We prefer to remove the 
+        ")
+                        (reparse-symbol indented_block_body) [9360 9946])
+                    ("_ContourCenter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9991 9995])
+                            ("c" variable nil (reparse-symbol function_parameters) [9997 9998]))                          )
+                        (reparse-symbol indented_block_body) [9972 10125]))                  
+                :type "class")
+                nil [4306 10125])
+            ("g_X, g_Z" code nil nil [10128 10746])
+            ("Main" function nil nil [10752 11042])
+            ("DemoDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [11102 11127])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11136 11164]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11090 11094]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11077 11168])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11184 11188]))                          
+                        :documentation " Detect the object to get its poses in Camera, extract translation and Z-axis to return 
+        ")
+                        (reparse-symbol indented_block_body) [11173 11665]))                  
+                :type "class")
+                nil [11045 11665])
+            ("UseDemoDetector" function nil nil [11683 11888])
+            ("if" code nil nil [11894 11955]))          
+      :file "ObjectDetector.py"
+      :pointmax 11955
+      :fsize 11953
+      :lastmodtime '(23608 3227 544845 191000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Github!FuckIt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

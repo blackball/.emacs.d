@@ -1,0 +1,201 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "V.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "V.cpp"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(23609 60074 833891 998000)
+      :unmatched-syntax '((symbol 2 . 9) (punctuation 1 . 2)))
+
+    (semanticdb-table "Memory.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [67 86])
+            ("RVS_MALLOC" variable (:constant-flag t) nil [128 138])
+            ("RVS_FREE" variable (:constant-flag t) nil [184 192])
+            ("RVS_REALLOC" variable (:constant-flag t) nil [212 223]))          
+      :file "Memory.h"
+      :pointmax 248
+      :fsize 247
+      :lastmodtime '(23609 59437 491898 128000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 212 . 223) (symbol 184 . 192) (symbol 128 . 138) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 120 . 126) (punctuation 119 . 120) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 67 . 68) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))
+      :lexical-table 
+        '(("RVS_FREE" (spp-arg-list ("p") 192 . 195) . ((symbol "free" 196 . 200) (semantic-list "(p)" 200 . 203)))
+          ("RVS_MALLOC" (spp-arg-list ("size_in_bytes") 138 . 153) . ((symbol "malloc" 154 . 160) (semantic-list "(size_in_bytes)" 160 . 175)))
+          ("RVS_REALLOC" (spp-arg-list ("p" "nsz") 223 . 231) . ((symbol "realloc" 232 . 239) (semantic-list "(p, nsz)" 239 . 247)))
+          )
+)
+    (semanticdb-table "Image.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("StatusCodes.h" include nil nil [1 25])
+            ("Memory.h" include nil nil [26 45])
+            ("V.h" include nil nil [46 60])
+            ("stdint.h" include (:system-flag t) nil [61 80])
+            ("stdlib.h" include (:system-flag t) nil [81 100])
+            ("rvs_image" type
+               (:members 
+                  ( ("type" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [166 179])
+                    ("w" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [184 197])
+                    ("h" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [184 197])
+                    ("dp" variable (:type ("" type
+                         (:members 
+                            ( ("u8" variable
+                                 (:pointer 1
+                                  :type ("uint8_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [222 234])
+                              ("u16" variable
+                                 (:pointer 1
+                                  :type ("uint16_t" type (:type "class") nil nil))
+                                  (reparse-symbol classsubparts) [259 273]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [202 307]))                  
+                :type "struct")
+                nil [143 327])
+            ("_rvs_is_suppoted_type" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable
+                       (:constant-flag t
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [363 382]))                  
+                :type "bool")
+                nil [329 437])
+            ("_rvs_unit_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable
+                       (:constant-flag t
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [469 488]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [439 800])
+            ("_rvs_is_valid_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("w" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [833 843])
+                    ("h" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [844 854]))                  
+                :type "bool")
+                nil [802 966])
+            ("rvs_image_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:constant-flag t
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1011 1030])
+                    ("w" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1031 1041])
+                    ("h" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1042 1052]))                  
+                :type ("rvs_image" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [979 1451])
+            ("rvs_image_delete" function
+               (:arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("rvs_image" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1478 1500]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [1453 1625])
+            ("rvs_image_get_width" function
+               (:arguments 
+                  ( ("pimg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvs_image" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1655 1684]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [1627 1749])
+            ("rvs_image_get_height" function
+               (:arguments 
+                  ( ("pimg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvs_image" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1780 1809]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [1751 1874])
+            ("rvs_image_get_type" function
+               (:arguments 
+                  ( ("pimg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rvs_image" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1903 1932]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [1876 2004]))          
+      :file "Image.cpp"
+      :pointmax 2034
+      :fsize 2033
+      :lastmodtime '(23609 60065 849807 510000)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "Pattern.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("V.h" include (:system-flag t) nil [1 15])
+            ("rvs_pattern" type (:type "struct") nil [125 153])
+            ("rvs_pattern_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [195 212]))                  
+                :type ("rvs_pattern" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [159 221])
+            ("rvs_pattern_set_dim" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rvs_pattern" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [252 274])
+                    ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [275 284])
+                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [285 294]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [224 303])
+            ("rvs_pattern_delete" function
+               (:arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("rvs_pattern" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [332 356]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [305 365]))          
+      :file "Pattern.cpp"
+      :pointmax 366
+      :fsize 365
+      :lastmodtime '(23609 60352 496503 276000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Github!X!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

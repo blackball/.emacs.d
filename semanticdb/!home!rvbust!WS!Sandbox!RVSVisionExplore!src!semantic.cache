@@ -1,0 +1,63 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "_Image.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Image.h" include (:system-flag t) nil [1 19])
+            ("stdint.h" include (:system-flag t) nil [20 39])
+            ("Image8" type
+               (:members 
+                  ( ("w" variable (:type "int") (reparse-symbol classsubparts) [61 70])
+                    ("h" variable (:type "int") (reparse-symbol classsubparts) [61 70])
+                    ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [75 89]))                  
+                :type "struct")
+                nil [41 93]))          
+      :file "_Image.h"
+      :pointmax 95
+      :fsize 94
+      :lastmodtime '(23857 29050 23800 173000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Image.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_Image.h" include nil nil [1 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("Image8_Create" function
+               (:pointer 1
+                :arguments 
+                  ( ("w" variable (:type "int") (reparse-symbol arg-sub-list) [64 70])
+                    ("h" variable (:type "int") (reparse-symbol arg-sub-list) [71 77]))                  
+                :type ("Image8" type (:type "class") nil nil))
+                nil [42 251])
+            ("Image8_Destroy" function
+               (:arguments 
+                  ( ("pp" variable
+                       (:pointer 2
+                        :type ("Image8" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [273 285]))                  
+                :type "void")
+                nil [253 355]))          
+      :file "Image.cpp"
+      :pointmax 357
+      :fsize 356
+      :lastmodtime '(23857 34958 748309 160000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PyImage.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Image.h" include nil nil [1 19])
+            ("pybind11/pybind11.h" include (:system-flag t) nil [20 50]))          
+      :file "PyImage.cpp"
+      :pointmax 202
+      :fsize 201
+      :lastmodtime '(23857 32514 49898 966000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!RVSVisionExplore!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

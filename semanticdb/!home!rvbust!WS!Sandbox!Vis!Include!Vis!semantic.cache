@@ -1,0 +1,103 @@
+;; Object Vis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Vis/"
+  :tables
+  (list
+    (semanticdb-table "Viewer.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("thread" include (:system-flag t) nil [67 84])
+            ("Vis/Concepts.h" include (:system-flag t) nil [85 110])
+            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [111 147])
+            ("Vis/Manipulator/NodeIO.h" include (:system-flag t) nil [148 183])
+            ("Vis" type
+               (:members 
+                  ( ("Viewer" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [205 218]))                  
+                :type "namespace")
+                nil [185 220])
+            ("Viewer" type
+               (:parent "Vis"
+                :superclasses 
+                  ( ("Vis::OsgPlotterManipulator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("Vis::NodeIOManipulator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [308 315])
+                    ("Viewer" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [337 354])
+                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [355 361])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [362 368])
+                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [369 379])
+                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [380 391])
+                            ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [392 415]))                          
+                        :type ("Viewer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [330 416])
+                    ("Viewer" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [422 432])
+                    ("Home" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [438 459])
+                    ("Move" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [465 487])
+                    ("Resize" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [493 517])
+                    ("Close" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [523 545])
+                    ("Detach" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [551 574])
+                    ("Delete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("h" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("VisNodeHandle" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [592 625]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [580 627])
+                    ("Data" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol classsubparts) [633 645])
+                    ("private" label nil (reparse-symbol classsubparts) [647 655])
+                    ("m_dPtr" variable (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("Viewer::Data" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [660 697]))                  
+                :type "class")
+                nil [222 700]))          
+      :file "Viewer.h"
+      :pointmax 701
+      :fsize 700
+      :lastmodtime '(23709 38172 17039 224000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!Vis!Include!Vis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

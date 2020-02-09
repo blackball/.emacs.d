@@ -1,0 +1,47 @@
+;; Object C/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "C/"
+  :tables
+  (list
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("Foo" type
+               (:members 
+                  ( ("f" variable (:type "double") (reparse-symbol classsubparts) [39 48])
+                    ("c1" variable (:type "char") (reparse-symbol classsubparts) [54 62])
+                    ("c2" variable (:type "char") (reparse-symbol classsubparts) [67 75])
+                    ("a" variable (:type "int") (reparse-symbol classsubparts) [81 87]))                  
+                :type "struct")
+                nil [22 90])
+            ("T" type
+               (:members 
+                  ( ("f" variable (:type ("Foo" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [107 120])
+                    ("arr" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [125 136]))                  
+                :type "union")
+                nil [93 139])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [152 161])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [162 175]))                  
+                :type "int")
+                nil [143 273]))          
+      :file "main.c"
+      :pointmax 274
+      :fsize 273
+      :lastmodtime '(23564 34610 411419 620000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!C!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

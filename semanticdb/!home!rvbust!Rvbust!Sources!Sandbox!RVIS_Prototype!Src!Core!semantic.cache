@@ -1,0 +1,292 @@
+;; Object Core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Core/"
+  :tables
+  (list
+    (semanticdb-table "Interface.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Data.h" include (:system-flag t) nil [1 28])
+            ("RVIS/Core/Interface.h" include (:system-flag t) nil [29 61])
+            ("RVIS/Core/Environment.h" include (:system-flag t) nil [62 96])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [97 127])
+            ("RVIS/Utils/Macros.h" include (:system-flag t) nil [128 158])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [160 181])
+            ("Interface" function
+               (:constructor-flag t
+                :parent "Interface"
+                :arguments 
+                  ( ("penv" variable
+                       (:pointer 1
+                        :type ("Environment" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [204 222]))                  
+                :type ("Interface" type (:type "class") nil nil))
+                nil [183 245])
+            ("Interface" function
+               (:destructor-flag t
+                :parent "Interface"
+                :type "void")
+                nil [247 297])
+            ("Clone" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("toclone" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Interface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [320 345])
+                    ("cloningoptions" variable (:type "int") (reparse-symbol arg-sub-list) [346 365]))                  
+                :type "int")
+                nil [299 484])
+            ("ExecuteCommand" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("cmd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [520 543])
+                    ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Input" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [544 563])
+                    ("output" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Output" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [564 585]))                  
+                :type "int")
+                nil [490 707])
+            ("SupportsCommand" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("cmd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [740 763]))                  
+                :type "int")
+                nil [709 835])
+            ("SetData" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [860 883])
+                    ("pdata" variable
+                       (:pointer 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [884 896]))                  
+                :type "int")
+                nil [837 1000])
+            ("GetData" function
+               (:pointer 1
+                :parent "Interface"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1027 1050]))                  
+                :type ("Data" type (:type "class") nil nil))
+                nil [1002 1135])
+            ("RemoveData" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1163 1186]))                  
+                :type "int")
+                nil [1137 1274])
+            ("RegisterCommand" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("cmd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1307 1330])
+                    ("fn" variable (:type ("InterfaceCommand" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1331 1351])
+                    ("helpstr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1352 1379]))                  
+                :type "int")
+                nil [1276 1503])
+            ("UnregisterCommand" function
+               (:parent "Interface"
+                :arguments 
+                  ( ("cmd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1538 1561]))                  
+                :type "int")
+                nil [1505 1644]))          
+      :file "Interface.cpp"
+      :pointmax 1645
+      :fsize 1644
+      :lastmodtime '(23752 5576 434745 528000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Environment.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Environment.h" include (:system-flag t) nil [1 35])
+            ("RVIS/Core/Interface.h" include (:system-flag t) nil [36 68])
+            ("RVIS/Core/Types.h" include (:system-flag t) nil [69 97])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [98 128])
+            ("RVIS/Utils/Macros.h" include (:system-flag t) nil [129 159])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [161 182])
+            ("Environment" function
+               (:constructor-flag t
+                :parent "Environment"
+                :type ("Environment" type (:type "class") nil nil))
+                nil [184 247])
+            ("Environment" function
+               (:destructor-flag t
+                :parent "Environment"
+                :type "void")
+                nil [249 314])
+            ("Destroy" function
+               (:parent "Environment"
+                :type "int")
+                nil [316 421])
+            ("Reset" function
+               (:parent "Environment"
+                :type "int")
+                nil [423 524])
+            ("SetData" function
+               (:parent "Environment"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [551 574])
+                    ("data" variable
+                       (:pointer 1
+                        :type ("Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [575 586]))                  
+                :type "int")
+                nil [526 716])
+            ("GetData" function
+               (:pointer 1
+                :parent "Environment"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [745 768]))                  
+                :type ("Data" type (:type "class") nil nil))
+                nil [718 867])
+            ("GlobalState" function
+               (:pointer 1
+                :parent "Environment"
+                :type ("Data" type (:type "class") nil nil))
+                nil [869 982])
+            ("OwnInterface" function
+               (:parent "Environment"
+                :arguments 
+                  ( ("pin" variable
+                       (:pointer 1
+                        :type ("Interface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1014 1029]))                  
+                :type "int")
+                nil [984 1140])
+            ("DisownInterface" function
+               (:parent "Environment"
+                :arguments 
+                  ( ("pin" variable
+                       (:pointer 1
+                        :type ("Interface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1175 1190]))                  
+                :type "int")
+                nil [1142 1305])
+            ("CloneSelf" function
+               (:pointer 1
+                :parent "Environment"
+                :arguments 
+                  ( ("options" variable (:type "int") (reparse-symbol arg-sub-list) [1343 1355]))                  
+                :type ("Environment" type (:type "class") nil nil))
+                nil [1307 1469]))          
+      :file "Environment.cpp"
+      :pointmax 1646
+      :fsize 1645
+      :lastmodtime '(23752 3002 653111 442000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Module.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Environment.h" include (:system-flag t) nil [1 35])
+            ("RVIS/Core/Module.h" include (:system-flag t) nil [36 65])
+            ("RVIS/Core/Types.h" include (:system-flag t) nil [66 94])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [95 125])
+            ("RVIS/Utils/Macros.h" include (:system-flag t) nil [126 156])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [158 179])
+            ("Module" function
+               (:constructor-flag t
+                :parent "Module"
+                :arguments 
+                  ( ("penv" variable
+                       (:pointer 1
+                        :type ("Environment" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [196 214]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [181 287])
+            ("Module" function
+               (:destructor-flag t
+                :parent "Module"
+                :type "void")
+                nil [289 339])
+            ("TypeStatic" function
+               (:parent "Module"
+                :type "int")
+                nil [341 431])
+            ("Main" function
+               (:parent "Module"
+                :arguments 
+                  ( ("cmd" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [655 678]))                  
+                :type "int")
+                nil [638 776])
+            ("Destroy" function
+               (:parent "Module"
+                :type "int")
+                nil [778 875])
+            ("Reset" function
+               (:parent "Module"
+                :type "int")
+                nil [877 972])
+            ("SimulationStep" function
+               (:parent "Module"
+                :arguments 
+                  ( ("elapsed_time" variable (:type ("Float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1001 1020]))                  
+                :type "int")
+                nil [974 1127]))          
+      :file "Module.cpp"
+      :pointmax 1128
+      :fsize 1127
+      :lastmodtime '(23752 5628 238578 701000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!RVIS_Prototype!Src!Core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

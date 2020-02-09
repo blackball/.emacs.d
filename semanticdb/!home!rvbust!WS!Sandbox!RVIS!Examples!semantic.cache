@@ -1,0 +1,36 @@
+;; Object Examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Examples/"
+  :tables
+  (list
+    (semanticdb-table "PlanningBasic.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("InterfaceBase" type
+               (:prototype t
+                :type "class")
+                nil [1 21])
+            ("InterfaceBasePtr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("InterfaceBase" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [23 79])
+            ("AnotherThread" function
+               (:arguments 
+                  ( ("inter" variable
+                       (:reference 1
+                        :type ("InterfaceBasePtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100 124]))                  
+                :type "void")
+                nil [81 151]))          
+      :file "PlanningBasic.cpp"
+      :pointmax 282
+      :fsize 334
+      :lastmodtime '(23745 29322 494129 375000)
+      :unmatched-syntax '((semantic-list 154 . 279))))
+  :file "!home!rvbust!WS!Sandbox!RVIS!Examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

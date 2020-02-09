@@ -1,0 +1,154 @@
+;; Object urdf_sensor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "urdf_sensor/"
+  :tables
+  (list
+    (semanticdb-table "sensor.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDF_SENSOR_H" variable (:constant-flag t) nil [2412 2425])
+            ("string" include (:system-flag t) nil [2427 2444])
+            ("vector" include (:system-flag t) nil [2445 2462])
+            ("map" include (:system-flag t) nil [2463 2477])
+            ("urdf_model/pose.h" include nil nil [2478 2506])
+            ("urdf_model/joint.h" include nil nil [2507 2536])
+            ("urdf_model/link.h" include nil nil [2537 2565])
+            ("urdf_model/types.h" include nil nil [2566 2595])
+            ("urdf_sensor/types.h" include nil nil [2596 2626])
+            ("urdf" type
+               (:members 
+                  ( ("VisualSensor" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2666 2673])
+                            ("type" variable (:type ("" type
+                                 (:members 
+                                    ( ("CAMERA" variable
+                                         (:constant-flag t
+                                          :type "int")
+                                          (reparse-symbol enumsubparts) [2682 2689])
+                                      ("RAY" variable
+                                         (:constant-flag t
+                                          :type "int")
+                                          (reparse-symbol enumsubparts) [2690 2694]))                                    
+                                  :type "enum")
+                                  nil nil)) (reparse-symbol classsubparts) [2676 2700])
+                            ("VisualSensor" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2725 2730]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2703 2738]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2645 2741])
+                    ("Camera" type
+                       (:superclasses 
+                          ( ("VisualSensor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2780 2787])
+                            ("Camera" function
+                               (:constructor-flag t
+                                :type ("Camera" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2790 2817])
+                            ("width" variable (:type "unsigned int") (reparse-symbol classsubparts) [2821 2848])
+                            ("height" variable (:type "unsigned int") (reparse-symbol classsubparts) [2821 2848])
+                            ("format" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2982 3001])
+                            ("hfov" variable (:type "double") (reparse-symbol classsubparts) [3004 3016])
+                            ("near" variable (:type "double") (reparse-symbol classsubparts) [3019 3031])
+                            ("far" variable (:type "double") (reparse-symbol classsubparts) [3034 3045])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [3049 3161]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2743 3165])
+                    ("Ray" type
+                       (:superclasses 
+                          ( ("VisualSensor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3201 3208])
+                            ("Ray" function
+                               (:constructor-flag t
+                                :type ("Ray" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3211 3235])
+                            ("horizontal_samples" variable (:type "unsigned int") (reparse-symbol classsubparts) [3239 3271])
+                            ("horizontal_resolution" variable (:type "double") (reparse-symbol classsubparts) [3274 3303])
+                            ("horizontal_min_angle" variable (:type "double") (reparse-symbol classsubparts) [3306 3334])
+                            ("horizontal_max_angle" variable (:type "double") (reparse-symbol classsubparts) [3337 3365])
+                            ("vertical_samples" variable (:type "unsigned int") (reparse-symbol classsubparts) [3368 3398])
+                            ("vertical_resolution" variable (:type "double") (reparse-symbol classsubparts) [3401 3428])
+                            ("vertical_min_angle" variable (:type "double") (reparse-symbol classsubparts) [3431 3457])
+                            ("vertical_max_angle" variable (:type "double") (reparse-symbol classsubparts) [3460 3486])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [3490 3760]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3167 3764])
+                    ("Sensor" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3782 3789])
+                            ("Sensor" function
+                               (:constructor-flag t
+                                :type ("Sensor" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3792 3819])
+                            ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3857 3874])
+                            ("update_rate" variable (:type "double") (reparse-symbol classsubparts) [3902 3921])
+                            ("origin" variable (:type ("Pose" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4020 4032])
+                            ("sensor" variable (:type ("VisualSensorSharedPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4049 4078])
+                            ("parent_link_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4153 4182])
+                            ("getParent" function (:type ("LinkSharedPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4186 4249])
+                            ("setParent" function
+                               (:arguments 
+                                  ( ("parent" variable (:type ("LinkSharedPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4269 4290]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4254 4326])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [4332 4470])
+                            ("private" label nil (reparse-symbol classsubparts) [4473 4481])
+                            ("parent_link_" variable (:type ("LinkWeakPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4484 4509]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3767 4513]))                  
+                :type "namespace")
+                nil [2628 4515]))          
+      :file "sensor.h"
+      :pointmax 4523
+      :fsize 4522
+      :lastmodtime '(23558 32637 670629 104000)
+      :unmatched-syntax '((punctuation 4470 . 4471) (punctuation 4249 . 4250) (punctuation 3819 . 3820) (punctuation 3760 . 3761) (punctuation 3235 . 3236) (punctuation 3161 . 3162) (punctuation 2817 . 2818))
+      :lexical-table 
+        '(("URDF_SENSOR_H")
+          )
+)
+    (semanticdb-table "types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("URDF_SENSOR_TYPES_H" variable (:constant-flag t) nil [1836 1855])
+            ("memory" include (:system-flag t) nil [1857 1874])
+            ("urdf" type
+               (:members 
+                  ( ("VisualSensor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1894 1913])
+                    ("VisualSensorSharedPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("VisualSensor" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1942 2002]))                  
+                :type "namespace")
+                nil [1877 2005]))          
+      :file "types.h"
+      :pointmax 2014
+      :fsize 2013
+      :lastmodtime '(23558 32637 670629 104000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("URDF_SENSOR_TYPES_H")
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!URDF!Tmp!URDF!U!urdfdom_headers!urdf_sensor!include!urdf_sensor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1225 @@
+;; Object Src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Src/"
+  :tables
+  (list
+    (semanticdb-table "CameraStreamer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Utils.h" include (:system-flag t) nil [54 72])
+            ("XDIC/CameraStreamer.h" include (:system-flag t) nil [73 105])
+            ("XDIC/Json.h" include (:system-flag t) nil [106 128])
+            ("pylon/PylonIncludes.h" include (:system-flag t) nil [129 161])
+            ("string" include (:system-flag t) nil [220 237])
+            ("random" include (:system-flag t) nil [238 255])
+            ("XDICLogger.h" include nil nil [256 279])
+            ("Status" type
+               (:members 
+                  ( ("Status_OK" variable
+                       (:constant-flag t
+                        :default-value (311 312)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [299 312])
+                    ("Status_Error" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [318 331])
+                    ("Status_StreamingError" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [336 358])
+                    ("Status_NotInitialized" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [363 385])
+                    ("Status_ParamError" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [390 408]))                  
+                :type "enum")
+                nil [281 411])
+            ("QueryStrategy" type
+               (:members 
+                  ( ("QueryStrategy_LatestImageOnly" variable
+                       (:constant-flag t
+                        :default-value (470 471)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [438 471])
+                    ("QueryStrategy_LatestImages" variable
+                       (:constant-flag t
+                        :default-value (511 512)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [482 512])
+                    ("QueryStrategy_OneByOne" variable
+                       (:constant-flag t
+                        :default-value (548 549)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [523 549]))                  
+                :type "enum")
+                nil [413 558])
+            ("TriggerMode" type
+               (:members 
+                  ( ("TriggerMode_None" variable
+                       (:constant-flag t
+                        :default-value (602 603)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [583 603])
+                    ("TriggerMode_Software" variable
+                       (:constant-flag t
+                        :default-value (637 638)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [614 638])
+                    ("TriggerMode_Hardware" variable
+                       (:constant-flag t
+                        :default-value (672 673)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [649 673]))                  
+                :type "enum")
+                nil [560 682])
+            ("CameraDeviceImpl" type
+               (:members 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [714 731])
+                    ("sn" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [736 751]))                  
+                :type "struct")
+                nil [684 754])
+            ("CameraStreamerStatus" type
+               (:members 
+                  ( ("fps" variable (:type "float") (reparse-symbol classsubparts) [790 800]))                  
+                :type "struct")
+                nil [756 843])
+            ("CameraStreamerImpl" type
+               (:members 
+                  ( ("CameraStreamerImpl" function
+                       (:constructor-flag t
+                        :type ("CameraStreamerImpl" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [877 983])
+                    ("CameraStreamerImpl" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [993 1092])
+                    ("Init" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1144 1155])
+                    ("Shutdown" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1160 1175])
+                    ("ListCameraDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1203 1238])
+                            ("flag" variable
+                               (:default-value "0"
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1239 1256]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1181 1258])
+                    ("Config" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Json" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1274 1290]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1263 1291])
+                    ("SetOutputQueueSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outsize" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1358 1376]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1335 1377])
+                    ("GetOutputQueueSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outsize" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1405 1418]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1382 1419])
+                    ("AttachDevice" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1441 1468]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1424 1469])
+                    ("AttachDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1492 1533]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1474 1534])
+                    ("DettachDevice" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1557 1584]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1539 1585])
+                    ("DettachDevices" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1609 1650]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1590 1651])
+                    ("DettachAllDevices" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1656 1680])
+                    ("StartStreaming" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1710 1731])
+                    ("StopStreaming" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1736 1756])
+                    ("IsStreaming" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1761 1780])
+                    ("ExecuteTrigger" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1785 1806])
+                    ("WaitForFrameToBeReady" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1811 1839])
+                    ("Retrieve" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("frames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1860 1889]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1847 1890])
+                    ("GetStatus" function (:type ("CameraStreamerStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1896 2096])
+                    ("private" label nil (reparse-symbol classsubparts) [2098 2106])
+                    ("Impl" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol classsubparts) [2111 2123])
+                    ("m_impl" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("Impl" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2128 2158])
+                    ("is_inited" variable (:type "bool") (reparse-symbol classsubparts) [2164 2188]))                  
+                :type "struct")
+                nil [845 2192])
+            ("Impl" type
+               (:parent "CameraStreamerImpl"
+                :members 
+                  ( ("list_devices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Pylon::CDeviceInfo" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2232 2279])
+                    ("attached_devices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Pylon::CDeviceInfo" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2284 2335])
+                    ("cameraArr" variable (:type ("Pylon::CInstantCameraArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2452 2496])
+                    ("nodemap" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("GenApi::INodeMap" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2501 2543])
+                    ("cam_devices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2548 2623])
+                    ("config" variable (:type ("Json" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2641 2682])
+                    ("output_queuesize" variable (:type "int") (reparse-symbol classsubparts) [2687 2743]))                  
+                :type "struct")
+                nil [2194 2746])
+            ("Init" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [2749 3022])
+            ("Shutdown" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [3024 3551])
+            ("ListCameraDevices" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("devices" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CameraDevice" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3595 3630])
+                    ("flag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3631 3645]))                  
+                :type "int")
+                nil [3553 5143])
+            ("Config" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("cfg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Json" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5176 5192]))                  
+                :type "int")
+                nil [5145 6949])
+            ("SetOutputQueueSize" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("outsize" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6994 7012]))                  
+                :type "int")
+                nil [6951 7134])
+            ("GetOutputQueueSize" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("outsize" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7179 7192]))                  
+                :type "int")
+                nil [7136 7258])
+            ("AttachDevice" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("device" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraDevice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7297 7324]))                  
+                :type "int")
+                nil [7260 7863])
+            ("AttachDevices" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("devices" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CameraDevice" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7903 7944]))                  
+                :type "int")
+                nil [7865 8542])
+            ("DettachDevice" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("device" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraDevice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8591 8618]))                  
+                :type "int")
+                nil [8553 8640])
+            ("DettachDevices" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("devices" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CameraDevice" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8680 8721]))                  
+                :type "int")
+                nil [8641 8743])
+            ("DettachAllDevices" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [8744 8809])
+            ("StartStreaming" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [8811 13796])
+            ("StopStreaming" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [13798 14365])
+            ("IsStreaming" function
+               (:parent "CameraStreamerImpl"
+                :type "bool")
+                nil [14367 14502])
+            ("ExecuteTrigger" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [14504 15271])
+            ("WaitForFrameToBeReady" function
+               (:parent "CameraStreamerImpl"
+                :type "int")
+                nil [15273 16272])
+            ("Retrieve" function
+               (:parent "CameraStreamerImpl"
+                :arguments 
+                  ( ("frames" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("cv::Mat" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16307 16336]))                  
+                :type "int")
+                nil [16274 18288])
+            ("sg_streamer" variable
+               (:typemodifiers ("static")
+                :type ("CameraStreamerImpl" type (:type "class") nil nil))
+                nil [18306 18344])
+            ("XDIC" type
+               (:members 
+                  ( ("CameraDevice_Name" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18404 18426]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [18374 18444])
+                    ("CameraDevice_SerialNumber" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18484 18506]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [18446 18524])
+                    ("CameraStreamer_Init" function (:type "int") (reparse-symbol namespacesubparts) [18526 18586])
+                    ("CameraStreamer_Shutdown" function (:type "int") (reparse-symbol namespacesubparts) [18588 18656])
+                    ("CameraStreamer_ListCameraDevices" function
+                       (:arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18695 18730])
+                            ("flag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18731 18745]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18658 18800])
+                    ("CameraStreamer_Config" function
+                       (:arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Json" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18828 18844]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18802 18884])
+                    ("CameraStreamer_SetOutputQueueSize" function
+                       (:arguments 
+                          ( ("outsize" variable (:type "int") (reparse-symbol arg-sub-list) [18924 18936]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18886 18992])
+                    ("CameraStreamer_GetOutputQueueSize" function
+                       (:arguments 
+                          ( ("outsize" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [19032 19045]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18994 19101])
+                    ("CameraStreamer_AttachDevice" function
+                       (:arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19135 19162]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19103 19211])
+                    ("CameraStreamer_AttachDevices" function
+                       (:arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [19246 19287]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19213 19338])
+                    ("CameraStreamer_DettachDevice" function
+                       (:arguments 
+                          ( ("device" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19373 19400]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19340 19450])
+                    ("CameraStreamer_DettachDevices" function
+                       (:arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [19486 19527]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [19452 19579])
+                    ("CameraStreamer_DettachAllDevices" function (:type "int") (reparse-symbol namespacesubparts) [19581 19667])
+                    ("CameraStreamer_StartStreaming" function (:type "int") (reparse-symbol namespacesubparts) [19669 19749])
+                    ("CameraStreamer_StopStreaming" function (:type "int") (reparse-symbol namespacesubparts) [19751 19829])
+                    ("CameraStreamer_IsStreaming" function (:type "bool") (reparse-symbol namespacesubparts) [19831 19906])
+                    ("CameraStreamer_ExecuteTrigger" function (:type "int") (reparse-symbol namespacesubparts) [19908 19988])
+                    ("CameraStreamer_WaitForFrameToBeReady" function (:type "int") (reparse-symbol namespacesubparts) [19990 20084])
+                    ("CameraStreamer_Retrieve" function
+                       (:arguments 
+                          ( ("frames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20114 20143]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [20086 20188]))                  
+                :type "namespace")
+                nil [18356 20192]))          
+      :file "CameraStreamer.cpp"
+      :pointmax 20213
+      :fsize 20261
+      :lastmodtime '(23884 7701 95978 399000)
+      :unmatched-syntax '((number 677 . 678) (punctuation 675 . 676) (punctuation 674 . 675) (number 642 . 643) (punctuation 640 . 641) (punctuation 639 . 640) (number 607 . 608) (punctuation 605 . 606) (punctuation 604 . 605) (number 553 . 554) (punctuation 551 . 552) (punctuation 550 . 551) (number 516 . 517) (punctuation 514 . 515) (punctuation 513 . 514) (number 475 . 476) (punctuation 473 . 474) (punctuation 472 . 473)))
+    (semanticdb-table "Logger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("spdlog/spdlog.h" include (:system-flag t) nil [71 97])
+            ("spdlog/sinks/stdout_color_sinks.h" include (:system-flag t) nil [98 142])
+            ("spdlog/sinks/stdout_sinks.h" include (:system-flag t) nil [143 181])
+            ("spdlog/sinks/basic_file_sink.h" include (:system-flag t) nil [182 223])
+            ("spdlog/sinks/rotating_file_sink.h" include (:system-flag t) nil [224 268])
+            ("spdlog/sinks/daily_file_sink.h" include (:system-flag t) nil [269 310])
+            ("SPDLOG_ENABLE_SYSLOG" variable (:constant-flag t) nil [335 355])
+            ("spdlog/sinks/syslog_sink.h" include (:system-flag t) nil [356 393])
+            ("XDIC" type
+               (:members 
+                  ( ("Logger" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [435 442])
+                            ("Ptr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Logger" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [447 483])
+                            ("Level" type
+                               (:members 
+                                  ( ("LEVEL_TRACE" variable
+                                       (:constant-flag t
+                                        :default-value (528 534)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [514 534])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [536 542])
+                                    ("trace" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [543 549])
+                                    ("LEVEL_DEBUG" variable
+                                       (:constant-flag t
+                                        :default-value (572 578)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [558 578])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [580 586])
+                                    ("debug" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [587 593])
+                                    ("LEVEL_INFO" variable
+                                       (:constant-flag t
+                                        :default-value (615 621)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [602 621])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [623 629])
+                                    ("info" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [630 635])
+                                    ("LEVEL_WARN" variable
+                                       (:constant-flag t
+                                        :default-value (657 663)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [644 663])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [665 671])
+                                    ("warn" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [672 677])
+                                    ("LEVEL_ERROR" variable
+                                       (:constant-flag t
+                                        :default-value (700 706)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [686 706])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [708 714])
+                                    ("err" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [715 719])
+                                    ("LEVEL_CRITICAL" variable
+                                       (:constant-flag t
+                                        :default-value (745 751)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [728 751])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [753 759])
+                                    ("critical" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [760 769])
+                                    ("LEVEL_OFF" variable
+                                       (:constant-flag t
+                                        :default-value (790 796)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [778 796])
+                                    ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [798 804])
+                                    ("off" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [805 809]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [489 816])
+                            ("Type" type
+                               (:members 
+                                  ( ("TYPE_NONE" variable
+                                       (:constant-flag t
+                                        :default-value (858 859)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [846 859])
+                                    ("TYPE_CONSOLE" variable
+                                       (:constant-flag t
+                                        :default-value (900 901)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [885 901])
+                                    ("TYPE_FILE" variable
+                                       (:constant-flag t
+                                        :default-value (923 924)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [911 924])
+                                    ("TYPE_ROTATEDFILE" variable
+                                       (:constant-flag t
+                                        :default-value (953 954)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [934 954])
+                                    ("TYPE_CONSOLEFILE" variable
+                                       (:constant-flag t
+                                        :default-value (983 984)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [964 984]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [822 1018])
+                            ("Get" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1069 1093]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1054 1139])
+                            ("GetConsoleLogger" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1173 1197])
+                                    ("level" variable
+                                       (:default-value "LEVEL_INFO"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1198 1220]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1145 2294])
+                            ("GetFileLogger" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2325 2349])
+                                    ("filename" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2350 2378])
+                                    ("level" variable
+                                       (:default-value "LEVEL_INFO"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2379 2401]))                                  
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2300 3413])
+                            ("GetName" function
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3419 3605])
+                            ("GetType" function (:type "int") (reparse-symbol classsubparts) [3611 3649])
+                            ("GetLevel" function (:type "int") (reparse-symbol classsubparts) [3655 3695])
+                            ("SetLevel" function
+                               (:arguments 
+                                  ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [3715 3725]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3701 3880])
+                            ("Log" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3921 3937])
+                                    ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3938 3951]))                                  )
+                                (reparse-symbol classsubparts) [3886 4066])
+                            ("Log" function
+                               (:arguments 
+                                  ( ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4113 4129])
+                                    ("fmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [4130 4146])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4147 4160])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4163 4168]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4104 4292])
+                            ("Trace" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4335 4346]))                                  )
+                                (reparse-symbol classsubparts) [4298 4395])
+                            ("Trace" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4455 4468])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4469 4482])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4485 4490]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4444 4550])
+                            ("Debug" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4593 4604]))                                  )
+                                (reparse-symbol classsubparts) [4556 4653])
+                            ("Debug" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4713 4726])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4727 4740])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4743 4748]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4702 4808])
+                            ("Info" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4850 4861]))                                  )
+                                (reparse-symbol classsubparts) [4814 4909])
+                            ("Info" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4968 4981])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4982 4995])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4998 5003]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4958 5062])
+                            ("Warn" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5104 5115]))                                  )
+                                (reparse-symbol classsubparts) [5068 5163])
+                            ("Warn" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5222 5235])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5236 5249])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5252 5257]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5212 5316])
+                            ("Error" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5359 5370]))                                  )
+                                (reparse-symbol classsubparts) [5322 5419])
+                            ("Error" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5479 5492])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5493 5506])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5509 5514]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5468 5574])
+                            ("Critical" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5620 5631]))                                  )
+                                (reparse-symbol classsubparts) [5580 5683])
+                            ("Critical" function
+                               (:arguments 
+                                  ( ("fmt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5746 5759])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5760 5773])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5776 5781]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5732 5844])
+                            ("ShouldLog" function
+                               (:arguments 
+                                  ( ("level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5865 5881]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5850 6013])
+                            ("private" label nil (reparse-symbol classsubparts) [6015 6023])
+                            ("Logger" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6035 6059])
+                                    ("loggertype" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [6060 6081])
+                                    ("log" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("spdlog::logger" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6082 6127]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6028 6220])
+                            ("Logger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Logger" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6232 6247]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6225 6248])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Logger" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6271 6286]))                                  
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6253 6287])
+                            ("Registry" type
+                               (:members 
+                                  ( ("Get" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6347 6371]))                                          
+                                        :type ("Ptr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6339 6589])
+                                    ("Put" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6608 6632])
+                                            ("ptr" variable (:type ("Ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6633 6641]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6599 6890])
+                                    ("Drop" function
+                                       (:arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6910 6934]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6900 7190])
+                                    ("GetInstance" function
+                                       (:typemodifiers ("static")
+                                        :type ("Registry" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7200 7303])
+                                    ("private" label nil (reparse-symbol classsubparts) [7309 7317])
+                                    ("_Has" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7343 7367]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7326 7411])
+                                    ("m_mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7421 7438])
+                                    ("m_map" variable (:type ("std::unordered_map" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil)
+                                              ("Ptr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [7447 7490]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [6309 7497])
+                            ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7503 7522])
+                            ("m_type" variable (:type "int") (reparse-symbol classsubparts) [7527 7538])
+                            ("m_level" variable (:type "int") (reparse-symbol classsubparts) [7543 7555])
+                            ("m_logger" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("spdlog::logger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [7560 7601]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [420 7604]))                  
+                :type "namespace")
+                nil [402 7607]))          
+      :file "Logger.h"
+      :pointmax 7626
+      :fsize 7625
+      :lastmodtime '(23874 23568 462698 5000)
+      :unmatched-syntax '((punctuation 5774 . 5775) (punctuation 5773 . 5774) (punctuation 5772 . 5773) (punctuation 5726 . 5727) (symbol 5722 . 5726) (punctuation 5720 . 5721) (punctuation 5719 . 5720) (punctuation 5718 . 5719) (TYPENAME 5710 . 5718) (punctuation 5708 . 5709) (symbol 5707 . 5708) (TYPENAME 5698 . 5706) (punctuation 5697 . 5698) (TEMPLATE 5688 . 5696) (punctuation 5507 . 5508) (punctuation 5506 . 5507) (punctuation 5505 . 5506) (punctuation 5462 . 5463) (symbol 5458 . 5462) (punctuation 5456 . 5457) (punctuation 5455 . 5456) (punctuation 5454 . 5455) (TYPENAME 5446 . 5454) (punctuation 5444 . 5445) (symbol 5443 . 5444) (TYPENAME 5434 . 5442) (punctuation 5433 . 5434) (TEMPLATE 5424 . 5432) (punctuation 5250 . 5251) (punctuation 5249 . 5250) (punctuation 5248 . 5249) (punctuation 5206 . 5207) (symbol 5202 . 5206) (punctuation 5200 . 5201) (punctuation 5199 . 5200) (punctuation 5198 . 5199) (TYPENAME 5190 . 5198) (punctuation 5188 . 5189) (symbol 5187 . 5188) (TYPENAME 5178 . 5186) (punctuation 5177 . 5178) (TEMPLATE 5168 . 5176) (punctuation 4996 . 4997) (punctuation 4995 . 4996) (punctuation 4994 . 4995) (punctuation 4952 . 4953) (symbol 4948 . 4952) (punctuation 4946 . 4947) (punctuation 4945 . 4946) (punctuation 4944 . 4945) (TYPENAME 4936 . 4944) (punctuation 4934 . 4935) (symbol 4933 . 4934) (TYPENAME 4924 . 4932) (punctuation 4923 . 4924) (TEMPLATE 4914 . 4922) (punctuation 4741 . 4742) (punctuation 4740 . 4741) (punctuation 4739 . 4740) (punctuation 4696 . 4697) (symbol 4692 . 4696) (punctuation 4690 . 4691) (punctuation 4689 . 4690) (punctuation 4688 . 4689) (TYPENAME 4680 . 4688) (punctuation 4678 . 4679) (symbol 4677 . 4678) (TYPENAME 4668 . 4676) (punctuation 4667 . 4668) (TEMPLATE 4658 . 4666) (punctuation 4483 . 4484) (punctuation 4482 . 4483) (punctuation 4481 . 4482) (punctuation 4438 . 4439) (symbol 4434 . 4438) (punctuation 4432 . 4433) (punctuation 4431 . 4432) (punctuation 4430 . 4431) (TYPENAME 4422 . 4430) (punctuation 4420 . 4421) (symbol 4419 . 4420) (TYPENAME 4410 . 4418) (punctuation 4409 . 4410) (TEMPLATE 4400 . 4408) (punctuation 4161 . 4162) (punctuation 4160 . 4161) (punctuation 4159 . 4160) (punctuation 4098 . 4099) (symbol 4094 . 4098) (punctuation 4092 . 4093) (punctuation 4091 . 4092) (punctuation 4090 . 4091) (TYPENAME 4082 . 4090) (punctuation 4081 . 4082) (TEMPLATE 4072 . 4080) (punctuation 804 . 805) (punctuation 803 . 804) (punctuation 797 . 798) (punctuation 796 . 797) (punctuation 759 . 760) (punctuation 758 . 759) (punctuation 752 . 753) (punctuation 751 . 752) (punctuation 714 . 715) (punctuation 713 . 714) (punctuation 707 . 708) (punctuation 706 . 707) (punctuation 671 . 672) (punctuation 670 . 671) (punctuation 664 . 665) (punctuation 663 . 664) (punctuation 629 . 630) (punctuation 628 . 629) (punctuation 622 . 623) (punctuation 621 . 622) (punctuation 586 . 587) (punctuation 585 . 586) (punctuation 579 . 580) (punctuation 578 . 579) (punctuation 542 . 543) (punctuation 541 . 542) (punctuation 535 . 536) (punctuation 534 . 535) (punctuation 804 . 805) (punctuation 803 . 804) (punctuation 797 . 798) (punctuation 796 . 797) (punctuation 759 . 760) (punctuation 758 . 759) (punctuation 752 . 753) (punctuation 751 . 752) (punctuation 714 . 715) (punctuation 713 . 714) (punctuation 707 . 708) (punctuation 706 . 707) (punctuation 671 . 672) (punctuation 670 . 671) (punctuation 664 . 665) (punctuation 663 . 664) (punctuation 629 . 630) (punctuation 628 . 629) (punctuation 622 . 623) (punctuation 621 . 622) (punctuation 586 . 587) (punctuation 585 . 586) (punctuation 579 . 580) (punctuation 578 . 579) (punctuation 542 . 543) (punctuation 541 . 542) (punctuation 535 . 536) (punctuation 534 . 535) (symbol 65 . 69) (symbol 58 . 64) (punctuation 57 . 58))
+      :lexical-table 
+        '(("SPDLOG_ENABLE_SYSLOG")
+          )
+)
+    (semanticdb-table "XDICLogger.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Logger.h" include nil nil [294 313])
+            ("__FUNC_NAME__" variable (:constant-flag t) nil [443 456])
+            ("GetXDICLogger" function
+               (:prototype-flag t
+                :type ("Logger::Ptr" type (:type "class") nil nil))
+                nil [481 509])
+            ("XDIC_SET_LEVEL" variable (:constant-flag t) nil [519 533])
+            ("XDIC_INFO" variable (:constant-flag t) nil [582 591])
+            ("XDIC_DEBUG" variable (:constant-flag t) nil [715 725])
+            ("XDIC_WARN" variable (:constant-flag t) nil [848 857])
+            ("XDIC_ERROR" variable (:constant-flag t) nil [981 991]))          
+      :file "XDICLogger.h"
+      :pointmax 1246
+      :fsize 1245
+      :lastmodtime '(23874 24086 32740 873000)
+      :unmatched-syntax '((symbol 288 . 292) (symbol 281 . 287) (punctuation 280 . 281) (semantic-list 886 . 972) (symbol 880 . 884) (semantic-list 958 . 971) (string 887 . 910) (punctuation 879 . 880) (punctuation 878 . 879) (semantic-list 876 . 878) (symbol 863 . 876) (semantic-list 857 . 862) (semantic-list 753 . 839) (symbol 748 . 753) (semantic-list 825 . 838) (string 754 . 777) (punctuation 747 . 748) (punctuation 746 . 747) (semantic-list 744 . 746) (symbol 731 . 744) (semantic-list 725 . 730) (semantic-list 620 . 706) (symbol 614 . 618) (semantic-list 692 . 705) (string 621 . 644) (punctuation 613 . 614) (punctuation 612 . 613) (semantic-list 610 . 612) (symbol 597 . 610) (semantic-list 591 . 596) (semantic-list 566 . 573) (symbol 558 . 566) (punctuation 557 . 558) (punctuation 556 . 557) (semantic-list 554 . 556) (symbol 541 . 554) (semantic-list 533 . 540))
+      :lexical-table 
+        '(("XDIC_WARN" (spp-arg-list ("...") 857 . 862) . 
+              ((symbol "GetXDICLogger" 863 . 876) (semantic-list "()" 876 . 878) (punctuation "-" 878 . 879) (punctuation ">" 879 . 880) (symbol "Warn" 880 . 884) (semantic-list "(\"{0} : {1} : {2} : {3}\", __FILE__, __LINE__, __FUNC_NAME__, fmt::format(__VA_ARGS__))" 886 . 972)))
+          ("XDIC_ERROR" (spp-arg-list ("...") 991 . 996) . 
+              ((symbol "GetXDICLogger" 997 . 1010) (semantic-list "()" 1010 . 1012) (punctuation "-" 1012 . 1013) (punctuation ">" 1013 . 1014) (symbol "Error" 1014 . 1019) (semantic-list "(\"{0} : {1} : {2} : {3}\", __FILE__, __LINE__, __FUNC_NAME__, fmt::format(__VA_ARGS__))" 1019 . 1105)))
+          ("XDIC_INFO" (spp-arg-list ("...") 591 . 596) . 
+              ((symbol "GetXDICLogger" 597 . 610) (semantic-list "()" 610 . 612) (punctuation "-" 612 . 613) (punctuation ">" 613 . 614) (symbol "Info" 614 . 618) (semantic-list "(\"{0} : {1} : {2} : {3}\", __FILE__, __LINE__, __FUNC_NAME__, fmt::format(__VA_ARGS__))" 620 . 706)))
+          ("XDIC_DEBUG" (spp-arg-list ("...") 725 . 730) . 
+              ((symbol "GetXDICLogger" 731 . 744) (semantic-list "()" 744 . 746) (punctuation "-" 746 . 747) (punctuation ">" 747 . 748) (symbol "Debug" 748 . 753) (semantic-list "(\"{0} : {1} : {2} : {3}\", __FILE__, __LINE__, __FUNC_NAME__, fmt::format(__VA_ARGS__))" 753 . 839)))
+          ("__FUNC_NAME__" . ((symbol "__func__" 457 . 465)))
+          ("XDIC_SET_LEVEL" (spp-arg-list ("level") 533 . 540) . 
+              ((symbol "GetXDICLogger" 541 . 554) (semantic-list "()" 554 . 556) (punctuation "-" 556 . 557) (punctuation ">" 557 . 558) (symbol "SetLevel" 558 . 566) (semantic-list "(level)" 566 . 573)))
+          )
+)
+    (semanticdb-table "XDICLogger.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Logger.h" include nil nil [53 72])
+            ("XDICLogger.h" include nil nil [73 96])
+            ("XDIC" type
+               (:members 
+                  ( ("GetLogger" function (:type ("Logger::Ptr" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [116 261]))                  
+                :type "namespace")
+                nil [98 264]))          
+      :file "XDICLogger.cpp"
+      :pointmax 286
+      :fsize 285
+      :lastmodtime '(23874 24029 64505 634000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LaserDevice.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("XDIC/LaserDevice.h" include (:system-flag t) nil [53 82])
+            ("LaserDeviceImpl" type (:type "struct") nil [90 129])
+            ("LaserController" type
+               (:members 
+                  ( ("lasers" variable
+                       (:dereference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("LaserDeviceImpl" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [160 199]))                  
+                :type "struct")
+                nil [131 202])
+            ("sg_controller" variable
+               (:typemodifiers ("static")
+                :type ("LaserController" type (:type "class") nil nil))
+                nil [218 255])
+            ("XDIC" type
+               (:members 
+                  ( ("LaserDevice_Name" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [332 355]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [303 364])
+                    ("LaserDevice_SerialNumber" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [403 426]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [366 435])
+                    ("LaserDevice_ListAll" function
+                       (:arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("LaserDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [462 496]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [438 505])
+                    ("LaserDevice_CloseAll" function (:type "int") (reparse-symbol namespacesubparts) [507 542])
+                    ("LaserDevice_IsOpen" function
+                       (:arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [568 591]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [544 600])
+                    ("LaserDevice_Open" function
+                       (:arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [623 646]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [602 655])
+                    ("LaserDevice_Close" function
+                       (:arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [679 702]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [657 711])
+                    ("LaserDevice_Read" function
+                       (:arguments 
+                          ( ("dev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LaserDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [734 757])
+                            ("distance" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [758 775]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [713 784]))                  
+                :type "namespace")
+                nil [285 789]))          
+      :file "LaserDevice.cpp"
+      :pointmax 809
+      :fsize 808
+      :lastmodtime '(23874 26488 506471 185000)
+      :unmatched-syntax '((semantic-list 331 . 355) (symbol 315 . 331) (punctuation 313 . 314) (CHAR 309 . 313) (CONST 303 . 308))))
+  :file "!home!rvbust!Rvbust!Sources!EDIC!XDIC!Src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,110 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables
+  (list
+    (semanticdb-table "extension.h"
+      :file "extension.h"
+      :fsize 3522
+      :lastmodtime '(23395 48853 543047 41000))
+    (semanticdb-table "roi.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("video.h" include nil nil [136 154])
+            ("memory" include (:system-flag t) nil [156 173])
+            ("librealsense" type
+               (:members 
+                  ( ("region_of_interest" type
+                       (:members 
+                          ( ("min_x" variable (:type "int") (reparse-symbol classsubparts) [244 254])
+                            ("min_y" variable (:type "int") (reparse-symbol classsubparts) [263 273])
+                            ("max_x" variable (:type "int") (reparse-symbol classsubparts) [282 292])
+                            ("max_y" variable (:type "int") (reparse-symbol classsubparts) [301 311]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [204 318])
+                    ("region_of_interest_method" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [366 373])
+                            ("set" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("roi" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("region_of_interest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [399 429]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [382 434])
+                            ("get" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("region_of_interest" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [443 486]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [324 550])
+                    ("roi_sensor_interface" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [593 600])
+                            ("get_roi_method" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("region_of_interest_method" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [609 671])
+                            ("set_roi_method" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("roi_method" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("region_of_interest_method" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [708 762]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [680 767]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [556 774])
+                    ("roi_sensor_base" type
+                       (:superclasses 
+                          ( ("roi_sensor_interface" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [842 849])
+                            ("private" label nil (reparse-symbol classsubparts) [1283 1291])
+                            ("_roi_method" variable
+                               (:default-value "nullptr"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("region_of_interest_method" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1300 1365]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [780 1372])
+                    ("MAP_EXTENSION" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("RS2_EXTENSION_ROI" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1392 1410])
+                            ("" variable (:type ("librealsense::roi_sensor_interface" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1411 1446]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1378 1447]))                  
+                :type "namespace")
+                nil [175 1449]))          
+      :file "roi.h"
+      :pointmax 1450
+      :fsize 1449
+      :lastmodtime '(23395 48853 543047 41000)
+      :unmatched-syntax '((semantic-list 1228 . 1277) (symbol 1211 . 1219) (semantic-list 1155 . 1210) (symbol 1141 . 1155) (VOID 1136 . 1140) (semantic-list 925 . 1126) (symbol 908 . 916) (CONST 902 . 907) (semantic-list 899 . 901) (symbol 885 . 899) (punctuation 883 . 884) (symbol 858 . 883) (punctuation 542 . 543) (DEFAULT 535 . 542) (punctuation 533 . 534) (semantic-list 530 . 532) (symbol 505 . 530) (punctuation 504 . 505) (VIRTUAL 496 . 503) (symbol 130 . 134) (symbol 123 . 129) (punctuation 122 . 123)))
+    (semanticdb-table "video.h"
+      :file "video.h"
+      :fsize 952
+      :lastmodtime '(23395 48853 543047 41000)))
+  :file "!home!rvbust!Rvbust!Sources!RealSense!src!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

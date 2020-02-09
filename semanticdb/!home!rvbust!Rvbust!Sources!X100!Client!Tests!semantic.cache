@@ -1,0 +1,73 @@
+;; Object Tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Tests/"
+  :tables
+  (list
+    (semanticdb-table "UseJSON.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("../cJSON.h" include nil nil [54 75])
+            ("string.h" include (:system-flag t) nil [76 95])
+            ("stdlib.h" include (:system-flag t) nil [96 115])
+            ("MAKEMSG_INIT" variable (:constant-flag t) nil [125 137])
+            ("MAKEMSG_CLEANUP" variable (:constant-flag t) nil [486 501])
+            ("MAKEMSG_CHECKED" variable (:constant-flag t) nil [1580 1595])
+            ("MakeMessage_FPGACapture" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1917 1931])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [1932 1945])
+                    ("msgsize" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1946 1959])
+                    ("opticengineid" variable (:type "int") (reparse-symbol arg-sub-list) [1960 1978])
+                    ("cameraid" variable (:type "int") (reparse-symbol arg-sub-list) [1979 1992])
+                    ("image_ids_array" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1993 2015])
+                    ("total" variable (:type "int") (reparse-symbol arg-sub-list) [2044 2054])
+                    ("num_times" variable (:type "int") (reparse-symbol arg-sub-list) [2055 2069])
+                    ("proj_step_ms_hint" variable (:type "int") (reparse-symbol arg-sub-list) [2070 2092])
+                    ("trig_step_ms_hint" variable (:type "int") (reparse-symbol arg-sub-list) [2093 2115]))                  
+                :type "int")
+                nil [1889 2842])
+            ("MakeMsg_Simple" function
+               (:arguments 
+                  ( ("buff" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2970 2982])
+                    ("buffsize" variable (:type "int") (reparse-symbol arg-sub-list) [2983 2996])
+                    ("actualsize" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2997 3013]))                  
+                :type "int")
+                nil [2951 3024]))          
+      :file "UseJSON.c"
+      :pointmax 3027
+      :fsize 3026
+      :lastmodtime '(23687 12043 617088 546000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAKEMSG_INIT" . 
+              ((symbol "cJSON" 171 . 176) (punctuation "*" 177 . 178) (symbol "cmd" 178 . 181) (punctuation "=" 182 . 183) (symbol "NULL" 184 . 188) (punctuation ";" 188 . 189) (punctuation "*" 221 . 222) (symbol "msgsize" 222 . 229) (punctuation "=" 230 . 231) (number "0" 232 . 233) (punctuation ";" 233 . 234) (symbol "cmd" 271 . 274) (punctuation "=" 275 . 276) (symbol "cJSON_CreateObject" 277 . 295) (semantic-list "()" 295 . 297) (punctuation ";" 297 . 298) (IF "if" 321 . 323) (semantic-list "(!cmd)" 324 . 330) (semantic-list "{                                 \\
+        LOG_ERROR(\"cJSON Create Error\\n\");      \\
+        return -1;                              \\
+    }" 331 . 472)))
+          ("MAKEMSG_CHECKED" (spp-arg-list nil 1595 . 1597))
+          ("MAKEMSG_CLEANUP" . 
+              ((IF "if" 556 . 558) (semantic-list "(cmd == NULL)" 559 . 572) (RETURN "return" 573 . 579) (punctuation "-" 580 . 581) (number "1" 581 . 582) (punctuation ";" 582 . 583) (CHAR "char" 630 . 634) (punctuation "*" 635 . 636) (symbol "str" 636 . 639) (punctuation "=" 640 . 641) (symbol "cJSON_PrintUnformatted" 642 . 664) (semantic-list "(cmd)" 664 . 669) (punctuation ";" 669 . 670) (CONST "const" 704 . 709) (INT "int" 710 . 713) (symbol "strsize" 714 . 721) (punctuation "=" 722 . 723) (symbol "strlen" 724 . 730) (semantic-list "(str)" 730 . 735) (punctuation "+" 736 . 737) (number "1" 738 . 739) (punctuation ";" 739 . 740) (IF "if" 810 . 812) (semantic-list "(strsize > buffsize)" 813 . 833) (semantic-list "{                                   \\
+                                        LOG_ERROR(\"buffer size is too small!\\n\"); \\
+                                        cJSON_Delete(cmd);              \\
+                                        return -1;                      \\
+                                    }" 884 . 1191) (punctuation "*" 1264 . 1265) (symbol "msgsize" 1265 . 1272) (punctuation "=" 1273 . 1274) (symbol "strsize" 1275 . 1282) (punctuation ";" 1282 . 1283) (symbol "memcpy" 1338 . 1344) (semantic-list "(buffer, str, strsize)" 1344 . 1366) (punctuation ";" 1366 . 1367) (symbol "cJSON_free" 1412 . 1422) (semantic-list "(str)" 1422 . 1427) (punctuation ";" 1427 . 1428) (symbol "cJSON_Delete" 1486 . 1498) (semantic-list "(cmd)" 1498 . 1503) (punctuation ";" 1503 . 1504) (RETURN "return" 1560 . 1566) (number "0" 1567 . 1568) (punctuation ";" 1568 . 1569)))
+          )
+))
+  :file "!home!rvbust!Rvbust!Sources!X100!Client!Tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

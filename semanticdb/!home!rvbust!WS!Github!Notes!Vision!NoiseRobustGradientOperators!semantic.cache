@@ -1,0 +1,149 @@
+;; Object NoiseRobustGradientOperators/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "NoiseRobustGradientOperators/"
+  :tables
+  (list
+    (semanticdb-table "GradientOperators.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [1138 1157])
+            ("assert.h" include (:system-flag t) nil [1158 1177])
+            ("cv" type
+               (:members 
+                  ( ("Mat" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1193 1203]))                  
+                :type "namespace")
+                nil [1178 1206])
+            ("GradientOperatorType" type
+               (:members 
+                  ( ("GRADIENT_OPTERATOR_SOBEL" variable
+                       (:constant-flag t
+                        :default-value (1285 1286)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1258 1286])
+                    ("GRADIENT_OPTERATOR_RV1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1292 1315])
+                    ("GRADIENT_OPTERATOR_RV2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1320 1343]))                  
+                :type "enum")
+                nil [1225 1346])
+            ("Filtering" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1413 1432])
+                    ("dst" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1433 1446])
+                    ("type" variable
+                       (:constant-flag t
+                        :type ("GradientOperatorType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1447 1479]))                  
+                :type "void")
+                nil [1398 1480]))          
+      :file "GradientOperators.h"
+      :pointmax 1505
+      :fsize 1504
+      :lastmodtime '(23702 9136 65293 926000)
+      :unmatched-syntax nil)
+    (semanticdb-table "GradientOperators.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("GradientOperators.h" include nil nil [16 46])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [47 76])
+            ("Kernel" type
+               (:members 
+                  ( ("Gx" function (:type "int") (reparse-symbol classsubparts) [125 150])
+                    ("kern" variable (:type ("cv::Mat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [160 173]))                  
+                :type "struct")
+                nil [105 177])
+            ("sg_sobel_gx" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    -1, 0, 1,
+    -2, 0, 2,
+    -1, 0, 1,
+}"
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [179 259])
+            ("sg_sobel_gy" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    -1, -2, -1,
+    0,   0,  0,
+    1,   2,  1,
+}"
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [261 347])
+            ("Filtering" function
+               (:arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [366 385])
+                    ("dst" variable
+                       (:reference 1
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [386 399])
+                    ("type" variable
+                       (:constant-flag t
+                        :type ("GradientOperatorType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [400 432]))                  
+                :type "void")
+                nil [351 636]))          
+      :file "GradientOperators.cpp"
+      :pointmax 637
+      :fsize 636
+      :lastmodtime '(23702 9604 51150 124000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("GradientOperators.h" include nil nil [1 31])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [32 61])
+            ("iostream" include (:system-flag t) nil [62 81])
+            ("CopyTo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("img" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cv::Mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102 121])
+                    ("im32" variable
+                       (:reference 1
+                        :type ("Image32I" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [122 137]))                  
+                :type "void")
+                nil [83 146])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [157 166])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [167 180]))                  
+                :type "int")
+                nil [148 607]))          
+      :file "Test.cpp"
+      :pointmax 608
+      :fsize 607
+      :lastmodtime '(23702 8630 507143 421000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Github!Notes!Vision!NoiseRobustGradientOperators!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

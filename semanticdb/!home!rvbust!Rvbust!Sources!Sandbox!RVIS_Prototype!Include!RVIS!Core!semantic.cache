@@ -1,0 +1,535 @@
+;; Object Core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Core/"
+  :tables
+  (list
+    (semanticdb-table "Types.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS" type
+               (:members 
+                  ( ("Float" type
+                       (:typedef ("double")
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [62 83])
+                    ("ObjectType" type
+                       (:members 
+                          ( ("ObjectType_Object" variable
+                               (:constant-flag t
+                                :default-value (126 127)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [141 162])
+                            ("ObjectType_Interface" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [173 194])
+                            ("ObjectType_Environment" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [203 226])
+                            ("ObjectType_KinBody" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [231 250])
+                            ("ObjectType_Robot" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [255 272])
+                            ("ObjectType_Controller" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [277 299])
+                            ("ObjectType_Module" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [304 322])
+                            ("ObjectType_PhysicsEngine" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [327 352])
+                            ("ObjectType_Planner" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [357 376])
+                            ("ObjectType_Trajectory" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [381 403])
+                            ("ObjectType_CollisionChecker" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [408 436])
+                            ("ObjectType_Number" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [446 507]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [119 508])
+                    ("RetCode" type
+                       (:members 
+                          ( ("RetCode_Error" variable
+                               (:constant-flag t
+                                :default-value (501 503)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [529 547])
+                            ("RetCode_OK" variable
+                               (:constant-flag t
+                                :default-value (522 523)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [553 567]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [510 575])
+                    ("Data" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [601 612])
+                    ("Object" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [613 626])
+                    ("Interface" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [628 644])
+                    ("Environment" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [646 664]))                  
+                :type "namespace")
+                nil [15 668]))          
+      :file "Types.h"
+      :pointmax 688
+      :fsize 687
+      :lastmodtime '(23761 16945 957912 613000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Interface.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Utils/Macros.h" include (:system-flag t) nil [15 45])
+            ("RVIS/Core/Types.h" include (:system-flag t) nil [46 74])
+            ("RVIS/Core/Environment.h" include (:system-flag t) nil [75 109])
+            ("RVIS/Base/Object.h" include (:system-flag t) nil [110 139])
+            ("functional" include (:system-flag t) nil [140 161])
+            ("string" include (:system-flag t) nil [162 179])
+            ("mutex" include (:system-flag t) nil [180 196])
+            ("map" include (:system-flag t) nil [197 211])
+            ("RVIS" type
+               (:members 
+                  ( ("Interface" type
+                       (:superclasses 
+                          ( ("Object" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [266 273])
+                            ("Interface" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("penv" variable
+                                       (:pointer 1
+                                        :type ("Environment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [297 315]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [287 316])
+                            ("Clone" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("toclone" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Interface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [495 520])
+                                    ("cloningoptions" variable (:type "int") (reparse-symbol arg-sub-list) [521 540]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [477 541])
+                            ("ExecuteCommand" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [577 600])
+                                    ("input" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Input" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [601 620])
+                                    ("output" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Output" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [621 642]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [550 643])
+                            ("SupportsCommand" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [676 699]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [648 700])
+                            ("SetData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [725 747])
+                                    ("pdata" variable
+                                       (:pointer 1
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [749 761]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [705 762])
+                            ("GetData" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "std::string()"
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [789 827]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [767 835])
+                            ("RemoveData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [863 886]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [840 893])
+                            ("protected" label nil (reparse-symbol classsubparts) [899 909])
+                            ("Interface" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [914 935])
+                            ("InterfaceCommandFn" variable (:type "int") (reparse-symbol classsubparts) [1003 1022])
+                            ("InterfaceCommand" type
+                               (:superclasses 
+                                  ( ("Object" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1081 1088])
+                                    ("InterfaceCommand" function
+                                       (:constructor-flag t
+                                        :type ("InterfaceCommand" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1097 1118])
+                                    ("InterfaceCommand" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("newfn" variable (:type ("InterfaceCommandFn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1144 1169])
+                                            ("newhelp" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1170 1197]))                                          
+                                        :type ("InterfaceCommand" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1127 1227])
+                                    ("fn" variable (:type ("InterfaceCommandFn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1236 1258])
+                                    ("help" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1296 1313]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [1032 1366])
+                            ("RegisterCommand" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1400 1423])
+                                    ("fn" variable
+                                       (:pointer 1
+                                        :type ("InterfaceCommand" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1424 1445])
+                                    ("helpstr" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1446 1473]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1372 1474])
+                            ("UnregisterCommand" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1509 1532]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1479 1533])
+                            ("GetMutex" function
+                               (:typemodifiers ("virtual")
+                                :type ("std::mutex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1538 1594])
+                            ("private" label nil (reparse-symbol classsubparts) [1601 1609])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Interface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1635 1656]))                                  
+                                :type ("Interface" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1614 1765])
+                            ("m_mutex" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::mutex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1771 1798])
+                            ("m_env" variable (:type ("RefPtr" type
+                                 (:template-specifier 
+                                    ( ("Environment" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1803 1829])
+                            ("m_datamap" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("RefPtr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1834 1880])
+                            ("m_cmdmap" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("RefPtr" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1886 1943]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [232 1950]))                  
+                :type "namespace")
+                nil [213 1953]))          
+      :file "Interface.h"
+      :pointmax 1974
+      :fsize 1973
+      :lastmodtime '(23761 19316 381385 201000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Environment.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Object.h" include (:system-flag t) nil [15 44])
+            ("RVIS" type
+               (:members 
+                  ( ("Data" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [64 75])
+                    ("Interface" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [76 92])
+                    ("Environment" type
+                       (:superclasses 
+                          ( ("Object" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [130 137])
+                            ("Environment" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Environment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [142 156])
+                            ("Destroy" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [161 183])
+                            ("Reset" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [188 208])
+                            ("SetData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [233 256])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [257 268]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [213 269])
+                            ("GetData" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "std::string()"
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [296 334]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [274 336])
+                            ("GlobalState" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [341 369])
+                            ("OwnInterface" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("pin" variable
+                                       (:pointer 1
+                                        :type ("Interface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [400 415]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [375 416])
+                            ("DisownInterface" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("pin" variable
+                                       (:pointer 1
+                                        :type ("Interface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [449 464]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [421 465])
+                            ("CloneSelf" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("options" variable (:type "int") (reparse-symbol arg-sub-list) [501 513]))                                  
+                                :type ("Environment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [470 514])
+                            ("noexcept" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [552 567])
+                            ("noexcept" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [591 606])
+                            ("protected" label nil (reparse-symbol classsubparts) [612 622])
+                            ("Environment" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [627 650]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [94 658]))                  
+                :type "namespace")
+                nil [46 661]))          
+      :file "Environment.h"
+      :pointmax 681
+      :fsize 680
+      :lastmodtime '(23752 2884 835687 357000)
+      :unmatched-syntax '((semantic-list 588 . 590) (symbol 584 . 588) (INT 580 . 583) (VIRTUAL 572 . 579) (semantic-list 549 . 551) (symbol 540 . 549) (punctuation 538 . 539) (CHAR 534 . 538) (CONST 528 . 533) (VIRTUAL 520 . 527) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (symbol 252 . 255)))
+    (semanticdb-table "Module.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Core/Interface.h" include (:system-flag t) nil [15 47])
+            ("RVIS/Core/Types.h" include (:system-flag t) nil [48 76])
+            ("RVIS" type
+               (:members 
+                  ( ("Module" type
+                       (:superclasses 
+                          ( ("Interface" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [130 137])
+                            ("Module" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("penv" variable
+                                       (:pointer 1
+                                        :type ("Environment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [158 176]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [151 177])
+                            ("TypeStatic" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :type "int")
+                                (reparse-symbol classsubparts) [182 206])
+                            ("noexcept" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [230 245])
+                            ("noexcept" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [283 298])
+                            ("Main" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [321 344]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [304 345])
+                            ("Destroy" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [350 372])
+                            ("Reset" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [377 397])
+                            ("SimulationStep" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elapsed_time" variable (:type ("Float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [429 448]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [402 449])
+                            ("protected" label nil (reparse-symbol classsubparts) [451 461])
+                            ("Module" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [466 484]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [96 487]))                  
+                :type "namespace")
+                nil [78 490]))          
+      :file "Module.h"
+      :pointmax 510
+      :fsize 509
+      :lastmodtime '(23752 5257 682613 713000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!RVIS_Prototype!Include!RVIS!Core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

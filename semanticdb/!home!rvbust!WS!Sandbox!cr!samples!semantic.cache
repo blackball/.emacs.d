@@ -1,0 +1,39 @@
+;; Object samples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "samples/"
+  :tables
+  (list
+    (semanticdb-table "basic_guest.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("stdbool.h" include (:system-flag t) nil [40 60])
+            ("assert.h" include (:system-flag t) nil [61 80])
+            ("../cr.h" include nil nil [81 99])
+            ("version" variable
+               (:default-value "1"
+                :type ("CR_STATE" type (:type "class") nil nil))
+                nil [527 548])
+            ("hello" function (:type "void") nil [1278 1767])
+            ("test_crash" function (:type "void") nil [1769 1918])
+            ("cr_main" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("cr_plugin" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1942 1964])
+                    ("operation" variable (:type ("cr_op" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [1965 1986]))                  
+                :type "int")
+                nil [1930 3517]))          
+      :file "basic_guest.c"
+      :pointmax 3518
+      :fsize 3517
+      :lastmodtime '(23742 26800 781897 370000)
+      :unmatched-syntax '((symbol 1920 . 1929) (INT 523 . 526) (UNSIGNED 514 . 522) (STATIC 507 . 513))))
+  :file "!home!rvbust!WS!Sandbox!cr!samples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

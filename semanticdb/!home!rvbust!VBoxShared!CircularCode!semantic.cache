@@ -1,0 +1,1143 @@
+;; Object CircularCode/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CircularCode/"
+  :tables
+  (list
+    (semanticdb-table "FPCompare.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("GTEST_OS_WINDOWS" variable (:constant-flag t) nil [569 585])
+            ("TypeWithSize" type
+               (:template 
+                  ( ("size_t" type nil nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3100 3107])
+                    ("UInt" type
+                       (:typedef ("void")
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3197 3215]))                  )
+                nil [3056 3218])
+            ("TypeWithSize" type
+               (:type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3290 3297])
+                    ("Int" type
+                       (:typedef ("int")
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3455 3481])
+                    ("UInt" type
+                       (:typedef ("unsigned int")
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3486 3512]))                  
+                :template-specifier (("4")))
+                nil [3254 3515])
+            ("TypeWithSize" type
+               (:type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3587 3594])
+                    ("Int" type
+                       (:typedef ("__int64" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3599 3629])
+                    ("UInt" variable (:type ((((0) "__int64")) type (:superclasses ("unsigned int") :type "typedef") nil nil)) (reparse-symbol classsubparts) [3634 3664]))                  
+                :template-specifier (("8")))
+                nil [3551 3667])
+            ("FloatingPoint" type
+               (:template 
+                  ( ("RawType" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4876 4883])
+                    ("Bits" variable (:type ("UInt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5029 5039])
+                    ("kFractionBitCount" variable (:type "int") (reparse-symbol classsubparts) [5375 5393])
+                    ("kMaxUlps" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "5000000"
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6388 6426])
+                    ("FloatingPoint" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RawType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6787 6804]))                          
+                        :type ("FloatingPoint" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6773 6823])
+                    ("ReinterpretBits" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("bits" variable
+                               (:constant-flag t
+                                :type ("Bits" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7018 7034]))                          
+                        :type ("RawType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6987 7132])
+                    ("Infinity" function
+                       (:typemodifiers ("static")
+                        :type ("RawType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7213 7300])
+                    ("bits" function
+                       (:constant-flag t
+                        :type ("Bits" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7386 7431])
+                    ("exponent_bits" function (:type ("Bits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7486 7552])
+                    ("fraction_bits" function (:type ("Bits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7607 7673])
+                    ("sign_bit" function (:type ("Bits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7723 7780])
+                    ("is_nan" function (:type "bool") (reparse-symbol classsubparts) [7838 8062])
+                    ("AlmostEquals" function
+                       (:arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FloatingPoint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8391 8416]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [8373 8951])
+                    ("private" label nil (reparse-symbol classsubparts) [8954 8962])
+                    ("FloatingPointUnion" type
+                       (:members 
+                          ( ("value_" variable (:type ("RawType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9075 9090])
+                            ("bits_" variable (:type ("Bits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9134 9145]))                          
+                        :type "union")
+                        (reparse-symbol classsubparts) [9036 9196])
+                    ("SignAndMagnitudeToBiased" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sam" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bits" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9928 9944]))                          
+                        :type ("Bits" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9891 10162])
+                    ("DistanceBetweenSignAndMagnitudeNumbers" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("sam1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bits" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10350 10367])
+                            ("sam2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bits" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10423 10440]))                          
+                        :type ("Bits" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10299 10680])
+                    ("u_" variable (:type ("FloatingPointUnion" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10686 10708]))                  )
+                nil [4826 10711])
+            ("IsAlmostEq" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10988 10992])
+                    ("y" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10993 10997]))                  
+                :typemodifiers ("static"))
+                nil [10944 11186])
+            ("AssertAlmostEq" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("f" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11265 11280])
+                    ("g" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11281 11296]))                  
+                :type "void")
+                nil [11238 11330]))          
+      :file "FPCompare.h"
+      :pointmax 11331
+      :fsize 11640
+      :lastmodtime '(19890 49284 0 0)
+      :unmatched-syntax '((EXPLICIT 6764 . 6772) (punctuation 5757 . 5758) (semantic-list 5724 . 5757) (punctuation 5723 . 5724) (punctuation 5721 . 5722) (symbol 5704 . 5720) (symbol 5699 . 5703) (CONST 5693 . 5698) (STATIC 5686 . 5692) (punctuation 5640 . 5641) (semantic-list 5617 . 5640) (punctuation 5615 . 5616) (punctuation 5614 . 5615) (semantic-list 5610 . 5613) (punctuation 5609 . 5610) (symbol 5605 . 5609) (punctuation 5604 . 5605) (symbol 5593 . 5604) (number 5611 . 5612) (punctuation 5592 . 5593) (number 5611 . 5612) (punctuation 5586 . 5587) (symbol 5569 . 5585) (symbol 5564 . 5568) (CONST 5558 . 5563) (STATIC 5551 . 5557) (punctuation 5505 . 5506) (semantic-list 5490 . 5505) (punctuation 5488 . 5489) (punctuation 5487 . 5488) (semantic-list 5483 . 5486) (punctuation 5482 . 5483) (symbol 5478 . 5482) (punctuation 5477 . 5478) (symbol 5466 . 5477) (number 5484 . 5485) (punctuation 5464 . 5465) (symbol 5451 . 5463) (symbol 5446 . 5450) (CONST 5440 . 5445) (STATIC 5433 . 5439) (punctuation 5373 . 5374) (number 5371 . 5372) (punctuation 5369 . 5370) (symbol 5359 . 5368) (punctuation 5357 . 5358) (symbol 5339 . 5356) (symbol 5332 . 5338) (CONST 5326 . 5331) (STATIC 5319 . 5325) (punctuation 5273 . 5274) (number 5272 . 5273) (punctuation 5270 . 5271) (symbol 5263 . 5269) (punctuation 5262 . 5263) (punctuation 5261 . 5262) (punctuation 5260 . 5261) (symbol 5253 . 5260) (punctuation 5252 . 5253) (symbol 5238 . 5252) (punctuation 5237 . 5238) (punctuation 5236 . 5237) (symbol 5233 . 5236) (punctuation 5227 . 5228) (symbol 5209 . 5226) (symbol 5202 . 5208) (CONST 5196 . 5201) (STATIC 5189 . 5195) (punctuation 5143 . 5144) (semantic-list 5134 . 5143) (SIZEOF 5128 . 5134) (punctuation 5127 . 5128) (number 5126 . 5127) (punctuation 5124 . 5125) (symbol 5114 . 5123) (symbol 5107 . 5113) (CONST 5101 . 5106) (STATIC 5094 . 5100) (punctuation 5028 . 5029) (punctuation 5027 . 5028) (punctuation 5026 . 5027) (semantic-list 5017 . 5026) (SIZEOF 5011 . 5017) (punctuation 5010 . 5011) (symbol 4998 . 5010) (TYPENAME 4989 . 4997) (TYPEDEF 4981 . 4988) (symbol 555 . 559) (symbol 548 . 554) (punctuation 547 . 548))
+      :lexical-table 
+        '(("GTEST_OS_WINDOWS" . ((number "1" 586 . 587)))
+          )
+)
+    (semanticdb-table "CircVal.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_USE_MATH_DEFINES" variable (:constant-flag t) nil [427 444])
+            ("cmath" include (:system-flag t) nil [453 469])
+            ("random" include (:system-flag t) nil [470 487])
+            ("assert.h" include (:system-flag t) nil [488 507])
+            ("FPCompare.h" include nil nil [509 531])
+            ("CircVal" type
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("val" variable (:type "double") (reparse-symbol classsubparts) [731 742])
+                    ("public" label nil (reparse-symbol classsubparts) [819 826])
+                    ("GetL" function
+                       (:typemodifiers ("static")
+                        :type "double")
+                        (reparse-symbol classsubparts) [831 871])
+                    ("GetH" function
+                       (:typemodifiers ("static")
+                        :type "double")
+                        (reparse-symbol classsubparts) [876 916])
+                    ("GetZ" function
+                       (:typemodifiers ("static")
+                        :type "double")
+                        (reparse-symbol classsubparts) [921 961])
+                    ("GetR" function
+                       (:typemodifiers ("static")
+                        :type "double")
+                        (reparse-symbol classsubparts) [966 1006])
+                    ("IsInRange" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [1087 1096]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1065 1150])
+                    ("Wrap" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [1214 1223]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1195 1620])
+                    ("Sdist" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("c1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1795 1813])
+                            ("c2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1814 1832]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1775 2024])
+                    ("Pdist" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("c1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2147 2165])
+                            ("c2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2166 2184]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2127 2267])
+                    ("CircVal" function
+                       (:constructor-flag t
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2326 2369])
+                    ("CircVal" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [2595 2604]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2587 2638])
+                    ("CircVal" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2715 2732]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2707 2764])
+                    ("CircVal" function
+                       (:template 
+                          ( ("CircVal2" type (:type "class") nil nil))                          
+                        :type ("CircVal" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("c2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2962 2981]))                          
+                        :constructor-flag t)
+                        (reparse-symbol classsubparts) [2922 3092])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [3491 3500]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3471 3556])
+                    ("=" function
+                       (:template 
+                          ( ("CircVal2" type (:type "class") nil nil))                          
+                        :type ("CircVal" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("c2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal2" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3668 3687]))                          
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [3616 3820])
+                    ("ToR" function
+                       (:typemodifiers ("friend")
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3975 3992]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3957 4020])
+                    ("+" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4079 4187])
+                    ("-" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4192 4300])
+                    ("~" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4339 4447])
+                    ("+" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4513 4530]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4487 4595])
+                    ("-" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4626 4643]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4600 4708])
+                    ("" function
+                       (:operator-flag t
+                        :function-pointer t
+                        :constant-flag t
+                        :arguments 
+                          ( ("r" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [4739 4756]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4713 4821])
+                    ("/" function
+                       (:operator-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("r" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [4852 4869]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4826 4934])
+                    ("+=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4966 4983]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4946 5048])
+                    ("-=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5079 5096]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5059 5161])
+                    ("=" function
+                       (:operator-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("r" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [5192 5209]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5172 5274])
+                    ("/=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("r" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [5305 5322]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5285 5387])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5419 5436]))                          
+                        :type ("CircVal" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5399 5501])
+                    ("==" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5533 5550]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5507 5615])
+                    ("!=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5646 5663]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5620 5728])
+                    (">" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5896 5913]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5870 5978])
+                    (">=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6009 6026]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5983 6091])
+                    ("<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6122 6139]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6096 6204])
+                    ("<=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6235 6252]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6209 6317]))                  )
+                nil [686 6320])
+            ("sin" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "double"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CircVal" type
+                             (:template-specifier 
+                                ( ("Type" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6452 6475]))                  
+                :typemodifiers ("static"))
+                nil [6400 6530])
+            ("cos" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "double"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CircVal" type
+                             (:template-specifier 
+                                ( ("Type" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6583 6606]))                  
+                :typemodifiers ("static"))
+                nil [6531 6661])
+            ("tan" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "double"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CircVal" type
+                             (:template-specifier 
+                                ( ("Type" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6714 6737]))                  
+                :typemodifiers ("static"))
+                nil [6662 6792])
+            ("asin" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type ("CircVal" type
+                     (:template-specifier 
+                        ( ("Type" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [6845 6868]))                  
+                :typemodifiers ("static"))
+                nil [6793 6923])
+            ("acos" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type ("CircVal" type
+                     (:template-specifier 
+                        ( ("Type" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [7028 7051]))                  
+                :typemodifiers ("static"))
+                nil [6976 7106])
+            ("atan" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type ("CircVal" type
+                     (:template-specifier 
+                        ( ("Type" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [7211 7234]))                  
+                :typemodifiers ("static"))
+                nil [7159 7289])
+            ("atan2" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type ("CircVal" type
+                     (:template-specifier 
+                        ( ("Type" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("r1" variable (:type "double") (reparse-symbol arg-sub-list) [7394 7404])
+                    ("r2" variable (:type "double") (reparse-symbol arg-sub-list) [7405 7417]))                  
+                :typemodifiers ("static"))
+                nil [7342 7472])
+            ("ToC" function
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type ("CircVal" type
+                     (:template-specifier 
+                        ( ("Type" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("r" variable (:type "double") (reparse-symbol arg-sub-list) [7577 7600]))                  
+                :typemodifiers ("static"))
+                nil [7525 7655])
+            ("CircValTester" type
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("IsCircAlmostEq" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("_f" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type
+                                     (:template-specifier 
+                                        ( ("Type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7973 7997])
+                            ("_g" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type
+                                     (:template-specifier 
+                                        ( ("Type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7998 8022]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7946 8263])
+                    ("AssertCircAlmostEq" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("f" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type
+                                     (:template-specifier 
+                                        ( ("Type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8354 8377])
+                            ("g" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CircVal" type
+                                     (:template-specifier 
+                                        ( ("Type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8378 8401]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8323 8451])
+                    ("Test" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [8457 17443])
+                    ("public" label nil (reparse-symbol classsubparts) [17445 17452])
+                    ("CircValTester" function
+                       (:constructor-flag t
+                        :type ("CircValTester" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17457 17500]))                  )
+                nil [7844 17503])
+            ("CircValTypeDef" variable (:constant-flag t) nil [17635 17649])
+            ("SignedDegRange" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("SignedDegRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [18733 18786])
+            ("SignedDegRange::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedDegRange  , -180.,   180.,  0. )"
+                :type "double")
+                nil [18733 18786])
+            ("SignedDegRange::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedDegRange  , -180.,   180.,  0. )"
+                :type "double")
+                nil [18733 18786])
+            ("SignedDegRange::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedDegRange  , -180.,   180.,  0. )"
+                :type "double")
+                nil [18733 18786])
+            ("SignedDegRange::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedDegRange  , -180.,   180.,  0. )"
+                :type "double")
+                nil [18733 18786])
+            ("SignedDegRange::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedDegRange  , -180.,   180.,  0. )"
+                :type "double")
+                nil [18733 18786])
+            ("UnsignedDegRange" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnsignedDegRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [18787 18840])
+            ("UnsignedDegRange::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedDegRange,    0.,   360.,  0. )"
+                :type "double")
+                nil [18787 18840])
+            ("UnsignedDegRange::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedDegRange,    0.,   360.,  0. )"
+                :type "double")
+                nil [18787 18840])
+            ("UnsignedDegRange::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedDegRange,    0.,   360.,  0. )"
+                :type "double")
+                nil [18787 18840])
+            ("UnsignedDegRange::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedDegRange,    0.,   360.,  0. )"
+                :type "double")
+                nil [18787 18840])
+            ("UnsignedDegRange::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedDegRange,    0.,   360.,  0. )"
+                :type "double")
+                nil [18787 18840])
+            ("SignedRadRange" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("SignedRadRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [18841 18894])
+            ("SignedRadRange::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedRadRange  , -M_PI,   M_PI,  0. )"
+                :type "double")
+                nil [18841 18894])
+            ("SignedRadRange::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedRadRange  , -M_PI,   M_PI,  0. )"
+                :type "double")
+                nil [18841 18894])
+            ("SignedRadRange::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedRadRange  , -M_PI,   M_PI,  0. )"
+                :type "double")
+                nil [18841 18894])
+            ("SignedRadRange::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedRadRange  , -M_PI,   M_PI,  0. )"
+                :type "double")
+                nil [18841 18894])
+            ("SignedRadRange::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(SignedRadRange  , -M_PI,   M_PI,  0. )"
+                :type "double")
+                nil [18841 18894])
+            ("UnsignedRadRange" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnsignedRadRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [18895 18948])
+            ("UnsignedRadRange::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedRadRange,    0., 2*M_PI,  0. )"
+                :type "double")
+                nil [18895 18948])
+            ("UnsignedRadRange::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedRadRange,    0., 2*M_PI,  0. )"
+                :type "double")
+                nil [18895 18948])
+            ("UnsignedRadRange::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedRadRange,    0., 2*M_PI,  0. )"
+                :type "double")
+                nil [18895 18948])
+            ("UnsignedRadRange::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedRadRange,    0., 2*M_PI,  0. )"
+                :type "double")
+                nil [18895 18948])
+            ("UnsignedRadRange::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(UnsignedRadRange,    0., 2*M_PI,  0. )"
+                :type "double")
+                nil [18895 18948])
+            ("TestRange0" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestRange0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [19004 19057])
+            ("TestRange0::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange0      ,    3.,    10.,  5.3)"
+                :type "double")
+                nil [19004 19057])
+            ("TestRange0::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange0      ,    3.,    10.,  5.3)"
+                :type "double")
+                nil [19004 19057])
+            ("TestRange0::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange0      ,    3.,    10.,  5.3)"
+                :type "double")
+                nil [19004 19057])
+            ("TestRange0::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange0      ,    3.,    10.,  5.3)"
+                :type "double")
+                nil [19004 19057])
+            ("TestRange0::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange0      ,    3.,    10.,  5.3)"
+                :type "double")
+                nil [19004 19057])
+            ("TestRange1" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestRange1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [19058 19111])
+            ("TestRange1::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange1      ,   -3.,    10., -3.0)"
+                :type "double")
+                nil [19058 19111])
+            ("TestRange1::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange1      ,   -3.,    10., -3.0)"
+                :type "double")
+                nil [19058 19111])
+            ("TestRange1::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange1      ,   -3.,    10., -3.0)"
+                :type "double")
+                nil [19058 19111])
+            ("TestRange1::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange1      ,   -3.,    10., -3.0)"
+                :type "double")
+                nil [19058 19111])
+            ("TestRange1::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange1      ,   -3.,    10., -3.0)"
+                :type "double")
+                nil [19058 19111])
+            ("TestRange2" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestRange2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [19112 19165])
+            ("TestRange2::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange2      ,   -3.,    10.,  9.9)"
+                :type "double")
+                nil [19112 19165])
+            ("TestRange2::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange2      ,   -3.,    10.,  9.9)"
+                :type "double")
+                nil [19112 19165])
+            ("TestRange2::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange2      ,   -3.,    10.,  9.9)"
+                :type "double")
+                nil [19112 19165])
+            ("TestRange2::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange2      ,   -3.,    10.,  9.9)"
+                :type "double")
+                nil [19112 19165])
+            ("TestRange2::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange2      ,   -3.,    10.,  9.9)"
+                :type "double")
+                nil [19112 19165])
+            ("TestRange3" type
+               (:members 
+                  ( ("L" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("H" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("Z" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("R_2" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) nil)
+                    ("static_assert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestRange3" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) nil))                  
+                :type "struct")
+                nil [19166 19219])
+            ("TestRange3::L" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange3      ,  -13.,    -3., -5.3)"
+                :type "double")
+                nil [19166 19219])
+            ("TestRange3::H" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange3      ,  -13.,    -3., -5.3)"
+                :type "double")
+                nil [19166 19219])
+            ("TestRange3::Z" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange3      ,  -13.,    -3., -5.3)"
+                :type "double")
+                nil [19166 19219])
+            ("TestRange3::R" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange3      ,  -13.,    -3., -5.3)"
+                :type "double")
+                nil [19166 19219])
+            ("TestRange3::R_2" variable
+               (:constant-flag t
+                :default-value "CircValTypeDef(TestRange3      ,  -13.,    -3., -5.3)"
+                :type "double")
+                nil [19166 19219]))          
+      :file "CircVal.h"
+      :pointmax 19220
+      :fsize 19564
+      :lastmodtime '(20858 13512 0 0)
+      :unmatched-syntax '((semantic-list 3179 . 3206) (CONST 3169 . 3174) (semantic-list 3166 . 3168) (DOUBLE 3160 . 3166) (OPERATOR 3151 . 3159) (symbol 413 . 417) (symbol 406 . 412) (punctuation 405 . 406))
+      :lexical-table 
+        '(("CircValTypeDef" (spp-arg-list ("_Name" "_L" "_H" "_Z") 17649 . 17668) . 
+              ((STRUCT "struct" 17687 . 17693) (symbol "_Name" 17694 . 17699) (semantic-list "{                                                 \\
+        static const double L  ; /* range: [L,H) */   \\
+        static const double H  ;                      \\
+        static const double Z  ; /* zero-value   */   \\
+        static const double R  ; /* range        */   \\
+        static const double R_2; /* half range   */   \\
+                                                      \\
+        static_assert((_H>_L) && (_Z>=_L) && (_Z<_H), \\
+            #_Name##\": Range not valid\");             \\
+    }" 17743 . 18248) (punctuation ";" 18248 . 18249) (CONST "const" 18359 . 18364) (DOUBLE "double" 18365 . 18371) (symbol "_Name" 18372 . 18377) (punctuation ":" 18377 . 18378) (punctuation ":" 18378 . 18379) (symbol "L" 18379 . 18380) (punctuation "=" 18382 . 18383) (semantic-list "(_L)" 18384 . 18388) (punctuation ";" 18398 . 18399) (CONST "const" 18415 . 18420) (DOUBLE "double" 18421 . 18427) (symbol "_Name" 18428 . 18433) (punctuation ":" 18433 . 18434) (punctuation ":" 18434 . 18435) (symbol "H" 18435 . 18436) (punctuation "=" 18438 . 18439) (semantic-list "(_H)" 18440 . 18444) (punctuation ";" 18454 . 18455) (CONST "const" 18471 . 18476) (DOUBLE "double" 18477 . 18483) (symbol "_Name" 18484 . 18489) (punctuation ":" 18489 . 18490) (punctuation ":" 18490 . 18491) (symbol "Z" 18491 . 18492) (punctuation "=" 18494 . 18495) (semantic-list "(_Z)" 18496 . 18500) (punctuation ";" 18510 . 18511) (CONST "const" 18527 . 18532) (DOUBLE "double" 18533 . 18539) (symbol "_Name" 18540 . 18545) (punctuation ":" 18545 . 18546) (punctuation ":" 18546 . 18547) (symbol "R" 18547 . 18548) (punctuation "=" 18550 . 18551) (semantic-list "((_H)-(_L))" 18552 . 18563) (punctuation ";" 18566 . 18567) (CONST "const" 18583 . 18588) (DOUBLE "double" 18589 . 18595) (symbol "_Name" 18596 . 18601) (punctuation ":" 18601 . 18602) (punctuation ":" 18602 . 18603) (symbol "R_2" 18603 . 18606) (punctuation "=" 18606 . 18607) (semantic-list "((_H)-(_L))" 18608 . 18619) (punctuation "/" 18619 . 18620) (number "2." 18620 . 18622) (punctuation ";" 18622 . 18623)))
+          ("_USE_MATH_DEFINES")
+          )
+))
+  :file "!home!rvbust!VBoxShared!CircularCode!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

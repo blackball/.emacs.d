@@ -1,0 +1,40 @@
+;; Object tests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tests/"
+  :tables
+  (list
+    (semanticdb-table "test_rvx_mat.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("rvx_mat.h" include (:system-flag t) nil [54 74])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [75 104])
+            ("api_accept_mat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:constant-flag t
+                        :type ("rvx_mat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [133 156]))                  
+                :type "void")
+                nil [106 350])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [361 370])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [371 384]))                  
+                :type "int")
+                nil [352 697]))          
+      :file "test_rvx_mat.cpp"
+      :pointmax 698
+      :fsize 697
+      :lastmodtime '(23650 57279 5183 304000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVX!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

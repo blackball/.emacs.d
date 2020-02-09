@@ -1,0 +1,50 @@
+;; Object NormalizeVector/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "NormalizeVector/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vec3" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [62 72])
+                    ("y" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [62 72])
+                    ("z" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [62 72])
+                    ("norm" function
+                       (:typemodifiers ("inline")
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [78 143]))                  )
+                nil [23 146])
+            ("vec3" variable (:type "int") nil [163 175])
+            ("normalize_regular" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:constant-flag t
+                        :type ("vec3f" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [208 222]))                  
+                :type ("vec3f" type (:type "class") nil nil))
+                nil [177 296])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [307 316])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [317 330]))                  
+                :type "int")
+                nil [298 353]))          
+      :file "main.cpp"
+      :pointmax 354
+      :fsize 288
+      :lastmodtime '(23601 52105 398215 326000)
+      :unmatched-syntax '((USING 149 . 154))))
+  :file "!home!rvbust!WS!Sandbox!NormalizeVector!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,324 @@
+;; Object Base/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Base/"
+  :tables
+  (list
+    (semanticdb-table "Allocator.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Allocator.h" include (:system-flag t) nil [1 33])
+            ("RVIS/Base/Auxiliary.h" include (:system-flag t) nil [34 66])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [67 97])
+            ("RVIS/Utils/Macros.h" include (:system-flag t) nil [98 128])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [130 151])
+            ("Allocator" function
+               (:destructor-flag t
+                :parent "Allocator"
+                :type "void")
+                nil [153 405])
+            ("Allocate" function
+               (:pointer 1
+                :parent "Allocator"
+                :arguments 
+                  ( ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [433 450])
+                    ("hint" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [451 468]))                  
+                :type "void")
+                nil [407 584])
+            ("Allocate" function
+               (:pointer 1
+                :parent "Allocator"
+                :arguments 
+                  ( ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [612 629]))                  
+                :type "void")
+                nil [586 743])
+            ("Deallocate" function
+               (:parent "Allocator"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [772 788])
+                    ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [789 806]))                  
+                :type "void")
+                nil [745 917])
+            ("GetOrCreateSharedAuxiliary" function
+               (:pointer 1
+                :parent "Allocator"
+                :type ("Auxiliary" type (:type "class") nil nil))
+                nil [919 1334])
+            ("DetachSharedAuxiliary" function
+               (:parent "Allocator"
+                :arguments 
+                  ( ("auxiliary" variable
+                       (:pointer 1
+                        :type ("Auxiliary" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1420 1441]))                  
+                :type "void")
+                nil [1382 1666]))          
+      :file "Allocator.cpp"
+      :pointmax 1667
+      :fsize 1666
+      :lastmodtime '(23750 38279 432098 694000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Auxiliary.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Auxiliary.h" include (:system-flag t) nil [1 33])
+            ("RVIS/IO/Input.h" include (:system-flag t) nil [34 60])
+            ("RVIS/IO/Output.h" include (:system-flag t) nil [61 88])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [89 119])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [121 142])
+            ("Auxiliary" function
+               (:constructor-flag t
+                :parent "Auxiliary"
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("Allocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [165 186]))                  
+                :type ("Auxiliary" type (:type "class") nil nil))
+                nil [144 334])
+            ("Auxiliary" function
+               (:constructor-flag t
+                :parent "Auxiliary"
+                :arguments 
+                  ( ("object" variable
+                       (:pointer 1
+                        :type ("Object" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [357 372])
+                    ("allocator" variable
+                       (:pointer 1
+                        :type ("Allocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [373 394]))                  
+                :type ("Auxiliary" type (:type "class") nil nil))
+                nil [336 565])
+            ("Auxiliary" function
+               (:destructor-flag t
+                :parent "Auxiliary"
+                :type "void")
+                nil [567 700])
+            ("Ref" function
+               (:parent "Auxiliary"
+                :type "void")
+                nil [702 825])
+            ("Unref" function
+               (:parent "Auxiliary"
+                :type "void")
+                nil [827 1264])
+            ("Unref_NoDelete" function
+               (:parent "Auxiliary"
+                :type "void")
+                nil [1266 1333])
+            ("SignalConnectedObjectToBeDeleted" function
+               (:parent "Auxiliary"
+                :type "bool")
+                nil [1335 1819])
+            ("ResetConnectedObject" function
+               (:parent "Auxiliary"
+                :type "void")
+                nil [1821 1899])
+            ("SetObject" function
+               (:parent "Auxiliary"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1927 1950])
+                    ("object" variable
+                       (:pointer 1
+                        :type ("Object" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1951 1966]))                  
+                :type "void")
+                nil [1901 2001])
+            ("GetObject" function
+               (:pointer 1
+                :parent "Auxiliary"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2032 2055]))                  
+                :type ("Object" type (:type "class") nil nil))
+                nil [2003 2213])
+            ("GetObject" function
+               (:pointer 1
+                :parent "Auxiliary"
+                :constant-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2250 2273]))                  
+                :type ("Object" type (:type "class") nil nil))
+                nil [2215 2443]))          
+      :file "Auxiliary.cpp"
+      :pointmax 2444
+      :fsize 2443
+      :lastmodtime '(23750 38274 804078 459000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Data.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Data.h" include (:system-flag t) nil [1 28])
+            ("RVIS/IO/Input.h" include (:system-flag t) nil [29 55])
+            ("RVIS/IO/Output.h" include (:system-flag t) nil [56 83])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [85 106])
+            ("Read" function
+               (:parent "Data"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("Input" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124 137]))                  
+                :type "void")
+                nil [108 166])
+            ("Write" function
+               (:parent "Data"
+                :arguments 
+                  ( ("output" variable
+                       (:reference 1
+                        :type ("Output" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [185 200]))                  
+                :type "void")
+                nil [168 237]))          
+      :file "Data.cpp"
+      :pointmax 238
+      :fsize 237
+      :lastmodtime '(23750 38269 804056 596000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Object.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVIS/Base/Auxiliary.h" include (:system-flag t) nil [1 33])
+            ("RVIS/Base/Object.h" include (:system-flag t) nil [34 63])
+            ("RVIS/IO/Input.h" include (:system-flag t) nil [64 90])
+            ("RVIS/IO/Output.h" include (:system-flag t) nil [91 118])
+            ("RVIS/Utils/Logger.h" include (:system-flag t) nil [119 149])
+            ("RVIS/Utils/Macros.h" include (:system-flag t) nil [150 180])
+            ("RVIS" using (:type ("RVIS" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [182 203])
+            ("Object" function
+               (:constructor-flag t
+                :parent "Object"
+                :type ("Object" type (:type "class") nil nil))
+                nil [206 271])
+            ("Object" function
+               (:constructor-flag t
+                :parent "Object"
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("Allocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [288 309]))                  
+                :type ("Object" type (:type "class") nil nil))
+                nil [273 398])
+            ("Object" function
+               (:destructor-flag t
+                :parent "Object"
+                :type "void")
+                nil [400 523])
+            ("_Delete" function
+               (:parent "Object"
+                :type "void")
+                nil [525 1453])
+            ("Read" function
+               (:parent "Object"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("Input" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2219 2232]))                  
+                :type "void")
+                nil [2201 2652])
+            ("Write" function
+               (:parent "Object"
+                :arguments 
+                  ( ("output" variable
+                       (:reference 1
+                        :type ("Output" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2673 2688]))                  
+                :type "void")
+                nil [2654 3312])
+            ("SetObject" function
+               (:parent "Object"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3337 3360])
+                    ("object" variable
+                       (:pointer 1
+                        :type ("Object" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3361 3376]))                  
+                :type "void")
+                nil [3314 3438])
+            ("GetObject" function
+               (:pointer 1
+                :parent "Object"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3466 3489]))                  
+                :type ("Object" type (:type "class") nil nil))
+                nil [3440 3571])
+            ("GetObject" function
+               (:pointer 1
+                :parent "Object"
+                :constant-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3605 3628]))                  
+                :type ("Object" type (:type "class") nil nil))
+                nil [3573 3716])
+            ("SetAuxiliary" function
+               (:parent "Object"
+                :arguments 
+                  ( ("auxiliary" variable
+                       (:pointer 1
+                        :type ("Auxiliary" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3744 3765]))                  
+                :type "void")
+                nil [3718 3965])
+            ("GetOrCreateUniqueAuxiliary" function
+               (:pointer 1
+                :parent "Object"
+                :type ("Auxiliary" type (:type "class") nil nil))
+                nil [3967 4977])
+            ("GetAllocator" function
+               (:pointer 1
+                :parent "Object"
+                :type ("Allocator" type (:type "class") nil nil))
+                nil [4979 5086]))          
+      :file "Object.cpp"
+      :pointmax 5087
+      :fsize 5086
+      :lastmodtime '(23752 2115 190164 350000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!Sandbox!RVIS_Prototype!Src!Base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

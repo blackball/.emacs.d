@@ -1,0 +1,723 @@
+;; Object Trajectory/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Trajectory/"
+  :tables
+  (list
+    (semanticdb-table "Path.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Trajectory/Path.h" include (:system-flag t) nil [1765 1806])
+            ("fstream" include (:system-flag t) nil [1807 1825])
+            ("iostream" include (:system-flag t) nil [1826 1845])
+            ("vector" include (:system-flag t) nil [1846 1863])
+            ("algorithm" include (:system-flag t) nil [1864 1884])
+            ("cmath" include (:system-flag t) nil [1885 1901])
+            ("Eigen/Geometry" include (:system-flag t) nil [1902 1927])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1929 1949])
+            ("Eigen" using (:type ("Eigen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1950 1972])
+            ("LinearPathSegment" type
+               (:superclasses 
+                  ( ("PathSegment" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2021 2028])
+                    ("LinearPathSegment" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("start" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2051 2080])
+                            ("end" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2081 2108]))                          
+                        :type ("LinearPathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2033 2175])
+                    ("getConfig" function
+                       (:arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [2207 2216]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2181 2348])
+                    ("getTangent" function
+                       (:arguments 
+                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [2381 2396]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2354 2441])
+                    ("getCurvature" function
+                       (:arguments 
+                          ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [2476 2491]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2447 2547])
+                    ("getSwitchingPoints" function (:type ("list" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2553 2619])
+                    ("clone" function
+                       (:pointer 1
+                        :type ("LinearPathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2625 2698])
+                    ("private" label nil (reparse-symbol classsubparts) [2700 2708])
+                    ("m_start" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2713 2737])
+                    ("m_end" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2742 2764]))                  
+                :type "class")
+                nil [1974 2767])
+            ("CircularPathSegment" type
+               (:superclasses 
+                  ( ("PathSegment" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2818 2825])
+                    ("CircularPathSegment" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("start" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2850 2879])
+                            ("intersection" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2880 2916])
+                            ("end" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2917 2944])
+                            ("maxDeviation" variable (:type "double") (reparse-symbol arg-sub-list) [2945 2965]))                          
+                        :type ("CircularPathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2830 4467])
+                    ("getConfig" function
+                       (:arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [4499 4508]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4473 4645])
+                    ("getTangent" function
+                       (:arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [4678 4687]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4651 4801])
+                    ("getCurvature" function
+                       (:arguments 
+                          ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [4836 4845]))                          
+                        :type ("Eigen::VectorXd" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4807 4978])
+                    ("getSwitchingPoints" function (:type ("list" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4984 5573])
+                    ("clone" function
+                       (:pointer 1
+                        :type ("CircularPathSegment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5579 5656])
+                    ("private" label nil (reparse-symbol classsubparts) [5658 5666])
+                    ("m_radius" variable (:type "double") (reparse-symbol classsubparts) [5671 5687])
+                    ("m_center" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5692 5717])
+                    ("m_x" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5722 5742])
+                    ("m_y" variable (:type ("Eigen::VectorXd" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5747 5767]))                  
+                :type "class")
+                nil [2769 5770])
+            ("Path" function
+               (:constructor-flag t
+                :parent "Path"
+                :arguments 
+                  ( ("path" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("VectorXd" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5783 5810])
+                    ("maxDeviation" variable (:type "double") (reparse-symbol arg-sub-list) [5811 5831]))                  
+                :type ("Path" type (:type "class") nil nil))
+                nil [5772 7763])
+            ("Path" function
+               (:constructor-flag t
+                :parent "Path"
+                :arguments 
+                  ( ("path" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Path" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7776 7793]))                  
+                :type ("Path" type (:type "class") nil nil))
+                nil [7765 8028])
+            ("Path" function
+               (:destructor-flag t
+                :parent "Path"
+                :type "void")
+                nil [8030 8173])
+            ("getLength" function
+               (:parent "Path"
+                :type "double")
+                nil [8175 8224])
+            ("getPathSegment" function
+               (:pointer 1
+                :parent "Path"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8260 8270]))                  
+                :type ("PathSegment" type (:type "class") nil nil))
+                nil [8226 8560])
+            ("getConfig" function
+               (:parent "Path"
+                :arguments 
+                  ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [8587 8596]))                  
+                :type ("VectorXd" type (:type "class") nil nil))
+                nil [8562 8700])
+            ("getTangent" function
+               (:parent "Path"
+                :arguments 
+                  ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [8728 8737]))                  
+                :type ("VectorXd" type (:type "class") nil nil))
+                nil [8702 8842])
+            ("getCurvature" function
+               (:parent "Path"
+                :arguments 
+                  ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [8872 8881]))                  
+                :type ("VectorXd" type (:type "class") nil nil))
+                nil [8844 8988])
+            ("getNextSwitchingPoint" function
+               (:parent "Path"
+                :arguments 
+                  ( ("s" variable (:type "double") (reparse-symbol arg-sub-list) [9025 9034])
+                    ("discontinuity" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [9035 9055]))                  
+                :type "double")
+                nil [8990 9397])
+            ("getSwitchingPoints" function
+               (:parent "Path"
+                :type ("list" type
+                     (:template-specifier 
+                        ( ("pair" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [9399 9484]))          
+      :file "Path.cpp"
+      :pointmax 9485
+      :fsize 9484
+      :lastmodtime '(23759 39104 481249 240000)
+      :unmatched-syntax nil)
+    (semanticdb-table "IterativeSplineParameterization.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RVS/Robotics/Trajectory/IterativeSplineParameterization.h" include (:system-flag t) nil [1914 1982])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("VLIMIT" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "1.0"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2023 2056])
+                            ("ALIMIT" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "1.0"
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2094 2127])
+                            ("FitCubicSpline" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2193 2205])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2206 2224])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2225 2242])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2243 2255])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2256 2268]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2166 2269])
+                            ("AdjustTwoPositions" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2301 2313])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2314 2332])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2333 2344])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2345 2357])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2358 2370])
+                                    ("x2_i" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2371 2389])
+                                    ("x2_f" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2390 2408]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2270 2409])
+                            ("InitTimes" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2432 2444])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2445 2457])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2458 2475])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2476 2502])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2503 2529]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2410 2530])
+                            ("FitSplineAndAdjustTimes" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2566 2578])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2579 2591])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2592 2609])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2610 2622])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2623 2635])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2636 2662])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2663 2689])
+                                    ("max_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2725 2755])
+                                    ("min_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2756 2786])
+                                    ("tfactor" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2787 2808]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [2531 2809])
+                            ("GlobalAdjustmentFactor" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2847 2859])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2860 2872])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2873 2890])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2891 2903])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2904 2916])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2917 2943])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2944 2970])
+                                    ("max_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3008 3038])
+                                    ("min_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3039 3069]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2810 3070])
+                            ("SingleJointTrajectory" type
+                               (:members 
+                                  ( ("positions" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3179 3209])
+                                    ("velocities" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3245 3276])
+                                    ("accelerations" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3281 3315])
+                                    ("initial_acceleration" variable (:type "double") (reparse-symbol classsubparts) [3320 3348])
+                                    ("final_acceleration" variable (:type "double") (reparse-symbol classsubparts) [3353 3379])
+                                    ("min_velocity" variable (:type "double") (reparse-symbol classsubparts) [3384 3404])
+                                    ("max_velocity" variable (:type "double") (reparse-symbol classsubparts) [3409 3429])
+                                    ("min_acceleration" variable (:type "double") (reparse-symbol classsubparts) [3434 3458])
+                                    ("max_acceleration" variable (:type "double") (reparse-symbol classsubparts) [3463 3487]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [3144 3490])
+                            ("GlobalAdjustment" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t2" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("SingleJointTrajectory" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3514 3553])
+                                    ("num_joints" variable (:type "int") (reparse-symbol arg-sub-list) [3554 3569])
+                                    ("num_points" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3570 3591])
+                                    ("time_diff" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3592 3623]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3492 3624])
+                            ("IterativeSplineParameterization" function
+                               (:constructor-flag t
+                                :parent "IterativeSplineParameterization"
+                                :arguments 
+                                  ( ("add_points" variable (:type "bool") (reparse-symbol arg-sub-list) [3692 3708]))                                  
+                                :type ("IterativeSplineParameterization" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3627 3795])
+                            ("IterativeSplineParameterization" function
+                               (:destructor-flag t
+                                :parent "IterativeSplineParameterization"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3797 3867])
+                            ("ComputeTimeStamps" function
+                               (:parent "IterativeSplineParameterization"
+                                :arguments 
+                                  ( ("trajectory" variable
+                                       (:reference 1
+                                        :type ("JointTrajectory" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3925 3953])
+                                    ("joint_limits" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointLimits" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3954 3999])
+                                    ("max_velocity_scaling_factor" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4056 4097])
+                                    ("max_acceleration_scaling_factor" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4098 4143]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3869 13010])
+                            ("FitCubicSpline" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [14854 14866])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14867 14885])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14886 14903])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14904 14916])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14917 14929]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [14827 16112])
+                            ("AdjustTwoPositions" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [16406 16418])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16419 16437])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16438 16449])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16450 16462])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16463 16475])
+                                    ("x2_i" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16476 16494])
+                                    ("x2_f" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16495 16513]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16375 17012])
+                            ("InitTimes" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [17176 17188])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17189 17201])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17202 17219])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17220 17246])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17247 17273]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [17154 17625])
+                            ("FitSplineAndAdjustTimes" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [18547 18559])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18560 18572])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18573 18590])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18591 18603])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18604 18616])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18617 18643])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18644 18670])
+                                    ("max_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18706 18736])
+                                    ("min_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18737 18767])
+                                    ("tfactor" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [18768 18789]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [18512 19616])
+                            ("GlobalAdjustmentFactor" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [19837 19849])
+                                    ("dt" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19850 19862])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19863 19880])
+                                    ("x1" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19881 19893])
+                                    ("x2" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19894 19906])
+                                    ("max_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19907 19933])
+                                    ("min_velocity" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19934 19960])
+                                    ("max_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [19998 20028])
+                                    ("min_acceleration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [20029 20059]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [19800 20705])
+                            ("GlobalAdjustment" function
+                               (:arguments 
+                                  ( ("t2" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("SingleJointTrajectory" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [20791 20830])
+                                    ("num_joints" variable (:type "int") (reparse-symbol arg-sub-list) [20831 20846])
+                                    ("num_points" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [20847 20868])
+                                    ("time_diff" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("double" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [20869 20900]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [20769 21638]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2001 21641]))                  
+                :type "namespace")
+                nil [1985 21665]))          
+      :file "IterativeSplineParameterization.cpp"
+      :pointmax 21683
+      :fsize 21682
+      :lastmodtime '(23773 19063 478914 826000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!Trajectory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

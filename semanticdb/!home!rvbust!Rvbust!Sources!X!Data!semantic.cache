@@ -1,0 +1,46 @@
+;; Object Data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Data/"
+  :tables
+  (list
+    (semanticdb-table "ConvertToBlue.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [44 62])
+            ("cv2" include nil nil [64 74])
+            ("os" include nil nil [76 85])
+            ("shutil" include nil nil [86 99])
+            ("TryCreateDir" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [119 120])
+                ("verbose" variable nil (reparse-symbol function_parameters) [122 129]))              ) nil [102 361])
+            ("TryDeleteDir" function (:arguments 
+              ( ("d" variable nil (reparse-symbol function_parameters) [383 384])
+                ("verbose" variable nil (reparse-symbol function_parameters) [386 393]))              ) nil [366 611])
+            ("ConvertToBlue" function (:arguments 
+              ( ("srcfolder" variable nil (reparse-symbol function_parameters) [634 643])
+                ("dstfolder" variable nil (reparse-symbol function_parameters) [656 665])
+                ("show" variable nil (reparse-symbol function_parameters) [682 686]))              ) nil [616 1362])
+            ("ConvertToBinaryFiles" function
+               (:documentation " Convert all images from srcfolder into binary format. 
+
+    swapendianess: swap the byte endian 
+
+    1. convert bgr to rgb 
+    2. re-arrange pixels to make the first of to be pixels: 0 2 4, ..., the second half to be: 1 3 5, ...,       
+    "
+                :arguments 
+                  ( ("srcfolder" variable nil (reparse-symbol function_parameters) [1397 1406])
+                    ("dstfolder" variable nil (reparse-symbol function_parameters) [1419 1428])
+                    ("swapendianess" variable nil (reparse-symbol function_parameters) [1444 1457])
+                    ("show" variable nil (reparse-symbol function_parameters) [1467 1471]))                  )
+                nil [1372 3221])
+            ("Main" function nil nil [3228 3350])
+            ("if" code nil nil [3350 3388]))          
+      :file "ConvertToBlue.py"
+      :pointmax 3388
+      :fsize 3387
+      :lastmodtime '(23771 43765 411245 604000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X!Data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,395 @@
+;; Object ShoesShaping/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ShoesShaping/"
+  :tables
+  (list
+    (semanticdb-table "CollectData.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Sensor" include nil nil [1 26])
+            ("Viewer" include nil nil [27 52])
+            ("cv2" include nil nil [54 64])
+            ("numpy" include nil nil [65 83])
+            ("HardCapture" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [102 103]))              ) nil [86 365])
+            ("HardCaptureImages" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [388 389]))              ) nil [366 657])
+            ("RemoveNaN" function
+               (:documentation " return pts which is not NaN 
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [672 675]))                  )
+                nil [658 814])
+            ("Main" function nil nil [819 1514])
+            ("if" code nil nil [1540 1578]))          
+      :file "CollectData.py"
+      :pointmax 1578
+      :fsize 1577
+      :lastmodtime '(23713 62215 705702 604000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Sensor.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("RVS.Common" include nil nil [96 125])
+            ("RVS.Vision" include nil nil [127 170])
+            ("numpy" include nil nil [171 189])
+            ("cv2" include nil nil [190 200])
+            ("json" include nil nil [201 212])
+            ("Sensor" type
+               (:documentation " Python wrapper on Ensenso
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Ensenso" code nil (reparse-symbol indented_block_body) [357 377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [386 412])
+                            ("ret, info" code nil (reparse-symbol indented_block_body) [421 457])
+                            ("if" code nil (reparse-symbol indented_block_body) [466 572])
+                            ("self" variable nil (reparse-symbol indented_block_body) [580 608])
+                            ("self" variable nil (reparse-symbol indented_block_body) [617 646]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [337 341]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [324 642])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [667 671]))                          )
+                        (reparse-symbol indented_block_body) [655 732])
+                    ("Open" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [754 758]))                          )
+                        (reparse-symbol indented_block_body) [745 798])
+                    ("SetFromJsonFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [823 827])
+                            ("jsfilename" variable nil (reparse-symbol function_parameters) [829 839]))                          )
+                        (reparse-symbol indented_block_body) [803 900])
+                    ("Close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [923 927]))                          )
+                        (reparse-symbol indented_block_body) [913 969])
+                    ("SetProjector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [991 995])
+                            ("enabled" variable nil (reparse-symbol function_parameters) [997 1004]))                          )
+                        (reparse-symbol indented_block_body) [974 1067])
+                    ("SetFrontLight" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1094 1098])
+                            ("enabled" variable nil (reparse-symbol function_parameters) [1100 1107]))                          )
+                        (reparse-symbol indented_block_body) [1076 1163])
+                    ("Capture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1184 1188]))                          )
+                        (reparse-symbol indented_block_body) [1172 1620])
+                    ("CaptureImages" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1643 1647]))                          )
+                        (reparse-symbol indented_block_body) [1625 1957]))                  
+                :type "class")
+                nil [256 1957]))          
+      :file "Sensor.py"
+      :pointmax 1966
+      :fsize 1965
+      :lastmodtime '(23714 1962 936806 378000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Viewer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [97 115])
+            ("Vis" include nil nil [117 127])
+            ("Viewer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [183 231]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [168 172]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [155 232])
+                    ("Point" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [255 259])
+                            ("pts" variable nil (reparse-symbol function_parameters) [261 264])
+                            ("color" variable nil (reparse-symbol function_parameters) [266 271])
+                            ("size" variable nil (reparse-symbol function_parameters) [290 294]))                          )
+                        (reparse-symbol indented_block_body) [245 364])
+                    ("Box" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385])
+                            ("center" variable nil (reparse-symbol function_parameters) [387 393])
+                            ("exts" variable nil (reparse-symbol function_parameters) [405 409])
+                            ("color" variable nil (reparse-symbol function_parameters) [421 426]))                          )
+                        (reparse-symbol indented_block_body) [373 519])
+                    ("Arrow" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [534 538])
+                            ("start" variable nil (reparse-symbol function_parameters) [540 545])
+                            ("head" variable nil (reparse-symbol function_parameters) [547 551])
+                            ("color" variable nil (reparse-symbol function_parameters) [553 558])
+                            ("size" variable nil (reparse-symbol function_parameters) [572 576]))                          )
+                        (reparse-symbol indented_block_body) [524 815])
+                    ("Line" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [829 833]))                          )
+                        (reparse-symbol indented_block_body) [820 866])
+                    ("Delete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [886 890])
+                            ("handle" variable nil (reparse-symbol function_parameters) [892 898]))                          )
+                        (reparse-symbol indented_block_body) [875 931]))                  
+                :type "class")
+                nil [129 931])
+            ("if" code nil nil [932 1249]))          
+      :file "Viewer.py"
+      :pointmax 1249
+      :fsize 1248
+      :lastmodtime '(23713 62215 705702 604000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ShoeDetector.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Sensor" include nil nil [96 121])
+            ("V0" include nil nil [123 149])
+            ("Utils" include nil nil [150 169])
+            ("RVS.Common" include nil nil [170 199])
+            ("glog" variable nil nil [201 240])
+            ("ShoeDetector" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [302 323])
+                            ("self" code nil (reparse-symbol indented_block_body) [332 349])
+                            ("self" code nil (reparse-symbol indented_block_body) [358 413]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [287 291]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [274 414])
+                    ("Detect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [438 442])
+                            ("debug" variable nil (reparse-symbol function_parameters) [444 449]))                          )
+                        (reparse-symbol indented_block_body) [427 952]))                  
+                :type "class")
+                nil [242 952])
+            ("if" code nil nil [957 1059]))          
+      :file "ShoeDetector.py"
+      :pointmax 1059
+      :fsize 1058
+      :lastmodtime '(23714 3534 514956 569000)
+      :unmatched-syntax nil)
+    (semanticdb-table "V0.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [96 114])
+            ("cv2" include nil nil [115 125])
+            ("copy" include nil nil [126 151])
+            ("RVS.Vision" include nil nil [152 179])
+            ("RVS.Common" include nil nil [180 209])
+            ("Utils" include nil nil [211 230])
+            ("Viewer" include nil nil [231 256])
+            ("PlaneFitting" include nil nil [258 294])
+            ("g_height_range_min" variable nil nil [542 566])
+            ("g_height_range_max" variable nil nil [567 591])
+            ("glog" variable nil nil [593 632])
+            ("CropPoints" function (:arguments 
+              ( ("all_vpts" variable nil (reparse-symbol function_parameters) [650 658])
+                ("min_xyz" variable nil (reparse-symbol function_parameters) [660 667])
+                ("max_xyz" variable nil (reparse-symbol function_parameters) [669 676]))              ) nil [635 1032])
+            ("IsInHull" function
+               (:documentation " Test if pts inside hull 
+
+    hull could be a set of points 
+
+    return a boolean array 
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [1047 1050])
+                    ("hull" variable nil (reparse-symbol function_parameters) [1052 1056]))                  )
+                nil [1034 1317])
+            ("BuildWorld" function (:arguments 
+              ( ("plane" variable nil (reparse-symbol function_parameters) [2907 2912]))              ) nil [2892 3672])
+            ("DetectGroundPlane" function
+               (:documentation " Using a random box strategies
+    1. random sample n box 
+    2. fit n planes 
+    3. choose a best one
+    "
+                :arguments 
+                  ( ("pm" variable nil (reparse-symbol function_parameters) [3699 3701])
+                    ("valid_pts" variable nil (reparse-symbol function_parameters) [3703 3712])
+                    ("roi" variable nil (reparse-symbol function_parameters) [3714 3717])
+                    ("boxsize" variable nil (reparse-symbol function_parameters) [3742 3749])
+                    ("sample_num" variable nil (reparse-symbol function_parameters) [3762 3772])
+                    ("plane_thresh" variable nil (reparse-symbol function_parameters) [3779 3791]))                  )
+                nil [3677 5732])
+            ("DetectHoleCandidatesFromImage" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [5776 5779])
+                ("roi" variable nil (reparse-symbol function_parameters) [5781 5784])
+                ("scale" variable nil (reparse-symbol function_parameters) [5793 5798]))              ) nil [5742 7014])
+            ("GroupHoles" function
+               (:documentation " Group holes to remove overlapping cases 
+    1. If partially overlap, in a RANGE, choose bigger one 
+    2. If concentric, keep the bigger one 
+    "
+                :arguments 
+                  ( ("holes" variable nil (reparse-symbol function_parameters) [7030 7035]))                  )
+                nil [7015 7757])
+            ("BoundingRect" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [7775 7776])
+                ("size" variable nil (reparse-symbol function_parameters) [7778 7782]))              ) nil [7758 7880])
+            ("DetectShoes" function (:arguments 
+              ( ("pm" variable nil (reparse-symbol function_parameters) [16554 16556])
+                ("img" variable nil (reparse-symbol function_parameters) [16558 16561])
+                ("debug" variable nil (reparse-symbol function_parameters) [16563 16568]))              ) nil [16538 25507])
+            ("if" code nil nil [25509 25770]))          
+      :file "V0.py"
+      :pointmax 25775
+      :fsize 25774
+      :lastmodtime '(23714 3962 141288 323000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [96 106])
+            ("numpy" include nil nil [107 125])
+            ("HardCapture" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [143 144]))              ) nil [127 406])
+            ("HardCaptureImages" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [429 430]))              ) nil [407 698])
+            ("Truncate" function
+               (:documentation " only return points in (mind, maxd)
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [721 724])
+                    ("axis_id" variable nil (reparse-symbol function_parameters) [726 733])
+                    ("mind" variable nil (reparse-symbol function_parameters) [735 739])
+                    ("maxd" variable nil (reparse-symbol function_parameters) [741 745]))                  )
+                nil [708 932])
+            ("Transform" function (:arguments 
+              ( ("T" variable nil (reparse-symbol function_parameters) [947 948])
+                ("pts" variable nil (reparse-symbol function_parameters) [950 953]))              ) nil [933 1184])
+            ("Normalize" function (:arguments 
+              ( ("v" variable nil (reparse-symbol function_parameters) [1203 1204]))              ) nil [1189 1240])
+            ("RemoveNaN" function
+               (:documentation " return pts which is not NaN 
+    "
+                :arguments 
+                  ( ("pts" variable nil (reparse-symbol function_parameters) [1255 1258]))                  )
+                nil [1241 1397])
+            ("GetROI" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [1410 1413])
+                ("roi" variable nil (reparse-symbol function_parameters) [1415 1418]))              ) nil [1399 1531])
+            ("DrawEllipse" function (:arguments 
+              ( ("img" variable nil (reparse-symbol function_parameters) [1548 1551])
+                ("e" variable nil (reparse-symbol function_parameters) [1553 1554])
+                ("color" variable nil (reparse-symbol function_parameters) [1556 1561])
+                ("thickness" variable nil (reparse-symbol function_parameters) [1575 1584]))              ) nil [1532 1715]))          
+      :file "Utils.py"
+      :pointmax 1715
+      :fsize 1714
+      :lastmodtime '(23713 62220 69794 924000)
+      :unmatched-syntax nil)
+    (semanticdb-table "App.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ShoeDetector" include nil nil [96 133])
+            ("ScaraPicker" include nil nil [134 169])
+            ("RVS.Common" include nil nil [170 199])
+            ("glog" variable nil nil [201 240])
+            ("App" function nil nil [242 1015])
+            ("if" code nil nil [1016 1053]))          
+      :file "App.py"
+      :pointmax 1053
+      :fsize 1052
+      :lastmodtime '(23714 3184 131058 238000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ScaraPicker.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("AR61030" include nil nil [96 110])
+            ("time" include nil nil [111 122])
+            ("numpy" include nil nil [123 141])
+            ("math" include nil nil [142 153])
+            ("k_effector_distance" variable nil nil [155 182])
+            ("k_effector_height" variable nil nil [183 204])
+            ("k_shoe_depth" variable nil nil [205 224])
+            ("k_shoe_safe_distance" variable nil nil [225 252])
+            ("k_effector_rot_offset" variable nil nil [253 278])
+            ("ScaraPicker" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [340 368])
+                            ("self" code nil (reparse-symbol indented_block_body) [377 397]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [325 329]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [312 398])
+                    ("Convert" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [415 419])
+                            ("results" variable nil (reparse-symbol function_parameters) [421 428]))                          )
+                        (reparse-symbol indented_block_body) [403 1457])
+                    ("Pick" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1471 1475])
+                            ("results" variable nil (reparse-symbol function_parameters) [1477 1484]))                          )
+                        (reparse-symbol indented_block_body) [1462 1957])
+                    ("Place1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1973 1977]))                          )
+                        (reparse-symbol indented_block_body) [1962 2449])
+                    ("Place2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2465 2469]))                          )
+                        (reparse-symbol indented_block_body) [2454 2944])
+                    ("MoveOut" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2961 2965]))                          )
+                        (reparse-symbol indented_block_body) [2949 3333]))                  
+                :type "class")
+                nil [281 3333]))          
+      :file "ScaraPicker.py"
+      :pointmax 3333
+      :fsize 3332
+      :lastmodtime '(23714 51191 148624 990000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PlaneFitting.py"
+      :file "PlaneFitting.py"
+      :fsize 7032
+      :lastmodtime '(23713 62220 69794 924000))
+    (semanticdb-table "AR61030.py"
+      :file "AR61030.py"
+      :fsize 19514
+      :lastmodtime '(23713 62220 69794 924000)))
+  :file "!home!rvbust!Rvbust!Sources!RVS!Apps!ShoesShaping!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,146 @@
+;; Object Calib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Calib/"
+  :tables
+  (list
+    (semanticdb-table "PatternDetector.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PatternDetectorImpls.h" include nil nil [54 87])
+            ("X/Calib/PatternDetector.h" include (:system-flag t) nil [88 124])
+            ("X/Common/Logger.h" include (:system-flag t) nil [125 153])
+            ("X" type
+               (:members 
+                  ( ("Calib" type
+                       (:members 
+                          ( ("PatternDetector" type
+                               (:members 
+                                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [218 227])
+                                    ("rows" variable (:type "int") (reparse-symbol classsubparts) [232 247])
+                                    ("cols" variable (:type "int") (reparse-symbol classsubparts) [232 247]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [189 250])
+                            ("g_log" variable
+                               (:typemodifiers ("static")
+                                :default-value "X::Common::Logger::GetConsoleLogger(\"Calib\")"
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [276 341])
+                            ("PatternDetector_New" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [380 389])
+                                    ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [390 399])
+                                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [400 409]))                                  
+                                :type ("PatternDetector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [343 564])
+                            ("PatternDetector_Delete" function
+                               (:arguments 
+                                  ( ("pp" variable
+                                       (:pointer 2
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [594 615]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [566 689])
+                            ("PatternDetector_Detect" function
+                               (:arguments 
+                                  ( ("pd" variable
+                                       (:pointer 1
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [718 738])
+                                    ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [739 760])
+                                    ("pr" variable
+                                       (:reference 1
+                                        :type ("PatternResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [761 779]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [691 1075])
+                            ("PatternDetector_DetectM" function
+                               (:arguments 
+                                  ( ("pd" variable
+                                       (:pointer 1
+                                        :type ("PatternDetector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1105 1125])
+                                    ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Image" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1126 1145])
+                                    ("prs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("PatternResult" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1146 1178]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1077 1277]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [170 1281]))                  
+                :type "namespace")
+                nil [155 1303]))          
+      :file "PatternDetector.cpp"
+      :pointmax 1319
+      :fsize 1318
+      :lastmodtime '(23596 61381 334587 324000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PatternDetectorImpls.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X/Common/Logger.h" include (:system-flag t) nil [67 95])
+            ("X/Calib/PatternDetector.h" include (:system-flag t) nil [96 132])
+            ("opencv2/opencv.hpp" include (:system-flag t) nil [133 162])
+            ("X" type
+               (:members 
+                  ( ("Calib" type
+                       (:members 
+                          ( ("_Detect_RVLogo" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [277 298])
+                                    ("logo_pts3" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("cv::Point2d" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [299 335]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [251 377])
+                            ("_Detect_RVDOT" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [404 413])
+                                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [414 423])
+                                    ("frame" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("cv::Mat" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [424 445])
+                                    ("pr" variable
+                                       (:reference 1
+                                        :type ("PatternResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [446 464]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [379 872]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [179 880]))                  
+                :type "namespace")
+                nil [164 903]))          
+      :file "PatternDetectorImpls.h"
+      :pointmax 920
+      :fsize 919
+      :lastmodtime '(23596 61500 678312 18000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!Rvbust!Sources!X!Modules!Calib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

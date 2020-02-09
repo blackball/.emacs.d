@@ -1,0 +1,272 @@
+;; Object NewCameraLib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "NewCameraLib/"
+  :tables
+  (list
+    (semanticdb-table "ICamera.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("opencv2/opencv.hpp" include (:system-flag t) nil [67 96])
+            ("string" include (:system-flag t) nil [97 114])
+            ("vector" include (:system-flag t) nil [115 132])
+            ("memory" include (:system-flag t) nil [133 150])
+            ("stdint.h" include (:system-flag t) nil [151 170])
+            ("RVS" type
+               (:members 
+                  ( ("Vision" type
+                       (:members 
+                          ( ("CameraStatus" type
+                               (:superclasses 
+                                  ( ("int32_t" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [214 301])
+                            ("CameraType" type
+                               (:superclasses 
+                                  ( ("uint32_t" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [308 410])
+                            ("CameraDevice" type
+                               (:members 
+                                  ( ("type" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [438 455])
+                                    ("json" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [527 544]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [412 548])
+                            ("GetCameraDevices" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:default-value "-1"
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [593 612]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [550 614])
+                            ("ICamera" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [679 686])
+                                    ("ICamera" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [695 715])
+                                    ("IsOpened" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [721 749])
+                                    ("Open" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [754 786])
+                                    ("Close" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [849 882])
+                                    ("Capture" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("frame" variable
+                                               (:reference 1
+                                                :type ("cv::Mat" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [916 931]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [887 936])
+                                    ("Capture" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("frames" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("cv::Mat" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [970 999])
+                                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [1000 1008]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [941 1013])
+                                    ("Config" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("jsonstr" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1046 1073]))                                          
+                                        :type ("CameraStatus" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1018 1078]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [663 1081])
+                            ("ICameraPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ICamera" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1083 1127])
+                            ("CreateICamera" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("device" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CameraDevice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1154 1181]))                                  
+                                :type ("ICameraPtr" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1129 1182]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [189 1185]))                  
+                :type "namespace")
+                nil [172 1209]))          
+      :file "ICamera.h"
+      :pointmax 1229
+      :fsize 1228
+      :lastmodtime '(23558 19941 511492 679000)
+      :unmatched-syntax '((punctuation 715 . 716) (punctuation 406 . 407) (number 403 . 406) (punctuation 401 . 402) (symbol 392 . 400) (punctuation 386 . 387) (number 383 . 386) (punctuation 381 . 382) (symbol 377 . 380) (punctuation 371 . 372) (number 368 . 371) (punctuation 366 . 367) (symbol 361 . 365) (punctuation 355 . 356) (number 352 . 355) (punctuation 350 . 351) (symbol 343 . 349) (ENUM 303 . 307) (punctuation 296 . 297) (number 295 . 296) (punctuation 294 . 295) (punctuation 292 . 293) (symbol 279 . 291) (punctuation 273 . 274) (number 272 . 273) (punctuation 271 . 272) (punctuation 269 . 270) (symbol 262 . 268) (punctuation 256 . 257) (number 255 . 256) (punctuation 253 . 254) (symbol 250 . 252) (ENUM 209 . 213) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+    (semanticdb-table "ICamera.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ICamera.h" include nil nil [54 74])
+            ("GetCameraDevices" function
+               (:arguments 
+                  ( ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [247 262]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("CameraDevice" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [204 572])
+            ("CreateICamera" function
+               (:arguments 
+                  ( ("device" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CameraDevice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [599 626]))                  
+                :type ("ICameraPtr" type (:type "class") nil nil))
+                nil [574 885]))          
+      :file "ICamera.cpp"
+      :pointmax 886
+      :fsize 885
+      :lastmodtime '(23558 19505 850742 984000)
+      :unmatched-syntax nil)
+    (semanticdb-table "BaslerCamera.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ICamera.h" include nil nil [68 88])
+            ("BaslerCamera" type
+               (:superclasses 
+                  ( ("ICamera" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [128 135])
+                    ("GetCameraDevices" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("devices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CameraDevice" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [177 212]))                          
+                        :type ("CameraStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [140 587])
+                    ("BaslerCamera" function
+                       (:arguments 
+                          ( ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CameraDevice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [606 628]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [593 649])
+                    ("Open" function (:type ("CameraStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [663 703])
+                    ("Close" function (:type ("CameraStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [713 754])
+                    ("Capture" function
+                       (:arguments 
+                          ( ("frame" variable
+                               (:reference 1
+                                :type ("cv::Mat" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [785 800]))                          
+                        :type ("CameraStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [764 821])
+                    ("Capture" function
+                       (:arguments 
+                          ( ("frames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("cv::Mat" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [852 881])
+                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [882 890]))                          
+                        :type ("CameraStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [831 911])
+                    ("Config" function
+                       (:arguments 
+                          ( ("jsonstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [941 968]))                          
+                        :type ("CameraStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [921 989]))                  
+                :type "class")
+                nil [90 992]))          
+      :file "BaslerCamera.h"
+      :pointmax 995
+      :fsize 994
+      :lastmodtime '(23558 18022 338153 64000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TestICamera.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ICamera.h" include nil nil [53 73])
+            ("RVS::Vision" using (:type ("RVS::Vision" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [75 103])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [115 124])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [125 138]))                  
+                :type "int")
+                nil [106 610]))          
+      :file "TestICamera.cpp"
+      :pointmax 611
+      :fsize 610
+      :lastmodtime '(23558 19056 137533 41000)
+      :unmatched-syntax nil))
+  :file "!home!rvbust!WS!Sandbox!NewCameraLib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
