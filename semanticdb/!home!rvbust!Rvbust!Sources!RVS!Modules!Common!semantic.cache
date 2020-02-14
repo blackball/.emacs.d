@@ -1,10 +1,10 @@
-;; Object Common/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Common/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Logger.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("RVS/Common/Logger.h" include (:system-flag t) nil [54 84])
             ("RVS::Common" using (:type ("RVS::Common" type
@@ -166,19 +166,73 @@
                 nil [4469 4624]))          
       :file "Logger.cpp"
       :pointmax 4625
-      :fsize 4624
-      :lastmodtime '(23785 11546 534897 331000)
+      :fsize 4650
+      :lastmodtime '(24127 41085 290033 67000)
       :unmatched-syntax nil)
-    (semanticdb-table "Allocator.cpp"
-      :major-mode 'c++-mode
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
-        '( ("RVS/Common/Memory.h" include (:system-flag t) nil [54 84])
-            ("RVS/Common/Allocator.h" include (:system-flag t) nil [85 118])
-            ("RVS/Common/LoggerUtils.h" include (:system-flag t) nil [119 154]))          
-      :file "Allocator.cpp"
-      :pointmax 1036
-      :unmatched-syntax '((semantic-list 178 . 1009) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1850) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1894) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1869) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1897) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1891) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1881) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1881) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1842) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1833) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1827) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1912) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1906) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1898) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 2000) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 2002) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1992) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165) (semantic-list 178 . 1988) (symbol 171 . 177) (punctuation 170 . 171) (punctuation 169 . 170) (symbol 166 . 169) (NAMESPACE 156 . 165)))
-)
+        '( ("RVS/Common/NetworkUtils.h" include (:system-flag t) nil [53 89])
+            ("RVS" type
+               (:members 
+                  ( ("Common" type
+                       (:members 
+                          ( ("CheckNetwork" function
+                               (:parent "NetworkUtils"
+                                :arguments 
+                                  ( ("ifname" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [159 178])
+                                    ("ns" variable
+                                       (:pointer 1
+                                        :type ("NetworkStatus" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [179 204]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [127 994])
+                            ("IsConnectWithCable" function
+                               (:parent "NetworkUtils"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [996 2173])
+                            ("TestNetworkDelay" function
+                               (:parent "NetworkUtils"
+                                :arguments 
+                                  ( ("host_ip" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2213 2233]))                                  
+                                :type "double")
+                                (reparse-symbol namespacesubparts) [2175 2692])
+                            ("ExecCmd" function
+                               (:parent "NetworkUtils"
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2721 2737])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2738 2751])
+                                    ("result_len" variable (:type "int") (reparse-symbol arg-sub-list) [2752 2767]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2694 2953]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [107 2955]))                  
+                :type "namespace")
+                nil [91 2977]))          
+      :file "NetworkUtils.cpp"
+      :pointmax 2995
+      :fsize 2994
+      :lastmodtime '(24130 22996 143556 836000)
+      :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Common!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

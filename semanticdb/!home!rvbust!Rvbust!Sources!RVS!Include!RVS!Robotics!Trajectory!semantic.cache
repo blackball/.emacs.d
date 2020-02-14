@@ -1,10 +1,10 @@
-;; Object Trajectory/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Trajectory/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Trajectory.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("Eigen/Core" include (:system-flag t) nil [1779 1800])
             ("Path.h" include nil nil [1801 1818])
@@ -252,11 +252,11 @@
                 nil [1820 4579]))          
       :file "Trajectory.h"
       :pointmax 4579
-      :fsize 4685
-      :lastmodtime '(23747 46734 61333 609000)
+      :fsize 26542
+      :lastmodtime '(24127 41085 290033 67000)
       :unmatched-syntax '((symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766) (symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766)))
-    (semanticdb-table "Path.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("list" include (:system-flag t) nil [1779 1794])
             ("Eigen/Core" include (:system-flag t) nil [1795 1816])
@@ -428,9 +428,388 @@
                 nil [2327 2959]))          
       :file "Path.h"
       :pointmax 2959
-      :fsize 2958
-      :lastmodtime '(23747 46734 61333 609000)
-      :unmatched-syntax '((symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766))))
+      :fsize 15504
+      :lastmodtime '(24127 41085 290033 67000)
+      :unmatched-syntax '((symbol 1773 . 1777) (symbol 1766 . 1772) (punctuation 1765 . 1766)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RVS/Robotics/Trajectory/Path.h" include (:system-flag t) nil [66 107])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("Trajectory" type
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [147 193])
+                            ("TrajectoryStep" type
+                               (:members 
+                                  ( ("TrajectoryStep" function
+                                       (:constructor-flag t
+                                        :type ("TrajectoryStep" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [223 242])
+                                    ("TrajectoryStep" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("pos" variable (:type "double") (reparse-symbol arg-sub-list) [400 411])
+                                            ("vel" variable (:type "double") (reparse-symbol arg-sub-list) [412 423])
+                                            ("acc" variable
+                                               (:default-value "0.0"
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [424 440])
+                                            ("time" variable
+                                               (:default-value "0.0"
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [442 459])
+                                            ("jerk" variable
+                                               (:default-value "0.0"
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [461 478]))                                          
+                                        :type ("TrajectoryStep" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [385 564])
+                                    ("ReprStr" function
+                                       (:methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [569 889])
+                                    ("m_pos" variable (:type "double") (reparse-symbol classsubparts) [894 912])
+                                    ("m_vel" variable (:type "double") (reparse-symbol classsubparts) [940 958])
+                                    ("m_acc" variable (:type "double") (reparse-symbol classsubparts) [986 1004])
+                                    ("m_time" variable (:type "double") (reparse-symbol classsubparts) [1036 1055])
+                                    ("m_jerk" variable (:type "double") (reparse-symbol classsubparts) [1073 1092]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [195 1103])
+                            ("RVS::Common::CVecXd" using (:type ("RVS::Common::CVecXd" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1105 1131])
+                            ("std::abs" using (:type ("std::abs" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1132 1147])
+                            ("std::min" using (:type ("std::min" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1148 1163])
+                            ("std::pow" using (:type ("std::pow" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1164 1179])
+                            ("std::sqrt" using (:type ("std::sqrt" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1180 1196])
+                            ("TrajectoryMethodDoubleSVel" type
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1263 1270])
+                                    ("EPS" variable
+                                       (:typemodifiers ("static")
+                                        :default-value "RVS::Robotics::Constants<float>::Epsilon()"
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [1285 1348])
+                                    ("ComputeTrajectory" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("traj" variable
+                                               (:reference 1
+                                                :type ("Trajectory" type
+                                                     (:template-specifier 
+                                                        ( ("LieGroup" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1802 1829])
+                                            ("max_vels" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1830 1853])
+                                            ("max_accs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1854 1877])
+                                            ("max_jerks" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1878 1902])
+                                            ("min_duration" variable
+                                               (:constant-flag t
+                                                :default-value "0.0"
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [1937 1968]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1772 1970])
+                                    ("ComputeGeneralSegmentMaxSVel" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("segment" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PathSegment" type
+                                                     (:template-specifier 
+                                                        ( ("LieGroup" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2483 2520])
+                                            ("max_vels" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2521 2544])
+                                            ("max_accs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2545 2568])
+                                            ("max_jerks" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2569 2593])
+                                            ("step" variable
+                                               (:default-value "0.01"
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [2641 2659]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2440 2661])
+                                    ("ComputeLinearSLimits" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static" "inline")
+                                        :arguments 
+                                          ( ("segment" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PathSegment" type
+                                                     (:template-specifier 
+                                                        ( ("LieGroup" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3037 3074])
+                                            ("max_vels" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3075 3098])
+                                            ("max_accs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3099 3122])
+                                            ("max_jerks" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CVecXd" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3123 3147])
+                                            ("limits" variable
+                                               (:pointer 1
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [3192 3207]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2997 3208])
+                                    ("ComputeNextTrajStep" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("tj_step" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TrajectoryStep" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3579 3609])
+                                            ("t" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [3610 3625])
+                                            ("next_jerk" variable
+                                               (:constant-flag t
+                                                :type "double")
+                                                (reparse-symbol arg-sub-list) [3626 3649]))                                          
+                                        :type ("TrajectoryStep" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3537 3650])
+                                    ("ComputeDoubleSVel" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("q0" variable (:type "double") (reparse-symbol arg-sub-list) [4150 4160])
+                                            ("q1" variable (:type "double") (reparse-symbol arg-sub-list) [4161 4171])
+                                            ("v0" variable (:type "double") (reparse-symbol arg-sub-list) [4172 4182])
+                                            ("v1" variable (:type "double") (reparse-symbol arg-sub-list) [4183 4193])
+                                            ("vmax" variable (:type "double") (reparse-symbol arg-sub-list) [4194 4206])
+                                            ("amax" variable (:type "double") (reparse-symbol arg-sub-list) [4207 4219])
+                                            ("jmax" variable (:type "double") (reparse-symbol arg-sub-list) [4220 4232])
+                                            ("t0" variable (:type "double") (reparse-symbol arg-sub-list) [4233 4243])
+                                            ("tj_steps" variable
+                                               (:reference 1
+                                                :type ("std::list" type
+                                                     (:template-specifier 
+                                                        ( ("TrajectoryStep" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4278 4314]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4120 4315]))                                  )
+                                (reparse-symbol namespacesubparts) [1198 4318])
+                            ("ComputeTrajectory" function
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("traj" variable
+                                       (:reference 1
+                                        :type ("Trajectory" type
+                                             (:template-specifier 
+                                                ( ("LieGroup" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4411 4438])
+                                    ("_max_vels" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4439 4463])
+                                    ("_max_accs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4464 4488])
+                                    ("_max_jerks" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4550 4575])
+                                    ("min_duration" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4576 4602]))                                  
+                                :parent "TrajectoryMethodDoubleSVel")
+                                (reparse-symbol namespacesubparts) [4321 12151])
+                            ("ComputeLinearSLimits" function
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("segment" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PathSegment" type
+                                             (:template-specifier 
+                                                ( ("LieGroup" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12253 12290])
+                                    ("max_vels" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12291 12314])
+                                    ("max_accs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12315 12338])
+                                    ("max_jerks" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12410 12434])
+                                    ("limits" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [12435 12450]))                                  
+                                :typemodifiers ("inline")
+                                :parent "TrajectoryMethodDoubleSVel")
+                                (reparse-symbol namespacesubparts) [12153 12963])
+                            ("ComputeGeneralSegmentMaxSVel" function
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "double"
+                                :arguments 
+                                  ( ("segment" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PathSegment" type
+                                             (:template-specifier 
+                                                ( ("LieGroup" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13068 13105])
+                                    ("max_vels" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13106 13129])
+                                    ("max_accs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13130 13153])
+                                    ("max_jerks" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CVecXd" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13228 13252])
+                                    ("step" variable (:type "double") (reparse-symbol arg-sub-list) [13253 13265]))                                  
+                                :parent "TrajectoryMethodDoubleSVel")
+                                (reparse-symbol namespacesubparts) [12965 14416])
+                            ("ComputeNextTrajStep" function
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type ("TrajectoryStep" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("tj_step" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TrajectoryStep" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14520 14550])
+                                    ("t" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14551 14566])
+                                    ("next_jerk" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [14567 14590]))                                  
+                                :parent "TrajectoryMethodDoubleSVel")
+                                (reparse-symbol namespacesubparts) [14418 14920])
+                            ("ComputeDoubleSVel" function
+                               (:template 
+                                  ( ("LieGroup" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("q0" variable (:type "double") (reparse-symbol arg-sub-list) [15012 15022])
+                                    ("q1" variable (:type "double") (reparse-symbol arg-sub-list) [15023 15033])
+                                    ("v0" variable (:type "double") (reparse-symbol arg-sub-list) [15034 15044])
+                                    ("v1" variable (:type "double") (reparse-symbol arg-sub-list) [15045 15055])
+                                    ("vmax" variable (:type "double") (reparse-symbol arg-sub-list) [15056 15068])
+                                    ("amax" variable (:type "double") (reparse-symbol arg-sub-list) [15069 15081])
+                                    ("jmax" variable (:type "double") (reparse-symbol arg-sub-list) [15082 15094])
+                                    ("t0" variable (:type "double") (reparse-symbol arg-sub-list) [15095 15105])
+                                    ("tj_steps" variable
+                                       (:reference 1
+                                        :type ("std::list" type
+                                             (:template-specifier 
+                                                ( ("TrajectoryStep" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [15167 15203]))                                  
+                                :parent "TrajectoryMethodDoubleSVel")
+                                (reparse-symbol namespacesubparts) [14922 19298]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [125 19300]))                  
+                :type "namespace")
+                nil [109 19324]))          
+      :file "TrajectoryMethodDoubleSVel.h"
+      :pointmax 19342
+      :fsize 19341
+      :lastmodtime '(24130 30858 402559 390000)
+      :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Trajectory!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

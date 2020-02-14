@@ -216,7 +216,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony color-theme-sanityinc-solarized color-theme cmake-mode cmake-ide clang-format bm autopair))))
+    (clang-format+ highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony color-theme-sanityinc-solarized color-theme cmake-mode cmake-ide clang-format bm autopair))))
 
 (defun my-c++-mode-hook ()
   (setq c-basic-offset 4)
@@ -276,6 +276,22 @@
 (add-hook 'c++-mode-common-hook
 	  (lambda()            
 	    (c++-set-offset 'inextern-lang 0)))
+
+(defun format-and-save()
+  (interactive)
+  (clang-format-buffer)
+  (save-buffer))
+
+
+(define-key
+  c-mode-base-map
+  (kbd "C-x C-s")
+  'format-and-save)
+
+;; (add-hook 'c-common-mode-hook 
+;;           (lambda ()
+;;             (add-hook (make-local-variable 'before-save-hook)
+;;                       'clang-format-buffer)))
 
 ;; create dir automatically ceate new file
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)

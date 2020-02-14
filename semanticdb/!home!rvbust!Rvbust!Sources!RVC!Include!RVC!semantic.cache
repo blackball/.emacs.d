@@ -51,8 +51,8 @@
                 nil [131 305]))          
       :file "X1.h"
       :pointmax 325
-      :fsize 324
-      :lastmodtime '(23835 736 306274 864000)
+      :fsize 692
+      :lastmodtime '(24127 40702 996677 248000)
       :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
@@ -76,123 +76,91 @@
                 nil [68 142]))          
       :file "Common.h"
       :pointmax 161
-      :fsize 160
-      :lastmodtime '(23835 468 697175 88000)
+      :fsize 737
+      :lastmodtime '(24127 40702 996677 248000)
       :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (punctuation 135 . 136) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (punctuation 135 . 136) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55) (number 115 . 116) (symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
+
+
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
-        '( ("Common.h" include nil nil [68 87])
-            ("RVC" type
+        '( ("RVC" type
                (:members 
-                  ( ("ProjectorType" type
-                       (:members 
-                          ( ("ProjectorType_None" variable
-                               (:constant-flag t
-                                :default-value (153 154)
-                                :type "int")
-                                (reparse-symbol enumsubparts) [132 154])
-                            ("ProjectorType_3478" variable
-                               (:constant-flag t
-                                :type "int")
-                                (reparse-symbol enumsubparts) [160 179])
-                            ("ProjectorType_Infra" variable
-                               (:constant-flag t
-                                :type "int")
-                                (reparse-symbol enumsubparts) [184 204])
-                            ("ProjectorType_Count" variable
-                               (:constant-flag t
-                                :type "int")
-                                (reparse-symbol enumsubparts) [210 230]))                          
-                        :type "enum")
-                        (reparse-symbol namespacesubparts) [107 234])
-                    ("Projector" type
-                       (:prototype t
-                        :type "struct")
-                        (reparse-symbol namespacesubparts) [236 253]))                  
+                  ( ("PimplPtr" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [128 135])
+                            ("PimplPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("impl" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [149 166]))                                  
+                                :type ("PimplPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [140 184])
+                            ("PimplPtr" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("PimplPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [291 301])
+                                    ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [302 308]))                                  
+                                :type ("PimplPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [282 376])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("PimplPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [402 412])
+                                    ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [413 419]))                                  
+                                :type ("PimplPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [382 509])
+                            ("PimplPtr" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [515 556])
+                            ("" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [562 619])
+                            ("" function
+                               (:operator-flag t
+                                :function-pointer t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [625 670])
+                            ("->" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [676 733])
+                            ("->" function
+                               (:operator-flag t
+                                :pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [739 784])
+                            ("private" label nil (reparse-symbol classsubparts) [786 794])
+                            ("mImpl" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [799 808]))                          )
+                        (reparse-symbol namespacesubparts) [84 811]))                  
                 :type "namespace")
-                nil [89 256]))          
-      :file "Projector.h"
-      :pointmax 275
-      :fsize 274
-      :lastmodtime '(23835 254 416294 471000)
-      :unmatched-syntax '((symbol 62 . 66) (symbol 55 . 61) (punctuation 54 . 55)))
-    (semanticdb-table "semanticdb-table"
-      :major-mode c++-mode
-      :tags 
-        '( ("Common.h" include nil nil [67 86])
-            ("RVC" type
-               (:members 
-                  ( ("Camera" type
-                       (:prototype t
-                        :type "struct")
-                        (reparse-symbol namespacesubparts) [301 315])
-                    ("CameraList" type
-                       (:prototype t
-                        :type "struct")
-                        (reparse-symbol namespacesubparts) [316 334])
-                    ("ListCameras" function
-                       (:prototype-flag t
-                        :type ("CameraList" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [336 361])
-                    ("CameraList_Size" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("camlist" variable
-                               (:constant-flag t
-                                :type ("CameraList" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [382 407]))                          
-                        :type "int")
-                        (reparse-symbol namespacesubparts) [362 408])
-                    ("CameraList_Get" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [431 438]))                          
-                        :type ("Camera" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [409 439])
-                    ("Camera_PrintInfo" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("cam" variable
-                               (:constant-flag t
-                                :type ("Camera" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [462 479]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [440 480])
-                    ("Camera_Open" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("cam" variable
-                               (:constant-flag t
-                                :type ("Camera" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [629 646]))                          
-                        :type ("Status" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [610 647])
-                    ("Camera_Close" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("cam" variable
-                               (:constant-flag t
-                                :type ("Camera" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [668 685]))                          
-                        :type ("Status" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [648 686])
-                    ("Camera_Capture" function
-                       (:prototype-flag t
-                        :arguments 
-                          ( ("cam" variable
-                               (:constant-flag t
-                                :type ("Camera" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [709 726]))                          
-                        :type ("Status" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [687 727]))                  
-                :type "namespace")
-                nil [284 730]))          
-      :file "Camera.h"
-      :pointmax 749
-      :fsize 748
-      :lastmodtime '(23879 33896 128870 279000)
-      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+                nil [67 814]))          
+      :file "PimplPtr.h"
+      :pointmax 833
+      :fsize 832
+      :lastmodtime '(24130 14195 110225 328000)
+      :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!RVC!Include!RVC!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
