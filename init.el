@@ -216,7 +216,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (clang-format+ highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony color-theme-sanityinc-solarized color-theme cmake-mode cmake-ide clang-format bm autopair))))
+    (cargo lsp-mode color-theme-modern flycheck-rust toml-mode rust-mode clang-format+ highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony cmake-mode cmake-ide clang-format bm autopair))))
 
 (defun my-c++-mode-hook ()
   (setq c-basic-offset 4)
@@ -282,25 +282,41 @@
   (clang-format-buffer)
   (save-buffer))
 
+(add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
-(define-key
-  c-mode-base-map
-  (kbd "C-x C-s")
-  'format-and-save)
+(use-package flycheck
+  :hook (prog-mode . flycheck-mode))
 
-;; (add-hook 'c-common-mode-hook 
-;;           (lambda ()
-;;             (add-hook (make-local-variable 'before-save-hook)
-;;                       'clang-format-buffer)))
+(use-package company
+  :hook (prog-mode . company-mode)
+  :config (setq company-tooltip-align-annotations t)
+          (setq company-minimum-prefix-length 1))
 
-;; create dir automatically ceate new file
-(defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
-  "Create parent directory if not exists while visiting file."
-  (unless (file-exists-p filename)
-    (let ((dir (file-name-directory filename)))
-      (unless (file-exists-p dir)
-        (make-directory dir)))))
+(use-package lsp-mode
+  :commands lsp
+  :config (require 'lsp-clients))
 
+(use-package toml-mode)
+
+;; (use-package rust-mode
+;;   :hook (rust-mode . lsp))
+
+(setq rust-rustfmt-bin "/home/rvbust/.cargo/bin/rustfmt")
+(setq rust-format-on-save t)
+
+;; Add keybindings for interacting with Cargo
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+(define-key c-mode-base-map (kbd "C-x C-s") 'format-and-save)
+
+(add-hook 'c-common-mode-hook 
+          (lambda ()
+            (add-hook (make-local-variable 'before-save-hook)
+                      'clang-format-buffer)))
 
 (defun duplicate-line()
   (interactive)
@@ -309,27 +325,7 @@
   (yank)
   (open-line 1)
   (next-line 1)
-  (yank)
-  )
-
-;; Open files and goto lines like we see from g++ etc. i.e. file:line#
-;; (to-do "make `find-file-line-number' work for emacsclient as well")
-;; (to-do "make `find-file-line-number' check if the file exists")
-(defadvice find-file (around find-file-line-number
-                             (filename &optional wildcards)
-                             activate)
-  "Turn files like file.cpp:14 into file.cpp and going to the 14-th line."
-  (save-match-data
-    (let* ((matched (string-match "^\\(.*\\):\\([0-9]+\\):?$" filename))
-           (line-number (and matched
-                             (match-string 2 filename)
-                             (string-to-number (match-string 2 filename))))
-           (filename (if matched (match-string 1 filename) filename)))
-      ad-do-it
-      (when line-number
-        ;; goto-line is for interactive use
-        (goto-char (point-min))
-        (forward-line (1- line-number))))))
+  (yank))
 
 (global-set-key (kbd "M-n") 'duplicate-line)
 
@@ -369,42 +365,23 @@
 (setq-default cursor-type '(bar . 4)) 
 (set-cursor-color "#4445cc")
 
-(require 'color-theme)
-(color-theme-initialize)
-;;(load-theme solarized-dark)
-;; (color-theme-deep-blue)
-(color-theme-calm-forest)
-;; (load-theme 'tango-plus t)
-;; (load-theme 'hemisu-light t)
-;; (load-theme 'hemisu-dark t)
-;;(load-file "~/.emacs.d/color-theme-almost-monokai.el")
-;;(color-theme-almost-monokai)
-;;(color-theme-emacs-21)
+(load-theme 'calm-forest t t)
+(enable-theme 'calm-forest)
 
-;; ;; (load-file "~/.emacs.d/hl-tags-mode.el")
-;; ;; (require 'hl-tags-mode)
-;; ;; (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
-;; ;; (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
+(load-file "~/.emacs.d/hl-tags-mode.el")
+(require 'hl-tags-mode)
+(add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
+(add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
-;; ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;; ;; (load-theme 'spolsky t)
+;; ;; create dir automatically ceate new file
+;; (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
+;;   "Create parent directory if not exists while visiting file."
+;;   (unless (file-exists-p filename)
+;;     (let ((dir (file-name-directory filename)))
+;;       (unless (file-exists-p dir)
+;;         (make-directory dir)))))
 
-;; ;;(package-initialize)
-;; ;;(load-theme 'solarized-dark t)
-
-;; ;;(load-file "~/.emacs.d/.el")
-;; ;;(load-theme 'material t)
-
-;; create dir automatically ceate new file
-(defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
-  "Create parent directory if not exists while visiting file."
-  (unless (file-exists-p filename)
-    (let ((dir (file-name-directory filename)))
-      (unless (file-exists-p dir)
-        (make-directory dir)))))
-
-;; ;; Set as a minor mode for Python
-;; ;;(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
+(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
 
 (defface paren-face
   '((((class color) (background dark))
@@ -432,11 +409,19 @@
         (font-lock-add-keywords
          mode
          '(("\\<\\(TODO\\)" 1 'font-lock-todo-face t)
+           ("\\<\\(todo\\)" 1 'font-lock-todo-face t)
            ("\\<\\(FIXME\\)" 1 'font-lock-fixme-face t)
+           ("\\<\\(fixme\\)" 1 'font-lock-fixme-face t)
            ("\\<\\(NOTE\\)" 1 'font-lock-note-face t)
+           ("\\<\\(note\\)" 1 'font-lock-note-face t)
            ("\\<\\(DONE\\)" 1 'font-lock-done-face t)
-           ("\\<\\(STUDY\\)" 1 'font-lock-study-face t))))
+           ("\\<\\(done\\)" 1 'font-lock-done-face t)
+           ("\\<\\(STUDY\\)" 1 'font-lock-study-face t)
+           ("\\<\\(study\\)" 1 'font-lock-study-face t)
+           )
+         ))
       fixme-modes)
+
 (modify-face 'font-lock-fixme-face "Red" nil nil t nil t nil nil)
 (modify-face 'font-lock-todo-face "Orange" nil nil t nil t nil nil)
 (modify-face 'font-lock-note-face "Green" nil nil t nil t nil nil)

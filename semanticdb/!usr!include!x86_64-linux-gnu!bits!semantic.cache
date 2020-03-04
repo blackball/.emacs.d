@@ -6561,6 +6561,366 @@
         '(("__IOV_MAX" . ((number "1024" 1372 . 1376)))
           ("_BITS_UIO_LIM_H" . ((number "1" 901 . 902)))
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MAP_32BIT" variable (:constant-flag t) nil [1132 1141])
+            ("MAP_GROWSDOWN" variable (:constant-flag t) nil [1255 1268])
+            ("MAP_DENYWRITE" variable (:constant-flag t) nil [1314 1327])
+            ("MAP_EXECUTABLE" variable (:constant-flag t) nil [1360 1374])
+            ("MAP_LOCKED" variable (:constant-flag t) nil [1426 1436])
+            ("MAP_NORESERVE" variable (:constant-flag t) nil [1480 1493])
+            ("MAP_POPULATE" variable (:constant-flag t) nil [1549 1561])
+            ("MAP_NONBLOCK" variable (:constant-flag t) nil [1619 1631])
+            ("MAP_STACK" variable (:constant-flag t) nil [1677 1686])
+            ("MAP_HUGETLB" variable (:constant-flag t) nil [1739 1750])
+            ("MAP_SYNC" variable (:constant-flag t) nil [1802 1810])
+            ("MAP_FIXED_NOREPLACE" variable (:constant-flag t) nil [1893 1912])
+            ("bits/mman-linux.h" include (:system-flag t) nil [2035 2063]))          
+      :file "mman.h"
+      :pointmax 2064
+      :fsize 2063
+      :lastmodtime '(23753 54851 0 0)
+      :unmatched-syntax '((string 888 . 953) (symbol 882 . 887) (punctuation 880 . 881))
+      :lexical-table 
+        '(("MAP_STACK" . ((number "0x20000" 1687 . 1694)))
+          ("MAP_FIXED_NOREPLACE" . ((number "0x100000" 1913 . 1921)))
+          ("MAP_EXECUTABLE" . ((number "0x01000" 1375 . 1382)))
+          ("MAP_GROWSDOWN" . ((number "0x00100" 1269 . 1276)))
+          ("MAP_SYNC" . ((number "0x80000" 1811 . 1818)))
+          ("MAP_POPULATE" . ((number "0x08000" 1562 . 1569)))
+          ("MAP_NONBLOCK" . ((number "0x10000" 1632 . 1639)))
+          ("MAP_NORESERVE" . ((number "0x04000" 1494 . 1501)))
+          ("MAP_LOCKED" . ((number "0x02000" 1437 . 1444)))
+          ("MAP_32BIT" . ((number "0x40" 1142 . 1146)))
+          ("MAP_DENYWRITE" . ((number "0x00800" 1328 . 1335)))
+          ("MAP_HUGETLB" . ((number "0x40000" 1751 . 1758)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("statx_timestamp" type
+               (:members 
+                  ( ("tv_sec" variable (:type ("__int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1025 1042])
+                    ("tv_nsec" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1045 1064])
+                    ("__statx_timestamp_pad1" variable
+                       (:dereference 1
+                        :type ("__int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1067 1103]))                  
+                :type "struct")
+                nil [998 1106])
+            ("statx" type
+               (:members 
+                  ( ("stx_mask" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1369 1389])
+                    ("stx_blksize" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1392 1415])
+                    ("stx_attributes" variable (:type ("__uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1418 1444])
+                    ("stx_nlink" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1447 1468])
+                    ("stx_uid" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1471 1490])
+                    ("stx_gid" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1493 1512])
+                    ("stx_mode" variable (:type ("__uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1515 1535])
+                    ("__statx_pad1" variable
+                       (:dereference 1
+                        :type ("__uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1538 1565])
+                    ("stx_ino" variable (:type ("__uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1568 1587])
+                    ("stx_size" variable (:type ("__uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1590 1610])
+                    ("stx_blocks" variable (:type ("__uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1613 1635])
+                    ("stx_attributes_mask" variable (:type ("__uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1638 1669])
+                    ("stx_atime" variable (:type ("statx_timestamp" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1672 1705])
+                    ("stx_btime" variable (:type ("statx_timestamp" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1708 1741])
+                    ("stx_ctime" variable (:type ("statx_timestamp" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1744 1777])
+                    ("stx_mtime" variable (:type ("statx_timestamp" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1780 1813])
+                    ("stx_rdev_major" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1816 1842])
+                    ("stx_rdev_minor" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1845 1871])
+                    ("stx_dev_major" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1874 1899])
+                    ("stx_dev_minor" variable (:type ("__uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1902 1927])
+                    ("__statx_pad2" variable
+                       (:dereference 1
+                        :type ("__uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1930 1958]))                  
+                :type "struct")
+                nil [1352 1961])
+            ("STATX_TYPE" variable (:constant-flag t) nil [1971 1981])
+            ("STATX_MODE" variable (:constant-flag t) nil [1998 2008])
+            ("STATX_NLINK" variable (:constant-flag t) nil [2025 2036])
+            ("STATX_UID" variable (:constant-flag t) nil [2053 2062])
+            ("STATX_GID" variable (:constant-flag t) nil [2079 2088])
+            ("STATX_ATIME" variable (:constant-flag t) nil [2105 2116])
+            ("STATX_MTIME" variable (:constant-flag t) nil [2133 2144])
+            ("STATX_CTIME" variable (:constant-flag t) nil [2161 2172])
+            ("STATX_INO" variable (:constant-flag t) nil [2189 2198])
+            ("STATX_SIZE" variable (:constant-flag t) nil [2215 2225])
+            ("STATX_BLOCKS" variable (:constant-flag t) nil [2242 2254])
+            ("STATX_BASIC_STATS" variable (:constant-flag t) nil [2271 2288])
+            ("STATX_ALL" variable (:constant-flag t) nil [2305 2314])
+            ("STATX_BTIME" variable (:constant-flag t) nil [2331 2342])
+            ("STATX__RESERVED" variable (:constant-flag t) nil [2359 2374])
+            ("STATX_ATTR_COMPRESSED" variable (:constant-flag t) nil [2396 2417])
+            ("STATX_ATTR_IMMUTABLE" variable (:constant-flag t) nil [2433 2453])
+            ("STATX_ATTR_APPEND" variable (:constant-flag t) nil [2469 2486])
+            ("STATX_ATTR_NODUMP" variable (:constant-flag t) nil [2502 2519])
+            ("STATX_ATTR_ENCRYPTED" variable (:constant-flag t) nil [2535 2555])
+            ("STATX_ATTR_AUTOMOUNT" variable (:constant-flag t) nil [2571 2591])
+            ("statx" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__dirfd" variable (:type "int") (reparse-symbol arg-sub-list) [2681 2693])
+                    ("__path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2694 2724])
+                    ("__flags" variable (:type "int") (reparse-symbol arg-sub-list) [2725 2737])
+                    ("__mask" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2749 2769])
+                    ("__buf" variable
+                       (:pointer 1
+                        :type ("statx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2770 2801]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2670 2831]))          
+      :file "statx.h"
+      :pointmax 2845
+      :fsize 2844
+      :lastmodtime '(23753 54851 0 0)
+      :unmatched-syntax '((punctuation 988 . 989) (symbol 981 . 988) (punctuation 979 . 980) (symbol 978 . 979) (punctuation 977 . 978) (symbol 973 . 977) (punctuation 972 . 973) (symbol 969 . 972) (punctuation 968 . 969) (symbol 960 . 967) (punctuation 958 . 959) (symbol 950 . 958) (punctuation 948 . 949) (symbol 947 . 948) (punctuation 946 . 947) (symbol 945 . 946) (punctuation 944 . 945) (symbol 940 . 944) (punctuation 939 . 940) (symbol 935 . 939) (punctuation 934 . 935) (symbol 926 . 933) (symbol 920 . 925) (symbol 914 . 919) (punctuation 912 . 913))
+      :lexical-table 
+        '(("STATX_BLOCKS" . ((symbol "0x0400U" 2255 . 2262)))
+          ("STATX_ALL" . ((symbol "0x0fffU" 2315 . 2322)))
+          ("STATX__RESERVED" . ((symbol "0x80000000U" 2375 . 2386)))
+          ("STATX_CTIME" . ((symbol "0x0080U" 2173 . 2180)))
+          ("STATX_ATTR_NODUMP" . ((number "0x0040" 2520 . 2526)))
+          ("STATX_ATTR_COMPRESSED" . ((number "0x0004" 2418 . 2424)))
+          ("STATX_INO" . ((symbol "0x0100U" 2199 . 2206)))
+          ("STATX_ATTR_ENCRYPTED" . ((number "0x0800" 2556 . 2562)))
+          ("STATX_MTIME" . ((symbol "0x0040U" 2145 . 2152)))
+          ("STATX_MODE" . ((symbol "0x0002U" 2009 . 2016)))
+          ("STATX_ATTR_APPEND" . ((number "0x0020" 2487 . 2493)))
+          ("STATX_UID" . ((symbol "0x0008U" 2063 . 2070)))
+          ("STATX_ATTR_AUTOMOUNT" . ((number "0x1000" 2592 . 2598)))
+          ("STATX_ATIME" . ((symbol "0x0020U" 2117 . 2124)))
+          ("STATX_ATTR_IMMUTABLE" . ((number "0x0010" 2454 . 2460)))
+          ("STATX_TYPE" . ((symbol "0x0001U" 1982 . 1989)))
+          ("STATX_NLINK" . ((symbol "0x0004U" 2037 . 2044)))
+          ("STATX_GID" . ((symbol "0x0010U" 2089 . 2096)))
+          ("STATX_SIZE" . ((symbol "0x0200U" 2226 . 2233)))
+          ("STATX_BASIC_STATS" . ((symbol "0x07ffU" 2289 . 2296)))
+          ("STATX_BTIME" . ((symbol "0x0800U" 2343 . 2350)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("PROT_READ" variable (:constant-flag t) nil [1385 1394])
+            ("PROT_WRITE" variable (:constant-flag t) nil [1433 1443])
+            ("PROT_EXEC" variable (:constant-flag t) nil [1485 1494])
+            ("PROT_NONE" variable (:constant-flag t) nil [1537 1546])
+            ("PROT_GROWSDOWN" variable (:constant-flag t) nil [1593 1607])
+            ("PROT_GROWSUP" variable (:constant-flag t) nil [1699 1711])
+            ("MAP_SHARED" variable (:constant-flag t) nil [1864 1874])
+            ("MAP_PRIVATE" variable (:constant-flag t) nil [1911 1922])
+            ("MAP_SHARED_VALIDATE" variable (:constant-flag t) nil [1984 2003])
+            ("MAP_TYPE" variable (:constant-flag t) nil [2077 2085])
+            ("MAP_FIXED" variable (:constant-flag t) nil [2161 2170])
+            ("MAP_FILE" variable (:constant-flag t) nil [2235 2243])
+            ("MAP_ANONYMOUS" variable (:constant-flag t) nil [2352 2365])
+            ("MAP_ANON" variable (:constant-flag t) nil [2414 2422])
+            ("MAP_HUGE_SHIFT" variable (:constant-flag t) nil [2529 2543])
+            ("MAP_HUGE_MASK" variable (:constant-flag t) nil [2556 2569])
+            ("MS_ASYNC" variable (:constant-flag t) nil [2616 2624])
+            ("MS_SYNC" variable (:constant-flag t) nil [2671 2678])
+            ("MS_INVALIDATE" variable (:constant-flag t) nil [2723 2736])
+            ("MREMAP_MAYMOVE" variable (:constant-flag t) nil [2824 2838])
+            ("MREMAP_FIXED" variable (:constant-flag t) nil [2850 2862])
+            ("MADV_NORMAL" variable (:constant-flag t) nil [2928 2939])
+            ("MADV_RANDOM" variable (:constant-flag t) nil [2990 3001])
+            ("MADV_SEQUENTIAL" variable (:constant-flag t) nil [3053 3068])
+            ("MADV_WILLNEED" variable (:constant-flag t) nil [3123 3136])
+            ("MADV_DONTNEED" variable (:constant-flag t) nil [3180 3193])
+            ("MADV_FREE" variable (:constant-flag t) nil [3238 3247])
+            ("MADV_REMOVE" variable (:constant-flag t) nil [3304 3315])
+            ("MADV_DONTFORK" variable (:constant-flag t) nil [3370 3383])
+            ("MADV_DOFORK" variable (:constant-flag t) nil [3433 3444])
+            ("MADV_MERGEABLE" variable (:constant-flag t) nil [3490 3504])
+            ("MADV_UNMERGEABLE" variable (:constant-flag t) nil [3557 3573])
+            ("MADV_HUGEPAGE" variable (:constant-flag t) nil [3628 3641])
+            ("MADV_NOHUGEPAGE" variable (:constant-flag t) nil [3693 3708])
+            ("MADV_DONTDUMP" variable (:constant-flag t) nil [3763 3776])
+            ("MADV_DODUMP" variable (:constant-flag t) nil [3910 3921])
+            ("MADV_WIPEONFORK" variable (:constant-flag t) nil [3973 3988])
+            ("MADV_KEEPONFORK" variable (:constant-flag t) nil [4042 4057])
+            ("MADV_HWPOISON" variable (:constant-flag t) nil [4100 4113])
+            ("POSIX_MADV_NORMAL" variable (:constant-flag t) nil [4265 4282])
+            ("POSIX_MADV_RANDOM" variable (:constant-flag t) nil [4331 4348])
+            ("POSIX_MADV_SEQUENTIAL" variable (:constant-flag t) nil [4398 4419])
+            ("POSIX_MADV_WILLNEED" variable (:constant-flag t) nil [4473 4492])
+            ("POSIX_MADV_DONTNEED" variable (:constant-flag t) nil [4534 4553])
+            ("MCL_CURRENT" variable (:constant-flag t) nil [4653 4664])
+            ("MCL_FUTURE" variable (:constant-flag t) nil [4717 4727])
+            ("MCL_ONFAULT" variable (:constant-flag t) nil [4792 4803])
+            ("bits/mman-shared.h" include (:system-flag t) nil [4866 4895]))          
+      :file "mman-linux.h"
+      :pointmax 4896
+      :fsize 4895
+      :lastmodtime '(23753 54851 0 0)
+      :unmatched-syntax '((string 889 . 960) (symbol 883 . 888) (punctuation 881 . 882))
+      :lexical-table 
+        '(("PROT_WRITE" . ((number "0x2" 1444 . 1447)))
+          ("MADV_RANDOM" . ((number "1" 3004 . 3005)))
+          ("MADV_SEQUENTIAL" . ((number "2" 3070 . 3071)))
+          ("MADV_UNMERGEABLE" . ((number "13" 3574 . 3576)))
+          ("POSIX_MADV_NORMAL" . ((number "0" 4283 . 4284)))
+          ("POSIX_MADV_SEQUENTIAL" . ((number "2" 4420 . 4421)))
+          ("MAP_FIXED" . ((number "0x10" 2171 . 2175)))
+          ("MS_ASYNC" . ((number "1" 2625 . 2626)))
+          ("MADV_DONTNEED" . ((number "4" 3196 . 3197)))
+          ("MADV_DOFORK" . ((number "11" 3447 . 3449)))
+          ("MADV_HUGEPAGE" . ((number "14" 3644 . 3646)))
+          ("MADV_KEEPONFORK" . ((number "19" 4059 . 4061)))
+          ("MAP_PRIVATE" . ((number "0x02" 1923 . 1927)))
+          ("MAP_HUGE_MASK" . ((number "0x3f" 2570 . 2574)))
+          ("MS_INVALIDATE" . ((number "2" 2737 . 2738)))
+          ("MREMAP_MAYMOVE" . ((number "1" 2839 . 2840)))
+          ("MADV_MERGEABLE" . ((number "12" 3507 . 3509)))
+          ("MADV_DONTDUMP" . ((number "16" 3779 . 3781)))
+          ("MADV_HWPOISON" . ((number "100" 4116 . 4119)))
+          ("MAP_ANON" . ((symbol "MAP_ANONYMOUS" 2423 . 2436)))
+          ("MADV_DODUMP" . ((number "17" 3924 . 3926)))
+          ("POSIX_MADV_RANDOM" . ((number "1" 4349 . 4350)))
+          ("MADV_FREE" . ((number "8" 3250 . 3251)))
+          ("PROT_NONE" . ((number "0x0" 1547 . 1550)))
+          ("MS_SYNC" . ((number "4" 2680 . 2681)))
+          ("MADV_REMOVE" . ((number "9" 3318 . 3319)))
+          ("MADV_WIPEONFORK" . ((number "18" 3990 . 3992)))
+          ("MCL_ONFAULT" . ((number "4" 4804 . 4805)))
+          ("MREMAP_FIXED" . ((number "2" 2863 . 2864)))
+          ("POSIX_MADV_WILLNEED" . ((number "3" 4493 . 4494)))
+          ("PROT_GROWSDOWN" . ((number "0x01000000" 1608 . 1618)))
+          ("MAP_SHARED" . ((number "0x01" 1875 . 1879)))
+          ("MADV_NORMAL" . ((number "0" 2942 . 2943)))
+          ("PROT_READ" . ((number "0x1" 1395 . 1398)))
+          ("PROT_EXEC" . ((number "0x4" 1495 . 1498)))
+          ("MAP_HUGE_SHIFT" . ((number "26" 2544 . 2546)))
+          ("MADV_WILLNEED" . ((number "3" 3139 . 3140)))
+          ("MADV_NOHUGEPAGE" . ((number "15" 3710 . 3712)))
+          ("MCL_FUTURE" . ((number "2" 4728 . 4729)))
+          ("PROT_GROWSUP" . ((number "0x02000000" 1712 . 1722)))
+          ("MAP_SHARED_VALIDATE" . ((number "0x03" 2004 . 2008)))
+          ("MAP_FILE" . ((number "0" 2244 . 2245)))
+          ("MAP_TYPE" . ((number "0x0f" 2086 . 2090)))
+          ("MAP_ANONYMOUS" . ((number "0x20" 2366 . 2370)))
+          ("MADV_DONTFORK" . ((number "10" 3386 . 3388)))
+          ("POSIX_MADV_DONTNEED" . ((number "4" 4554 . 4555)))
+          ("MCL_CURRENT" . ((number "1" 4665 . 4666)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MFD_CLOEXEC" variable (:constant-flag t) nil [1057 1068])
+            ("MFD_ALLOW_SEALING" variable (:constant-flag t) nil [1082 1099])
+            ("MFD_HUGETLB" variable (:constant-flag t) nil [1113 1124])
+            ("MLOCK_ONFAULT" variable (:constant-flag t) nil [1195 1208])
+            ("PKEY_DISABLE_ACCESS" variable (:constant-flag t) nil [1297 1316])
+            ("PKEY_DISABLE_WRITE" variable (:constant-flag t) nil [1331 1349])
+            ("pkey_mprotect" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2639 2652])
+                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2653 2666])
+                    ("__prot" variable (:type "int") (reparse-symbol arg-sub-list) [2667 2678])
+                    ("__pkey" variable (:type "int") (reparse-symbol arg-sub-list) [2679 2690]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2620 2699])
+            ("pkey_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__key" variable (:type "int") (reparse-symbol arg-sub-list) [2519 2529]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2504 2538])
+            ("pkey_get" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__key" variable (:type "int") (reparse-symbol arg-sub-list) [2390 2400]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2376 2409])
+            ("pkey_set" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__key" variable (:type "int") (reparse-symbol arg-sub-list) [2209 2219])
+                    ("__access_rights" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2220 2249]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2195 2258])
+            ("pkey_alloc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2017 2038])
+                    ("__access_rights" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2039 2068]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2001 2077])
+            ("mlock2" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1722 1741])
+                    ("__length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1742 1758])
+                    ("__flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1759 1780]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1710 1789])
+            ("memfd_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1521 1540])
+                    ("__flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1541 1562]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1503 1571]))          
+      :file "mman-shared.h"
+      :pointmax 2737
+      :fsize 2736
+      :lastmodtime '(23753 54851 0 0)
+      :unmatched-syntax '((string 897 . 969) (symbol 891 . 896) (punctuation 889 . 890))
+      :lexical-table 
+        '(("MFD_HUGETLB" . ((symbol "4U" 1125 . 1127)))
+          ("MFD_ALLOW_SEALING" . ((symbol "2U" 1100 . 1102)))
+          ("PKEY_DISABLE_WRITE" . ((number "0x2" 1350 . 1353)))
+          ("MFD_CLOEXEC" . ((symbol "1U" 1069 . 1071)))
+          ("PKEY_DISABLE_ACCESS" . ((number "0x1" 1317 . 1320)))
+          ("MLOCK_ONFAULT" . ((symbol "1U" 1209 . 1211)))
+          )
 ))
   :file "!usr!include!x86_64-linux-gnu!bits!semantic.cache"
   :semantic-tag-version "2.0"

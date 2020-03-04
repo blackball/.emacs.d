@@ -84,8 +84,8 @@
                 nil [176 667]))          
       :file "UR5Kinematics.h"
       :pointmax 684
-      :fsize 943
-      :lastmodtime '(24127 41085 286033 91000)
+      :fsize 2216
+      :lastmodtime '(24151 20991 488509 92000)
       :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
@@ -94,12 +94,12 @@
             ("RVS/Common/Random.h" include (:system-flag t) nil [97 127])
             ("RVS/Common/Math.h" include (:system-flag t) nil [128 156])
             ("RVS/Robotics/Common/Types.h" include (:system-flag t) nil [157 195])
-            ("RVS/Robotics/RobotModel/RobotModel.h" include (:system-flag t) nil [196 243])
-            ("RVS/Robotics/Types/IKReport.h" include (:system-flag t) nil [244 284])
-            ("RVS/Robotics/Common/LoggerMacros.h" include (:system-flag t) nil [285 330])
-            ("vector" include (:system-flag t) nil [332 349])
-            ("string" include (:system-flag t) nil [350 367])
-            ("stdexcept" include (:system-flag t) nil [368 388])
+            ("RVS/Robotics/Types/IKReport.h" include (:system-flag t) nil [196 236])
+            ("RVS/Robotics/Common/LoggerMacros.h" include (:system-flag t) nil [237 282])
+            ("RVS/Robotics/LieGroup/LieGroup.h" include (:system-flag t) nil [283 326])
+            ("vector" include (:system-flag t) nil [328 345])
+            ("string" include (:system-flag t) nil [346 363])
+            ("stdexcept" include (:system-flag t) nil [364 384])
             ("RVS" type
                (:members 
                   ( ("Robotics" type
@@ -107,12 +107,12 @@
                           ( ("RVS::Common::MatXd" using (:type ("RVS::Common::MatXd" type
                                  (:prototype t
                                   :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [428 453])
-                            ("RVS::Common::CVecXd" variable (:type "int") (reparse-symbol namespacesubparts) [475 495])
+                                  nil nil)) (reparse-symbol namespacesubparts) [424 449])
+                            ("RVS::Common::CVecXd" variable (:type "int") (reparse-symbol namespacesubparts) [471 491])
                             ("RVS::Robotics::LieGroup::SE3d" using (:type ("RVS::Robotics::LieGroup::SE3d" type
                                  (:prototype t
                                   :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [496 532])
+                                  nil nil)) (reparse-symbol namespacesubparts) [492 528])
                             ("KinematicsBase" type
                                (:superclasses 
                                   ( ("std::enable_shared_from_this" type
@@ -120,68 +120,100 @@
                                         :type "class")
                                         nil nil))                                  
                                 :members 
-                                  ( ("public" label nil (reparse-symbol classsubparts) [693 700])
+                                  ( ("public" label nil (reparse-symbol classsubparts) [689 696])
                                     ("KinematicsBase" function
                                        (:constructor-flag t
                                         :type ("KinematicsBase" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [768 832])
+                                        (reparse-symbol classsubparts) [764 831])
                                     ("KinematicsBase" function
                                        (:destructor-flag t
                                         :typemodifiers ("virtual")
                                         :type "void")
-                                        (reparse-symbol classsubparts) [838 910])
-                                    ("Name" function
+                                        (reparse-symbol classsubparts) [837 912])
+                                    ("IsInitialized" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [918 957])
+                                    ("GetName" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [916 953])
+                                        (reparse-symbol classsubparts) [963 1003])
+                                    ("GetJointLimits" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("JointLimit" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1009 1075])
+                                    ("SetJointLimits" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("joint_limits" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("JointLimit" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1109 1153]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1081 1158])
                                     ("GetRandomState" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
-                                        :constant-flag t
                                         :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [1048 1101])
+                                        (reparse-symbol classsubparts) [1253 1300])
                                     ("GetRandomStateNearBy" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
-                                        :constant-flag t
                                         :arguments 
                                           ( ("current" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1154 1181])
+                                                (reparse-symbol arg-sub-list) [1347 1374])
                                             ("distance" variable
                                                (:constant-flag t
                                                 :type "double")
-                                                (reparse-symbol arg-sub-list) [1182 1204]))                                          
+                                                (reparse-symbol arg-sub-list) [1375 1397]))                                          
                                         :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [1107 1215])
+                                        (reparse-symbol classsubparts) [1306 1408])
                                     ("GetRandomStateNearBy" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
-                                        :constant-flag t
                                         :arguments 
                                           ( ("current" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1268 1295])
+                                                (reparse-symbol arg-sub-list) [1455 1482])
                                             ("distances" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1296 1325]))                                          
+                                                (reparse-symbol arg-sub-list) [1483 1512]))                                          
                                         :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [1221 1336])
+                                        (reparse-symbol classsubparts) [1414 1523])
                                     ("GetPositionFK" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -192,13 +224,13 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1567 1599])
+                                                (reparse-symbol arg-sub-list) [1754 1786])
                                             ("pose" variable
                                                (:reference 1
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1600 1611]))                                          
+                                                (reparse-symbol arg-sub-list) [1787 1798]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [1530 1622])
+                                        (reparse-symbol classsubparts) [1717 1809])
                                     ("GetPositionIK" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -209,13 +241,13 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1858 1875])
+                                                (reparse-symbol arg-sub-list) [2045 2062])
                                             ("ik_report" variable
                                                (:reference 1
                                                 :type ("IKReport" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [1876 1896]))                                          
+                                                (reparse-symbol arg-sub-list) [2063 2083]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [1821 1907])
+                                        (reparse-symbol classsubparts) [2008 2094])
                                     ("GetNearestIK" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -226,22 +258,22 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2300 2317])
+                                                (reparse-symbol arg-sub-list) [2487 2504])
                                             ("joint_values_seed" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2318 2355])
+                                                (reparse-symbol arg-sub-list) [2505 2542])
                                             ("ik_report" variable
                                                (:reference 1
                                                 :type ("IKReport" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2356 2376])
+                                                (reparse-symbol arg-sub-list) [2543 2563])
                                             ("min_dist" variable
                                                (:reference 1
                                                 :type "double")
-                                                (reparse-symbol arg-sub-list) [2377 2394]))                                          
+                                                (reparse-symbol arg-sub-list) [2564 2581]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [2264 2405])
+                                        (reparse-symbol classsubparts) [2451 2592])
                                     ("GetBaseJacobian" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -252,32 +284,32 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2851 2883])
+                                                (reparse-symbol arg-sub-list) [3038 3070])
                                             ("jacobian" variable
                                                (:reference 1
                                                 :type ("MatXd" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2884 2900]))                                          
+                                                (reparse-symbol arg-sub-list) [3071 3087]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [2812 2911])
+                                        (reparse-symbol classsubparts) [2999 3098])
                                     ("GetDoF" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
                                         :type "int")
-                                        (reparse-symbol classsubparts) [2955 2986])
+                                        (reparse-symbol classsubparts) [3142 3173])
                                     ("SetWorldToBase" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
                                         :typemodifiers ("virtual")
                                         :arguments 
-                                          ( ("T" variable
+                                          ( ("world_to_base" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [3020 3034]))                                          
+                                                (reparse-symbol arg-sub-list) [3207 3233]))                                          
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [2992 3039])
+                                        (reparse-symbol classsubparts) [3179 3238])
                                     ("SetEndToTool" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -287,9 +319,9 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [3071 3085]))                                          
+                                                (reparse-symbol arg-sub-list) [3270 3284]))                                          
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [3045 3090])
+                                        (reparse-symbol classsubparts) [3244 3289])
                                     ("WeightedJointDistance" function
                                        (:pure-virtual-flag t
                                         :prototype-flag t
@@ -300,30 +332,31 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [3133 3165])
+                                                (reparse-symbol arg-sub-list) [3332 3364])
                                             ("joint_value2" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [3166 3198]))                                          
+                                                (reparse-symbol arg-sub-list) [3365 3397]))                                          
                                         :type "double")
-                                        (reparse-symbol classsubparts) [3096 3209]))                                  
+                                        (reparse-symbol classsubparts) [3295 3408]))                                  
                                 :type "class")
-                                (reparse-symbol namespacesubparts) [616 3212]))                          
+                                (reparse-symbol namespacesubparts) [612 3411]))                          
                         :type "namespace")
-                        (reparse-symbol namespacesubparts) [406 3215]))                  
+                        (reparse-symbol namespacesubparts) [402 3414]))                  
                 :type "namespace")
-                nil [390 3239]))          
+                nil [386 3438]))          
       :file "KinematicsBase.h"
-      :pointmax 3257
-      :fsize 3256
-      :lastmodtime '(24130 29933 847412 411000)
-      :unmatched-syntax '((punctuation 473 . 474) (symbol 461 . 472) (USING 455 . 460) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
+      :pointmax 3456
+      :fsize 4340
+      :lastmodtime '(24151 20991 508508 926000)
+      :unmatched-syntax '((punctuation 469 . 470) (symbol 457 . 468) (USING 451 . 456) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
         '( ("RVS/Robotics/LieGroup/PoE.h" include (:system-flag t) nil [67 105])
             ("RVS/Robotics/Kinematics/KinematicsBase.h" include (:system-flag t) nil [106 157])
+            ("RVS/Robotics/RobotModel/Manipulator.h" include (:system-flag t) nil [158 206])
             ("RVS" type
                (:members 
                   ( ("Robotics" type
@@ -331,12 +364,12 @@
                           ( ("RVS::Robotics::LieGroup::SE3Tangentd" using (:type ("RVS::Robotics::LieGroup::SE3Tangentd" type
                                  (:prototype t
                                   :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [197 240])
+                                  nil nil)) (reparse-symbol namespacesubparts) [281 324])
                             ("k_zero_thresh" variable
                                (:constant-flag t
-                                :default-value "RVS::Robotics::Constants<double>::Epsilon()"
+                                :default-value "Constants<double>::Epsilon()"
                                 :type "double")
-                                (reparse-symbol namespacesubparts) [241 314])
+                                (reparse-symbol namespacesubparts) [325 383])
                             ("GenericKinematics" type
                                (:superclasses 
                                   ( ("KinematicsBase" type
@@ -344,12 +377,12 @@
                                         :type "class")
                                         nil nil))                                  
                                 :members 
-                                  ( ("public" label nil (reparse-symbol classsubparts) [465 472])
+                                  ( ("public" label nil (reparse-symbol classsubparts) [534 541])
                                     ("GenericKinematics" function
                                        (:prototype-flag t
                                         :constructor-flag t
                                         :type ("GenericKinematics" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [612 632])
+                                        (reparse-symbol classsubparts) [681 701])
                                     ("GenericKinematics" function
                                        (:prototype-flag t
                                         :constructor-flag t
@@ -358,9 +391,9 @@
                                                  (:template-specifier 
                                                     ( ("Manipulator" type nil nil nil))                                                    
                                                   :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [871 912]))                                          
+                                                  nil nil)) (reparse-symbol arg-sub-list) [872 913]))                                          
                                         :type ("GenericKinematics" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [853 913])
+                                        (reparse-symbol classsubparts) [854 914])
                                     ("GenericKinematics" function
                                        (:prototype-flag t
                                         :constructor-flag t
@@ -369,19 +402,14 @@
                                                  (:template-specifier 
                                                     ( ("RobotModel" type nil nil nil))                                                    
                                                   :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [937 977])
-                                            ("manipulator_info" variable (:type ("std::shared_ptr" type
-                                                 (:template-specifier 
-                                                    ( ("ManipulatorInfo" type (:constant-flag t) nil nil))                                                    
-                                                  :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [978 1034]))                                          
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1108 1148]))                                          
                                         :type ("GenericKinematics" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [919 1035])
+                                        (reparse-symbol classsubparts) [1090 1149])
                                     ("GenericKinematics" function
                                        (:destructor-flag t
                                         :typemodifiers ("virtual")
                                         :type "void")
-                                        (reparse-symbol classsubparts) [1041 1119])
+                                        (reparse-symbol classsubparts) [1201 1282])
                                     ("InitFromManipulator" function
                                        (:prototype-flag t
                                         :typemodifiers ("virtual")
@@ -390,9 +418,9 @@
                                                  (:template-specifier 
                                                     ( ("Manipulator" type nil nil nil))                                                    
                                                   :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [1158 1199]))                                          
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1490 1531]))                                          
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [1125 1200])
+                                        (reparse-symbol classsubparts) [1457 1532])
                                     ("InitFromRobotModel" function
                                        (:prototype-flag t
                                         :typemodifiers ("virtual")
@@ -401,64 +429,35 @@
                                                  (:template-specifier 
                                                     ( ("RobotModel" type nil nil nil))                                                    
                                                   :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [1238 1278])
-                                            ("manipulator_info" variable (:type ("std::shared_ptr" type
-                                                 (:template-specifier 
-                                                    ( ("ManipulatorInfo" type (:constant-flag t) nil nil))                                                    
-                                                  :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [1279 1335]))                                          
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1761 1801]))                                          
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [1206 1336])
-                                    ("IsInitialized" function
-                                       (:methodconst-flag t
-                                        :typemodifiers ("inline")
-                                        :type "bool")
-                                        (reparse-symbol classsubparts) [1472 1534])
+                                        (reparse-symbol classsubparts) [1729 1802])
+                                    ("override" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1838 1853])
                                     ("HasAnalyticalSolution" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [1540 1619])
-                                    ("GetJointLimits" function
-                                       (:methodconst-flag t
-                                        :typemodifiers ("inline")
-                                        :constant-flag t
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("JointLimit" type nil nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol classsubparts) [1625 1712])
-                                    ("SetJointLimits" function
-                                       (:typemodifiers ("inline")
-                                        :arguments 
-                                          ( ("joint_limits" variable (:type ("std::vector" type
-                                                 (:template-specifier 
-                                                    ( ("JointLimit" type nil nil nil))                                                    
-                                                  :type "class")
-                                                  nil nil)) (reparse-symbol arg-sub-list) [1745 1782]))                                          
-                                        :type "bool")
-                                        (reparse-symbol classsubparts) [1718 1945])
+                                        (reparse-symbol classsubparts) [2067 2146])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [2328 2337])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [1978 1993])
+                                        (reparse-symbol classsubparts) [2470 2485])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [2131 2146])
+                                        (reparse-symbol classsubparts) [2583 2598])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [2250 2265])
+                                        (reparse-symbol classsubparts) [2703 2718])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [2376 2391])
-                                    ("override" variable
-                                       (:constant-flag t
-                                        :type "int")
-                                        (reparse-symbol classsubparts) [2712 2727])
+                                        (reparse-symbol classsubparts) [3039 3054])
                                     ("GetNumericalFK" function
                                        (:prototype-flag t
                                         :methodconst-flag t
@@ -468,17 +467,17 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [2982 3014])
+                                                (reparse-symbol arg-sub-list) [3309 3341])
                                             ("pose" variable
                                                (:reference 1
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [3015 3026]))                                          
+                                                (reparse-symbol arg-sub-list) [3342 3353]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [2944 3033])
+                                        (reparse-symbol classsubparts) [3271 3360])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [3338 3353])
+                                        (reparse-symbol classsubparts) [3665 3680])
                                     ("GetNumericalIK" function
                                        (:prototype-flag t
                                         :methodconst-flag t
@@ -488,30 +487,30 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4037 4054])
+                                                (reparse-symbol arg-sub-list) [4364 4381])
                                             ("joint_values_seed" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4055 4092])
+                                                (reparse-symbol arg-sub-list) [4382 4419])
                                             ("ik_report" variable
                                                (:reference 1
                                                 :type ("IKReport" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4093 4113])
+                                                (reparse-symbol arg-sub-list) [4420 4440])
                                             ("tolerance_error" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :default-value "SE3Tangentd(1e-5, 1e-5, 1e-5, 1e-3, 1e-3, 1e-3)"
                                                 :type ("SE3Tangentd" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4156 4240])
+                                                (reparse-symbol arg-sub-list) [4483 4567])
                                             ("max_iterations" variable
                                                (:constant-flag t
                                                 :default-value "50"
                                                 :type "int")
-                                                (reparse-symbol arg-sub-list) [4284 4313]))                                          
+                                                (reparse-symbol arg-sub-list) [4611 4640]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [3999 4321])
-                                    ("SearchAllPosiionIK" function
+                                        (reparse-symbol classsubparts) [4326 4648])
+                                    ("SearchAllPositionIK" function
                                        (:prototype-flag t
                                         :methodconst-flag t
                                         :typemodifiers ("virtual")
@@ -520,21 +519,38 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("SE3d" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4872 4889])
+                                                (reparse-symbol arg-sub-list) [5269 5286])
                                             ("ik_report" variable
                                                (:reference 1
                                                 :type ("IKReport" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [4890 4910]))                                          
+                                                (reparse-symbol arg-sub-list) [5287 5307])
+                                            ("num_seeds" variable
+                                               (:constant-flag t
+                                                :default-value "20"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [5308 5332]))                                          
                                         :type ("RoboticsReturn" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [4830 4917])
+                                        (reparse-symbol classsubparts) [5226 5340])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [5405 5420])
+                                        (reparse-symbol classsubparts) [5828 5843])
                                     ("override" variable
                                        (:constant-flag t
                                         :type "int")
-                                        (reparse-symbol classsubparts) [5916 5931])
+                                        (reparse-symbol classsubparts) [6339 6354])
+                                    ("GetWorldToBase" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :constant-flag t
+                                        :type ("SE3d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6531 6600])
+                                    ("GetEndToTool" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("SE3d" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6795 6821])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [6878 6887])
                                     ("GetRobotModel" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
@@ -543,51 +559,64 @@
                                                 ( ("RobotModel" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol classsubparts) [6415 6491])
+                                        (reparse-symbol classsubparts) [6992 7074])
+                                    ("GetManipulator" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("Manipulator" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [7181 7303])
                                     ("GetBaseFrame" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
+                                        :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [6536 6600])
+                                        (reparse-symbol classsubparts) [7346 7417])
                                     ("GetTipFrame" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
+                                        :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [6649 6711])
+                                        (reparse-symbol classsubparts) [7464 7533])
                                     ("GetJointNames" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
+                                        :constant-flag t
                                         :type ("std::vector" type
                                              (:template-specifier 
                                                 ( ("std::string" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol classsubparts) [6767 6846])
+                                        (reparse-symbol classsubparts) [7587 7673])
                                     ("GetLinkNames" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
+                                        :constant-flag t
                                         :type ("std::vector" type
                                              (:template-specifier 
                                                 ( ("std::string" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol classsubparts) [6901 6978])
+                                        (reparse-symbol classsubparts) [7726 7810])
                                     ("SetJointDistanceWeights" function
-                                       (:typemodifiers ("inline")
+                                       (:prototype-flag t
                                         :arguments 
                                           ( ("weights" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [7061 7088]))                                          
+                                                (reparse-symbol arg-sub-list) [7884 7911]))                                          
                                         :type "bool")
-                                        (reparse-symbol classsubparts) [7025 7334])
+                                        (reparse-symbol classsubparts) [7855 7912])
                                     ("GetJointDistanceWeights" function
                                        (:methodconst-flag t
                                         :typemodifiers ("inline")
                                         :constant-flag t
                                         :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol classsubparts) [7385 7479])
+                                        (reparse-symbol classsubparts) [7961 8055])
                                     ("WeightedJointDistance" function
                                        (:methodconst-flag t
                                         :typemodifiers ("virtual")
@@ -596,74 +625,88 @@
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [7749 7781])
+                                                (reparse-symbol arg-sub-list) [8563 8595])
                                             ("joint_value2" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [7782 7814])
+                                                (reparse-symbol arg-sub-list) [8596 8628])
                                             ("joint_distance_weights" variable
                                                (:reference 1
                                                 :constant-flag t
                                                 :type ("JointVector" type (:type "class") nil nil))
-                                                (reparse-symbol arg-sub-list) [7815 7857]))                                          
+                                                (reparse-symbol arg-sub-list) [8629 8671]))                                          
                                         :type "double")
-                                        (reparse-symbol classsubparts) [7712 7979])
-                                    ("protected" label nil (reparse-symbol classsubparts) [7981 7991])
-                                    ("m_is_initialized" variable (:type "bool") (reparse-symbol classsubparts) [7996 8025])
-                                    ("m_has_analytical_solution" variable (:type "bool") (reparse-symbol classsubparts) [8030 8068])
-                                    ("m_robot" variable (:type ("std::shared_ptr" type
+                                        (reparse-symbol classsubparts) [8526 8793])
+                                    ("protected" label nil (reparse-symbol classsubparts) [8795 8805])
+                                    ("_ParseInformation" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [8949 8974])
+                                    ("protected" label nil (reparse-symbol classsubparts) [8976 8986])
+                                    ("m_is_initialized" variable (:type "bool") (reparse-symbol classsubparts) [8991 9013])
+                                    ("m_has_analytical_solution" variable (:type "bool") (reparse-symbol classsubparts) [9063 9094])
+                                    ("m_robot_model" variable (:type ("std::shared_ptr" type
                                          (:template-specifier 
                                             ( ("RobotModel" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8073 8109])
-                                    ("m_manipulator" variable (:type ("std::shared_ptr" type
-                                         (:template-specifier 
-                                            ( ("Manipulator" type nil nil nil))                                            
-                                          :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8114 8157])
-                                    ("m_tip_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8162 8186])
-                                    ("m_base_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8191 8216])
-                                    ("m_world_to_base" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8275 8296])
-                                    ("m_end_to_tool" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8301 8320])
+                                          nil nil)) (reparse-symbol classsubparts) [9153 9195])
+                                    ("m_manipulator_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9240 9271])
+                                    ("m_tip_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9300 9324])
+                                    ("m_base_frame" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9370 9395])
+                                    ("m_world_to_base" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9496 9517])
+                                    ("m_end_to_tool" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9583 9602])
                                     ("m_joint_names" variable (:type ("std::vector" type
                                          (:template-specifier 
                                             ( ("std::string" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8325 8364])
+                                          nil nil)) (reparse-symbol classsubparts) [9670 9709])
                                     ("m_link_names" variable (:type ("std::vector" type
                                          (:template-specifier 
                                             ( ("std::string" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8369 8407])
-                                    ("m_dof" variable (:type "int") (reparse-symbol classsubparts) [8412 8425])
+                                          nil nil)) (reparse-symbol classsubparts) [9757 9795])
+                                    ("m_dof" variable (:type "int") (reparse-symbol classsubparts) [9835 9845])
                                     ("m_joint_limits" variable (:type ("std::vector" type
                                          (:template-specifier 
                                             ( ("JointLimit" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8430 8469])
-                                    ("m_joint_distance_weights" variable (:type ("JointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8619 8656])
-                                    ("m_init_pose" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8662 8679])
-                                    ("m_slist" variable (:type ("std::vector" type
+                                          nil nil)) (reparse-symbol classsubparts) [9873 9912])
+                                    ("m_joint_distance_weights" variable (:type ("JointVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10080 10117])
+                                    ("m_init_pose" variable (:type ("SE3d" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10162 10179])
+                                    ("m_s_list" variable (:type ("std::vector" type
                                          (:template-specifier 
                                             ( ("SE3Tangentd" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol classsubparts) [8714 8747])
-                                    ("_ParseInformation" function
+                                          nil nil)) (reparse-symbol classsubparts) [10236 10270])
+                                    ("public" label nil (reparse-symbol classsubparts) [10292 10299])
+                                    ("<<" function
                                        (:prototype-flag t
-                                        :type "bool")
-                                        (reparse-symbol classsubparts) [8753 8778]))                                  
+                                        :operator-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("out" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10471 10489])
+                                            ("kin_solver" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("GenericKinematics" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10490 10526]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10439 10527]))                                  
                                 :type "class")
-                                (reparse-symbol namespacesubparts) [415 8781]))                          
+                                (reparse-symbol namespacesubparts) [484 10530]))                          
                         :type "namespace")
-                        (reparse-symbol namespacesubparts) [175 8784]))                  
+                        (reparse-symbol namespacesubparts) [224 10541]))                  
                 :type "namespace")
-                nil [159 8808]))          
+                nil [208 10565]))          
       :file "GenericKinematics.h"
-      :pointmax 8826
-      :fsize 8825
-      :lastmodtime '(24130 29847 712175 78000)
-      :unmatched-syntax nil))
+      :pointmax 10583
+      :fsize 10582
+      :lastmodtime '(24151 21169 147024 662000)
+      :unmatched-syntax '((semantic-list 8183 . 8282) (symbol 8170 . 8178) (CONST 8164 . 8169) (semantic-list 8097 . 8163) (symbol 8076 . 8097) (DOUBLE 8069 . 8075) (VIRTUAL 8061 . 8068) (semantic-list 6852 . 6877) (symbol 6840 . 6852) (BOOL 6835 . 6839) (VIRTUAL 6827 . 6834) (semantic-list 6681 . 6750) (symbol 6668 . 6676) (semantic-list 6640 . 6667) (symbol 6626 . 6640) (BOOL 6621 . 6625) (VIRTUAL 6613 . 6620) (INLINE 6606 . 6612) (semantic-list 6467 . 6484) (symbol 6458 . 6466) (CONST 6452 . 6457) (semantic-list 6449 . 6451) (symbol 6443 . 6449) (INT 6439 . 6442) (VIRTUAL 6431 . 6438) (INLINE 6424 . 6430) (semantic-list 6288 . 6338) (symbol 6273 . 6288) (symbol 6258 . 6272) (VIRTUAL 6250 . 6257) (semantic-list 5732 . 5827) (symbol 5720 . 5732) (symbol 5705 . 5719) (VIRTUAL 5697 . 5704) (semantic-list 3625 . 3664) (symbol 3612 . 3625) (symbol 3597 . 3611) (VIRTUAL 3589 . 3596) (semantic-list 2993 . 3038) (symbol 2980 . 2993) (symbol 2965 . 2979) (VIRTUAL 2957 . 2964) (semantic-list 2644 . 2702) (symbol 2624 . 2644) (symbol 2612 . 2623) (VIRTUAL 2604 . 2611) (semantic-list 2531 . 2582) (symbol 2511 . 2531) (symbol 2499 . 2510) (VIRTUAL 2491 . 2498) (semantic-list 2467 . 2469) (symbol 2453 . 2467) (symbol 2441 . 2452) (VIRTUAL 2433 . 2440) (semantic-list 2282 . 2327) (symbol 2268 . 2282) (BOOL 2263 . 2267) (VIRTUAL 2255 . 2262) (semantic-list 2223 . 2249) (symbol 2214 . 2222) (CONST 2208 . 2213) (semantic-list 2205 . 2207) (symbol 2191 . 2205) (punctuation 2190 . 2191) (punctuation 2188 . 2189) (symbol 2178 . 2188) (punctuation 2177 . 2178) (symbol 2171 . 2177) (punctuation 2170 . 2171) (punctuation 2169 . 2170) (symbol 2166 . 2169) (CONST 2160 . 2165) (VIRTUAL 2152 . 2159) (semantic-list 2033 . 2061) (symbol 2024 . 2032) (CONST 2018 . 2023) (semantic-list 2015 . 2017) (symbol 2002 . 2015) (BOOL 1997 . 2001) (VIRTUAL 1989 . 1996) (semantic-list 1835 . 1837) (symbol 1828 . 1835) (symbol 1821 . 1827) (punctuation 1820 . 1821) (punctuation 1819 . 1820) (symbol 1816 . 1819) (VIRTUAL 1808 . 1815) (EXPLICIT 1081 . 1089) (EXPLICIT 845 . 853) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
   :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Kinematics!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -1,10 +1,10 @@
-;; Object Common/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Common/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Types.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("ROBOT_COMMON_TYPES_H_" variable (:constant-flag t) nil [135 156])
             ("vector" include (:system-flag t) nil [158 175])
@@ -157,15 +157,15 @@
                 nil [342 4869]))          
       :file "Types.h"
       :pointmax 4921
-      :fsize 5627
-      :lastmodtime '(23752 6143 865743 964000)
+      :fsize 3485
+      :lastmodtime '(24156 41727 595274 832000)
       :unmatched-syntax '((punctuation 988 . 989) (semantic-list 606 . 988) (INT 602 . 605) (punctuation 600 . 601) (symbol 591 . 599) (CLASS 585 . 590) (ENUM 580 . 584) (punctuation 577 . 578) (semantic-list 407 . 577) (INT 403 . 406) (punctuation 401 . 402) (symbol 391 . 400) (CLASS 385 . 390) (ENUM 380 . 384))
       :lexical-table 
         '(("ROBOT_COMMON_TYPES_H_")
           )
 )
-    (semanticdb-table "LoggerMacros.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("RVS/Common/FmtExt.h" include (:system-flag t) nil [66 96])
             ("fmt/ostream.h" include (:system-flag t) nil [97 121])
@@ -187,8 +187,8 @@
             ("ROBOTICS_ENSURE" variable (:constant-flag t) nil [1997 2012]))          
       :file "LoggerMacros.h"
       :pointmax 2359
-      :fsize 2358
-      :lastmodtime '(23773 18224 36685 257000)
+      :fsize 2686
+      :lastmodtime '(24127 41085 286033 91000)
       :unmatched-syntax nil
       :lexical-table 
         '(("ROBOTICS_ERROR" (spp-arg-list ("...") 1020 . 1025) . 
@@ -214,7 +214,162 @@
           ("ROBOTICS_ENSURE" (spp-arg-list ("cond" "error_msg") 2014 . 2031) . 
               ((IF "if" 2038 . 2040) (semantic-list "(!(cond))" 2041 . 2050) (symbol "ROBOTICS_THROW" 2051 . 2065) (semantic-list "(error_msg)" 2065 . 2076) (punctuation ";" 2076 . 2077)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RVS/Robotics/Common/Types.h" include (:system-flag t) nil [67 105])
+            ("cmath" include (:system-flag t) nil [106 122])
+            ("iostream" include (:system-flag t) nil [123 142])
+            ("vector" include (:system-flag t) nil [143 160])
+            ("memory" include (:system-flag t) nil [161 178])
+            ("RVS" type
+               (:members 
+                  ( ("Robotics" type
+                       (:members 
+                          ( ("SplitString" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [262 283])
+                                    ("delim" variable
+                                       (:constant-flag t
+                                        :default-value "' '"
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [284 306]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [218 870])
+                            ("Sign" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "int"
+                                :arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [917 928]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [872 962])
+                            ("DegToRad" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("degrees" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1080 1090]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1033 1143])
+                            ("RadToDeg" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("radians" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1259 1269]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1212 1322])
+                            ("WrapToPositive" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1430 1438]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1377 1542])
+                            ("WrapAngle" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1645 1653]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1597 1781])
+                            ("AngleDistance" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("from_angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1908 1921])
+                                    ("to_angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1922 1933]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [1856 1982])
+                            ("TwoPIComplement" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2221 2229]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [2167 2580])
+                            ("FindMinMaxDelta" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("from_angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3417 3430])
+                                    ("left_limit" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3431 3444])
+                                    ("right_limit" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3445 3459])
+                                    ("result_min_delta" variable
+                                       (:reference 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3460 3480])
+                                    ("result_max_delta" variable
+                                       (:reference 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3481 3501]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol namespacesubparts) [3367 4798])
+                            ("AngleDistanceWithLimits" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("from_angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5509 5522])
+                                    ("to_angle" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5523 5534])
+                                    ("left_limit" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5535 5548])
+                                    ("right_limit" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5549 5563])
+                                    ("angle" variable
+                                       (:reference 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5564 5573]))                                  
+                                :typemodifiers ("static" "inline"))
+                                (reparse-symbol namespacesubparts) [5444 7430])
+                            ("MakeConst" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("T" type (:constant-flag t) nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("vconst" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::shared_ptr" type (:template-specifier 
+                                                    ( ("T" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7699 7745]))                                  )
+                                (reparse-symbol namespacesubparts) [7632 7904]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [196 7907]))                  
+                :type "namespace")
+                nil [180 7931]))          
+      :file "Utils.h"
+      :pointmax 7949
+      :fsize 7948
+      :lastmodtime '(24156 41727 595274 832000)
+      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
   :file "!home!rvbust!Rvbust!Sources!RVS!Include!RVS!Robotics!Common!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

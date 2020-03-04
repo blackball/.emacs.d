@@ -1,10 +1,10 @@
-;; Object pybind11/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "pybind11/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "pytypes.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("detail/common.h" include nil nil [285 311])
             ("buffer_info.h" include nil nil [312 336])
@@ -3635,8 +3635,8 @@
             ("PYBIND11_MATH_OPERATOR_BINARY" variable (:constant-flag t) nil [54666 54695]))          
       :file "pytypes.h"
       :pointmax 56699
-      :fsize 56698
-      :lastmodtime '(23741 18204 925157 620000)
+      :fsize 58356
+      :lastmodtime '(24145 28053 291302 584000)
       :unmatched-syntax '((semantic-list 56678 . 56698) (symbol 56665 . 56678) (semantic-list 56656 . 56664) (symbol 56643 . 56656) (semantic-list #("{                  \\
         object result = reinterpret_steal<object>(                             \\
             fn(derived().ptr(), other.derived().ptr()));                       \\
@@ -3767,10 +3767,258 @@
               ((symbol "PYBIND11_OBJECT" 32263 . 32278) (semantic-list "(Name, Parent, CheckFun)" 32278 . 32302) (symbol "Name" 32309 . 32313) (semantic-list "()" 32313 . 32315) (punctuation ":" 32316 . 32317) (symbol "Parent" 32318 . 32324) (semantic-list "()" 32324 . 32326) (semantic-list "{ }" 32327 . 32330)))
           )
 )
-    (semanticdb-table "buffer_info.h"
+    (semanticdb-table "semanticdb-table"
       :file "buffer_info.h"
       :fsize 4326
-      :lastmodtime '(23303 46019 692562 529000)))
+      :lastmodtime '(24145 28053 287302 623000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("numpy.h" include nil nil [291 309])
+            ("Eigen/Core" include (:system-flag t) nil [1220 1241])
+            ("Eigen/SparseCore" include (:system-flag t) nil [1242 1269])
+            ("static_assert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("EIGEN_VERSION_AT_LEAST" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1526 1555]))                  
+                :type "int")
+                nil [1512 1610])
+            ("Eigen::Stride" variable (:type "int") nil [1758 1804])
+            ("Eigen::Ref" variable (:type "int") nil [1854 1894])
+            ("Eigen::Map" variable (:type "int") nil [1944 1984])
+            ("EIGEN_DEFAULT_DENSE_INDEX_TYPE" variable (:type "int") nil [2103 2134])
+            ("all_of" variable (:type "int") nil [2240 2354])
+            ("std::is_base_of" variable (:type "int") nil [2406 2467])
+            ("all_of" variable (:type "int") nil [2519 2607])
+            ("is_template_base_of" variable (:type "int") nil [2654 2702])
+            ("all_of" variable (:type "int") nil [3080 3225])
+            ("EigenConformable" type
+               (:template 
+                  ( ("bool" type (:typevar "EigenRowMajor") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("conformable" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3374 3399])
+                    ("rows" variable
+                       (:default-value "0"
+                        :type ("EigenIndex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3404 3434])
+                    ("cols" variable
+                       (:default-value "0"
+                        :type ("EigenIndex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3404 3434])
+                    ("stride" variable (:type ("EigenDStride" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3439 3465])
+                    ("negativestrides" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3518 3547])
+                    ("EigenConformable" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("fits" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [3603 3620]))                          
+                        :type ("EigenConformable" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [3586 3644])
+                    ("EigenConformable" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("r" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3686 3699])
+                            ("c" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3700 3713])
+                            ("rstride" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3726 3745])
+                            ("cstride" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3746 3765]))                          
+                        :type ("EigenConformable" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [3669 4212])
+                    ("EigenConformable" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("r" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4254 4267])
+                            ("c" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4268 4281])
+                            ("stride" variable (:type ("EigenIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4282 4300]))                          
+                        :type ("EigenConformable" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [4237 4387])
+                    ("stride_compatible" function
+                       (:template 
+                          ( ("props" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :methodconst-flag t)
+                        (reparse-symbol classsubparts) [4393 5001]))                  )
+                nil [3314 5054])
+            ("eigen_extract_stride" type
+               (:template 
+                  ( ("Type" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("type" variable
+                       (:default-value "Type"
+                        :type "int")
+                        (reparse-symbol classsubparts) [5117 5129]))                  )
+                nil [5056 5132])
+            ("eigen_extract_stride" type
+               (:template 
+                  ( ("PlainObjectType" type (:type "class") nil nil)
+                    ("int" type (:typevar "MapOptions") nil nil)
+                    ("StrideType" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("type" variable
+                       (:default-value "StrideType"
+                        :type "int")
+                        (reparse-symbol classsubparts) [5295 5313]))                  
+                :template-specifier 
+                  ( ("Eigen::Map" type (:template-specifier 
+                      ( ("PlainObjectType" type nil nil nil)
+                        ("MapOptions" type nil nil nil)
+                        ("StrideType" type nil nil nil))                      ) nil nil))                  )
+                nil [5133 5316])
+            ("eigen_extract_stride" type
+               (:template 
+                  ( ("PlainObjectType" type (:type "class") nil nil)
+                    ("int" type (:typevar "Options") nil nil)
+                    ("StrideType" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("type" variable
+                       (:default-value "StrideType"
+                        :type "int")
+                        (reparse-symbol classsubparts) [5473 5491]))                  
+                :template-specifier 
+                  ( ("Eigen::Ref" type (:template-specifier 
+                      ( ("PlainObjectType" type nil nil nil)
+                        ("Options" type nil nil nil)
+                        ("StrideType" type nil nil nil))                      ) nil nil))                  )
+                nil [5317 5494])
+            ("EigenProps" type
+               (:template 
+                  ( ("Type_" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("Type" variable
+                       (:default-value "Type_"
+                        :type "int")
+                        (reparse-symbol classsubparts) [5615 5628])
+                    ("Type::Scalar" variable
+                       (:typemodifiers ("typename")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5648 5670])
+                    ("eigen_extract_stride::type" variable
+                       (:typemodifiers ("typename")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5694 5736])
+                    ("Type::SizeAtCompileTime" variable (:type "int") (reparse-symbol classsubparts) [5864 5888])
+                    ("fixed_cols" variable (:type "int") (reparse-symbol classsubparts) [6226 6237])
+                    ("value" variable (:type "int") (reparse-symbol classsubparts) [6675 6681])
+                    ("Eigen::Dynamic" variable (:type "int") (reparse-symbol classsubparts) [6775 6790])
+                    ("conformable" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("array" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7373 7388]))                          
+                        :type ("EigenConformable" type
+                             (:template-specifier 
+                                ( ("row_major" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [7326 9174])
+                    ("is_eigen_mutable_map::value" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9245 9288])
+                    ("is_eigen_dense_map::value" variable (:type "int") (reparse-symbol classsubparts) [9328 9360])
+                    ("show_c_contiguous" variable
+                       (:default-value "show_order && requires_row_major"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9382 9440])
+                    ("requires_col_major" variable (:type ("show_order" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9509 9542])
+                    ("_" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [10542 10549]))                  )
+                nil [5559 10552])
+            ("eigen_array_cast" function
+               (:template 
+                  ( ("props" type (:type "class") nil nil))                  
+                :type ("handle" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :typemodifiers ("typename")
+                        :constant-flag t
+                        :type ("props::Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10797 10829])
+                    ("base" variable
+                       (:default-value "handle()"
+                        :type ("handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10830 10852])
+                    ("writeable" variable
+                       (:default-value "true"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [10854 10875]))                  )
+                nil [10747 11349])
+            ("eigen_ref_array" function
+               (:template 
+                  ( ("props" type (:type "class") nil nil)
+                    ("Type" type (:type "class") nil nil))                  
+                :type ("handle" type (:type "class") nil nil)
+                :arguments 
+                  ( ("src" variable
+                       (:reference 1
+                        :type ("Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11755 11765])
+                    ("parent" variable
+                       (:default-value "none()"
+                        :type ("handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11766 11788]))                  )
+                nil [11691 12043])
+            ("eigen_encapsulate" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("Type" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12516 12526]))                  
+                :type ("handle" type (:type "class") nil nil))
+                nil [12491 12648])
+            ("eigen_map_caster" type
+               (:template 
+                  ( ("MapType" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [16913 16921])
+                    ("EigenProps" variable (:type "int") (reparse-symbol classsubparts) [16940 16960])
+                    ("public" label nil (reparse-symbol classsubparts) [16962 16969])
+                    ("cast" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17581 17600])
+                            ("policy" variable (:type ("return_value_policy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17601 17628])
+                            ("parent" variable (:type ("handle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17629 17643]))                          
+                        :type ("handle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17562 18385])
+                    ("props::descriptor" variable (:type "int") (reparse-symbol classsubparts) [18420 18438])
+                    ("cast_op_type" variable
+                       (:default-value "MapType"
+                        :type "int")
+                        (reparse-symbol classsubparts) [18781 18804]))                  )
+                nil [16859 18807])
+            ("eigen_map_caster" variable (:type "int") nil [18992 19018])
+            ("eigen_map_caster" variable (:type "int") nil [19400 25197]))          
+      :file "eigen.h"
+      :pointmax 29044
+      :fsize 29043
+      :lastmodtime '(24145 28046 795368 942000)
+      :unmatched-syntax '((symbol 28986 . 28989) (symbol 28975 . 28985) (symbol 28971 . 28974) (symbol 28964 . 28970) (punctuation 28961 . 28962) (semantic-list 28895 . 28915) (symbol 28882 . 28895) (semantic-list 28873 . 28881) (symbol 28860 . 28873) (punctuation 28857 . 28858) (semantic-list 26592 . 28857) (punctuation 26590 . 26591) (punctuation 26589 . 26590) (symbol 26584 . 26589) (punctuation 26583 . 26584) (punctuation 26582 . 26583) (punctuation 26581 . 26582) (symbol 26577 . 26581) (punctuation 26576 . 26577) (symbol 26561 . 26576) (punctuation 26560 . 26561) (symbol 26549 . 26560) (punctuation 26547 . 26548) (symbol 26543 . 26547) (punctuation 26542 . 26543) (symbol 26531 . 26542) (STRUCT 26524 . 26530) (punctuation 26522 . 26523) (symbol 26518 . 26522) (TYPENAME 26509 . 26517) (punctuation 26508 . 26509) (TEMPLATE 26500 . 26508) (punctuation 26497 . 26498) (semantic-list 25612 . 26497) (punctuation 25610 . 25611) (punctuation 25609 . 25610) (symbol 25604 . 25609) (punctuation 25603 . 25604) (punctuation 25602 . 25603) (punctuation 25601 . 25602) (symbol 25597 . 25601) (punctuation 25596 . 25597) (symbol 25582 . 25596) (punctuation 25581 . 25582) (symbol 25570 . 25581) (punctuation 25568 . 25569) (symbol 25564 . 25568) (punctuation 25563 . 25564) (symbol 25552 . 25563) (STRUCT 25545 . 25551) (punctuation 25543 . 25544) (symbol 25539 . 25543) (TYPENAME 25530 . 25538) (punctuation 25529 . 25530) (TEMPLATE 25520 . 25528) (PUBLIC 19393 . 19399) (punctuation 19391 . 19392) (punctuation 19389 . 19390) (punctuation 19387 . 19388) (symbol 19382 . 19387) (punctuation 19381 . 19382) (punctuation 19380 . 19381) (punctuation 19379 . 19380) (punctuation 19378 . 19379) (symbol 19368 . 19378) (punctuation 19366 . 19367) (number 19365 . 19366) (punctuation 19363 . 19364) (symbol 19348 . 19363) (punctuation 19347 . 19348) (symbol 19344 . 19347) (punctuation 19343 . 19344) (punctuation 19342 . 19343) (symbol 19337 . 19342) (punctuation 19336 . 19337) (symbol 19318 . 19336) (punctuation 19317 . 19318) (symbol 19306 . 19317) (punctuation 19300 . 19301) (punctuation 19299 . 19300) (symbol 19289 . 19299) (punctuation 19287 . 19288) (number 19286 . 19287) (punctuation 19284 . 19285) (symbol 19269 . 19284) (punctuation 19268 . 19269) (symbol 19265 . 19268) (punctuation 19264 . 19265) (punctuation 19263 . 19264) (symbol 19258 . 19263) (punctuation 19252 . 19253) (symbol 19241 . 19252) (STRUCT 19234 . 19240) (punctuation 19232 . 19233) (symbol 19222 . 19232) (TYPENAME 19213 . 19221) (punctuation 19211 . 19212) (symbol 19196 . 19211) (TYPENAME 19187 . 19195) (punctuation 19186 . 19187) (TEMPLATE 19177 . 19185) (punctuation 18990 . 18991) (punctuation 18984 . 18985) (punctuation 18983 . 18984) (symbol 18978 . 18983) (punctuation 18977 . 18978) (punctuation 18976 . 18977) (punctuation 18975 . 18976) (symbol 18971 . 18975) (punctuation 18970 . 18971) (symbol 18952 . 18970) (punctuation 18951 . 18952) (symbol 18940 . 18951) (punctuation 18938 . 18939) (symbol 18934 . 18938) (punctuation 18933 . 18934) (symbol 18922 . 18933) (STRUCT 18915 . 18921) (punctuation 18913 . 18914) (symbol 18909 . 18913) (TYPENAME 18900 . 18908) (punctuation 18899 . 18900) (TEMPLATE 18890 . 18898) (USING 18775 . 18780) (punctuation 18773 . 18774) (TYPENAME 18765 . 18773) (punctuation 18764 . 18765) (TEMPLATE 18755 . 18763) (punctuation 18749 . 18750) (DELETE 18743 . 18749) (punctuation 18741 . 18742) (semantic-list 18738 . 18740) (symbol 18731 . 18738) (OPERATOR 18722 . 18730) (punctuation 18716 . 18717) (DELETE 18710 . 18716) (punctuation 18708 . 18709) (semantic-list 18693 . 18707) (symbol 18689 . 18693) (BOOL 18684 . 18688) (punctuation 18418 . 18419) (symbol 18413 . 18417) (symbol 18408 . 18412) (symbol 18398 . 18407) (STATIC 18391 . 18397) (punctuation 16938 . 16939) (symbol 16932 . 16937) (USING 16926 . 16931) (punctuation 16781 . 16782) (semantic-list 12853 . 16781) (punctuation 12851 . 12852) (punctuation 12850 . 12851) (symbol 12845 . 12850) (punctuation 12844 . 12845) (punctuation 12843 . 12844) (punctuation 12842 . 12843) (symbol 12838 . 12842) (punctuation 12837 . 12838) (symbol 12817 . 12837) (punctuation 12816 . 12817) (symbol 12805 . 12816) (punctuation 12803 . 12804) (symbol 12799 . 12803) (punctuation 12798 . 12799) (symbol 12787 . 12798) (STRUCT 12780 . 12786) (punctuation 12778 . 12779) (symbol 12774 . 12778) (TYPENAME 12765 . 12773) (punctuation 12764 . 12765) (TEMPLATE 12756 . 12764) (punctuation 12489 . 12490) (punctuation 12488 . 12489) (symbol 12483 . 12488) (punctuation 12482 . 12483) (punctuation 12481 . 12482) (punctuation 12480 . 12481) (symbol 12476 . 12480) (punctuation 12475 . 12476) (symbol 12455 . 12475) (punctuation 12454 . 12455) (symbol 12443 . 12454) (punctuation 12441 . 12442) (TYPENAME 12432 . 12440) (punctuation 12430 . 12431) (symbol 12426 . 12430) (TYPENAME 12417 . 12425) (punctuation 12415 . 12416) (symbol 12410 . 12415) (TYPENAME 12401 . 12409) (punctuation 12400 . 12401) (TEMPLATE 12391 . 12399) (string 10544 . 10547) (punctuation 10532 . 10533) (semantic-list 10503 . 10531) (punctuation 10502 . 10503) (symbol 10485 . 10502) (punctuation 10484 . 10485) (symbol 10483 . 10484) (string 10528 . 10530) (string 10504 . 10526) (punctuation 10473 . 10474) (semantic-list 10444 . 10472) (punctuation 10443 . 10444) (symbol 10426 . 10443) (punctuation 10425 . 10426) (symbol 10424 . 10425) (string 10469 . 10471) (string 10445 . 10467) (punctuation 10414 . 10415) (semantic-list 10388 . 10413) (punctuation 10387 . 10388) (symbol 10373 . 10387) (punctuation 10372 . 10373) (symbol 10371 . 10372) (string 10410 . 10412) (string 10389 . 10408) (punctuation 9790 . 9791) (semantic-list 9784 . 9789) (symbol 9783 . 9784) (string 9785 . 9788) (punctuation 9773 . 9774) (semantic-list 9744 . 9772) (punctuation 9743 . 9744) (symbol 9733 . 9743) (punctuation 9732 . 9733) (symbol 9731 . 9732) (semantic-list 9766 . 9771) (semantic-list 9761 . 9763) (punctuation 9760 . 9761) (semantic-list 9747 . 9755) (punctuation 9746 . 9747) (punctuation 9729 . 9730) (semantic-list 9722 . 9728) (symbol 9721 . 9722) (string 9723 . 9727) (punctuation 9711 . 9712) (semantic-list 9682 . 9710) (punctuation 9681 . 9682) (symbol 9671 . 9681) (punctuation 9670 . 9671) (symbol 9669 . 9670) (semantic-list 9704 . 9709) (semantic-list 9699 . 9701) (punctuation 9698 . 9699) (semantic-list 9685 . 9693) (punctuation 9684 . 9685) (punctuation 9667 . 9668) (semantic-list 9660 . 9665) (symbol 9659 . 9660) (string 9661 . 9664) (punctuation 9649 . 9650) (symbol 9644 . 9648) (punctuation 9643 . 9644) (punctuation 9642 . 9643) (punctuation 9641 . 9642) (symbol 9635 . 9641) (punctuation 9634 . 9635) (symbol 9613 . 9634) (punctuation 9611 . 9612) (semantic-list 9592 . 9610) (symbol 9591 . 9592) (string 9593 . 9609) (punctuation 9581 . 9582) (symbol 9570 . 9580) (symbol 9565 . 9569) (symbol 9555 . 9564) (STATIC 9548 . 9554) (punctuation 9507 . 9508) (punctuation 9506 . 9507) (symbol 9488 . 9505) (punctuation 9487 . 9488) (punctuation 9485 . 9486) (symbol 9467 . 9484) (BOOL 9462 . 9466) (symbol 9452 . 9461) (STATIC 9445 . 9451) (symbol 9372 . 9381) (STATIC 9365 . 9371) (punctuation 9326 . 9327) (symbol 9315 . 9325) (BOOL 9310 . 9314) (symbol 9300 . 9309) (STATIC 9293 . 9299) (punctuation 9244 . 9245) (punctuation 9243 . 9244) (punctuation 9242 . 9243) (symbol 9238 . 9242) (punctuation 9237 . 9238) (symbol 9219 . 9237) (punctuation 9217 . 9218) (symbol 9202 . 9216) (BOOL 9197 . 9201) (symbol 9187 . 9196) (STATIC 9180 . 9186) (punctuation 7039 . 7040) (number 7038 . 7039) (punctuation 7036 . 7037) (punctuation 7035 . 7036) (semantic-list 6993 . 7034) (punctuation 6991 . 6992) (punctuation 6990 . 6991) (symbol 6983 . 6989) (punctuation 6982 . 6983) (punctuation 6980 . 6981) (punctuation 6979 . 6980) (symbol 6964 . 6978) (punctuation 6963 . 6964) (punctuation 6961 . 6962) (symbol 6942 . 6960) (BOOL 6937 . 6941) (symbol 6927 . 6936) (STATIC 6920 . 6926) (punctuation 6914 . 6915) (number 6913 . 6914) (punctuation 6911 . 6912) (punctuation 6910 . 6911) (semantic-list 6868 . 6909) (punctuation 6866 . 6867) (punctuation 6865 . 6866) (symbol 6858 . 6864) (punctuation 6857 . 6858) (punctuation 6855 . 6856) (punctuation 6854 . 6855) (symbol 6839 . 6853) (punctuation 6838 . 6839) (punctuation 6836 . 6837) (symbol 6817 . 6835) (BOOL 6812 . 6816) (symbol 6802 . 6811) (STATIC 6795 . 6801) (punctuation 6773 . 6774) (punctuation 6772 . 6773) (symbol 6759 . 6771) (punctuation 6757 . 6758) (punctuation 6756 . 6757) (symbol 6748 . 6755) (punctuation 6747 . 6748) (punctuation 6746 . 6747) (symbol 6741 . 6746) (punctuation 6739 . 6740) (punctuation 6738 . 6739) (symbol 6725 . 6737) (punctuation 6723 . 6724) (symbol 6708 . 6722) (BOOL 6703 . 6707) (symbol 6693 . 6702) (STATIC 6686 . 6692) (punctuation 6674 . 6675) (punctuation 6673 . 6674) (punctuation 6672 . 6673) (symbol 6668 . 6672) (punctuation 6666 . 6667) (symbol 6661 . 6665) (punctuation 6659 . 6660) (symbol 6649 . 6658) (punctuation 6647 . 6648) (symbol 6642 . 6646) (punctuation 6640 . 6641) (symbol 6633 . 6639) (punctuation 6576 . 6577) (symbol 6552 . 6576) (punctuation 6551 . 6552) (punctuation 6550 . 6551) (symbol 6540 . 6550) (punctuation 6539 . 6540) (symbol 6532 . 6539) (punctuation 6530 . 6531) (symbol 6517 . 6529) (punctuation 6483 . 6484) (symbol 6478 . 6483) (punctuation 6477 . 6478) (punctuation 6476 . 6477) (punctuation 6475 . 6476) (number 6474 . 6475) (punctuation 6472 . 6473) (symbol 6448 . 6472) (punctuation 6447 . 6448) (punctuation 6446 . 6447) (symbol 6436 . 6446) (punctuation 6435 . 6436) (symbol 6428 . 6435) (punctuation 6426 . 6427) (symbol 6413 . 6425) (symbol 6402 . 6412) (symbol 6392 . 6401) (STATIC 6385 . 6391) (punctuation 6379 . 6380) (punctuation 6378 . 6379) (symbol 6377 . 6378) (punctuation 6375 . 6376) (symbol 6368 . 6374) (punctuation 6366 . 6367) (number 6364 . 6365) (punctuation 6362 . 6363) (punctuation 6361 . 6362) (symbol 6359 . 6360) (punctuation 6357 . 6358) (symbol 6347 . 6357) (punctuation 6346 . 6347) (symbol 6329 . 6346) (punctuation 6328 . 6329) (punctuation 6327 . 6328) (symbol 6324 . 6327) (punctuation 6322 . 6323) (symbol 6314 . 6321) (USING 6308 . 6313) (punctuation 6306 . 6307) (symbol 6300 . 6306) (symbol 6289 . 6299) (punctuation 6287 . 6288) (symbol 6286 . 6287) (symbol 6275 . 6285) (punctuation 6274 . 6275) (TEMPLATE 6265 . 6273) (punctuation 6225 . 6226) (punctuation 6223 . 6224) (punctuation 6222 . 6223) (symbol 6211 . 6221) (punctuation 6210 . 6211) (punctuation 6208 . 6209) (symbol 6200 . 6207) (punctuation 6170 . 6171) (symbol 6163 . 6170) (punctuation 6162 . 6163) (punctuation 6161 . 6162) (symbol 6156 . 6161) (punctuation 6154 . 6155) (punctuation 6153 . 6154) (symbol 6148 . 6152) (punctuation 6146 . 6147) (symbol 6140 . 6145) (punctuation 6130 . 6131) (symbol 6123 . 6130) (punctuation 6122 . 6123) (punctuation 6121 . 6122) (symbol 6116 . 6121) (punctuation 6114 . 6115) (punctuation 6113 . 6114) (symbol 6108 . 6112) (punctuation 6106 . 6107) (symbol 6095 . 6105) (punctuation 6085 . 6086) (symbol 6078 . 6085) (punctuation 6077 . 6078) (punctuation 6076 . 6077) (symbol 6071 . 6076) (punctuation 6069 . 6070) (punctuation 6068 . 6069) (symbol 6063 . 6067) (punctuation 6061 . 6062) (symbol 6050 . 6060) (punctuation 5997 . 5998) (symbol 5976 . 5997) (punctuation 5975 . 5976) (punctuation 5974 . 5975) (symbol 5970 . 5974) (punctuation 5968 . 5969) (symbol 5961 . 5967) (punctuation 5951 . 5952) (symbol 5941 . 5951) (punctuation 5940 . 5941) (punctuation 5939 . 5940) (symbol 5935 . 5939) (punctuation 5933 . 5934) (symbol 5923 . 5932) (BOOL 5910 . 5914) (symbol 5900 . 5909) (STATIC 5893 . 5899) (punctuation 5862 . 5863) (symbol 5857 . 5861) (punctuation 5847 . 5848) (symbol 5830 . 5847) (punctuation 5829 . 5830) (punctuation 5828 . 5829) (symbol 5824 . 5828) (punctuation 5822 . 5823) (symbol 5817 . 5821) (punctuation 5807 . 5808) (symbol 5790 . 5807) (punctuation 5789 . 5790) (punctuation 5788 . 5789) (symbol 5784 . 5788) (punctuation 5782 . 5783) (symbol 5777 . 5781) (symbol 5758 . 5768) (symbol 5748 . 5757) (STATIC 5741 . 5747) (punctuation 5692 . 5693) (symbol 5681 . 5691) (USING 5675 . 5680) (punctuation 5646 . 5647) (symbol 5639 . 5645) (USING 5633 . 5638) (USING 5609 . 5614) (USING 5467 . 5472) (USING 5289 . 5294) (USING 5111 . 5116) (semantic-list 5028 . 5051) (CONST 5022 . 5027) (semantic-list 5019 . 5021) (BOOL 5015 . 5019) (OPERATOR 5006 . 5014) (USING 3057 . 3062) (punctuation 3055 . 3056) (symbol 3054 . 3055) (TYPENAME 3045 . 3053) (punctuation 3044 . 3045) (TEMPLATE 3035 . 3043) (USING 2630 . 2635) (punctuation 2628 . 2629) (symbol 2627 . 2628) (TYPENAME 2618 . 2626) (punctuation 2617 . 2618) (TEMPLATE 2608 . 2616) (USING 2490 . 2495) (punctuation 2488 . 2489) (symbol 2487 . 2488) (TYPENAME 2478 . 2486) (punctuation 2477 . 2478) (TEMPLATE 2468 . 2476) (USING 2377 . 2382) (punctuation 2375 . 2376) (symbol 2374 . 2375) (TYPENAME 2365 . 2373) (punctuation 2364 . 2365) (TEMPLATE 2355 . 2363) (USING 2213 . 2218) (punctuation 2211 . 2212) (symbol 2210 . 2211) (TYPENAME 2201 . 2209) (punctuation 2200 . 2201) (TEMPLATE 2191 . 2199) (USING 2084 . 2089) (semantic-list 2001 . 2009) (symbol 1986 . 2001) (USING 1926 . 1931) (punctuation 1924 . 1925) (symbol 1914 . 1924) (TYPENAME 1905 . 1913) (punctuation 1904 . 1905) (TEMPLATE 1895 . 1903) (USING 1836 . 1841) (punctuation 1834 . 1835) (symbol 1824 . 1834) (TYPENAME 1815 . 1823) (punctuation 1814 . 1815) (TEMPLATE 1805 . 1813) (USING 1737 . 1742) (semantic-list 1627 . 1647) (symbol 1612 . 1627) (string 1557 . 1608) (semantic-list 1548 . 1555) (string 947 . 970) (symbol 939 . 946) (symbol 928 . 938) (symbol 924 . 927) (symbol 917 . 923) (punctuation 912 . 913) (string 639 . 666) (symbol 631 . 638) (symbol 620 . 630) (symbol 616 . 619) (symbol 609 . 615) (punctuation 606 . 607) (string 591 . 605) (symbol 583 . 590) (symbol 572 . 582) (symbol 568 . 571) (symbol 561 . 567) (punctuation 558 . 559) (symbol 553 . 557) (symbol 542 . 552) (symbol 538 . 541) (symbol 531 . 537) (punctuation 528 . 529) (symbol 285 . 289) (symbol 278 . 284) (punctuation 277 . 278)))
+    (semanticdb-table "semanticdb-table"
+      :file "numpy.h"
+      :fsize 67677
+      :lastmodtime '(24145 28046 795368 942000)))
   :file "!home!rvbust!Rvbust!Sources!Pybind11!include!pybind11!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

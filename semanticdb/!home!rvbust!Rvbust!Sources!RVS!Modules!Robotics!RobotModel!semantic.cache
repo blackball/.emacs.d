@@ -7,6 +7,8 @@
       :major-mode c++-mode
       :tags 
         '( ("RVS/Robotics/RobotModel/RobotModel.h" include (:system-flag t) nil [1 48])
+            ("RVS/Robotics/RobotModel/Manipulator.h" include (:system-flag t) nil [49 97])
+            ("RVS/Robotics/RobotModel/Utils.h" include (:system-flag t) nil [98 140])
             ("RVS" type
                (:members 
                   ( ("Robotics" type
@@ -15,75 +17,27 @@
                                (:constructor-flag t
                                 :parent "RobotModel"
                                 :type ("RobotModel" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [87 114])
+                                (reparse-symbol namespacesubparts) [180 376])
                             ("RobotModel" function
                                (:destructor-flag t
                                 :parent "RobotModel"
                                 :type "void")
-                                (reparse-symbol namespacesubparts) [115 180])
-                            ("InitRobotModel" function
+                                (reparse-symbol namespacesubparts) [378 449])
+                            ("InitFromRVDF" function
                                (:parent "RobotModel"
                                 :arguments 
-                                  ( ("linkinfos" variable
-                                       (:reference 1
+                                  ( ("path" variable
+                                       (:pointer 1
                                         :constant-flag t
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("std::shared_ptr" type (:template-specifier 
-                                                    ( ("LinkInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [213 275])
-                                    ("jointinfos" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("std::shared_ptr" type (:template-specifier 
-                                                    ( ("JointInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [276 340])
-                                    ("manipinfos" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("std::shared_ptr" type (:template-specifier 
-                                                    ( ("ManipulatorInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [373 443]))                                  
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [481 498]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [181 889])
-                            ("InitRobotModel" function
-                               (:parent "RobotModel"
-                                :arguments 
-                                  ( ("manipinfos" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("std::shared_ptr" type (:template-specifier 
-                                                    ( ("ManipulatorInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [922 992]))                                  
+                                (reparse-symbol namespacesubparts) [451 3281])
+                            ("IsInitialized" function
+                               (:methodconst-flag t
+                                :parent "RobotModel"
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [890 1456])
-                            ("InitRobotModel" function
-                               (:parent "RobotModel"
-                                :arguments 
-                                  ( ("manipinfo" variable
-                                       (:reference 1
-                                        :type ("std::shared_ptr" type
-                                             (:template-specifier 
-                                                ( ("ManipulatorInfo" type (:constant-flag t) nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [1489 1539]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [1457 1963])
+                                (reparse-symbol namespacesubparts) [3283 3391])
                             ("Copy" function
                                (:methodconst-flag t
                                 :parent "RobotModel"
@@ -92,22 +46,41 @@
                                         ( ("RobotModel" type nil nil nil))                                        
                                       :type "class")
                                       nil nil))
-                                (reparse-symbol namespacesubparts) [2326 3997])
-                            ("GetManipulator" function
-                               (:methodconst-flag t
-                                :parent "RobotModel"
+                                (reparse-symbol namespacesubparts) [3393 6237])
+                            ("SetDefaultManipulator" function
+                               (:parent "RobotModel"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6239 6567])
+                            ("AddManipulator" function
+                               (:parent "RobotModel"
                                 :arguments 
-                                  ( ("name" variable
+                                  ( ("manipulator" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Manipulator" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [6601 6642]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6569 7846])
+                            ("SetActiveManipulator" function
+                               (:parent "RobotModel"
+                                :arguments 
+                                  ( ("manipulator" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Manipulator" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [7886 7927]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [7848 8168])
+                            ("SetActiveManipulator" function
+                               (:parent "RobotModel"
+                                :arguments 
+                                  ( ("manipulator_name" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4054 4078]))                                  
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("Manipulator" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [3998 4325])
+                                        (reparse-symbol arg-sub-list) [8208 8244]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [8170 8754])
                             ("GetActiveManipulator" function
                                (:methodconst-flag t
                                 :parent "RobotModel"
@@ -116,35 +89,44 @@
                                         ( ("Manipulator" type nil nil nil))                                        
                                       :type "class")
                                       nil nil))
-                                (reparse-symbol namespacesubparts) [4327 4581])
-                            ("SetActiveManipulator" function
-                               (:parent "RobotModel"
+                                (reparse-symbol namespacesubparts) [8756 8865])
+                            ("GetManipulator" function
+                               (:methodconst-flag t
+                                :parent "RobotModel"
                                 :arguments 
-                                  ( ("manipulator_name" variable
+                                  ( ("name" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4621 4657]))                                  
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [4583 4850])
-                            ("SetActiveManipulator" function
-                               (:parent "RobotModel"
+                                        (reparse-symbol arg-sub-list) [8923 8947]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Manipulator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [8867 9176])
+                            ("<<" function
+                               (:operator-flag t
                                 :arguments 
-                                  ( ("manipulator" variable (:type ("std::shared_ptr" type
-                                         (:template-specifier 
-                                            ( ("Manipulator" type nil nil nil))                                            
-                                          :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [4889 4930]))                                  
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [4851 5075]))                          
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9203 9221])
+                                    ("robot_model" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RobotModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9222 9252]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9178 10735]))                          
                         :type "namespace")
-                        (reparse-symbol namespacesubparts) [66 5078]))                  
+                        (reparse-symbol namespacesubparts) [158 13169]))                  
                 :type "namespace")
-                nil [50 5102]))          
+                nil [142 13193]))          
       :file "RobotModel.cpp"
-      :pointmax 5443
-      :fsize 5442
-      :lastmodtime '(24130 29585 262587 753000)
+      :pointmax 13534
+      :fsize 15195
+      :lastmodtime '(24151 20991 500508 992000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
@@ -165,75 +147,161 @@
                                           :type "class")
                                           nil nil)) (reparse-symbol arg-sub-list) [252 285]))                                  
                                 :type ("Link" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [241 310])
+                                (reparse-symbol namespacesubparts) [241 339])
+                            ("Link" function
+                               (:constructor-flag t
+                                :parent "Link"
+                                :arguments 
+                                  ( ("kinbody" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("KinBody" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [352 385])
+                                    ("info" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("LinkInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [386 407]))                                  
+                                :type ("Link" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [341 455])
                             ("Link" function
                                (:destructor-flag t
                                 :parent "Link"
                                 :type "void")
-                                (reparse-symbol namespacesubparts) [311 327])
+                                (reparse-symbol namespacesubparts) [457 473])
+                            ("GetKinBody" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBody" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [475 553])
                             ("GetParentJointName" function
                                (:methodconst-flag t
                                 :parent "Link"
-                                :constant-flag t
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [329 497])
-                            ("SetCollisionDetectionInfo" function
-                               (:parent "Link"
                                 :arguments 
-                                  ( ("type" variable
+                                  ( ("parent_joint_name" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [586 617]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [556 702])
+                            ("GetChildJointNames" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :arguments 
+                                  ( ("child_joint_names" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [734 778]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [704 863])
+                            ("GetParentJoint" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [865 1179])
+                            ("GetChildJoints" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Joint" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1181 1536])
+                            ("GetPose" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("SE3d" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1538 1691])
+                            ("GetBoundingBox" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Box" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1693 5343])
+                            ("GetBoundingCylinder" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Cylinder" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [5345 6267])
+                            ("GetDecomposedShperes" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Sphere" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [6269 7447])
+                            ("IsRootLink" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [7510 7669])
+                            ("IsAttachedOnSameJoint" function
+                               (:methodconst-flag t
+                                :parent "Link"
+                                :arguments 
+                                  ( ("other" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Link" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [7704 7732]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [7671 8819])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8846 8864])
+                                    ("link" variable
                                        (:reference 1
                                         :constant-flag t
-                                        :type ("CollisionCheckType" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [536 567]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [499 2521])
-                            ("GetCollisionGeometries" function
-                               (:methodconst-flag t
-                                :parent "Link"
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::shared_ptr" type (:template-specifier 
-                                            ( ("GeometryInfo" type nil nil nil))                                            ) nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [2523 3647])
-                            ("GetVisualGeometries" function
-                               (:methodconst-flag t
-                                :parent "Link"
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::shared_ptr" type (:template-specifier 
-                                            ( ("GeometryInfo" type nil nil nil))                                            ) nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [3648 3764])
-                            ("_ComputeBoundingBox" function
-                               (:parent "Link"
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [3814 5289])
-                            ("_ComputeBoundingCylinder" function
-                               (:parent "Link"
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [5290 6698])
-                            ("_ComputeSpheresDecomposition" function
-                               (:parent "Link"
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [6699 8274]))                          
+                                        :type ("Link" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8865 8882]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [8821 9368]))                          
                         :type "namespace")
-                        (reparse-symbol namespacesubparts) [219 8277]))                  
+                        (reparse-symbol namespacesubparts) [219 9371]))                  
                 :type "namespace")
-                nil [203 8301]))          
+                nil [203 9395]))          
       :file "KinBodyLink.cpp"
-      :pointmax 8319
-      :fsize 8318
-      :lastmodtime '(24130 29205 710799 85000)
-      :unmatched-syntax nil)
+      :pointmax 9413
+      :fsize 9412
+      :lastmodtime '(24151 20989 100528 853000)
+      :unmatched-syntax '((punctuation 553 . 554)))
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
         '( ("RVS/Robotics/RobotModel/KinBody.h" include (:system-flag t) nil [1 45])
-            ("URDFParser.h" include nil nil [46 69])
-            ("algorithm" include (:system-flag t) nil [70 90])
+            ("RVS/Robotics/Common/Math.h" include (:system-flag t) nil [46 83])
+            ("RVS/Robotics/RobotModel/Utils.h" include (:system-flag t) nil [84 126])
+            ("RVDFParser.h" include nil nil [127 150])
+            ("algorithm" include (:system-flag t) nil [151 171])
+            ("fstream" include (:system-flag t) nil [172 190])
             ("RVS" type
                (:members 
                   ( ("Robotics" type
@@ -242,22 +310,22 @@
                                (:constructor-flag t
                                 :parent "KinBody"
                                 :type ("KinBody" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [129 195])
+                                (reparse-symbol namespacesubparts) [230 623])
                             ("KinBody" function
                                (:destructor-flag t
                                 :parent "KinBody"
                                 :type "void")
-                                (reparse-symbol namespacesubparts) [197 258])
-                            ("InitFromURDF" function
+                                (reparse-symbol namespacesubparts) [625 687])
+                            ("InitFromRVDF" function
                                (:parent "KinBody"
                                 :arguments 
                                   ( ("path" variable
                                        (:pointer 1
                                         :constant-flag t
                                         :type "char")
-                                        (reparse-symbol arg-sub-list) [287 304]))                                  
+                                        (reparse-symbol arg-sub-list) [716 733]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [260 5252])
+                                (reparse-symbol namespacesubparts) [689 8526])
                             ("InitFromBodies" function
                                (:parent "KinBody"
                                 :arguments 
@@ -265,19 +333,19 @@
                                          (:template-specifier 
                                             ( ("KinBody" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [5282 5313])
+                                          nil nil)) (reparse-symbol arg-sub-list) [8557 8588])
                                     ("body2" variable (:type ("std::shared_ptr" type
                                          (:template-specifier 
                                             ( ("KinBody" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [5314 5345])
+                                          nil nil)) (reparse-symbol arg-sub-list) [8589 8620])
                                     ("connect_joint_info" variable (:type ("std::shared_ptr" type
                                          (:template-specifier 
                                             ( ("JointInfo" type nil nil nil))                                            
                                           :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [5346 5392]))                                  
+                                          nil nil)) (reparse-symbol arg-sub-list) [8621 8667]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [5253 8436])
+                                (reparse-symbol namespacesubparts) [8528 11932])
                             ("InitFromMeshFile" function
                                (:parent "KinBody"
                                 :arguments 
@@ -285,347 +353,70 @@
                                        (:pointer 1
                                         :constant-flag t
                                         :type "char")
-                                        (reparse-symbol arg-sub-list) [8468 8485])
-                                    ("scale" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("CVec3d" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8486 8506]))                                  
+                                        (reparse-symbol arg-sub-list) [11965 11982]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [8437 10948])
-                            ("InitFromGeometryInfo" function
+                                (reparse-symbol namespacesubparts) [11934 14021])
+                            ("InitFromPointCloud" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("geometry" variable (:type ("std::shared_ptr" type
-                                         (:template-specifier 
-                                            ( ("GeometryInfo" type nil nil nil))                                            
-                                          :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [10985 11024]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [10950 12631])
-                            ("Copy" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("KinBody" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [12633 14012])
-                            ("GetJoint" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("jointname" variable
+                                  ( ("point_cloud" variable
                                        (:reference 1
                                         :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [14055 14084]))                                  
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("Joint" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [14014 14243])
-                            ("GetLink" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("linkname" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [14284 14312]))                                  
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("Link" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [14245 14468])
-                            ("GetDoFOrderedJoints" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::shared_ptr" type (:template-specifier 
-                                            ( ("Joint" type nil nil nil))                                            ) nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [14469 14979])
-                            ("GetChain" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("start_link" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [15003 15033])
-                                    ("end_link" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [15034 15062])
-                                    ("contain_joints" variable (:type "bool") (reparse-symbol arg-sub-list) [15063 15083])
-                                    ("contain_links" variable (:type "bool") (reparse-symbol arg-sub-list) [15084 15103])
-                                    ("contain_fixed_joints" variable (:type "bool") (reparse-symbol arg-sub-list) [15104 15130])
-                                    ("chain" variable
-                                       (:reference 1
                                         :type ("std::vector" type
                                              (:template-specifier 
-                                                ( ("std::string" type nil nil nil))                                                
+                                                ( ("double" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol arg-sub-list) [15154 15186]))                                  
+                                        (reparse-symbol arg-sub-list) [14056 14095]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [14980 16028])
-                            ("ExportURDF" function
+                                (reparse-symbol namespacesubparts) [14023 16032])
+                            ("InitFromPointCloudFile" function
                                (:parent "KinBody"
                                 :arguments 
                                   ( ("path" variable
                                        (:pointer 1
                                         :constant-flag t
                                         :type "char")
-                                        (reparse-symbol arg-sub-list) [16055 16072]))                                  
+                                        (reparse-symbol arg-sub-list) [16071 16088]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [16030 16228])
-                            ("SetUserData" function
+                                (reparse-symbol namespacesubparts) [16034 16819])
+                            ("InitFromBox" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("key" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [16256 16279])
-                                    ("data" variable (:type ("std::shared_ptr" type
-                                         (:template-specifier 
-                                            ( ("UserData" type nil nil nil))                                            
-                                          :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [16280 16311]))                                  
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [16230 16625])
-                            ("GetUserData" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("key" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [16674 16697]))                                  
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("UserData" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [16627 16858])
-                            ("RemoveUserData" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("key" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [16889 16912]))                                  
+                                  ( ("length" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16847 16867])
+                                    ("width" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16868 16887])
+                                    ("height" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [16888 16908]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [16860 17173])
-                            ("GetJointLimits" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("JointLimit" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [17175 17385])
-                            ("GetJointParentName" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [17420 17450])
-                                    ("joint_parent" variable
-                                       (:reference 1
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [17451 17477]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [17387 17800])
-                            ("GetJointChildName" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [17834 17864])
-                                    ("joint_child" variable
-                                       (:reference 1
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [17865 17890]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [17802 18109])
-                            ("GetLinkParentName" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [18143 18172])
-                                    ("link_parent" variable
-                                       (:reference 1
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [18173 18198]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [18111 18585])
-                            ("GetLinkChildrenName" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [18621 18650])
-                                    ("link_children" variable
-                                       (:reference 1
-                                        :type ("std::vector" type
-                                             (:template-specifier 
-                                                ( ("std::string" type nil nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [18651 18691]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [18587 18948])
-                            ("GetRootLink" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("Link" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [18950 19249])
-                            ("GetTipLinks" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::shared_ptr" type (:template-specifier 
-                                            ( ("Link" type nil nil nil))                                            ) nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [19250 19602])
-                            ("CheckLinkNameVaild" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [19637 19666]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [19604 19737])
-                            ("CheckJointNameVaild" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :arguments 
-                                  ( ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [19773 19803]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [19739 19877])
-                            ("GetBaseTransfromation" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [19879 20119])
-                            ("SetBaseTransfromation" function
+                                (reparse-symbol namespacesubparts) [16821 17237])
+                            ("InitFromCylinder" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("transform" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("SE3d" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [20157 20179]))                                  
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [20121 20211])
-                            ("GetMotorPositions" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("JointVector" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20213 20303])
-                            ("GetJointPositions" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("JointVector" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20305 20395])
-                            ("GetJointVelocities" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("JointVector" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20397 20489])
-                            ("GetJointAccelerations" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("JointVector" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20491 20589])
-                            ("GetJointEfforts" function
-                               (:methodconst-flag t
-                                :parent "KinBody"
-                                :constant-flag t
-                                :type ("JointVector" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20591 20677])
-                            ("SetJointPositions" function
+                                  ( ("radius" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17270 17290])
+                                    ("height" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [17291 17311]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [17239 17646])
+                            ("InitFromSphere" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("joint_positions" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [20711 20746]))                                  
-                                :type "void")
-                                (reparse-symbol namespacesubparts) [20679 20794])
-                            ("GetJointFramePose" function
-                               (:parent "KinBody"
-                                :arguments 
-                                  ( ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [20828 20858]))                                  
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [20796 22008])
-                            ("GetJointFramePose" function
-                               (:parent "KinBody"
-                                :arguments 
-                                  ( ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [22042 22072])
-                                    ("joint_positions" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("JointVector" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [22073 22108]))                                  
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [22010 23744])
-                            ("InitKinbody" function
+                                  ( ("radius" variable (:type "double") (reparse-symbol arg-sub-list) [17677 17691]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [17648 17985])
+                            ("_InitFromLinkAndJointInfos" function
                                (:parent "KinBody"
                                 :arguments 
                                   ( ("linkinfos" variable
@@ -637,7 +428,7 @@
                                                     ( ("LinkInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol arg-sub-list) [23772 23834])
+                                        (reparse-symbol arg-sub-list) [18028 18090])
                                     ("jointinfos" variable
                                        (:reference 1
                                         :constant-flag t
@@ -647,459 +438,569 @@
                                                     ( ("JointInfo" type (:constant-flag t) nil nil))                                                    ) nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol arg-sub-list) [23835 23899]))                                  
+                                        (reparse-symbol arg-sub-list) [18132 18196]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [23746 25666])
-                            ("Grab" function
-                               (:parent "KinBody"
+                                (reparse-symbol namespacesubparts) [17987 20845])
+                            ("Copy" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("KinBody" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [20847 22500])
+                            ("GetJoint" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
                                 :arguments 
-                                  ( ("grabbed_body" variable
-                                       (:constant-flag t
-                                        :type ("std::shared_ptr" type
-                                             (:template-specifier 
-                                                ( ("KinBody" type nil nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [25686 25730])
-                                    ("joint_grabbing_name" variable
+                                  ( ("jointname" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [25731 25770]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [25667 25949])
-                            ("Grab" function
-                               (:parent "KinBody"
+                                        (reparse-symbol arg-sub-list) [22543 22572]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [22502 22801])
+                            ("GetLink" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
                                 :arguments 
-                                  ( ("grabbed_body" variable
-                                       (:constant-flag t
-                                        :type ("std::shared_ptr" type
-                                             (:template-specifier 
-                                                ( ("KinBody" type nil nil nil))                                                
-                                              :type "class")
-                                              nil nil))
-                                        (reparse-symbol arg-sub-list) [25969 26013])
-                                    ("joint_grabbing_name" variable
+                                  ( ("linkname" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [26014 26053])
-                                    ("grab_pose" variable
+                                        (reparse-symbol arg-sub-list) [22842 22870]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Link" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [22803 23094])
+                            ("GetDoFOrderedJoints" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Joint" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [23096 23606])
+                            ("GetChain" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("start_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [23631 23661])
+                                    ("end_link" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [23662 23690])
+                                    ("contain_joints" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23691 23717])
+                                    ("contain_links" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23718 23743])
+                                    ("contain_fixed_joints" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [23767 23799])
+                                    ("chain" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [23800 23832]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [23608 24677])
+                            ("ExportRVDF" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [24704 24721]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [24679 24883])
+                            ("SetUserData" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [24911 24934])
+                                    ("data" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("UserData" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [24935 24966]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [24885 25280])
+                            ("GetUserData" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [25329 25352]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("UserData" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [25282 25513])
+                            ("RemoveUserData" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [25544 25567]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [25515 25822])
+                            ("GetDoFLimits" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("JointLimit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [25824 26044])
+                            ("GetJointParentLinkName" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26083 26113])
+                                    ("parent_link_name" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26114 26144]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [26046 26501])
+                            ("GetJointChildLinkName" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26539 26569])
+                                    ("child_link_name" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26570 26599]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [26503 26847])
+                            ("GetLinkParentJointName" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26886 26915])
+                                    ("parent_joint_name" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [26916 26947]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [26849 27373])
+                            ("GetLinkChildJointNames" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [27412 27441])
+                                    ("child_joint_names" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [27442 27486]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [27375 27854])
+                            ("GetRootLink" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Link" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [27856 28122])
+                            ("GetTipLinks" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Link" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [28124 28506])
+                            ("IsLinkNameVaild" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28538 28567]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [28508 28638])
+                            ("IsJointNameVaild" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28671 28701]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [28640 28775])
+                            ("SetSelfCollisionMatrix" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("matrix" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("CollisionMatrix" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [28814 28854]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [28777 29332])
+                            ("SetLinkCollisionPadding" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("link_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29372 29401])
+                                    ("padding" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [29402 29423]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [29334 30848])
+                            ("SetCollisionPadding" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("padding" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [30884 30905]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [30850 31067])
+                            ("GetBaseTransformation" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("SE3d" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31069 31319])
+                            ("GetMotorPositions" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("JointVector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31321 31411])
+                            ("GetJointPositions" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("JointVector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31413 31503])
+                            ("GetJointVelocities" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("JointVector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31505 31597])
+                            ("GetJointAccelerations" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("JointVector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31599 31697])
+                            ("GetJointEfforts" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :constant-flag t
+                                :type ("JointVector" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31699 31785])
+                            ("SetBaseTransformation" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("transform" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("SE3d" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [26054 26076]))                                  
-                                :type "bool")
-                                (reparse-symbol namespacesubparts) [25950 26579])
-                            ("Release" function
+                                        (reparse-symbol arg-sub-list) [31823 31845]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [31787 32080])
+                            ("SetJointPositions" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("grabbed_body" variable
+                                  ( ("joint_positions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("JointVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [32114 32149])
+                                    ("check_limits" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [32150 32174]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [32082 32911])
+                            ("SetToRandomState" function
+                               (:parent "KinBody"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [32913 33458])
+                            ("GetJointFramePose" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [33492 33522])
+                                    ("joint_positions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("JointVector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [33523 33558]))                                  
+                                :type ("SE3d" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [33460 34928])
+                            ("GetJointFramePose" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [34962 34992]))                                  
+                                :type ("SE3d" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [34930 35061])
+                            ("ComputeDoFWeights" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("double" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [35063 36147])
+                            ("Attach" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("child_kinbody" variable
                                        (:constant-flag t
                                         :type ("std::shared_ptr" type
                                              (:template-specifier 
                                                 ( ("KinBody" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol arg-sub-list) [26603 26647]))                                  
+                                        (reparse-symbol arg-sub-list) [36170 36215])
+                                    ("attached_joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36216 36255]))                                  
                                 :type "bool")
-                                (reparse-symbol namespacesubparts) [26581 26889])
-                            ("_SetGrabbedInfo" function
+                                (reparse-symbol namespacesubparts) [36149 36445])
+                            ("Attach" function
                                (:parent "KinBody"
                                 :arguments 
-                                  ( ("joint_grabbing" variable
+                                  ( ("child_kinbody" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("KinBody" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [36468 36513])
+                                    ("attached_joint_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36514 36553])
+                                    ("attached_pose" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SE3d" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36554 36580]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [36447 37176])
+                            ("Detach" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("child_kinbody" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("KinBody" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [37199 37244]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [37178 37652])
+                            ("GetAttachingJoint" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Joint" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [37654 37748])
+                            ("IsAttachedBy" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :arguments 
+                                  ( ("child_kinbody" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("KinBody" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [37777 37822]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [37750 37967])
+                            ("_SetAttachingInfo" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("joint_attaching" variable
                                        (:constant-flag t
                                         :type ("std::shared_ptr" type
                                              (:template-specifier 
                                                 ( ("Joint" type nil nil nil))                                                
                                               :type "class")
                                               nil nil))
-                                        (reparse-symbol arg-sub-list) [26921 26965])
-                                    ("grab_pose" variable
+                                        (reparse-symbol arg-sub-list) [38001 38046])
+                                    ("attaching_pose" variable
                                        (:reference 1
                                         :constant-flag t
                                         :type ("SE3d" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [26966 26988]))                                  
+                                        (reparse-symbol arg-sub-list) [38047 38074]))                                  
                                 :type "void")
-                                (reparse-symbol namespacesubparts) [26891 27060])
-                            ("_RemoveGrabbedInfo" function
+                                (reparse-symbol namespacesubparts) [37969 38158])
+                            ("_RemoveAttachingInfo" function
                                (:parent "KinBody"
                                 :type "void")
-                                (reparse-symbol namespacesubparts) [27062 27168]))                          
+                                (reparse-symbol namespacesubparts) [38160 38289])
+                            ("_ComputeJointSpheres" function
+                               (:methodconst-flag t
+                                :parent "KinBody"
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("std::vector" type (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [38291 41563])
+                            ("_InitFromGeometry" function
+                               (:parent "KinBody"
+                                :arguments 
+                                  ( ("geometry" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Geometry" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [41597 41632]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [41565 43380])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [43407 43425])
+                                    ("body" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("KinBody" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [43426 43446]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [43382 44397])
+                            ("to_json" function
+                               (:arguments 
+                                  ( ("j" variable
+                                       (:reference 1
+                                        :type ("Json11::json" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [44412 44428])
+                                    ("body" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("KinBody" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [44429 44459]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [44399 47209])
+                            ("from_json" function
+                               (:arguments 
+                                  ( ("j" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Json11::json" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [47226 47248])
+                                    ("body" variable
+                                       (:reference 1
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("KinBody" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [47249 47280]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [47211 48784]))                          
                         :type "namespace")
-                        (reparse-symbol namespacesubparts) [108 27171]))                  
+                        (reparse-symbol namespacesubparts) [208 48787]))                  
                 :type "namespace")
-                nil [92 27195]))          
+                nil [192 48811]))          
       :file "KinBody.cpp"
-      :pointmax 35250
-      :fsize 35249
-      :lastmodtime '(24130 29520 183296 231000)
+      :pointmax 58248
+      :fsize 58247
+      :lastmodtime '(24151 38231 257562 410000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
-      :major-mode c++-mode
-      :tags 
-        '( ("RVS/Common/PugiXML.h" include (:system-flag t) nil [66 97])
-            ("RVS/Robotics/Common/Utils.h" include (:system-flag t) nil [98 136])
-            ("string" include (:system-flag t) nil [137 154])
-            ("vector" include (:system-flag t) nil [155 172])
-            ("RVS/Robotics/RobotModel/Types.h" include (:system-flag t) nil [173 215])
-            ("RVS/Robotics/Types/JointLimit.h" include (:system-flag t) nil [216 258])
-            ("RVS/Robotics/LieGroup/LieGroup.h" include (:system-flag t) nil [259 302])
-            ("RVS" type
-               (:members 
-                  ( ("Robotics" type
-                       (:members 
-                          ( ("RVS::Common::CVec3d" using (:type ("RVS::Common::CVec3d" type
-                                 (:prototype t
-                                  :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [342 368])
-                            ("RVS::Robotics::LieGroup::R3d" using (:type ("RVS::Robotics::LieGroup::R3d" type
-                                 (:prototype t
-                                  :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [369 404])
-                            ("RVS::Robotics::LieGroup::SE3d" using (:type ("RVS::Robotics::LieGroup::SE3d" type
-                                 (:prototype t
-                                  :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [405 441])
-                            ("RVS::Robotics::LieGroup::SE3Tangentd" using (:type ("RVS::Robotics::LieGroup::SE3Tangentd" type
-                                 (:prototype t
-                                  :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [442 485])
-                            ("RVS::Robotics::LieGroup::SO3d" using (:type ("RVS::Robotics::LieGroup::SO3d" type
-                                 (:prototype t
-                                  :type "class")
-                                  nil nil)) (reparse-symbol namespacesubparts) [486 522])
-                            ("Origin2Transformation" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("origin_rpy" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [565 595])
-                                    ("origin_xyz" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [596 626]))                                  
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [524 1149])
-                            ("FindJointNode" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1194 1224])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1225 1255]))                                  
-                                :type ("pugi::xml_node" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [1151 1348])
-                            ("FindLinkNode" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1392 1422])
-                                    ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1423 1452]))                                  
-                                :type ("pugi::xml_node" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [1350 1543])
-                            ("GetLinksName" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1597 1627]))                                  
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::string" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [1545 1912])
-                            ("GetJointsName" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1967 1997]))                                  
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::string" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [1914 2288])
-                            ("GetGeometryType" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2333 2363])
-                                    ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2364 2393])
-                                    ("geometry_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2394 2427]))                                  
-                                :type ("GeometryType" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [2290 2972])
-                            ("GetMeshPath" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3012 3042])
-                                    ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3043 3072])
-                                    ("geometry_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3073 3106]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [2974 3333])
-                            ("GetMeshPose" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3366 3396])
-                                    ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3397 3426])
-                                    ("geometry_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3427 3460]))                                  
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [3335 3867])
-                            ("GetJointOriginTransfromation" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3917 3947])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3948 3978]))                                  
-                                :type ("SE3d" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [3869 4244])
-                            ("GetJointType" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4283 4313])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4314 4344]))                                  
-                                :type ("JointType" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [4246 4866])
-                            ("GetJointAxis" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4907 4937])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4938 4968]))                                  
-                                :type ("SE3Tangentd" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [4868 6094])
-                            ("GetJointLimit" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [6135 6165])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [6166 6196]))                                  
-                                :type ("JointLimit" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [6096 6975])
-                            ("GetJointParent" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7018 7048])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7049 7079]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [6977 7168])
-                            ("GetJointChild" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7210 7240])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7241 7271]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [7170 7359])
-                            ("GetJointMimicOffset" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7401 7431])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7432 7462]))                                  
-                                :type "double")
-                                (reparse-symbol namespacesubparts) [7360 7579])
-                            ("GetJointMimicMultiplier" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7626 7656])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7657 7687]))                                  
-                                :type "double")
-                                (reparse-symbol namespacesubparts) [7581 7808])
-                            ("GetJointMimicJointName" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7859 7889])
-                                    ("joint_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [7890 7920]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [7810 8009])
-                            ("GetMaterialName" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8052 8082])
-                                    ("link_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8083 8112])
-                                    ("geometry_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8113 8146]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [8010 8264])
-                            ("GetMaterialTextureFileName" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8318 8348])
-                                    ("material_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8349 8382]))                                  
-                                :type ("std::string" type (:type "class") nil nil))
-                                (reparse-symbol namespacesubparts) [8265 8579])
-                            ("GetMaterialColor" function
-                               (:typemodifiers ("static" "inline")
-                                :arguments 
-                                  ( ("doc" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("pugi::xml_document" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8631 8661])
-                                    ("material_name" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("std::string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [8662 8695]))                                  
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("double" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol namespacesubparts) [8580 9153]))                          
-                        :type "namespace")
-                        (reparse-symbol namespacesubparts) [320 9156]))                  
-                :type "namespace")
-                nil [304 9180]))          
-      :file "URDFParser.h"
-      :pointmax 9197
-      :fsize 9196
-      :lastmodtime '(24127 41085 298033 23000)
-      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+      :file "RVDFParser.h"
+      :fsize 10783
+      :lastmodtime '(24151 20991 496509 25000)))
   :file "!home!rvbust!Rvbust!Sources!RVS!Modules!Robotics!RobotModel!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

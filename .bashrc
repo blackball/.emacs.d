@@ -75,20 +75,18 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto -shortlF'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
+    alias ls='ls -hltr --color=auto'
+    alias lsr='ls -dR $PWD/*'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    #alias grep='grep --color=auto'
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# export LANGUAGE="en_US.UTF-8"
-# export LANG=en_US.UTF-8
-# export LC_ALL=C
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 #alias ll='ls -l'
@@ -115,12 +113,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+# NOTE: these path appending also happens in .profile, since
+# terminal opened in GUI env. is not a login shell, it will not run .profile file. 
+# if running bash
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
 fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -171,22 +176,38 @@ function attachcontainer() {
     sudo docker exec -i -t $1 /bin/bash
 }
 
-# git commit and push in one line 
-function gitcp() {
-    if [ -z "$1" ]
+alias snake="python3 /home/rvbust/Rvbust/Sources/Snake/Snake.py"
+complete -W "build install list setup updateserver vpn" snake
+
+alias FUCKGFW="ALL_PROXY=socks5://127.0.0.1:10808"
+
+alias ipython="python3 -m IPython"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/rvbust/Rvbust/Install/OSG/lib"
+export PYTHONPATH="$PYTHONPATH:/home/rvbust/Rvbust/Install/RVS/Lib/Python"
+alias rm="safe-rm"
+source ~/.cargo/env
+
+# To prevent warnings when start Emacs. 
+export NO_AT_BRIDGE=1
+alias extract=dtrx 
+alias sss="PROMPT_DIRTRIM=3"
+
+alias elsrun="~/WS/Github/Sandbox/EmacsSplitLine/EmacsSplitLine"
+function em() {
+    file=$(elsrun 0 $1)
+    line=$(elsrun 1 $1)
+    column=$(elsrun 2 $1)
+
+    if test -z "$file"
     then
-        echo "please provide a commit message"
+        emacs
+        return 
+    fi
+    
+    if [ "$line" == "0" ] && [ "$column" == "0" ]
+    then
+        emacs "$file"
     else
-        git commit -m "$1"
-        git push
+        emacs "+$line:$column" "$file"
     fi
 }
-
-
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/home/rvbust/Rvbust/Install/Miniconda3/lib:/home/rvbust/Rvbust/Install/OpenCV/lib:/home/rvbust/Rvbust/Install/OSG/lib64:/home/rvbust/Rvbust/Install/ColladaDom/lib:/home/rvbust/Rvbust/Install/GLog/lib:/home/rvbust/Rvbust/Install/GFlags/lib:/home/rvbust/Rvbust/Install/CeresSolver/lib:/home/rvbust/Rvbust/Install/RealSense/lib"
-
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(openrave-config --python-dir)/openravepy/_openravepy_:/usr/local/lib64/
-export PYTHONPATH="${PYTHONPATH}:/home/rvbust/Rvbust/Install/Sophus/py:/home/rvbust/Rvbust/Install/RealSense/lib"
-# export PATH=$PATH:/home/hui/Downloads/clion-2017.2.2/bin
-# export TEXMACS_PATH=/home/hui/Downloads/TeXmacs-1.99.5-10549M-i386-pc-linux-gnu
-# export PATH=$TEXMACS_PATH/bin:$PATH

@@ -6,7 +6,9 @@
 (unless (and (fboundp 'semantic-current-tag)
              semantic-mode)
   (error "Semantic required to use dox snippet"))
-(let ((tag (senator-next-tag)))
+  
+(let ((start-point (point))
+      (tag (senator-next-tag)))
   (while (or (null tag)
              (not (semantic-tag-of-class-p tag 'function)))
     (setq tag (senator-next-tag)))
@@ -17,22 +19,20 @@
          (idx 1))
     (if (listp return-name)
       (setq return-name (car return-name)))
+    (goto-char start-point)
     (yas/expand-snippet
      (format
       "/**
-* @brief ${1:%s}
+* ${1:%s}
 *
-%s
-%s
-*/
-"
+%s%s*/"
       name
       (mapconcat
        (lambda (x)
-         (format "* @param %s ${%d:Description of %s}"
-                 (car x) (incf idx) (car x)))
+         (format "* @param %s ${%d:??}\n"
+                 (car x) (incf idx)))
        args
-       "\n")
+       "")
       (if (and return-name (not (string-equal "void" return-name)))
-          (format " * @return ${%d:%s}" (incf idx) return-name)
+          (format "* @return ${%d:%s}\n" (incf idx) return-name)
         "")))))
