@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: app
+# key: app
+# expand-env: ((yas-indent-line 'fixed))
+# --
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import sys
+from $1 import *
+import qtmodern.styles
+import qtmodern.windows
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.setupUi(self)
+        self.assignWidgets()
+        
+    def assignWidgets(self):
+        """ Connect widget's signal to slots 
+        """
+        pass
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)    
+    win = MainWindow()
+    qtmodern.styles.light(app)
+    mw = qtmodern.windows.ModernWindow(win)
+    mw.show()
+    sys.exit(app.exec_())

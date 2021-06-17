@@ -1,258 +1,2406 @@
-;; Object Src/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Src/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Viewer.cpp"
-      :major-mode 'c++-mode
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
-        '( ("osg/ref_ptr" include (:system-flag t) nil [53 75])
-            ("osgViewer/Viewer" include (:system-flag t) nil [76 103])
-            ("osgViewer/config/SingleWindow" include (:system-flag t) nil [104 144])
-            ("osgGA/TrackballManipulator" include (:system-flag t) nil [145 182])
-            ("Vis/Viewer.h" include (:system-flag t) nil [184 207])
-            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [208 244])
-            ("EventHandler/ImGUIHandler.h" include nil nil [245 283])
-            ("EventHandler/PickHandler.h" include nil nil [284 321])
-            ("thread" include (:system-flag t) nil [323 340])
-            ("OSGViewerEventHook" type
+        '( ("Vis/Vis.h" include (:system-flag t) nil [598 618])
+            ("osg/Camera" include (:system-flag t) nil [619 640])
+            ("osg/Geode" include (:system-flag t) nil [641 661])
+            ("osg/LineWidth" include (:system-flag t) nil [662 686])
+            ("osg/Material" include (:system-flag t) nil [687 710])
+            ("osg/Math" include (:system-flag t) nil [711 730])
+            ("osg/MatrixTransform" include (:system-flag t) nil [731 761])
+            ("osg/Point" include (:system-flag t) nil [762 782])
+            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [783 823])
+            ("osg/ShapeDrawable" include (:system-flag t) nil [824 852])
+            ("osg/Texture2D" include (:system-flag t) nil [853 877])
+            ("osgDB/ReadFile" include (:system-flag t) nil [878 903])
+            ("osgDB/WriteFile" include (:system-flag t) nil [904 930])
+            ("osgGA/StateSetManipulator" include (:system-flag t) nil [931 967])
+            ("osgGA/TrackballManipulator" include (:system-flag t) nil [968 1005])
+            ("osgUtil/ShaderGen" include (:system-flag t) nil [1006 1034])
+            ("osgUtil/SmoothingVisitor" include (:system-flag t) nil [1035 1070])
+            ("osgViewer/CompositeViewer" include (:system-flag t) nil [1071 1107])
+            ("osgViewer/Viewer" include (:system-flag t) nil [1108 1135])
+            ("osgViewer/ViewerEventHandlers" include (:system-flag t) nil [1136 1176])
+            ("osgViewer/config/SingleWindow" include (:system-flag t) nil [1177 1217])
+            ("Logger.h" include nil nil [1219 1238])
+            ("Utils.h" include nil nil [1239 1257])
+            ("algorithm" include (:system-flag t) nil [1259 1279])
+            ("array" include (:system-flag t) nil [1280 1296])
+            ("atomic" include (:system-flag t) nil [1297 1314])
+            ("condition_variable" include (:system-flag t) nil [1315 1344])
+            ("mutex" include (:system-flag t) nil [1345 1361])
+            ("thread" include (:system-flag t) nil [1362 1379])
+            ("unordered_map" include (:system-flag t) nil [1380 1404])
+            ("unordered_set" include (:system-flag t) nil [1405 1429])
+            ("VIS_VERSION" variable (:constant-flag t) nil [1439 1450])
+            ("Vis::Handle" using (:type ("Vis::Handle" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1460 1478])
+            ("Vis::ViewConfig" using (:type ("Vis::ViewConfig" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1479 1501])
+            ("ViewObjectType" type
+               (:members 
+                  ( ("ViewObjectType_None" variable
+                       (:constant-flag t
+                        :default-value (1551 1552)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1529 1552])
+                    ("ViewObjectType_View" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1558 1578])
+                    ("ViewObjectType_Model" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1583 1604])
+                    ("ViewObjectType_Point" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1609 1630])
+                    ("ViewObjectType_Line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1635 1655])
+                    ("ViewObjectType_Arrow" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1660 1681])
+                    ("ViewObjectType_Mesh" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1686 1706])
+                    ("ViewObjectType_Axes" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1711 1731])
+                    ("ViewObjectType_Box" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1736 1755])
+                    ("ViewObjectType_Plane" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1760 1781])
+                    ("ViewObjectType_Sphere" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1786 1808])
+                    ("ViewObjectType_Spheres" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1813 1836])
+                    ("ViewObjectType_Cone" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1841 1861])
+                    ("ViewObjectType_Cylinder" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1866 1890]))                  
+                :type "enum")
+                nil [1503 1893])
+            ("CommandType" type
+               (:members 
+                  ( ("CommandType_None" variable
+                       (:constant-flag t
+                        :default-value (1937 1938)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1918 1938])
+                    ("CommandType_Home" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1944 1961])
+                    ("CommandType_CreateView" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1966 1989])
+                    ("CommandType_IsViewClosed" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1994 2019])
+                    ("CommandType_CloseView" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2024 2046])
+                    ("CommandType_ClearNodes" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2051 2074])
+                    ("CommandType_ShowNode" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2079 2100])
+                    ("CommandType_HideNode" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2105 2126])
+                    ("CommandType_Chain" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2131 2149])
+                    ("CommandType_Unchain" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2154 2174])
+                    ("CommandType_SetTransparency" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2179 2207])
+                    ("CommandType_DeleteNode" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2212 2235])
+                    ("CommandType_HasNode" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2240 2260])
+                    ("CommandType_Clone" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2265 2283])
+                    ("CommandType_CloneMultiple" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2288 2314])
+                    ("CommandType_PlotAxes" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2320 2341])
+                    ("CommandType_LoadModel" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2346 2368])
+                    ("CommandType_PlotPoint" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2373 2395])
+                    ("CommandType_PlotLine" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2400 2421])
+                    ("CommandType_PlotBox" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2426 2446])
+                    ("CommandType_PlotCylinder" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2451 2476])
+                    ("CommandType_PlotSphere" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2481 2504])
+                    ("CommandType_PlotSpheres" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2509 2533])
+                    ("CommandType_PlotCone" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2538 2559])
+                    ("CommandType_PlotArrow" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2564 2586])
+                    ("CommandType_PlotPlane" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2591 2613])
+                    ("CommandType_PlotMesh" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2618 2639])
+                    ("CommandType_SetShow" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2645 2665])
+                    ("CommandType_SetPosition" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2670 2694])
+                    ("CommandType_SetRotation" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2699 2723])
+                    ("CommandType_SetTransform" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2744 2769])
+                    ("CommandType_SetTransforms" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2803 2829])
+                    ("CommandType_SetColor" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2834 2855])
+                    ("CommandType_GetTransform" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2974 2999])
+                    ("CommandType_SetHomePose" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3004 3028])
+                    ("CommandType_GetHomePose" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3071 3095])
+                    ("CommandType_SetCameraPose" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3138 3164])
+                    ("CommandType_GetCameraPose" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3169 3195]))                  
+                :type "enum")
+                nil [1895 3198])
+            ("LoadModelType" type
+               (:members 
+                  ( ("LoadModelType_ByName" variable
+                       (:constant-flag t
+                        :default-value (3248 3249)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3225 3249])
+                    ("LoadModelType_ByNames" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3255 3277])
+                    ("LoadModelType_ByNameAndTransform" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3282 3315])
+                    ("LoadModelType_ByNamesAndTransforms" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3320 3355]))                  
+                :type "enum")
+                nil [3200 3358])
+            ("Command" type
+               (:members 
+                  ( ("Command" function
+                       (:constructor-flag t
+                        :type ("Command" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [3381 3544])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [3550 3559])
+                    ("success" variable (:type "bool") (reparse-symbol classsubparts) [3564 3577])
+                    ("ret" variable (:type ("" type
+                         (:members 
+                            ( ("b" variable (:type "bool") (reparse-symbol classsubparts) [3600 3614])
+                              ("i" variable (:type "int") (reparse-symbol classsubparts) [3623 3632])
+                              ("h" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3641 3650])
+                              ("data" variable (:type ("std::vector" type
+                                   (:template-specifier 
+                                      ( ("float" type nil nil nil))                                      
+                                    :type "class")
+                                    nil nil)) (reparse-symbol classsubparts) [3659 3683]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3583 3694])
+                    ("viewcfg" variable (:type ("ViewConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3733 3752])
+                    ("who" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3758 3769])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3775 3792])
+                    ("names" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3797 3828])
+                    ("transform" variable (:type ("osg::Matrixf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3833 3856])
+                    ("extents" variable (:type ("std::array" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3861 3890])
+                    ("pos" variable (:type ("std::array" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3895 3920])
+                    ("upvector" variable (:type ("std::array" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil)
+                              ("3"))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3925 3955])
+                    ("buffer" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3961 3987])
+                    ("handles" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Handle" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4023 4051])
+                    ("transforms" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("osg::Matrixf" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4056 4093])
+                    ("val" variable (:type ("" type
+                         (:members 
+                            ( ("b" variable (:type "bool") (reparse-symbol classsubparts) [4116 4126])
+                              ("i" variable (:type "int") (reparse-symbol classsubparts) [4135 4144])
+                              ("u" variable (:type "unsigned int") (reparse-symbol classsubparts) [4153 4171])
+                              ("f" variable (:type "float") (reparse-symbol classsubparts) [4180 4191])
+                              ("d" variable (:type "double") (reparse-symbol classsubparts) [4200 4212]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4099 4223])
+                    ("data1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4260 4279])
+                    ("size1" variable (:type "unsigned int") (reparse-symbol classsubparts) [4284 4303])
+                    ("data2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol classsubparts) [4308 4327])
+                    ("size2" variable (:type "unsigned int") (reparse-symbol classsubparts) [4332 4351])
+                    ("data3" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [4356 4382])
+                    ("size3" variable (:type "unsigned int") (reparse-symbol classsubparts) [4387 4406]))                  
+                :type "struct")
+                nil [3360 4409])
+            ("Vis3d" type
+               (:members 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4430 4444])
+                    ("has_cmd" variable (:type "bool") (reparse-symbol classsubparts) [4502 4522])
+                    ("is_inited" variable (:type "bool") (reparse-symbol classsubparts) [4555 4577])
+                    ("uid" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4583 4612])
+                    ("objid" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4633 4664])
+                    ("done" variable (:type ("std::atomic_bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4670 4699])
+                    ("entered_loop" variable (:type ("std::atomic_bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4704 4741])
+                    ("exited_loop" variable (:type ("std::atomic_bool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4746 4782])
+                    ("mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4788 4803])
+                    ("rendering_thread" variable (:type ("std::unique_ptr" type
+                         (:template-specifier 
+                            ( ("std::thread" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4860 4906])
+                    ("view_mtx" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4911 4931])
+                    ("view_cv" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4972 5004])
+                    ("picked" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5010 5024])
+                    ("viewmap" variable (:type ("std::unordered_map" type
+                         (:template-specifier 
+                            ( ("Handle" type nil nil nil)
+                              ("osg::ref_ptr" type (:template-specifier 
+                                ( ("osgViewer::View" type nil nil nil))                                ) nil nil)
+                              ("Vis::HandleHasher" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5029 5114])
+                    ("nodemap" variable (:type ("std::unordered_map" type
+                         (:template-specifier 
+                            ( ("Handle" type nil nil nil)
+                              ("osg::ref_ptr" type (:template-specifier 
+                                ( ("osg::MatrixTransform" type nil nil nil))                                ) nil nil)
+                              ("Vis::HandleHasher" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5119 5209])
+                    ("scene_root" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Group" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5214 5250])
+                    ("node_switch" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osg::Switch" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5255 5293])
+                    ("compviewer" variable (:type ("osg::ref_ptr" type
+                         (:template-specifier 
+                            ( ("osgViewer::CompositeViewer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5347 5399])
+                    ("has_internal_cmd" variable (:type "bool") (reparse-symbol classsubparts) [5430 5459])
+                    ("internal_cmd" variable (:type ("Command" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5464 5485]))                  
+                :type "struct")
+                nil [4411 5488])
+            ("sg_vis3d" variable
+               (:typemodifiers ("static")
+                :type ("Vis3d" type (:type "class") nil nil))
+                nil [5490 5512])
+            ("Vis3d_IsInited" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "bool")
+                nil [5514 5543])
+            ("Vis3d_Init" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "bool")
+                nil [5544 5569])
+            ("Vis3d_Shutdown" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5596 5625])
+            ("Vis3d_Callback" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5688 5695]))                  
+                :type "void")
+                nil [5661 5696])
+            ("Vis3d_Update" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5697 5724])
+            ("Vis3d_Cleanup" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5751 5779])
+            ("Vis3d__HasView" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5864 5881]))                  
+                :type "bool")
+                nil [5837 5882])
+            ("Vis3d__HasNode" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5910 5927]))                  
+                :type "bool")
+                nil [5883 5928])
+            ("Vis3d__RealizeWindows" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5929 5965])
+            ("Vis3d_Command_Execute" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6365 6379]))                  
+                :type "bool")
+                nil [6331 6380])
+            ("Vis3d_Command_Home" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6432 6446]))                  
+                :type "void")
+                nil [6401 6447])
+            ("Vis3d_Command_CreateView" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6485 6497]))                  
+                :type "void")
+                nil [6448 6498])
+            ("Vis3d_Command_CloseView" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6535 6547]))                  
+                :type "void")
+                nil [6499 6548])
+            ("Vis3d_Command_IsViewClosed" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6588 6600]))                  
+                :type "void")
+                nil [6549 6601])
+            ("Vis3d_Command_SetShow" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6636 6648]))                  
+                :type "void")
+                nil [6602 6649])
+            ("Vis3d_Command_Chain" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6682 6694]))                  
+                :type "void")
+                nil [6650 6695])
+            ("Vis3d_Command_Unchain" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6730 6742]))                  
+                :type "void")
+                nil [6696 6743])
+            ("Vis3d_Command_SetTransforms" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6784 6796]))                  
+                :type "void")
+                nil [6744 6797])
+            ("Vis3d_Command_SetColor" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6833 6845]))                  
+                :type "void")
+                nil [6798 6846])
+            ("Vis3d_Command_SetTransparency" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6889 6901]))                  
+                :type "void")
+                nil [6847 6902])
+            ("Vis3d_Command_ClearNodes" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6940 6952]))                  
+                :type "bool")
+                nil [6903 6953])
+            ("Vis3d_Command_LoadModel" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6990 7002]))                  
+                :type "void")
+                nil [6954 7003])
+            ("Vis3d_Command_PlotAxes" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7039 7051]))                  
+                :type "void")
+                nil [7004 7052])
+            ("Vis3d_Command_PlotPoint" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7089 7101]))                  
+                :type "void")
+                nil [7053 7102])
+            ("Vis3d_Command_SetTransform" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7142 7154])
+                    ("flag" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7155 7167]))                  
+                :type "void")
+                nil [7103 7169])
+            ("Vis3d_Command_GetTransform" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7209 7221]))                  
+                :type "void")
+                nil [7170 7222])
+            ("Vis3d_Command_PlotBox" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7257 7269]))                  
+                :type "void")
+                nil [7223 7270])
+            ("Vis3d_Command_PlotCylinder" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7310 7322]))                  
+                :type "void")
+                nil [7271 7323])
+            ("Vis3d_Command_PlotSphere" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7361 7373]))                  
+                :type "void")
+                nil [7324 7374])
+            ("Vis3d_Command_PlotSpheres" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7413 7425]))                  
+                :type "void")
+                nil [7375 7426])
+            ("Vis3d_Command_PlotCone" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7462 7474]))                  
+                :type "void")
+                nil [7427 7475])
+            ("Vis3d_Command_PlotArrow" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7512 7524]))                  
+                :type "void")
+                nil [7476 7525])
+            ("Vis3d_Command_PlotMesh" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7561 7573]))                  
+                :type "void")
+                nil [7526 7574])
+            ("Vis3d_Command_PlotLine" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7610 7622]))                  
+                :type "void")
+                nil [7575 7623])
+            ("Vis3d_Command_DeleteNode" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7661 7673]))                  
+                :type "void")
+                nil [7624 7674])
+            ("Vis3d_Command_HasNode" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7709 7721]))                  
+                :type "void")
+                nil [7675 7722])
+            ("Vis3d_Command_Clone" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7755 7767]))                  
+                :type "void")
+                nil [7723 7768])
+            ("Vis3d_Command_CloneMultiple" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7809 7821]))                  
+                :type "void")
+                nil [7769 7822])
+            ("Vis3d_Command_SetHomePose" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7861 7873]))                  
+                :type "void")
+                nil [7823 7874])
+            ("Vis3d_Command_GetHomePose" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7913 7925]))                  
+                :type "void")
+                nil [7875 7926])
+            ("Vis3d_Command_SetCameraPose" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7967 7979]))                  
+                :type "void")
+                nil [7927 7980])
+            ("Vis3d_Command_GetCameraPose" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8021 8033]))                  
+                :type "void")
+                nil [7981 8034])
+            ("PickHandler" type
                (:superclasses 
                   ( ("osgGA::GUIEventHandler" type
                        (:protection "public"
                         :type "class")
                         nil nil))                  
                 :members 
-                  ( ("public" label nil (reparse-symbol classsubparts) [401 408])
-                    ("OSGViewerEventHook" function
+                  ( ("public" label nil (reparse-symbol classsubparts) [8088 8095]))                  
+                :type "class")
+                nil [8036 10325])
+            ("Vis" type
+               (:members 
+                  ( ("SystemInit" function (:type "void") (reparse-symbol namespacesubparts) [10344 10414])
+                    ("SystemShutdown" function (:type "void") (reparse-symbol namespacesubparts) [10416 10463])
+                    ("SystemSetLogLevel" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10563 10580]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10540 11316])
+                    ("SystemGetVersion" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [11318 11376])
+                    ("Impl" type
+                       (:parent "View"
+                        :members 
+                          ( ("handle" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11402 11416])
+                            ("cmd" variable (:type ("Command" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11421 11433]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [11378 11436])
+                    ("View" function
+                       (:constructor-flag t
+                        :parent "View"
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11545 11569]))                          
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11534 12003])
+                    ("View" function
+                       (:constructor-flag t
+                        :parent "View"
+                        :arguments 
+                          ( ("cfg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ViewConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12016 12038]))                          
+                        :type ("View" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12005 12390])
+                    ("View" function
+                       (:destructor-flag t
+                        :parent "View"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12392 12422])
+                    ("SetHomePose" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("eye" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12447 12479])
+                            ("point_want_to_look" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12503 12550])
+                            ("upvector" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12574 12611]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12424 12985])
+                    ("GetHomePose" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("eye" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13010 13036])
+                            ("point_want_to_look" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13037 13078])
+                            ("upvector" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13102 13133]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12987 13824])
+                    ("SetCameraPose" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("eye" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13851 13883])
+                            ("point_want_to_look" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13909 13956])
+                            ("upvector" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13982 14019]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [13826 14395])
+                    ("GetCameraPose" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("eye" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14422 14448])
+                            ("point_want_to_look" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14449 14490])
+                            ("upvector" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14516 14547]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [14397 15240])
+                    ("Close" function
+                       (:parent "View"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15242 15452])
+                    ("Delete" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15472 15489]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15454 15627])
+                    ("IsClosed" function
+                       (:methodconst-flag t
+                        :parent "View"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15629 15848])
+                    ("IsAlive" function
+                       (:methodconst-flag t
+                        :parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15869 15886]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [15850 16027])
+                    ("Delete" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("handles" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16047 16082]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16029 16282])
+                    ("Clear" function
+                       (:parent "View"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16284 16452])
+                    ("Home" function
+                       (:parent "View"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16454 16615])
+                    ("Show" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16633 16650]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16617 16805])
+                    ("Hide" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16823 16840]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16807 16996])
+                    ("Chain" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("links" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17015 17048]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16998 17630])
+                    ("Unchain" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("links" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17651 17684]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17632 17959])
+                    ("SetTransforms" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("hs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17986 18016])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("3"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18042 18089])
+                            ("quats" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("4"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18115 18162]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17961 18938])
+                    ("SetTransforms" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("h" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18965 18981])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("3"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18982 19029])
+                            ("quats" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("4"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [19055 19102]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [18940 19841])
+                    ("SetTransparency" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20137 20154])
+                            ("inv_alpha" variable (:type "float") (reparse-symbol arg-sub-list) [20155 20171]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [20110 20859])
+                    ("SetColor" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20881 20898])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20899 20931]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [20861 21089])
+                    ("SetPosition" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21323 21340])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [21341 21375]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [21300 21582])
+                    ("SetRotation" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21607 21624])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [21625 21658]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [21584 21871])
+                    ("SetTransform" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21897 21914])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [21915 21949])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [21974 22007]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [21873 22320])
+                    ("GetPosition" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22345 22362])
+                            ("pos" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [22363 22389]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [22322 22705])
+                    ("GetRotation" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22730 22747])
+                            ("quat" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [22748 22775]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [22707 23103])
+                    ("GetTransform" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("nh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [23129 23146])
+                            ("pos" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23147 23173])
+                            ("quat" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23174 23201]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [23105 23667])
+                    ("Clone" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("h" variable
+                               (:constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [23688 23703]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [23669 23851])
+                    ("Clone" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("h" variable
+                               (:constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [23872 23887])
+                            ("pos" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23888 23920])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [23940 23973]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [23853 24279])
+                    ("Clone" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("handles" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [24313 24348]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Handle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [24281 24705])
+                    ("Clone" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("handles" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [24739 24774])
+                            ("poss" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("3"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [24807 24853])
+                            ("quats" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("4"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [24886 24933]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Handle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [24707 25756])
+                    ("Picked" function
+                       (:parent "View"
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25758 25837])
+                    ("Load" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("fname" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25857 25882]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25839 26096])
+                    ("Load" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("fname" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [26116 26141])
+                            ("pos" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26142 26174])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26193 26226]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [26098 26590])
+                    ("Load" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("fnames" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26623 26662]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Handle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [26592 26875])
+                    ("Load" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("fnames" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26908 26947])
+                            ("poss" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("3"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [26979 27025])
+                            ("quats" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::array" type (:template-specifier 
+                                            ( ("float" type nil nil nil)
+                                              ("4"))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [27057 27104]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Handle" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [26877 27607])
+                    ("Axes" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [27627 27661])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [27662 27695])
+                            ("axis_len" variable (:type "float") (reparse-symbol arg-sub-list) [27714 27729])
+                            ("axis_size" variable (:type "float") (reparse-symbol arg-sub-list) [27730 27746]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [27609 28279])
+                    ("Axes" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("transform" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("16"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [28299 28338])
+                            ("axis_len" variable (:type "float") (reparse-symbol arg-sub-list) [28339 28354])
+                            ("axis_size" variable (:type "float") (reparse-symbol arg-sub-list) [28355 28371]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [28281 29013])
+                    ("Point" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("xyzs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29034 29065])
+                            ("size" variable (:type "float") (reparse-symbol arg-sub-list) [29066 29077])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29078 29111]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [29015 30157])
+                    ("Line" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("lines" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [30177 30209])
+                            ("size" variable (:type "float") (reparse-symbol arg-sub-list) [30210 30221])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [30222 30255]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30159 31680])
+                    ("GenerateGridMesh" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("xlenth" variable (:type "float") (reparse-symbol arg-sub-list) [31711 31724])
+                            ("ylenth" variable (:type "float") (reparse-symbol arg-sub-list) [31725 31738])
+                            ("half_x_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [31739 31760])
+                            ("half_y_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [31761 31782])
+                            ("vertices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [31812 31841])
+                            ("indices" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("unsigned int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [31842 31877]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [31682 33751])
+                    ("TransformVertices" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33783 33817])
+                            ("rotation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("9"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33848 33885])
+                            ("pts" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [33886 33910]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [33753 34381])
+                    ("Quaternion2Matrix" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34413 34446])
+                            ("R" variable
+                               (:reference 1
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("9"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [34447 34471]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [34383 35049])
+                    ("Plane" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("xlength" variable (:type "float") (reparse-symbol arg-sub-list) [35070 35084])
+                            ("ylength" variable (:type "float") (reparse-symbol arg-sub-list) [35085 35099])
+                            ("half_x_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [35100 35121])
+                            ("half_y_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [35122 35143])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35163 35195]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [35051 35320])
+                    ("Plane" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("xlength" variable (:type "float") (reparse-symbol arg-sub-list) [35341 35355])
+                            ("ylength" variable (:type "float") (reparse-symbol arg-sub-list) [35356 35370])
+                            ("half_x_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [35371 35392])
+                            ("half_y_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [35393 35414])
+                            ("trans" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35434 35468])
+                            ("quat" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35469 35502])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35522 35554]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [35322 36545])
+                    ("Box" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("pos" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36564 36596])
+                            ("extents" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36597 36633])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36651 36683]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [36547 37197])
+                    ("Cylinder" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37221 37256])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [37257 37270])
+                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [37271 37284])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37307 37339]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [37199 37874])
+                    ("Sphere" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37896 37931])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [37932 37945])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [37966 37998]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [37876 38476])
+                    ("Spheres" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("centers" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38499 38533])
+                            ("radii" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38534 38560])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38582 38615]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [38478 39770])
+                    ("Cone" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("center" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39790 39825])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [39826 39839])
+                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [39840 39853])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39872 39904]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [39772 40520])
+                    ("Arrow" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("tail" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [40672 40705])
+                            ("head" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("3"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [40706 40739])
+                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [40740 40753])
+                            ("color" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [40773 40805]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [40653 41286])
+                    ("Mesh" function
+                       (:parent "View"
+                        :arguments 
+                          ( ("vertices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [41306 41341])
+                            ("indices" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("unsigned int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [41342 41383])
+                            ("colors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [41402 41435]))                          
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [41288 42678]))                  
+                :type "namespace")
+                nil [10327 42681])
+            ("NextHandleID" function
+               (:typemodifiers ("static" "inline")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [42708 42795])
+            ("NextObjectID" function
+               (:typemodifiers ("static" "inline")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [42797 42884])
+            ("Vis3d_IsInited" function (:type "bool") nil [42886 42942])
+            ("Vis3d_Init" function (:type "bool") nil [42944 43621])
+            ("Vis3d_Shutdown" function (:type "void") nil [43623 44690])
+            ("Vis3d_Update" function (:type "void") nil [44692 49198])
+            ("Vis3d_Cleanup" function (:type "void") nil [49200 49223])
+            ("Vis3d_Command_Execute" function
+               (:arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49252 49266]))                  
+                :type "bool")
+                nil [49225 49648])
+            ("Vis3d__RealizeWindows" function (:type "void") nil [49650 50120])
+            ("View3DEventHandler" type
+               (:superclasses 
+                  ( ("osgGA::GUIEventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [50181 50188])
+                    ("View3DEventHandler" function
                        (:constructor-flag t
                         :arguments 
-                          ( ("view" variable
-                               (:pointer 1
-                                :type ("osgViewer::Viewer" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [432 456]))                          
-                        :type ("OSGViewerEventHook" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [413 476])
-                    ("private" label nil (reparse-symbol classsubparts) [1183 1191])
-                    ("m_viewer" variable
-                       (:pointer 1
-                        :type ("osgViewer::Viewer" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [1196 1224]))                  
+                          ( ("vh" variable
+                               (:constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50221 50237]))                          
+                        :type ("View3DEventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [50202 50251])
+                    ("handle" function
+                       (:arguments 
+                          ( ("ea" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50269 50302])
+                            ("" variable
+                               (:reference 1
+                                :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50303 50329]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [50257 50801])
+                    ("private" label nil (reparse-symbol classsubparts) [50803 50811])
+                    ("m_vh" variable (:type ("Handle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [50816 50828]))                  
                 :type "class")
-                nil [342 1227])
-            ("Vis" using (:type ("Vis" type
-                 (:prototype t
-                  :type "namespace")
-                  nil nil)) nil [1229 1249])
-            ("Data" type
-               (:parent "Viewer"
-                :members 
-                  ( ("m_osgviewer" variable (:type ("std::shared_ptr" type
-                         (:template-specifier 
-                            ( ("osgViewer::Viewer" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [1277 1348])
-                    ("m_sceneroot" variable (:type ("osg::ref_ptr" type
-                         (:template-specifier 
-                            ( ("osg::Group" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [1353 1417])
-                    ("m_axes" variable (:type ("std::shared_ptr" type
-                         (:template-specifier 
-                            ( ("Vis::VisNodeHandle" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [1435 1478]))                  
-                :type "struct")
-                nil [1251 1481])
-            ("m_osgviewer" variable
-               (:default-value "static_cast<Viewer *>(this)->m_dPtr->m_osgviewer;"
-                :type ("auto" type (:type "class") nil nil))
-                nil [1766 1835])
-            ("m_sceneroot" variable
-               (:default-value "static_cast<Viewer *>(this)->m_dPtr->m_sceneroot;"
-                :type ("auto" type (:type "class") nil nil))
-                nil [1840 1908])
-            ("apply" function
-               (:prototype-flag t
+                nil [50122 50831])
+            ("Vis3d_Command_Home" function
+               (:arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50857 50871]))                  
+                :type "void")
+                nil [50833 51198])
+            ("Vis3d_Command_CreateView" function
+               (:arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51230 51244]))                  
+                :type "void")
+                nil [51200 54600])
+            ("Vis3d__HasNode" function
+               (:arguments 
+                  ( ("nh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54622 54639]))                  
+                :type "bool")
+                nil [54602 54707])
+            ("Vis3d__HasView" function
+               (:arguments 
+                  ( ("vh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Handle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54729 54746]))                  
+                :type "bool")
+                nil [54709 54814])
+            ("Vis3d_Command_Chain" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54841 54853]))                  
+                :type "void")
+                nil [54816 55491])
+            ("Vis3d_Command_Unchain" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55520 55532]))                  
+                :type "void")
+                nil [55493 56362])
+            ("Vis3d_Command_SetTransforms" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56397 56409]))                  
+                :type "void")
+                nil [56364 58841])
+            ("Vis3d_Command_SetShow" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58870 58882]))                  
+                :type "void")
+                nil [58843 59239])
+            ("Vis3d_Command_SetTransparency" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59276 59288]))                  
+                :type "void")
+                nil [59241 64261])
+            ("Vis3d_Command_SetColor" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64291 64303]))                  
+                :type "void")
+                nil [64263 69300])
+            ("Vis3d_Command_DeleteNode" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69332 69344]))                  
+                :type "void")
+                nil [69302 69725])
+            ("Vis3d_Command_HasNode" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69754 69766]))                  
+                :type "void")
+                nil [69727 69835])
+            ("Vis3d_Command_Clone" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69862 69874]))                  
+                :type "void")
+                nil [69837 70565])
+            ("Vis3d_Command_CloneMultiple" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70600 70612]))                  
+                :type "void")
+                nil [70567 71467])
+            ("Vis3d_Command_SetHomePose" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71500 71512]))                  
+                :type "void")
+                nil [71469 72360])
+            ("Vis3d_Command_GetHomePose" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72393 72405]))                  
+                :type "void")
+                nil [72362 73417])
+            ("Vis3d_Command_SetCameraPose" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73452 73464]))                  
+                :type "void")
+                nil [73419 74356])
+            ("Vis3d_Command_GetCameraPose" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74391 74403]))                  
+                :type "void")
+                nil [74358 75464])
+            ("Vis3d_Command_ClearNodes" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75496 75508]))                  
+                :type "bool")
+                nil [75466 76086])
+            ("Vis3d_Command_CloseView" function
+               (:arguments 
+                  ( ("pcmd" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76117 76131]))                  
+                :type "void")
+                nil [76088 76535])
+            ("Vis3d_Command_IsViewClosed" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76569 76581]))                  
+                :type "void")
+                nil [76537 76720])
+            ("Vis3d_Command_SetTransform" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76851 76863])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [76864 76873]))                  
+                :type "void")
+                nil [76819 77689])
+            ("Vis3d_Command_GetTransform" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77723 77735]))                  
+                :type "void")
+                nil [77691 77951])
+            ("IsEqual" function
+               (:typemodifiers ("static" "inline")
                 :arguments 
-                  ( ("" variable (:type ("osgViewer::SingleWindow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1936 1991]))                  
-                :type "int")
-                nil [1926 1993])
-            ("realize" function
-               (:prototype-flag t
-                :type "int")
-                nil [2011 2021])
-            ("setName" function
-               (:prototype-flag t
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77980 78001])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78002 78023])
+                    ("casesenstive" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [78024 78049]))                  
+                :type "bool")
+                nil [77953 78211])
+            ("CheckFileType" function
+               (:typemodifiers ("static" "inline")
                 :arguments 
-                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2047 2052]))                  
-                :type "int")
-                nil [2039 2053])
-            ("ViewerWindow" variable (:type ("osgViewer::Viewer::Windows" type (:type "class") nil nil)) nil [2058 2098])
-            ("getWindows" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("ViewerWindow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2127 2140]))                  
-                :type "int")
-                nil [2116 2141])
-            ("setWindowName" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2182 2187]))                  
-                :type "int")
-                nil [2168 2188])
-            ("cameraPtr" variable
-               (:default-value "m_osgviewer->getCamera()"
-                :type ("auto" type (:type "class") nil nil))
-                nil [2194 2236])
-            ("setViewport" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("width" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2270 2276])
-                    ("" variable (:type ("height" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2277 2284]))                  
-                :type "int")
-                nil [2252 2285])
-            ("setClearColor" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("osg::Vec4" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2315 2344]))                  
-                :type "int")
-                nil [2301 2346])
-            ("setClearMask" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("GL_COLOR_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2375 2396])
-                    ("" variable (:type ("GL_DEPTH_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2397 2418])
-                    ("" variable (:type ("GL_STENCIL_BUFFER_BIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2419 2441]))                  
-                :type "int")
-                nil [2362 2442])
-            ("setCullingMode" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("cameraPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2535 2545])
-                    ("" variable (:type ("getCullingMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2562])
-                    ("" variable (:type ("osg::CullSettings::SMALL_FEATURE_CULLING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2566 2607]))                  
-                :type "int")
-                nil [2520 2608])
-            ("addEventHandler" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("OSGViewerEventHook" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2647 2684]))                  
-                :type "int")
-                nil [2627 2686])
-            ("UIRenderPostCallback" variable (:type "int") nil [2713 2734])
-            ("addEventHandler" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("UIEventHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2772 2813]))                  
-                :type "int")
-                nil [2752 2815])
-            ("addEventHandler" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("PickEventHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2853 2896]))                  
-                :type "int")
-                nil [2833 2898])
-            ("addPostDrawCallback" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("ui_render" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2934 2944]))                  
-                :type "int")
-                nil [2914 2945])
-            ("setSceneData" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2977 2989])
-                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2989 2994]))                  
-                :type "int")
-                nil [2964 2996])
-            ("SetVisNodeRootGroup" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3079 3091])
-                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3091 3096]))                  
-                :type "int")
-                nil [3059 3098])
-            ("SetVisNodeRootGroup" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3163 3175])
-                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3175 3180]))                  
-                :type "int")
-                nil [3143 3182])
-            ("setName" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3209 3214]))                  
-                :type "int")
-                nil [3201 3215])
-            ("ShowAxes" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("show_axes" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3230 3240]))                  
-                :type "int")
-                nil [3221 3241])
-            ("SetVisNodeRootGroup" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3410 3422])
-                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3422 3427]))                  
-                :type "int")
-                nil [3390 3429])
-            ("SetVisNodeRootGroup" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("m_sceneroot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3497 3509])
-                    ("" variable (:type ("get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3509 3514]))                  
-                :type "int")
-                nil [3477 3516])
-            ("Detach" function
-               (:prototype-flag t
-                :type "int")
-                nil [3543 3552])
-            ("Close" function
-               (:prototype-flag t
-                :type "int")
-                nil [3921 3929])
-            ("Close" function
-               (:prototype-flag t
-                :type "int")
-                nil [3964 3972])
-            ("home" function
-               (:prototype-flag t
-                :type "int")
-                nil [4034 4041])
-            ("setDone" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4139 4144]))                  
-                :type "int")
-                nil [4131 4145])
-            ("_tmp_mutex" variable (:type ("std::mutex" type (:type "class") nil nil)) nil [4151 4173])
-            ("lk" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("_tmp_mutex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4210 4221]))                  
-                :type ("std::unique_lock" type
-                     (:template-specifier 
-                        ( ("std::mutex" type nil nil nil))                        
-                      :type "class")
-                      nil nil))
-                nil [4178 4222])
-            ("wait" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type ("lk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4256 4259]))                  
-                :type "int")
-                nil [4251 4301])
-            ("detach" function
-               (:prototype-flag t
-                :type "int")
-                nil [4723 4732]))          
-      :file "Viewer.cpp"
-      :pointmax 4735
-      :fsize 4734
-      :lastmodtime '(23708 18543 447901 306000)
-      :unmatched-syntax '((close-paren 4733 . 4734) (punctuation 4722 . 4723) (semantic-list 4344 . 4713) (symbol 4338 . 4344) (semantic-list 4352 . 4712) (semantic-list 4345 . 4351) (punctuation 4337 . 4338) (punctuation 4336 . 4337) (symbol 4333 . 4336) (semantic-list 4352 . 4712) (semantic-list 4345 . 4351) (open-paren 4327 . 4328) (close-paren 4325 . 4326) (open-paren 4324 . 4325) (symbol 4318 . 4324) (punctuation 4317 . 4318) (punctuation 4316 . 4317) (symbol 4310 . 4316) (VOID 4305 . 4309) (close-paren 4302 . 4303) (semantic-list 4267 . 4299) (semantic-list 4260 . 4266) (punctuation 4250 . 4251) (symbol 4227 . 4250) (punctuation 4130 . 4131) (punctuation 4129 . 4130) (symbol 4118 . 4129) (punctuation 4117 . 4118) (punctuation 4116 . 4117) (symbol 4110 . 4116) (punctuation 4104 . 4105) (RETURN 4098 . 4104) (semantic-list 4075 . 4097) (IF 4072 . 4074) (open-paren 4066 . 4067) (close-paren 4064 . 4065) (open-paren 4063 . 4064) (symbol 4058 . 4063) (punctuation 4057 . 4058) (punctuation 4056 . 4057) (symbol 4050 . 4056) (VOID 4045 . 4049) (close-paren 4042 . 4043) (punctuation 4033 . 4034) (punctuation 4032 . 4033) (symbol 4021 . 4032) (punctuation 4020 . 4021) (punctuation 4019 . 4020) (symbol 4013 . 4019) (open-paren 4011 . 4012) (close-paren 4009 . 4010) (open-paren 4008 . 4009) (symbol 4004 . 4008) (punctuation 4003 . 4004) (punctuation 4002 . 4003) (symbol 3996 . 4002) (VOID 3991 . 3995) (symbol 3983 . 3989) (punctuation 3981 . 3982) (punctuation 3980 . 3981) (punctuation 3979 . 3980) (punctuation 3978 . 3979) (punctuation 3977 . 3978) (punctuation 3976 . 3977) (punctuation 3975 . 3976) (close-paren 3973 . 3974) (open-paren 3958 . 3959) (close-paren 3956 . 3957) (open-paren 3955 . 3956) (symbol 3949 . 3955) (punctuation 3948 . 3949) (punctuation 3947 . 3948) (punctuation 3946 . 3947) (symbol 3940 . 3946) (punctuation 3938 . 3939) (punctuation 3937 . 3938) (punctuation 3936 . 3937) (punctuation 3935 . 3936) (punctuation 3934 . 3935) (punctuation 3933 . 3934) (punctuation 3932 . 3933) (close-paren 3930 . 3931) (open-paren 3919 . 3920) (close-paren 3917 . 3918) (open-paren 3916 . 3917) (symbol 3910 . 3916) (punctuation 3909 . 3910) (punctuation 3908 . 3909) (punctuation 3907 . 3908) (symbol 3901 . 3907) (close-paren 3898 . 3899) (semantic-list 3830 . 3897) (semantic-list 3822 . 3829) (IF 3820 . 3822) (ELSE 3815 . 3819) (semantic-list 3636 . 3815) (semantic-list 3610 . 3635) (IF 3608 . 3610) (open-paren 3602 . 3603) (close-paren 3600 . 3601) (symbol 3596 . 3600) (BOOL 3591 . 3595) (open-paren 3590 . 3591) (symbol 3582 . 3590) (punctuation 3581 . 3582) (punctuation 3580 . 3581) (symbol 3574 . 3580) (VOID 3569 . 3573) (symbol 3564 . 3568) (punctuation 3562 . 3563) (punctuation 3561 . 3562) (punctuation 3560 . 3561) (punctuation 3559 . 3560) (punctuation 3558 . 3559) (punctuation 3557 . 3558) (punctuation 3556 . 3557) (close-paren 3553 . 3554) (punctuation 3542 . 3543) (punctuation 3541 . 3542) (symbol 3537 . 3541) (symbol 3525 . 3531) (punctuation 3523 . 3524) (punctuation 3522 . 3523) (punctuation 3521 . 3522) (punctuation 3520 . 3521) (punctuation 3519 . 3520) (punctuation 3518 . 3519) (punctuation 3517 . 3518) (semantic-list 3512 . 3514) (punctuation 3508 . 3509) (punctuation 3476 . 3477) (punctuation 3475 . 3476) (semantic-list 3469 . 3475) (punctuation 3468 . 3469) (punctuation 3467 . 3468) (symbol 3446 . 3467) (punctuation 3445 . 3446) (symbol 3434 . 3445) (semantic-list 3425 . 3427) (punctuation 3421 . 3422) (punctuation 3389 . 3390) (punctuation 3388 . 3389) (semantic-list 3382 . 3388) (punctuation 3381 . 3382) (punctuation 3380 . 3381) (symbol 3363 . 3380) (punctuation 3362 . 3363) (symbol 3351 . 3362) (punctuation 3248 . 3249) (punctuation 3247 . 3248) (punctuation 3246 . 3247) (punctuation 3245 . 3246) (punctuation 3244 . 3245) (punctuation 3243 . 3244) (punctuation 3242 . 3243) (punctuation 3200 . 3201) (punctuation 3199 . 3200) (symbol 3188 . 3199) (semantic-list 3178 . 3180) (punctuation 3174 . 3175) (punctuation 3142 . 3143) (punctuation 3141 . 3142) (semantic-list 3135 . 3141) (punctuation 3134 . 3135) (punctuation 3133 . 3134) (symbol 3115 . 3132) (punctuation 3114 . 3115) (symbol 3103 . 3114) (semantic-list 3094 . 3096) (punctuation 3090 . 3091) (punctuation 3058 . 3059) (punctuation 3057 . 3058) (semantic-list 3051 . 3057) (punctuation 3050 . 3051) (punctuation 3049 . 3050) (symbol 3027 . 3048) (punctuation 3026 . 3027) (symbol 3015 . 3026) (symbol 3006 . 3010) (punctuation 3004 . 3005) (punctuation 3003 . 3004) (punctuation 3002 . 3003) (punctuation 3001 . 3002) (punctuation 3000 . 3001) (punctuation 2999 . 3000) (punctuation 2998 . 2999) (semantic-list 2992 . 2994) (punctuation 2988 . 2989) (punctuation 2963 . 2964) (punctuation 2962 . 2963) (symbol 2951 . 2962) (punctuation 2913 . 2914) (punctuation 2912 . 2913) (symbol 2903 . 2912) (semantic-list 2869 . 2896) (NEW 2849 . 2852) (punctuation 2832 . 2833) (punctuation 2831 . 2832) (symbol 2820 . 2831) (semantic-list 2786 . 2813) (NEW 2768 . 2771) (punctuation 2751 . 2752) (punctuation 2750 . 2751) (symbol 2739 . 2750) (NEW 2709 . 2712) (punctuation 2707 . 2708) (symbol 2697 . 2706) (symbol 2692 . 2696) (semantic-list 2665 . 2684) (NEW 2643 . 2646) (punctuation 2626 . 2627) (punctuation 2625 . 2626) (symbol 2614 . 2625) (punctuation 2565 . 2566) (punctuation 2563 . 2564) (semantic-list 2560 . 2562) (punctuation 2545 . 2546) (punctuation 2544 . 2545) (punctuation 2519 . 2520) (punctuation 2518 . 2519) (symbol 2509 . 2518) (punctuation 2417 . 2418) (punctuation 2395 . 2396) (punctuation 2361 . 2362) (punctuation 2360 . 2361) (symbol 2351 . 2360) (semantic-list 2324 . 2344) (punctuation 2300 . 2301) (punctuation 2299 . 2300) (symbol 2290 . 2299) (number 2267 . 2268) (number 2264 . 2265) (punctuation 2251 . 2252) (punctuation 2250 . 2251) (symbol 2241 . 2250) (punctuation 2167 . 2168) (punctuation 2166 . 2167) (semantic-list 2164 . 2166) (symbol 2159 . 2164) (punctuation 2158 . 2159) (symbol 2146 . 2158) (punctuation 2115 . 2116) (punctuation 2114 . 2115) (symbol 2103 . 2114) (punctuation 2038 . 2039) (punctuation 2037 . 2038) (symbol 2026 . 2037) (punctuation 2010 . 2011) (punctuation 2009 . 2010) (symbol 1998 . 2009) (semantic-list 1959 . 1991) (NEW 1932 . 1935) (punctuation 1925 . 1926) (punctuation 1924 . 1925) (symbol 1913 . 1924) (open-paren 1760 . 1761) (symbol 1753 . 1759) (punctuation 1751 . 1752) (punctuation 1750 . 1751) (punctuation 1749 . 1750) (punctuation 1748 . 1749) (punctuation 1747 . 1748) (punctuation 1746 . 1747) (punctuation 1745 . 1746) (close-paren 1743 . 1744) (symbol 1739 . 1743) (NEW 1735 . 1738) (open-paren 1734 . 1735) (symbol 1728 . 1734) (punctuation 1726 . 1727) (close-paren 1716 . 1717) (symbol 1707 . 1716) (INT 1703 . 1706) (UNSIGNED 1694 . 1702) (punctuation 1692 . 1693) (symbol 1686 . 1692) (INT 1682 . 1685) (punctuation 1680 . 1681) (symbol 1675 . 1680) (INT 1671 . 1674) (punctuation 1669 . 1670) (symbol 1668 . 1669) (INT 1664 . 1667) (punctuation 1662 . 1663) (symbol 1661 . 1662) (INT 1657 . 1660) (punctuation 1655 . 1656) (symbol 1651 . 1655) (symbol 1644 . 1650) (punctuation 1643 . 1644) (punctuation 1642 . 1643) (symbol 1639 . 1642) (open-paren 1638 . 1639) (symbol 1632 . 1638) (punctuation 1631 . 1632) (punctuation 1630 . 1631) (symbol 1624 . 1630) (punctuation 1621 . 1622) (close-paren 1620 . 1621) (punctuation 1618 . 1619) (punctuation 1617 . 1618) (punctuation 1616 . 1617) (punctuation 1615 . 1616) (punctuation 1614 . 1615) (punctuation 1613 . 1614) (punctuation 1612 . 1613) (semantic-list 1601 . 1611) (symbol 1595 . 1601) (NEW 1602 . 1605) (punctuation 1593 . 1594) (semantic-list 1497 . 1592) (symbol 1491 . 1497) (punctuation 1490 . 1491) (punctuation 1489 . 1490) (symbol 1483 . 1489) (symbol 1426 . 1430) (punctuation 1424 . 1425) (punctuation 1423 . 1424) (punctuation 1422 . 1423) (punctuation 1421 . 1422) (punctuation 1420 . 1421) (punctuation 1419 . 1420) (punctuation 1418 . 1419) (semantic-list 570 . 1181) (symbol 557 . 565) (semantic-list 493 . 556) (symbol 487 . 493) (BOOL 482 . 486))))
+                  ( ("filename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78307 78335])
+                    ("ext" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78336 78359]))                  
+                :type "bool")
+                nil [78274 78444])
+            ("Vis3d_Command_LoadModel" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78475 78487]))                  
+                :type "void")
+                nil [78446 81254])
+            ("Vis3d_Command_PlotAxes" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81284 81296]))                  
+                :type "void")
+                nil [81256 83316])
+            ("Vis3d_Command_PlotPoint" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83347 83359]))                  
+                :type "void")
+                nil [83318 84914])
+            ("Vis3d_Command_PlotLine" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84944 84956]))                  
+                :type "void")
+                nil [84916 86533])
+            ("Vis3d_Command_PlotBox" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86562 86574]))                  
+                :type "void")
+                nil [86535 87790])
+            ("Vis3d_Command_PlotCylinder" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87824 87836]))                  
+                :type "void")
+                nil [87792 89217])
+            ("Vis3d_Command_PlotSphere" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89249 89261]))                  
+                :type "void")
+                nil [89219 90554])
+            ("Vis3d_Command_PlotSpheres" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90587 90599]))                  
+                :type "void")
+                nil [90556 92169])
+            ("Vis3d_Command_PlotCone" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92199 92211]))                  
+                :type "void")
+                nil [92171 93560])
+            ("Vis3d_Command_PlotArrow" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93591 93603]))                  
+                :type "void")
+                nil [93562 96315])
+            ("Vis3d_Command_PlotMesh" function
+               (:arguments 
+                  ( ("pc" variable
+                       (:pointer 1
+                        :type ("Command" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [96344 96356]))                  
+                :type "void")
+                nil [96316 98095])
+            ("Vis3d_Callback" function
+               (:arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [98116 98123]))                  
+                :type "void")
+                nil [98096 99831]))          
+      :file "Vis.cpp"
+      :pointmax 103189
+      :fsize 103188
+      :lastmodtime '(24495 42903 218389 493000)
+      :unmatched-syntax '((EXPLICIT 50193 . 50201) (semantic-list 8181 . 10322) (symbol 8175 . 8180) (semantic-list 8111 . 8174) (symbol 8105 . 8111) (BOOL 8100 . 8104) (string 559 . 582) (symbol 551 . 558) (symbol 540 . 550) (symbol 536 . 539) (symbol 529 . 535) (punctuation 528 . 529) (string 412 . 439) (symbol 404 . 411) (symbol 393 . 403) (symbol 389 . 392) (symbol 382 . 388) (punctuation 381 . 382) (string 366 . 380) (symbol 358 . 365) (symbol 347 . 357) (symbol 343 . 346) (symbol 336 . 342) (punctuation 335 . 336) (symbol 330 . 334) (symbol 319 . 329) (symbol 315 . 318) (symbol 308 . 314) (punctuation 307 . 308) (semantic-list 8181 . 10322) (symbol 8175 . 8180) (semantic-list 8111 . 8174) (symbol 8105 . 8111) (BOOL 8100 . 8104) (string 559 . 582) (symbol 551 . 558) (symbol 540 . 550) (symbol 536 . 539) (symbol 529 . 535) (punctuation 528 . 529) (string 412 . 439) (symbol 404 . 411) (symbol 393 . 403) (symbol 389 . 392) (symbol 382 . 388) (punctuation 381 . 382) (string 366 . 380) (symbol 358 . 365) (symbol 347 . 357) (symbol 343 . 346) (symbol 336 . 342) (punctuation 335 . 336) (symbol 330 . 334) (symbol 319 . 329) (symbol 315 . 318) (symbol 308 . 314) (punctuation 307 . 308))
+      :lexical-table 
+        '(("VIS_VERSION" . ((string "\"1.0.0\"" 1451 . 1458)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "Logger.h"
+      :fsize 2975
+      :lastmodtime '(24495 42903 218389 493000))
+    (semanticdb-table "semanticdb-table"
+      :file "Utils.h"
+      :fsize 2346
+      :lastmodtime '(24495 42903 218389 493000)))
   :file "!home!rvbust!WS!Sandbox!Vis!Src!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -23,16 +23,15 @@
     (yas/expand-snippet
      (format
       "/**
-* ${1:%s}
-*
+       * ${1:%s}
 %s%s*/"
       name
       (mapconcat
        (lambda (x)
-         (format "* @param %s ${%d:??}\n"
+         (format "* \\param %s ${%d:??}\n"
                  (car x) (incf idx)))
        args
        "")
       (if (and return-name (not (string-equal "void" return-name)))
-          (format "* @return ${%d:%s}\n" (incf idx) return-name)
+          (format "* \\return ${%d:%s}\n" (incf idx) return-name)
         "")))))

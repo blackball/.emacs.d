@@ -1,10 +1,10 @@
-;; Object gige/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "gige/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "BaslerGigEInstantCameraArray.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("INCLUDED_BASLERGIGEINSTANTCAMERAARRAY_H_6278605" variable (:constant-flag t) nil [407 454])
             ("pylon/gige/BaslerGigEInstantCamera.h" include (:system-flag t) nil [456 503])
@@ -41,7 +41,149 @@
       :lexical-table 
         '(("INCLUDED_BASLERGIGEINSTANTCAMERAARRAY_H_6278605")
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("__BASLERGIGEDEVICEINFO_H__" variable (:constant-flag t) nil [513 539])
+            ("pylon/Platform.h" include (:system-flag t) nil [600 627])
+            ("pylon/DeviceInfo.h" include (:system-flag t) nil [705 734])
+            ("pylon/gige/PylonGigE.h" include (:system-flag t) nil [735 768])
+            ("Pylon" type
+               (:members 
+                  ( ("Key" type
+                       (:members 
+                          ( ("AddressKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"Address\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1031 1072])
+                            ("IpAddressKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"IpAddress\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1179 1224])
+                            ("DefaultGatewayKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"DefaultGateway\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1336 1391])
+                            ("SubnetMaskKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"SubnetMask\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1499 1546])
+                            ("SubnetAddressKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"SubnetAddress\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1646 1699])
+                            ("PortNrKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"PortNr\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1752 1791])
+                            ("MacAddressKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"MacAddress\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1913 1960])
+                            ("InterfaceKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"Interface\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [2053 2098])
+                            ("IpConfigOptionsKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"IpConfigOptions\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [2170 2227])
+                            ("IpConfigCurrentKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :default-value "\"IpConfigCurrent\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [2302 2359]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [879 2365])
+                    ("CDeviceInfo" variable (:type "int") (reparse-symbol namespacesubparts) [2745 8157]))                  
+                :type "namespace")
+                nil [770 8160]))          
+      :file "BaslerGigEDeviceInfo.h"
+      :pointmax 8262
+      :fsize 8261
+      :lastmodtime '(23235 17487 0 0)
+      :unmatched-syntax '((PUBLIC 2738 . 2744) (punctuation 2736 . 2737) (symbol 2714 . 2735) (symbol 2700 . 2713) (CLASS 2694 . 2699))
+      :lexical-table 
+        '(("__BASLERGIGEDEVICEINFO_H__")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TRANSPORTLAYER_GIGE_H" variable (:constant-flag t) nil [422 443])
+            ("pylon/TransportLayer.h" include (:system-flag t) nil [501 534])
+            ("PylonGigE.h" include nil nil [535 557])
+            ("Pylon" type
+               (:members 
+                  ( ("EGigEActionCommandStatus" type
+                       (:members 
+                          ( ("GigEActionCommandStatus_Ok" variable
+                               (:constant-flag t
+                                :default-value (922 923)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [893 923])
+                            ("GigEActionCommandStatus_NoRefTime" variable
+                               (:constant-flag t
+                                :default-value (1307 1317)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1271 1317])
+                            ("GigEActionCommandStatus_Overflow" variable
+                               (:constant-flag t
+                                :default-value (1573 1583)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1538 1583])
+                            ("GigEActionCommandStatus_ActionLate" variable
+                               (:constant-flag t
+                                :default-value (2179 2189)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2142 2189]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [774 2196])
+                    ("GigEActionCommandResult" type
+                       (:members 
+                          ( ("DeviceAddress" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [2469 2502])
+                            ("Status" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2630 2645]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2386 2652])
+                    ("ITransportLayer" variable (:type "int") (reparse-symbol namespacesubparts) [2898 12923]))                  
+                :type "namespace")
+                nil [559 12925]))          
+      :file "GigETransportLayer.h"
+      :pointmax 12978
+      :fsize 12977
+      :lastmodtime '(23235 17487 0 0)
+      :unmatched-syntax '((PUBLIC 2891 . 2897) (punctuation 2889 . 2890) (symbol 2869 . 2888) (symbol 2852 . 2868) (symbol 2842 . 2851))
+      :lexical-table 
+        '(("TRANSPORTLAYER_GIGE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "PylonGigE.h"
+      :fsize 672
+      :lastmodtime '(23235 17487 0 0)))
   :file "!opt!pylon5!include!pylon!gige!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

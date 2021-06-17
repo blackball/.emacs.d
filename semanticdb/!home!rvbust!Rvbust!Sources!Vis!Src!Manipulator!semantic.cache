@@ -1,618 +1,127 @@
-;; Object Manipulator/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Manipulator/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Plotter.cpp"
-      :major-mode 'c++-mode
+
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
-        '( ("osg/ref_ptr" include (:system-flag t) nil [53 75])
-            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [76 112])
-            ("osg/Program" include (:system-flag t) nil [113 135])
-            ("osg/Geometry" include (:system-flag t) nil [136 159])
-            ("osg/ShapeDrawable" include (:system-flag t) nil [160 188])
-            ("osg/Point" include (:system-flag t) nil [189 209])
-            ("osg/PolygonMode" include (:system-flag t) nil [210 236])
-            ("osg/LineWidth" include (:system-flag t) nil [237 261])
-            ("osgDB/ReadFile" include (:system-flag t) nil [262 287])
-            ("osg/Texture2D" include (:system-flag t) nil [288 312])
-            ("osg/Material" include (:system-flag t) nil [313 336])
-            ("osg/StateSet" include (:system-flag t) nil [337 360])
-            ("osg/Quat" include (:system-flag t) nil [361 380])
-            ("osg/Billboard" include (:system-flag t) nil [381 405])
-            ("osg/PositionAttitudeTransform" include (:system-flag t) nil [406 446])
-            ("cmath" include (:system-flag t) nil [447 463])
-            ("cassert" include (:system-flag t) nil [464 482])
-            ("Vis" using (:type ("Vis" type
-                 (:prototype t
-                  :type "namespace")
-                  nil nil)) nil [484 504])
-            ("toVec3" function
-               (:template 
-                  ( ("Type" type (:type "class") nil nil))                  
-                :type ("osg::Vec3" type (:type "class") nil nil)
-                :arguments 
-                  ( ("vec" variable (:type ("Type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [548 557]))                  )
-                nil [506 607])
-            ("toVec3" function
-               (:arguments 
-                  ( ("vec" variable
-                       (:reference 1
-                        :type ("std::tuple" type
-                             (:template-specifier 
-                                ( ("float" type nil nil nil)
-                                  ("float" type nil nil nil)
-                                  ("float" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol arg-sub-list) [626 663]))                  
-                :type ("osg::Vec3" type (:type "class") nil nil))
-                nil [609 743])
-            ("toVec4" function
-               (:template 
-                  ( ("Type" type (:type "class") nil nil))                  
-                :type ("osg::Vec4" type (:type "class") nil nil)
-                :arguments 
-                  ( ("vec" variable (:type ("Type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [787 796]))                  )
-                nil [745 854])
-            ("length" function
-               (:arguments 
-                  ( ("x" variable
-                       (:reference 1
-                        :constant-flag t
-                        :type ("std::array" type
-                             (:template-specifier 
-                                ( ("float" type nil nil nil)
-                                  ("3"))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol arg-sub-list) [869 899]))                  
-                :type "float")
-                nil [856 956])
-            ("quat_cast" function
-               (:arguments 
-                  ( ("" variable
-                       (:constant-flag t
-                        :type "float")
-                        (reparse-symbol arg-sub-list) [989 1005]))                  
-                :type ("std::array" type
-                     (:template-specifier 
-                        ( ("float" type nil nil nil)
-                          ("4"))                        
-                      :type "class")
-                      nil nil))
-                nil [958 2701])
-            ("NodeHandle" type
+        '( ("osgGA/MultiTouchTrackballManipulator" include (:system-flag t) nil [2 49])
+            ("TouchballManipulator" type
                (:superclasses 
-                  ( ("VisNodeHandle" type
+                  ( ("osgGA::MultiTouchTrackballManipulator" type
                        (:protection "public"
                         :type "class")
                         nil nil))                  
                 :members 
-                  ( ("public" label nil (reparse-symbol classsubparts) [2744 2751])
-                    ("NodeHandle" function
+                  ( ("public" label nil (reparse-symbol classsubparts) [127 134])
+                    ("TouchballManipulator" function
                        (:constructor-flag t
                         :arguments 
-                          ( ("valid" variable
-                               (:reference 1
-                                :type ("std::shared_ptr" type
-                                     (:template-specifier 
-                                        ( ("bool" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [2767 2796])
-                            ("ptr" variable
+                          ( ("gizmod" variable
                                (:pointer 1
-                                :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [2797 2833]))                          
-                        :type ("NodeHandle" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [2756 2869])
-                    ("NodeHandle" function
-                       (:destructor-flag t
+                                :default-value "nullptr"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [160 181])
+                            ("view_manipulation" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [183 216]))                          
+                        :type ("TouchballManipulator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [139 333])
+                    ("handle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ea" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [351 384])
+                            ("aa" variable
+                               (:reference 1
+                                :type ("osgGA::GUIActionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [385 413]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [339 414])
+                    ("protected" label nil (reparse-symbol classsubparts) [416 426])
+                    ("handleMultiTouchPan" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("now" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [464 498])
+                            ("last" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [537 572])
+                            ("eventTimeDelta" variable
+                               (:constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [611 639]))                          
                         :type "void")
-                        (reparse-symbol classsubparts) [3144 3183])
-                    ("private" label nil (reparse-symbol classsubparts) [3185 3193])
-                    ("OsgPlotterManipulator" friend nil (reparse-symbol classsubparts) [3198 3232])
-                    ("m_ptr" variable
+                        (reparse-symbol classsubparts) [431 640])
+                    ("handleMultiTouchZoom" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("now" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [679 713])
+                            ("last" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("osgGA::GUIEventAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [752 787])
+                            ("eventTimeDelta" variable
+                               (:constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [826 854]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [645 855])
+                    ("private" label nil (reparse-symbol classsubparts) [856 864])
+                    ("m_gizmod" variable
                        (:pointer 1
-                        :type ("osg::PositionAttitudeTransform" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [3238 3276]))                  
+                        :type "int")
+                        (reparse-symbol classsubparts) [869 883])
+                    ("m_view_manipulation" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [888 914])
+                    ("m_4time" variable
+                       (:default-value "0.0f"
+                        :type "double")
+                        (reparse-symbol classsubparts) [919 941])
+                    ("m_3time" variable
+                       (:default-value "0.0f"
+                        :type "double")
+                        (reparse-symbol classsubparts) [946 968])
+                    ("m_2time" variable
+                       (:default-value "0.0f"
+                        :type "double")
+                        (reparse-symbol classsubparts) [973 995])
+                    ("m_1time" variable
+                       (:default-value "0.0f"
+                        :type "double")
+                        (reparse-symbol classsubparts) [1000 1022])
+                    ("m_ztime" variable
+                       (:default-value "0.0f"
+                        :type "double")
+                        (reparse-symbol classsubparts) [1027 1049]))                  
                 :type "class")
-                nil [2703 3279])
-            ("Data" type
-               (:parent "Vis::OsgPlotterManipulator"
-                :members 
-                  ( ("m_root" variable (:type ("osg::ref_ptr" type
-                         (:template-specifier 
-                            ( ("osg::Group" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [3327 3375])
-                    ("m_axes" variable (:type ("std::shared_ptr" type
-                         (:template-specifier 
-                            ( ("Vis::VisNodeHandle" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [3380 3423]))                  
-                :type "struct")
-                nil [3281 3426])
-            ("Vis" type
-               (:members 
-                  ( ("OsgPlotterManipulator" function
-                       (:constructor-flag t
-                        :parent "OsgPlotterManipulator"
-                        :type ("OsgPlotterManipulator" type (:type "class") nil nil))
-                        (reparse-symbol namespacesubparts) [3444 3510])
-                    ("OsgPlotterManipulator" function
-                       (:destructor-flag t
-                        :parent "OsgPlotterManipulator"
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [3512 3562])
-                    ("ShowAxes" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [3602 3612]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [3565 3910])
-                    ("SetVisNodeRootGroup" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("ptr" variable
-                               (:pointer 1
-                                :type "void")
-                                (reparse-symbol arg-sub-list) [3960 3970]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [3912 4035])
-                    ("Rotate" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("h" variable (:type ("std::shared_ptr" type
-                                 (:template-specifier 
-                                    ( ("VisNodeHandle" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol arg-sub-list) [4072 4105])
-                            ("quat" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [4106 4138])
-                            ("override" variable (:type "bool") (reparse-symbol arg-sub-list) [4139 4153]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [4037 4384])
-                    ("Translate" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("h" variable (:type ("std::shared_ptr" type
-                                 (:template-specifier 
-                                    ( ("VisNodeHandle" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol arg-sub-list) [4424 4457])
-                            ("offset" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [4458 4492])
-                            ("override" variable (:type "bool") (reparse-symbol arg-sub-list) [4493 4507]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [4386 4678])
-                    ("Scale" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("h" variable (:type ("std::shared_ptr" type
-                                 (:template-specifier 
-                                    ( ("VisNodeHandle" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol arg-sub-list) [4714 4747])
-                            ("scales" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [4748 4782])
-                            ("override" variable (:type "bool") (reparse-symbol arg-sub-list) [4783 4797]))                          
-                        :type "void")
-                        (reparse-symbol namespacesubparts) [4680 5076])
-                    ("Line" function
-                       (:type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil)
-                        :arguments 
-                          ( ("v" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [5149 5185])
-                            ("color" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [5186 5226])
-                            ("width" variable (:type "float") (reparse-symbol arg-sub-list) [5227 5239]))                          
-                        :parent "OsgPlotterManipulator")
-                        (reparse-symbol namespacesubparts) [5078 6156])
-                    ("Line" function
-                       (:type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil)
-                        :arguments 
-                          ( ("v" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [6229 6265])
-                            ("color" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [6266 6306])
-                            ("width" variable (:type "float") (reparse-symbol arg-sub-list) [6307 6319]))                          
-                        :parent "OsgPlotterManipulator")
-                        (reparse-symbol namespacesubparts) [6158 7236])
-                    ("Point" function
-                       (:type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil)
-                        :arguments 
-                          ( ("v" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [7310 7346])
-                            ("color" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [7347 7387])
-                            ("size" variable (:type "float") (reparse-symbol arg-sub-list) [7388 7399]))                          
-                        :parent "OsgPlotterManipulator")
-                        (reparse-symbol namespacesubparts) [7238 8310])
-                    ("Point" function
-                       (:type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil)
-                        :arguments 
-                          ( ("v" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [8384 8420])
-                            ("color" variable
-                               (:reference 1
-                                :type ("std::vector" type
-                                     (:template-specifier 
-                                        ( ("std::array" type nil nil nil))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [8421 8461])
-                            ("size" variable (:type "float") (reparse-symbol arg-sub-list) [8462 8473]))                          
-                        :parent "OsgPlotterManipulator")
-                        (reparse-symbol namespacesubparts) [8312 9384])
-                    ("Cylinder" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [9449 9483])
-                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [9484 9497])
-                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [9498 9511])
-                            ("orient" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [9512 9546])
-                            ("color" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [9547 9580]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [9386 10298])
-                    ("Arrow" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("tail" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [10360 10392])
-                            ("head" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [10393 10425])
-                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [10426 10439])
-                            ("color" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [10440 10473]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [10300 11643])
-                    ("Cone" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [11704 11738])
-                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [11739 11752])
-                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [11753 11766])
-                            ("orient" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [11767 11801])
-                            ("color" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [11802 11835]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [11645 12568])
-                    ("Axes" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [12629 12663])
-                            ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [12664 12677])
-                            ("height" variable (:type "float") (reparse-symbol arg-sub-list) [12678 12691]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [12570 14425])
-                    ("Box" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [14485 14520])
-                            ("extent" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [14521 14556])
-                            ("color" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [14557 14591]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [14427 15212])
-                    ("Plane" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [15274 15308])
-                            ("norm" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [15309 15341])
-                            ("extention" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("2"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [15342 15379])
-                            ("color" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("4"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [15380 15413]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [15214 16139])
-                    ("TexPlane" function
-                       (:parent "OsgPlotterManipulator"
-                        :arguments 
-                          ( ("center" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [16204 16238])
-                            ("norm" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("3"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [16239 16271])
-                            ("extention" variable
-                               (:reference 1
-                                :constant-flag t
-                                :type ("std::array" type
-                                     (:template-specifier 
-                                        ( ("float" type nil nil nil)
-                                          ("2"))                                        
-                                      :type "class")
-                                      nil nil))
-                                (reparse-symbol arg-sub-list) [16272 16309])
-                            ("texture_file" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16310 16335]))                          
-                        :type ("std::shared_ptr" type
-                             (:template-specifier 
-                                ( ("VisNodeHandle" type nil nil nil))                                
-                              :type "class")
-                              nil nil))
-                        (reparse-symbol namespacesubparts) [16141 17583]))                  
-                :type "namespace")
-                nil [3428 17586]))          
-      :file "Plotter.cpp"
-      :pointmax 17586
-      :fsize 17585
-      :lastmodtime '(23708 47038 453958 126000)
-      :unmatched-syntax nil)
-    (semanticdb-table "NodeIO.cpp"
-      :major-mode 'c++-mode
-      :tags nil
-      :file "NodeIO.cpp"
-      :pointmax 1177
-      :fsize 1377
-      :lastmodtime '(23708 31129 37645 771000)
+                nil [51 1052]))          
+      :file "TouchballManipulator.h"
+      :pointmax 1052
+      :fsize 1051
+      :lastmodtime '(24643 63 801587 477000)
       :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!Vis!Src!Manipulator!semantic.cache"
   :semantic-tag-version "2.0"

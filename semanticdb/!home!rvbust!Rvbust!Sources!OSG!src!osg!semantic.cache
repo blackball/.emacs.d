@@ -1,10 +1,10 @@
-;; Object osg/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "osg/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Group.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("osg/Group" include (:system-flag t) nil [631 651])
             ("osg/BoundingBox" include (:system-flag t) nil [652 678])
@@ -144,10 +144,10 @@
       :file "Group.cpp"
       :pointmax 13090
       :fsize 13089
-      :lastmodtime '(23493 24179 699883 255000)
+      :lastmodtime '(24040 25687 432592 320000)
       :unmatched-syntax nil)
-    (semanticdb-table "PositionAttitudeTransform.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("osg/PositionAttitudeTransform" include (:system-flag t) nil [630 670])
             ("osg" using (:type ("osg" type
@@ -188,10 +188,10 @@
       :file "PositionAttitudeTransform.cpp"
       :pointmax 2058
       :fsize 2057
-      :lastmodtime '(23493 24179 703883 687000)
+      :lastmodtime '(23936 42023 834329 234000)
       :unmatched-syntax nil)
-    (semanticdb-table "Matrixf.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("osg/Matrixf" include (:system-flag t) nil [631 653])
             ("osg/Matrixd" include (:system-flag t) nil [654 676])
@@ -231,14 +231,14 @@
       :file "Matrixf.cpp"
       :pointmax 1111
       :fsize 1110
-      :lastmodtime '(23493 24179 699883 255000)
+      :lastmodtime '(23936 42023 834329 234000)
       :unmatched-syntax nil
       :lexical-table 
         '(("Matrix_implementation" . ((symbol "Matrixf" 759 . 766)))
           )
 )
-    (semanticdb-table "Matrix_implementation.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("osg/Quat" include (:system-flag t) nil [631 650])
             ("osg/Notify" include (:system-flag t) nil [651 672])
@@ -872,8 +872,8 @@
                 nil [32544 33139]))          
       :file "Matrix_implementation.cpp"
       :pointmax 33156
-      :fsize 33155
-      :lastmodtime '(23493 24179 699883 255000)
+      :fsize 33372
+      :lastmodtime '(24127 41146 533064 285000)
       :unmatched-syntax nil
       :lexical-table 
         '(("COMPILE_getRotate_David_Spillings_Mk1")
@@ -888,8 +888,8 @@
           ("SGL_SWAP" (spp-arg-list ("a" "b" "temp") 21337 . 21347) . ((semantic-list "((temp)=(a),(a)=(b),(b)=(temp))" 21348 . 21379)))
           )
 )
-    (semanticdb-table "Matrixd.cpp"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
         '( ("osg/Matrixd" include (:system-flag t) nil [631 653])
             ("osg/Matrixf" include (:system-flag t) nil [654 676])
@@ -929,12 +929,169 @@
       :file "Matrixd.cpp"
       :pointmax 1112
       :fsize 1111
-      :lastmodtime '(23493 24179 699883 255000)
+      :lastmodtime '(23936 42023 834329 234000)
       :unmatched-syntax nil
       :lexical-table 
         '(("Matrix_implementation" . ((symbol "Matrixd" 759 . 766)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("osg/Array" include (:system-flag t) nil [630 650])
+            ("osg/Notify" include (:system-flag t) nil [651 672])
+            ("osg" using (:type ("osg" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [674 694])
+            ("s_ArrayNames" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    \"Array\",        // 0
+    \"ByteArray\",    // 1
+    \"ShortArray\",   // 2
+    \"IntArray\",     // 3
+
+    \"UByteArray\",   // 4
+    \"UShortArray\",  // 5
+    \"UIntArray\",    // 6
+
+    \"FloatArray\",   // 7
+    \"DoubleArray\",  // 8
+
+    \"Vec2bArray\",   // 9
+    \"Vec3bArray\",   //10
+    \"Vec4bArray\",   //11
+
+    \"Vec2sArray\",   //12
+    \"Vec3sArray\",   //13
+    \"Vec4sArray\",   //14
+
+    \"Vec2iArray\",   //15
+    \"Vec3iArray\",   //16
+    \"Vec4iArray\",   //17
+
+    \"Vec2ubArray\",  //18
+    \"Vec3ubArray\",  //19
+    \"Vec4ubArray\",  //20
+
+    \"Vec2usArray\",  //21
+    \"Vec3usArray\",  //22
+    \"Vec4usArray\",  //23
+
+    \"Vec2uiArray\",  //24
+    \"Vec3uiArray\",  //25
+    \"Vec4uiArray\",  //26
+
+    \"Vec2Array\",    //27
+    \"Vec3Array\",    //28
+    \"Vec4Array\",    //29
+
+    \"Vec2dArray\",   //30
+    \"Vec3dArray\",   //31
+    \"Vec4dArray\",   //32
+
+    \"MatrixArray\",  //33
+    \"MatrixdArray\", //34
+
+    \"QuatArray\",    //35
+
+    \"UInt64Array\",  //36
+    \"Int64Array\",   //37
+}"
+                :type "char")
+                nil [696 1699])
+            ("className" function
+               (:methodconst-flag t
+                :pointer 1
+                :parent "Array"
+                :constant-flag t
+                :type "char")
+                nil [1701 1981]))          
+      :file "Array.cpp"
+      :pointmax 1983
+      :fsize 1982
+      :lastmodtime '(23936 42023 826329 125000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("osg/Object" include (:system-flag t) nil [630 651])
+            ("osg/UserDataContainer" include (:system-flag t) nil [652 684])
+            ("osg" type
+               (:members 
+                  ( ("Object" function
+                       (:constructor-flag t
+                        :parent "Object"
+                        :arguments 
+                          ( ("obj" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Object" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [834 852])
+                            ("copyop" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CopyOp" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [852 873]))                          
+                        :type ("Object" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [819 1281])
+                    ("Object" function
+                       (:destructor-flag t
+                        :parent "Object"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1283 1361])
+                    ("setThreadSafeRefUnref" function
+                       (:parent "Object"
+                        :arguments 
+                          ( ("threadSafe" variable (:type "bool") (reparse-symbol arg-sub-list) [1399 1415]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1364 1553])
+                    ("setUserDataContainer" function
+                       (:parent "Object"
+                        :arguments 
+                          ( ("udc" variable
+                               (:pointer 1
+                                :type ("osg::UserDataContainer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1589 1617]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1555 1809])
+                    ("getOrCreateUserDataContainer" function
+                       (:pointer 1
+                        :parent "Object"
+                        :type ("osg::UserDataContainer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1811 1991])
+                    ("setUserData" function
+                       (:parent "Object"
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("Referenced" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2018 2034]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1993 2129])
+                    ("getUserData" function
+                       (:pointer 1
+                        :parent "Object"
+                        :type ("Referenced" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2131 2239])
+                    ("getUserData" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "Object"
+                        :constant-flag t
+                        :type ("Referenced" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2241 2361]))                  
+                :type "namespace")
+                nil [686 2364]))          
+      :file "Object.cpp"
+      :pointmax 2389
+      :fsize 2388
+      :lastmodtime '(23936 42023 834329 234000)
+      :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!OSG!src!osg!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -1,179 +1,1549 @@
-;; Object Vis/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Vis/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Concepts.h"
-      :major-mode 'c++-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
       :tags 
-        '( ("unordered_map" include (:system-flag t) nil [67 91])
-            ("memory" include (:system-flag t) nil [92 109])
-            ("mutex" include (:system-flag t) nil [110 126])
-            ("iostream" include (:system-flag t) nil [127 146])
-            ("vector" include (:system-flag t) nil [147 164])
-            ("condition_variable" include (:system-flag t) nil [165 194])
+        '( ("stdint.h" include (:system-flag t) nil [54 73])
+            ("array" include (:system-flag t) nil [74 90])
+            ("memory" include (:system-flag t) nil [91 108])
+            ("string" include (:system-flag t) nil [109 126])
+            ("vector" include (:system-flag t) nil [127 144])
             ("Vis" type
                (:members 
-                  ( ("VisNodeHandle" type
+                  ( ("Handle" type
                        (:members 
-                          ( ("public" label nil (reparse-symbol classsubparts) [242 249])
-                            ("VisNodeHandle" function
+                          ( ("Handle" function
+                               (:constructor-flag t
+                                :type ("Handle" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [183 212])
+                            ("Handle" function
                                (:constructor-flag t
                                 :arguments 
-                                  ( ("valid" variable (:type ("std::shared_ptr" type
-                                         (:template-specifier 
-                                            ( ("bool" type nil nil nil))                                            
-                                          :type "class")
-                                          nil nil)) (reparse-symbol arg-sub-list) [272 300]))                                  
-                                :type ("VisNodeHandle" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [258 318])
-                            ("GetNodePtr" function
-                               (:pure-virtual-flag t
-                                :prototype-flag t
-                                :pointer 1
-                                :typemodifiers ("virtual")
-                                :type "void")
-                                (reparse-symbol classsubparts) [328 366])
-                            ("VisNodeHandle" function
-                               (:destructor-flag t
-                                :typemodifiers ("virtual")
-                                :type "void")
-                                (reparse-symbol classsubparts) [376 402])
-                            ("protected" label nil (reparse-symbol classsubparts) [408 418])
-                            ("m_valid" variable (:type ("std::weak_ptr" type
-                                 (:template-specifier 
-                                    ( ("bool" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [427 465]))                          
-                        :type "class")
-                        (reparse-symbol namespacesubparts) [216 472])
-                    ("VisValidFlag" type
-                       (:members 
-                          ( ("protected" label nil (reparse-symbol classsubparts) [502 512])
-                            ("m_valid" variable (:type ("std::shared_ptr" type
-                                 (:template-specifier 
-                                    ( ("bool" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [521 577])
-                            ("m_destruction_condition" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [586 642]))                          
-                        :type "class")
-                        (reparse-symbol namespacesubparts) [478 649])
-                    ("NODE_MASK" type
-                       (:members 
-                          ( ("NONE" variable
-                               (:constant-flag t
-                                :default-value (690 696)
-                                :type "int")
-                                (reparse-symbol enumsubparts) [679 696])
-                            ("AUTOZOOM" variable
-                               (:constant-flag t
-                                :default-value (717 723)
-                                :type "int")
-                                (reparse-symbol enumsubparts) [706 723])
-                            ("PAT_EDIT" variable
-                               (:constant-flag t
-                                :default-value (744 750)
-                                :type "int")
-                                (reparse-symbol enumsubparts) [733 750])
-                            ("AID_EDIT" variable
-                               (:constant-flag t
-                                :default-value (772 778)
-                                :type "int")
-                                (reparse-symbol enumsubparts) [761 778]))                          
-                        :type "enum")
-                        (reparse-symbol namespacesubparts) [655 785]))                  
-                :type "namespace")
-                nil [196 787]))          
-      :file "Concepts.h"
-      :pointmax 787
-      :fsize 700
-      :lastmodtime '(23707 32784 130703 61000)
-      :unmatched-syntax '((symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54)))
-    (semanticdb-table "Viewer.h"
-      :major-mode 'c++-mode
-      :tags 
-        '( ("thread" include (:system-flag t) nil [67 84])
-            ("Vis/Concepts.h" include (:system-flag t) nil [85 110])
-            ("Vis/Manipulator/Plotter.h" include (:system-flag t) nil [111 147])
-            ("Vis/Manipulator/NodeIO.h" include (:system-flag t) nil [148 183])
-            ("Vis" type
-               (:members 
-                  ( ("Viewer" type
-                       (:prototype t
-                        :type "class")
-                        (reparse-symbol namespacesubparts) [201 214]))                  
-                :type "namespace")
-                nil [185 216])
-            ("Viewer" type
-               (:parent "Vis"
-                :superclasses 
-                  ( ("Vis::OsgPlotterManipulator" type
-                       (:protection "public"
-                        :type "class")
-                        nil nil)
-                    ("Vis::NodeIOManipulator" type
-                       (:protection "public"
-                        :type "class")
-                        nil nil))                  
-                :members 
-                  ( ("public" label nil (reparse-symbol classsubparts) [305 312])
-                    ("Viewer" function
-                       (:prototype-flag t
-                        :constructor-flag t
-                        :arguments 
-                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [334 351])
-                            ("x" variable (:type "int") (reparse-symbol arg-sub-list) [352 358])
-                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [359 365])
-                            ("width" variable (:type "int") (reparse-symbol arg-sub-list) [366 376])
-                            ("height" variable (:type "int") (reparse-symbol arg-sub-list) [377 388])
-                            ("screenNum" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [389 412]))                          
-                        :type ("Viewer" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [327 413])
-                    ("Viewer" function
-                       (:prototype-flag t
-                        :destructor-flag t
-                        :type "void")
-                        (reparse-symbol classsubparts) [419 429])
-                    ("Home" function
-                       (:prototype-flag t
-                        :typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [435 455])
-                    ("Move" function
-                       (:typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [461 483])
-                    ("Resize" function
-                       (:typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [489 513])
-                    ("Close" function
-                       (:prototype-flag t
-                        :typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [519 540])
-                    ("Detach" function
-                       (:prototype-flag t
-                        :typemodifiers ("virtual")
-                        :type "void")
-                        (reparse-symbol classsubparts) [546 568])
-                    ("Data" type
-                       (:prototype t
+                                  ( ("t" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [224 235])
+                                    ("u" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [236 247]))                                  
+                                :type ("Handle" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [217 268])
+                            ("type" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [273 287])
+                            ("uid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [292 305]))                          
                         :type "struct")
-                        (reparse-symbol classsubparts) [574 586])
-                    ("private" label nil (reparse-symbol classsubparts) [588 596])
-                    ("m_dPtr" variable (:type ("std::shared_ptr" type
-                         (:template-specifier 
-                            ( ("Viewer::Data" type nil nil nil))                            
-                          :type "class")
-                          nil nil)) (reparse-symbol classsubparts) [601 638]))                  
-                :type "class")
-                nil [218 641]))          
-      :file "Viewer.h"
-      :pointmax 642
-      :fsize 641
-      :lastmodtime '(23707 33124 421414 230000)
-      :unmatched-syntax '((EXPLICIT 318 . 326) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54) (punctuation 557 . 558) (punctuation 556 . 557) (punctuation 555 . 556) (punctuation 554 . 555) (punctuation 553 . 554) (punctuation 552 . 553) (punctuation 551 . 552) (EXPLICIT 455 . 463) (punctuation 448 . 449) (punctuation 447 . 448) (punctuation 446 . 447) (punctuation 445 . 446) (punctuation 444 . 445) (punctuation 443 . 444) (punctuation 442 . 443) (EXPLICIT 330 . 338) (symbol 321 . 325) (punctuation 319 . 320) (punctuation 318 . 319) (punctuation 317 . 318) (punctuation 316 . 317) (punctuation 315 . 316) (punctuation 314 . 315) (punctuation 313 . 314) (symbol 61 . 65) (symbol 54 . 60) (punctuation 53 . 54))))
+                        (reparse-symbol namespacesubparts) [163 308])
+                    ("==" function
+                       (:operator-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("a" variable
+                               (:constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [333 348])
+                            ("b" variable
+                               (:constant-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [349 364]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [310 415])
+                    ("HandleHasher" type
+                       (:members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("h" variable
+                                       (:constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [473 488]))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [443 594]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [417 597])
+                    ("SetLogLevel" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("levelname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [616 638]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [599 639])
+                    ("GetVersion" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [640 665])
+                    ("ViewConfig" type
+                       (:members 
+                          ( ("ViewConfig" function
+                               (:constructor-flag t
+                                :type ("ViewConfig" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [691 904])
+                            ("ViewConfig" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [921 946])
+                                    ("x_" variable (:type "int") (reparse-symbol arg-sub-list) [947 954])
+                                    ("y_" variable (:type "int") (reparse-symbol arg-sub-list) [955 962])
+                                    ("width_" variable (:type "int") (reparse-symbol arg-sub-list) [963 974])
+                                    ("height_" variable (:type "int") (reparse-symbol arg-sub-list) [975 987])
+                                    ("bgcolor_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1003 1040])
+                                    ("use_decoration_" variable (:type "bool") (reparse-symbol arg-sub-list) [1041 1062]))                                  
+                                :type ("ViewConfig" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [910 1269])
+                            ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1275 1292])
+                            ("x" variable (:type "int") (reparse-symbol classsubparts) [1297 1303])
+                            ("y" variable (:type "int") (reparse-symbol classsubparts) [1308 1314])
+                            ("width" variable (:type "int") (reparse-symbol classsubparts) [1319 1329])
+                            ("height" variable (:type "int") (reparse-symbol classsubparts) [1334 1345])
+                            ("bgcolor" variable (:type ("std::array" type
+                                 (:template-specifier 
+                                    ( ("float" type nil nil nil)
+                                      ("4"))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1350 1379])
+                            ("use_decoration" variable (:type "bool") (reparse-symbol classsubparts) [1384 1404])
+                            ("screen_num" variable (:type "int") (reparse-symbol classsubparts) [1409 1424]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [667 1483])
+                    ("View" type
+                       (:members 
+                          ( ("View" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("viewname" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1693 1721])
+                                    ("shared" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1722 1740]))                                  
+                                :type ("View" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1688 1742])
+                            ("View" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ViewConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1877 1899])
+                                    ("shared" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1900 1918]))                                  
+                                :type ("View" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1872 1920])
+                            ("View" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1996 2012])
+                            ("WindowSetDecoration" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [2110 2122]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2085 2123])
+                            ("WindowSetRectangle" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2219 2225])
+                                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2226 2232])
+                                    ("width" variable (:type "int") (reparse-symbol arg-sub-list) [2233 2243])
+                                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [2244 2255]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2195 2256])
+                            ("WindowGetRectangle" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2352 2359])
+                                    ("y" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2360 2367])
+                                    ("width" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2368 2379])
+                                    ("height" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2380 2392]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2328 2393])
+                            ("WindowRaise" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2449 2468])
+                            ("WindowHide" function
+                               (:prototype-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("4"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2709 2741])
+                            ("WindowShow" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2915 2943]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2899 2944])
+                            ("Close" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3033 3046])
+                            ("SetCameraPose" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("eye" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3228 3260])
+                                    ("point_want_to_look" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3284 3331])
+                                    ("upvector" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3355 3392]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3209 3393])
+                            ("GetCameraPose" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("eye" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3417 3443])
+                                    ("point_want_to_look" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3444 3485])
+                                    ("upvector" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3509 3540]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3398 3541])
+                            ("SetHomePose" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("eye" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3753 3785])
+                                    ("point_want_to_look" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3807 3854])
+                                    ("upvector" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3876 3913]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3736 3914])
+                            ("GetHomePose" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("eye" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3936 3962])
+                                    ("point_want_to_look" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3963 4004])
+                                    ("upvector" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4026 4057]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3919 4058])
+                            ("Delete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4172 4189]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4160 4190])
+                            ("IsClosed" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4212 4234])
+                            ("IsAlive" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4253 4270]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4240 4277])
+                            ("Delete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("handles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4540 4575]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4528 4576])
+                            ("Clear" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4662 4675])
+                            ("Home" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4745 4757])
+                            ("Show" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4848 4865]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4838 4866])
+                            ("Hide" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4947 4964]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4937 4965])
+                            ("Chain" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("links" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5403 5436]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5392 5437])
+                            ("Unchain" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("links" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5512 5545]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5499 5546])
+                            ("SetTransforms" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("hs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5721 5751])
+                                    ("trans" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("3"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5775 5822])
+                                    ("quats" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("4"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5846 5893]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5702 5894])
+                            ("SetTransforms" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6071 6087])
+                                    ("trans" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("3"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6088 6135])
+                                    ("quats" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("4"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6159 6206]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6052 6207])
+                            ("SetTransparency" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6336 6353])
+                                    ("inv_alpha" variable (:type "float") (reparse-symbol arg-sub-list) [6354 6370]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6315 6371])
+                            ("Clone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6547 6562]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6534 6563])
+                            ("Clone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6582 6597])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6598 6630])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6631 6664]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6569 6665])
+                            ("Clone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("handles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6762 6797]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [6736 6798])
+                            ("Clone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("handles" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Handle" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6830 6865])
+                                    ("poss" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("3"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6896 6942])
+                                    ("quats" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("4"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6973 7020]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [6804 7021])
+                            ("Axes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("trans" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7079 7113])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7114 7147])
+                                    ("axis_len" variable
+                                       (:default-value "15.f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [7164 7185])
+                                    ("axis_size" variable
+                                       (:default-value "3.f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [7187 7208]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7067 7210])
+                            ("Axes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("transform" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("16"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7227 7266])
+                                    ("axis_len" variable
+                                       (:default-value "15.f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [7267 7288])
+                                    ("axis_size" variable
+                                       (:default-value "3.f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [7306 7327]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7215 7329])
+                            ("GetViewSize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("width" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [7352 7363])
+                                    ("height" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [7364 7376]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7335 7377])
+                            ("Picked" function
+                               (:prototype-flag t
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7447 7463])
+                            ("PickedPlane" function
+                               (:prototype-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("float" type nil nil nil)
+                                          ("6"))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7537 7572])
+                            ("Load" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fname" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7624 7649]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7612 7650])
+                            ("Load" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fnames" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7680 7719]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7655 7720])
+                            ("Load" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fname" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7738 7763])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7764 7796])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7813 7846]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7726 7847])
+                            ("Load" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fnames" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7877 7916])
+                                    ("trans" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("3"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7946 7993])
+                                    ("quats" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::array" type (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("4"))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8023 8070]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Handle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7852 8071])
+                            ("SetText" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:reference 1
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8473 8483])
+                                    ("content" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8484 8511])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8512 8542])
+                                    ("font_size" variable
+                                       (:default-value "0.0f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [8560 8582])
+                                    ("colors" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8584 8621]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8460 8623])
+                            ("SetTextFont" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("font_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8832 8861]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8815 8862])
+                            ("Quad" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xyzs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9091 9122])
+                                    ("color" variable
+                                       (:reference 1
+                                        :default-value "{1.0f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9131 9171])
+                                    ("mode" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [9189 9201]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9079 9203])
+                            ("Point" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xyzs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9244 9275])
+                                    ("ptsize" variable
+                                       (:default-value "1.0f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [9276 9295])
+                                    ("colors" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0.f, 0.f}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9314 9364]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9231 9366])
+                            ("Line" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("lines" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9500 9532])
+                                    ("size" variable
+                                       (:default-value "1.f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [9533 9549])
+                                    ("colors" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9567 9613]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9488 9615])
+                            ("Box" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9632 9664])
+                                    ("extents" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9665 9701])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9717 9762]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9621 9764])
+                            ("Sphere" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("center" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9783 9818])
+                                    ("raidus" variable (:type "float") (reparse-symbol arg-sub-list) [9819 9832])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9851 9896]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9769 9898])
+                            ("Spheres" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("centers" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9918 9952])
+                                    ("radii" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9953 9979])
+                                    ("colors" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0, 1.f}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9999 10050]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9903 10052])
+                            ("Cone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("center" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10069 10104])
+                                    ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [10105 10118])
+                                    ("height" variable (:type "float") (reparse-symbol arg-sub-list) [10119 10132])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10149 10194]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10057 10196])
+                            ("Cylinder" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("center" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10217 10252])
+                                    ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [10253 10266])
+                                    ("height" variable (:type "float") (reparse-symbol arg-sub-list) [10267 10280])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10301 10346]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10201 10348])
+                            ("Arrow" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("tail" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10366 10399])
+                                    ("head" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10400 10433])
+                                    ("radius" variable (:type "float") (reparse-symbol arg-sub-list) [10434 10447])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.0f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10465 10511]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10353 10513])
+                            ("Mesh" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("vertices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10530 10565])
+                                    ("indices" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("unsigned int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10566 10607])
+                                    ("colors" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{1.f, 0, 0}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10624 10670]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10518 10672])
+                            ("Plane" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xlength" variable (:type "float") (reparse-symbol arg-sub-list) [11252 11266])
+                                    ("ylength" variable (:type "float") (reparse-symbol arg-sub-list) [11267 11281])
+                                    ("half_x_num_cells" variable
+                                       (:default-value "8"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [11282 11306])
+                                    ("half_y_num_cells" variable
+                                       (:default-value "8"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [11308 11332])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{0.5, 0.5, 0.5}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11351 11400]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [11239 11402])
+                            ("Plane" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xlength" variable (:type "float") (reparse-symbol arg-sub-list) [12045 12059])
+                                    ("ylength" variable (:type "float") (reparse-symbol arg-sub-list) [12060 12074])
+                                    ("half_x_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [12075 12096])
+                                    ("half_y_num_cells" variable (:type "int") (reparse-symbol arg-sub-list) [12097 12118])
+                                    ("trans" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12136 12170])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12171 12204])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{0.5, 0.5, 0.5}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12222 12271]))                                  
+                                :type ("Handle" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12032 12273])
+                            ("SetColor" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12293 12310])
+                                    ("color" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12311 12343]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12279 12344])
+                            ("SetPosition" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12497 12514])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12515 12547]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12480 12548])
+                            ("SetRotation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12570 12587])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12588 12621]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12553 12622])
+                            ("SetTransform" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12645 12662])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12663 12695])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12718 12751]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12627 12752])
+                            ("GetPosition" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12775 12792])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12793 12819]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12758 12820])
+                            ("GetRotation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12842 12859])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12860 12887]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12825 12888])
+                            ("GetTransform" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("nh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12911 12928])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("3"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12929 12955])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :type ("std::array" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil)
+                                                  ("4"))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12956 12983]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12893 12984])
+                            ("SetObjectAnimation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13395 13411])
+                                    ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [13412 13424])
+                                    ("time" variable
+                                       (:default-value "6.0f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [13425 13442])
+                                    ("loop" variable
+                                       (:default-value "1"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [13444 13456])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13486 13520])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [13550 13585]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13371 13587])
+                            ("SetCameraAnimation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [13981 13993])
+                                    ("time" variable
+                                       (:default-value "6.0f"
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [13994 14011])
+                                    ("loop" variable
+                                       (:default-value "1"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [14013 14025])
+                                    ("pos" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14055 14089])
+                                    ("quat" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "{}"
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14119 14154]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13957 14156])
+                            ("SetCameraAnimation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [14622 14634])
+                                    ("time" variable (:type "float") (reparse-symbol arg-sub-list) [14635 14646])
+                                    ("loop" variable (:type "int") (reparse-symbol arg-sub-list) [14647 14656])
+                                    ("eye" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14657 14687])
+                                    ("look" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14716 14747])
+                                    ("up" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14748 14777]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [14598 14778])
+                            ("EnableGizmo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("h" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Handle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15214 15230])
+                                    ("gizmotype" variable (:type "int") (reparse-symbol arg-sub-list) [15231 15245]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [15197 15246])
+                            ("SetGizmoType" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("gizmotype" variable (:type "int") (reparse-symbol arg-sub-list) [15507 15521]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [15489 15522])
+                            ("SetGizmoDrawMask" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("gizmotype" variable (:type "int") (reparse-symbol arg-sub-list) [15993 16007])
+                                    ("mask" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [16008 16026]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [15971 16027])
+                            ("SetGizmoDisplayScale" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("scale" variable (:type "float") (reparse-symbol arg-sub-list) [16321 16333]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16295 16334])
+                            ("SetGizmoDetectionRange" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("range" variable (:type "float") (reparse-symbol arg-sub-list) [16637 16649]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16609 16650])
+                            ("DisableGizmo" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [16821 16841])
+                            ("private" label nil (reparse-symbol classsubparts) [16843 16851])
+                            ("Impl" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [16964 16976])
+                            ("m_impl" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("Impl" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [16981 17010]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1485 17013]))                  
+                :type "namespace")
+                nil [146 17016]))          
+      :file "Vis.h"
+      :pointmax 17035
+      :fsize 17034
+      :lastmodtime '(24648 32655 398585 589000)
+      :unmatched-syntax nil))
   :file "!home!rvbust!Rvbust!Sources!Vis!Include!Vis!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

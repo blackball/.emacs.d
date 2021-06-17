@@ -1,8 +1,9 @@
 ;; Set the size of the initial window, width in chars, height in rows 
 (setq initial-frame-alist '((width . 100) (height . 30)))
 
-
-(require 'package) (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(require 'package)
+(add-to-list 'package-archives
+         '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 ;; This is for back-compatible for Emacs24 configs
@@ -31,6 +32,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (semantic-mode 1)
 
+(add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ;;(setq frame-title-format "%b")
 (setq frame-title-format
@@ -194,18 +196,24 @@
 (setq tabbar-use-images t)
 (tabbar-mode 1)
 
-(with-eval-after-load 'python
-  (defun python-shell-completion-native-try ()
-    "Return non-nil if can trigger native completion."
-    (let ((python-shell-completion-native-enable t)
-          (python-shell-completion-native-output-timeout
-           python-shell-completion-native-try-output-timeout))
-      (python-shell-completion-native-get-completions
-       (get-buffer-process (current-buffer))
-       nil "_"))))
+(add-to-list 'load-path "/home/rvbust/.emacs.d/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
-(when (executable-find "ipython")
-  (setq python-shell-interpreter "ipython"))
+;; (speedbar 1)
+
+;; (with-eval-after-load 'python
+;;   (defun python-shell-completion-native-try ()
+;;     "Return non-nil if can trigger native completion."
+;;     (let ((python-shell-completion-native-enable t)
+;;           (python-shell-completion-native-output-timeout
+;;            python-shell-completion-native-try-output-timeout))
+;;       (python-shell-completion-native-get-completions
+;;        (get-buffer-process (current-buffer))
+;;        nil "_"))))
+
+;; (when (executable-find "ipython")
+;;   (setq python-shell-interpreter "ipython"))
 
 ;; Change padding of the tabs
 ;; we also need to set separator to avoid overlapping tabs by highlighted tabs
@@ -214,9 +222,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(package-selected-packages
    (quote
-    (cargo lsp-mode color-theme-modern flycheck-rust toml-mode rust-mode clang-format+ highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony cmake-mode cmake-ide clang-format bm autopair))))
+    (neotree cargo lsp-mode color-theme-modern flycheck-rust toml-mode rust-mode clang-format+ highlight-doxygen multiple-cursors irony-eldoc yasnippet use-package tabbar sphinx-doc solarized-theme smartparens popup-complete matlab-mode markdown-mode magit lua-mode json-mode jedi iedit idle-highlight-mode highlight-symbol google-c-style go-mode flymake-python-pyflakes flymake-json flymake-cursor flycheck-irony flx-ido fill-column-indicator f diminish company-irony cmake-mode cmake-ide clang-format bm autopair)))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 
 (defun my-c++-mode-hook ()
   (setq c-basic-offset 4)
@@ -282,6 +293,41 @@
   (clang-format-buffer)
   (save-buffer))
 
+
+;; (highlight-doxygen-global-mode 1)
+
+(defvar hs1-regexp
+  "\\(\n[[:blank:]]*///\\|///<\\).*$"
+  "List of regular expressions of blocks to be hidden.")
+
+(define-minor-mode hs1-mode
+  "Hide/show predefined blocks."
+  :lighter " hs1"
+  (if hs1-mode
+      (let (ol)
+    (save-excursion
+      (goto-char (point-min))
+      (while (search-forward-regexp hs1-regexp nil 'noErr)
+        (when (eq (syntax-ppss-context (syntax-ppss (match-end 1))) 'comment)
+          (setq ol (make-overlay (match-beginning 0) (match-end 0)))
+          (overlay-put ol 'hs1 t)
+          (overlay-put ol 'invisible t)
+          ))))
+    (remove-overlays (point-min) (point-max) 'hs1 t)
+    ))
+
+(add-hook 'c++-mode-hook '(lambda () (local-set-key (kbd "C-c C-c") 'hs1-mode)))
+(add-hook 'c-mode-hook '(lambda () (local-set-key (kbd "C-c C-c") 'hs1-mode)))
+
+
+(define-key c-mode-base-map (kbd "C-x C-s") 'format-and-save)
+
+(add-hook 'c-common-mode-hook 
+          (lambda ()
+            (add-hook (make-local-variable 'before-save-hook)
+                      'clang-format-buffer)))
+
+
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 (use-package flycheck
@@ -311,13 +357,6 @@
 (use-package flycheck-rust
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
-(define-key c-mode-base-map (kbd "C-x C-s") 'format-and-save)
-
-(add-hook 'c-common-mode-hook 
-          (lambda ()
-            (add-hook (make-local-variable 'before-save-hook)
-                      'clang-format-buffer)))
-
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -334,14 +373,14 @@
                               (sphinx-doc-mode t)))
 
 ;; ;; hightlight current line
-;; ;; (global-hl-line-mode 1)
+(global-hl-line-mode -1)
 
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++14")))
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++14")))
 
 ;; delete selection
 (delete-selection-mode 1)
-;; line by line scrolling
+;; linek by line scrolling
 (setq scroll-step 1)
 
 ;; turn off Tab
@@ -373,28 +412,28 @@
 (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
 (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
-;; ;; create dir automatically ceate new file
-;; (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
-;;   "Create parent directory if not exists while visiting file."
-;;   (unless (file-exists-p filename)
-;;     (let ((dir (file-name-directory filename)))
-;;       (unless (file-exists-p dir)
-;;         (make-directory dir)))))
+;; create dir automatically ceate new file
+(defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
+  "Create parent directory if not exists while visiting file."
+  (unless (file-exists-p filename)
+    (let ((dir (file-name-directory filename)))
+      (unless (file-exists-p dir)
+        (make-directory dir)))))
 
-(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
+;; (add-hook 'python-mode-hook '(lambda () (flymake-mode)))
 
 (defface paren-face
   '((((class color) (background dark))
-     (:foreground "grey30"))
+     (:foreground "grey50"))
     (((class color) (background light))
-     (:foreground "grey30")))
+     (:foreground "grey50")))
   "Face used to dim parentheses.")
 
 (defface paren-face-2
   '((((class color) (background dark))
-     (:foreground "grey30"))
+     (:foreground "grey50"))
     (((class color) (background light))
-     (:foreground "grey30")))
+     (:foreground "grey50")))
   "Face used to dim parentheses.")
 
 (setq fixme-modes '(markdown-mode cmake-mode text-mode c++-mode c-mode emacs-lisp-mode python-mode shell-script-mode sh-mode))
@@ -451,10 +490,84 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code" :foundry "unknown" :slant normal :weight normal :height 120 :width normal))))
+ '(default ((t (:family "Fira Code" :foundry "CTDB" :slant normal :weight normal :height 120 :width normal))))
  '(highlight ((t (:background "dim gray"))))
  '(hl-line ((t (:background "#898989"))))
  '(hl-tags-face ((t (:inherit highlight))))
  '(region ((t (:background "dimgray"))))
  '(show-paren-match ((t (:background "#404040")))))
 (put 'upcase-region 'disabled nil)
+
+
+
+;;===================
+;; Path to nano emacs modules (mandatory)
+;;(add-to-list 'load-path "./nano-emacs")
+;;(add-to-list 'load-path ".")
+
+;; Window layout (optional)
+;;(require 'nano-layout)
+
+;; ;; Theming Command line options (this will cancel warning messages)
+;; (add-to-list 'command-switch-alist '("-dark"   . (lambda (args))))
+;; (add-to-list 'command-switch-alist '("-light"  . (lambda (args))))
+;; (add-to-list 'command-switch-alist '("-default"  . (lambda (args))))
+
+;; (cond
+;;  ((member "-default" command-line-args) t)
+;;  ((member "-light" command-line-args) (require 'nano-theme-light))
+;;  (t (require 'nano-theme-dark)))
+
+;; ;; Customize support for 'emacs -q' (Optional)
+;; ;; You can enable customizations by creating the nano-custom.el file
+;; ;; with e.g. `touch nano-custom.el` in the folder containing this file.
+;; (let* ((this-file  (or load-file-name (buffer-file-name)))
+;;        (this-dir  (file-name-directory this-file))
+;;        (custom-path  (concat this-dir "nano-custom.el")))
+;;   (when (and (eq nil user-init-file)
+;;              (eq nil custom-file)
+;;              (file-exists-p custom-path))
+;;     (setq user-init-file this-file)
+;;     (setq custom-file custom-path)
+;;     (load custom-file)))
+
+;; Theme
+;; (require 'nano-faces)
+;; (nano-faces)
+
+;; (require 'nano-theme)
+;; (nano-theme)
+
+;; Nano default settings (optional)
+;;(require 'nano-defaults)
+
+;; Nano session saving (optional)
+;;(require 'nano-session)
+
+;; Nano header & mode lines (optional)
+;;(require 'nano-modeline)
+
+;; Nano key bindings modification (optional)
+;;(require 'nano-bindings)
+
+;; Nano counsel configuration (optional)
+;; Needs "counsel" package to be installed (M-x: package-install)
+;; (require 'nano-counsel)
+
+;; ;; Welcome message (optional)
+;; (let ((inhibit-message t))
+;;   (message "Welcome to GNU Emacs / N Λ N O edition")
+;;   (message (format "Initialization time: %s" (emacs-init-time))))
+
+;; ;; Splash (optional)
+;; (add-to-list 'command-switch-alist '("-no-splash" . (lambda (args))))
+;; (unless (member "-no-splash" command-line-args)
+;;   (require 'nano-splash))
+
+;; ;; Help (optional)
+;; (add-to-list 'command-switch-alist '("-no-help" . (lambda (args))))
+;; (unless (member "-no-help" command-line-args)
+;;   (require 'nano-help))
+
+;;(provide 'nano)
+;;===================
